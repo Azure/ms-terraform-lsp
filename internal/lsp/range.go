@@ -38,3 +38,10 @@ func HCLPosToLSP(pos hcl.Pos) lsp.Position {
 		Character: uint32(pos.Column - 1),
 	}
 }
+
+func LSPPosToHCL(pos lsp.Position) hcl.Pos {
+	return hcl.Pos{
+		Line:   int(pos.Line + 1),
+		Column: int(pos.Character + 1),
+	}
+}
