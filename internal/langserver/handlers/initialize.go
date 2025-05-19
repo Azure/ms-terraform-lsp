@@ -39,7 +39,13 @@ func (svc *service) Initialize(ctx context.Context, params lsp.InitializeParams)
 			DocumentSymbolProvider:     false,
 			WorkspaceSymbolProvider:    false,
 			Workspace:                  nil,
-			ExecuteCommandProvider:     nil,
+
+			ExecuteCommandProvider: &lsp.ExecuteCommandOptions{
+				Commands: availableCommands(),
+				WorkDoneProgressOptions: lsp.WorkDoneProgressOptions{
+					WorkDoneProgress: true,
+				},
+			},
 		},
 	}
 
