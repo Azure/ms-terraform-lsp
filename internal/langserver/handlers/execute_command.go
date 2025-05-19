@@ -18,7 +18,7 @@ const (
 )
 
 func availableCommands() []string {
-	return []string{CommandConvertJsonToazurerm, CommandAztfMigrate, CommandTelemetry, CommandAztfAuthorize}
+	return []string{CommandTelemetry, CommandAztfAuthorize}
 }
 
 func init() {

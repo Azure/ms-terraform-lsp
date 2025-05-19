@@ -19,8 +19,7 @@ import (
 	"time"
 
 	"github.com/Azure/aztfmigrate/tf"
-	context2 "github.com/Azure/azurerm-lsp/internal/context"
-	lsctx "github.com/Azure/azurerm-lsp/internal/context"
+	ictx "github.com/Azure/azurerm-lsp/internal/context"
 	ilsp "github.com/Azure/azurerm-lsp/internal/lsp"
 	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
 	"github.com/hashicorp/go-uuid"
@@ -65,17 +64,17 @@ func (c AztfAuthorizeCommand) Handle(ctx context.Context, arguments []json.RawMe
 		generateForMissing = generateSetting["generateForMissingPermission"].(bool)
 	}
 
-	telemetrySender, err := context2.Telemetry(ctx)
+	telemetrySender, err := ictx.Telemetry(ctx)
 	if err != nil {
 		return nil, err
 	}
 
-	clientCaller, err := context2.ClientCaller(ctx)
+	clientCaller, err := ictx.ClientCaller(ctx)
 	if err != nil {
 		return nil, err
 	}
 
-	clientNotifier, err := context2.ClientNotifier(ctx)
+	clientNotifier, err := ictx.ClientNotifier(ctx)
 	if err != nil {
 		log.Printf("[ERROR] failed to get client notifier: %+v", err)
 		return nil, err
@@ -87,7 +86,7 @@ func (c AztfAuthorizeCommand) Handle(ctx context.Context, arguments []json.RawMe
 	reportAuthorizeCommandProgress(ctx, "Parsing Terraform configurations...", 0)
 	defer reportAuthorizeCommandProgress(ctx, "Role generation completed.", 100)
 
-	fs, err := lsctx.DocumentStorage(ctx)
+	fs, err := ictx.DocumentStorage(ctx)
 	if err != nil {
 		return nil, err
 	}
@@ -134,7 +133,10 @@ func (c AztfAuthorizeCommand) Handle(ctx context.Context, arguments []json.RawMe
 	actions := make(map[string]struct{}, 0)
 	apiVersionRe := regexp.MustCompile(`^\d{4}\-\d{2}\-\d{2}$`)
 	workingDirectory := getWorkingDirectory(string(params.TextDocument.URI), runtime.GOOS)
-	mapping := getAzurermMapping(ctx, workingDirectory)
+	mapping, err := getAzurermMapping(ctx, workingDirectory)
+	if err != nil {
+		return nil, fmt.Errorf("error get azurerm mapping: %+v", err)
+	}
 
 	for _, block := range body.Blocks {
 		if startPos.Position().Byte <= block.Range().Start.Byte && block.Range().End.Byte <= endPos.Position().Byte {
@@ -272,13 +274,13 @@ func (c AztfAuthorizeCommand) Handle(ctx context.Context, arguments []json.RawMe
 }
 
 func reportAuthorizeCommandProgress(ctx context.Context, message string, percentage uint32) {
-	clientCaller, err := context2.ClientCaller(ctx)
+	clientCaller, err := ictx.ClientCaller(ctx)
 	if err != nil {
 		log.Printf("[ERROR] failed to get client caller: %+v", err)
 		return
 	}
 
-	clientNotifier, err := context2.ClientNotifier(ctx)
+	clientNotifier, err := ictx.ClientNotifier(ctx)
 	if err != nil {
 		log.Printf("[ERROR] failed to get client notifier: %+v", err)
 		return
@@ -493,7 +495,9 @@ func matchPermissions(targetActions map[string]struct{}) (*permission, error) {
 	azProviderOperationCache := make(map[string]map[string]interface{}, 0)
 
 	var jsonValue []map[string]interface{}
-	json.Unmarshal(providerOperationsJsonBytes, &jsonValue)
+	if err := json.Unmarshal(providerOperationsJsonBytes, &jsonValue); err != nil {
+		return nil, err
+	}
 
 	for _, value := range jsonValue {
 		rpName := value["name"].(string)
@@ -621,15 +625,17 @@ var localReportBytes []byte
 
 var mapping map[string]map[string]interface{}
 
-func getAzurermMapping(ctx context.Context, dir string) map[string]map[string]interface{} {
+func getAzurermMapping(ctx context.Context, dir string) (map[string]map[string]interface{}, error) {
 	if mapping != nil {
-		return mapping
+		return mapping, nil
 	}
 
 	mapping = make(map[string]map[string]interface{}, 0)
 	var jsonValue []map[string]interface{}
 	reportBytes := getAztfoReport(ctx, dir)
-	json.Unmarshal(reportBytes, &jsonValue)
+	if err := json.Unmarshal(reportBytes, &jsonValue); err != nil {
+		return nil, err
+	}
 
 	for _, v := range jsonValue {
 		id := v["id"].(map[string]interface{})
@@ -640,7 +646,7 @@ func getAzurermMapping(ctx context.Context, dir string) map[string]map[string]in
 		resourceType := fmt.Sprintf("%v.%v", blockType, id["name"].(string))
 		mapping[resourceType] = v
 	}
-	return mapping
+	return mapping, nil
 }
 
 // getAztfoReport get online magodo/aztfo report based on azurerm provider version get from `terraform version` command
@@ -687,7 +693,12 @@ func getAztfoReport(ctx context.Context, dir string) []byte {
 			log.Printf("[DEBUG] failed to get the azurerm operation report for version %v, use local azurerm report instead", azurermVersion)
 			return localReportBytes
 		}
-		defer response.Body.Close()
+		defer func() {
+			if err := response.Body.Close(); err != nil {
+				// Handle the error from resp.Body.Close()
+				log.Printf("[Error] closing response body: %v", err)
+			}
+		}()
 
 		bodyBytes, _ := io.ReadAll(response.Body)
 		return bodyBytes

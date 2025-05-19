@@ -1,6 +1,7 @@
 package command
 
 import (
+	"context"
 	"sort"
 	"strings"
 	"testing"
@@ -46,9 +47,8 @@ func Test_generateRoleConfig(t *testing.T) {
 }
 
 func Test_getAzurermMapping(t *testing.T) {
-	ctx := t.Context()
-	_ = getAzurermMapping(ctx, ".")
-}
-
-func Test_aztfauthorize(t *testing.T) {
+	ctx := context.Background()
+	if _, err := getAzurermMapping(ctx, "."); err != nil {
+		t.Errorf("error get azurerm mapping: %+v", err)
+	}
 }
