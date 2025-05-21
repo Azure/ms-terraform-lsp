@@ -1,9 +1,6 @@
 # dario.cat/mergo v1.0.1
 ## explicit; go 1.13
 dario.cat/mergo
-# github.com/Azure/aztfmigrate v1.15.1-0.20250304070708-bd64aaa3affc
-## explicit; go 1.23.0
-github.com/Azure/aztfmigrate/tf
 # github.com/Masterminds/goutils v1.1.1
 ## explicit
 github.com/Masterminds/goutils
@@ -96,7 +93,6 @@ github.com/hashicorp/hcl-lang/schema
 github.com/hashicorp/hcl/v2
 github.com/hashicorp/hcl/v2/ext/customdecode
 github.com/hashicorp/hcl/v2/ext/typeexpr
-github.com/hashicorp/hcl/v2/hcldec
 github.com/hashicorp/hcl/v2/hclsyntax
 github.com/hashicorp/hcl/v2/hclwrite
 # github.com/hashicorp/logutils v1.0.0
@@ -138,23 +134,6 @@ github.com/hashicorp/terraform-plugin-sdk/v2/terraform
 # github.com/huandu/xstrings v1.5.0
 ## explicit; go 1.12
 github.com/huandu/xstrings
-# github.com/magodo/tfadd v0.10.1-0.20240902124619-bd18a56f410d
-## explicit; go 1.21
-github.com/magodo/tfadd/addr
-github.com/magodo/tfadd/providers/aws
-github.com/magodo/tfadd/providers/azapi
-github.com/magodo/tfadd/providers/azurerm
-github.com/magodo/tfadd/providers/google
-github.com/magodo/tfadd/schema
-github.com/magodo/tfadd/tfadd
-github.com/magodo/tfadd/tfadd/internal
-# github.com/magodo/tfpluginschema v0.0.0-20240902090353-0525d7d8c1c2
-## explicit; go 1.21
-github.com/magodo/tfpluginschema/schema
-# github.com/magodo/tfstate v0.0.0-20241016043929-2c95177bf0e6
-## explicit; go 1.18
-github.com/magodo/tfstate
-github.com/magodo/tfstate/terraform/jsonschema
 # github.com/mattn/go-colorable v0.1.13
 ## explicit; go 1.15
 github.com/mattn/go-colorable

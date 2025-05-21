@@ -18,10 +18,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Azure/aztfmigrate/tf"
 	ictx "github.com/Azure/azurerm-lsp/internal/context"
 	ilsp "github.com/Azure/azurerm-lsp/internal/lsp"
 	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	"github.com/Azure/azurerm-lsp/internal/tf"
 	"github.com/hashicorp/go-uuid"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
