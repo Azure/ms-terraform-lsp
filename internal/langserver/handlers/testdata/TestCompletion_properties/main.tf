@@ -1,4 +1,4 @@
-resource "azurerm_resource_group" "test" {
+resource "azurerm_automation_account" "test" {
   name = "example-rg"
 
 }
