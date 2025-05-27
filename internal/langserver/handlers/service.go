@@ -163,6 +163,30 @@ func (svc *service) Assigner() (jrpc2.Assigner, error) {
 
 			return handle(ctx, req, svc.HandleHover)
 		},
+		"textDocument/codeAction": func(ctx context.Context, req *jrpc2.Request) (interface{}, error) {
+			err := session.CheckInitializationIsConfirmed()
+			if err != nil {
+				return nil, err
+			}
+
+			ctx = ilsp.WithClientCapabilities(ctx, cc)
+			ctx = lsctx.WithDocumentStorage(ctx, svc.fs)
+
+			return handle(ctx, req, lh.TextDocumentCodeAction)
+		},
+		"workspace/executeCommand": func(ctx context.Context, req *jrpc2.Request) (interface{}, error) {
+			err := session.CheckInitializationIsConfirmed()
+			if err != nil {
+				return nil, err
+			}
+
+			ctx = lsctx.WithClientCaller(ctx, svc.clientCaller)
+			ctx = lsctx.WithClientNotifier(ctx, svc.clientNotifier)
+			ctx = lsctx.WithDocumentStorage(ctx, svc.fs)
+			ctx = lsctx.WithTelemetry(ctx, svc.telemetry)
+
+			return handle(ctx, req, svc.WorkspaceExecuteCommand)
+		},
 		"shutdown": func(ctx context.Context, req *jrpc2.Request) (interface{}, error) {
 			err := session.Shutdown(req)
 			if err != nil {
