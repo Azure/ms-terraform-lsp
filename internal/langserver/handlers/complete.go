@@ -129,7 +129,12 @@ func GetBlockAttributeCompletions(resourceName, path string) []protocol.Completi
 				insertText = fmt.Sprintf(`%s = $0`, p.Name)
 			}
 		} else if p.AttributeType.IsMapType() || p.AttributeType.IsObjectType() {
-			insertText = fmt.Sprintf(`%s {$0}`, p.Name)
+			// invalid nesting mode
+			if p.NestingMode == 0 {
+				insertText = fmt.Sprintf(`%s = { $0 }`, p.Name)
+			} else {
+				insertText = fmt.Sprintf(`%s {$0}`, p.Name)
+			}
 		} else if p.AttributeType.IsListType() || p.AttributeType.IsSetType() {
 			insertText = fmt.Sprintf(`%s = [$0]`, p.Name)
 		}
