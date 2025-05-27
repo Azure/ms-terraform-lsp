@@ -687,7 +687,7 @@ func getAztfoReport(ctx context.Context, dir string) []byte {
 
 	if azurermVersion != "" {
 		// https://raw.githubusercontent.com/wiki/magodo/aztfo/reports/v4.26.0.json
-		// #nosec G115
+		// #nosec G107
 		remoteReportUrl := fmt.Sprintf("https://raw.githubusercontent.com/wiki/magodo/aztfo/reports/%s.json", azurermVersion)
 		response, err := http.Get(remoteReportUrl)
 		if err != nil || response.StatusCode == http.StatusNotFound {
