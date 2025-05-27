@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"strings"
 
@@ -84,6 +85,16 @@ func GetTopLevelCompletions(params protocol.CompletionParams) []protocol.Complet
 			kind = "data source"
 		}
 
+		event := protocol.TelemetryEvent{
+			Version: protocol.TelemetryFormatVersion,
+			Name:    "textDocument/completion",
+			Properties: map[string]interface{}{
+				"kind": "code-sample",
+				"type": name,
+			},
+		}
+		data, _ := json.Marshal(event)
+
 		items = append(items, protocol.CompletionItem{
 			Label:            name,
 			InsertText:       snippet,
@@ -97,6 +108,11 @@ func GetTopLevelCompletions(params protocol.CompletionParams) []protocol.Complet
 			Documentation: protocol.MarkupContent{
 				Kind:  protocol.Markdown,
 				Value: content,
+			},
+			Command: &protocol.Command{
+				Title:     "",
+				Command:   "azurerm.telemetry",
+				Arguments: []json.RawMessage{data},
 			},
 		})
 	}
