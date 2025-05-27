@@ -16,7 +16,6 @@ require (
 	github.com/mitchellh/cli v1.1.5
 	github.com/spf13/afero v1.6.0
 	github.com/zclconf/go-cty v1.16.2
-	golang.org/x/exp v0.0.0-20231006140011-7918f672742d
 )
 
 require (
