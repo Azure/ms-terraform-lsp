@@ -11,10 +11,8 @@ import (
 var handlerMap = map[string]command.CommandHandler{}
 
 const (
-	CommandConvertJsonToazurerm = "azurerm.convertJsonToazurerm"
-	CommandAztfMigrate          = "azurerm.aztfmigrate"
-	CommandTelemetry            = "azurerm.telemetry"
-	CommandAztfAuthorize        = "azurerm.aztfauthorize"
+	CommandTelemetry     = "azurerm.telemetry"
+	CommandAztfAuthorize = "azurerm.aztfauthorize"
 )
 
 func availableCommands() []string {

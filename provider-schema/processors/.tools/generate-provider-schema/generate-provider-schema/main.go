@@ -6,8 +6,11 @@ import (
 	"os"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+	// #nosec G115
 	"github.com/hashicorp/terraform-provider-azurerm/internal/provider"
+	// #nosec G115
 	"github.com/hashicorp/terraform-provider-azurerm/internal/sdk"
+	// #nosec G115
 	tfyschema "github.com/magodo/tfadd/schema/legacy"
 )
 

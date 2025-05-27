@@ -47,5 +47,9 @@ func (rl *rpcLogger) LogResponse(ctx context.Context, rsp *jrpc2.Response) {
 	}
 	var body json.RawMessage
 	_ = rsp.UnmarshalResult(&body)
+	if len(body) > 10000 {
+		rl.logger.Printf("Response to %q%s: (large response)", req.Method(), idStr)
+		return
+	}
 	rl.logger.Printf("Response to %q%s: %s", req.Method(), idStr, body)
 }

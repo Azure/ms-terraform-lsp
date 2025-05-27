@@ -27,7 +27,7 @@ func GetDocumentContent(ctx context.Context, documentURI protocol.DocumentURI) (
 }
 
 func GetLineContent(contents []string, line uint32) (string, error) {
-	if line < 0 || int(line) >= len(contents) {
+	if int(line) >= len(contents) {
 		return "", fmt.Errorf("invalid line number")
 	}
 	return strings.TrimSpace(contents[line]), nil

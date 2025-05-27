@@ -73,13 +73,8 @@ type SchemaAttribute struct {
 
 func (b *SchemaAttribute) GetAutoCompletePossibleValues() []string {
 	switch b.AttributeType {
-	case cty.String:
-		possibleValues := make([]string, 0, len(b.PossibleValues))
-		for _, value := range b.PossibleValues {
-			possibleValues = append(possibleValues, fmt.Sprintf(`"%s"`, value))
-		}
-
-		return possibleValues
+	case cty.Bool:
+		return []string{"true", "false"}
 	default:
 		return b.PossibleValues
 	}
@@ -134,7 +129,11 @@ func (b *SchemaAttribute) GetAttributeDocLink(parentLink string) string {
 }
 
 func (b *SchemaAttribute) GetGitHubIssueLink() string {
-	return fmt.Sprintf(GitHubIssuesURL, b.ResourceOrDataSourceName+"."+b.AttributePath)
+	return fmt.Sprintf(GitHubIssuesURL, b.ResourceOrDataSourceName+" "+strings.ReplaceAll(b.AttributePath, ".", " "))
+}
+
+func (b *SchemaAttribute) GetRaiseGitHubIssueLink() string {
+	return fmt.Sprintf(NewGitHubIssuesURL, fmt.Sprintf("`%s` - %s", b.ResourceOrDataSourceName, strings.ReplaceAll(b.AttributePath, ".", " ")))
 }
 
 func (b *SchemaAttribute) GetDetails() []string {

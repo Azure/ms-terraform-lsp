@@ -1,0 +1,73 @@
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "result": {
+    "isIncomplete": false,
+    "items":[
+      {
+        "label": "location",
+        "labelDetails": {},
+        "kind": 10,
+        "documentation": {
+          "kind": "markdown",
+          "value": "## location\n**[required] string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group#location>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_resource_group location>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_resource_group` - location >)\n\n---\n\n\n\nThe Azure Region where the Resource Group should exist. Changing this forces a new Resource Group to be created.\n"
+        },
+        "sortText": "0",
+        "insertText": "location = \"$0\"",
+        "insertTextFormat": 2,
+        "command": {
+          "title": "Trigger Suggest",
+          "command": "editor.action.triggerSuggest"
+        }
+      },
+      {
+        "label": "name",
+        "labelDetails": {},
+        "kind": 10,
+        "documentation": {
+          "kind": "markdown",
+          "value": "## name\n**[required] string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group#name>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_resource_group name>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_resource_group` - name >)\n\n---\n\n\n\nThe Name which should be used for this Resource Group. Changing this forces a new Resource Group to be created.\n"
+        },
+        "sortText": "1",
+        "insertText": "name = \"$0\"",
+        "insertTextFormat": 2,
+        "command": {
+          "title": "Trigger Suggest",
+          "command": "editor.action.triggerSuggest"
+        }
+      },
+      {
+        "label": "managed_by",
+        "labelDetails": {},
+        "kind": 10,
+        "documentation": {
+          "kind": "markdown",
+          "value": "## managed_by\n**[optional] string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group#managed_by>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_resource_group managed_by>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_resource_group` - managed_by >)\n\n---\n\n\n\nThe ID of the resource or application that manages this Resource Group.\n"
+        },
+        "sortText": "2",
+        "insertText": "managed_by = \"$0\"",
+        "insertTextFormat": 2,
+        "command": {
+          "title": "Trigger Suggest",
+          "command": "editor.action.triggerSuggest"
+        }
+      },
+      {
+        "label": "tags",
+        "labelDetails": {},
+        "kind": 10,
+        "documentation": {
+          "kind": "markdown",
+          "value": "## tags\n**[optional] map of string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group#tags>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_resource_group tags>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_resource_group` - tags >)\n\n---\n\n\n\nA mapping of tags which should be assigned to the Resource Group.\n"
+        },
+        "sortText": "3",
+        "insertText": "tags {$0}",
+        "insertTextFormat": 2,
+        "command": {
+          "title": "Trigger Suggest",
+          "command": "editor.action.triggerSuggest"
+        }
+      }
+    ]
+  }
+}
