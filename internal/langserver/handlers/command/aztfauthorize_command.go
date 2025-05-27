@@ -686,9 +686,9 @@ func getAztfoReport(ctx context.Context, dir string) []byte {
 	}
 
 	if azurermVersion != "" {
-		// https://raw.githubusercontent.com/wiki/magodo/aztfo/reports/v4.26.0.json
-		// #nosec G107
+		// https://raw.githubusercontent.com/wiki/magodo/aztfo/reports/v4.26.0.jsongit
 		remoteReportUrl := fmt.Sprintf("https://raw.githubusercontent.com/wiki/magodo/aztfo/reports/%s.json", azurermVersion)
+		// #nosec G107
 		response, err := http.Get(remoteReportUrl)
 		if err != nil || response.StatusCode == http.StatusNotFound {
 			log.Printf("[DEBUG] failed to get the azurerm operation report for version %v, use local azurerm report instead", azurermVersion)
