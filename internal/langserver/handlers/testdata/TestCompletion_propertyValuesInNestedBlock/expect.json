@@ -1,0 +1,78 @@
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "result": {
+    "isIncomplete": false,
+    "items": [
+      {
+        "label": "\"SystemAssigned\"",
+        "labelDetails": {},
+        "kind": 12,
+        "detail": "Possible value for identity.type",
+        "documentation": {
+          "kind": "markdown",
+          "value": "## type\n**[required] string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#identity>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account identity type>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - identity type >)\n\n---\n\n- **Possible Values:** `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned`\n\nThe type of identity used for this Automation Account. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.\n"
+        },
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 5,
+              "character": 10
+            },
+            "end": {
+              "line": 5,
+              "character": 11
+            }
+          },
+          "newText": "\"SystemAssigned\""
+        }
+      },
+      {
+        "label": "\"UserAssigned\"",
+        "labelDetails": {},
+        "kind": 12,
+        "detail": "Possible value for identity.type",
+        "documentation": {
+          "kind": "markdown",
+          "value": "## type\n**[required] string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#identity>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account identity type>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - identity type >)\n\n---\n\n- **Possible Values:** `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned`\n\nThe type of identity used for this Automation Account. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.\n"
+        },
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 5,
+              "character": 10
+            },
+            "end": {
+              "line": 5,
+              "character": 11
+            }
+          },
+          "newText": "\"UserAssigned\""
+        }
+      },
+      {
+        "label": "\"SystemAssigned, UserAssigned\"",
+        "labelDetails": {},
+        "kind": 12,
+        "detail": "Possible value for identity.type",
+        "documentation": {
+          "kind": "markdown",
+          "value": "## type\n**[required] string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#identity>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account identity type>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - identity type >)\n\n---\n\n- **Possible Values:** `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned`\n\nThe type of identity used for this Automation Account. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.\n"
+        },
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 5,
+              "character": 10
+            },
+            "end": {
+              "line": 5,
+              "character": 11
+            }
+          },
+          "newText": "\"SystemAssigned, UserAssigned\""
+        }
+      }
+    ]
+  }
+}

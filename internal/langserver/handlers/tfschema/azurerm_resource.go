@@ -6,6 +6,7 @@ import (
 
 	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
 	provider_schema "github.com/Azure/azurerm-lsp/provider-schema"
+	"github.com/Azure/azurerm-lsp/provider-schema/azurerm/schema"
 	"github.com/zclconf/go-cty/cty"
 )
 
@@ -47,51 +48,7 @@ func (a AzureRMResource) ListProperties(blockPath string) []Property {
 		if err != nil || prop == nil {
 			continue
 		}
-
-		insertText := p.Name
-		propType := ""
-		if p.AttributeType.IsPrimitiveType() {
-			switch p.AttributeType {
-			case cty.String:
-				insertText = fmt.Sprintf(`%s = "$0"`, p.Name)
-				propType = "string"
-			case cty.Bool:
-				insertText = fmt.Sprintf(`%s = $0`, p.Name)
-				propType = "bool"
-			case cty.Number:
-				insertText = fmt.Sprintf(`%s = $0`, p.Name)
-				propType = "number"
-			default:
-				insertText = fmt.Sprintf(`%s = $0`, p.Name)
-				propType = "object"
-			}
-		} else if p.AttributeType.IsMapType() || p.AttributeType.IsObjectType() {
-			// invalid nesting mode
-			if p.NestingMode == 0 {
-				insertText = fmt.Sprintf(`%s = { $0 }`, p.Name)
-			} else {
-				insertText = fmt.Sprintf(`%s {$0}`, p.Name)
-			}
-			propType = "object"
-		} else if p.AttributeType.IsListType() || p.AttributeType.IsSetType() {
-			insertText = fmt.Sprintf(`%s = [$0]`, p.Name)
-			propType = "list"
-		}
-
-		modifier := "Optional"
-		if p.Required {
-			modifier = "Required"
-		}
-		items = append(items, Property{
-			Name:                  p.Name,
-			Modifier:              modifier,
-			Type:                  propType,
-			MarkdownDescription:   content,
-			CompletionNewText:     insertText,
-			GenericCandidatesFunc: nil,
-			ValueCandidatesFunc:   nil,
-			NestedProperties:      nil,
-		})
+		items = append(items, ToProperty(p, content))
 	}
 	return items
 }
@@ -105,7 +62,7 @@ func (a AzureRMResource) GetProperty(propertyPath string) *Property {
 	path := strings.Join(parts[2:], ".")
 
 	values, _ := provider_schema.GetPossibleValuesForProperty(resourceName, path)
-	content, _, _ := provider_schema.GetAttributeContent(resourceName, path)
+	content, prop, _ := provider_schema.GetAttributeContent(resourceName, path)
 
 	fixedItems := make([]lsp.CompletionItem, 0)
 	for _, val := range values {
@@ -123,23 +80,67 @@ func (a AzureRMResource) GetProperty(propertyPath string) *Property {
 		})
 	}
 
-	return &Property{
-		Name:                  "",
-		Modifier:              "",
-		Type:                  "",
-		Description:           "",
-		MarkdownDescription:   content,
-		CompletionNewText:     "",
-		GenericCandidatesFunc: nil,
-		ValueCandidatesFunc:   FixedValueCandidatesFunc(fixedItems),
-		NestedProperties:      nil,
+	out := &Property{}
+	if prop != nil {
+		property := ToProperty(prop, content)
+		out = &property
 	}
+	out.MarkdownDescription = content
+	out.ValueCandidatesFunc = FixedValueCandidatesFunc(fixedItems)
+	return out
 }
 
 func (a AzureRMResource) Match(name string) bool {
 	parts := strings.Split(name, ".")
-	if len(parts) < 2 {
+	if len(parts) != 2 {
 		return false
 	}
 	return strings.HasPrefix(parts[1], "azurerm_")
+}
+
+func ToProperty(p *schema.SchemaAttribute, content string) Property {
+	insertText := p.Name
+	propType := ""
+	if p.AttributeType.IsPrimitiveType() {
+		switch p.AttributeType {
+		case cty.String:
+			insertText = fmt.Sprintf(`%s = "$0"`, p.Name)
+			propType = "string"
+		case cty.Bool:
+			insertText = fmt.Sprintf(`%s = $0`, p.Name)
+			propType = "bool"
+		case cty.Number:
+			insertText = fmt.Sprintf(`%s = $0`, p.Name)
+			propType = "number"
+		default:
+			insertText = fmt.Sprintf(`%s = $0`, p.Name)
+			propType = "object"
+		}
+	} else if p.AttributeType.IsMapType() || p.AttributeType.IsObjectType() {
+		// invalid nesting mode
+		if p.NestingMode == 0 {
+			insertText = fmt.Sprintf(`%s = { $0 }`, p.Name)
+		} else {
+			insertText = fmt.Sprintf(`%s {$0}`, p.Name)
+		}
+		propType = "object"
+	} else if p.AttributeType.IsListType() || p.AttributeType.IsSetType() {
+		insertText = fmt.Sprintf(`%s = [$0]`, p.Name)
+		propType = "list"
+	}
+
+	modifier := "Optional"
+	if p.Required {
+		modifier = "Required"
+	}
+	return Property{
+		Name:                  p.Name,
+		Modifier:              modifier,
+		Type:                  propType,
+		MarkdownDescription:   content,
+		CompletionNewText:     insertText,
+		GenericCandidatesFunc: nil,
+		ValueCandidatesFunc:   nil,
+		NestedProperties:      nil,
+	}
 }
