@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/microsoft/msgraph-lsp/internal/parser"
+	"github.com/Azure/azurerm-lsp/internal/parser"
 	"github.com/ms-henglu/go-msgraph-types/types"
 )
 

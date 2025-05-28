@@ -1,12 +1,15 @@
 package tfschema
 
-import lsp "github.com/microsoft/msgraph-lsp/internal/protocol"
+import lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+
+var Resources []Resource
 
 func init() {
 	Resources = make([]Resource, 0)
 
 	Resources = append(Resources,
-		Resource{
+		&AzureRMResource{},
+		&MSGraphResource{
 			Name: "resource.msgraph_resource",
 			Properties: []Property{
 				{
@@ -35,6 +38,7 @@ func init() {
 					CompletionNewText:     `body = $0`,
 					ValueCandidatesFunc:   FixedValueCandidatesFunc([]lsp.CompletionItem{dynamicPlaceholderCandidate()}),
 					GenericCandidatesFunc: bodyCandidates,
+					CustomizedHoverFunc:   msgraphBodyHover,
 				},
 
 				{
@@ -62,7 +66,7 @@ func init() {
 				},
 			},
 		},
-		Resource{
+		&MSGraphResource{
 			Name: "data.msgraph_resource",
 			Properties: []Property{
 				{

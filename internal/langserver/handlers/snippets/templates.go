@@ -4,7 +4,8 @@ import (
 	"embed"
 	"encoding/json"
 
-	lsp "github.com/microsoft/msgraph-lsp/internal/protocol"
+	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	provider_schema "github.com/Azure/azurerm-lsp/provider-schema"
 )
 
 //go:embed templates.json
@@ -26,14 +27,17 @@ type DocumentationModel struct {
 	Value string `json:"value"`
 }
 
-var templateCandidates []lsp.CompletionItem
+var (
+	msgraphTemplateCandidates []lsp.CompletionItem
+	azurermTemplateCandidates []lsp.CompletionItem
+)
 
-func TemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
-	if len(templateCandidates) != 0 {
-		for i := range templateCandidates {
-			templateCandidates[i].TextEdit.Range = editRange
+func MSGraphTemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
+	if len(msgraphTemplateCandidates) != 0 {
+		for i := range msgraphTemplateCandidates {
+			msgraphTemplateCandidates[i].TextEdit.Range = editRange
 		}
-		return templateCandidates
+		return msgraphTemplateCandidates
 	}
 	templates := make([]CompletionModel, 0)
 	data, err := templateJSON.ReadFile("templates.json")
@@ -56,7 +60,7 @@ func TemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
 		}
 		data, _ := json.Marshal(event)
 
-		templateCandidates = append(templateCandidates, lsp.CompletionItem{
+		msgraphTemplateCandidates = append(msgraphTemplateCandidates, lsp.CompletionItem{
 			Label:  template.Label,
 			Kind:   lsp.SnippetCompletion,
 			Detail: "Code Sample",
@@ -73,10 +77,71 @@ func TemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
 			},
 			Command: &lsp.Command{
 				Title:     "",
-				Command:   "msgraph.telemetry",
+				Command:   "azurerm.telemetry",
 				Arguments: []json.RawMessage{data},
 			},
 		})
 	}
-	return templateCandidates
+	return msgraphTemplateCandidates
+}
+
+func AzureRMTemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
+	if len(azurermTemplateCandidates) != 0 {
+		for i := range azurermTemplateCandidates {
+			azurermTemplateCandidates[i].TextEdit.Range = editRange
+		}
+		return azurermTemplateCandidates
+	}
+
+	resources := provider_schema.ListAllResources()
+	dataSources := provider_schema.ListAllDataSources()
+	azurermTemplateCandidates = make([]lsp.CompletionItem, 0)
+	for _, name := range append(resources, dataSources...) {
+		snippet, err := provider_schema.GetSnippet(name)
+		if err != nil {
+			continue
+		}
+
+		content, isDataSource, err := provider_schema.GetResourceContent(name)
+		if err != nil {
+			continue
+		}
+
+		kind := "resource"
+		if isDataSource {
+			kind = "data source"
+		}
+
+		event := lsp.TelemetryEvent{
+			Version: lsp.TelemetryFormatVersion,
+			Name:    "textDocument/completion",
+			Properties: map[string]interface{}{
+				"kind": "code-sample",
+				"type": name,
+			},
+		}
+		data, _ := json.Marshal(event)
+
+		azurermTemplateCandidates = append(azurermTemplateCandidates, lsp.CompletionItem{
+			Label:            name,
+			InsertText:       snippet,
+			InsertTextFormat: lsp.SnippetTextFormat,
+			Kind:             lsp.SnippetCompletion,
+			Detail:           "AzureRM " + kind,
+			TextEdit: &lsp.TextEdit{
+				Range:   editRange,
+				NewText: snippet,
+			},
+			Documentation: lsp.MarkupContent{
+				Kind:  lsp.Markdown,
+				Value: content,
+			},
+			Command: &lsp.Command{
+				Title:     "",
+				Command:   "azurerm.telemetry",
+				Arguments: []json.RawMessage{data},
+			},
+		})
+	}
+	return azurermTemplateCandidates
 }

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
+	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
-	lsp "github.com/microsoft/msgraph-lsp/internal/protocol"
 )
 
 type Snippet struct {
@@ -34,7 +34,7 @@ func (field Field) Order() int {
 	}
 }
 
-func CodeSampleCandidates(block *hclsyntax.Block, editRange lsp.Range, data []byte) []lsp.CompletionItem {
+func MSGraphCodeSampleCandidates(block *hclsyntax.Block, editRange lsp.Range, data []byte) []lsp.CompletionItem {
 	if block == nil || block.Type == "data" {
 		return nil
 	}
@@ -92,7 +92,7 @@ func CodeSampleCandidates(block *hclsyntax.Block, editRange lsp.Range, data []by
 				},
 				Command: &lsp.Command{
 					Title:     "",
-					Command:   "msgraph.telemetry",
+					Command:   "azurerm.telemetry",
 					Arguments: []json.RawMessage{data},
 				},
 			},

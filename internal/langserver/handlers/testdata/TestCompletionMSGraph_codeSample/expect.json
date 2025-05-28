@@ -31,7 +31,7 @@
         },
         "command": {
           "title": "",
-          "command": "msgraph.telemetry",
+          "command": "azurerm.telemetry",
           "arguments": [
             {
               "v": 1,

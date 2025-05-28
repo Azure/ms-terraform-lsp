@@ -2,80 +2,153 @@ package handlers
 
 import (
 	"context"
+	"fmt"
+	"log"
+	"strings"
 
-	"github.com/Azure/azurerm-lsp/internal/lsp"
+	lsctx "github.com/Azure/azurerm-lsp/internal/context"
+	"github.com/Azure/azurerm-lsp/internal/langserver/handlers/tfschema"
+	ilsp "github.com/Azure/azurerm-lsp/internal/lsp"
 	"github.com/Azure/azurerm-lsp/internal/parser"
-	"github.com/Azure/azurerm-lsp/internal/protocol"
-	provider_schema "github.com/Azure/azurerm-lsp/provider-schema"
+	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	"github.com/Azure/azurerm-lsp/internal/telemetry"
 	"github.com/hashicorp/hcl/v2"
+	"github.com/hashicorp/hcl/v2/hclsyntax"
 )
 
-func (svc *service) HandleHover(ctx context.Context, params protocol.TextDocumentPositionParams) (*protocol.Hover, error) {
-	docContent, docFileName, err := parser.GetDocumentContent(ctx, params.TextDocument.URI)
+func (svc *service) TextDocumentHover(ctx context.Context, params lsp.TextDocumentPositionParams) (*lsp.Hover, error) {
+	fs, err := lsctx.DocumentStorage(ctx)
 	if err != nil {
 		return nil, err
 	}
 
-	ctxInfo, diags, err := parser.BuildHCLContext(docContent, docFileName, params.Position)
-	if err != nil || (diags != nil && diags.HasErrors()) {
-		docContent, fieldName, _, err := parser.AttemptReparse(docContent, params.Position.Line)
-		if err != nil {
-			return nil, nil
-		}
-
-		ctxInfo, diags, err = parser.BuildHCLContext(docContent, docFileName, params.Position)
-		if err != nil || (diags != nil && diags.HasErrors()) {
-			return nil, nil
-		}
-
-		if ctxInfo.ParsedPath != "" {
-			ctxInfo.ParsedPath += "." + fieldName
-		} else {
-			ctxInfo.ParsedPath = fieldName
-		}
-	}
-
-	var content string
-
-	switch {
-	case ctxInfo.ParsedPath != "" && (ctxInfo.SubBlock != nil || ctxInfo.Attribute != nil):
-		content, _, err = provider_schema.GetAttributeContent(ctxInfo.Resource, ctxInfo.ParsedPath)
-	default:
-		content, _, err = provider_schema.GetResourceContent(ctxInfo.Resource)
-	}
+	_, err = ilsp.ClientCapabilities(ctx)
 	if err != nil {
-		return nil, nil
+		return nil, err
 	}
 
-	var keyRange hcl.Range
-	if ctxInfo.Attribute != nil {
-		keyRange = ctxInfo.Attribute.NameRange
-	} else if ctxInfo.SubBlock != nil {
-		if len(ctxInfo.SubBlock.LabelRanges) == 0 {
-			keyRange = ctxInfo.SubBlock.TypeRange
-		} else {
-			keyRange = ctxInfo.SubBlock.LabelRanges[0]
+	doc, err := fs.GetDocument(ilsp.FileHandlerFromDocumentURI(params.TextDocument.URI))
+	if err != nil {
+		return nil, err
+	}
+
+	fPos, err := ilsp.FilePositionFromDocumentPosition(params, doc)
+	if err != nil {
+		return nil, err
+	}
+
+	data, err := doc.Text()
+	if err != nil {
+		return nil, err
+	}
+
+	telemetrySender, err := lsctx.Telemetry(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	svc.logger.Printf("Looking for hover data at %q -> %#v", doc.Filename(), fPos.Position())
+	hoverData := HoverAtPos(ctx, data, doc.Filename(), fPos.Position(), svc.logger, telemetrySender)
+	svc.logger.Printf("received hover data: %#v", hoverData)
+
+	return hoverData, nil
+}
+
+func HoverAtPos(ctx context.Context, data []byte, filename string, pos hcl.Pos, logger *log.Logger, sender telemetry.Sender) *lsp.Hover {
+	file, _ := hclsyntax.ParseConfig(data, filename, hcl.InitialPos)
+	body, isHcl := file.Body.(*hclsyntax.Body)
+	if !isHcl {
+		logger.Printf("file is not hcl")
+		return nil
+	}
+
+	var resourceBlock *hclsyntax.Block
+	for _, block := range body.Blocks {
+		if parser.ContainsPos(block.Range(), pos) {
+			resourceBlock = block
+			break
 		}
-	} else {
-		if len(ctxInfo.Block.LabelRanges) == 0 {
-			keyRange = ctxInfo.Block.TypeRange
+	}
+
+	// the cursor is not in a block
+	if resourceBlock == nil {
+		return nil
+	}
+
+	// if the block has no labels, we cannot provide any hover information
+	if len(resourceBlock.Labels) == 0 {
+		return nil
+	}
+
+	resourceName := fmt.Sprintf("%s.%s", resourceBlock.Type, resourceBlock.Labels[0])
+	resource := tfschema.GetResourceSchema(resourceName)
+	if resource == nil {
+		return nil
+	}
+
+	// if the cursor is in an attribute, provide hover information for the attribute
+	if attribute, attributePath := parser.AttributeAtPos(resourceBlock, pos); attribute != nil {
+		propertyPath := fmt.Sprintf("%s.%s", resourceName, attributePath)
+		property := (*resource).GetProperty(propertyPath)
+		if property == nil {
+			return nil
+		}
+		if property.CustomizedHoverFunc != nil {
+			return property.CustomizedHoverFunc(resourceBlock, attribute, pos, data)
+		}
+		if !parser.ContainsPos(attribute.NameRange, pos) {
+			return nil
+		}
+		return property.ToHover(attribute.NameRange)
+	}
+
+	// if the cursor is in a nested block, provide hover information for the block
+	if nestedBlock, blockPath := parser.BlockAtPos(body, pos); nestedBlock != nil {
+		if !parser.ContainsPos(nestedBlock.DefRange(), pos) {
+			return nil
+		}
+
+		if blockPath != "" {
+			blockPath = fmt.Sprintf("%s.%s", resourceName, blockPath)
+			property := (*resource).GetProperty(blockPath)
+			if property == nil {
+				return nil
+			}
+			return property.ToHover(nestedBlock.DefRange())
+		}
+
+		// hover on the block itself
+		var doc, docId string
+		if strings.Contains(resourceName, "msgraph_resource") {
+			url := parser.ExtractMSGraphUrl(resourceBlock, data)
+			apiVersion := "v1.0"
+			if v := parser.BlockAttributeLiteralValue(resourceBlock, "api_version"); v != nil {
+				apiVersion = *v
+			}
+			resourceType := fmt.Sprintf("%s@%s", url, apiVersion)
+			doc = (*resource).ResourceDocumentation(resourceType)
+			docId = fmt.Sprintf("msgraph_resource.%s", resourceType)
 		} else {
-			keyRange = ctxInfo.Block.LabelRanges[0]
+			doc = (*resource).ResourceDocumentation(resourceName)
+			docId = resourceName
+		}
+
+		if doc == "" {
+			return nil
+		}
+		sender.SendEvent(ctx, "textDocument/hover", map[string]interface{}{
+			"kind": "resource-definition",
+			"url":  docId,
+		})
+
+		return &lsp.Hover{
+			Range: ilsp.HCLRangeToLSP(resourceBlock.DefRange()),
+			Contents: lsp.MarkupContent{
+				Kind:  lsp.Markdown,
+				Value: doc,
+			},
 		}
 	}
 
-	pos := lsp.LSPPosToHCL(params.Position)
-	// Only show hover if position is within the key range
-	if (pos.Line == keyRange.Start.Line && pos.Column < keyRange.Start.Column) ||
-		(pos.Line == keyRange.End.Line && pos.Column > keyRange.End.Column) {
-		return nil, nil // Not on key, do not show hover
-	}
-
-	return &protocol.Hover{
-		Contents: protocol.MarkupContent{
-			Kind:  protocol.Markdown,
-			Value: content,
-		},
-		Range: lsp.HCLRangeToLSP(keyRange),
-	}, nil
+	return nil
 }

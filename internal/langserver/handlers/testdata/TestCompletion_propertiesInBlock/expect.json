@@ -8,15 +8,17 @@
         "label": "type",
         "labelDetails": {},
         "kind": 10,
+        "detail": "type (Required)",
         "documentation": {
           "kind": "markdown",
           "value": "## type\n**[required] string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#identity>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account identity type>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - identity type >)\n\n---\n\n- **Possible Values:** `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned`\n\nThe type of identity used for this Automation Account. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.\n"
         },
-        "sortText": "0",
+        "sortText": "0000",
         "insertText": "type = \"$0\"",
         "insertTextFormat": 2,
+        "insertTextMode": 2,
         "command": {
-          "title": "Trigger Suggest",
+          "title": "Suggest",
           "command": "editor.action.triggerSuggest"
         }
       },
@@ -24,15 +26,17 @@
         "label": "identity_ids",
         "labelDetails": {},
         "kind": 10,
+        "detail": "identity_ids (Optional)",
         "documentation": {
           "kind": "markdown",
           "value": "## identity_ids\n**[optional] set of string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#identity>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account identity identity_ids>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - identity identity_ids >)\n\n---\n\n\n\nThe ID of the User Assigned Identity which should be assigned to this Automation Account.\n"
         },
-        "sortText": "1",
+        "sortText": "0001",
         "insertText": "identity_ids = [$0]",
         "insertTextFormat": 2,
+        "insertTextMode": 2,
         "command": {
-          "title": "Trigger Suggest",
+          "title": "Suggest",
           "command": "editor.action.triggerSuggest"
         }
       }

@@ -8,15 +8,29 @@
         "label": "location",
         "labelDetails": {},
         "kind": 10,
+        "detail": "location (Required)",
         "documentation": {
           "kind": "markdown",
           "value": "## location\n**[required] string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#location>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account location>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - location >)\n\n---\n\n\n\nSpecifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.\n"
         },
-        "sortText": "0",
-        "insertText": "location = \"$0\"",
+        "sortText": "0000",
         "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "location = \"$0\""
+        },
         "command": {
-          "title": "Trigger Suggest",
+          "title": "Suggest",
           "command": "editor.action.triggerSuggest"
         }
       },
@@ -24,15 +38,29 @@
         "label": "name",
         "labelDetails": {},
         "kind": 10,
+        "detail": "name (Required)",
         "documentation": {
           "kind": "markdown",
           "value": "## name\n**[required] string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#name>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account name>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - name >)\n\n---\n\n\n\nSpecifies the name of the Automation Account. Changing this forces a new resource to be created.\n"
         },
-        "sortText": "1",
-        "insertText": "name = \"$0\"",
+        "sortText": "0001",
         "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "name = \"$0\""
+        },
         "command": {
-          "title": "Trigger Suggest",
+          "title": "Suggest",
           "command": "editor.action.triggerSuggest"
         }
       },
@@ -40,15 +68,29 @@
         "label": "resource_group_name",
         "labelDetails": {},
         "kind": 10,
+        "detail": "resource_group_name (Required)",
         "documentation": {
           "kind": "markdown",
           "value": "## resource_group_name\n**[required] string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#resource_group_name>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account resource_group_name>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - resource_group_name >)\n\n---\n\n\n\nThe name of the resource group in which the Automation Account is created. Changing this forces a new resource to be created.\n"
         },
-        "sortText": "2",
-        "insertText": "resource_group_name = \"$0\"",
+        "sortText": "0002",
         "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "resource_group_name = \"$0\""
+        },
         "command": {
-          "title": "Trigger Suggest",
+          "title": "Suggest",
           "command": "editor.action.triggerSuggest"
         }
       },
@@ -56,15 +98,29 @@
         "label": "sku_name",
         "labelDetails": {},
         "kind": 10,
+        "detail": "sku_name (Required)",
         "documentation": {
           "kind": "markdown",
           "value": "## sku_name\n**[required] string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#sku_name>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account sku_name>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - sku_name >)\n\n---\n\n- **Possible Values:** `Basic`, `Free`\n\nThe SKU of the account. Possible values are `Basic` and `Free`.\n"
         },
-        "sortText": "3",
-        "insertText": "sku_name = \"$0\"",
+        "sortText": "0003",
         "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "sku_name = \"$0\""
+        },
         "command": {
-          "title": "Trigger Suggest",
+          "title": "Suggest",
           "command": "editor.action.triggerSuggest"
         }
       },
@@ -72,15 +128,29 @@
         "label": "encryption",
         "labelDetails": {},
         "kind": 10,
+        "detail": "encryption (Optional)",
         "documentation": {
           "kind": "markdown",
           "value": "## encryption\n**[optional] object**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#encryption>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account encryption>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - encryption >)\n\n---\n\n\n\nAn `encryption` block as defined below.\n\n - key_vault_key_id: The ID of the Key Vault Key which should be used to Encrypt the data in this Automation Account.\n - key_source: UnDocumented\n - user_assigned_identity_id: The User Assigned Managed Identity ID to be used for accessing the Customer Managed Key for encryption.\n"
         },
-        "sortText": "4",
-        "insertText": "encryption {$0}",
+        "sortText": "0004",
         "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "encryption {$0}"
+        },
         "command": {
-          "title": "Trigger Suggest",
+          "title": "Suggest",
           "command": "editor.action.triggerSuggest"
         }
       },
@@ -88,15 +158,29 @@
         "label": "identity",
         "labelDetails": {},
         "kind": 10,
+        "detail": "identity (Optional)",
         "documentation": {
           "kind": "markdown",
           "value": "## identity\n**[optional] object**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#identity>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account identity>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - identity >)\n\n---\n\n\n\nAn `identity` block as defined below.\n\n - type: The type of identity used for this Automation Account. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.\n - identity_ids: The ID of the User Assigned Identity which should be assigned to this Automation Account.\n"
         },
-        "sortText": "5",
-        "insertText": "identity {$0}",
+        "sortText": "0005",
         "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "identity {$0}"
+        },
         "command": {
-          "title": "Trigger Suggest",
+          "title": "Suggest",
           "command": "editor.action.triggerSuggest"
         }
       },
@@ -104,15 +188,29 @@
         "label": "local_authentication_enabled",
         "labelDetails": {},
         "kind": 10,
+        "detail": "local_authentication_enabled (Optional)",
         "documentation": {
           "kind": "markdown",
           "value": "## local_authentication_enabled\n**[optional] bool**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#local_authentication_enabled>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account local_authentication_enabled>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - local_authentication_enabled >)\n\n---\n\n- **Default:** `true`\n\nAAD authentication are blocked. Defaults to `true`.\n"
         },
-        "sortText": "6",
-        "insertText": "local_authentication_enabled = $0",
+        "sortText": "0006",
         "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "local_authentication_enabled = $0"
+        },
         "command": {
-          "title": "Trigger Suggest",
+          "title": "Suggest",
           "command": "editor.action.triggerSuggest"
         }
       },
@@ -120,15 +218,29 @@
         "label": "public_network_access_enabled",
         "labelDetails": {},
         "kind": 10,
+        "detail": "public_network_access_enabled (Optional)",
         "documentation": {
           "kind": "markdown",
           "value": "## public_network_access_enabled\n**[optional] bool**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#public_network_access_enabled>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account public_network_access_enabled>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - public_network_access_enabled >)\n\n---\n\n- **Default:** `true`\n\nWhether public network access is allowed for the automation account. Defaults to `true`.\n"
         },
-        "sortText": "7",
-        "insertText": "public_network_access_enabled = $0",
+        "sortText": "0007",
         "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "public_network_access_enabled = $0"
+        },
         "command": {
-          "title": "Trigger Suggest",
+          "title": "Suggest",
           "command": "editor.action.triggerSuggest"
         }
       },
@@ -136,15 +248,29 @@
         "label": "tags",
         "labelDetails": {},
         "kind": 10,
+        "detail": "tags (Optional)",
         "documentation": {
           "kind": "markdown",
           "value": "## tags\n**[optional] map of string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#tags>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account tags>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - tags >)\n\n---\n\n\n\nA mapping of tags to assign to the resource.\n"
         },
-        "sortText": "8",
-        "insertText": "tags = { $0 }",
+        "sortText": "0008",
         "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "tags = { $0 }"
+        },
         "command": {
-          "title": "Trigger Suggest",
+          "title": "Suggest",
           "command": "editor.action.triggerSuggest"
         }
       }

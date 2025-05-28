@@ -5,23 +5,49 @@
     "isIncomplete": false,
     "items": [
       {
-        "label": "Basic",
+        "label": "\"Basic\"",
         "labelDetails": {},
         "kind": 12,
         "detail": "Possible value for sku_name",
         "documentation": {
           "kind": "markdown",
           "value": "## sku_name\n**[required] string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#sku_name>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account sku_name>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - sku_name >)\n\n---\n\n- **Possible Values:** `Basic`, `Free`\n\nThe SKU of the account. Possible values are `Basic` and `Free`.\n"
+        },
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 12
+            },
+            "end": {
+              "line": 4,
+              "character": 24
+            }
+          },
+          "newText": "\"Basic\""
         }
       },
       {
-        "label": "Free",
+        "label": "\"Free\"",
         "labelDetails": {},
         "kind": 12,
         "detail": "Possible value for sku_name",
         "documentation": {
           "kind": "markdown",
           "value": "## sku_name\n**[required] string**\n\n[📖 Documentation](<https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/automation_account#sku_name>) | [🔍 See Related Issues](<https://github.com/hashicorp/terraform-provider-azurerm/issues?q=is:issue azurerm_automation_account sku_name>) | [🐛 Raise Issue](<https://github.com/hashicorp/terraform-provider-azurerm/issues/new?template=Bug_Report.yml&title=`azurerm_automation_account` - sku_name >)\n\n---\n\n- **Possible Values:** `Basic`, `Free`\n\nThe SKU of the account. Possible values are `Basic` and `Free`.\n"
+        },
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 12
+            },
+            "end": {
+              "line": 4,
+              "character": 24
+            }
+          },
+          "newText": "\"Free\""
         }
       }
     ]

@@ -2,16 +2,14 @@ package tfschema
 
 import (
 	"fmt"
-	"regexp"
-	"strings"
 
+	"github.com/Azure/azurerm-lsp/internal/langserver/schema"
+	ilsp "github.com/Azure/azurerm-lsp/internal/lsp"
+	"github.com/Azure/azurerm-lsp/internal/msgraph"
+	"github.com/Azure/azurerm-lsp/internal/parser"
+	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
-	"github.com/microsoft/msgraph-lsp/internal/langserver/schema"
-	ilsp "github.com/microsoft/msgraph-lsp/internal/lsp"
-	"github.com/microsoft/msgraph-lsp/internal/msgraph"
-	"github.com/microsoft/msgraph-lsp/internal/parser"
-	lsp "github.com/microsoft/msgraph-lsp/internal/protocol"
 	"github.com/ms-henglu/go-msgraph-types/types"
 )
 
@@ -24,7 +22,13 @@ func bodyCandidates(data []byte, filename string, block *hclsyntax.Block, attrib
 		}
 	}
 
-	bodyDef := BodyDefinitionFromBlock(block, data)
+	urlValue := parser.ExtractMSGraphUrl(block, data)
+	apiVersion := "v1.0"
+	if v := parser.BlockAttributeLiteralValue(block, "api_version"); v != nil {
+		apiVersion = *v
+	}
+	bodyDef := msgraph.SchemaLoader.GetResourceDefinition(apiVersion, urlValue)
+
 	if bodyDef == nil {
 		return nil
 	}
@@ -219,40 +223,6 @@ func requiredPropertiesCandidates(propertySets []schema.PropertySet, r lsp.Range
 		})
 	}
 	return candidates
-}
-
-var urlRegex = regexp.MustCompile(`url\s*=\s*"(.+)"`)
-
-func BodyDefinitionFromBlock(block *hclsyntax.Block, data []byte) *types.ResourceType {
-	urlValue := urlValueFromComment(data, block.Range())
-	if urlValue == "" {
-		if v := parser.BlockAttributeLiteralValue(block, "url"); v != nil {
-			urlValue = *v
-		} else {
-			return nil
-		}
-	}
-
-	urlValue = strings.ReplaceAll(urlValue, "${", "{")
-
-	apiVersion := "v1.0"
-	if v := parser.BlockAttributeLiteralValue(block, "api_version"); v != nil {
-		apiVersion = *v
-	}
-
-	return msgraph.SchemaLoader.GetResourceDefinition(apiVersion, urlValue)
-}
-
-func urlValueFromComment(data []byte, r hcl.Range) string {
-	if r.End.Byte > len(data) {
-		return ""
-	}
-	src := data[r.Start.Byte:r.End.Byte]
-	matches := urlRegex.FindSubmatch(src)
-	if len(matches) != 2 {
-		return ""
-	}
-	return string(matches[1])
 }
 
 func editRangeFromExprRange(expression hclsyntax.Expression, pos hcl.Pos) lsp.Range {

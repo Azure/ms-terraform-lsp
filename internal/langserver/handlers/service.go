@@ -148,7 +148,7 @@ func (svc *service) Assigner() (jrpc2.Assigner, error) {
 			ctx = ilsp.WithClientCapabilities(ctx, cc)
 			ctx = lsctx.WithTelemetry(ctx, svc.telemetry)
 
-			return handle(ctx, req, svc.HandleComplete)
+			return handle(ctx, req, svc.TextDocumentComplete)
 		},
 		"textDocument/hover": func(ctx context.Context, req *jrpc2.Request) (interface{}, error) {
 			err := session.CheckInitializationIsConfirmed()
@@ -161,7 +161,7 @@ func (svc *service) Assigner() (jrpc2.Assigner, error) {
 			ctx = ilsp.ContextWithClientName(ctx, &clientName)
 			ctx = lsctx.WithTelemetry(ctx, svc.telemetry)
 
-			return handle(ctx, req, svc.HandleHover)
+			return handle(ctx, req, svc.TextDocumentHover)
 		},
 		"textDocument/codeAction": func(ctx context.Context, req *jrpc2.Request) (interface{}, error) {
 			err := session.CheckInitializationIsConfirmed()

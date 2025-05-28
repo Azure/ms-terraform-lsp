@@ -4,35 +4,47 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/Azure/azurerm-lsp/internal/msgraph"
+	"github.com/Azure/azurerm-lsp/internal/parser"
+	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
-	"github.com/microsoft/msgraph-lsp/internal/msgraph"
-	"github.com/microsoft/msgraph-lsp/internal/parser"
-	lsp "github.com/microsoft/msgraph-lsp/internal/protocol"
 	"github.com/ms-henglu/go-msgraph-types/types"
 )
 
-func PropertiesCandidates(props []Property, r lsp.Range) []lsp.CompletionItem {
+func PropertiesCandidates(props []Property, r *lsp.Range) []lsp.CompletionItem {
 	candidates := make([]lsp.CompletionItem, 0)
 
 	for index, prop := range props {
-		candidates = append(candidates, lsp.CompletionItem{
+		documentation := fmt.Sprintf("Type: `%s`  \n%s\n", prop.Type, prop.Description)
+		if prop.MarkdownDescription != "" {
+			documentation = prop.MarkdownDescription
+		}
+
+		completionItem := lsp.CompletionItem{
 			Label:  prop.Name,
 			Kind:   lsp.PropertyCompletion,
 			Detail: fmt.Sprintf("%s (%s)", prop.Name, prop.Modifier),
 			Documentation: lsp.MarkupContent{
 				Kind:  "markdown",
-				Value: fmt.Sprintf("Type: `%s`  \n%s\n", prop.Type, prop.Description),
+				Value: documentation,
 			},
 			SortText:         fmt.Sprintf("%04d", index),
 			InsertTextFormat: lsp.SnippetTextFormat,
 			InsertTextMode:   lsp.AdjustIndentation,
-			TextEdit: &lsp.TextEdit{
-				Range:   r,
+			Command:          constTriggerSuggestCommand(),
+		}
+
+		if r != nil {
+			completionItem.TextEdit = &lsp.TextEdit{
+				Range:   *r,
 				NewText: prop.CompletionNewText,
-			},
-			Command: constTriggerSuggestCommand(),
-		})
+			}
+		} else {
+			completionItem.InsertText = prop.CompletionNewText
+		}
+
+		candidates = append(candidates, completionItem)
 	}
 	return candidates
 }
