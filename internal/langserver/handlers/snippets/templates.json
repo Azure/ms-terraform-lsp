@@ -1,0 +1,90 @@
+[
+  {
+    "label": "msgraph-applications",
+    "documentation": {
+      "kind": "markdown",
+      "value": "```terraform\nresource \"msgraph_resource\" \"application\" {\n  url = \"applications\"\n\n  body = {\n    displayName = \"My Application\"\n  }\n}\n```"
+    },
+    "sortText": "2_msgraph-applications",
+    "textEdit": {
+      "newText": "resource \"msgraph_resource\" \"${1:applications}\" {\n  url = \"applications\"\n\n  body = {\n    displayName = ${2:\"My Application\"}\n  }\n}"
+    }
+  },
+  {
+    "label": "msgraph-applications-federatedidentitycredentials",
+    "documentation": {
+      "kind": "markdown",
+      "value": "```terraform\nresource \"msgraph_resource\" \"federatedIdentityCredential\" {\n  url = \"applications/${\"The id of the applications resource\"}/federatedIdentityCredentials\"\n\n  body = {\n    name        = \"myFederatedIdentityCredentials\"\n    description = \"My test federated identity credentials\"\n    audiences   = [\"https://myapp.com\"]\n    issuer      = \"https://sts.windows.net/00000000-0000-0000-0000-000000000000/\"\n    subject     = \"00000000-0000-0000-0000-000000000000\"\n  }\n}\n```"
+    },
+    "sortText": "2_msgraph-applications-federatedidentitycredentials",
+    "textEdit": {
+      "newText": "resource \"msgraph_resource\" \"${1:federatedIdentityCredential}\" {\n  url = \"applications/${${2:\"The id of the applications resource\"}}/federatedIdentityCredentials\"\n\n  body = {\n    name        = ${3:\"myFederatedIdentityCredentials\"}\n    description = ${4:\"My test federated identity credentials\"}\n    audiences   = [${5:\"https://myapp.com\"}]\n    issuer      = ${6:\"https://sts.windows.net/00000000-0000-0000-0000-000000000000/\"}\n    subject     = ${7:\"00000000-0000-0000-0000-000000000000\"}\n  }\n}"
+    }
+  },
+  {
+    "label": "msgraph-groups",
+    "documentation": {
+      "kind": "markdown",
+      "value": "```terraform\nresource \"msgraph_resource\" \"group\" {\n  url = \"groups\"\n\n  body = {\n    displayName     = \"My Group\"\n    mailEnabled     = false\n    mailNickname    = \"mygroup\"\n    securityEnabled = true\n  }\n}\n```"
+    },
+    "sortText": "2_msgraph-groups",
+    "textEdit": {
+      "newText": "resource \"msgraph_resource\" \"${1:groups}\" {\n  url = \"groups\"\n\n  body = {\n    displayName     = ${2:\"My Group\"}\n    mailEnabled     = ${3:false}\n    mailNickname    = ${4:\"mygroup\"}\n    securityEnabled = ${5:true}\n  }\n}"
+    }
+  },
+  {
+    "label": "msgraph-groups-members",
+    "documentation": {
+      "kind": "markdown",
+      "value": "```terraform\nresource \"msgraph_resource\" \"members\" {\n  url = \"groups/group-id/members/$ref\"\n\n  body = {\n    \"@odata.id\" = \"https://graph.microsoft.com/v1.0/directoryObjects/servicePrincipal-id\"\n  }\n}\n```"
+    },
+    "sortText": "2_msgraph-groups-members",
+    "textEdit": {
+      "newText": "resource \"msgraph_resource\" \"${1:members}\" {\n  url = \"groups/${${2:\"The id of the groups resource\"}}/members/$ref\"\n\n  body = {\n    \"@odata.id\" = ${3:\"https://graph.microsoft.com/v1.0/directoryObjects/servicePrincipal-id\"}\n  }\n}"
+    }
+  },
+  {
+    "label": "msgraph-oauth2permissiongrants",
+    "documentation": {
+      "kind": "markdown",
+      "value": "```terraform\nresource \"msgraph_resource\" \"oauth2PermissionGrant\" {\n  url = \"oauth2PermissionGrants\"\n\n  body = {\n    clientId    = \"The id of the servicePrincipals resource\"\n    consentType = \"AllPrincipals\"\n    resourceId  = \"MSGraphServicePrincipalId\"\n    scope       = \"User.Read\"\n  }\n}\n```"
+    },
+    "sortText": "2_msgraph-oauth2permissiongrants",
+    "textEdit": {
+      "newText": "resource \"msgraph_resource\" \"${1:oauth2PermissionGrant}\" {\n  url = \"oauth2PermissionGrants\"\n\n  body = {\n    clientId    = ${2:\"The id of the servicePrincipals resource\"}\n    consentType = ${3:\"AllPrincipals\"}\n    resourceId  = ${4:\"MSGraphServicePrincipalId\"}\n    scope       = ${5:\"User.Read\"}\n  }\n}"
+    }
+  },
+  {
+    "label": "msgraph-serviceprincipals",
+    "documentation": {
+      "kind": "markdown",
+      "value": "```terraform\nresource \"msgraph_resource\" \"servicePrincipal\" {\n  url = \"servicePrincipals\"\n\n  body = {\n    appId = \"TODO\"\n  }\n}\n```"
+    },
+    "sortText": "2_msgraph-serviceprincipals",
+    "textEdit": {
+      "newText": "resource \"msgraph_resource\" \"${1:servicePrincipal}\" {\n  url = \"servicePrincipals\"\n\n  body = {\n    appId = ${2:\"TODO\"}\n  }\n}"
+    }
+  },
+  {
+    "label": "msgraph-serviceprincipals-approleassignments",
+    "documentation": {
+      "kind": "markdown",
+      "value": "```terraform\nresource \"msgraph_resource\" \"appRoleAssignment\" {\n  url = \"servicePrincipals/servicePrincipal-id/appRoleAssignments\"\n\n  body = {\n    appRoleId   = \"userReadAllAppRoleId\"\n    principalId = \"TestApplicationServicePrincipalId\"\n    resourceId  = \"MSGraphServicePrincipalId\"\n  }\n}\n```"
+    },
+    "sortText": "2_msgraph-serviceprincipals-approleassignments",
+    "textEdit": {
+      "newText": "resource \"msgraph_resource\" \"${1:appRoleAssignment}\" {\n  url = \"servicePrincipals/${${2:\"MSGraphServicePrincipalId\"}}/appRoleAssignments\"\n\n  body = {\n    appRoleId   = ${3:\"userReadAllAppRoleId\"}\n    principalId = ${4:\"TestApplicationServicePrincipalId\"}\n    resourceId  = ${5:\"MSGraphServicePrincipalId\"}\n  }\n}"
+    }
+  },
+  {
+    "label": "msgraph-users",
+    "documentation": {
+      "kind": "markdown",
+      "value": "```terraform\nresource \"msgraph_resource\" \"user\" {\n  url = \"users\"\n\n  body = {\n    accountEnabled    = false\n    displayName       = \"My User\"\n    mailNickname      = \"myuser\"\n    userPrincipalName = \"myuser@domain\"\n    passwordProfile = {\n      forceChangePasswordNextSignIn = true\n      password                      = \"Str0ngP@ssword\"\n    }\n  }\n}\n```"
+    },
+    "sortText": "2_msgraph-users",
+    "textEdit": {
+      "newText": "resource \"msgraph_resource\" \"${1:users}\" {\n  url = \"users\"\n\n  body = {\n    accountEnabled    = ${2:false}\n    displayName       = ${3:\"My User\"}\n    mailNickname      = ${4:\"myuser\"}\n    userPrincipalName = ${5:\"myuser@domain\"}\n    passwordProfile = {\n      forceChangePasswordNextSignIn = ${7:true}\n      password                      = ${8:\"Str0ngP@ssword\"}\n    }\n  }\n}"
+    }
+  }
+]

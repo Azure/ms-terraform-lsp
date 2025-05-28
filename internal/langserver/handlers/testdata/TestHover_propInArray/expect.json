@@ -1,0 +1,20 @@
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "result": {
+    "contents": {
+      "kind": "markdown",
+      "value": "```\ndeletedDateTime: Optional(string)\n```\nDate and time when this object was deleted. Always null when the object hasn't been deleted."
+    },
+    "range": {
+      "start": {
+        "line": 5,
+        "character": 8
+      },
+      "end": {
+        "line": 5,
+        "character": 23
+      }
+    }
+  }
+}

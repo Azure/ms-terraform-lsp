@@ -1,0 +1,60 @@
+
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "result": {
+    "isIncomplete": false,
+    "items": [
+      {
+        "label": "\"v1.0\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `v1.0`  \n"
+        },
+        "sortText": "0000",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 1,
+              "character": 15
+            },
+            "end": {
+              "line": 1,
+              "character": 16
+            }
+          },
+          "newText": "\"v1.0\""
+        }
+      },
+      {
+        "label": "\"beta\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `beta`  \n"
+        },
+        "sortText": "0001",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 1,
+              "character": 15
+            },
+            "end": {
+              "line": 1,
+              "character": 16
+            }
+          },
+          "newText": "\"beta\""
+        }
+      }
+    ]
+  }
+}

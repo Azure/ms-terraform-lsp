@@ -1,0 +1,229 @@
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "result": {
+    "isIncomplete": false,
+    "items": [
+      {
+        "label": "code sample",
+        "labelDetails": {},
+        "kind": 15,
+        "detail": "Code Sample",
+        "documentation": {
+          "kind": "markdown",
+          "value": "```\nbody = {\n    displayName = \"My Application\"\n  }\n\n```\n"
+        },
+        "sortText": "0",
+        "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "body = {\n    displayName = \"My Application\"\n  }\n"
+        },
+        "command": {
+          "title": "",
+          "command": "msgraph.telemetry",
+          "arguments": [
+            {
+              "v": 1,
+              "name": "textDocument/completion",
+              "properties": {
+                "kind": "code-sample",
+                "type": "applications"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "label": "url",
+        "labelDetails": {},
+        "kind": 10,
+        "detail": "url (Required)",
+        "documentation": {
+          "kind": "markdown",
+          "value": "Type: `string`  \nMS Graph API URL. Collection URL which should be used to create the msgraph resource. For example, `/users`.\n"
+        },
+        "sortText": "0000",
+        "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "url = \"$0\""
+        },
+        "command": {
+          "title": "Suggest",
+          "command": "editor.action.triggerSuggest"
+        }
+      },
+      {
+        "label": "api_version",
+        "labelDetails": {},
+        "kind": 10,
+        "detail": "api_version (Optional)",
+        "documentation": {
+          "kind": "markdown",
+          "value": "Type: `string`  \nMS Graph API version. Allowed values are `v1.0` and `beta`. Defaults to `v1.0`.\n"
+        },
+        "sortText": "0001",
+        "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "api_version = \"$0\""
+        },
+        "command": {
+          "title": "Suggest",
+          "command": "editor.action.triggerSuggest"
+        }
+      },
+      {
+        "label": "body",
+        "labelDetails": {},
+        "kind": 10,
+        "detail": "body (Optional)",
+        "documentation": {
+          "kind": "markdown",
+          "value": "Type: `dynamic`  \nAn HCL object that contains the request body used to create and update msgraph resource.\n"
+        },
+        "sortText": "0002",
+        "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "body = $0"
+        },
+        "command": {
+          "title": "Suggest",
+          "command": "editor.action.triggerSuggest"
+        }
+      },
+      {
+        "label": "response_export_values",
+        "labelDetails": {},
+        "kind": 10,
+        "detail": "response_export_values (Optional)",
+        "documentation": {
+          "kind": "markdown",
+          "value": "Type: `map<string, string>`  \nThe attribute can accept a map of path that needs to be exported from response body.\n"
+        },
+        "sortText": "0003",
+        "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "response_export_values = $0"
+        },
+        "command": {
+          "title": "Suggest",
+          "command": "editor.action.triggerSuggest"
+        }
+      },
+      {
+        "label": "headers",
+        "labelDetails": {},
+        "kind": 10,
+        "detail": "headers (Optional)",
+        "documentation": {
+          "kind": "markdown",
+          "value": "Type: `map<string, string>`  \nA mapping of headers which should be sent with the request.\n"
+        },
+        "sortText": "0004",
+        "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "headers = $0"
+        },
+        "command": {
+          "title": "Suggest",
+          "command": "editor.action.triggerSuggest"
+        }
+      },
+      {
+        "label": "query_parameters",
+        "labelDetails": {},
+        "kind": 10,
+        "detail": "query_parameters (Optional)",
+        "documentation": {
+          "kind": "markdown",
+          "value": "Type: `map<string, list<string>>`  \nA mapping of query parameters which should be sent with the request.\n"
+        },
+        "sortText": "0005",
+        "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 2
+            }
+          },
+          "newText": "query_parameters = $0"
+        },
+        "command": {
+          "title": "Suggest",
+          "command": "editor.action.triggerSuggest"
+        }
+      }
+    ]
+  }
+}

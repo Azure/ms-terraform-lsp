@@ -1,0 +1,20 @@
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "result": {
+    "contents": {
+      "kind": "markdown",
+      "value": "Url: 'groups'  \nSummary: Upsert group  \nDescription: Create a new group object if it doesn't exist, or update the properties of an existing group object.\nYou can create or update the following types of group: By default, this operation returns only a subset of the properties for each group. For a list of properties that are returned by default, see the Properties section of the group resource. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.  \n\n[Find more info here](https://learn.microsoft.com/graph/api/group-upsert?view=graph-rest-1.0)"
+    },
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 35
+      }
+    }
+  }
+}

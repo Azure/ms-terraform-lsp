@@ -1,0 +1,334 @@
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "result": {
+    "isIncomplete": false,
+    "items": [
+      {
+        "label": "\"azureAdIdentityProtection\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `azureAdIdentityProtection`  \n"
+        },
+        "sortText": "0azureAdIdentityProtection",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 20
+            },
+            "end": {
+              "line": 3,
+              "character": 20
+            }
+          },
+          "newText": "\"azureAdIdentityProtection\""
+        }
+      },
+      {
+        "label": "\"dataLossPrevention\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `dataLossPrevention`  \n"
+        },
+        "sortText": "0dataLossPrevention",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 20
+            },
+            "end": {
+              "line": 3,
+              "character": 20
+            }
+          },
+          "newText": "\"dataLossPrevention\""
+        }
+      },
+      {
+        "label": "\"microsoft365Defender\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `microsoft365Defender`  \n"
+        },
+        "sortText": "0microsoft365Defender",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 20
+            },
+            "end": {
+              "line": 3,
+              "character": 20
+            }
+          },
+          "newText": "\"microsoft365Defender\""
+        }
+      },
+      {
+        "label": "\"microsoftAppGovernance\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `microsoftAppGovernance`  \n"
+        },
+        "sortText": "0microsoftAppGovernance",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 20
+            },
+            "end": {
+              "line": 3,
+              "character": 20
+            }
+          },
+          "newText": "\"microsoftAppGovernance\""
+        }
+      },
+      {
+        "label": "\"microsoftDefenderForCloud\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `microsoftDefenderForCloud`  \n"
+        },
+        "sortText": "0microsoftDefenderForCloud",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 20
+            },
+            "end": {
+              "line": 3,
+              "character": 20
+            }
+          },
+          "newText": "\"microsoftDefenderForCloud\""
+        }
+      },
+      {
+        "label": "\"microsoftDefenderForCloudApps\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `microsoftDefenderForCloudApps`  \n"
+        },
+        "sortText": "0microsoftDefenderForCloudApps",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 20
+            },
+            "end": {
+              "line": 3,
+              "character": 20
+            }
+          },
+          "newText": "\"microsoftDefenderForCloudApps\""
+        }
+      },
+      {
+        "label": "\"microsoftDefenderForEndpoint\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `microsoftDefenderForEndpoint`  \n"
+        },
+        "sortText": "0microsoftDefenderForEndpoint",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 20
+            },
+            "end": {
+              "line": 3,
+              "character": 20
+            }
+          },
+          "newText": "\"microsoftDefenderForEndpoint\""
+        }
+      },
+      {
+        "label": "\"microsoftDefenderForIdentity\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `microsoftDefenderForIdentity`  \n"
+        },
+        "sortText": "0microsoftDefenderForIdentity",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 20
+            },
+            "end": {
+              "line": 3,
+              "character": 20
+            }
+          },
+          "newText": "\"microsoftDefenderForIdentity\""
+        }
+      },
+      {
+        "label": "\"microsoftDefenderForOffice365\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `microsoftDefenderForOffice365`  \n"
+        },
+        "sortText": "0microsoftDefenderForOffice365",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 20
+            },
+            "end": {
+              "line": 3,
+              "character": 20
+            }
+          },
+          "newText": "\"microsoftDefenderForOffice365\""
+        }
+      },
+      {
+        "label": "\"microsoftInsiderRiskManagement\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `microsoftInsiderRiskManagement`  \n"
+        },
+        "sortText": "0microsoftInsiderRiskManagement",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 20
+            },
+            "end": {
+              "line": 3,
+              "character": 20
+            }
+          },
+          "newText": "\"microsoftInsiderRiskManagement\""
+        }
+      },
+      {
+        "label": "\"microsoftSentinel\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `microsoftSentinel`  \n"
+        },
+        "sortText": "0microsoftSentinel",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 20
+            },
+            "end": {
+              "line": 3,
+              "character": 20
+            }
+          },
+          "newText": "\"microsoftSentinel\""
+        }
+      },
+      {
+        "label": "\"unknown\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `unknown`  \n"
+        },
+        "sortText": "0unknown",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 20
+            },
+            "end": {
+              "line": 3,
+              "character": 20
+            }
+          },
+          "newText": "\"unknown\""
+        }
+      },
+      {
+        "label": "\"unknownFutureValue\"",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "Value: `unknownFutureValue`  \n"
+        },
+        "sortText": "0unknownFutureValue",
+        "insertTextFormat": 1,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 20
+            },
+            "end": {
+              "line": 3,
+              "character": 20
+            }
+          },
+          "newText": "\"unknownFutureValue\""
+        }
+      }
+    ]
+  }
+}

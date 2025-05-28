@@ -1,0 +1,20 @@
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "result": {
+    "contents": {
+      "kind": "markdown",
+      "value": "```\nacceptedSenders: Optional(array)\n```\nThe list of users or groups allowed to create posts or calendar events in this group. If this list is nonempty, then only users or groups listed here are allowed to post."
+    },
+    "range": {
+      "start": {
+        "line": 4,
+        "character": 4
+      },
+      "end": {
+        "line": 4,
+        "character": 19
+      }
+    }
+  }
+}
