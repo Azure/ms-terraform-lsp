@@ -160,8 +160,5 @@ func shouldGiveTopLevelCompletions(content string, line int) bool {
 	}
 
 	currentLine := strings.TrimSpace(lines[line])
-	if !utils.MatchAnyPrefix(currentLine, schema.AzureRMPrefix) {
-		return false
-	}
-	return true
+	return utils.MatchAnyPrefix(currentLine, schema.AzureRMPrefix)
 }
