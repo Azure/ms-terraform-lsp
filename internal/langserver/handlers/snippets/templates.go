@@ -3,6 +3,7 @@ package snippets
 import (
 	"embed"
 	"encoding/json"
+	"strings"
 
 	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 	provider_schema "github.com/Azure/ms-terraform-lsp/provider-schema"
@@ -60,6 +61,7 @@ func MSGraphTemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
 		}
 		data, _ := json.Marshal(event)
 
+		newText := strings.ReplaceAll(template.TextEdit.NewText, "$ref", "\\$ref")
 		msgraphTemplateCandidates = append(msgraphTemplateCandidates, lsp.CompletionItem{
 			Label:  template.Label,
 			Kind:   lsp.SnippetCompletion,
@@ -73,7 +75,7 @@ func MSGraphTemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
 			InsertTextMode:   lsp.AdjustIndentation,
 			TextEdit: &lsp.TextEdit{
 				Range:   editRange,
-				NewText: template.TextEdit.NewText,
+				NewText: newText,
 			},
 			Command: &lsp.Command{
 				Title:     "",

@@ -1,3 +1,10 @@
+## v0.3.0
+Features:
+- Rename packages to `ms-terraform-lsp`
+
+Bug Fixes:
+- Fix the msgraph memeber resource template to use the correct url value.
+
 ## v0.2.0
 
 Features
