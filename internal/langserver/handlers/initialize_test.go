@@ -6,10 +6,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	ilsp "github.com/Azure/azurerm-lsp/internal/lsp"
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	ilsp "github.com/Azure/ms-terraform-lsp/internal/lsp"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 
-	"github.com/Azure/azurerm-lsp/internal/langserver"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver"
 	"github.com/creachadair/jrpc2/code"
 )
 

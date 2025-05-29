@@ -13,7 +13,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Azure/azurerm-lsp/provider-schema/processors/.tools/document-lint/model"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/processors/.tools/document-lint/model"
 )
 
 func TestExtractListItem(t *testing.T) {

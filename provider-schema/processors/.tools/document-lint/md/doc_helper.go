@@ -12,8 +12,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/Azure/azurerm-lsp/internal/utils"
-	"github.com/Azure/azurerm-lsp/provider-schema/processors/.tools/document-lint/util"
+	"github.com/Azure/ms-terraform-lsp/internal/utils"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/processors/.tools/document-lint/util"
 )
 
 var (

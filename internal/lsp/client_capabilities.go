@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 type clientCapsCtxKey struct{}

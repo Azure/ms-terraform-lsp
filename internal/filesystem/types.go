@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/Azure/azurerm-lsp/internal/source"
+	"github.com/Azure/ms-terraform-lsp/internal/source"
 )
 
 type Document interface {

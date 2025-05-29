@@ -6,9 +6,9 @@ import (
 	"path/filepath"
 	"sync"
 
-	ilsp "github.com/Azure/azurerm-lsp/internal/lsp"
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
-	"github.com/Azure/azurerm-lsp/internal/uri"
+	ilsp "github.com/Azure/ms-terraform-lsp/internal/lsp"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
+	"github.com/Azure/ms-terraform-lsp/internal/uri"
 	"github.com/hashicorp/hcl/v2"
 )
 

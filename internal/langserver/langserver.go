@@ -9,7 +9,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/Azure/azurerm-lsp/internal/langserver/session"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/session"
 	"github.com/creachadair/jrpc2"
 	"github.com/creachadair/jrpc2/channel"
 	"github.com/creachadair/jrpc2/server"

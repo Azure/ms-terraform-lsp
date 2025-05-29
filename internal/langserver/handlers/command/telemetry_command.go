@@ -4,8 +4,8 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	lsctx "github.com/Azure/azurerm-lsp/internal/context"
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	lsctx "github.com/Azure/ms-terraform-lsp/internal/context"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 type TelemetryCommand struct {

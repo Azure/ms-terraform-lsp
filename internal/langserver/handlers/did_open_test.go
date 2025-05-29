@@ -5,10 +5,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/Azure/azurerm-lsp/internal/filesystem"
-	"github.com/Azure/azurerm-lsp/internal/langserver"
-	"github.com/Azure/azurerm-lsp/internal/langserver/session"
-	"github.com/Azure/azurerm-lsp/internal/lsp"
+	"github.com/Azure/ms-terraform-lsp/internal/filesystem"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/session"
+	"github.com/Azure/ms-terraform-lsp/internal/lsp"
 	"github.com/google/go-cmp/cmp"
 )
 

@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Azure/azurerm-lsp/internal/langserver/handlers/tfschema"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/handlers/tfschema"
 )
 
 func TestAzureRMResource_Match(t *testing.T) {

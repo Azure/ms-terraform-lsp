@@ -1,6 +1,6 @@
-# Terraform azurerm Provider Language Server
+# Microsoft Terraform Providers Language Server
 
-Experimental version of [terraform-provider-azurerm](https://github.com/hashicorp/terraform-provider-azurerm) language server.
+Experimental version of Microsoft Terraform Providers language server.
 
 ## What is LSP
 
@@ -8,19 +8,9 @@ Read more about the Language Server Protocol at https://microsoft.github.io/lang
 
 ## Introduction
 
-This project only supports completion/hover/diagnostics for `terraform-provider-azurerm`,
+This project only supports language features for Microsoft Terraform providers,
 not targeting support all language features for `HCL` or `Terraform`. To get the best user experience, 
 it's recommended to use it with language server for `Terraform`.
-
-## Features
-
-- Completion of `azurerm` resources
-- Completion of allowed azure resource types when input `type` in `azurerm` resources
-- Completion of allowed azure resource properties when input `body` in `azurerm` resources, limitation: it only works when use `jsonencode` function to build the JSON
-- Better completion for discriminated object
-- Completion for all required properties
-- Show hint when hover on `azurerm` resources
-- Show diagnostics for properties defined inside `body`
 
 ## Installation
 

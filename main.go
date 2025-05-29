@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/Azure/azurerm-lsp/internal/cmd"
-	"github.com/Azure/azurerm-lsp/provider-schema"
+	"github.com/Azure/ms-terraform-lsp/internal/cmd"
+	"github.com/Azure/ms-terraform-lsp/provider-schema"
 	"github.com/mitchellh/cli"
 )
 

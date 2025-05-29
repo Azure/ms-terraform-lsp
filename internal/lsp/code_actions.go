@@ -3,7 +3,7 @@ package lsp
 import (
 	"sort"
 
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 const (

@@ -3,8 +3,8 @@ package lsp
 import (
 	"path/filepath"
 
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
-	"github.com/Azure/azurerm-lsp/internal/uri"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
+	"github.com/Azure/ms-terraform-lsp/internal/uri"
 	"github.com/hashicorp/hcl-lang/decoder"
 	"github.com/hashicorp/hcl-lang/lang"
 	"github.com/zclconf/go-cty/cty"

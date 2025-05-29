@@ -3,8 +3,8 @@ package lsp
 import (
 	"testing"
 
-	"github.com/Azure/azurerm-lsp/internal/protocol"
-	"github.com/Azure/azurerm-lsp/internal/source"
+	"github.com/Azure/ms-terraform-lsp/internal/protocol"
+	"github.com/Azure/ms-terraform-lsp/internal/source"
 	"github.com/google/go-cmp/cmp"
 	"github.com/hashicorp/hcl-lang/lang"
 	"github.com/hashicorp/hcl/v2"

@@ -3,7 +3,7 @@ package handlers
 import (
 	"context"
 
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 func Initialized(ctx context.Context, params lsp.InitializedParams) error {

@@ -8,8 +8,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/Azure/azurerm-lsp/internal/filesystem"
-	"github.com/Azure/azurerm-lsp/internal/langserver/session"
+	"github.com/Azure/ms-terraform-lsp/internal/filesystem"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/session"
 	"github.com/creachadair/jrpc2/handler"
 )
 

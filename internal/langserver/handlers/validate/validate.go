@@ -1,7 +1,7 @@
 package validate
 
 import (
-	"github.com/Azure/azurerm-lsp/internal/langserver/diagnostics"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/diagnostics"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
 )

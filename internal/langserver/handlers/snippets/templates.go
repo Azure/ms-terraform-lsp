@@ -4,8 +4,8 @@ import (
 	"embed"
 	"encoding/json"
 
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
-	provider_schema "github.com/Azure/azurerm-lsp/provider-schema"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
+	provider_schema "github.com/Azure/ms-terraform-lsp/provider-schema"
 )
 
 //go:embed templates.json
@@ -77,7 +77,7 @@ func MSGraphTemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
 			},
 			Command: &lsp.Command{
 				Title:     "",
-				Command:   "azurerm.telemetry",
+				Command:   "ms-terraform.telemetry",
 				Arguments: []json.RawMessage{data},
 			},
 		})
@@ -138,7 +138,7 @@ func AzureRMTemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
 			},
 			Command: &lsp.Command{
 				Title:     "",
-				Command:   "azurerm.telemetry",
+				Command:   "ms-terraform.telemetry",
 				Arguments: []json.RawMessage{data},
 			},
 		})

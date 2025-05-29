@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Azure/azurerm-lsp/provider-schema/processors/.tools/document-lint/md"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/processors/.tools/document-lint/md"
 )
 
 func TestMDPathFor(t *testing.T) {

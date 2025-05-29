@@ -3,7 +3,7 @@ package mdplain_test
 import (
 	"testing"
 
-	"github.com/Azure/azurerm-lsp/internal/mdplain"
+	"github.com/Azure/ms-terraform-lsp/internal/mdplain"
 )
 
 func TestClean(t *testing.T) {

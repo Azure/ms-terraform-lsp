@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Azure/azurerm-lsp/internal/langserver"
-	"github.com/Azure/azurerm-lsp/internal/langserver/session"
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/session"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 func TestCompletion_withoutInitialization(t *testing.T) {

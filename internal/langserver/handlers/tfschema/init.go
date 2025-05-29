@@ -1,6 +1,6 @@
 package tfschema
 
-import lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+import lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 
 var Resources []Resource
 

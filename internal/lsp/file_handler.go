@@ -4,8 +4,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
-	"github.com/Azure/azurerm-lsp/internal/uri"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
+	"github.com/Azure/ms-terraform-lsp/internal/uri"
 )
 
 func FileHandlerFromDocumentURI(docUri lsp.DocumentURI) *fileHandler {

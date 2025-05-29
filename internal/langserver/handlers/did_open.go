@@ -3,10 +3,10 @@ package handlers
 import (
 	"context"
 
-	lsctx "github.com/Azure/azurerm-lsp/internal/context"
-	"github.com/Azure/azurerm-lsp/internal/langserver/handlers/validate"
-	ilsp "github.com/Azure/azurerm-lsp/internal/lsp"
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	lsctx "github.com/Azure/ms-terraform-lsp/internal/context"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/handlers/validate"
+	ilsp "github.com/Azure/ms-terraform-lsp/internal/lsp"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 func (lh *logHandler) TextDocumentDidOpen(ctx context.Context, params lsp.DidOpenTextDocumentParams) error {

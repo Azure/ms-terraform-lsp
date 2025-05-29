@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Azure/azurerm-lsp/provider-schema/azurerm/schema"
-	"github.com/Azure/azurerm-lsp/provider-schema/processors/.tools/document-lint/model"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/azurerm/schema"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/processors/.tools/document-lint/model"
 )
 
 // CombineSchemaAndMarkdown merges markdown fields into the schema and returns the combined resources.

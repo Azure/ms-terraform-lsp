@@ -1,4 +1,4 @@
-module github.com/Azure/azurerm-lsp
+module github.com/Azure/ms-terraform-lsp
 
 go 1.23.0
 

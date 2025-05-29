@@ -4,15 +4,15 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/Azure/azurerm-lsp/internal/langserver/handlers/command"
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/handlers/command"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 var handlerMap = map[string]command.CommandHandler{}
 
 const (
-	CommandTelemetry     = "azurerm.telemetry"
-	CommandAztfAuthorize = "azurerm.aztfauthorize"
+	CommandTelemetry     = "ms-terraform.telemetry"
+	CommandAztfAuthorize = "ms-terraform.aztfauthorize"
 )
 
 func availableCommands() []string {

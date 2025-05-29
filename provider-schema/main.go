@@ -2,7 +2,7 @@ package provider_schema
 
 import (
 	"fmt"
-	"github.com/Azure/azurerm-lsp/provider-schema/processors"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/processors"
 	"os"
 	"os/exec"
 	"path/filepath"

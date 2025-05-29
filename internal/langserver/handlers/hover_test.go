@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Azure/azurerm-lsp/internal/langserver"
-	"github.com/Azure/azurerm-lsp/internal/langserver/session"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/session"
 )
 
 func TestHover_withoutInitialization(t *testing.T) {

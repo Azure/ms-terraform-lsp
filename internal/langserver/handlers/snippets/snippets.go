@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
 )
 
@@ -92,7 +92,7 @@ func MSGraphCodeSampleCandidates(block *hclsyntax.Block, editRange lsp.Range, da
 				},
 				Command: &lsp.Command{
 					Title:     "",
-					Command:   "azurerm.telemetry",
+					Command:   "ms-terraform.telemetry",
 					Arguments: []json.RawMessage{data},
 				},
 			},

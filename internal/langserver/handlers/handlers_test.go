@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Azure/azurerm-lsp/internal/langserver"
-	"github.com/Azure/azurerm-lsp/internal/lsp"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver"
+	"github.com/Azure/ms-terraform-lsp/internal/lsp"
 )
 
 func initializeResponse(t *testing.T, commandPrefix string) string {
@@ -43,8 +43,8 @@ func initializeResponse(t *testing.T, commandPrefix string) string {
 			},
 			"executeCommandProvider": {
 				"commands": [
-					"azurerm.telemetry",
-					"azurerm.aztfauthorize"
+					"ms-terraform.telemetry",
+					"ms-terraform.aztfauthorize"
 				],
 				"workDoneProgress": true
 			}

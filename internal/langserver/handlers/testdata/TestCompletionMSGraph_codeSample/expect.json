@@ -31,7 +31,7 @@
         },
         "command": {
           "title": "",
-          "command": "azurerm.telemetry",
+          "command": "ms-terraform.telemetry",
           "arguments": [
             {
               "v": 1,

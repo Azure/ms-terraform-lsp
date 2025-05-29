@@ -11,11 +11,11 @@ import (
 	"strings"
 	"syscall"
 
-	lsctx "github.com/Azure/azurerm-lsp/internal/context"
-	"github.com/Azure/azurerm-lsp/internal/langserver"
-	"github.com/Azure/azurerm-lsp/internal/langserver/handlers"
-	"github.com/Azure/azurerm-lsp/internal/logging"
-	"github.com/Azure/azurerm-lsp/internal/pathtpl"
+	lsctx "github.com/Azure/ms-terraform-lsp/internal/context"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/handlers"
+	"github.com/Azure/ms-terraform-lsp/internal/logging"
+	"github.com/Azure/ms-terraform-lsp/internal/pathtpl"
 	"github.com/mitchellh/cli"
 )
 

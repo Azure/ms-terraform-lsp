@@ -6,12 +6,12 @@ import (
 	"log"
 	"strings"
 
-	lsctx "github.com/Azure/azurerm-lsp/internal/context"
-	"github.com/Azure/azurerm-lsp/internal/langserver/handlers/tfschema"
-	ilsp "github.com/Azure/azurerm-lsp/internal/lsp"
-	"github.com/Azure/azurerm-lsp/internal/parser"
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
-	"github.com/Azure/azurerm-lsp/internal/telemetry"
+	lsctx "github.com/Azure/ms-terraform-lsp/internal/context"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/handlers/tfschema"
+	ilsp "github.com/Azure/ms-terraform-lsp/internal/lsp"
+	"github.com/Azure/ms-terraform-lsp/internal/parser"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
+	"github.com/Azure/ms-terraform-lsp/internal/telemetry"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
 )

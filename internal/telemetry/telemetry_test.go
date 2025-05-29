@@ -3,7 +3,7 @@ package telemetry
 import (
 	"testing"
 
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 func Test_HoverTelemetryRateLimiter(t *testing.T) {

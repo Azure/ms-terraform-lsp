@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Azure/azurerm-lsp/internal/langserver"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver"
 	"github.com/creachadair/jrpc2"
 	"github.com/creachadair/jrpc2/handler"
 )

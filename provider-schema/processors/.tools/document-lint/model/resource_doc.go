@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Azure/azurerm-lsp/provider-schema/processors/.tools/document-lint/util"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/processors/.tools/document-lint/util"
 )
 
 type FieldType int

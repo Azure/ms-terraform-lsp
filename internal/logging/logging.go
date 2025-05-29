@@ -9,7 +9,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/Azure/azurerm-lsp/internal/pathtpl"
+	"github.com/Azure/ms-terraform-lsp/internal/pathtpl"
 )
 
 func NewLogger(w io.Writer) *log.Logger {

@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 	"github.com/creachadair/jrpc2"
 )
 

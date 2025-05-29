@@ -9,7 +9,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/Azure/azurerm-lsp/internal/source"
+	"github.com/Azure/ms-terraform-lsp/internal/source"
 	"github.com/spf13/afero"
 )
 

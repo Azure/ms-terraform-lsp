@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Azure/azurerm-lsp/internal/msgraph"
+	"github.com/Azure/ms-terraform-lsp/internal/msgraph"
 )
 
 var _ Resource = &MSGraphResource{}

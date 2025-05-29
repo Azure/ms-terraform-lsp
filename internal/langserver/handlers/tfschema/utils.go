@@ -1,7 +1,7 @@
 package tfschema
 
 import (
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 func GetResourceSchema(name string) *Resource {

@@ -3,7 +3,7 @@ package handlers
 import (
 	"testing"
 
-	"github.com/Azure/azurerm-lsp/internal/langserver"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver"
 )
 
 func TestExit(t *testing.T) {

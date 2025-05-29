@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Azure/azurerm-lsp/internal/parser"
+	"github.com/Azure/ms-terraform-lsp/internal/parser"
 	"github.com/ms-henglu/go-msgraph-types/types"
 )
 

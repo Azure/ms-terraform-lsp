@@ -5,8 +5,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/Azure/azurerm-lsp/provider-schema/processors/.tools/document-lint/md"
-	"github.com/Azure/azurerm-lsp/provider-schema/processors/.tools/document-lint/model"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/processors/.tools/document-lint/md"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/processors/.tools/document-lint/model"
 )
 
 // ProcessMarkdown processes all markdown files in the given directory and returns structured output

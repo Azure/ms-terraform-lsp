@@ -3,8 +3,8 @@ package tfschema
 import (
 	"fmt"
 
-	ilsp "github.com/Azure/azurerm-lsp/internal/lsp"
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	ilsp "github.com/Azure/ms-terraform-lsp/internal/lsp"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
 )

@@ -2,7 +2,7 @@ package processors
 
 import (
 	"embed"
-	"github.com/Azure/azurerm-lsp/provider-schema/azurerm/schema"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/azurerm/schema"
 )
 
 //go:embed .tools/generate-provider-schema/*

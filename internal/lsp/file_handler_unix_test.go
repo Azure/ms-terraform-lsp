@@ -6,7 +6,7 @@ package lsp
 import (
 	"testing"
 
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 func TestFileHandler_valid_unix(t *testing.T) {

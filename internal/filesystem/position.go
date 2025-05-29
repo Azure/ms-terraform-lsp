@@ -4,7 +4,7 @@ import (
 	"unicode/utf16"
 	"unicode/utf8"
 
-	"github.com/Azure/azurerm-lsp/internal/source"
+	"github.com/Azure/ms-terraform-lsp/internal/source"
 	"github.com/apparentlymart/go-textseg/textseg"
 )
 

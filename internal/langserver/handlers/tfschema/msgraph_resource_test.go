@@ -3,7 +3,7 @@ package tfschema_test
 import (
 	"testing"
 
-	"github.com/Azure/azurerm-lsp/internal/langserver/handlers/tfschema"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/handlers/tfschema"
 )
 
 func TestMSGraphResource_Match(t *testing.T) {

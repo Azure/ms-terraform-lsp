@@ -5,8 +5,8 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/Azure/azurerm-lsp/provider-schema/azurerm/schema"
-	"github.com/Azure/azurerm-lsp/provider-schema/processors"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/azurerm/schema"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/processors"
 )
 
 var finalTerraformObject processors.TerraformObjects

@@ -1,8 +1,8 @@
 package lsp
 
 import (
-	"github.com/Azure/azurerm-lsp/internal/mdplain"
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	"github.com/Azure/ms-terraform-lsp/internal/mdplain"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 	"github.com/hashicorp/hcl-lang/lang"
 )
 

@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Azure/azurerm-lsp/internal/langserver/session"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/session"
 	"github.com/creachadair/jrpc2"
 	"github.com/creachadair/jrpc2/channel"
 	"github.com/google/go-cmp/cmp"

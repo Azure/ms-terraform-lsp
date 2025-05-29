@@ -7,9 +7,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/Azure/azurerm-lsp/internal/langserver"
-	"github.com/Azure/azurerm-lsp/internal/langserver/session"
-	"github.com/Azure/azurerm-lsp/internal/protocol"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/session"
+	"github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 func TestCodeAction_withoutInitialization(t *testing.T) {
@@ -51,7 +51,7 @@ func TestCodeAction_permission(t *testing.T) {
 			Edit:  protocol.WorkspaceEdit{},
 			Command: &protocol.Command{
 				Title:   "Generate Custom Role",
-				Command: "azurerm.aztfauthorize",
+				Command: "ms-terraform.aztfauthorize",
 				Arguments: []json.RawMessage{
 					[]byte(reqParams),
 					[]byte(`{"generateForMissingPermission":false}`),
@@ -64,7 +64,7 @@ func TestCodeAction_permission(t *testing.T) {
 			Edit:  protocol.WorkspaceEdit{},
 			Command: &protocol.Command{
 				Title:   "Generate Custom Role for Missing Permissions",
-				Command: "azurerm.aztfauthorize",
+				Command: "ms-terraform.aztfauthorize",
 				Arguments: []json.RawMessage{
 					[]byte(reqParams),
 					[]byte(`{"generateForMissingPermission":true}`),

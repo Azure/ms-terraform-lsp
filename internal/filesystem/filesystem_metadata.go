@@ -3,7 +3,7 @@ package filesystem
 import (
 	"path/filepath"
 
-	"github.com/Azure/azurerm-lsp/internal/uri"
+	"github.com/Azure/ms-terraform-lsp/internal/uri"
 )
 
 func (fs *fsystem) markDocumentAsOpen(dh DocumentHandler) error {

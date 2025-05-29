@@ -8,8 +8,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/Azure/azurerm-lsp/provider-schema/processors/.tools/document-lint/model"
-	"github.com/Azure/azurerm-lsp/provider-schema/processors/.tools/document-lint/util"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/processors/.tools/document-lint/model"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/processors/.tools/document-lint/util"
 )
 
 // try to Unmarshal a markdown file to `model.ResourceDoc`

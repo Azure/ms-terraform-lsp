@@ -3,7 +3,7 @@ package lsp
 import (
 	"testing"
 
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 var validWindowsPath = "file:///C:/Users/With%20Space/tf-test/file.tf"

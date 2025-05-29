@@ -2,10 +2,10 @@ package context
 
 import (
 	"context"
-	"github.com/Azure/azurerm-lsp/internal/filesystem"
-	"github.com/Azure/azurerm-lsp/internal/langserver/diagnostics"
-	"github.com/Azure/azurerm-lsp/internal/langserver/session"
-	"github.com/Azure/azurerm-lsp/internal/telemetry"
+	"github.com/Azure/ms-terraform-lsp/internal/filesystem"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/diagnostics"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/session"
+	"github.com/Azure/ms-terraform-lsp/internal/telemetry"
 )
 
 type contextKey struct {

@@ -3,7 +3,7 @@ package parser_test
 import (
 	"testing"
 
-	"github.com/Azure/azurerm-lsp/internal/parser"
+	"github.com/Azure/ms-terraform-lsp/internal/parser"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
 )

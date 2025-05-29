@@ -1,7 +1,7 @@
 package lsp
 
 import (
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 type SemanticTokensClientCapabilities struct {

@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	lsctx "github.com/Azure/azurerm-lsp/internal/context"
-	"github.com/Azure/azurerm-lsp/internal/langserver/handlers/validate"
-	ilsp "github.com/Azure/azurerm-lsp/internal/lsp"
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	lsctx "github.com/Azure/ms-terraform-lsp/internal/context"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/handlers/validate"
+	ilsp "github.com/Azure/ms-terraform-lsp/internal/lsp"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 func TextDocumentDidChange(ctx context.Context, params lsp.DidChangeTextDocumentParams) error {

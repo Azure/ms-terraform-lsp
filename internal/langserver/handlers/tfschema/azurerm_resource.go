@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
-	provider_schema "github.com/Azure/azurerm-lsp/provider-schema"
-	"github.com/Azure/azurerm-lsp/provider-schema/azurerm/schema"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
+	provider_schema "github.com/Azure/ms-terraform-lsp/provider-schema"
+	"github.com/Azure/ms-terraform-lsp/provider-schema/azurerm/schema"
 	"github.com/zclconf/go-cty/cty"
 )
 

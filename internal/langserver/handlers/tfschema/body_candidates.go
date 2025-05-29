@@ -3,11 +3,11 @@ package tfschema
 import (
 	"fmt"
 
-	"github.com/Azure/azurerm-lsp/internal/langserver/schema"
-	ilsp "github.com/Azure/azurerm-lsp/internal/lsp"
-	"github.com/Azure/azurerm-lsp/internal/msgraph"
-	"github.com/Azure/azurerm-lsp/internal/parser"
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/schema"
+	ilsp "github.com/Azure/ms-terraform-lsp/internal/lsp"
+	"github.com/Azure/ms-terraform-lsp/internal/msgraph"
+	"github.com/Azure/ms-terraform-lsp/internal/parser"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
 	"github.com/ms-henglu/go-msgraph-types/types"

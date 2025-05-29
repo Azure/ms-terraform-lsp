@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/Azure/azurerm-lsp/internal/uri"
+	"github.com/Azure/ms-terraform-lsp/internal/uri"
 	"github.com/google/go-cmp/cmp"
 )
 

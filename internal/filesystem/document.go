@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"path/filepath"
 
-	"github.com/Azure/azurerm-lsp/internal/source"
-	"github.com/Azure/azurerm-lsp/internal/uri"
+	"github.com/Azure/ms-terraform-lsp/internal/source"
+	"github.com/Azure/ms-terraform-lsp/internal/uri"
 	"github.com/spf13/afero"
 )
 

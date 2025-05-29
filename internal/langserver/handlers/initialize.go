@@ -3,9 +3,9 @@ package handlers
 import (
 	"context"
 
-	lsctx "github.com/Azure/azurerm-lsp/internal/context"
-	ilsp "github.com/Azure/azurerm-lsp/internal/lsp"
-	lsp "github.com/Azure/azurerm-lsp/internal/protocol"
+	lsctx "github.com/Azure/ms-terraform-lsp/internal/context"
+	ilsp "github.com/Azure/ms-terraform-lsp/internal/lsp"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 	"github.com/creachadair/jrpc2"
 )
 
