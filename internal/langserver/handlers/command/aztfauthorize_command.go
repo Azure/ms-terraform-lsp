@@ -220,7 +220,7 @@ func (c AztfAuthorizeCommand) Handle(ctx context.Context, arguments []json.RawMe
 	if generateForMissing {
 		existingPerm, err := getExistingPermission(ctx, params, tempDir)
 		if err != nil {
-			return nil, fmt.Errorf("error get existing permissions: %+v", err)
+			return nil, fmt.Errorf("reading existing permissions: %+v", err)
 		}
 
 		*permissions = filterPermission(*permissions, *existingPerm)
@@ -341,6 +341,12 @@ data "azapi_client_config" "current" {
 data "azapi_resource_list" "permissions" {
   parent_id = "/subscriptions/${data.azapi_client_config.current.subscription_id}"
   type      = "Microsoft.Authorization/permissions@2022-04-01"
+  lifecycle {
+    precondition {
+      condition     = data.azapi_client_config.current.subscription_id != ""
+      error_message = "unable to authenticate Terraform to Azure"
+    }
+  }
 }
 
 output "permissions" {
@@ -349,29 +355,32 @@ output "permissions" {
 `
 
 	if err := os.WriteFile(filepath.Join(tempDir, configFileName), []byte(dataConfig), 0600); err != nil {
-		return nil, err
+		return nil, fmt.Errorf("writing config file %q: %+v", configFileName, err)
 	}
 
 	terraform, err := tf.NewTerraform(tempDir, false)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("creating terraform instance: %+v", err)
 	}
 
 	if err := terraform.GetExec().Init(ctx); err != nil {
-		return nil, err
+		return nil, fmt.Errorf("initializing terraform: %+v", err)
 	}
 
 	if err := terraform.GetExec().Apply(ctx); err != nil {
-		return nil, err
+		if strings.Contains(err.Error(), "unable to authenticate Terraform to Azure") {
+			return nil, fmt.Errorf("unable to authenticate Terraform to Azure, please authenticate to Azure following https://learn.microsoft.com/azure/developer/terraform/authenticate-to-azure?tabs=bash#2-authenticate-terraform-to-azure")
+		}
+		return nil, fmt.Errorf("applying terraform: %+v", err)
 	}
 
 	var permissions []permission
 	if value, err := terraform.GetExec().Output(ctx); err != nil {
-		return nil, err
+		return nil, fmt.Errorf("getting terraform output: %+v", err)
 	} else {
 		jsonBytes, _ := value["permissions"].Value.MarshalJSON()
 		if err := json.Unmarshal(jsonBytes, &permissions); err != nil {
-			return nil, err
+			return nil, fmt.Errorf("unmarshalling permissions output: %+v", err)
 		}
 
 	}
