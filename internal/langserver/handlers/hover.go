@@ -82,7 +82,7 @@ func HoverAtPos(ctx context.Context, data []byte, filename string, pos hcl.Pos, 
 
 	// should not trigger hover if it is not a resource
 	if resourceBlock.Type != "resource" {
-		continue
+		return nil
 	}
 
 	resourceName := fmt.Sprintf("%s.%s", resourceBlock.Type, resourceBlock.Labels[0])
