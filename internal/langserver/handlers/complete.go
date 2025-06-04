@@ -100,11 +100,6 @@ func CandidatesAtPos(data []byte, filename string, pos hcl.Pos, logger *log.Logg
 		return candidateList
 	}
 
-	// should not complete if the block is not resource
-	if resourceBlock.Type != "resource" {
-		return candidateList
-	}
-
 	resourceName := fmt.Sprintf("%s.%s", resourceBlock.Type, resourceBlock.Labels[0])
 	resource := tfschema.GetResourceSchema(resourceName)
 	if resource == nil {

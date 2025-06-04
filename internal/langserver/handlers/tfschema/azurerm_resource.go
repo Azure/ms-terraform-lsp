@@ -95,7 +95,7 @@ func (a AzureRMResource) Match(name string) bool {
 	if len(parts) != 2 {
 		return false
 	}
-	return strings.HasPrefix(parts[1], "azurerm_")
+	return strings.HasPrefix(parts[1], "azurerm_") && parts[0] == "resource"
 }
 
 func ToProperty(p *schema.SchemaAttribute, content string) Property {
