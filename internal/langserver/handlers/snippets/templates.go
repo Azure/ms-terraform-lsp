@@ -97,7 +97,7 @@ func AzureRMTemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
 
 	resources := provider_schema.ListAllResources()
 	azurermTemplateCandidates = make([]lsp.CompletionItem, 0)
-	for _, name := range append(resources) {
+	for _, name := range resources {
 		snippet, err := provider_schema.GetSnippet(name)
 		if err != nil {
 			continue
