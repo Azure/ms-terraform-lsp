@@ -1,3 +1,10 @@
+## v0.4.0
+Enhancements:
+- Improve the error messages for authentication issues.
+
+Bug Fixes:
+- Fix the bug that incorrect hover documentation and completion suggestions were shown for `azurerm` data sources.
+
 ## v0.3.0
 Features:
 - Rename packages to `ms-terraform-lsp`
