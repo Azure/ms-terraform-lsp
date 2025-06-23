@@ -1,8 +1,8 @@
-# Guide to Generating Required Permissions for AzureRM Resources
+# Guide to Generating Required Permissions for AzureRM or AzAPI Resources
 
 ## Introduction
 
-This guide is intended to help you generate the required permissions for AzureRM resources in your Terraform configuration.
+This guide is intended to help you generate the required permissions for AzureRM or AzAPI resources in your Terraform configuration.
 
 ## Prerequisites
 
@@ -10,9 +10,9 @@ This guide is intended to help you generate the required permissions for AzureRM
 
 ## Generation Steps
 
-This guide will walk you through the steps to generate the required permissions for AzureRM resources in a Terraform configuration.
+This guide will walk you through the steps to generate the required permissions for AzureRM or AzAPI resources in a Terraform configuration.
 
-### Step 1: Generate a Custom Role for AzureRM Resources
+### Step 1: Generate a Custom Role for AzureRM or AzAPI Resources
 
 For example, if the code block below is selected:
 
@@ -45,19 +45,19 @@ provider "azurerm" {
 variable "subscription_id" {
   type        = string
   description = "The UUID of the Azure Subscription where the Role Definition will be created"
-  default     = "49824ffe-67ce-4765-be73-93c2ac1b55a8"
+  default     = "00000000-0000-0000-0000-000000000000"
 }
 
 variable "assign_scope_id" {
   type        = string
   description = "The resource ID of the scope where the Role Definition will be assigned"
-  default     = "/subscriptions/49824ffe-67ce-4765-be73-93c2ac1b55a8"
+  default     = "/subscriptions/00000000-0000-0000-0000-000000000000"
 }
 
 variable "principal_id" {
   type        = string
   description = "The ID of the Principal (User, Group or Service Principal) to assign the Role Definition to"
-  default     = "6260f80a-123d-430b-aea2-59e03a2ca078"
+  default     = "00000000-0000-0000-0000-000000000000"
 }
 
 resource "azurerm_role_definition" "roleb21854a0-b52c-42df-a090-1eb689b9b939" {
@@ -125,6 +125,8 @@ To create the generated custom role, the `Microsoft.Authorization/roleDefinition
 ### Why did the generated custom role miss some required permissions?
 
 The generated custom role may not include all the required permissions. You can refer to the Azure documentation for the specific resource to find the missing permissions for different scenarios. The generated custom role is just a starting point, and you may need to add additional permissions manually. Besides, only control plane actions are supported for now, data plane actions are not supported.
+
+When working with AzAPI configuration, custom roles are generated based on the `type` field of `azapi_resource`, `azapi_resource_action`, or `azapi_update_resource`. This means that if you define an inline resource, like a Subnet within a Virtual Network resource block, the permissions generated will not apply to that embedded Subnet.
 
 ### How long does the generation take?
 

@@ -66,10 +66,14 @@ func (h *logHandler) textDocumentCodeAction(ctx context.Context, params lsp.Code
 	}
 
 	hasAzurerm := false
+	hasAzapi := false
 	for _, block := range body.Blocks {
 		if startPos.Position().Byte <= block.Range().Start.Byte && block.Range().End.Byte <= endPos.Position().Byte {
 			address := strings.Join(block.Labels, ".")
 			if strings.HasPrefix(address, "azurerm") {
+				hasAzurerm = true
+			}
+			if strings.HasPrefix(address, "azapi_resource") || strings.HasPrefix(address, "azapi_update_resource") {
 				hasAzurerm = true
 			}
 		}
@@ -84,7 +88,7 @@ func (h *logHandler) textDocumentCodeAction(ctx context.Context, params lsp.Code
 		"generateForMissingPermission": true,
 	})
 
-	if hasAzurerm {
+	if hasAzurerm || hasAzapi {
 		list = append(list,
 			lsp.CodeAction{
 				Title:       "Generate Custom Role",

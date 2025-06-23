@@ -5593,18 +5593,6 @@
     "update": [
       {
         "kind": "GET",
-        "version": "2019-06-01",
-        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ALERTSMANAGEMENT/SMARTDETECTORALERTRULES/{}",
-        "is_lro": false
-      },
-      {
-        "kind": "PUT",
-        "version": "2019-06-01",
-        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ALERTSMANAGEMENT/SMARTDETECTORALERTRULES/{}",
-        "is_lro": false
-      },
-      {
-        "kind": "GET",
         "version": "2020-02-02",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/COMPONENTS/{}",
         "is_lro": false
@@ -8757,13 +8745,7 @@
         "kind": "PUT",
         "version": "2023-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}",
-        "is_lro": false
-      },
-      {
-        "kind": "GET",
-        "version": "2021-12-01",
-        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPOPERATIONS/{}",
-        "is_lro": false
+        "is_lro": true
       },
       {
         "kind": "GET",
@@ -8809,13 +8791,7 @@
         "kind": "PUT",
         "version": "2023-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}",
-        "is_lro": false
-      },
-      {
-        "kind": "GET",
-        "version": "2021-12-01",
-        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPOPERATIONS/{}",
-        "is_lro": false
+        "is_lro": true
       },
       {
         "kind": "GET",
@@ -8835,13 +8811,7 @@
         "kind": "DELETE",
         "version": "2023-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}",
-        "is_lro": false
-      },
-      {
-        "kind": "GET",
-        "version": "2021-12-01",
-        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPOPERATIONS/{}",
-        "is_lro": false
+        "is_lro": true
       }
     ]
   },
@@ -8853,6 +8823,12 @@
     "create": [
       {
         "kind": "GET",
+        "version": "2024-01-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}",
+        "is_lro": false
+      },
+      {
+        "kind": "GET",
         "version": "2023-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}",
         "is_lro": false
@@ -8861,13 +8837,7 @@
         "kind": "PUT",
         "version": "2023-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}",
-        "is_lro": false
-      },
-      {
-        "kind": "GET",
-        "version": "2021-12-01",
-        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}/OPERATIONRESULTS/{}",
-        "is_lro": false
+        "is_lro": true
       }
     ],
     "read": [
@@ -8881,6 +8851,12 @@
     "update": [
       {
         "kind": "GET",
+        "version": "2024-01-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}",
+        "is_lro": false
+      },
+      {
+        "kind": "GET",
         "version": "2023-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}",
         "is_lro": false
@@ -8889,13 +8865,7 @@
         "kind": "PUT",
         "version": "2023-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}",
-        "is_lro": false
-      },
-      {
-        "kind": "GET",
-        "version": "2021-12-01",
-        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}/OPERATIONRESULTS/{}",
-        "is_lro": false
+        "is_lro": true
       }
     ],
     "delete": [
@@ -8903,7 +8873,7 @@
         "kind": "DELETE",
         "version": "2023-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}",
-        "is_lro": false
+        "is_lro": true
       },
       {
         "kind": "GET",
@@ -8915,19 +8885,7 @@
         "kind": "PUT",
         "version": "2023-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}",
-        "is_lro": false
-      },
-      {
-        "kind": "GET",
-        "version": "2021-12-01",
-        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}/OPERATIONRESULTS/{}",
-        "is_lro": false
-      },
-      {
-        "kind": "GET",
-        "version": "2021-12-01",
-        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPOPERATIONRESULTS/{}",
-        "is_lro": false
+        "is_lro": true
       }
     ]
   },
@@ -20099,6 +20057,20 @@
   },
   {
     "id": {
+      "name": "azurerm_dev_center",
+      "is_data_source": true
+    },
+    "read": [
+      {
+        "kind": "GET",
+        "version": "2025-02-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}",
+        "is_lro": false
+      }
+    ]
+  },
+  {
+    "id": {
       "name": "azurerm_dev_center_attached_network",
       "is_data_source": false
     },
@@ -20130,6 +20102,20 @@
         "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/ATTACHEDNETWORKS/{}",
         "is_lro": true
+      }
+    ]
+  },
+  {
+    "id": {
+      "name": "azurerm_dev_center_attached_network",
+      "is_data_source": true
+    },
+    "read": [
+      {
+        "kind": "GET",
+        "version": "2025-02-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/ATTACHEDNETWORKS/{}",
+        "is_lro": false
       }
     ]
   },
@@ -20185,6 +20171,20 @@
   },
   {
     "id": {
+      "name": "azurerm_dev_center_catalog",
+      "is_data_source": true
+    },
+    "read": [
+      {
+        "kind": "GET",
+        "version": "2025-02-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/CATALOGS/{}",
+        "is_lro": false
+      }
+    ]
+  },
+  {
+    "id": {
       "name": "azurerm_dev_center_dev_box_definition",
       "is_data_source": false
     },
@@ -20230,6 +20230,20 @@
         "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/DEVBOXDEFINITIONS/{}",
         "is_lro": true
+      }
+    ]
+  },
+  {
+    "id": {
+      "name": "azurerm_dev_center_dev_box_definition",
+      "is_data_source": true
+    },
+    "read": [
+      {
+        "kind": "GET",
+        "version": "2025-02-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/DEVBOXDEFINITIONS/{}",
+        "is_lro": false
       }
     ]
   },
@@ -20285,6 +20299,20 @@
   },
   {
     "id": {
+      "name": "azurerm_dev_center_environment_type",
+      "is_data_source": true
+    },
+    "read": [
+      {
+        "kind": "GET",
+        "version": "2025-02-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/ENVIRONMENTTYPES/{}",
+        "is_lro": false
+      }
+    ]
+  },
+  {
+    "id": {
       "name": "azurerm_dev_center_gallery",
       "is_data_source": false
     },
@@ -20316,6 +20344,20 @@
         "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/GALLERIES/{}",
         "is_lro": true
+      }
+    ]
+  },
+  {
+    "id": {
+      "name": "azurerm_dev_center_gallery",
+      "is_data_source": true
+    },
+    "read": [
+      {
+        "kind": "GET",
+        "version": "2025-02-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/GALLERIES/{}",
+        "is_lro": false
       }
     ]
   },
@@ -20371,6 +20413,20 @@
   },
   {
     "id": {
+      "name": "azurerm_dev_center_network_connection",
+      "is_data_source": true
+    },
+    "read": [
+      {
+        "kind": "GET",
+        "version": "2025-02-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/NETWORKCONNECTIONS/{}",
+        "is_lro": false
+      }
+    ]
+  },
+  {
+    "id": {
       "name": "azurerm_dev_center_project",
       "is_data_source": false
     },
@@ -20416,6 +20472,20 @@
         "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/PROJECTS/{}",
         "is_lro": true
+      }
+    ]
+  },
+  {
+    "id": {
+      "name": "azurerm_dev_center_project",
+      "is_data_source": true
+    },
+    "read": [
+      {
+        "kind": "GET",
+        "version": "2025-02-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/PROJECTS/{}",
+        "is_lro": false
       }
     ]
   },
@@ -20471,6 +20541,20 @@
   },
   {
     "id": {
+      "name": "azurerm_dev_center_project_environment_type",
+      "is_data_source": true
+    },
+    "read": [
+      {
+        "kind": "GET",
+        "version": "2025-02-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/PROJECTS/{}/ENVIRONMENTTYPES/{}",
+        "is_lro": false
+      }
+    ]
+  },
+  {
+    "id": {
       "name": "azurerm_dev_center_project_pool",
       "is_data_source": false
     },
@@ -20516,6 +20600,20 @@
         "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/PROJECTS/{}/POOLS/{}",
         "is_lro": true
+      }
+    ]
+  },
+  {
+    "id": {
+      "name": "azurerm_dev_center_project_pool",
+      "is_data_source": true
+    },
+    "read": [
+      {
+        "kind": "GET",
+        "version": "2025-02-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/PROJECTS/{}/POOLS/{}",
+        "is_lro": false
       }
     ]
   },
@@ -30755,37 +30853,37 @@
     "create": [
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
         "is_lro": true
       },
       {
         "kind": "POST",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERADMINCREDENTIAL",
         "is_lro": false
       },
       {
         "kind": "POST",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERUSERCREDENTIAL",
         "is_lro": false
       },
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
         "is_lro": false
       }
@@ -30793,25 +30891,25 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
         "is_lro": false
       },
       {
         "kind": "POST",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERADMINCREDENTIAL",
         "is_lro": false
       },
       {
         "kind": "POST",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERUSERCREDENTIAL",
         "is_lro": false
       },
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
         "is_lro": false
       }
@@ -30819,73 +30917,73 @@
     "update": [
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
         "is_lro": true
       },
       {
         "kind": "DELETE",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
         "is_lro": true
       },
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
         "is_lro": true
       },
       {
         "kind": "POST",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERADMINCREDENTIAL",
         "is_lro": false
       },
       {
         "kind": "POST",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERUSERCREDENTIAL",
         "is_lro": false
       },
       {
         "kind": "DELETE",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
         "is_lro": false
       },
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
         "is_lro": false
       },
       {
         "kind": "POST",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/RESETAADPROFILE",
         "is_lro": true
       },
       {
         "kind": "POST",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/RESETSERVICEPRINCIPALPROFILE",
         "is_lro": true
       }
@@ -30893,13 +30991,13 @@
     "delete": [
       {
         "kind": "DELETE",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
         "is_lro": true
       },
       {
         "kind": "DELETE",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
         "is_lro": false
       }
@@ -30913,19 +31011,19 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
         "is_lro": false
       },
       {
         "kind": "POST",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERADMINCREDENTIAL",
         "is_lro": false
       },
       {
         "kind": "POST",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERUSERCREDENTIAL",
         "is_lro": false
       }
@@ -30989,19 +31087,19 @@
     "create": [
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
         "is_lro": false
       },
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
         "is_lro": true
       },
@@ -31021,7 +31119,7 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
         "is_lro": false
       }
@@ -31029,25 +31127,25 @@
     "update": [
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
         "is_lro": false
       },
       {
         "kind": "DELETE",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
         "is_lro": true
       },
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
         "is_lro": true
       }
@@ -31055,7 +31153,7 @@
     "delete": [
       {
         "kind": "DELETE",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
         "is_lro": true
       }
@@ -31069,13 +31167,13 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
         "is_lro": false
       },
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
         "is_lro": false
       }
@@ -31089,13 +31187,13 @@
     "create": [
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
         "is_lro": true
       }
@@ -31103,7 +31201,7 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
         "is_lro": false
       }
@@ -31111,13 +31209,13 @@
     "update": [
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
         "is_lro": true
       }
@@ -31125,7 +31223,7 @@
     "delete": [
       {
         "kind": "DELETE",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
         "is_lro": true
       }
@@ -31403,7 +31501,7 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/SNAPSHOTS/{}",
         "is_lro": false
       }
@@ -33735,13 +33833,13 @@
     "create": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       }
@@ -33749,7 +33847,7 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       }
@@ -33757,25 +33855,25 @@
     "update": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
       {
         "kind": "PATCH",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       },
       {
         "kind": "PUT",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       },
       {
         "kind": "POST",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}/MANUALUPGRADE",
         "is_lro": true
       },
@@ -33787,7 +33885,7 @@
       },
       {
         "kind": "POST",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}/REIMAGE",
         "is_lro": true
       },
@@ -33801,19 +33899,19 @@
     "delete": [
       {
         "kind": "DELETE",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       },
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
       {
         "kind": "PATCH",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       }
@@ -36947,7 +37045,7 @@
     "create": [
       {
         "kind": "GET",
-        "version": "2024-09-01",
+        "version": "2025-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
         "is_lro": false
       },
@@ -37729,13 +37827,13 @@
     "create": [
       {
         "kind": "GET",
-        "version": "2023-05-01",
+        "version": "2024-07-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2023-05-01",
+        "version": "2024-07-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
         "is_lro": true
       }
@@ -37743,7 +37841,7 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2023-05-01",
+        "version": "2024-07-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
         "is_lro": false
       }
@@ -37751,13 +37849,13 @@
     "update": [
       {
         "kind": "PATCH",
-        "version": "2023-05-01",
+        "version": "2024-07-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
         "is_lro": true
       },
       {
         "kind": "GET",
-        "version": "2023-05-01",
+        "version": "2024-07-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
         "is_lro": false
       }
@@ -37765,7 +37863,7 @@
     "delete": [
       {
         "kind": "DELETE",
-        "version": "2023-05-01",
+        "version": "2024-07-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
         "is_lro": true
       }
@@ -42203,8 +42301,8 @@
     "create": [
       {
         "kind": "GET",
-        "version": "2020-11-01-preview",
-        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/SECURITYALERTPOLICIES/{}",
+        "version": "2023-08-01-preview",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/SECURITYALERTPOLICIES/DEFAULT",
         "is_lro": false
       },
       {
@@ -42223,8 +42321,8 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2020-11-01-preview",
-        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/SECURITYALERTPOLICIES/{}",
+        "version": "2023-08-01-preview",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/SECURITYALERTPOLICIES/DEFAULT",
         "is_lro": false
       },
       {
@@ -42237,8 +42335,8 @@
     "update": [
       {
         "kind": "GET",
-        "version": "2020-11-01-preview",
-        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/SECURITYALERTPOLICIES/{}",
+        "version": "2023-08-01-preview",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/SECURITYALERTPOLICIES/DEFAULT",
         "is_lro": false
       },
       {
@@ -43514,6 +43612,18 @@
     },
     "create": [
       {
+        "kind": "POST",
+        "version": "2025-01-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/AUTHORIZEREPLICATION",
+        "is_lro": true
+      },
+      {
+        "kind": "GET",
+        "version": "2025-01-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/REPLICATIONSTATUS",
+        "is_lro": false
+      },
+      {
         "kind": "GET",
         "version": "2025-01-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/VOLUMEGROUPS/{}",
@@ -44111,6 +44221,12 @@
     "update": [
       {
         "kind": "GET",
+        "version": "2024-05-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKINTERFACES/{}",
+        "is_lro": false
+      },
+      {
+        "kind": "PATCH",
         "version": "2024-05-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKINTERFACES/{}",
         "is_lro": false
@@ -44812,6 +44928,56 @@
         "version": "2024-05-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/NETWORKGROUPS/{}",
         "is_lro": false
+      }
+    ]
+  },
+  {
+    "id": {
+      "name": "azurerm_network_manager_routing_configuration",
+      "is_data_source": false
+    },
+    "create": [
+      {
+        "kind": "GET",
+        "version": "2024-05-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/ROUTINGCONFIGURATIONS/{}",
+        "is_lro": false
+      },
+      {
+        "kind": "PUT",
+        "version": "2024-05-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/ROUTINGCONFIGURATIONS/{}",
+        "is_lro": false
+      }
+    ],
+    "read": [
+      {
+        "kind": "GET",
+        "version": "2024-05-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/ROUTINGCONFIGURATIONS/{}",
+        "is_lro": false
+      }
+    ],
+    "update": [
+      {
+        "kind": "GET",
+        "version": "2024-05-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/ROUTINGCONFIGURATIONS/{}",
+        "is_lro": false
+      },
+      {
+        "kind": "PUT",
+        "version": "2024-05-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/ROUTINGCONFIGURATIONS/{}",
+        "is_lro": false
+      }
+    ],
+    "delete": [
+      {
+        "kind": "DELETE",
+        "version": "2024-05-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/ROUTINGCONFIGURATIONS/{}",
+        "is_lro": true
       }
     ]
   },
@@ -46403,13 +46569,13 @@
     "create": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       }
@@ -46417,7 +46583,7 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       }
@@ -46425,19 +46591,19 @@
     "update": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
       {
         "kind": "PATCH",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       },
       {
         "kind": "POST",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}/MANUALUPGRADE",
         "is_lro": true
       },
@@ -46449,7 +46615,7 @@
       },
       {
         "kind": "POST",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}/REIMAGE",
         "is_lro": true
       },
@@ -46463,19 +46629,19 @@
     "delete": [
       {
         "kind": "DELETE",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       },
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
       {
         "kind": "PATCH",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       }
@@ -46489,7 +46655,7 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       }
@@ -48194,6 +48360,12 @@
       {
         "kind": "GET",
         "version": "2024-08-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
+        "is_lro": false
+      },
+      {
+        "kind": "GET",
+        "version": "2024-08-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/CONFIGURATIONS/{}",
         "is_lro": false
       },
@@ -48214,11 +48386,23 @@
       {
         "kind": "GET",
         "version": "2024-08-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
+        "is_lro": false
+      },
+      {
+        "kind": "GET",
+        "version": "2024-08-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/CONFIGURATIONS/{}",
         "is_lro": false
       }
     ],
     "update": [
+      {
+        "kind": "GET",
+        "version": "2024-08-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
+        "is_lro": false
+      },
       {
         "kind": "GET",
         "version": "2024-08-01",
@@ -48239,6 +48423,12 @@
       }
     ],
     "delete": [
+      {
+        "kind": "GET",
+        "version": "2024-08-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
+        "is_lro": false
+      },
       {
         "kind": "GET",
         "version": "2024-08-01",
@@ -50303,6 +50493,62 @@
   },
   {
     "id": {
+      "name": "azurerm_qumulo_file_system",
+      "is_data_source": false
+    },
+    "create": [
+      {
+        "kind": "GET",
+        "version": "2024-05-01",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}/SUBNETS/{}",
+        "is_lro": false
+      },
+      {
+        "kind": "GET",
+        "version": "2024-06-19",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/QUMULO.STORAGE/FILESYSTEMS/{}",
+        "is_lro": false
+      },
+      {
+        "kind": "PUT",
+        "version": "2024-06-19",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/QUMULO.STORAGE/FILESYSTEMS/{}",
+        "is_lro": true
+      }
+    ],
+    "read": [
+      {
+        "kind": "GET",
+        "version": "2024-06-19",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/QUMULO.STORAGE/FILESYSTEMS/{}",
+        "is_lro": false
+      }
+    ],
+    "update": [
+      {
+        "kind": "PATCH",
+        "version": "2024-06-19",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/QUMULO.STORAGE/FILESYSTEMS/{}",
+        "is_lro": false
+      },
+      {
+        "kind": "GET",
+        "version": "2024-06-19",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/QUMULO.STORAGE/FILESYSTEMS/{}",
+        "is_lro": false
+      }
+    ],
+    "delete": [
+      {
+        "kind": "DELETE",
+        "version": "2024-06-19",
+        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/QUMULO.STORAGE/FILESYSTEMS/{}",
+        "is_lro": true
+      }
+    ]
+  },
+  {
+    "id": {
       "name": "azurerm_recovery_services_vault",
       "is_data_source": false
     },
@@ -50419,19 +50665,7 @@
         "kind": "DELETE",
         "version": "2023-02-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}",
-        "is_lro": false
-      },
-      {
-        "kind": "GET",
-        "version": "2023-02-01",
-        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}",
-        "is_lro": false
-      },
-      {
-        "kind": "GET",
-        "version": "2021-12-01",
-        "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPOPERATIONRESULTS/{}",
-        "is_lro": false
+        "is_lro": true
       },
       {
         "kind": "GET",
@@ -66405,13 +66639,13 @@
     "create": [
       {
         "kind": "GET",
-        "version": "2024-01-01",
+        "version": "2025-04-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VIDEOINDEXER/ACCOUNTS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-01-01",
+        "version": "2025-04-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VIDEOINDEXER/ACCOUNTS/{}",
         "is_lro": false
       }
@@ -66419,7 +66653,7 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2024-01-01",
+        "version": "2025-04-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VIDEOINDEXER/ACCOUNTS/{}",
         "is_lro": false
       }
@@ -66427,13 +66661,13 @@
     "update": [
       {
         "kind": "PATCH",
-        "version": "2024-01-01",
+        "version": "2025-04-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VIDEOINDEXER/ACCOUNTS/{}",
         "is_lro": false
       },
       {
         "kind": "GET",
-        "version": "2024-01-01",
+        "version": "2025-04-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VIDEOINDEXER/ACCOUNTS/{}",
         "is_lro": false
       }
@@ -66441,7 +66675,7 @@
     "delete": [
       {
         "kind": "DELETE",
-        "version": "2024-01-01",
+        "version": "2025-04-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VIDEOINDEXER/ACCOUNTS/{}",
         "is_lro": false
       }
@@ -68037,13 +68271,13 @@
     "create": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       }
@@ -68051,7 +68285,7 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       }
@@ -68059,13 +68293,13 @@
     "update": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       }
@@ -68073,7 +68307,7 @@
     "delete": [
       {
         "kind": "DELETE",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       }
@@ -68093,7 +68327,7 @@
       },
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
@@ -68137,7 +68371,7 @@
     "create": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
@@ -68157,7 +68391,7 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
@@ -68171,7 +68405,7 @@
     "update": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
@@ -68241,13 +68475,13 @@
     "create": [
       {
         "kind": "GET",
-        "version": "2024-03-01",
+        "version": "2025-03-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STANDBYPOOL/STANDBYVIRTUALMACHINEPOOLS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-03-01",
+        "version": "2025-03-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STANDBYPOOL/STANDBYVIRTUALMACHINEPOOLS/{}",
         "is_lro": true
       }
@@ -68255,7 +68489,7 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2024-03-01",
+        "version": "2025-03-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STANDBYPOOL/STANDBYVIRTUALMACHINEPOOLS/{}",
         "is_lro": false
       }
@@ -68263,13 +68497,13 @@
     "update": [
       {
         "kind": "GET",
-        "version": "2024-03-01",
+        "version": "2025-03-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STANDBYPOOL/STANDBYVIRTUALMACHINEPOOLS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-03-01",
+        "version": "2025-03-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STANDBYPOOL/STANDBYVIRTUALMACHINEPOOLS/{}",
         "is_lro": true
       }
@@ -68277,7 +68511,7 @@
     "delete": [
       {
         "kind": "DELETE",
-        "version": "2024-03-01",
+        "version": "2025-03-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STANDBYPOOL/STANDBYVIRTUALMACHINEPOOLS/{}",
         "is_lro": true
       }
@@ -71039,13 +71273,13 @@
     "create": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
       {
         "kind": "PUT",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       }
@@ -71053,7 +71287,7 @@
     "read": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       }
@@ -71061,19 +71295,19 @@
     "update": [
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
       {
         "kind": "PATCH",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       },
       {
         "kind": "POST",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}/MANUALUPGRADE",
         "is_lro": true
       },
@@ -71085,7 +71319,7 @@
       },
       {
         "kind": "POST",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}/REIMAGE",
         "is_lro": true
       },
@@ -71099,19 +71333,19 @@
     "delete": [
       {
         "kind": "DELETE",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       },
       {
         "kind": "GET",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": false
       },
       {
         "kind": "PATCH",
-        "version": "2024-07-01",
+        "version": "2024-11-01",
         "path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
         "is_lro": true
       }

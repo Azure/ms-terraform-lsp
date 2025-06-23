@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"reflect"
 	"testing"
 
 	"github.com/Azure/ms-terraform-lsp/internal/langserver"
@@ -42,36 +41,13 @@ func TestCodeAction_permission(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	reqParams := buildReqParamsCodeAction(1, 1, 13, 1, tmpDir.URI())
 
-	expected := []protocol.CodeAction{
-		{
-			Title: "Generate Custom Role",
-			Kind:  "refactor.rewrite",
-			Edit:  protocol.WorkspaceEdit{},
-			Command: &protocol.Command{
-				Title:   "Generate Custom Role",
-				Command: "ms-terraform.aztfauthorize",
-				Arguments: []json.RawMessage{
-					[]byte(reqParams),
-					[]byte(`{"generateForMissingPermission":false}`),
-				},
-			},
-		},
-		{
-			Title: "Generate Custom Role for Missing Permissions",
-			Kind:  "refactor.rewrite",
-			Edit:  protocol.WorkspaceEdit{},
-			Command: &protocol.Command{
-				Title:   "Generate Custom Role for Missing Permissions",
-				Command: "ms-terraform.aztfauthorize",
-				Arguments: []json.RawMessage{
-					[]byte(reqParams),
-					[]byte(`{"generateForMissingPermission":true}`),
-				},
-			},
-		},
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
 	}
+
+	reqParams := buildReqParamsCodeAction(1, 1, 13, 1, tmpDir.URI())
 
 	ls.Call(t, &langserver.CallRequest{
 		Method: "initialize",
@@ -90,19 +66,10 @@ func TestCodeAction_permission(t *testing.T) {
 		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
 	})
 
-	rawResponse := ls.Call(t, &langserver.CallRequest{
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
 		Method:    "textDocument/codeAction",
 		ReqParams: reqParams,
-	})
-
-	var result []protocol.CodeAction
-	err = json.Unmarshal(rawResponse.Result, &result)
-	if err != nil {
-		t.Fatal(err)
-	}
-	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("expected %v, got %v", expected, result)
-	}
+	}, string(expectRaw))
 }
 
 func buildReqParamsCodeAction(startLine, startCharacter, endLine, endCharacter int, uri string) string {

@@ -20,6 +20,7 @@ import (
 
 	ictx "github.com/Azure/ms-terraform-lsp/internal/context"
 	ilsp "github.com/Azure/ms-terraform-lsp/internal/lsp"
+	"github.com/Azure/ms-terraform-lsp/internal/parser"
 	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 	"github.com/Azure/ms-terraform-lsp/internal/tf"
 	"github.com/hashicorp/go-uuid"
@@ -189,6 +190,57 @@ func (c AztfAuthorizeCommand) Handle(ctx context.Context, arguments []json.RawMe
 
 						actions[action] = struct{}{}
 					}
+				}
+			}
+
+			if strings.HasPrefix(address, "azapi_resource") || strings.HasPrefix(address, "azapi_update_resource") {
+				v, ok := block.Body.Attributes["type"]
+				if !ok {
+					log.Printf("[DEBUG] `type` not found in %q", address)
+					continue
+				}
+
+				resourceType := parser.ToLiteral(v.Expr)
+				if resourceType == nil || !strings.Contains(*resourceType, "@") {
+					log.Printf("[DEBUG] `type` not found in %q", address)
+					continue
+				}
+
+				versionlessType := (*resourceType)[:strings.Index(*resourceType, "@")]
+				if strings.EqualFold(versionlessType, "Microsoft.Resources/resourceGroups") {
+					*resourceType = "Microsoft.Resources/subscriptions/resourceGroups"
+				}
+
+				if strings.HasPrefix(address, "azapi_resource_action.") {
+					actionRaw, ok := block.Body.Attributes["action"]
+					if !ok {
+						log.Printf("[DEBUG] `action` not found in %q", address)
+						continue
+					}
+
+					actionValue := parser.ToLiteral(actionRaw.Expr)
+					if actionValue == nil || *actionValue == "" {
+						log.Printf("[DEBUG] `action` not found in %q", address)
+						continue
+					}
+
+					actions[versionlessType+"/"+(*actionValue)+"/action"] = struct{}{}
+				}
+
+				if block.Type == "resource" && strings.HasPrefix(address, "azapi_update_resource.") {
+					for _, a := range []string{"/write", "/read"} {
+						actions[versionlessType+a] = struct{}{}
+					}
+				}
+
+				if block.Type == "resource" && strings.HasPrefix(address, "azapi_resource.") {
+					for _, a := range []string{"/write", "/read", "/delete"} {
+						actions[versionlessType+a] = struct{}{}
+					}
+				}
+
+				if block.Type == "data" && strings.HasPrefix(address, "azapi_resource.") {
+					actions[versionlessType+"/read"] = struct{}{}
 				}
 			}
 		}
