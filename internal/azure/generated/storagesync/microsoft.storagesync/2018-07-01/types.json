@@ -1,0 +1,1199 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageSync/storageSyncServices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-07-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StorageSync/storageSyncServices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Anything"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageSyncServiceCreateParametersTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StorageSync/storageSyncServices@2018-07-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageSync/storageSyncServices/syncGroups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-07-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StorageSync/storageSyncServices/syncGroups",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The parameters used to create the sync group"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StorageSync/storageSyncServices/syncGroups@2018-07-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/9"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-07-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The parameters used to create the cloud endpoint."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudEndpointCreateParametersPropertiesOrCloudEndpointProperties",
+    "properties": {
+      "storageAccountResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Storage Account Resource Id"
+      },
+      "storageAccountShareName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Storage Account Share name"
+      },
+      "storageAccountTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Storage Account Tenant Id"
+      },
+      "partnershipId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Partnership Id"
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Friendly Name"
+      },
+      "backupEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Backup Enabled"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "CloudEndpoint Provisioning State"
+      },
+      "lastWorkflowId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "CloudEndpoint lastWorkflowId"
+      },
+      "lastOperationName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Last Operation Name"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2018-07-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/13"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-07-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The parameters used to create the server endpoint."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerEndpointCreateParametersPropertiesOrServerEndpointProperties",
+    "properties": {
+      "serverLocalPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Server Local path."
+      },
+      "cloudTiering": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Cloud Tiering."
+      },
+      "volumeFreeSpacePercent": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Level of free space to be maintained by Cloud Tiering if it is enabled."
+      },
+      "tierFilesOlderThanDays": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Tier files older than days."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Friendly Name"
+      },
+      "serverResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Server Resource Id."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "ServerEndpoint Provisioning State"
+      },
+      "lastWorkflowId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "ServerEndpoint lastWorkflowId"
+      },
+      "lastOperationName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Last Operation Name"
+      },
+      "syncStatus": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Sync Health Status"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "on"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "off"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 100
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 2147483647
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2018-07-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/19"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageSync/storageSyncServices/registeredServers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-07-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StorageSync/storageSyncServices/registeredServers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The parameters used to create the registered server."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegisteredServerCreateParametersPropertiesOrRegisteredServerProperties",
+    "properties": {
+      "serverCertificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server Certificate"
+      },
+      "agentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server Agent Version"
+      },
+      "serverOSVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server OS Version"
+      },
+      "lastHeartBeat": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server last heart beat"
+      },
+      "serverRole": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server serverRole"
+      },
+      "clusterId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server clusterId"
+      },
+      "clusterName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server clusterName"
+      },
+      "serverId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server serverId"
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Friendly Name"
+      },
+      "serverManagementtErrorCode": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Registered Server Management Error Code"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Registered Server Provisioning State"
+      },
+      "storageSyncServiceUid": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Registered Server storageSyncServiceUid"
+      },
+      "lastWorkflowId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Registered Server lastWorkflowId"
+      },
+      "lastOperationName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Last Operation Name"
+      },
+      "discoveryEndpointUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource discoveryEndpointUri"
+      },
+      "resourceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Location"
+      },
+      "serviceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Service Location"
+      },
+      "managementEndpointUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Management Endpoint Uri"
+      },
+      "monitoringConfiguration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Monitoring Configuration"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StorageSync/storageSyncServices/registeredServers@2018-07-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/29"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageSync/storageSyncServices/workflows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-07-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StorageSync/storageSyncServices/workflows",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 2,
+        "description": "Workflow properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkflowProperties",
+    "properties": {
+      "lastStepName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "last step name"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "workflow status."
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "operation direction."
+      },
+      "steps": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "workflow steps"
+      },
+      "lastOperationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "workflow last operation identifier."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "expired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "aborted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "do"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "undo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "cancel"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StorageSync/storageSyncServices/workflows@2018-07-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/35"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name to check for availability"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 1,
+        "description": "The resource type. Must be set to Microsoft.StorageSync/storageSyncServices"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageSync/storageSyncServices"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or invalid and cannot be used."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Gets the reason that a Storage Sync Service name could not be used. The Reason element is only returned if NameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets an error message explaining the Reason value in more detail."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.StorageSync/locations",
+    "apiVersion": "2018-07-01",
+    "output": {
+      "$ref": "#/50"
+    },
+    "input": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupRequest",
+    "properties": {
+      "azureFileShare": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure File Share."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "prebackup",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2018-07-01",
+    "input": {
+      "$ref": "#/55"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PostBackupResponse",
+    "properties": {
+      "backupMetadata": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "Post Backup Response Properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PostBackupResponseProperties",
+    "properties": {
+      "cloudEndpointName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "cloud endpoint Name."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "postbackup",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2018-07-01",
+    "output": {
+      "$ref": "#/57"
+    },
+    "input": {
+      "$ref": "#/55"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PreRestoreRequest",
+    "properties": {
+      "partition": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pre Restore partition."
+      },
+      "replicaGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pre Restore replica group."
+      },
+      "requestId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pre Restore request id."
+      },
+      "azureFileShareUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pre Restore Azure file share uri."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pre Restore Azure status."
+      },
+      "sourceAzureFileShareUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pre Restore Azure source azure file share uri."
+      },
+      "backupMetadataPropertyBag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pre Restore backup metadata property bag."
+      },
+      "restoreFileSpec": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "Pre Restore restore file spec array."
+      },
+      "pauseWaitForSyncDrainTimePeriodInSeconds": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Pre Restore pause wait for sync drain time period in seconds."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreFileSpec",
+    "properties": {
+      "path": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Restore file spec path"
+      },
+      "isdir": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Restore file spec isdir"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/61"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "prerestore",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2018-07-01",
+    "input": {
+      "$ref": "#/60"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restoreheartbeat",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2018-07-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PostRestoreRequest",
+    "properties": {
+      "partition": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Post Restore partition."
+      },
+      "replicaGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Post Restore replica group."
+      },
+      "requestId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Post Restore request id."
+      },
+      "azureFileShareUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Post Restore Azure file share uri."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Post Restore Azure status."
+      },
+      "sourceAzureFileShareUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Post Restore Azure source azure file share uri."
+      },
+      "failedFileList": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Post Restore Azure failed file list."
+      },
+      "restoreFileSpec": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "Post Restore restore file spec array."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/61"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "postrestore",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2018-07-01",
+    "input": {
+      "$ref": "#/65"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecallActionParameters",
+    "properties": {
+      "pattern": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pattern of the files."
+      },
+      "recallPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Recall path."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "recallAction",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints",
+    "apiVersion": "2018-07-01",
+    "input": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TriggerRolloverRequest",
+    "properties": {
+      "serverCertificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Certificate Data"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "triggerRollover",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/registeredServers",
+    "apiVersion": "2018-07-01",
+    "input": {
+      "$ref": "#/70"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "abort",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/workflows",
+    "apiVersion": "2018-07-01"
+  }
+]

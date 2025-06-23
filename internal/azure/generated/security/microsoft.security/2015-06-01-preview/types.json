@@ -1,0 +1,1608 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Security/locations/jitNetworkAccessPolicies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Security/locations/jitNetworkAccessPolicies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of the resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location where the resource is stored"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessPolicyProperties",
+    "properties": {
+      "virtualMachines": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 1,
+        "description": "Configurations for Microsoft.Compute/virtualMachines resource type."
+      },
+      "requests": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the provisioning state of the Just-in-Time policy."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessPolicyVirtualMachine",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource ID of the virtual machine that is linked to this policy"
+      },
+      "ports": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "Port configurations for the virtual machine"
+      },
+      "publicIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Public IP address of the Azure Firewall that is linked to this policy, if applicable"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessPortRule",
+    "properties": {
+      "number": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 1
+      },
+      "allowedSourceAddressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Mutually exclusive with the \"allowedSourceAddressPrefixes\" parameter. Should be an IP address or CIDR, for example \"192.168.0.3\" or \"192.168.0.0/16\"."
+      },
+      "allowedSourceAddressPrefixes": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Mutually exclusive with the \"allowedSourceAddressPrefix\" parameter."
+      },
+      "maxRequestAccessDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 65535
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TCP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UDP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "*"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/6"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessRequest",
+    "properties": {
+      "virtualMachines": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 1
+      },
+      "startTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The start time of the request in UTC"
+      },
+      "requestor": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The identity of the person who made the request"
+      },
+      "justification": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The justification for making the initiate request"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessRequestVirtualMachine",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource ID of the virtual machine that is linked to this policy"
+      },
+      "ports": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 1,
+        "description": "The ports that were opened for the virtual machine"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessRequestPort",
+    "properties": {
+      "number": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1
+      },
+      "allowedSourceAddressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Mutually exclusive with the \"allowedSourceAddressPrefixes\" parameter. Should be an IP address or CIDR, for example \"192.168.0.3\" or \"192.168.0.0/16\"."
+      },
+      "allowedSourceAddressPrefixes": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Mutually exclusive with the \"allowedSourceAddressPrefix\" parameter."
+      },
+      "endTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The date & time at which the request ends in UTC"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 1,
+        "description": "The status of the port"
+      },
+      "statusReason": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 1,
+        "description": "A description of why the `status` has its value"
+      },
+      "mappedPort": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The port which is mapped to this port's `number` in the Azure Firewall, if applicable"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Revoked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Initiated"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserRequested"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NewerRequestInitiated"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/16"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/15"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Security/locations/jitNetworkAccessPolicies@2015-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Security/locations/alerts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Security/locations/alerts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "describes security alert properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertProperties",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "State of the alert (Active, Dismissed etc.)"
+      },
+      "reportedTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the incident was reported to Microsoft.Security in UTC"
+      },
+      "vendorName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the vendor that discovered the incident"
+      },
+      "alertName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the alert type"
+      },
+      "alertDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Display name of the alert type"
+      },
+      "detectedTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the incident was detected by the vendor"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Description of the incident and what it means"
+      },
+      "remediationSteps": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Recommended steps to reradiate the incident"
+      },
+      "actionTaken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The action that was taken as a response to the alert (Active, Blocked etc.)"
+      },
+      "reportedSeverity": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 2,
+        "description": "Estimated severity of this alert"
+      },
+      "compromisedEntity": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The entity that the incident happened on"
+      },
+      "associatedResource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource ID of the associated resource"
+      },
+      "extendedProperties": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Changing set of properties depending on the alert type."
+      },
+      "systemSource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the alerted resource (Azure, Non-Azure)"
+      },
+      "canBeInvestigated": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 2,
+        "description": "Whether this alert can be investigated with Azure Security Center"
+      },
+      "isIncident": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 2,
+        "description": "Whether this alert is for incident type or not (otherwise - single alert)"
+      },
+      "entities": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "objects that are related to this alerts"
+      },
+      "confidenceScore": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 2,
+        "description": "level of confidence we have on the alert"
+      },
+      "confidenceReasons": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "reasons the alert got the confidenceScore value"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure subscription ID of the resource that had the security alert or the subscription ID of the workspace that this resource reports to"
+      },
+      "instanceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Instance ID of the alert."
+      },
+      "workspaceArmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource ID of the workspace that the alert was reported to."
+      },
+      "correlationKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Alerts with the same CorrelationKey will be grouped together in Ibiza."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Silent"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Information"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Low"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertExtendedProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/40"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertEntity",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Type of entity"
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/40"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/43"
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertConfidenceReason",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Type of confidence factor"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "description of the confidence reason"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/46"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Security/locations/alerts@2015-06-01-preview",
+    "scopeType": 12,
+    "body": {
+      "$ref": "#/33"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Internal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "External"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Security/locations/allowedConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Security/locations/allowedConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 2,
+        "description": "Describes the allowed traffic between Azure resources"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location where the resource is stored"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AllowedConnectionsResourceProperties",
+    "properties": {
+      "calculatedDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The UTC time on which the allowed connections resource was calculated"
+      },
+      "connectableResources": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 2,
+        "description": "List of connectable resources"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectableResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Azure resource id"
+      },
+      "inboundConnectedResources": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 2,
+        "description": "The list of Azure resources that the resource has inbound allowed connection from"
+      },
+      "outboundConnectedResources": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "The list of Azure resources that the resource has outbound allowed connection to"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectedResource",
+    "properties": {
+      "connectedResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Azure resource id of the connected resource"
+      },
+      "tcpPorts": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The allowed tcp ports"
+      },
+      "udpPorts": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The allowed udp ports"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/57"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/57"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Security/locations/allowedConnections@2015-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/54"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Security/locations/discoveredSecuritySolutions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Security/locations/discoveredSecuritySolutions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 2
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location where the resource is stored"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiscoveredSecuritySolutionProperties",
+    "properties": {
+      "securityFamily": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 1,
+        "description": "The security family of the discovered solution"
+      },
+      "offer": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The security solutions' image offer"
+      },
+      "publisher": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The security solutions' image publisher"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The security solutions' image sku"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Waf"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ngfw"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SaasWaf"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Va"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Security/locations/discoveredSecuritySolutions@2015-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/64"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Security/locations/ExternalSecuritySolutions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Security/locations/ExternalSecuritySolutions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 2,
+        "description": "The kind of the external solution"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location where the resource is stored"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CEF"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ATA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AAD"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Security/locations/ExternalSecuritySolutions@2015-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/74"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Security/locations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Security/locations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "An empty set of properties"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Security/locations@2015-06-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/82"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Security/locations/tasks"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Security/locations/tasks",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 2,
+        "description": "Describes properties of a task."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityTaskProperties",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "State of the task (Active, Resolved etc.)"
+      },
+      "creationTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time this task was discovered in UTC"
+      },
+      "securityTaskParameters": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 0,
+        "description": "Changing set of properties, depending on the task type that is derived from the name field"
+      },
+      "lastStateChangeTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time this task's details were last changed in UTC"
+      },
+      "subState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Additional data on the state of the task"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityTaskParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the task type"
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/40"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Security/locations/tasks@2015-06-01-preview",
+    "scopeType": 12,
+    "body": {
+      "$ref": "#/86"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Security/locations/topologies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Security/locations/topologies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 2
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location where the resource is stored"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TopologyResourceProperties",
+    "properties": {
+      "calculatedDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The UTC time on which the topology was calculated"
+      },
+      "topologyResources": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 2,
+        "description": "Azure resources which are part of this topology resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TopologySingleResource",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource id"
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The security severity of the resource"
+      },
+      "recommendationsExist": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 2,
+        "description": "Indicates if the resource has security recommendations"
+      },
+      "networkZones": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Indicates the resource connectivity level to the Internet (InternetFacing, Internal ,etc.)"
+      },
+      "topologyScore": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "Score of the resource based on its security severity"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The location of this resource"
+      },
+      "parents": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "Azure resources connected to this resource which are in higher level in the topology view"
+      },
+      "children": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 2,
+        "description": "Azure resources connected to this resource which are in lower level in the topology view"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TopologySingleResourceParent",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource id which serves as parent resource in topology view"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/95"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TopologySingleResourceChild",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource id which serves as child resource in topology view"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/94"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Security/locations/topologies@2015-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/92"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "dismiss",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2015-06-01-preview"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reactivate",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2015-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessPolicyInitiateRequest",
+    "properties": {
+      "virtualMachines": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 1,
+        "description": "A list of virtual machines & ports to open access for"
+      },
+      "justification": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The justification for making the initiate request"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessPolicyInitiateVirtualMachine",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource ID of the virtual machine that is linked to this policy"
+      },
+      "ports": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 1,
+        "description": "The ports to open for the resource with the `id`"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessPolicyInitiatePort",
+    "properties": {
+      "number": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1
+      },
+      "allowedSourceAddressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Source of the allowed traffic. If omitted, the request will be for the source IP address of the initiate request."
+      },
+      "endTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The time to close the request in UTC"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/104"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "{jitNetworkAccessPolicyInitiateType}",
+    "resourceType": "Microsoft.Security/locations/jitNetworkAccessPolicies",
+    "apiVersion": "2015-06-01-preview",
+    "input": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "{taskUpdateActionType}",
+    "resourceType": "Microsoft.Security/locations/tasks",
+    "apiVersion": "2015-06-01-preview"
+  }
+]

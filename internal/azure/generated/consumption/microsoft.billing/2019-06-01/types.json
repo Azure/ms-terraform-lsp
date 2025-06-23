@@ -1,0 +1,228 @@
+[
+  {
+    "$type": "StringLiteralType",
+    "value": "aggregatedcost"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingPeriods/Microsoft.Consumption"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingPeriods/Microsoft.Consumption",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The properties of the Management Group Aggregated Cost."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementGroupAggregatedCostProperties",
+    "properties": {
+      "billingPeriodId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The id of the billing period resource that the aggregated cost belongs to."
+      },
+      "usageStart": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The start of the date time range covered by aggregated cost."
+      },
+      "usageEnd": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The end of the date time range covered by the aggregated cost."
+      },
+      "azureCharges": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Azure Charges."
+      },
+      "marketplaceCharges": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Marketplace Charges."
+      },
+      "chargesBilledSeparately": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Charges Billed Separately."
+      },
+      "currency": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ISO currency in which the meter is charged, for example, USD."
+      },
+      "children": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Children of a management group"
+      },
+      "includedSubscriptions": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "List of subscription Guids included in the calculation of aggregated cost"
+      },
+      "excludedSubscriptions": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "List of subscription Guids excluded from the calculation of aggregated cost"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementGroupAggregatedCostResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The properties of the Management Group Aggregated Cost."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/7"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingPeriods/Microsoft.Consumption@2019-06-01",
+    "scopeType": 2,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 1
+  }
+]

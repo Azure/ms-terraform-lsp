@@ -1,0 +1,778 @@
+[
+  {
+    "$type": "StringType",
+    "pattern": "^[a-z][a-z0-9]*$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforPostgreSQL/flexibleServers/migrations"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-05-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforPostgreSQL/flexibleServers/migrations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Migration resource properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationResourceProperties",
+    "properties": {
+      "migrationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      },
+      "migrationDetailsLevel": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "Migration details level."
+      },
+      "currentStatus": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "Migration status."
+      },
+      "sourceDBServerMetadata": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "Database server metadata."
+      },
+      "targetDBServerMetadata": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "Database server metadata."
+      },
+      "sourceDBServerResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "sourceDBServerFullyQualifiedDomainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "targetDBServerFullyQualifiedDomainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "secretParameters": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Migration secret parameters."
+      },
+      "targetDBServerResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      },
+      "dBsToMigrate": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0
+      },
+      "setupLogicalReplicationOnSourceDBIfNeeded": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0
+      },
+      "overwriteDBsInTarget": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0
+      },
+      "migrationWindowStartTimeInUtc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "startDataMigration": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0
+      },
+      "triggerCutover": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "To trigger cutover for entire migration we need to send this flag as true"
+      },
+      "dBsToTiggerCutoverOn": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "When you want to trigger cutover for specific databases send triggerCutover flag as true and database names in this array"
+      },
+      "cancel": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "To trigger cancel for entire migration we need to send this flag as true"
+      },
+      "dBsToCancelMigrationOn": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "When you want to trigger cancel for specific databases send triggerCutover flag as true and database names in this array"
+      },
+      "migrationMode": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "There are two types of migration modes Online and Offline"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Summary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Full"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationStatus",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "Migration state."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      },
+      "currentSubStateDetails": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Migration sub state details."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WaitingForUserAction"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationSubStateDetails",
+    "properties": {
+      "currentSubState": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 2,
+        "description": "Migration sub state."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PerformingPreRequisiteSteps"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WaitingForLogicalReplicationSetupRequestOnSourceDB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WaitingForDBsToMigrateSpecification"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WaitingForTargetDBOverwriteConfirmation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WaitingForDataMigrationScheduling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WaitingForDataMigrationWindow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MigratingData"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WaitingForCutoverTrigger"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompletingMigration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DBServerMetadata",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "storageMB": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Sku information related properties of a server."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerSku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the sku, typically, tier + family + cores, e.g. Standard_D4s_v3."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 1,
+        "description": "The tier of the particular SKU, e.g. Burstable."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Burstable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeneralPurpose"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MemoryOptimized"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationSecretParameters",
+    "properties": {
+      "adminCredentials": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 1,
+        "description": "Server admin credentials."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdminCredentials",
+    "properties": {
+      "sourceServerPassword": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 5
+      },
+      "targetServerPassword": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 5
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    },
+    "maxLength": 50
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Offline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Online"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforPostgreSQL/flexibleServers/migrations@2022-05-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationNameAvailabilityResource",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource name to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The type of the resource."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "Indicates whether the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "Migration name availability reason"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Migration name availability message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkMigrationNameAvailability",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/59"
+    },
+    "input": {
+      "$ref": "#/59"
+    }
+  }
+]

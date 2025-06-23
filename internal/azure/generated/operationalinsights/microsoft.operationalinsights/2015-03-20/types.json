@@ -1,0 +1,761 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/workspaces/storageInsightConfigs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-03-20"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/workspaces/storageInsightConfigs",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Storage insight properties."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ETag of the storage insight."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageInsightProperties",
+    "properties": {
+      "containers": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The names of the blob containers that the workspace should read"
+      },
+      "tables": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The names of the Azure tables that the workspace should read"
+      },
+      "storageAccount": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "The storage account connection details"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "The status of the storage insight"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccount",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Azure Resource Manager ID of the storage account resource."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The storage account key."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageInsightStatus",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 1,
+        "description": "The state of the storage insight connection to the workspace"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the state of the storage insight."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OK"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ERROR"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProxyResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/workspaces/storageInsightConfigs@2015-03-20",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/workspaces/savedSearches"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-03-20"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/workspaces/savedSearches",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ETag of the saved search."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 1,
+        "description": "The properties of the saved search."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavedSearchProperties",
+    "properties": {
+      "category": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The category of the saved search. This helps the user to find a saved search faster."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Saved search display name."
+      },
+      "query": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The query expression for the saved search. Please see https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-search-reference for reference."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The version number of the query language. The current version is 2 and is the default."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The tags attached to the saved search."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 2
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Tag",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tag name."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tag value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/workspaces/savedSearches@2015-03-20",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/16"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchGetSchemaResponse",
+    "properties": {
+      "metadata": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "The metadata from search results."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "The array of result values."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchMetadata",
+    "properties": {
+      "requestId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The request id of the search."
+      },
+      "resultType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The search result type."
+      },
+      "total": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The total number of search results."
+      },
+      "top": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The number of top search results."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The id of the search results request."
+      },
+      "coreSummaries": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The core summaries."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The status of the search results."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start time for the search."
+      },
+      "lastUpdated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time of last update."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ETag of the search results."
+      },
+      "sort": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "How the results are sorted."
+      },
+      "requestTime": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The request time."
+      },
+      "aggregatedValueField": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The aggregated value field."
+      },
+      "aggregatedGroupingFields": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The aggregated grouping fields."
+      },
+      "sum": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The sum of all aggregates returned in the result set."
+      },
+      "max": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The max of all aggregates returned in the result set."
+      },
+      "schema": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The schema."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CoreSummary",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The status of a core summary."
+      },
+      "numberOfDocuments": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 1,
+        "description": "The number of documents of a core summary."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchSort",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the field the search query is sorted on."
+      },
+      "order": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The sort order of the search."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "asc"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "desc"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchMetadataSchema",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the metadata schema."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The version of the metadata schema."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchSchemaValue",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the schema."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The display name of the schema."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type."
+      },
+      "indexed": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "The boolean that indicates the field is searchable as free text."
+      },
+      "stored": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "The boolean that indicates whether or not the field is stored."
+      },
+      "facet": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "The boolean that indicates whether or not the field is a facet."
+      },
+      "ownerType": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "The array of workflows containing the field."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/33"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "schema",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2015-03-20",
+    "output": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeBody",
+    "properties": {
+      "table": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Table from which to purge data."
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "The set of columns and filters (queries) to run over them to purge the resulting data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeBodyFilters",
+    "properties": {
+      "column": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The column of the table over which the given query should run"
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A query operator to evaluate over the provided column and value(s). Supported operators are ==, =~, in, in~, >, >=, <, <=, between, and have the same behavior as they would in a KQL query."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "the value for the operator to function over. This can be a number (e.g., > 100), a string (timestamp >= '2017-09-01') or array of values."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "When filtering over custom dimensions, this key will be used as the name of the custom dimension."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/39"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2015-03-20",
+    "input": {
+      "$ref": "#/38"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedKeys",
+    "properties": {
+      "primarySharedKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The primary shared key of a workspace."
+      },
+      "secondarySharedKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The secondary shared key of a workspace."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listKeys",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2015-03-20",
+    "output": {
+      "$ref": "#/43"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSharedKey",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2015-03-20",
+    "output": {
+      "$ref": "#/43"
+    }
+  }
+]

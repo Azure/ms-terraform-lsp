@@ -1,0 +1,683 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 4,
+    "maxLength": 63,
+    "pattern": "^[A-Za-z0-9][A-Za-z0-9-]+[A-Za-z0-9]$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/clusters"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-08-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/clusters",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The identity of the resource."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The sku properties."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Log Analytics cluster properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Identity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The principal ID of resource identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The tenant ID of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 1,
+        "description": "The identity type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Sku",
+    "properties": {
+      "capacity": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The capacity value"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The name of the SKU."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CapacityReservation"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterProperties",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link used to get the next page of recommendations."
+      },
+      "clusterId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ID associated with the cluster."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the cluster."
+      },
+      "keyVaultProperties": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The associated key properties."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProvisioningAccount"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyVaultProperties",
+    "properties": {
+      "keyVaultUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Key Vault uri which holds they key associated with the Log Analytics cluster."
+      },
+      "keyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the key associated with the Log Analytics cluster."
+      },
+      "keyVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The version of the key associated with the Log Analytics cluster."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/clusters@2019-08-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/workspaces/linkedServices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-08-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/workspaces/linkedServices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 1,
+        "description": "The properties of the linked service."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkedServiceProperties",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access"
+      },
+      "writeAccessResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/workspaces/linkedServices@2019-08-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/26"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 4,
+    "maxLength": 63,
+    "pattern": "^[A-Za-z][A-Za-z0-9-]+[A-Za-z0-9]$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/workspaces/dataExports"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-08-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/workspaces/dataExports",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "data export properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataExportProperties",
+    "properties": {
+      "dataExportId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The data export rule ID."
+      },
+      "tableNames": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "An array of tables to export, for example: [“Heartbeat, SecurityEvent”]."
+      },
+      "destination": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "destination properties."
+      },
+      "enable": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Active when enabled."
+      },
+      "createdDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The latest data export rule modification time."
+      },
+      "lastModifiedDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Date and time when the export was last modified."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Destination",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "The type of the destination resource"
+      },
+      "metaData": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "destination meta data."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StorageAccount"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EventHub"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DestinationMetaData",
+    "properties": {
+      "eventHubName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/workspaces/dataExports@2019-08-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/32"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomLogs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureWatson"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/workspaces/linkedStorageAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-08-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/workspaces/linkedStorageAccounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 1,
+        "description": "Linked storage accounts properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkedStorageAccountsProperties",
+    "properties": {
+      "dataSourceType": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Linked storage accounts type."
+      },
+      "storageAccountIds": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "Linked storage accounts resources ids."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomLogs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureWatson"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/workspaces/linkedStorageAccounts@2019-08-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/47"
+    },
+    "flags": 0
+  }
+]

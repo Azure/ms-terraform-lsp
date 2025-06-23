@@ -1,0 +1,1320 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 24
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DesktopVirtualization/workspaces"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-23-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DesktopVirtualization/workspaces",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Detailed properties for Workspace"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspaceProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description of Workspace."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Friendly name of Workspace."
+      },
+      "applicationGroupReferences": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "List of applicationGroup resource Ids."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DesktopVirtualization/workspaces@2019-01-23-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DesktopVirtualization/applicationGroups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-23-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DesktopVirtualization/applicationGroups",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 1,
+        "description": "Detailed properties for ApplicationGroup"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationGroupProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description of ApplicationGroup."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Friendly name of ApplicationGroup."
+      },
+      "hostPoolArmPath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "HostPool arm path of ApplicationGroup."
+      },
+      "workspaceArmPath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Workspace arm path of ApplicationGroup."
+      },
+      "applicationGroupType": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "Resource Type of ApplicationGroup."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RemoteApp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Desktop"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DesktopVirtualization/applicationGroups@2019-01-23-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/11"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DesktopVirtualization/applicationGroups/applications"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-23-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DesktopVirtualization/applicationGroups/applications",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 1,
+        "description": "Detailed properties for Application"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description of Application."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Friendly name of Application."
+      },
+      "filePath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies a path for the executable file for the application."
+      },
+      "commandLineSetting": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 1,
+        "description": "Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all."
+      },
+      "commandLineArguments": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Command Line Arguments for Application."
+      },
+      "showInPortal": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Specifies whether to show the RemoteApp program in the RD Web Access server."
+      },
+      "iconPath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Path to icon."
+      },
+      "iconIndex": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Index of the icon."
+      },
+      "iconHash": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Hash of the icon."
+      },
+      "iconContent": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 2,
+        "description": "the icon a 64 bit string as a byte array."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DoNotAllow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Require"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DesktopVirtualization/applicationGroups/applications@2019-01-23-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/20"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DesktopVirtualization/hostPools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-23-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DesktopVirtualization/hostPools",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 1,
+        "description": "Detailed properties for HostPool"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HostPoolProperties",
+    "properties": {
+      "friendlyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Friendly name of HostPool."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description of HostPool."
+      },
+      "hostPoolType": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 1,
+        "description": "HostPool type for desktop."
+      },
+      "personalDesktopAssignmentType": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "PersonalDesktopAssignment type for HostPool."
+      },
+      "customRdpProperty": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Custom rdp property of HostPool."
+      },
+      "maxSessionLimit": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "The max session limit of HostPool."
+      },
+      "loadBalancerType": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "The type of the load balancer."
+      },
+      "ring": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "The ring number of HostPool."
+      },
+      "validationEnvironment": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Is validation environment."
+      },
+      "registrationInfo": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "The registration info of HostPool."
+      },
+      "vmTemplate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "VM template for sessionhosts configuration within hostpool."
+      },
+      "applicationGroupReferences": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 2,
+        "description": "List of applicationGroup links."
+      },
+      "ssoContext": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Path to keyvault containing ssoContext secret."
+      },
+      "preferredAppGroupType": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 1,
+        "description": "The type of preferred application group type, default to Desktop Application Group"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Personal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shared"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Automatic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Direct"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BreadthFirst"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DepthFirst"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Persistent"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistrationInfo",
+    "properties": {
+      "expirationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Expiration time of registration token."
+      },
+      "token": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The registration token base64 encoded string."
+      },
+      "resetToken": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Update registration token."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Desktop"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RailApplications"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DesktopVirtualization/hostPools@2019-01-23-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/32"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DesktopVirtualization/applicationGroups/desktops"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-23-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DesktopVirtualization/applicationGroups/desktops",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 2,
+        "description": "Detailed properties for Desktop"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DesktopProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description of Desktop."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Friendly name of Desktop."
+      },
+      "iconHash": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Hash of the icon."
+      },
+      "iconContent": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 2,
+        "description": "The icon a 64 bit string as a byte array."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DesktopVirtualization/applicationGroups/desktops@2019-01-23-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/54"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 24
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-23-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 2,
+        "description": "Detailed properties for UserSession"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserSessionProperties",
+    "properties": {
+      "userPrincipalName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The user principal name."
+      },
+      "applicationType": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Application type of application."
+      },
+      "sessionState": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 0,
+        "description": "State of user session."
+      },
+      "activeDirectoryUserName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The active directory user name."
+      },
+      "createTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of the user session create."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RemoteApp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Desktop"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disconnected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LogOff"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserProfileDiskMounted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2019-01-23-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/60"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 48
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DesktopVirtualization/hostPools/sessionHosts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-23-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DesktopVirtualization/hostPools/sessionHosts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 2,
+        "description": "Detailed properties for SessionHost"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SessionHostProperties",
+    "properties": {
+      "lastHeartBeat": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Last heart beat from SessionHost."
+      },
+      "sessions": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Number of sessions on SessionHost."
+      },
+      "agentVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Version of agent on SessionHost."
+      },
+      "allowNewSession": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Allow a new session."
+      },
+      "virtualMachineId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Virtual Machine Id of SessionHost's underlying virtual machine."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Id of SessionHost's underlying virtual machine."
+      },
+      "assignedUser": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "User assigned to SessionHost."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "Status for a SessionHost."
+      },
+      "statusTimestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The timestamp of the status."
+      },
+      "osVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The version of the OS on the session host."
+      },
+      "sxSStackVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The version of the side by side stack on the session host."
+      },
+      "updateState": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "Update state of a SessionHost."
+      },
+      "lastUpdateTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The timestamp of the last update."
+      },
+      "updateErrorMessage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The error message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Available"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unavailable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shutdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disconnected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Upgrading"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpgradeFailed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Initial"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Started"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/87"
+      },
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DesktopVirtualization/hostPools/sessionHosts@2019-01-23-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/76"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disconnect",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions",
+    "apiVersion": "2019-01-23-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SendMessage",
+    "properties": {
+      "messageTitle": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Title of message."
+      },
+      "messageBody": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Body of message."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sendMessage",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions",
+    "apiVersion": "2019-01-23-preview",
+    "input": {
+      "$ref": "#/93"
+    }
+  }
+]

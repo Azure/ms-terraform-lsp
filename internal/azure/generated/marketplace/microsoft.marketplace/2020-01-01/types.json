@@ -1,0 +1,415 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Marketplace/privateStores/offers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Marketplace/privateStores/offers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The privateStore offer data structure."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OfferProperties",
+    "properties": {
+      "uniqueOfferId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Offers unique id"
+      },
+      "offerDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "It will be displayed prominently in the marketplace"
+      },
+      "publisherDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Publisher name that will be displayed prominently in the marketplace"
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Identifier for purposes of race condition"
+      },
+      "privateStoreId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Private store unique id"
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Private store offer creation date"
+      },
+      "modifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Private store offer modification date"
+      },
+      "specificPlanIdsLimitation": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Plan ids limitation for this offer"
+      },
+      "updateSuppressedDueIdempotence": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated."
+      },
+      "iconFileUris": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Icon File Uris"
+      },
+      "plans": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Offer plans"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OfferPropertiesIconFileUris",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Plan",
+    "properties": {
+      "skuId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Identifier for this plan"
+      },
+      "planId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Text identifier for this plan"
+      },
+      "planDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Friendly name for the plan for display in the marketplace"
+      },
+      "accessibility": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Plan accessibility"
+      },
+      "altStackReference": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Alternative stack type"
+      },
+      "stackType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Stack type (classic or arm)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Public"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivateTenantOnLevel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivateSubscriptionOnLevel"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Marketplace/privateStores/offers@2020-01-01",
+    "scopeType": 5,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Marketplace/privateStores"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Marketplace/privateStores",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The PrivateStore data structure."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateStoreProperties",
+    "properties": {
+      "availability": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Indicates private store availability"
+      },
+      "privateStoreId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Private Store id"
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Identifier for purposes of race condition"
+      },
+      "privateStoreName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Private Store Name"
+      },
+      "tenantTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Tenant Tag"
+      },
+      "tenantIds": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Tenant ids"
+      },
+      "customerTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Customer tag"
+      },
+      "hasCommercialAssociation": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Indicating whether private store has association with Commercial's Billing Account (through billing account's customer tag retrieved from GSM for a subscription"
+      },
+      "hasMultiTenantAssociation": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Indicating whether private store has association with multiple tenants (through tenant's tag retrieved from AAD"
+      },
+      "isGov": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Is government"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Marketplace/privateStores@2020-01-01",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/18"
+    },
+    "flags": 0
+  }
+]

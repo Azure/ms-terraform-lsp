@@ -1,0 +1,802 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMySQL/servers/privateEndpointConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMySQL/servers/privateEndpointConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnectionProperties",
+    "properties": {
+      "privateEndpoint": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Private endpoint which the connection belongs to."
+      },
+      "privateLinkServiceConnectionState": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Connection state of the private endpoint connection."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "State of the private endpoint connection."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointProperty",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource id of the private endpoint."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkServiceConnectionStateProperty",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The private link service connection status."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The private link service connection description."
+      },
+      "actionsRequired": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The actions required for private link service connection."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMySQL/servers/privateEndpointConnections@2018-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMySQL/servers/queryTexts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMySQL/servers/queryTexts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "The properties of a query text."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryTextProperties",
+    "properties": {
+      "queryId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Query identifier unique to the server."
+      },
+      "queryText": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Query text."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMySQL/servers/queryTexts@2018-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/10"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMySQL/servers/topQueryStatistics"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMySQL/servers/topQueryStatistics",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "The properties of a query statistic."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryStatisticProperties",
+    "properties": {
+      "queryId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Database query identifier."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Observation start time."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Observation end time."
+      },
+      "aggregationFunction": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Aggregation function name."
+      },
+      "databaseNames": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "The list of database names."
+      },
+      "queryExecutionCount": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Number of query executions in this time interval."
+      },
+      "metricName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Metric name."
+      },
+      "metricDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Metric display name."
+      },
+      "metricValue": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Metric value."
+      },
+      "metricValueUnit": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Metric value unit."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMySQL/servers/topQueryStatistics@2018-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/15"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMySQL/servers/waitStatistics"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMySQL/servers/waitStatistics",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "The properties of a wait statistic."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WaitStatisticProperties",
+    "properties": {
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Observation start time."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Observation end time."
+      },
+      "eventName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Wait event name."
+      },
+      "eventTypeName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Wait event type name."
+      },
+      "queryId": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Database query identifier."
+      },
+      "databaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Database Name."
+      },
+      "userId": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Database user identifier."
+      },
+      "count": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Wait event count observed in this time interval."
+      },
+      "totalTimeInMs": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Total time of wait in milliseconds in this time interval."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMySQL/servers/waitStatistics@2018-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/22"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMySQL/servers/advisors"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMySQL/servers/advisors",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 2,
+        "description": "The properties of a recommendation action advisor."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMySQL/servers/advisors@2018-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/27"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMySQL/servers/advisors/recommendedActions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMySQL/servers/advisors/recommendedActions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "The properties of a recommendation action."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecommendationActionProperties",
+    "properties": {
+      "advisorName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Advisor name."
+      },
+      "sessionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Recommendation action session identifier."
+      },
+      "actionId": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Recommendation action identifier."
+      },
+      "createdTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Recommendation action creation time."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Recommendation action expiration time."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Recommendation action reason."
+      },
+      "recommendationType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Recommendation action type."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Recommendation action details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecommendationActionPropertiesDetails",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMySQL/servers/advisors/recommendedActions@2018-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/32"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMySQL/servers/privateLinkResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMySQL/servers/privateLinkResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 2,
+        "description": "The private link resource group id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkResourceProperties",
+    "properties": {
+      "groupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The private link resource group id."
+      },
+      "requiredMembers": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "The private link resource required member names."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMySQL/servers/privateLinkResources@2018-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/38"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryPerformanceInsightResetDataResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Indicates result of the operation."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "operation message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetQueryPerformanceInsightData",
+    "resourceType": "Microsoft.DBforMySQL/servers",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/42"
+    }
+  }
+]

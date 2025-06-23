@@ -1,0 +1,1007 @@
+[
+  {
+    "$type": "StringType",
+    "pattern": "^[A-Za-z0-9-_.]{1,64}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.VirtualMachineImages/imageTemplates"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-05-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.VirtualMachineImages/imageTemplates",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The properties of the image template"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "The identity of the image template, if configured."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateProperties",
+    "properties": {
+      "source": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "Specifies the properties used to describe the source image."
+      },
+      "customize": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Specifies the properties used to describe the customization steps of the image, like Image source etc"
+      },
+      "distribute": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 1,
+        "description": "The distribution targets where the image output needs to go to."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource"
+      },
+      "provisioningError": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "Provisioning error, if any"
+      },
+      "lastRunStatus": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 2,
+        "description": "State of 'run' that is currently executing or was last executed."
+      },
+      "buildTimeoutInMinutes": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 0,
+        "description": "Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours)."
+      },
+      "vmProfile": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 0,
+        "description": "Describes how virtual machine is set up to build images"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ImageTemplateSource",
+    "discriminator": "type",
+    "baseProperties": {},
+    "elements": {
+      "ISO": {
+        "$ref": "#/7"
+      },
+      "ManagedImage": {
+        "$ref": "#/9"
+      },
+      "PlatformImage": {
+        "$ref": "#/11"
+      },
+      "SharedImageVersion": {
+        "$ref": "#/13"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateIsoSource",
+    "properties": {
+      "sourceUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "URI to get the ISO image. This URI has to be accessible to the resource provider at the time of the image template creation."
+      },
+      "sha256Checksum": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "SHA256 Checksum of the ISO image."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 1,
+        "description": "Specifies the type of source image you want to start with."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ISO"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateManagedImageSource",
+    "properties": {
+      "imageId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "ARM resource id of the managed image in customer subscription"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 1,
+        "description": "Specifies the type of source image you want to start with."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedImage"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplatePlatformImageSource",
+    "properties": {
+      "publisher": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages)."
+      },
+      "offer": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages)."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages)."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 1,
+        "description": "Specifies the type of source image you want to start with."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PlatformImage"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateSharedImageVersionSource",
+    "properties": {
+      "imageVersionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "ARM resource id of the image version in the shared image gallery"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 1,
+        "description": "Specifies the type of source image you want to start with."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SharedImageVersion"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ImageTemplateCustomizer",
+    "discriminator": "type",
+    "baseProperties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Friendly Name to provide context on what this customization step does"
+      }
+    },
+    "elements": {
+      "File": {
+        "$ref": "#/16"
+      },
+      "PowerShell": {
+        "$ref": "#/18"
+      },
+      "Shell": {
+        "$ref": "#/24"
+      },
+      "WindowsRestart": {
+        "$ref": "#/27"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateFileCustomizer",
+    "properties": {
+      "sourceUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc"
+      },
+      "sha256Checksum": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "SHA256 checksum of the file provided in the sourceUri field above"
+      },
+      "destination": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 1,
+        "description": "The type of customization tool you want to use on the Image. For example, \"Shell\" can be shell customizer"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "File"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplatePowerShellCustomizer",
+    "properties": {
+      "scriptUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc"
+      },
+      "sha256Checksum": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "SHA256 checksum of the power shell script provided in the scriptUri field above"
+      },
+      "inline": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Array of PowerShell commands to execute"
+      },
+      "runElevated": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "If specified, the PowerShell script will be run with elevated privileges"
+      },
+      "validExitCodes": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Valid exit codes for the PowerShell script. [Default: 0]"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 1,
+        "description": "The type of customization tool you want to use on the Image. For example, \"Shell\" can be shell customizer"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/21"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PowerShell"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateShellCustomizer",
+    "properties": {
+      "scriptUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc"
+      },
+      "sha256Checksum": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "SHA256 checksum of the shell script provided in the scriptUri field"
+      },
+      "inline": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Array of shell commands to execute"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 1,
+        "description": "The type of customization tool you want to use on the Image. For example, \"Shell\" can be shell customizer"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shell"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateRestartCustomizer",
+    "properties": {
+      "restartCommand": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Command to execute the restart [Default: 'shutdown /r /f /t 0 /c \"packer restart\"']"
+      },
+      "restartCheckCommand": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Command to check if restart succeeded [Default: '']"
+      },
+      "restartTimeout": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 1,
+        "description": "The type of customization tool you want to use on the Image. For example, \"Shell\" can be shell customizer"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WindowsRestart"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/15"
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ImageTemplateDistributor",
+    "discriminator": "type",
+    "baseProperties": {
+      "runOutputName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name to be used for the associated RunOutput."
+      },
+      "artifactTags": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Tags that will be applied to the artifact once it has been created/updated by the distributor."
+      }
+    },
+    "elements": {
+      "ManagedImage": {
+        "$ref": "#/32"
+      },
+      "SharedImage": {
+        "$ref": "#/34"
+      },
+      "VHD": {
+        "$ref": "#/37"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateDistributorArtifactTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateManagedImageDistributor",
+    "properties": {
+      "imageId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource Id of the Managed Disk Image"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Azure location for the image, should match if image already exists"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 1,
+        "description": "Type of distribution."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedImage"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateSharedImageDistributor",
+    "properties": {
+      "galleryImageId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource Id of the Shared Image Gallery image"
+      },
+      "replicationRegions": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 1,
+        "description": "A list of regions that the image will be replicated to"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 1,
+        "description": "Type of distribution."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SharedImage"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateVhdDistributor",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 1,
+        "description": "Type of distribution."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VHD"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/30"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProvisioningError",
+    "properties": {
+      "provisioningErrorCode": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "Error code of the provisioning failure"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Verbose error message about the provisioning failure"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BadSourceType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BadPIRSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BadISOSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BadManagedImageSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BadSharedImageVersionSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BadCustomizerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnsupportedCustomizerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoCustomizerScript"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BadDistributeType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BadSharedImageDistribute"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServerError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Other"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateLastRunStatus",
+    "properties": {
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Start time of the last run (UTC)"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "End time of the last run (UTC)"
+      },
+      "runState": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "State of the last run"
+      },
+      "runSubState": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Sub-state of the last run"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Verbose information about the last run state"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PartiallySucceeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Queued"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Building"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Customizing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Distributing"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 960
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateVmProfile",
+    "properties": {
+      "vmSize": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2)."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateIdentity",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "The type of identity used for the image template. The type 'None' will remove any identities from the image template."
+      },
+      "userAssignedIdentities": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 0,
+        "description": "The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComponentsVrq145SchemasImagetemplateidentityPropertiesUserassignedidentitiesAdditionalproperties",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The principal id of user assigned identity."
+      },
+      "clientId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The client id of user assigned identity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageTemplateIdentityUserAssignedIdentities",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/77"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.VirtualMachineImages/imageTemplates@2019-05-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "run",
+    "resourceType": "Microsoft.VirtualMachineImages/imageTemplates",
+    "apiVersion": "2019-05-01-preview"
+  }
+]

@@ -1,0 +1,583 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 63,
+    "pattern": "^(?!-)[A-Za-z0-9-]{3,63}(?<!-)$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DigitalTwins/digitalTwinsInstances"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-10-31"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DigitalTwins/digitalTwinsInstances",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "DigitalTwins instance properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "The resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DigitalTwinsProperties",
+    "properties": {
+      "createdTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Time when DigitalTwinsInstance was created."
+      },
+      "lastUpdatedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Time when DigitalTwinsInstance was updated."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "The provisioning state."
+      },
+      "hostName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Api endpoint to work with DigitalTwinsInstance."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Restoring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DigitalTwinsResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DigitalTwins/digitalTwinsInstances@2020-10-31",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 2,
+    "maxLength": 49,
+    "pattern": "^(?![0-9]+$)(?!-)[a-zA-Z0-9-]{2,49}[a-zA-Z0-9]$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DigitalTwins/digitalTwinsInstances/endpoints"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-10-31"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DigitalTwins/digitalTwinsInstances/endpoints",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 1,
+        "description": "DigitalTwinsInstance endpoint resource properties."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "DigitalTwinsEndpointResourceProperties",
+    "discriminator": "endpointType",
+    "baseProperties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "The provisioning state."
+      },
+      "createdTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Time when the Endpoint was added to DigitalTwinsInstance."
+      },
+      "deadLetterSecret": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Dead letter storage secret. Will be obfuscated during read."
+      }
+    },
+    "elements": {
+      "EventGrid": {
+        "$ref": "#/37"
+      },
+      "EventHub": {
+        "$ref": "#/39"
+      },
+      "ServiceBus": {
+        "$ref": "#/41"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Restoring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EventGrid",
+    "properties": {
+      "TopicEndpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "EventGrid Topic Endpoint"
+      },
+      "accessKey1": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 1,
+        "description": "EventGrid secondary accesskey. Will be obfuscated during read."
+      },
+      "accessKey2": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "EventGrid secondary accesskey. Will be obfuscated during read."
+      },
+      "endpointType": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 1,
+        "description": "The type of Digital Twins endpoint"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EventGrid"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EventHub",
+    "properties": {
+      "connectionStringPrimaryKey": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 1,
+        "description": "PrimaryConnectionString of the endpoint. Will be obfuscated during read."
+      },
+      "connectionStringSecondaryKey": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "SecondaryConnectionString of the endpoint. Will be obfuscated during read."
+      },
+      "endpointType": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 1,
+        "description": "The type of Digital Twins endpoint"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EventHub"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceBus",
+    "properties": {
+      "primaryConnectionString": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 1,
+        "description": "PrimaryConnectionString of the endpoint. Will be obfuscated during read."
+      },
+      "secondaryConnectionString": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "SecondaryConnectionString of the endpoint. Will be obfuscated during read."
+      },
+      "endpointType": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The type of Digital Twins endpoint"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServiceBus"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DigitalTwins/digitalTwinsInstances/endpoints@2020-10-31",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/22"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 1,
+        "description": "The type of resource, for instance Microsoft.DigitalTwins/digitalTwinsInstances."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DigitalTwins/digitalTwinsInstances"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Specifies a Boolean value that indicates if the name is available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Message indicating an unavailable name due to a conflict, or a description of the naming rules that are violated."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "Message providing the reason why the given name is invalid."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DigitalTwins/locations",
+    "apiVersion": "2020-10-31",
+    "output": {
+      "$ref": "#/46"
+    },
+    "input": {
+      "$ref": "#/44"
+    }
+  }
+]

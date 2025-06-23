@@ -1,0 +1,2489 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 4,
+    "maxLength": 63,
+    "pattern": "^[A-Za-z][A-Za-z0-9-]+[A-Za-z0-9]$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/workspaces/dataExports"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/workspaces/dataExports",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "data export properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataExportProperties",
+    "properties": {
+      "dataExportId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The data export rule ID."
+      },
+      "tableNames": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "An array of tables to export, for example: [“Heartbeat, SecurityEvent”]."
+      },
+      "destination": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "destination properties."
+      },
+      "enable": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Active when enabled."
+      },
+      "createdDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The latest data export rule modification time."
+      },
+      "lastModifiedDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Date and time when the export was last modified."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Destination",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "The type of the destination resource"
+      },
+      "metaData": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "destination meta data."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StorageAccount"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EventHub"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DestinationMetaData",
+    "properties": {
+      "eventHubName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/workspaces/dataExports@2020-03-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/workspaces/dataSources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/workspaces/dataSources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 1,
+        "description": "The data source properties in raw json format, each kind of data source have it's own schema."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ETag of the data source."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 1,
+        "description": "The kind of the DataSource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WindowsEvent"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WindowsPerformanceCounter"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IISLogs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LinuxSyslog"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LinuxSyslogCollection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LinuxPerformanceObject"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LinuxPerformanceCollection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomLog"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomLogCollection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureAuditLog"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureActivityLog"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GenericDataSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ChangeTrackingCustomPath"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ChangeTrackingPath"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ChangeTrackingServices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ChangeTrackingDataTypeConfiguration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ChangeTrackingDefaultRegistry"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ChangeTrackingRegistry"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ChangeTrackingLinuxPath"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LinuxChangeTrackingPath"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ChangeTrackingContentLocation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WindowsTelemetry"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Office365"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityWindowsBaselineConfiguration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityCenterSecurityWindowsBaselineConfiguration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityEventCollectionConfiguration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityInsightsSecurityEventCollectionConfiguration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ImportComputerGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NetworkMonitoring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Itsm"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DnsAnalytics"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ApplicationInsights"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SqlDataClassification"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataSourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/workspaces/dataSources@2020-03-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/16"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/workspaces/linkedServices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/workspaces/linkedServices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 1,
+        "description": "The properties of the linked service."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkedServiceProperties",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access"
+      },
+      "writeAccessResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "The provisioning state of the linked service."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProvisioningAccount"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkedServiceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/workspaces/linkedServices@2020-03-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/56"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomLogs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureWatson"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Query"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ingestion"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Alerts"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/workspaces/linkedStorageAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/workspaces/linkedStorageAccounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 1,
+        "description": "Linked storage accounts properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkedStorageAccountsProperties",
+    "properties": {
+      "dataSourceType": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 2,
+        "description": "Linked storage accounts type."
+      },
+      "storageAccountIds": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "Linked storage accounts resources ids."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomLogs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureWatson"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Query"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ingestion"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Alerts"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/workspaces/linkedStorageAccounts@2020-03-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/73"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 4,
+    "maxLength": 63,
+    "pattern": "^[A-Za-z0-9][A-Za-z0-9-]+[A-Za-z0-9]$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/workspaces"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/workspaces",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Workspace properties."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ETag of the workspace."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspaceProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 0,
+        "description": "The provisioning state of the workspace."
+      },
+      "customerId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "This is a read-only property. Represents the ID associated with the workspace."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "The SKU of the workspace."
+      },
+      "retentionInDays": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "The workspace data retention in days. -1 means Unlimited retention for the Unlimited Sku. 730 days is the maximum allowed for all other Skus."
+      },
+      "workspaceCapping": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "The daily volume cap for ingestion."
+      },
+      "publicNetworkAccessForIngestion": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 0,
+        "description": "The network access type for accessing Log Analytics ingestion."
+      },
+      "publicNetworkAccessForQuery": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0,
+        "description": "The network access type for accessing Log Analytics query."
+      },
+      "privateLinkScopedResources": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 2,
+        "description": "List of linked private link scope resources."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProvisioningAccount"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspaceSku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 1,
+        "description": "The name of the SKU."
+      },
+      "capacityReservationLevel": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "The capacity reservation level for this workspace, when CapacityReservation sku is selected."
+      },
+      "maxCapacityReservationLevel": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 2,
+        "description": "The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected."
+      },
+      "lastSkuUpdate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The last time when the sku was updated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Free"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PerNode"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PerGB2018"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standalone"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CapacityReservation"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": -1,
+    "maxValue": 730
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspaceCapping",
+    "properties": {
+      "dailyQuotaGb": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "The workspace daily quota for ingestion. -1 means unlimited."
+      },
+      "quotaNextResetTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time when the quota will be rest."
+      },
+      "dataIngestionStatus": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 2,
+        "description": "The status of data ingestion for this workspace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RespectQuota"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForceOn"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForceOff"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OverQuota"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionSuspended"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ApproachingQuota"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkScopedResource",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The full resource Id of the private link scope resource."
+      },
+      "scopeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The private link scope unique Identifier."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/121"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/workspaces@2020-03-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/86"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/clusters"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/clusters",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 0,
+        "description": "The identity of the resource."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 0,
+        "description": "The sku properties."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 0,
+        "description": "Log Analytics cluster properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Identity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The principal ID of resource identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The tenant ID of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 1,
+        "description": "The identity type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/130"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterSku",
+    "properties": {
+      "capacity": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "The capacity value"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 0,
+        "description": "The name of the SKU."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CapacityReservation"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/133"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterProperties",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link used to get the next page of recommendations."
+      },
+      "clusterId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ID associated with the cluster."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the cluster."
+      },
+      "keyVaultProperties": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 0,
+        "description": "The associated key properties."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProvisioningAccount"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/138"
+      },
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/142"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyVaultProperties",
+    "properties": {
+      "keyVaultUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Key Vault uri which holds they key associated with the Log Analytics cluster."
+      },
+      "keyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the key associated with the Log Analytics cluster."
+      },
+      "keyVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The version of the key associated with the Log Analytics cluster."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/clusters@2020-03-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/127"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/workspaces/storageInsightConfigs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/workspaces/storageInsightConfigs",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/148"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 0,
+        "description": "Storage insight properties."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ETag of the storage insight."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageInsightProperties",
+    "properties": {
+      "containers": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 0,
+        "description": "The names of the blob containers that the workspace should read"
+      },
+      "tables": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 0,
+        "description": "The names of the Azure tables that the workspace should read"
+      },
+      "storageAccount": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 1,
+        "description": "The storage account connection details"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 2,
+        "description": "The status of the storage insight"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccount",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Azure Resource Manager ID of the storage account resource."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The storage account key."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageInsightStatus",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 1,
+        "description": "The state of the storage insight connection to the workspace"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description of the state of the storage insight."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OK"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ERROR"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageInsightTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/workspaces/storageInsightConfigs@2020-03-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/149"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/workspaces/savedSearches"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/workspaces/savedSearches",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ETag of the saved search."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/163"
+        },
+        "flags": 1,
+        "description": "The properties of the saved search."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavedSearchProperties",
+    "properties": {
+      "category": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The category of the saved search. This helps the user to find a saved search faster."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Saved search display name."
+      },
+      "query": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The query expression for the saved search."
+      },
+      "functionAlias": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The function alias if query serves as a function."
+      },
+      "functionParameters": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The optional function parameters if query serves as a function. Value should be in the following format: 'param-name1:type1 = default_value1, param-name2:type2 = default_value2'. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "The version number of the query language. The current version is 2 and is the default."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/165"
+        },
+        "flags": 0,
+        "description": "The tags attached to the saved search."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Tag",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The tag name."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The tag value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/164"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/workspaces/savedSearches@2020-03-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/162"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 4,
+    "maxLength": 63,
+    "pattern": "^[A-Za-z0-9]+[A-Za-z0-9]_CL$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/workspaces/dataCollectorLogs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/workspaces/dataCollectorLogs",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/169"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 2,
+        "description": "Data collector log properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataCollectorLogProperties",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Table's name."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/workspaces/dataCollectorLogs@2020-03-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/170"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.OperationalInsights/workspaces/tables"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.OperationalInsights/workspaces/tables",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/176"
+        },
+        "flags": 2,
+        "description": "Table properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TableProperties",
+    "properties": {
+      "retentionInDays": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 0,
+        "description": "The data table data retention in days, between 30 and 730. Setting this property to null will default to the workspace retention."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 30,
+    "maxValue": 730
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.OperationalInsights/workspaces/tables@2020-03-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/175"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Disable",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/intelligencePacks",
+    "apiVersion": "2020-03-01-preview"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Enable",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/intelligencePacks",
+    "apiVersion": "2020-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedKeys",
+    "properties": {
+      "primarySharedKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The primary shared key of a workspace."
+      },
+      "secondarySharedKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The secondary shared key of a workspace."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sharedKeys",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2020-03-01-preview",
+    "output": {
+      "$ref": "#/181"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSharedKey",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2020-03-01-preview",
+    "output": {
+      "$ref": "#/181"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchGetSchemaResponse",
+    "properties": {
+      "metadata": {
+        "type": {
+          "$ref": "#/185"
+        },
+        "flags": 0,
+        "description": "The metadata from search results."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 0,
+        "description": "The array of result values."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchMetadata",
+    "properties": {
+      "requestId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The request id of the search."
+      },
+      "resultType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The search result type."
+      },
+      "total": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "The total number of search results."
+      },
+      "top": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "The number of top search results."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The id of the search results request."
+      },
+      "coreSummaries": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 0,
+        "description": "The core summaries."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The status of the search results."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time for the search."
+      },
+      "lastUpdated": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The time of last update."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ETag of the search results."
+      },
+      "sort": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 0,
+        "description": "How the results are sorted."
+      },
+      "requestTime": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "The request time."
+      },
+      "aggregatedValueField": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The aggregated value field."
+      },
+      "aggregatedGroupingFields": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The aggregated grouping fields."
+      },
+      "sum": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "The sum of all aggregates returned in the result set."
+      },
+      "max": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "The max of all aggregates returned in the result set."
+      },
+      "schema": {
+        "type": {
+          "$ref": "#/193"
+        },
+        "flags": 0,
+        "description": "The schema."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CoreSummary",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The status of a core summary."
+      },
+      "numberOfDocuments": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 1,
+        "description": "The number of documents of a core summary."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/186"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchSort",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the field the search query is sorted on."
+      },
+      "order": {
+        "type": {
+          "$ref": "#/191"
+        },
+        "flags": 0,
+        "description": "The sort order of the search."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "asc"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "desc"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/189"
+      },
+      {
+        "$ref": "#/190"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/188"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchMetadataSchema",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the metadata schema."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "The version of the metadata schema."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchSchemaValue",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the schema."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The display name of the schema."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The type."
+      },
+      "indexed": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 1,
+        "description": "The boolean that indicates the field is searchable as free text."
+      },
+      "stored": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 1,
+        "description": "The boolean that indicates whether or not the field is stored."
+      },
+      "facet": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 1,
+        "description": "The boolean that indicates whether or not the field is a facet."
+      },
+      "ownerType": {
+        "type": {
+          "$ref": "#/195"
+        },
+        "flags": 0,
+        "description": "The array of workflows containing the field."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/194"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "schema",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2020-03-01-preview",
+    "output": {
+      "$ref": "#/184"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeBody",
+    "properties": {
+      "table": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Table from which to purge data."
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 1,
+        "description": "The set of columns and filters (queries) to run over them to purge the resulting data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeBodyFilters",
+    "properties": {
+      "column": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The column of the table over which the given query should run"
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A query operator to evaluate over the provided column and value(s). Supported operators are ==, =~, in, in~, >, >=, <, <=, between, and have the same behavior as they would in a KQL query."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "the value for the operator to function over. This can be a number (e.g., > 100), a string (timestamp >= '2017-09-01') or array of values."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "When filtering over custom dimensions, this key will be used as the name of the custom dimension."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/199"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2020-03-01-preview",
+    "input": {
+      "$ref": "#/198"
+    }
+  }
+]

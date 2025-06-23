@@ -1,0 +1,2520 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Migrate/moveCollections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-08-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Migrate/moveCollections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The etag of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The geo-location where the resource lives."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Defines the MSI properties of the Move Collection."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Defines the move collection properties."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MoveCollectionTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Identity",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The type of identity used for the resource mover service."
+      },
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the principal id."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the tenant id."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MoveCollectionProperties",
+    "properties": {
+      "sourceRegion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets or sets the source region."
+      },
+      "targetRegion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets or sets the target region."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Defines the provisioning states."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the version of move collection."
+      },
+      "errors": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "Defines the move collection errors."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MoveCollectionPropertiesErrors",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "The move resource error body."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MoveResourceErrorBody",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "An identifier for the error. Codes are invariant and are intended to be consumed programmatically."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A message describing the error, intended to be suitable for display in a user interface."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The target of the particular error. For example, the name of the property in error."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "A list of additional details about the error."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Migrate/moveCollections@2022-08-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Migrate/moveCollections/moveResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-08-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Migrate/moveCollections/moveResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Defines the move resource properties."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MoveResourceProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 2,
+        "description": "Defines the provisioning states."
+      },
+      "sourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets or sets the Source ARM Id of the resource."
+      },
+      "targetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets or sets the Target ARM Id of the resource."
+      },
+      "existingTargetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the existing target ARM Id of the resource."
+      },
+      "resourceSettings": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource settings."
+      },
+      "sourceResourceSettings": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "Gets or sets the source resource settings."
+      },
+      "moveStatus": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 2,
+        "description": "Defines the move resource status."
+      },
+      "dependsOn": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 2,
+        "description": "Gets or sets the move resource dependencies."
+      },
+      "dependsOnOverrides": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 0,
+        "description": "Gets or sets the move resource dependencies overrides."
+      },
+      "isResolveRequired": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 2,
+        "description": "Gets a value indicating whether the resolve action is required over the move collection."
+      },
+      "errors": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 2,
+        "description": "Defines the move resource errors."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ResourceSettings",
+    "discriminator": "resourceType",
+    "baseProperties": {
+      "targetResourceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets or sets the target Resource name."
+      },
+      "targetResourceGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the target resource group name."
+      }
+    },
+    "elements": {
+      "Microsoft.Compute/availabilitySets": {
+        "$ref": "#/41"
+      },
+      "Microsoft.Compute/diskEncryptionSets": {
+        "$ref": "#/46"
+      },
+      "Microsoft.Compute/virtualMachines": {
+        "$ref": "#/48"
+      },
+      "Microsoft.KeyVault/vaults": {
+        "$ref": "#/57"
+      },
+      "Microsoft.Network/loadBalancers": {
+        "$ref": "#/59"
+      },
+      "Microsoft.Network/networkInterfaces": {
+        "$ref": "#/67"
+      },
+      "Microsoft.Network/networkSecurityGroups": {
+        "$ref": "#/78"
+      },
+      "Microsoft.Network/publicIPAddresses": {
+        "$ref": "#/84"
+      },
+      "Microsoft.Network/virtualNetworks": {
+        "$ref": "#/87"
+      },
+      "Microsoft.Sql/servers": {
+        "$ref": "#/95"
+      },
+      "Microsoft.Sql/servers/databases": {
+        "$ref": "#/97"
+      },
+      "Microsoft.Sql/servers/elasticPools": {
+        "$ref": "#/103"
+      },
+      "resourceGroups": {
+        "$ref": "#/109"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailabilitySetResourceSettings",
+    "properties": {
+      "tags": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Resource tags."
+      },
+      "faultDomain": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "Gets or sets the target fault domain."
+      },
+      "updateDomain": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Gets or sets the target update domain."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 1,
+        "description": "The resource type. For example, the value can be Microsoft.Compute/virtualMachines."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailabilitySetResourceSettingsTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 20
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Compute/availabilitySets"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiskEncryptionSetResourceSettings",
+    "properties": {
+      "resourceType": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 1,
+        "description": "The resource type. For example, the value can be Microsoft.Compute/virtualMachines."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Compute/diskEncryptionSets"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineResourceSettings",
+    "properties": {
+      "tags": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Resource tags."
+      },
+      "userManagedIdentities": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "Gets or sets user-managed identities"
+      },
+      "targetAvailabilityZone": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "Gets or sets the target availability zone."
+      },
+      "targetVmSize": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the target virtual machine size."
+      },
+      "targetAvailabilitySetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the target availability set id for virtual machines not in an availability set at source."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 1,
+        "description": "The resource type. For example, the value can be Microsoft.Compute/virtualMachines."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineResourceSettingsTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "3"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NA"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Compute/virtualMachines"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyVaultResourceSettings",
+    "properties": {
+      "resourceType": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 1,
+        "description": "The resource type. For example, the value can be Microsoft.Compute/virtualMachines."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.KeyVault/vaults"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LoadBalancerResourceSettings",
+    "properties": {
+      "tags": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Resource tags."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets load balancer sku (Basic/Standard)."
+      },
+      "frontendIPConfigurations": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Gets or sets the frontend IP configurations of the load balancer."
+      },
+      "backendAddressPools": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "Gets or sets the backend address pools of the load balancer."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given\r\n precedence only if frontend IP configurations settings are not present."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 1,
+        "description": "The resource type. For example, the value can be Microsoft.Compute/virtualMachines."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LoadBalancerResourceSettingsTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LBFrontendIPConfigurationResourceSettings",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the frontend IP configuration name."
+      },
+      "privateIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the IP address of the Load Balancer.This is only specified if a specific\r\nprivate IP address shall be allocated from the subnet specified in subnetRef."
+      },
+      "privateIpAllocationMethod": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets PrivateIP allocation method (Static/Dynamic)."
+      },
+      "subnet": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "Defines reference to subnet."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the csv list of zones."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubnetReference",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the name of the proxy resource on the target side."
+      },
+      "sourceArmResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets the ARM resource ID of the tracked resource being referenced."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/61"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LBBackendAddressPoolResourceSettings",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the backend address pool name."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/64"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/loadBalancers"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkInterfaceResourceSettings",
+    "properties": {
+      "tags": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Resource tags."
+      },
+      "ipConfigurations": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "Gets or sets the IP configurations of the NIC."
+      },
+      "enableAcceleratedNetworking": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether accelerated networking is enabled."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 1,
+        "description": "The resource type. For example, the value can be Microsoft.Compute/virtualMachines."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkInterfaceResourceSettingsTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NicIpConfigurationResourceSettings",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the IP configuration name."
+      },
+      "privateIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the private IP address of the network interface IP Configuration."
+      },
+      "privateIpAllocationMethod": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the private IP address allocation method."
+      },
+      "subnet": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "Defines reference to subnet."
+      },
+      "primary": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether this IP configuration is the primary."
+      },
+      "loadBalancerBackendAddressPools": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 0,
+        "description": "Gets or sets the references of the load balancer backend address pools."
+      },
+      "loadBalancerNatRules": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "Gets or sets the references of the load balancer NAT rules."
+      },
+      "publicIp": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "Defines reference to a public IP."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LoadBalancerBackendAddressPoolReference",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the name of the proxy resource on the target side."
+      },
+      "sourceArmResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets the ARM resource ID of the tracked resource being referenced."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/71"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LoadBalancerNatRuleReference",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the name of the proxy resource on the target side."
+      },
+      "sourceArmResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets the ARM resource ID of the tracked resource being referenced."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/73"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PublicIpReference",
+    "properties": {
+      "sourceArmResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets the ARM resource ID of the tracked resource being referenced."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/69"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/networkInterfaces"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkSecurityGroupResourceSettings",
+    "properties": {
+      "tags": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Resource tags."
+      },
+      "securityRules": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "Gets or sets Security rules of network security group."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 1,
+        "description": "The resource type. For example, the value can be Microsoft.Compute/virtualMachines."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkSecurityGroupResourceSettingsTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NsgSecurityRule",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Security rule name."
+      },
+      "access": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets whether network traffic is allowed or denied.\r\nPossible values are “Allow” and “Deny”."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets a description for this rule. Restricted to 140 chars."
+      },
+      "destinationAddressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets destination address prefix. CIDR or source IP range.\r\n A “*” can also be used to match all source IPs. Default tags such\r\nas ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used."
+      },
+      "destinationPortRange": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets Destination Port or Range. Integer or range between\r\n0 and 65535. A “*” can also be used to match all ports."
+      },
+      "direction": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the direction of the rule.InBound or Outbound. The\r\ndirection specifies if rule will be evaluated on incoming or outgoing traffic."
+      },
+      "priority": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "Gets or sets the priority of the rule. The value can be between\r\n100 and 4096. The priority number must be unique for each rule in the collection.\r\nThe lower the priority number, the higher the priority of the rule."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*)."
+      },
+      "sourceAddressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets source address prefix. CIDR or source IP range. A\r\n“*” can also be used to match all source IPs.  Default tags such as ‘VirtualNetwork’,\r\n‘AzureLoadBalancer’ and ‘Internet’ can also be used. If this is an ingress\r\nrule, specifies where network traffic originates from."
+      },
+      "sourcePortRange": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets Source Port or Range. Integer or range between 0 and\r\n65535. A “*” can also be used to match all ports."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/80"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/networkSecurityGroups"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PublicIPAddressResourceSettings",
+    "properties": {
+      "tags": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Resource tags."
+      },
+      "domainNameLabel": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the domain name label."
+      },
+      "fqdn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the fully qualified domain name."
+      },
+      "publicIpAllocationMethod": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets public IP allocation method."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets public IP sku."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets public IP zones."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 1,
+        "description": "The resource type. For example, the value can be Microsoft.Compute/virtualMachines."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PublicIPAddressResourceSettingsTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/publicIPAddresses"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkResourceSettings",
+    "properties": {
+      "tags": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Resource tags."
+      },
+      "enableDdosProtection": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether gets or sets whether the\r\nDDOS protection should be switched on."
+      },
+      "addressSpace": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 0,
+        "description": "Gets or sets the address prefixes for the virtual network."
+      },
+      "dnsServers": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "Gets or sets DHCPOptions that contains an array of DNS servers available to VMs\r\ndeployed in the virtual network."
+      },
+      "subnets": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "Gets or sets List of subnets in a VirtualNetwork."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 1,
+        "description": "The resource type. For example, the value can be Microsoft.Compute/virtualMachines."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkResourceSettingsTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubnetResourceSettings",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Subnet name."
+      },
+      "addressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets address prefix for the subnet."
+      },
+      "networkSecurityGroup": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 0,
+        "description": "Defines reference to NSG."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NsgReference",
+    "properties": {
+      "sourceArmResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets the ARM resource ID of the tracked resource being referenced."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/91"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/virtualNetworks"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlServerResourceSettings",
+    "properties": {
+      "resourceType": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 1,
+        "description": "The resource type. For example, the value can be Microsoft.Compute/virtualMachines."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Sql/servers"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlDatabaseResourceSettings",
+    "properties": {
+      "tags": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Resource tags."
+      },
+      "zoneRedundant": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0,
+        "description": "Defines the zone redundant resource setting."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 1,
+        "description": "The resource type. For example, the value can be Microsoft.Compute/virtualMachines."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlDatabaseResourceSettingsTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Sql/servers/databases"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlElasticPoolResourceSettings",
+    "properties": {
+      "tags": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Resource tags."
+      },
+      "zoneRedundant": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "Defines the zone redundant resource setting."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 1,
+        "description": "The resource type. For example, the value can be Microsoft.Compute/virtualMachines."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlElasticPoolResourceSettingsTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Sql/servers/elasticPools"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceGroupResourceSettings",
+    "properties": {
+      "resourceType": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 1,
+        "description": "The resource type. For example, the value can be Microsoft.Compute/virtualMachines."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "resourceGroups"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MoveResourcePropertiesMoveStatus",
+    "properties": {
+      "moveState": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 2,
+        "description": "Defines the MoveResource states."
+      },
+      "jobStatus": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 0,
+        "description": "Defines the job status."
+      },
+      "errors": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 0,
+        "description": "An error response from the azure resource mover service."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AssignmentPending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PreparePending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrepareInProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrepareFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MovePending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveInProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DiscardInProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DiscardFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CommitPending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CommitInProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CommitFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Committed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeleteSourcePending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceMoveCompleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/122"
+      },
+      {
+        "$ref": "#/123"
+      },
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobStatus",
+    "properties": {
+      "jobName": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 2,
+        "description": "Defines the job name."
+      },
+      "jobProgress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets or sets the monitoring job percentage."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InitialSync"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MoveResourceError",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "The move resource error body."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MoveResourceDependency",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the source ARM ID of the dependent resource."
+      },
+      "resolutionStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the dependency resolution status."
+      },
+      "resolutionType": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 0,
+        "description": "Defines the resolution type."
+      },
+      "dependencyType": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 0,
+        "description": "Defines the dependency type."
+      },
+      "manualResolution": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 0,
+        "description": "Defines the properties for manual resolution."
+      },
+      "automaticResolution": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 0,
+        "description": "Defines the properties for automatic resolution."
+      },
+      "isOptional": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the dependency is optional."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Manual"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Automatic"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/133"
+      },
+      {
+        "$ref": "#/134"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RequiredForPrepare"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RequiredForMove"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManualResolutionProperties",
+    "properties": {
+      "targetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AutomaticResolutionProperties",
+    "properties": {
+      "moveResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the MoveResource ARM ID of\r\nthe dependent resource if the resolution type is Automatic."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/132"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MoveResourceDependencyOverride",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the ARM ID of the dependent resource."
+      },
+      "targetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of\r\nthe dependent resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/142"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MoveResourcePropertiesErrors",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "The move resource error body."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Migrate/moveCollections/moveResources@2022-08-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/33"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrepareRequest",
+    "properties": {
+      "validateOnly": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the operation needs to only run pre-requisite."
+      },
+      "moveResources": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 1,
+        "description": "Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property."
+      },
+      "moveResourceInputType": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 0,
+        "description": "Defines the move resource input type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceSourceId"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatus",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation name."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Status of the operation. ARM expects the terminal status to be one of Succeeded/ Failed/ Canceled. All other values imply that the operation is still running."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Start time."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "End time."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 2,
+        "description": "Error stating all error details for the operation."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 2,
+        "description": "Custom data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatusError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 2,
+        "description": "The additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/152"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 2,
+        "description": "The operation error info."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MoveErrorInfo",
+    "properties": {
+      "moveResources": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 2,
+        "description": "The affected move resources."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AffectedMoveResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The affected move resource id."
+      },
+      "sourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The affected move resource source id."
+      },
+      "moveResources": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 2,
+        "description": "The affected move resources."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/156"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/156"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/154"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "prepare",
+    "resourceType": "Microsoft.Migrate/moveCollections",
+    "apiVersion": "2022-08-01",
+    "output": {
+      "$ref": "#/151"
+    },
+    "input": {
+      "$ref": "#/146"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceMoveRequest",
+    "properties": {
+      "validateOnly": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the operation needs to only run pre-requisite."
+      },
+      "moveResources": {
+        "type": {
+          "$ref": "#/163"
+        },
+        "flags": 1,
+        "description": "Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property."
+      },
+      "moveResourceInputType": {
+        "type": {
+          "$ref": "#/166"
+        },
+        "flags": 0,
+        "description": "Defines the move resource input type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceSourceId"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/164"
+      },
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateMove",
+    "resourceType": "Microsoft.Migrate/moveCollections",
+    "apiVersion": "2022-08-01",
+    "output": {
+      "$ref": "#/151"
+    },
+    "input": {
+      "$ref": "#/162"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommitRequest",
+    "properties": {
+      "validateOnly": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the operation needs to only run pre-requisite."
+      },
+      "moveResources": {
+        "type": {
+          "$ref": "#/169"
+        },
+        "flags": 1,
+        "description": "Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property."
+      },
+      "moveResourceInputType": {
+        "type": {
+          "$ref": "#/172"
+        },
+        "flags": 0,
+        "description": "Defines the move resource input type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceSourceId"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "commit",
+    "resourceType": "Microsoft.Migrate/moveCollections",
+    "apiVersion": "2022-08-01",
+    "output": {
+      "$ref": "#/151"
+    },
+    "input": {
+      "$ref": "#/168"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiscardRequest",
+    "properties": {
+      "validateOnly": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the operation needs to only run pre-requisite."
+      },
+      "moveResources": {
+        "type": {
+          "$ref": "#/175"
+        },
+        "flags": 1,
+        "description": "Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property."
+      },
+      "moveResourceInputType": {
+        "type": {
+          "$ref": "#/178"
+        },
+        "flags": 0,
+        "description": "Defines the move resource input type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceSourceId"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "discard",
+    "resourceType": "Microsoft.Migrate/moveCollections",
+    "apiVersion": "2022-08-01",
+    "output": {
+      "$ref": "#/151"
+    },
+    "input": {
+      "$ref": "#/174"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resolveDependencies",
+    "resourceType": "Microsoft.Migrate/moveCollections",
+    "apiVersion": "2022-08-01",
+    "output": {
+      "$ref": "#/151"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BulkRemoveRequest",
+    "properties": {
+      "validateOnly": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether the operation needs to only run pre-requisite."
+      },
+      "moveResources": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 0,
+        "description": "Gets or sets the list of resource Id's, by default it accepts move resource id's unless the input type is switched via moveResourceInputType property."
+      },
+      "moveResourceInputType": {
+        "type": {
+          "$ref": "#/185"
+        },
+        "flags": 0,
+        "description": "Defines the move resource input type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveResourceSourceId"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/184"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "bulkRemove",
+    "resourceType": "Microsoft.Migrate/moveCollections",
+    "apiVersion": "2022-08-01",
+    "output": {
+      "$ref": "#/151"
+    },
+    "input": {
+      "$ref": "#/181"
+    }
+  }
+]

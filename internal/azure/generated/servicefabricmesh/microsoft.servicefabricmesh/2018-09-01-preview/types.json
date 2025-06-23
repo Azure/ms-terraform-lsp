@@ -1,0 +1,2764 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ServiceFabricMesh/secrets"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ServiceFabricMesh/secrets",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1,
+        "description": "Describes the properties of a secret resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "SecretResourceProperties",
+    "discriminator": "kind",
+    "baseProperties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "User readable description of the secret."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "Status of the resource."
+      },
+      "statusDetails": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gives additional information about the current status of the secret."
+      },
+      "contentType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "State of the resource."
+      }
+    },
+    "elements": {
+      "inlinedValue": {
+        "$ref": "#/12"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Upgrading"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InlinedValueSecretResourceProperties",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "Describes the kind of secret."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "inlinedValue"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ServiceFabricMesh/secrets@2018-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ServiceFabricMesh/secrets/values"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ServiceFabricMesh/secrets/values",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 1,
+        "description": "This type describes properties of a secret value resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecretValueResourceProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "State of the resource."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The actual value of the secret."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ServiceFabricMesh/secrets/values@2018-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/18"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ServiceFabricMesh/volumes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ServiceFabricMesh/volumes",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 1,
+        "description": "This type describes properties of a volume resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VolumeResourceProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "State of the resource."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "User readable description of the volume."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Status of the volume."
+      },
+      "statusDetails": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gives additional information about the current status of the volume."
+      },
+      "provider": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "Provider of the volume."
+      },
+      "azureFileParameters": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "This type describes a volume provided by an Azure Files file share."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Upgrading"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SFAzureFile"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VolumeProviderParametersAzureFile",
+    "properties": {
+      "accountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the Azure storage account for the File Share."
+      },
+      "accountKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Access key of the Azure storage account for the File Share."
+      },
+      "shareName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the Azure Files file share that provides storage for the volume."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ServiceFabricMesh/volumes@2018-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/24"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ServiceFabricMesh/networks"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ServiceFabricMesh/networks",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Describes properties of a network resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "NetworkResourceProperties",
+    "discriminator": "kind",
+    "baseProperties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "User readable description of the network."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "Status of the network."
+      },
+      "statusDetails": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gives additional information about the current status of the network."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "State of the resource."
+      }
+    },
+    "elements": {
+      "Local": {
+        "$ref": "#/49"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Upgrading"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalNetworkResourceProperties",
+    "properties": {
+      "networkAddressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Address space for the local container network."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 1,
+        "description": "The type of a Service Fabric container network."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Local"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ServiceFabricMesh/networks@2018-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/40"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ServiceFabricMesh/gateways"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ServiceFabricMesh/gateways",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 1,
+        "description": "This type describes properties of a gateway resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GatewayResourceProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "State of the resource."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "User readable description of the gateway."
+      },
+      "sourceNetwork": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 1,
+        "description": "Network the gateway should listen on for requests."
+      },
+      "destinationNetwork": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 1,
+        "description": "Network that the Application is using."
+      },
+      "tcp": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Configuration for tcp connectivity for this gateway."
+      },
+      "http": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 0,
+        "description": "Configuration for http connectivity for this gateway."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 2,
+        "description": "Status of the resource."
+      },
+      "statusDetails": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gives additional information about the current status of the gateway."
+      },
+      "ipAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "IP address of the gateway. This is populated in the response and is ignored for incoming requests."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkRef",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the network"
+      },
+      "endpointRefs": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "A list of endpoints that are exposed on this network."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EndpointRef",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the endpoint."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/58"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TcpConfig",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "tcp gateway config name."
+      },
+      "port": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1,
+        "description": "Specifies the port at which the service endpoint below needs to be exposed."
+      },
+      "destination": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 1,
+        "description": "Describes destination endpoint for routing traffic."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GatewayDestination",
+    "properties": {
+      "applicationName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the service fabric Mesh application."
+      },
+      "serviceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "service that contains the endpoint."
+      },
+      "endpointName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "name of the endpoint in the service."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/60"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HttpConfig",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "http gateway config name."
+      },
+      "port": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1,
+        "description": "Specifies the port at which the service endpoint below needs to be exposed."
+      },
+      "hosts": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 1,
+        "description": "description for routing."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HttpHostConfig",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "http hostname config name."
+      },
+      "routes": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 1,
+        "description": "Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HttpRouteConfig",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "http route name."
+      },
+      "match": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 1,
+        "description": "Describes a rule for http route matching."
+      },
+      "destination": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 1,
+        "description": "Describes destination endpoint for routing traffic."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HttpRouteMatchRule",
+    "properties": {
+      "path": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 1,
+        "description": "Path to match for routing."
+      },
+      "headers": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "headers and their values to match in request."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HttpRouteMatchPath",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Uri path to match for request."
+      },
+      "rewrite": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "replacement string for matched part of the Uri."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 1,
+        "description": "how to match value in the Uri"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "prefix"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HttpRouteMatchHeader",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of header to match in request."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Value of header to match in request."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "how to match header value"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "exact"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/71"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/65"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/64"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Upgrading"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ServiceFabricMesh/gateways@2018-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/55"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ServiceFabricMesh/applications"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ServiceFabricMesh/applications",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 1,
+        "description": "This type describes properties of an application resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationResourceProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "State of the resource."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "User readable description of the application."
+      },
+      "services": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 0,
+        "description": "Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource."
+      },
+      "diagnostics": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 0,
+        "description": "Describes the diagnostics definition and usage for an application resource."
+      },
+      "debugParams": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Internal - used by Visual Studio to setup the debugging session on the local development environment."
+      },
+      "serviceNames": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 2,
+        "description": "Names of the services in the application."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/175"
+        },
+        "flags": 2,
+        "description": "Status of the application."
+      },
+      "statusDetails": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gives additional information about the current status of the application."
+      },
+      "healthState": {
+        "type": {
+          "$ref": "#/181"
+        },
+        "flags": 2,
+        "description": "Describes the health state of an application resource."
+      },
+      "unhealthyEvaluation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceResourceDescription",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 1,
+        "description": "This type describes properties of a service resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceResourceProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "State of the resource."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 1,
+        "description": "The operation system required by the code in service."
+      },
+      "codePackages": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 1,
+        "description": "Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.)."
+      },
+      "networkRefs": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 0,
+        "description": "The names of the private networks that this service needs to be part of."
+      },
+      "diagnostics": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "Reference to sinks in DiagnosticsDescription."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "User readable description of the service."
+      },
+      "replicaCount": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "The number of replicas of the service to create. Defaults to 1 if not specified."
+      },
+      "autoScalingPolicies": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 0,
+        "description": "Auto scaling policies"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 2,
+        "description": "Status of the service."
+      },
+      "statusDetails": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gives additional information about the current status of the service."
+      },
+      "healthState": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 2,
+        "description": "Describes the health state of an application resource."
+      },
+      "unhealthyEvaluation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "When the service's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the service is marked unhealthy."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerCodePackageProperties",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the code package."
+      },
+      "image": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Container image to use."
+      },
+      "imageRegistryCredential": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Image registry credential."
+      },
+      "entrypoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Override for the default entry point in the container."
+      },
+      "commands": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "Command array to execute within the container in exec form."
+      },
+      "environmentVariables": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 0,
+        "description": "The environment variables to set in this container"
+      },
+      "settings": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 0,
+        "description": "The settings to set in this container. The setting file path can be fetched from environment variable \"Fabric_SettingPath\". The path for Windows container is \"C:\\\\secrets\". The path for Linux container is \"/var/secrets\"."
+      },
+      "labels": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 0,
+        "description": "The labels to set in this container."
+      },
+      "endpoints": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "The endpoints exposed by this container."
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 1,
+        "description": "The resources required by this container."
+      },
+      "volumeRefs": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0,
+        "description": "Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime."
+      },
+      "volumes": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0,
+        "description": "Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime."
+      },
+      "diagnostics": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "Reference to sinks in DiagnosticsDescription."
+      },
+      "reliableCollectionsRefs": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 0,
+        "description": "A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details."
+      },
+      "instanceView": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 2,
+        "description": "Runtime information of a container instance."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageRegistryCredential",
+    "properties": {
+      "server": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Docker image registry server, without protocol such as `http` and `https`."
+      },
+      "username": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The username for the private registry."
+      },
+      "password": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The password for the private registry. The password is required for create or update operations, however it is not returned in the get or list operations."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnvironmentVariable",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the environment variable."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The value of the environment variable."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/99"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Setting",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the setting."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The value of the setting."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerLabel",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the container label."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The value of the container label."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EndpointProperties",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the endpoint."
+      },
+      "port": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "Port used by the container."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceRequirements",
+    "properties": {
+      "requests": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 1,
+        "description": "Describes the requested resources for a given container."
+      },
+      "limits": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 0,
+        "description": "Describes the maximum limits on the resources for a given container."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceRequests",
+    "properties": {
+      "memoryInGB": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1,
+        "description": "The memory request in GB for this container."
+      },
+      "cpu": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1,
+        "description": "Requested number of CPU cores. At present, only full cores are supported."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceLimits",
+    "properties": {
+      "memoryInGB": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "The memory limit in GB."
+      },
+      "cpu": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "CPU limits in cores. At present, only full cores are supported."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VolumeReference",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the volume being referenced."
+      },
+      "readOnly": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 0,
+        "description": "The flag indicating whether the volume is read only. Default is 'false'."
+      },
+      "destinationPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The path within the container at which the volume should be mounted. Only valid path characters are allowed."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/110"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationScopedVolume",
+    "properties": {
+      "creationParameters": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 1,
+        "description": "Describes parameters for creating application-scoped volumes."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the volume being referenced."
+      },
+      "readOnly": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 0,
+        "description": "The flag indicating whether the volume is read only. Default is 'false'."
+      },
+      "destinationPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The path within the container at which the volume should be mounted. Only valid path characters are allowed."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ApplicationScopedVolumeCreationParameters",
+    "discriminator": "kind",
+    "baseProperties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "User readable description of the volume."
+      }
+    },
+    "elements": {
+      "ServiceFabricVolumeDisk": {
+        "$ref": "#/115"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationScopedVolumeCreationParametersServiceFabricVolumeDisk",
+    "properties": {
+      "sizeDisk": {
+        "type": {
+          "$ref": "#/119"
+        },
+        "flags": 1,
+        "description": "Volume size"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 1,
+        "description": "Specifies the application-scoped volume kind."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Small"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Medium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Large"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServiceFabricVolumeDisk"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnosticsRef",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 0,
+        "description": "Status of whether or not sinks are enabled."
+      },
+      "sinkRefs": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReliableCollectionsRef",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of ReliableCollection resource. Right now it's not used and you can use any string."
+      },
+      "doNotPersistState": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 0,
+        "description": "False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/124"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerInstanceView",
+    "properties": {
+      "restartCount": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "The number of times the container has been restarted."
+      },
+      "currentState": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 0,
+        "description": "Current container instance state."
+      },
+      "previousState": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 0,
+        "description": "Previous container instance state."
+      },
+      "events": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "The events of this container instance."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerState",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The state of this container"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Date/time when the container state started."
+      },
+      "exitCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The container exit code."
+      },
+      "finishTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Date/time when the container state finished."
+      },
+      "detailStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Human-readable status of this state."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerEvent",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the container event."
+      },
+      "count": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "The count of the event."
+      },
+      "firstTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Date/time of the first event."
+      },
+      "lastTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Date/time of the last event."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The event message"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The event type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/128"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/96"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/57"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AutoScalingPolicy",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the auto scaling policy."
+      },
+      "trigger": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 1,
+        "description": "Determines when auto scaling operation will be invoked."
+      },
+      "mechanism": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 1,
+        "description": "The mechanism that is used to scale when auto scaling operation is invoked."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "AutoScalingTrigger",
+    "discriminator": "kind",
+    "baseProperties": {},
+    "elements": {
+      "AverageLoad": {
+        "$ref": "#/134"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AverageLoadScalingTrigger",
+    "properties": {
+      "metric": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 1,
+        "description": "Description of the metric that is used for scaling."
+      },
+      "lowerLoadThreshold": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1,
+        "description": "Lower load threshold (if average load is below this threshold, service will scale down)."
+      },
+      "upperLoadThreshold": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1,
+        "description": "Upper load threshold (if average load is above this threshold, service will scale up)."
+      },
+      "scaleIntervalInSeconds": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 1,
+        "description": "Scale interval that indicates how often will this trigger be checked."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 1,
+        "description": "The type of auto scaling trigger"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "AutoScalingMetric",
+    "discriminator": "kind",
+    "baseProperties": {},
+    "elements": {
+      "Resource": {
+        "$ref": "#/136"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AutoScalingResourceMetric",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 1,
+        "description": "Name of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 1,
+        "description": "The type of auto scaling metric"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "cpu"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "memoryInGB"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/138"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resource"
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 60
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AverageLoad"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "AutoScalingMechanism",
+    "discriminator": "kind",
+    "baseProperties": {},
+    "elements": {
+      "AddRemoveReplica": {
+        "$ref": "#/144"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AddRemoveReplicaScalingMechanism",
+    "properties": {
+      "minCount": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1,
+        "description": "Minimum number of containers (scale down won't be performed below this number)."
+      },
+      "maxCount": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1,
+        "description": "Maximum number of containers (scale up won't be performed above this number)."
+      },
+      "scaleIncrement": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1,
+        "description": "Each time auto scaling is performed, this number of containers will be added or removed."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 1,
+        "description": "The type of auto scaling mechanism."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AddRemoveReplica"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/132"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Upgrading"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/154"
+      },
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
+      },
+      {
+        "$ref": "#/157"
+      },
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/91"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnosticsDescription",
+    "properties": {
+      "sinks": {
+        "type": {
+          "$ref": "#/166"
+        },
+        "flags": 0,
+        "description": "List of supported sinks that can be referenced."
+      },
+      "enabled": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 0,
+        "description": "Status of whether or not sinks are enabled."
+      },
+      "defaultSinkRefs": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 0,
+        "description": "The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "DiagnosticsSinkProperties",
+    "discriminator": "kind",
+    "baseProperties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the sink. This value is referenced by DiagnosticsReferenceDescription"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the sink."
+      }
+    },
+    "elements": {
+      "AzureInternalMonitoringPipeline": {
+        "$ref": "#/163"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureInternalMonitoringPipelineSinkDescription",
+    "properties": {
+      "accountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure Internal monitoring pipeline account."
+      },
+      "namespace": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure Internal monitoring pipeline account namespace."
+      },
+      "maConfigUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure Internal monitoring agent configuration."
+      },
+      "fluentdConfigUrl": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 0,
+        "description": "Azure Internal monitoring agent fluentd configuration."
+      },
+      "autoKeyConfigUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure Internal monitoring pipeline autokey associated with the certificate."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/165"
+        },
+        "flags": 1,
+        "description": "The kind of DiagnosticsSink."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureInternalMonitoringPipeline"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/162"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Upgrading"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/169"
+      },
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/173"
+      },
+      {
+        "$ref": "#/174"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ServiceFabricMesh/applications@2018-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/89"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ServiceFabricMesh/applications/services"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ServiceFabricMesh/applications/services",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/185"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 2,
+        "description": "This type describes properties of a service resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ServiceFabricMesh/applications/services@2018-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/186"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecretValue",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The actual value of the secret."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "list_value",
+    "resourceType": "Microsoft.ServiceFabricMesh/secrets/values",
+    "apiVersion": "2018-09-01-preview",
+    "output": {
+      "$ref": "#/188"
+    }
+  }
+]

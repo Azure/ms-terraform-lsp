@@ -1,0 +1,1125 @@
+[
+  {
+    "$type": "StringType",
+    "pattern": ".*"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.BareMetalInfrastructure/bareMetalStorageInstances"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-04-06"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.BareMetalInfrastructure/bareMetalStorageInstances",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "AzureBareMetalStorageInstance properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The system metadata relating to this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBareMetalStorageInstanceProperties",
+    "properties": {
+      "azureBareMetalStorageInstanceUniqueIdentifier": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the AzureBareMetaStorageInstance unique ID."
+      },
+      "storageProperties": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Specifies the storage properties for the AzureBareMetalStorage instance."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "State of provisioning of the AzureBareMetalStorageInstance"
+      },
+      "offeringType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "the offering type for which the resource is getting provisioned"
+      },
+      "storageType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "the storage protocol for which the resource is getting provisioned"
+      },
+      "generation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "the kind of storage instance"
+      },
+      "hardwareType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "the hardware type of the storage instance"
+      },
+      "workloadType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "the workload for which the resource is getting provisioned"
+      },
+      "storageBillingProperties": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "the billing related information for the resource"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Migrating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageBillingProperties",
+    "properties": {
+      "billingMode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "the billing mode for the storage instance"
+      },
+      "azureBareMetalStorageInstanceSize": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "the SKU type that is provisioned"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.BareMetalInfrastructure/bareMetalStorageInstances@2023-04-06",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.BareMetalInfrastructure/bareMetalInstances"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-04-06"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.BareMetalInfrastructure/bareMetalInstances",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "AzureBareMetal instance properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The system metadata relating to this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBareMetalInstanceProperties",
+    "properties": {
+      "hardwareProfile": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Specifies the hardware settings for the AzureBareMetal instance."
+      },
+      "storageProfile": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "Specifies the storage settings for the AzureBareMetal instance disks."
+      },
+      "osProfile": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "Specifies the operating system settings for the AzureBareMetal instance."
+      },
+      "networkProfile": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Specifies the network settings for the AzureBareMetal instance."
+      },
+      "azureBareMetalInstanceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the AzureBareMetal instance unique ID."
+      },
+      "powerState": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "Resource power state"
+      },
+      "proximityPlacementGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource proximity placement group"
+      },
+      "hwRevision": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Hardware revision of an AzureBareMetal instance"
+      },
+      "partnerNodeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ARM ID of another AzureBareMetalInstance that will share a network with this AzureBareMetalInstance"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 2,
+        "description": "State of provisioning of the AzureBareMetalInstance"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HardwareProfile",
+    "properties": {
+      "hardwareType": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "Name of the hardware type (vendor and/or their product name)"
+      },
+      "azureBareMetalInstanceSize": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 2,
+        "description": "Specifies the AzureBareMetal instance SKU."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cisco_UCS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HPE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S72m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S144m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S72"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S144"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S192"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S192m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S192xm"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S96"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S112"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S224"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S224m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S224om"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S224oo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S224oom"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S224ooo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S384"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S384m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S384xm"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S384xxm"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S448"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S448m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S448om"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S448oo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S448oom"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S448ooo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S576m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S576xm"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S672"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S672m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S672om"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S672oo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S672oom"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S672ooo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S768"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S768m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S768xm"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S896"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S896m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S896om"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S896oo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S896oom"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S896ooo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S960m"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageProfile",
+    "properties": {
+      "nfsIpAddress": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "IP Address to connect to storage."
+      },
+      "osDisks": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0,
+        "description": "Specifies information about the operating system disk used by baremetal instance."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Disk",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The disk name."
+      },
+      "diskSizeGB": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "Specifies the size of an empty data disk in gigabytes."
+      },
+      "lun": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 2,
+        "description": "Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/83"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OSProfile",
+    "properties": {
+      "computerName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the host OS name of the AzureBareMetal instance."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "This property allows you to specify the type of the OS."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies version of operating system."
+      },
+      "sshPublicKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the SSH public key used to access the operating system."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkProfile",
+    "properties": {
+      "networkInterfaces": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 0,
+        "description": "Specifies the network interfaces for the AzureBareMetal instance."
+      },
+      "circuitId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the circuit id for connecting to express route."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IpAddress",
+    "properties": {
+      "ipAddress": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the IP address of the network interface."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/88"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "starting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "started"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "stopping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "restarting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Migrating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.BareMetalInfrastructure/bareMetalInstances@2023-04-06",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/32"
+    },
+    "flags": 1
+  }
+]

@@ -1,0 +1,245 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ContainerRegistry.Admin/locations/configurations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-11-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ContainerRegistry.Admin/locations/configurations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1,
+        "description": "Container registry configuration property."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerRegistryConfigurationProperty",
+    "properties": {
+      "maximumCapacityInGiB": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Total storage capacity (GiB) which can used by the registry."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ContainerRegistry.Admin/locations/configurations@2019-11-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ContainerRegistry.Admin/locations/quotas"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-11-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ContainerRegistry.Admin/locations/quotas",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Container registry quota properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerRegistryQuotaProperties",
+    "properties": {
+      "numberOfRegistries": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Total number of container registry accounts."
+      },
+      "capacityPerRegistryInGiB": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Storage capacity (GiB) of each registry."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ContainerRegistry.Admin/locations/quotas@2019-11-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/9"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ContainerRegistry.Admin/locations/capacities"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-11-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ContainerRegistry.Admin/locations/capacities",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Container registry capacity property."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerRegistryCapacityProperty",
+    "properties": {
+      "maximumCapacityInGiB": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Total storage capacity (GiB) which can used by the registry."
+      },
+      "allowPush": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Flag denotes if pushes are blocked for all registries."
+      },
+      "registriesConsumptionInGiB": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Total storage capacity (GiB) consumed by the registry."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ContainerRegistry.Admin/locations/capacities@2019-11-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/14"
+    },
+    "flags": 1
+  }
+]

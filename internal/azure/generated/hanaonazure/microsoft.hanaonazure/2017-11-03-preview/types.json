@@ -1,0 +1,820 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HanaOnAzure/hanaInstances"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-11-03-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HanaOnAzure/hanaInstances",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "HANA instance properties"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HanaInstanceProperties",
+    "properties": {
+      "hardwareProfile": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Specifies the hardware settings for the HANA instance."
+      },
+      "storageProfile": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Specifies the storage settings for the HANA instance disks."
+      },
+      "osProfile": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "Specifies the operating system settings for the HANA instance."
+      },
+      "networkProfile": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "Specifies the network settings for the HANA instance."
+      },
+      "hanaInstanceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the HANA instance unique ID."
+      },
+      "powerState": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 2,
+        "description": "Resource power state"
+      },
+      "proximityPlacementGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource proximity placement group"
+      },
+      "hwRevision": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Hardware revision of a HANA instance"
+      },
+      "partnerNodeId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ARM ID of another HanaInstance that will share a network with this HanaInstance"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 2,
+        "description": "State of provisioning of the HanaInstance"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HardwareProfile",
+    "properties": {
+      "hardwareType": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "Name of the hardware type (vendor and/or their product name)"
+      },
+      "hanaInstanceSize": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "Specifies the HANA instance SKU."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cisco_UCS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HPE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S72m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S144m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S72"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S144"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S192"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S192m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S192xm"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S96"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S112"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S224"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S224m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S224om"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S224oo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S224oom"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S224ooo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S384"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S384m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S384xm"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S384xxm"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S448"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S448m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S448om"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S448oo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S448oom"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S448ooo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S576m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S576xm"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S672"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S672m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S672om"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S672oo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S672oom"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S672ooo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S768"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S768m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S768xm"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S896"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S896m"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S896om"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S896oo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S896oom"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S896ooo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S960m"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageProfile",
+    "properties": {
+      "nfsIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "IP Address to connect to storage."
+      },
+      "osDisks": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "Specifies information about the operating system disk used by the hana instance."
+      },
+      "hanaSids": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "Specifies information related to SAP system IDs for the hana instance."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Disk",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The disk name."
+      },
+      "diskSizeGB": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "Specifies the size of an empty data disk in gigabytes."
+      },
+      "lun": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 2,
+        "description": "Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/54"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SAPSystemID",
+    "properties": {
+      "gid": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Group ID of the HANA database user."
+      },
+      "memoryAllocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Percent of memory to allocate to this SID."
+      },
+      "sid": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "SAP system ID as database identifier."
+      },
+      "username": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the HANA database user."
+      },
+      "uid": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "User ID of the HANA database user."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/57"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OSProfile",
+    "properties": {
+      "computerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the host OS name of the HANA instance."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "This property allows you to specify the type of the OS."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies version of operating system."
+      },
+      "sshPublicKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the SSH public key used to access the operating system."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkProfile",
+    "properties": {
+      "networkInterfaces": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "Specifies the network interfaces for the HANA instance."
+      },
+      "circuitId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the circuit id for connecting to express route."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IpAddress",
+    "properties": {
+      "ipAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the IP address of the network interface."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/61"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "starting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "started"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "stopping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "restarting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Migrating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HanaOnAzure/hanaInstances@2017-11-03-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.HanaOnAzure/hanaInstances",
+    "apiVersion": "2017-11-03-preview"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.HanaOnAzure/hanaInstances",
+    "apiVersion": "2017-11-03-preview"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "shutdown",
+    "resourceType": "Microsoft.HanaOnAzure/hanaInstances",
+    "apiVersion": "2017-11-03-preview"
+  }
+]

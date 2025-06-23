@@ -1,0 +1,246 @@
+[
+  {
+    "$type": "StringLiteralType",
+    "value": "balanceSummary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Consumption/credits"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-11-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Consumption/credits",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The properties of the credit summary."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreditSummaryProperties",
+    "properties": {
+      "balanceSummary": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Summary of balances associated with this credit summary."
+      },
+      "pendingCreditAdjustments": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Pending Credit Adjustments."
+      },
+      "expiredCredit": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Expired Credit."
+      },
+      "pendingEligibleCharges": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Pending Eligible Charges."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreditBalanceSummary",
+    "properties": {
+      "estimatedBalance": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Estimated balance."
+      },
+      "currentBalance": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Current balance."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Amount",
+    "properties": {
+      "currency": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The currency for the amount value."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "Amount value."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Consumption/credits@2018-11-01-preview",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PricesheetDownloadResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "A secure URL that can be used to download a an entity until the URL expires."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadUrl",
+    "properties": {
+      "downloadUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The URL to the PDF file."
+      },
+      "expiryTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time in UTC at which this download URL will expire."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "download",
+    "resourceType": "Microsoft.Consumption/billingAccounts/invoices/pricesheet",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "download",
+    "resourceType": "Microsoft.Consumption/billingAccounts/billingProfiles/pricesheet",
+    "apiVersion": "2018-11-01-preview",
+    "output": {
+      "$ref": "#/11"
+    }
+  }
+]

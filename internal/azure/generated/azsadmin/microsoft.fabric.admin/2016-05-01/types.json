@@ -1,0 +1,2943 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/ipPools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/ipPools",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Properties of an IpPool."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IpPoolModel",
+    "properties": {
+      "startIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The starting IP address."
+      },
+      "endIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ending IP address."
+      },
+      "addressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The address prefix."
+      },
+      "numberOfIpAddresses": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The total number of IP addresses."
+      },
+      "numberOfAllocatedIpAddresses": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The number of currently allocated IP addresses."
+      },
+      "numberOfIpAddressesInTransition": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The current number of IP addresses in transition."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/ipPools@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/applicationOperationResults"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/applicationOperationResults",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "Application operation result properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationOperationResultModel",
+    "properties": {
+      "instances": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "List of operation result instances."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Success or failure of operation."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/applicationOperationResults@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/10"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/computeOperationResults"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/computeOperationResults",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Compute operation result properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComputeOperationResultModel",
+    "properties": {
+      "instances": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "List of operation result instances."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Success or failure of operation."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/computeOperationResults@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/17"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/edgeGateways"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/edgeGateways",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "Object which holds information related to edge gateways."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EdgeGatewayModel",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The current state of the edge gateway."
+      },
+      "totalCapacity": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The total network capacity."
+      },
+      "availableCapacity": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The available network capacity."
+      },
+      "numberOfConnections": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The current number of connections."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/edgeGateways@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/24"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/edgeGatewayPools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/edgeGatewayPools",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "The properties of an edge gateway pool."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EdgeGatewayPoolModel",
+    "properties": {
+      "gatewayType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The gateway type, for example, S2sIPsec, S2sGre, and so on."
+      },
+      "numberOfGateways": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The number of gateways in the pool."
+      },
+      "redundantGatewayCount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The number of redundant gateways."
+      },
+      "gatewayCapacityKiloBitsPerSecond": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Gateway capacity in kilobits per second."
+      },
+      "publicIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The public IP address."
+      },
+      "greVipSubnet": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The GRE VIP subnet."
+      },
+      "edgeGateways": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "List of the edge gateways in the pool."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/edgeGatewayPools@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/30"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "Properties of a FabricLocation."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FabricLocationModel",
+    "properties": {
+      "pepIpAddresses": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "The IP addresses of the privileged endpoints."
+      },
+      "timeServer": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The IP address of the time server."
+      },
+      "stampInformationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The deployment id of the stamp."
+      },
+      "externalDNSIPAddress01": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "First external IP address of the DNS server."
+      },
+      "externalDNSIPAddress02": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Second external IP Address of the DNS server."
+      },
+      "exclusiveAdminOperationRunning": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Value for whether an exclusive admin operation is running."
+      },
+      "exclusiveAdminOperationName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the running exclusive admin operation."
+      },
+      "startUpActionPlanStartTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Last known stamp start time for the start up action plan."
+      },
+      "startUpActionPlanEndTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Last known stamp stop time for the start up action plan."
+      },
+      "shutDownActionPlanStartTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Last known stamp start time for the shut down action plan"
+      },
+      "shutDownActionPlanEndTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Last known stamp stop time for the shut down action plan."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/37"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/fileShares"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/fileShares",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "Properties of a file share resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileShareModel",
+    "properties": {
+      "associatedVolume": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Associated volume ID."
+      },
+      "uncPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The UNCPath for the fileshare."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/fileShares@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/45"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/infraRoles"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/infraRoles",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "Infrastructure role properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InfraRoleModel",
+    "properties": {
+      "instances": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "List of infrastructure role instances."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Display name for the infrastructure role."
+      },
+      "restartable": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Value indicating whether the infrastructure role can be restarted."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/infraRoles@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/51"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/infraRoleInstances"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/infraRoleInstances",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "All properties of an infrastructure role instance."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InfraRoleInstanceModel",
+    "properties": {
+      "scaleUnit": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The cluster that the virtual machine's host is part of."
+      },
+      "scaleUnitNode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to the scale unit node."
+      },
+      "size": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "Size of the virtual machine."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "The current state of the virtual machine."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InfraRoleInstanceSize",
+    "properties": {
+      "memoryGb": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The amount of memory, in GB, currently assigned to the virtual machine."
+      },
+      "cores": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The number of cores assigned to the virtual machine."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Starting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopping"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/infraRoleInstances@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/58"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/logicalNetworks"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/logicalNetworks",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 2,
+        "description": "Properties of a logical network."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogicalNetworkModel",
+    "properties": {
+      "metadata": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 0,
+        "description": "Metadata related to the logical network."
+      },
+      "networkVirtualizationEnabled": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Flag to indicate that the network virtualization is enabled on the logical network."
+      },
+      "subnets": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "List of subnets belonging to the logical network."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogicalNetworkModelMetadata",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/logicalNetworks@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/70"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/storageSubSystems/storagePools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/storageSubSystems/storagePools",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 2,
+        "description": "All properties of a storage pool."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StoragePoolModel",
+    "properties": {
+      "sizeGB": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Amount of space in the storage pool in GB."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/storageSubSystems/storagePools@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/78"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/storageSubSystems"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/storageSubSystems",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 2,
+        "description": "All properties of a storage system."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageSystemModel",
+    "properties": {
+      "totalCapacityGB": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Total capacity of the system."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/storageSubSystems@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/84"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/storageSubSystems/storagePools/volumes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/storageSubSystems/storagePools/volumes",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 2,
+        "description": "Properties of a volume."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VolumeModel",
+    "properties": {
+      "fileSystem": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Filesystem type."
+      },
+      "remainingSizeGB": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Amount of free space in GB."
+      },
+      "sizeGB": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Total amount of space in GB."
+      },
+      "volumeLabel": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Volume label."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/storageSubSystems/storagePools/volumes@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/90"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/logicalNetworks/logicalSubnets"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/logicalNetworks/logicalSubnets",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 2,
+        "description": "Properties of a logical subnet."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogicalSubnetModel",
+    "properties": {
+      "ipPools": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "All IP pools which belong to this subnet."
+      },
+      "isPublic": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "The visibility status of the IP pool.  If is true the associated pools are public IP address pools."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "Metadata related to the logical network."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogicalSubnetModelMetadata",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/logicalNetworks/logicalSubnets@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/96"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/macAddressPools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/macAddressPools",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 2,
+        "description": "Properties of a MAC address pool."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MacAddressPoolModel",
+    "properties": {
+      "metadata": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "Metadata related to the MAC pool."
+      },
+      "startMacAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Starting MAC address."
+      },
+      "endMacAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Ending MAC address."
+      },
+      "numberOfAllocatedMacAddresses": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Number of MAC addresses allocated."
+      },
+      "numberOfAvailableMacAddresses": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Number of MAC addresses available."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MacAddressPoolModelMetadata",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/macAddressPools@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/104"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/networkOperationResults"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/networkOperationResults",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 2,
+        "description": "Network operation result properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkOperationResultModel",
+    "properties": {
+      "instances": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 0,
+        "description": "List of operation result instances."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Success or failure of operation."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/networkOperationResults@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/111"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/scaleUnits"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/scaleUnits",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/119"
+        },
+        "flags": 2,
+        "description": "Properties of a scale unit."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScaleUnitModel",
+    "properties": {
+      "scaleUnitType": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "Type of cluster."
+      },
+      "logicalFaultDomain": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Fault domain name of the cluster."
+      },
+      "nodes": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 0,
+        "description": "List of nodes in the server."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 0,
+        "description": "Current state of the cluster."
+      },
+      "model": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Model of the servers in the cluster."
+      },
+      "totalCapacity": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 0,
+        "description": "Capacity information for the cluster."
+      },
+      "isMultiNode": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Denotes if more than one node in cluster."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ComputeOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StorageOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HyperConverged"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/122"
+      },
+      {
+        "$ref": "#/123"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Upgrading"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/127"
+      },
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScaleUnitCapacity",
+    "properties": {
+      "memoryGB": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The memory for the physical machine."
+      },
+      "cores": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The number of CPU cores for the physical machine."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/scaleUnits@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/118"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 2,
+        "description": "Holds all properties related to a scale unit node."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/148"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScaleUnitNodeModel",
+    "properties": {
+      "scaleUnitNodeStatus": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 0,
+        "description": "Status of the physical machine."
+      },
+      "powerState": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 0,
+        "description": "PowerState of the physical machine."
+      },
+      "bmcAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "BMC address of the physical machine."
+      },
+      "scaleUnitName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Cluster name of the physical machine."
+      },
+      "scaleUnitUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI of the corresponding cluster."
+      },
+      "canPowerOff": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Value indicating whether the node can be powered off."
+      },
+      "vendor": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Vendor of the physical machine."
+      },
+      "model": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Model of the physical machine."
+      },
+      "serialNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Serial number of the physical machine."
+      },
+      "biosVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "BIOS version of the physical machine."
+      },
+      "capacity": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 0,
+        "description": "Capacity of the physical machine."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Maintenance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Starting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopping"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/137"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/slbMuxInstances"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/slbMuxInstances",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 2,
+        "description": "Properties of a SLB MUX."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SlbMuxInstanceModel",
+    "properties": {
+      "configurationState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Configuration state."
+      },
+      "virtualServer": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Virtual server."
+      },
+      "bgpPeers": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 0,
+        "description": "List of BGP peers."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/slbMuxInstances@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/152"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Fabric.Admin/fabricLocations/storageOperationResults"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/storageOperationResults",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 2,
+        "description": "Storage operation result properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region where the resource is located."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageOperationResultModel",
+    "properties": {
+      "instances": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 0,
+        "description": "List of operation result instances."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Success or failure of operation."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Fabric.Admin/fabricLocations/storageOperationResults@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/159"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Restart",
+    "resourceType": "Microsoft.Fabric.Admin/fabricLocations/infraRoles",
+    "apiVersion": "2016-05-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "PowerOff",
+    "resourceType": "Microsoft.Fabric.Admin/fabricLocations/infraRoleInstances",
+    "apiVersion": "2016-05-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "PowerOn",
+    "resourceType": "Microsoft.Fabric.Admin/fabricLocations/infraRoleInstances",
+    "apiVersion": "2016-05-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Shutdown",
+    "resourceType": "Microsoft.Fabric.Admin/fabricLocations/infraRoleInstances",
+    "apiVersion": "2016-05-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Reboot",
+    "resourceType": "Microsoft.Fabric.Admin/fabricLocations/infraRoleInstances",
+    "apiVersion": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScaleOutScaleUnitParametersList",
+    "properties": {
+      "nodeList": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 0,
+        "description": "List of nodes in the scale unit."
+      },
+      "awaitStorageConvergence": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Flag indicates if the operation should wait for storage to converge before returning."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScaleOutScaleUnitParameters",
+    "properties": {
+      "bmcIpv4Address": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "BMC address of the physical machine."
+      },
+      "computerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Computer name of the physical machine."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/170"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "scaleOut",
+    "resourceType": "Microsoft.Fabric.Admin/fabricLocations/scaleUnits",
+    "apiVersion": "2016-05-01",
+    "input": {
+      "$ref": "#/169"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateFromJsonScaleUnitParametersList",
+    "properties": {
+      "clusterName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Cluster name for the new scale unit."
+      },
+      "physicalNodes": {
+        "type": {
+          "$ref": "#/175"
+        },
+        "flags": 0,
+        "description": "List of nodes in the scale unit."
+      },
+      "torSwitchBgpAsn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ASN for the cluster's rack TOR."
+      },
+      "softwareBgpAsn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The software ASN for the cluster's rack."
+      },
+      "torSwitchBgpPeerIp": {
+        "type": {
+          "$ref": "#/176"
+        },
+        "flags": 0,
+        "description": "The list of IP addresses used for TOR communication."
+      },
+      "infrastructureNetwork": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 0,
+        "description": "The information associated with the infrastructure network that will be subdivided into subnets."
+      },
+      "storageNetwork": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 0,
+        "description": "The information associated with the storage network that will be subdivided into subnets."
+      },
+      "netQosPriority": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The network QOS priority setting."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentJsonPhysicalNodeParameters",
+    "properties": {
+      "bmcIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "BMC address of the physical machine."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Computer name of the physical machine."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/174"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkDefinitionParameter",
+    "properties": {
+      "subnet": {
+        "type": {
+          "$ref": "#/178"
+        },
+        "flags": 0,
+        "description": "The subnet IP mask in the example format 10.0.0.0/25."
+      },
+      "vlanId": {
+        "type": {
+          "$ref": "#/179"
+        },
+        "flags": 0,
+        "description": "The Vlan ID of the subnet."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createFromJson",
+    "resourceType": "Microsoft.Fabric.Admin/fabricLocations/scaleUnits",
+    "apiVersion": "2016-05-01",
+    "input": {
+      "$ref": "#/173"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Shutdown",
+    "resourceType": "Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes",
+    "apiVersion": "2016-05-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "PowerOff",
+    "resourceType": "Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes",
+    "apiVersion": "2016-05-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "PowerOn",
+    "resourceType": "Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes",
+    "apiVersion": "2016-05-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "StartMaintenanceMode",
+    "resourceType": "Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes",
+    "apiVersion": "2016-05-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "StopMaintenanceMode",
+    "resourceType": "Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes",
+    "apiVersion": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BareMetalNodeDescription",
+    "properties": {
+      "bmcIpv4Address": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "BMC address of the physical machine."
+      },
+      "vendor": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Vendor of the physical machine."
+      },
+      "model": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Model of the physical machine."
+      },
+      "serialNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Serial number of the physical machine."
+      },
+      "biosVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Bios version of the physical machine."
+      },
+      "computerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the computer."
+      },
+      "clusterName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the cluster."
+      },
+      "macAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the MAC address of the bare metal node."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Repair",
+    "resourceType": "Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes",
+    "apiVersion": "2016-05-01",
+    "input": {
+      "$ref": "#/186"
+    }
+  }
+]

@@ -1,0 +1,5413 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 64,
+    "pattern": "^[a-zA-Z][a-zA-Z0-9]+$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CustomerInsights/hubs"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CustomerInsights/hubs",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Properties of hub."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HubPropertiesFormat",
+    "properties": {
+      "apiEndpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "API endpoint URL of the hub."
+      },
+      "webEndpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Web endpoint URL of the hub."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the hub."
+      },
+      "tenantFeatures": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0."
+      },
+      "hubBillingInfo": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Billing settings of the hub."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HubBillingInfoFormat",
+    "properties": {
+      "skuName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The sku name."
+      },
+      "minUnits": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions."
+      },
+      "maxUnits": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 10
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CustomerInsights/hubs@2017-04-26",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 128,
+    "pattern": "^[a-zA-Z][a-zA-Z0-9_]+$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CustomerInsights/hubs/profiles"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CustomerInsights/hubs/profiles",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "The profile type definition."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProfileTypeDefinition",
+    "properties": {
+      "strongIds": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The strong IDs."
+      },
+      "apiEntitySetName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object."
+      },
+      "entityType": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Type of entity."
+      },
+      "fields": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "The properties of the Profile."
+      },
+      "instancesCount": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The instance count."
+      },
+      "lastChangedUtc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The last changed time for the type definition."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "Provisioning state."
+      },
+      "schemaItemTypeLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The schema org link. This helps ACI identify and suggest semantic models."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      },
+      "timestampFieldName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp property name. Represents the time when the interaction or profile update happened."
+      },
+      "typeName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the entity."
+      },
+      "attributes": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "The attributes for the Type."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "Localized descriptions for the property."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Localized display names for the property."
+      },
+      "localizedAttributes": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "Any custom localized attributes for the Type."
+      },
+      "smallImage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Small Image associated with the Property or EntityType."
+      },
+      "mediumImage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Medium Image associated with the Property or EntityType."
+      },
+      "largeImage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Large Image associated with the Property or EntityType."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StrongId",
+    "properties": {
+      "keyPropertyNames": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 1,
+        "description": "The properties which make up the unique ID."
+      },
+      "strongIdName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Name identifying the strong ID."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Localized display name."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Localized descriptions."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StrongIdDisplayName",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StrongIdDescription",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/16"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Profile"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Interaction"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Relationship"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PropertyDefinition",
+    "properties": {
+      "arrayValueSeparator": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Array value separator for properties with isArray set."
+      },
+      "enumValidValues": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Describes valid values for an enum property."
+      },
+      "fieldName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the property."
+      },
+      "fieldType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Type of the property."
+      },
+      "isArray": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Indicates if the property is actually an array of the fieldType above on the data api."
+      },
+      "isEnum": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Indicates if the property is an enum."
+      },
+      "isFlagEnum": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Indicates if the property is an flag enum."
+      },
+      "isImage": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Whether the property is an Image."
+      },
+      "isLocalizedString": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Whether the property is a localized string."
+      },
+      "isName": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Whether the property is a name or a part of name."
+      },
+      "isRequired": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field."
+      },
+      "propertyId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ID associated with the property."
+      },
+      "schemaItemPropLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "URL encoded schema.org item prop link for the property."
+      },
+      "maxLength": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Max length of string. Used only if type is string."
+      },
+      "isAvailableInGraph": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Whether property is available in graph or not."
+      },
+      "dataSourcePrecedenceRules": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProfileEnumValidValuesFormat",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The integer value of the enum member."
+      },
+      "localizedValueNames": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Localized names of the enum member."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProfileEnumValidValuesFormatLocalizedValueNames",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataSourcePrecedence",
+    "properties": {
+      "dataSource": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Data Source is a way for us to know the source of instances. A single type can have data coming in from multiple places. In activities we use this to determine precedence rules."
+      },
+      "precedence": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "the precedence value."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataSource",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The data source name"
+      },
+      "dataSourceType": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 2,
+        "description": "The data source type."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "The data source status."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The data source ID."
+      },
+      "dataSourceReferenceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The data source reference id."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connector"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LinkInteraction"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemDefault"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/31"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/26"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expiring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HumanIntervention"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetadataDefinitionBaseAttributes",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/50"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetadataDefinitionBaseDescription",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetadataDefinitionBaseDisplayName",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DictionaryOfString",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetadataDefinitionBaseLocalizedAttributes",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/54"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CustomerInsights/hubs/profiles@2017-04-26",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/14"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CustomerInsights/hubs/interactions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CustomerInsights/hubs/interactions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "The Interaction Type Definition"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InteractionTypeDefinition",
+    "properties": {
+      "idPropertyNames": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "The id property names. Properties which uniquely identify an interaction instance."
+      },
+      "participantProfiles": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Profiles that participated in the interaction."
+      },
+      "primaryParticipantProfilePropertyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The primary participant property name for an interaction ,This is used to logically represent the agent of the interaction, Specify the participant name here from ParticipantName."
+      },
+      "dataSourcePrecedenceRules": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 2,
+        "description": "This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules."
+      },
+      "defaultDataSource": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Default data source is specifically used in cases where data source is not specified in an instance."
+      },
+      "isActivity": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "An interaction can be tagged as an activity only during create. This enables the interaction to be editable and can enable merging of properties from multiple data sources based on precedence, which is defined at a link level."
+      },
+      "apiEntitySetName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object."
+      },
+      "entityType": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "Type of entity."
+      },
+      "fields": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "The properties of the Profile."
+      },
+      "instancesCount": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The instance count."
+      },
+      "lastChangedUtc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The last changed time for the type definition."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 2,
+        "description": "Provisioning state."
+      },
+      "schemaItemTypeLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The schema org link. This helps ACI identify and suggest semantic models."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      },
+      "timestampFieldName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp property name. Represents the time when the interaction or profile update happened."
+      },
+      "typeName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the entity."
+      },
+      "attributes": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "The attributes for the Type."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "Localized descriptions for the property."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0,
+        "description": "Localized display names for the property."
+      },
+      "localizedAttributes": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Any custom localized attributes for the Type."
+      },
+      "smallImage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Small Image associated with the Property or EntityType."
+      },
+      "mediumImage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Medium Image associated with the Property or EntityType."
+      },
+      "largeImage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Large Image associated with the Property or EntityType."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Participant",
+    "properties": {
+      "profileTypeName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Profile type name."
+      },
+      "participantPropertyReferences": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 1,
+        "description": "The property references."
+      },
+      "participantName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Participant name."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "Localized display name."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "Localized descriptions."
+      },
+      "role": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The role that the participant is playing in the interaction."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ParticipantPropertyReference",
+    "properties": {
+      "sourcePropertyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The source property that maps to the target property."
+      },
+      "targetPropertyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The target property that maps to the source property."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ParticipantDisplayName",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ParticipantDescription",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/62"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/31"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Profile"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Interaction"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Relationship"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/26"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expiring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HumanIntervention"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetadataDefinitionBaseAttributes",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/82"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetadataDefinitionBaseDescription",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetadataDefinitionBaseDisplayName",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DictionaryOfString",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetadataDefinitionBaseLocalizedAttributes",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CustomerInsights/hubs/interactions@2017-04-26",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/59"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 512,
+    "pattern": "^[a-zA-Z][a-zA-Z0-9_]+$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CustomerInsights/hubs/relationships"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CustomerInsights/hubs/relationships",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "The definition of Relationship."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelationshipDefinition",
+    "properties": {
+      "cardinality": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "The Relationship Cardinality."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "Localized display name for the Relationship."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "Localized descriptions for the Relationship."
+      },
+      "expiryDateTimeUtc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The expiry date time in UTC."
+      },
+      "fields": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 0,
+        "description": "The properties of the Relationship."
+      },
+      "lookupMappings": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 0,
+        "description": "Optional property to be used to map fields in profile to their strong ids in related profile."
+      },
+      "profileType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Profile type."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 2,
+        "description": "Provisioning state."
+      },
+      "relationshipName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Relationship name."
+      },
+      "relatedProfileType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Related profile being referenced."
+      },
+      "relationshipGuidId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The relationship guid id."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OneToOne"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OneToMany"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManyToMany"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelationshipDefinitionDisplayName",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelationshipDefinitionDescription",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/26"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelationshipTypeMapping",
+    "properties": {
+      "fieldMappings": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 1,
+        "description": "Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelationshipTypeFieldMapping",
+    "properties": {
+      "profileFieldName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Specifies the fieldName in profile."
+      },
+      "relatedProfileKeyProperty": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Specifies the KeyProperty (from StrongId) of the related profile."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/102"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expiring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HumanIntervention"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/107"
+      },
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CustomerInsights/hubs/relationships@2017-04-26",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/92"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CustomerInsights/hubs/relationshipLinks"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CustomerInsights/hubs/relationshipLinks",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 0,
+        "description": "The definition of relationship link."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelationshipLinkDefinition",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 0,
+        "description": "Localized display name for the Relationship Link."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "Localized descriptions for the Relationship Link."
+      },
+      "interactionType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The InteractionType associated with the Relationship Link."
+      },
+      "linkName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the Relationship Link."
+      },
+      "mappings": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "The mappings between Interaction and Relationship fields."
+      },
+      "profilePropertyReferences": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 1,
+        "description": "The property references for the Profile of the Relationship."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 2,
+        "description": "Provisioning state."
+      },
+      "relatedProfilePropertyReferences": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 1,
+        "description": "The property references for the Related Profile of the Relationship."
+      },
+      "relationshipName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Relationship associated with the Link."
+      },
+      "relationshipGuidId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The relationship guid id."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelationshipLinkDefinitionDisplayName",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelationshipLinkDefinitionDescription",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelationshipLinkFieldMapping",
+    "properties": {
+      "interactionFieldName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The field name on the Interaction Type."
+      },
+      "linkType": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "Link type."
+      },
+      "relationshipFieldName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The field name on the Relationship metadata."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpdateAlways"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CopyIfNull"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/121"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/119"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ParticipantProfilePropertyReference",
+    "properties": {
+      "interactionPropertyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The source interaction property that maps to the target profile property."
+      },
+      "profilePropertyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The target profile property that maps to the source interaction property."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/124"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expiring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HumanIntervention"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/127"
+      },
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/124"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CustomerInsights/hubs/relationshipLinks@2017-04-26",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/115"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 50,
+    "pattern": "^[A-Za-z0-9]$|^[A-Za-z0-9][\\w-\\.]*[A-Za-z0-9]$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CustomerInsights/hubs/authorizationPolicies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CustomerInsights/hubs/authorizationPolicies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 0,
+        "description": "The authorization policy."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AuthorizationPolicy",
+    "properties": {
+      "policyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the policy."
+      },
+      "permissions": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 1,
+        "description": "The permissions associated with the policy."
+      },
+      "primaryKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Primary key associated with the policy."
+      },
+      "secondaryKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Secondary key associated with the policy."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Read"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Write"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Manage"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/142"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/143"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CustomerInsights/hubs/authorizationPolicies@2017-04-26",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/138"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CustomerInsights/hubs/connectors"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CustomerInsights/hubs/connectors",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 0,
+        "description": "Properties of connector."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Connector",
+    "properties": {
+      "connectorId": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "ID of the connector."
+      },
+      "connectorName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the connector."
+      },
+      "connectorType": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 1,
+        "description": "Type of connector."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Display name of the connector."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description of the connector."
+      },
+      "connectorProperties": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 1,
+        "description": "The connector properties."
+      },
+      "created": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The created time."
+      },
+      "lastModified": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The last modified time."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/165"
+        },
+        "flags": 2,
+        "description": "State of connector."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      },
+      "isInternal": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "If this is an internal connector."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CRM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBlob"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Salesforce"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ExchangeOnline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Outbound"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/154"
+      },
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectorProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/157"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expiring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/161"
+      },
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CustomerInsights/hubs/connectors@2017-04-26",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/148"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CustomerInsights/hubs/connectors/mappings"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CustomerInsights/hubs/connectors/mappings",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/170"
+        },
+        "flags": 0,
+        "description": "The connector mapping definition."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectorMapping",
+    "properties": {
+      "connectorName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The connector name."
+      },
+      "connectorType": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 0,
+        "description": "Type of connector."
+      },
+      "created": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The created time."
+      },
+      "lastModified": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The last modified time."
+      },
+      "entityType": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 1,
+        "description": "Defines which entity type the file should map to."
+      },
+      "entityTypeName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The mapping entity name."
+      },
+      "connectorMappingName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The connector mapping name"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Display name for the connector mapping."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The description of the connector mapping."
+      },
+      "dataFormatId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The DataFormat ID."
+      },
+      "mappingProperties": {
+        "type": {
+          "$ref": "#/183"
+        },
+        "flags": 1,
+        "description": "The properties of the mapping."
+      },
+      "nextRunTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The next run time based on customer's settings."
+      },
+      "runId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The RunId."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/212"
+        },
+        "flags": 2,
+        "description": "State of connector mapping."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CRM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBlob"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Salesforce"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ExchangeOnline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Outbound"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/173"
+      },
+      {
+        "$ref": "#/174"
+      },
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Profile"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Interaction"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Relationship"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectorMappingProperties",
+    "properties": {
+      "folderPath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The folder path for the mapping."
+      },
+      "fileFilter": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The file filter for the mapping."
+      },
+      "hasHeader": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "If the file contains a header or not."
+      },
+      "errorManagement": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 1,
+        "description": "The error management setting for the mapping."
+      },
+      "format": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 1,
+        "description": "The format of mapping property."
+      },
+      "availability": {
+        "type": {
+          "$ref": "#/191"
+        },
+        "flags": 1,
+        "description": "The availability of mapping property."
+      },
+      "structure": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 1,
+        "description": "Ingestion mapping information at property level."
+      },
+      "completeOperation": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 1,
+        "description": "The operation after import is done."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectorMappingErrorManagement",
+    "properties": {
+      "errorManagementType": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 1,
+        "description": "The type of error management to use for the mapping."
+      },
+      "errorLimit": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The error limit allowed while importing data."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RejectAndContinue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StopImport"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RejectUntilLimit"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/185"
+      },
+      {
+        "$ref": "#/186"
+      },
+      {
+        "$ref": "#/187"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectorMappingFormat",
+    "properties": {
+      "formatType": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 1,
+        "description": "The type mapping format."
+      },
+      "columnDelimiter": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The character that signifies a break between columns."
+      },
+      "acceptLanguage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The oData language."
+      },
+      "quoteCharacter": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Quote character, used to indicate enquoted fields."
+      },
+      "quoteEscapeCharacter": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Escape character for quotes, can be the same as the quoteCharacter."
+      },
+      "arraySeparator": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Character separating array elements."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TextFormat"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectorMappingAvailability",
+    "properties": {
+      "frequency": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 0,
+        "description": "The frequency to update."
+      },
+      "interval": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "The interval of the given frequency to use."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Minute"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hour"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Day"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Week"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Month"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/193"
+      },
+      {
+        "$ref": "#/194"
+      },
+      {
+        "$ref": "#/195"
+      },
+      {
+        "$ref": "#/196"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectorMappingStructure",
+    "properties": {
+      "propertyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The property name of the mapping entity."
+      },
+      "columnName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The column name of the import file."
+      },
+      "customFormatSpecifier": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Custom format specifier for input parsing."
+      },
+      "isEncrypted": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Indicates if the column is encrypted."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/198"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectorMappingCompleteOperation",
+    "properties": {
+      "completionOperationType": {
+        "type": {
+          "$ref": "#/204"
+        },
+        "flags": 0,
+        "description": "The type of completion operation."
+      },
+      "destinationFolder": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The destination folder where files will be moved to once the import is done."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DoNothing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeleteFile"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveFile"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/201"
+      },
+      {
+        "$ref": "#/202"
+      },
+      {
+        "$ref": "#/203"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expiring"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/206"
+      },
+      {
+        "$ref": "#/207"
+      },
+      {
+        "$ref": "#/208"
+      },
+      {
+        "$ref": "#/209"
+      },
+      {
+        "$ref": "#/210"
+      },
+      {
+        "$ref": "#/211"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CustomerInsights/hubs/connectors/mappings@2017-04-26",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/169"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CustomerInsights/hubs/kpi"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CustomerInsights/hubs/kpi",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/214"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/215"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/217"
+        },
+        "flags": 0,
+        "description": "Defines the KPI Threshold limits."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KpiDefinition",
+    "properties": {
+      "entityType": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 1,
+        "description": "The mapping entity type."
+      },
+      "entityTypeName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The mapping entity name."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      },
+      "kpiName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The KPI name."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/223"
+        },
+        "flags": 0,
+        "description": "Localized display name for the KPI."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/224"
+        },
+        "flags": 0,
+        "description": "Localized description for the KPI."
+      },
+      "calculationWindow": {
+        "type": {
+          "$ref": "#/230"
+        },
+        "flags": 1,
+        "description": "The calculation window."
+      },
+      "calculationWindowFieldName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of calculation window field."
+      },
+      "function": {
+        "type": {
+          "$ref": "#/239"
+        },
+        "flags": 1,
+        "description": "The computation function for the KPI."
+      },
+      "expression": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The computation expression for the KPI."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The unit of measurement for the KPI."
+      },
+      "filter": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The filter expression for the KPI."
+      },
+      "groupBy": {
+        "type": {
+          "$ref": "#/240"
+        },
+        "flags": 0,
+        "description": "the group by properties for the KPI."
+      },
+      "groupByMetadata": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 2,
+        "description": "The KPI GroupByMetadata."
+      },
+      "participantProfilesMetadata": {
+        "type": {
+          "$ref": "#/245"
+        },
+        "flags": 2,
+        "description": "The participant profiles."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/252"
+        },
+        "flags": 2,
+        "description": "Provisioning state."
+      },
+      "thresHolds": {
+        "type": {
+          "$ref": "#/253"
+        },
+        "flags": 0,
+        "description": "The KPI thresholds."
+      },
+      "aliases": {
+        "type": {
+          "$ref": "#/255"
+        },
+        "flags": 0,
+        "description": "The aliases."
+      },
+      "extracts": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 0,
+        "description": "The KPI extracts."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Profile"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Interaction"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Relationship"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/218"
+      },
+      {
+        "$ref": "#/219"
+      },
+      {
+        "$ref": "#/220"
+      },
+      {
+        "$ref": "#/221"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KpiDefinitionDisplayName",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KpiDefinitionDescription",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Lifetime"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hour"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Day"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Week"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Month"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/225"
+      },
+      {
+        "$ref": "#/226"
+      },
+      {
+        "$ref": "#/227"
+      },
+      {
+        "$ref": "#/228"
+      },
+      {
+        "$ref": "#/229"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sum"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Avg"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Min"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Max"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Last"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Count"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CountDistinct"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/231"
+      },
+      {
+        "$ref": "#/232"
+      },
+      {
+        "$ref": "#/233"
+      },
+      {
+        "$ref": "#/234"
+      },
+      {
+        "$ref": "#/235"
+      },
+      {
+        "$ref": "#/236"
+      },
+      {
+        "$ref": "#/237"
+      },
+      {
+        "$ref": "#/238"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KpiGroupByMetadata",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/242"
+        },
+        "flags": 0,
+        "description": "The display name."
+      },
+      "fieldName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the field."
+      },
+      "fieldType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The type of the field."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KpiGroupByMetadataDisplayName",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/241"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KpiParticipantProfilesMetadata",
+    "properties": {
+      "typeName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/244"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expiring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HumanIntervention"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/246"
+      },
+      {
+        "$ref": "#/247"
+      },
+      {
+        "$ref": "#/248"
+      },
+      {
+        "$ref": "#/249"
+      },
+      {
+        "$ref": "#/250"
+      },
+      {
+        "$ref": "#/251"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KpiThresholds",
+    "properties": {
+      "lowerLimit": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "The lower threshold limit."
+      },
+      "upperLimit": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "The upper threshold limit."
+      },
+      "increasingKpi": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 1,
+        "description": "Whether or not the KPI is an increasing KPI."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KpiAlias",
+    "properties": {
+      "aliasName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "KPI alias name."
+      },
+      "expression": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The expression."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/254"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KpiExtract",
+    "properties": {
+      "extractName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "KPI extract name."
+      },
+      "expression": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The expression."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/256"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CustomerInsights/hubs/kpi@2017-04-26",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/216"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 512
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CustomerInsights/hubs/views"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CustomerInsights/hubs/views",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/259"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/260"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/261"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/263"
+        },
+        "flags": 0,
+        "description": "The view in Customer 360 web application."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "View",
+    "properties": {
+      "viewName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the view."
+      },
+      "userId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "the user ID."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "the hub name."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/264"
+        },
+        "flags": 0,
+        "description": "Localized display name for the view."
+      },
+      "definition": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "View definition."
+      },
+      "changed": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Date time when view was last modified."
+      },
+      "created": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Date time when view was created."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ViewDisplayName",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CustomerInsights/hubs/views@2017-04-26",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/262"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CustomerInsights/hubs/links"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CustomerInsights/hubs/links",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/266"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/269"
+        },
+        "flags": 0,
+        "description": "The definition of Link."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkDefinition",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      },
+      "linkName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The link name."
+      },
+      "sourceEntityType": {
+        "type": {
+          "$ref": "#/274"
+        },
+        "flags": 1,
+        "description": "Type of source entity."
+      },
+      "targetEntityType": {
+        "type": {
+          "$ref": "#/279"
+        },
+        "flags": 1,
+        "description": "Type of target entity."
+      },
+      "sourceEntityTypeName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the source Entity Type."
+      },
+      "targetEntityTypeName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the target Entity Type."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/280"
+        },
+        "flags": 0,
+        "description": "Localized display name for the Link."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 0,
+        "description": "Localized descriptions for the Link."
+      },
+      "mappings": {
+        "type": {
+          "$ref": "#/286"
+        },
+        "flags": 0,
+        "description": "The set of properties mappings between the source and target Types."
+      },
+      "participantPropertyReferences": {
+        "type": {
+          "$ref": "#/287"
+        },
+        "flags": 1,
+        "description": "The properties that represent the participating profile."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/294"
+        },
+        "flags": 2,
+        "description": "Provisioning state."
+      },
+      "referenceOnly": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles."
+      },
+      "operationType": {
+        "type": {
+          "$ref": "#/297"
+        },
+        "flags": 0,
+        "description": "Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Profile"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Interaction"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Relationship"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/270"
+      },
+      {
+        "$ref": "#/271"
+      },
+      {
+        "$ref": "#/272"
+      },
+      {
+        "$ref": "#/273"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Profile"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Interaction"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Relationship"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/275"
+      },
+      {
+        "$ref": "#/276"
+      },
+      {
+        "$ref": "#/277"
+      },
+      {
+        "$ref": "#/278"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkDefinitionDisplayName",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkDefinitionDescription",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TypePropertiesMapping",
+    "properties": {
+      "sourcePropertyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Property name on the source Entity Type."
+      },
+      "targetPropertyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Property name on the target Entity Type."
+      },
+      "linkType": {
+        "type": {
+          "$ref": "#/285"
+        },
+        "flags": 0,
+        "description": "Link type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpdateAlways"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CopyIfNull"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/283"
+      },
+      {
+        "$ref": "#/284"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/282"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expiring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HumanIntervention"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/288"
+      },
+      {
+        "$ref": "#/289"
+      },
+      {
+        "$ref": "#/290"
+      },
+      {
+        "$ref": "#/291"
+      },
+      {
+        "$ref": "#/292"
+      },
+      {
+        "$ref": "#/293"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Upsert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/295"
+      },
+      {
+        "$ref": "#/296"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CustomerInsights/hubs/links@2017-04-26",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/268"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CustomerInsights/hubs/roleAssignments"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CustomerInsights/hubs/roleAssignments",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/299"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/300"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/302"
+        },
+        "flags": 0,
+        "description": "The Role Assignment definition."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleAssignment",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      },
+      "assignmentName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the metadata object."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/303"
+        },
+        "flags": 0,
+        "description": "Localized display names for the metadata."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/304"
+        },
+        "flags": 0,
+        "description": "Localized description for the metadata."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/311"
+        },
+        "flags": 2,
+        "description": "Provisioning state."
+      },
+      "role": {
+        "type": {
+          "$ref": "#/318"
+        },
+        "flags": 1,
+        "description": "Type of roles."
+      },
+      "principals": {
+        "type": {
+          "$ref": "#/321"
+        },
+        "flags": 1,
+        "description": "The principals being assigned to."
+      },
+      "profiles": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "Profiles set for the assignment."
+      },
+      "interactions": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "Interactions set for the assignment."
+      },
+      "links": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "Links set for the assignment."
+      },
+      "kpis": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "Kpis set for the assignment."
+      },
+      "sasPolicies": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "Sas Policies set for the assignment."
+      },
+      "connectors": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "Connectors set for the assignment."
+      },
+      "views": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "Views set for the assignment."
+      },
+      "relationshipLinks": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "The Role assignments set for the relationship links."
+      },
+      "relationships": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "The Role assignments set for the relationships."
+      },
+      "widgetTypes": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "Widget types set for the assignment."
+      },
+      "roleAssignments": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "The Role assignments set for the assignment."
+      },
+      "conflationPolicies": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "Widget types set for the assignment."
+      },
+      "segments": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "The Role assignments set for the assignment."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleAssignmentDisplayName",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleAssignmentDescription",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expiring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HumanIntervention"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/305"
+      },
+      {
+        "$ref": "#/306"
+      },
+      {
+        "$ref": "#/307"
+      },
+      {
+        "$ref": "#/308"
+      },
+      {
+        "$ref": "#/309"
+      },
+      {
+        "$ref": "#/310"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Admin"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reader"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManageAdmin"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManageReader"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataAdmin"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataReader"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/312"
+      },
+      {
+        "$ref": "#/313"
+      },
+      {
+        "$ref": "#/314"
+      },
+      {
+        "$ref": "#/315"
+      },
+      {
+        "$ref": "#/316"
+      },
+      {
+        "$ref": "#/317"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AssignmentPrincipal",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The principal id being assigned to."
+      },
+      "principalType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Type of the principal ID."
+      },
+      "principalMetadata": {
+        "type": {
+          "$ref": "#/320"
+        },
+        "flags": 0,
+        "description": "Other metadata for the principal."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AssignmentPrincipalMetadata",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/319"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceSetDescription",
+    "properties": {
+      "elements": {
+        "type": {
+          "$ref": "#/323"
+        },
+        "flags": 0,
+        "description": "The elements included in the set."
+      },
+      "exceptions": {
+        "type": {
+          "$ref": "#/324"
+        },
+        "flags": 0,
+        "description": "The elements that are not included in the set, in case elements contains '*' indicating 'all'."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CustomerInsights/hubs/roleAssignments@2017-04-26",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/301"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CustomerInsights/hubs/predictions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CustomerInsights/hubs/predictions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/259"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/326"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/327"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/329"
+        },
+        "flags": 0,
+        "description": "The prediction definition."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Prediction",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/330"
+        },
+        "flags": 0,
+        "description": "Description of the prediction."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/331"
+        },
+        "flags": 0,
+        "description": "Display name of the prediction."
+      },
+      "involvedInteractionTypes": {
+        "type": {
+          "$ref": "#/332"
+        },
+        "flags": 0,
+        "description": "Interaction types involved in the prediction."
+      },
+      "involvedKpiTypes": {
+        "type": {
+          "$ref": "#/333"
+        },
+        "flags": 0,
+        "description": "KPI types involved in the prediction."
+      },
+      "involvedRelationships": {
+        "type": {
+          "$ref": "#/334"
+        },
+        "flags": 0,
+        "description": "Relationships involved in the prediction."
+      },
+      "negativeOutcomeExpression": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Negative outcome expression."
+      },
+      "positiveOutcomeExpression": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Positive outcome expression."
+      },
+      "primaryProfileType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Primary profile type."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/341"
+        },
+        "flags": 2,
+        "description": "Provisioning state."
+      },
+      "predictionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the prediction."
+      },
+      "scopeExpression": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Scope expression."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      },
+      "autoAnalyze": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 1,
+        "description": "Whether do auto analyze."
+      },
+      "mappings": {
+        "type": {
+          "$ref": "#/342"
+        },
+        "flags": 1,
+        "description": "Definition of the link mapping of prediction."
+      },
+      "scoreLabel": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Score label."
+      },
+      "grades": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 0,
+        "description": "The prediction grades."
+      },
+      "systemGeneratedEntities": {
+        "type": {
+          "$ref": "#/345"
+        },
+        "flags": 2,
+        "description": "System generated entities."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionDescription",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionDisplayName",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expiring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HumanIntervention"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/335"
+      },
+      {
+        "$ref": "#/336"
+      },
+      {
+        "$ref": "#/337"
+      },
+      {
+        "$ref": "#/338"
+      },
+      {
+        "$ref": "#/339"
+      },
+      {
+        "$ref": "#/340"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionMappings",
+    "properties": {
+      "score": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The score of the link mapping."
+      },
+      "grade": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The grade of the link mapping."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The reason of the link mapping."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionGradesItem",
+    "properties": {
+      "gradeName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the grade."
+      },
+      "minScoreThreshold": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Minimum score threshold."
+      },
+      "maxScoreThreshold": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Maximum score threshold."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/343"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionSystemGeneratedEntities",
+    "properties": {
+      "generatedInteractionTypes": {
+        "type": {
+          "$ref": "#/346"
+        },
+        "flags": 0,
+        "description": "Generated interaction types."
+      },
+      "generatedLinks": {
+        "type": {
+          "$ref": "#/347"
+        },
+        "flags": 0,
+        "description": "Generated links."
+      },
+      "generatedKpis": {
+        "type": {
+          "$ref": "#/348"
+        },
+        "flags": 0,
+        "description": "Generated KPIs."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionSystemGeneratedEntitiesGeneratedKpis",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CustomerInsights/hubs/predictions@2017-04-26",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/328"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CustomerInsights/hubs/widgetTypes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CustomerInsights/hubs/widgetTypes",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/350"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/351"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/353"
+        },
+        "flags": 2,
+        "description": "Definition of WidgetType."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WidgetType",
+    "properties": {
+      "widgetTypeName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the widget type."
+      },
+      "definition": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Definition for widget type."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description for widget type."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/354"
+        },
+        "flags": 0,
+        "description": "Localized display name for the widget type."
+      },
+      "imageUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The image URL."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      },
+      "widgetVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The widget version."
+      },
+      "changed": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Date time when widget type was last modified."
+      },
+      "created": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Date time when widget type was created."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WidgetTypeDisplayName",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CustomerInsights/hubs/widgetTypes@2017-04-26",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/352"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/217"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getEnrichingKpis",
+    "resourceType": "Microsoft.CustomerInsights/hubs/profiles",
+    "apiVersion": "2017-04-26",
+    "output": {
+      "$ref": "#/356"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SuggestRelationshipLinksResponse",
+    "properties": {
+      "interactionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The interaction name."
+      },
+      "suggestedRelationships": {
+        "type": {
+          "$ref": "#/362"
+        },
+        "flags": 2,
+        "description": "Suggested relationships for the type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelationshipsLookup",
+    "properties": {
+      "profileName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The relationship profile."
+      },
+      "profilePropertyReferences": {
+        "type": {
+          "$ref": "#/360"
+        },
+        "flags": 2,
+        "description": "The property references for the profile type."
+      },
+      "relatedProfileName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The related profile."
+      },
+      "relatedProfilePropertyReferences": {
+        "type": {
+          "$ref": "#/361"
+        },
+        "flags": 2,
+        "description": "The property references for the related profile type."
+      },
+      "existingRelationshipName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of existing Relationship."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/124"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/124"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/359"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suggestRelationshipLinks",
+    "resourceType": "Microsoft.CustomerInsights/hubs/interactions",
+    "apiVersion": "2017-04-26",
+    "output": {
+      "$ref": "#/358"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.CustomerInsights/hubs/authorizationPolicies",
+    "apiVersion": "2017-04-26",
+    "output": {
+      "$ref": "#/139"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.CustomerInsights/hubs/authorizationPolicies",
+    "apiVersion": "2017-04-26",
+    "output": {
+      "$ref": "#/139"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reprocess",
+    "resourceType": "Microsoft.CustomerInsights/hubs/kpi",
+    "apiVersion": "2017-04-26"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionTrainingResults",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      },
+      "scoreName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Score name."
+      },
+      "predictionDistribution": {
+        "type": {
+          "$ref": "#/368"
+        },
+        "flags": 2,
+        "description": "Prediction distribution."
+      },
+      "canonicalProfiles": {
+        "type": {
+          "$ref": "#/379"
+        },
+        "flags": 2,
+        "description": "Canonical profiles."
+      },
+      "primaryProfileInstanceCount": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Instance count of the primary profile."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionDistributionDefinition",
+    "properties": {
+      "totalPositives": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Total positive in the distribution."
+      },
+      "totalNegatives": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Total negatives in the distribution."
+      },
+      "distributions": {
+        "type": {
+          "$ref": "#/370"
+        },
+        "flags": 0,
+        "description": "Distributions of the prediction."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionDistributionDefinitionDistributionsItem",
+    "properties": {
+      "scoreThreshold": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Score threshold."
+      },
+      "positives": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Number of positives."
+      },
+      "negatives": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Number of negatives."
+      },
+      "positivesAboveThreshold": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Number of positives above threshold."
+      },
+      "negativesAboveThreshold": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Number of negatives above threshold."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/369"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CanonicalProfileDefinition",
+    "properties": {
+      "canonicalProfileId": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Canonical profile ID."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/378"
+        },
+        "flags": 0,
+        "description": "Properties of the canonical profile."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CanonicalProfileDefinitionPropertiesItem",
+    "properties": {
+      "profileName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Profile name."
+      },
+      "profilePropertyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Property name of profile."
+      },
+      "rank": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The rank."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/377"
+        },
+        "flags": 0,
+        "description": "Type of canonical property value."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Value of the canonical property."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Numeric"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Categorical"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DerivedCategorical"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DerivedNumeric"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/373"
+      },
+      {
+        "$ref": "#/374"
+      },
+      {
+        "$ref": "#/375"
+      },
+      {
+        "$ref": "#/376"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/372"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/371"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getTrainingResults",
+    "resourceType": "Microsoft.CustomerInsights/hubs/predictions",
+    "apiVersion": "2017-04-26",
+    "output": {
+      "$ref": "#/367"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionModelStatus",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hub name."
+      },
+      "predictionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The prediction name."
+      },
+      "predictionGuidId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The prediction GUID ID."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/400"
+        },
+        "flags": 1,
+        "description": "Prediction model life cycle.  When prediction is in PendingModelConfirmation status, it is allowed to update the status to PendingFeaturing or Active through API."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The model status message."
+      },
+      "trainingSetCount": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Count of the training set."
+      },
+      "testSetCount": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Count of the test set."
+      },
+      "validationSetCount": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Count of the validation set."
+      },
+      "trainingAccuracy": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The training accuracy."
+      },
+      "signalsUsed": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The signals used."
+      },
+      "modelVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Version of the model."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "New"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProvisioningFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingDiscovering"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Discovering"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingFeaturing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Featuring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FeaturingFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingTraining"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Training"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrainingFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Evaluating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EvaluatingFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingModelConfirmation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HumanIntervention"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/382"
+      },
+      {
+        "$ref": "#/383"
+      },
+      {
+        "$ref": "#/384"
+      },
+      {
+        "$ref": "#/385"
+      },
+      {
+        "$ref": "#/386"
+      },
+      {
+        "$ref": "#/387"
+      },
+      {
+        "$ref": "#/388"
+      },
+      {
+        "$ref": "#/389"
+      },
+      {
+        "$ref": "#/390"
+      },
+      {
+        "$ref": "#/391"
+      },
+      {
+        "$ref": "#/392"
+      },
+      {
+        "$ref": "#/393"
+      },
+      {
+        "$ref": "#/394"
+      },
+      {
+        "$ref": "#/395"
+      },
+      {
+        "$ref": "#/396"
+      },
+      {
+        "$ref": "#/397"
+      },
+      {
+        "$ref": "#/398"
+      },
+      {
+        "$ref": "#/399"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getModelStatus",
+    "resourceType": "Microsoft.CustomerInsights/hubs/predictions",
+    "apiVersion": "2017-04-26",
+    "output": {
+      "$ref": "#/381"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "modelStatus",
+    "resourceType": "Microsoft.CustomerInsights/hubs/predictions",
+    "apiVersion": "2017-04-26",
+    "input": {
+      "$ref": "#/381"
+    }
+  }
+]

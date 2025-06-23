@@ -1,0 +1,536 @@
+[
+  {
+    "$type": "StringLiteralType",
+    "value": "current"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Security/advancedThreatProtectionSettings"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Security/advancedThreatProtectionSettings",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The Advanced Threat Protection settings."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdvancedThreatProtectionProperties",
+    "properties": {
+      "isEnabled": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Indicates whether Advanced Threat Protection is enabled."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Security/advancedThreatProtectionSettings@2019-01-01",
+    "scopeType": 0,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MCAS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WDATP"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Security/settings"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-01"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Microsoft.Security/settings",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      }
+    },
+    "elements": {
+      "DataExportSettings": {
+        "$ref": "#/14"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataExportSettings",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Data export setting data"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 1,
+        "description": "the kind of the settings string (DataExportSettings)"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataExportSettingProperties",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "Is the data export setting is enabled"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataExportSettings"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Security/settings@2019-01-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/13"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Security/locations/alerts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Security/locations/alerts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "describes security alert properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertProperties",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "State of the alert (Active, Dismissed etc.)"
+      },
+      "reportedTimeUtc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time the incident was reported to Microsoft.Security in UTC"
+      },
+      "vendorName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the vendor that discovered the incident"
+      },
+      "alertName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the alert type"
+      },
+      "alertDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display name of the alert type"
+      },
+      "detectedTimeUtc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time the incident was detected by the vendor"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Description of the incident and what it means"
+      },
+      "remediationSteps": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Recommended steps to reradiate the incident"
+      },
+      "actionTaken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The action that was taken as a response to the alert (Active, Blocked etc.)"
+      },
+      "reportedSeverity": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "Estimated severity of this alert"
+      },
+      "compromisedEntity": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The entity that the incident happened on"
+      },
+      "associatedResource": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Azure resource ID of the associated resource"
+      },
+      "extendedProperties": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Changing set of properties depending on the alert type."
+      },
+      "systemSource": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the alerted resource (Azure, Non-Azure)"
+      },
+      "canBeInvestigated": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Whether this alert can be investigated with Azure Security Center"
+      },
+      "isIncident": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Whether this alert is for incident type or not (otherwise - single alert)"
+      },
+      "entities": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "objects that are related to this alerts"
+      },
+      "confidenceScore": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "level of confidence we have on the alert"
+      },
+      "confidenceReasons": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "reasons the alert got the confidenceScore value"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Azure subscription ID of the resource that had the security alert or the subscription ID of the workspace that this resource reports to"
+      },
+      "instanceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Instance ID of the alert."
+      },
+      "workspaceArmId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Azure resource ID of the workspace that the alert was reported to."
+      },
+      "correlationKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Alerts with the same CorrelationKey will be grouped together in Ibiza."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Informational"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Low"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Medium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertExtendedProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertEntity",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Type of entity"
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertConfidenceReason",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Type of confidence factor"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "description of the confidence reason"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/32"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Security/locations/alerts@2019-01-01",
+    "scopeType": 12,
+    "body": {
+      "$ref": "#/20"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "dismiss",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2019-01-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reactivate",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2019-01-01"
+  }
+]

@@ -1,0 +1,1054 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataLakeStore/accounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataLakeStore/accounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The resource tags."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The Key Vault encryption identity, if any."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The Data Lake Store account properties to use for creating."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateDataLakeStoreAccountParametersTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionIdentity",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "The type of encryption being used. Currently the only supported type is 'SystemAssigned'."
+      },
+      "principalId": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "The principal identifier associated with the encryption."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "The tenant identifier associated with the encryption."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateDataLakeStoreAccountPropertiesOrDataLakeStoreAccountProperties",
+    "properties": {
+      "defaultGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The default owner group for all new folders and files created in the Data Lake Store account."
+      },
+      "encryptionConfig": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The Key Vault encryption configuration."
+      },
+      "encryptionState": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The current state of encryption for this Data Lake Store account."
+      },
+      "firewallRules": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The list of firewall rules associated with this Data Lake Store account."
+      },
+      "virtualNetworkRules": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "The list of virtual network rules associated with this Data Lake Store account."
+      },
+      "firewallState": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "The current state of the IP address firewall for this Data Lake Store account."
+      },
+      "firewallAllowAzureIps": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced."
+      },
+      "trustedIdProviders": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The list of trusted identity providers associated with this Data Lake Store account."
+      },
+      "trustedIdProviderState": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "The current state of the trusted identity provider feature for this Data Lake Store account."
+      },
+      "newTier": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "The commitment tier to use for next month."
+      },
+      "encryptionProvisioningState": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 2,
+        "description": "The current state of encryption provisioning for this Data Lake Store account."
+      },
+      "currentTier": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "The commitment tier in use for the current month."
+      },
+      "accountId": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "The unique identifier associated with this Data Lake Store account."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 2,
+        "description": "The provisioning status of the Data Lake Store account."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 2,
+        "description": "The state of the Data Lake Store account."
+      },
+      "creationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The account creation time."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The account last modified time."
+      },
+      "endpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The full CName endpoint for this account."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionConfig",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 1,
+        "description": "The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'."
+      },
+      "keyVaultMetaInfo": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "The Key Vault information for connecting to user managed encryption keys."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserManaged"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServiceManaged"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyVaultMetaInfo",
+    "properties": {
+      "keyVaultResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource identifier for the user managed Key Vault being used to encrypt."
+      },
+      "encryptionKeyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the user managed encryption key."
+      },
+      "encryptionKeyVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The version of the user managed encryption key."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateFirewallRuleWithAccountParametersOrFirewallRule",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The unique name of the firewall rule to create."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 1,
+        "description": "The firewall rule properties to use when creating a new firewall rule."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource identifier."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateOrUpdateFirewallRulePropertiesOrFirewallRuleProperties",
+    "properties": {
+      "startIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
+      },
+      "endIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateVirtualNetworkRuleWithAccountParametersOrVirtualNetworkRule",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The unique name of the virtual network rule to create."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 1,
+        "description": "The virtual network rule properties to use when creating a new virtual network rule."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource identifier."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateOrUpdateVirtualNetworkRulePropertiesOrVirtualNetworkRuleProperties",
+    "properties": {
+      "subnetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource identifier for the subnet."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/20"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateTrustedIdProviderWithAccountParametersOrTrustedIdProvider",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The unique name of the trusted identity provider to create."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 1,
+        "description": "The trusted identity provider properties to use when creating a new trusted identity provider."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource identifier."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateOrUpdateTrustedIdProviderPropertiesOrTrustedIdProviderProperties",
+    "properties": {
+      "idProvider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The URL of this trusted identity provider."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Consumption"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commitment_1TB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commitment_10TB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commitment_100TB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commitment_500TB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commitment_1PB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commitment_5PB"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Consumption"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commitment_1TB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commitment_10TB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commitment_100TB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commitment_500TB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commitment_1PB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commitment_5PB"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Patching"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resuming"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Undeleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspended"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataLakeStore/accounts@2016-11-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataLakeStore/accounts/firewallRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataLakeStore/accounts/firewallRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 1,
+        "description": "The firewall rule properties to use when creating a new firewall rule."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataLakeStore/accounts/firewallRules@2016-11-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/72"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataLakeStore/accounts/virtualNetworkRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataLakeStore/accounts/virtualNetworkRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 1,
+        "description": "The virtual network rule properties to use when creating a new virtual network rule."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataLakeStore/accounts/virtualNetworkRules@2016-11-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/76"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataLakeStore/accounts/trustedIdProviders"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataLakeStore/accounts/trustedIdProviders",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 1,
+        "description": "The trusted identity provider properties to use when creating a new trusted identity provider."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataLakeStore/accounts/trustedIdProviders@2016-11-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/80"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableKeyVault",
+    "resourceType": "Microsoft.DataLakeStore/accounts",
+    "apiVersion": "2016-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Data Lake Store name to check availability for."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 1,
+        "description": "The resource type. Note: This should not be set by the user, as the constant value is Microsoft.DataLakeStore/accounts"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataLakeStore/accounts"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityInformation",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 2,
+        "description": "The Boolean value of true or false to indicate whether the Data Lake Store account name is available or not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The reason why the Data Lake Store account name is not available, if nameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The message describing why the Data Lake Store account name is not available, if nameAvailable is false."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DataLakeStore/locations",
+    "apiVersion": "2016-11-01",
+    "output": {
+      "$ref": "#/86"
+    },
+    "input": {
+      "$ref": "#/83"
+    }
+  }
+]

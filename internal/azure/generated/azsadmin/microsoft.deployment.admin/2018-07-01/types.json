@@ -1,0 +1,282 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Deployment.Admin/locations/fileContainers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-07-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Deployment.Admin/locations/fileContainers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Specifies the file container body"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileContainerBodyOrFileContainerAdminProperties",
+    "properties": {
+      "postCopyAction": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Specifies the file post copy action."
+      },
+      "sourceUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies The remote file location."
+      },
+      "fileContainerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "File container resource identifier containing product manifest."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The file or container Uri. This is read-only property; a user cannot set it."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "The error response message."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unzip"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorInfo",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error message."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The detailed error messages."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Deployment.Admin/locations/fileContainers@2018-07-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Deployment.Admin/locations/productPackages"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-07-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Deployment.Admin/locations/productPackages",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Specifies the product package"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductPackageBodyOrProductPackageProperties",
+    "properties": {
+      "fileContainerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the file container."
+      },
+      "isDeployable": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Value indicating whether the package is applicable for deployment."
+      },
+      "isUpdatable": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Value indicating whether the package is applicable for update."
+      },
+      "productDeploymentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The identifier of product deployment; null if this version is not installed."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Deployment.Admin/locations/productPackages@2018-07-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/13"
+    },
+    "flags": 0
+  }
+]

@@ -1,0 +1,1835 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 64
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Solutions/applications"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-03-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Solutions/applications",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "The managed application properties."
+      },
+      "plan": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "The plan information."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 1,
+        "description": "The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "The identity of the resource."
+      },
+      "managedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ID of the resource that manages this resource."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "The SKU of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationProperties",
+    "properties": {
+      "managedResourceGroupId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The managed resource group Id."
+      },
+      "applicationDefinitionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The fully qualified path of managed application definition Id."
+      },
+      "publisherPackageId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The publisher package Id."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string."
+      },
+      "outputs": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Name and value pairs that define the managed application outputs."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The managed application provisioning state."
+      },
+      "billingDetails": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "The managed application billing details."
+      },
+      "jitAccessPolicy": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The managed application Jit access policy."
+      },
+      "publisherTenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The publisher tenant Id."
+      },
+      "authorizations": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "The  read-only authorizations property that is retrieved from the application package."
+      },
+      "customerSupport": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "The read-only customer support property that is retrieved from the application package."
+      },
+      "supportUrls": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "The read-only support URLs property that is retrieved from the application package."
+      },
+      "artifacts": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "The collection of managed application artifacts."
+      },
+      "createdBy": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2,
+        "description": "The client entity that created the JIT request."
+      },
+      "updatedBy": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2,
+        "description": "The client entity that last updated the JIT request."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationBillingDetailsDefinition",
+    "properties": {
+      "resourceUsageId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The managed application resource usage Id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationJitAccessPolicy",
+    "properties": {
+      "jitAccessEnabled": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 1,
+        "description": "Whether the JIT access is enabled."
+      },
+      "jitApprovalMode": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "JIT approval mode."
+      },
+      "jitApprovers": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The JIT approvers"
+      },
+      "maximumJitAccessDuration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The maximum duration JIT access is granted. This is an ISO8601 time period value."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AutoApprove"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManualApprove"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitApproverDefinition",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The approver service principal Id."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The approver type."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The approver display name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "user"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "group"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationAuthorization",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources."
+      },
+      "roleDefinitionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The provider's role definition identifier. This role will define all the permissions that the provider must have on the managed application's container resource group. This role definition cannot have permission to delete the resource group."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/32"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationPackageContact",
+    "properties": {
+      "contactName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The contact name."
+      },
+      "email": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The contact email."
+      },
+      "phone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The contact phone number."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationPackageSupportUrls",
+    "properties": {
+      "publicAzure": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The public azure support URL."
+      },
+      "governmentCloud": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The government cloud support URL."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationArtifact",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "The managed application artifact name."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The managed application artifact blob uri."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 1,
+        "description": "The managed application artifact type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ViewDefinition"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Authorizations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomRoleDefinition"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Template"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Custom"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/36"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationClientDetails",
+    "properties": {
+      "oid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The client Oid."
+      },
+      "puid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The client Puid"
+      },
+      "applicationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The client application Id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Plan",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The plan name."
+      },
+      "publisher": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The publisher ID."
+      },
+      "product": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The product code."
+      },
+      "promotionCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The promotion code."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The plan's version."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^[-\\w\\._,\\(\\)]+$"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Identity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The principal ID of resource identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The tenant ID of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "The identity type."
+      },
+      "userAssignedIdentities": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned, UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserAssignedResourceIdentity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The principal id of user assigned identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The tenant id of user assigned identity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IdentityUserAssignedIdentities",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Sku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The SKU name."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The SKU tier."
+      },
+      "size": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The SKU size."
+      },
+      "family": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The SKU family."
+      },
+      "model": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The SKU model."
+      },
+      "capacity": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "The SKU capacity."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Solutions/applications@2018-03-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Solutions/applicationDefinitions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-03-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Solutions/applicationDefinitions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 1,
+        "description": "The managed application definition properties."
+      },
+      "managedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ID of the resource that manages this resource."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "The SKU of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationDefinitionProperties",
+    "properties": {
+      "lockLevel": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 1,
+        "description": "The managed application lock level."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The managed application definition display name."
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "A value indicating whether the package is enabled or not."
+      },
+      "authorizations": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "The managed application provider authorizations."
+      },
+      "artifacts": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The managed application definition description."
+      },
+      "packageFileUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The managed application definition package file Uri. Use this element"
+      },
+      "mainTemplate": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string."
+      },
+      "createUiDefinition": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string."
+      },
+      "policies": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "The managed application provider policies."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CanNotDelete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/32"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationDefinitionArtifact",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 1,
+        "description": "The managed application definition artifact name."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The managed application definition artifact blob uri."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 1,
+        "description": "The managed application definition artifact type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ApplicationResourceTemplate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CreateUiDefinition"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MainTemplateParameters"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Template"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Custom"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/71"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationPolicy",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy name"
+      },
+      "policyDefinitionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy definition Id."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy parameters."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/82"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Solutions/applicationDefinitions@2018-03-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/64"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Solutions/jitRequests"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-03-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Solutions/jitRequests",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 0,
+        "description": "The JIT request properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/119"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitRequestProperties",
+    "properties": {
+      "applicationResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The parent application id."
+      },
+      "publisherTenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The publisher tenant id."
+      },
+      "jitAuthorizationPolicies": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 1,
+        "description": "The JIT authorization policies."
+      },
+      "jitSchedulingPolicy": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 1,
+        "description": "The JIT request properties."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 2,
+        "description": "The JIT request provisioning state."
+      },
+      "jitRequestState": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 2,
+        "description": "The JIT request state."
+      },
+      "createdBy": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2,
+        "description": "The client entity that created the JIT request."
+      },
+      "updatedBy": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2,
+        "description": "The client entity that last updated the JIT request."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitAuthorizationPolicies",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The the principal id that will be granted JIT access."
+      },
+      "roleDefinitionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The role definition id that will be granted to the Principal."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/90"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitSchedulingPolicy",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 1,
+        "description": "The type of JIT schedule."
+      },
+      "duration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The required duration of the JIT request."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The start time of the request."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Once"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Recurring"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/107"
+      },
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Denied"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Timeout"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Solutions/jitRequests@2018-03-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/88"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshPermissions",
+    "resourceType": "Microsoft.Solutions/applications",
+    "apiVersion": "2018-03-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAccessDefinition",
+    "properties": {
+      "approver": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The approver name."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 1,
+        "description": "The JIT request metadata."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 1,
+        "description": "The JIT status."
+      },
+      "subStatus": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 1,
+        "description": "The JIT status."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitRequestMetadata",
+    "properties": {
+      "originRequestId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The origin request id."
+      },
+      "requestorId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The requestor id."
+      },
+      "tenantDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The publisher's tenant name."
+      },
+      "subjectDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The subject display name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Elevate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Remove"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Denied"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Timeout"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/133"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAccess",
+    "resourceType": "Microsoft.Solutions/applications",
+    "apiVersion": "2018-03-01",
+    "input": {
+      "$ref": "#/122"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ListTokenRequest",
+    "properties": {
+      "authorizationAudience": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The authorization audience."
+      },
+      "userAssignedIdentities": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 0,
+        "description": "The user assigned identities."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedIdentityTokenResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 0,
+        "description": "The array of managed identity tokens."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedIdentityToken",
+    "properties": {
+      "accessToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The requested access token."
+      },
+      "expiresIn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The number of seconds the access token will be valid."
+      },
+      "expiresOn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timespan when the access token expires. This is represented as the number of seconds from epoch."
+      },
+      "notBefore": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timespan when the access token takes effect. This is represented as the number of seconds from epoch."
+      },
+      "authorizationAudience": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The aud (audience) the access token was request for. This is the same as what was provided in the listTokens request."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Azure resource ID for the issued token. This is either the managed application ID or the user-assigned identity ID."
+      },
+      "tokenType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The type of the token."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/139"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listTokens",
+    "resourceType": "Microsoft.Solutions/applications",
+    "apiVersion": "2018-03-01",
+    "output": {
+      "$ref": "#/138"
+    },
+    "input": {
+      "$ref": "#/136"
+    }
+  }
+]

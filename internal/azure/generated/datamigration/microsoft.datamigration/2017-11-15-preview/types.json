@@ -1,0 +1,2502 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataMigration/services"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-11-15-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataMigration/services",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "HTTP strong entity tag value. Ignored if submitted"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource kind. Only 'vm' (the default) is supported."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Custom service properties"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Service SKU"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataMigrationServiceProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "The resource's provisioning state"
+      },
+      "publicKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The public key of the service, used to encrypt secrets sent to the service"
+      },
+      "virtualSubnetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deploying"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Starting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FailedToStart"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FailedToStop"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceSku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The unique name of the SKU, such as 'P3'"
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The tier of the SKU, such as 'Free', 'Basic', 'Standard', or 'Premium'"
+      },
+      "family": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The SKU family, used when the service has multiple performance classes within a tier, such as 'A', 'D', etc. for virtual machines"
+      },
+      "size": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The size of the SKU, used when the name alone does not denote a service size or when a SKU has multiple performance classes within a family, e.g. 'A1' for virtual machines"
+      },
+      "capacity": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "The capacity of the SKU, if it supports scaling"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataMigration/services@2017-11-15-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataMigration/services/projects/tasks"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-11-15-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataMigration/services/projects/tasks",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "HTTP strong entity tag value. This is ignored if submitted."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Custom task properties"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ProjectTaskProperties",
+    "discriminator": "taskType",
+    "baseProperties": {
+      "errors": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "Array of errors. This is ignored if submitted."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "The state of the task. This is ignored if submitted."
+      }
+    },
+    "elements": {
+      "ConnectToSource.SqlServer": {
+        "$ref": "#/36"
+      },
+      "ConnectToTarget.SqlDb": {
+        "$ref": "#/84"
+      },
+      "GetUserTables.Sql": {
+        "$ref": "#/89"
+      },
+      "Migrate.SqlServer.SqlDb": {
+        "$ref": "#/96"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ODataError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The machine-readable description of the error, such as 'InvalidRequest' or 'InternalServerError'"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The human-readable description of the error"
+      },
+      "details": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Inner errors that caused this error"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/24"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/24"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Queued"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FailedInputValidation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Faulted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectToSourceSqlServerTaskProperties",
+    "properties": {
+      "input": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Task input"
+      },
+      "output": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 2,
+        "description": "Task output. This is ignored if submitted."
+      },
+      "taskType": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 1,
+        "description": "Task type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectToSourceSqlServerTaskInput",
+    "properties": {
+      "sourceConnectionInfo": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 1,
+        "description": "Connection information for Source SQL Server"
+      },
+      "checkPermissionsGroup": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "Permission group for validations"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlConnectionInfo",
+    "properties": {
+      "dataSource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Data source in the format Protocol:MachineName\\SQLServerInstanceName,PortNumber"
+      },
+      "authentication": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Authentication type to use for connection"
+      },
+      "encryptConnection": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Whether to encrypt the connection"
+      },
+      "additionalSettings": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Additional connection settings"
+      },
+      "trustServerCertificate": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Whether to trust the server certificate"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Type of connection info"
+      },
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "User name"
+      },
+      "password": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Password credential."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WindowsAuthentication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SqlAuthentication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActiveDirectoryIntegrated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActiveDirectoryPassword"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MigrationFromSqlServerToAzureDB"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      }
+    ]
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ConnectToSourceSqlServerTaskOutput",
+    "discriminator": "resultType",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Result identifier"
+      }
+    },
+    "elements": {
+      "DatabaseLevelOutput": {
+        "$ref": "#/50"
+      },
+      "TaskLevelOutput": {
+        "$ref": "#/78"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectToSourceSqlServerTaskOutputDatabaseLevel",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Database name"
+      },
+      "sizeMB": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Size of the file in megabytes"
+      },
+      "databaseFiles": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 2,
+        "description": "The list of database files"
+      },
+      "compatibilityLevel": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 2,
+        "description": "SQL Server compatibility level of database"
+      },
+      "databaseState": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 2,
+        "description": "State of the database"
+      },
+      "resultType": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 1,
+        "description": "Type of result - database level or task level"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseFileInfo",
+    "properties": {
+      "databaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the database"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Unique identifier for database file"
+      },
+      "logicalName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Logical name of the file"
+      },
+      "physicalFullName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Operating-system full path of the file"
+      },
+      "restoreFullName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Suggested full path of the file for restoring"
+      },
+      "fileType": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Database file type"
+      },
+      "sizeMB": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Size of the file in megabytes"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Log"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Filestream"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Fulltext"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/51"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompatLevel80"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompatLevel90"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompatLevel100"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompatLevel110"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompatLevel120"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompatLevel130"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompatLevel140"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Online"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Restoring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Recovering"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RecoveryPending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspect"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Emergency"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Offline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Copying"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OfflineSecondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DatabaseLevelOutput"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectToSourceSqlServerTaskOutputTaskLevel",
+    "properties": {
+      "databases": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Source databases as a map from database name to database id"
+      },
+      "sourceServerVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Source server version"
+      },
+      "sourceServerBrandVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Source server brand version"
+      },
+      "validationErrors": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 2,
+        "description": "Validation errors"
+      },
+      "resultType": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 1,
+        "description": "Type of result - database level or task level"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReportableException",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Error message"
+      },
+      "filePath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The path to the file where exception occurred"
+      },
+      "lineNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The line number where exception occurred"
+      },
+      "hResult": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Coded numerical value that is assigned to a specific exception"
+      },
+      "stackTrace": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Stack trace"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/79"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TaskLevelOutput"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ConnectToSource.SqlServer"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectToTargetSqlDbTaskProperties",
+    "properties": {
+      "input": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0,
+        "description": "Task input"
+      },
+      "output": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 2,
+        "description": "Task output. This is ignored if submitted."
+      },
+      "taskType": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 1,
+        "description": "Task type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectToTargetSqlDbTaskInput",
+    "properties": {
+      "targetConnectionInfo": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 1,
+        "description": "Connection information for target SQL DB"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectToTargetSqlDbTaskOutput",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Result identifier"
+      },
+      "databases": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Source databases as a map from database name to database id"
+      },
+      "targetServerVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Version of the target server"
+      },
+      "targetServerBrandVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Target server brand version"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ConnectToTarget.SqlDb"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetUserTablesSqlTaskProperties",
+    "properties": {
+      "input": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "Task input"
+      },
+      "output": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 2,
+        "description": "Task output. This is ignored if submitted."
+      },
+      "taskType": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 1,
+        "description": "Task type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetUserTablesSqlTaskInput",
+    "properties": {
+      "connectionInfo": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 1,
+        "description": "Connection information for SQL Server"
+      },
+      "selectedDatabases": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 1,
+        "description": "List of database names to collect tables for"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetUserTablesSqlTaskOutput",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Result identifier"
+      },
+      "databasesToTables": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Mapping from database name to list of tables"
+      },
+      "validationErrors": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 2,
+        "description": "Validation errors"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/79"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GetUserTables.Sql"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrateSqlServerSqlDbTaskProperties",
+    "properties": {
+      "input": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Task input"
+      },
+      "output": {
+        "type": {
+          "$ref": "#/148"
+        },
+        "flags": 2,
+        "description": "Task output. This is ignored if submitted."
+      },
+      "taskType": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 1,
+        "description": "Task type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrateSqlServerSqlDbTaskInput",
+    "properties": {
+      "selectedDatabases": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 1,
+        "description": "Databases to migrate"
+      },
+      "validationOptions": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0,
+        "description": "Options for enabling various post migration validations. Available options, \n 1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data. \n 2.) Schema Validation: Performs a thorough schema comparison between the source and target tables and provides a list of differences between the source and target database, 3.) Query Analysis: Executes a set of queries picked up automatically either from the Query Plan Cache or Query Store and execute them and compares the execution time between the source and target database."
+      },
+      "sourceConnectionInfo": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 1,
+        "description": "Information for connecting to source"
+      },
+      "targetConnectionInfo": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 1,
+        "description": "Information for connecting to target"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrateSqlServerSqlDbDatabaseInput",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the database"
+      },
+      "targetDatabaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of target database. Note: Target database will be truncated before starting migration."
+      },
+      "makeSourceDbReadOnly": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Whether to set database read only before migration"
+      },
+      "tableMap": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "Mapping of source to target tables"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrateSqlServerSqlDbDatabaseInputTableMap",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/98"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationValidationOptions",
+    "properties": {
+      "enableSchemaValidation": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Allows to compare the schema information between source and target."
+      },
+      "enableDataIntegrityValidation": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Allows to perform a checksum based data integrity validation between source and target for the selected database / tables ."
+      },
+      "enableQueryAnalysisValidation": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Allows to perform a quick and intelligent query analysis by retrieving queries from the source database and executes them in the target. The result will have execution statistics for executions in source and target databases for the extracted queries."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "MigrateSqlServerSqlDbTaskOutput",
+    "discriminator": "resultType",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Result identifier"
+      }
+    },
+    "elements": {
+      "DatabaseLevelOutput": {
+        "$ref": "#/103"
+      },
+      "ErrorOutput": {
+        "$ref": "#/121"
+      },
+      "MigrationLevelOutput": {
+        "$ref": "#/123"
+      },
+      "TableLevelOutput": {
+        "$ref": "#/138"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrateSqlServerSqlDbTaskOutputDatabaseLevel",
+    "properties": {
+      "databaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the item"
+      },
+      "startedOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Migration start time"
+      },
+      "endedOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Migration end time"
+      },
+      "state": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 2,
+        "description": "Current state of migration"
+      },
+      "stage": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 2,
+        "description": "Migration stage that this database is in"
+      },
+      "statusMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Status message"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Migration progress message"
+      },
+      "numberOfObjects": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Number of objects"
+      },
+      "numberOfObjectsCompleted": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Number of successfully completed objects"
+      },
+      "errorCount": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Number of database/object errors."
+      },
+      "errorPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Wildcard string prefix to use for querying all errors of the item"
+      },
+      "resultPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Wildcard string prefix to use for querying all sub-tem results of the item"
+      },
+      "exceptionsAndWarnings": {
+        "type": {
+          "$ref": "#/119"
+        },
+        "flags": 2,
+        "description": "Migration exceptions and warnings."
+      },
+      "objectSummary": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Summary of object results in the migration"
+      },
+      "resultType": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 1,
+        "description": "Result type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Skipped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/107"
+      },
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Initialize"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Backup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileCopy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Restore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/79"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DatabaseLevelOutput"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrateSqlServerSqlDbTaskOutputError",
+    "properties": {
+      "error": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 2,
+        "description": "Migration error"
+      },
+      "resultType": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 1,
+        "description": "Result type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorOutput"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrateSqlServerSqlDbTaskOutputMigrationLevel",
+    "properties": {
+      "startedOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Migration start time"
+      },
+      "endedOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Migration end time"
+      },
+      "durationInSeconds": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Duration of task execution in seconds."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 2,
+        "description": "Current status of migration"
+      },
+      "statusMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Migration status message"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Migration progress message"
+      },
+      "databases": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Selected databases as a map from database name to database id"
+      },
+      "databaseSummary": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Summary of database results in the migration"
+      },
+      "migrationReportResult": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 0,
+        "description": "Migration Report Result, provides unique url for downloading your migration report."
+      },
+      "sourceServerVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Source server version"
+      },
+      "sourceServerBrandVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Source server brand version"
+      },
+      "targetServerVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Target server version"
+      },
+      "targetServerBrandVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Target server brand version"
+      },
+      "exceptionsAndWarnings": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 2,
+        "description": "Migration exceptions and warnings."
+      },
+      "resultType": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 1,
+        "description": "Result type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connecting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SourceAndTargetSelected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SelectLogins"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Configured"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompletedWithWarnings"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/127"
+      },
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/133"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationReportResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Migration validation result identifier"
+      },
+      "reportUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The url of the report."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/79"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MigrationLevelOutput"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrateSqlServerSqlDbTaskOutputTableLevel",
+    "properties": {
+      "objectName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the item"
+      },
+      "startedOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Migration start time"
+      },
+      "endedOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Migration end time"
+      },
+      "state": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 2,
+        "description": "Current state of migration"
+      },
+      "statusMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Status message"
+      },
+      "itemsCount": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Number of items"
+      },
+      "itemsCompletedCount": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Number of successfully completed items"
+      },
+      "errorPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Wildcard string prefix to use for querying all errors of the item"
+      },
+      "resultPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Wildcard string prefix to use for querying all sub-tem results of the item"
+      },
+      "resultType": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 1,
+        "description": "Result type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Skipped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/142"
+      },
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TableLevelOutput"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/102"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Migrate.SqlServer.SqlDb"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataMigration/services/projects/tasks@2017-11-15-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/22"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataMigration/services/projects"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-11-15-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataMigration/services/projects",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 0,
+        "description": "Project properties"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/175"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProjectProperties",
+    "properties": {
+      "sourcePlatform": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 1,
+        "description": "Source platform for the project"
+      },
+      "targetPlatform": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 1,
+        "description": "Target platform for the project"
+      },
+      "creationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "UTC Date and time when project was created"
+      },
+      "sourceConnectionInfo": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 0,
+        "description": "Information for connecting to source"
+      },
+      "targetConnectionInfo": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 0,
+        "description": "Information for connecting to target"
+      },
+      "databasesInfo": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 0,
+        "description": "List of DatabaseInfo"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 2,
+        "description": "The project's provisioning state"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQL"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLDB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/159"
+      }
+    ]
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ConnectionInfo",
+    "discriminator": "type",
+    "baseProperties": {
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "User name"
+      },
+      "password": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Password credential."
+      }
+    },
+    "elements": {
+      "SqlConnectionInfo": {
+        "$ref": "#/162"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlConnectionInfo",
+    "properties": {
+      "dataSource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Data source in the format Protocol:MachineName\\SQLServerInstanceName,PortNumber"
+      },
+      "authentication": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 0,
+        "description": "Authentication type to use for connection"
+      },
+      "encryptConnection": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Whether to encrypt the connection"
+      },
+      "additionalSettings": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Additional connection settings"
+      },
+      "trustServerCertificate": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Whether to trust the server certificate"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/169"
+        },
+        "flags": 1,
+        "description": "Type of connection info"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WindowsAuthentication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SqlAuthentication"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActiveDirectoryIntegrated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActiveDirectoryPassword"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
+      },
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SqlConnectionInfo"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseInfo",
+    "properties": {
+      "sourceDatabaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the database"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/170"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/173"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataMigration/services/projects@2017-11-15-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/153"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataMigrationServiceStatusResponse",
+    "properties": {
+      "agentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The DMS instance agent version"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The machine-readable status, such as 'Initializing', 'Offline', 'Online', 'Deploying', 'Deleting', 'Stopped', 'Stopping', 'Starting', 'FailedToStart', 'FailedToStop' or 'Failed'"
+      },
+      "vmSize": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The services virtual machine size, such as 'Standard_D2_v2'"
+      },
+      "supportedTaskTypes": {
+        "type": {
+          "$ref": "#/178"
+        },
+        "flags": 0,
+        "description": "The list of supported task types"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkStatus",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2017-11-15-preview",
+    "output": {
+      "$ref": "#/177"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2017-11-15-preview"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2017-11-15-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The proposed resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type chain (e.g. virtualMachines/extensions)"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "If true, the name is valid and available. If false, 'reason' describes why not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/186"
+        },
+        "flags": 0,
+        "description": "The reason why the name is not available, if nameAvailable is false"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The localized reason why the name is not available, if nameAvailable is false"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/184"
+      },
+      {
+        "$ref": "#/185"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2017-11-15-preview",
+    "output": {
+      "$ref": "#/183"
+    },
+    "input": {
+      "$ref": "#/182"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DataMigration/locations",
+    "apiVersion": "2017-11-15-preview",
+    "output": {
+      "$ref": "#/183"
+    },
+    "input": {
+      "$ref": "#/182"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProjectTask",
+    "properties": {
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "HTTP strong entity tag value. This is ignored if submitted."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Custom task properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DataMigration/services/projects/tasks",
+    "apiVersion": "2017-11-15-preview",
+    "output": {
+      "$ref": "#/189"
+    }
+  }
+]

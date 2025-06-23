@@ -1,0 +1,285 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/enrollmentAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/enrollmentAccounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "An enrollment account."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnrollmentAccountProperties",
+    "properties": {
+      "principalName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The account owner's principal name."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/enrollmentAccounts@2018-03-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingPeriods"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingPeriods",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "A billing period."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingPeriodProperties",
+    "properties": {
+      "billingPeriodStartDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The start of the date range covered by the billing period."
+      },
+      "billingPeriodEndDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The end of the date range covered by the billing period."
+      },
+      "invoiceIds": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "Array of invoice ids that associated with."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingPeriods@2018-03-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/8"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/invoices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/invoices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "An invoice."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InvoiceProperties",
+    "properties": {
+      "downloadUrl": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "A secure link to download the PDF version of an invoice. The link will cease to work after its expiry time is reached."
+      },
+      "invoicePeriodStartDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The start of the date range covered by the invoice."
+      },
+      "invoicePeriodEndDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The end of the date range covered by the invoice."
+      },
+      "billingPeriodIds": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Array of billing period ids that the invoice is attributed to."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadUrl",
+    "properties": {
+      "expiryTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time in UTC at which this download URL will expire."
+      },
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URL to the PDF file."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/invoices@2018-03-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/14"
+    },
+    "flags": 1
+  }
+]

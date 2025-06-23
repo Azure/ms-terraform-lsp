@@ -1,0 +1,2482 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "ProtectionContainerResource properties"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ProtectionContainer",
+    "discriminator": "containerType",
+    "baseProperties": {
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Friendly name of the container."
+      },
+      "backupManagementType": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Type of backup management for the container."
+      },
+      "registrationStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Status of registration of the container with the Recovery Services Vault."
+      },
+      "healthStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Status of health of the container."
+      }
+    },
+    "elements": {
+      "AzureBackupServerContainer": {
+        "$ref": "#/15"
+      },
+      "AzureSqlContainer": {
+        "$ref": "#/21"
+      },
+      "SQLAGWorkLoadContainer": {
+        "$ref": "#/23"
+      },
+      "VMAppContainer": {
+        "$ref": "#/54"
+      },
+      "GenericContainer": {
+        "$ref": "#/76"
+      },
+      "Microsoft.ClassicCompute/virtualMachines": {
+        "$ref": "#/81"
+      },
+      "Microsoft.Compute/virtualMachines": {
+        "$ref": "#/83"
+      },
+      "StorageContainer": {
+        "$ref": "#/85"
+      },
+      "Windows": {
+        "$ref": "#/87"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureIaasVM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MAB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DPM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackupServer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSql"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureStorage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureWorkload"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DefaultBackup"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupServerContainer",
+    "properties": {
+      "canReRegister": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Specifies whether the container is re-registrable."
+      },
+      "containerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID of container."
+      },
+      "protectedItemCount": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Number of protected items in the BackupEngine"
+      },
+      "dpmAgentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Backup engine Agent version"
+      },
+      "dpmServers": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "List of BackupEngines protecting the container"
+      },
+      "upgradeAvailable": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "To check if upgrade available"
+      },
+      "protectionStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Protection status of the container."
+      },
+      "extendedInfo": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Extended Info of the container."
+      },
+      "containerType": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 1,
+        "description": "Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.\r\nClassic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is\r\nWindows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload\r\nBackup is VMAppContainer"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DPMContainerExtendedInfo",
+    "properties": {
+      "lastRefreshedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Last refresh time of the DPMContainer."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackupServerContainer"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureSqlContainer",
+    "properties": {
+      "containerType": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 1,
+        "description": "Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.\r\nClassic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is\r\nWindows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload\r\nBackup is VMAppContainer"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSqlContainer"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureSqlagWorkloadContainerProtectionContainer",
+    "properties": {
+      "sourceResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ARM ID of the virtual machine represented by this Azure Workload Container"
+      },
+      "lastUpdatedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Time stamp when this container was updated."
+      },
+      "extendedInfo": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Additional details of a workload container."
+      },
+      "workloadType": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "Workload type for which registration was sent."
+      },
+      "operationType": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "Re-Do Operation"
+      },
+      "containerType": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 1,
+        "description": "Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.\r\nClassic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is\r\nWindows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload\r\nBackup is VMAppContainer"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureWorkloadContainerExtendedInfo",
+    "properties": {
+      "hostServerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Host Os Name in case of Stand Alone and Cluster Name in case of distributed container."
+      },
+      "inquiryInfo": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Inquiry Status for the container."
+      },
+      "nodesList": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "List of the nodes in case of distributed container."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InquiryInfo",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Inquiry Status for this container such as\r\nInProgress | Failed | Succeeded"
+      },
+      "errorDetail": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Error Details if the Status is non-success."
+      },
+      "inquiryDetails": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Inquiry Details which will have workload specific details.\r\nFor e.g. - For SQL and oracle this will contain different details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error Message related to the Code."
+      },
+      "recommendations": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 2,
+        "description": "List of recommendation strings."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkloadInquiryDetails",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Type of the Workload such as SQL, Oracle etc."
+      },
+      "itemCount": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Contains the protectable item Count inside this Container."
+      },
+      "inquiryValidation": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Inquiry validation such as permissions and other backup validations."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InquiryValidation",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Status for the Inquiry Validation."
+      },
+      "errorDetail": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Error Detail in case the status is non-success."
+      },
+      "additionalDetail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error Additional Detail in case the status is non-success."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/28"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DistributedNodesInfo",
+    "properties": {
+      "nodeName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the node under a distributed container."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Status of this Node.\r\nFailed | Succeeded"
+      },
+      "errorDetail": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Error Details if the Status is non-success."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/31"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileFolder"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSqlDb"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLDB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Exchange"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sharepoint"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VMwareVM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemState"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Client"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GenericDataSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLDataBase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureFileShare"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAPHanaDatabase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAPAseDatabase"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Register"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reregister"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLAGWorkLoadContainer"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureVMAppContainerProtectionContainer",
+    "properties": {
+      "sourceResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ARM ID of the virtual machine represented by this Azure Workload Container"
+      },
+      "lastUpdatedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Time stamp when this container was updated."
+      },
+      "extendedInfo": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Additional details of a workload container."
+      },
+      "workloadType": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Workload type for which registration was sent."
+      },
+      "operationType": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "Re-Do Operation"
+      },
+      "containerType": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 1,
+        "description": "Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.\r\nClassic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is\r\nWindows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload\r\nBackup is VMAppContainer"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileFolder"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSqlDb"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLDB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Exchange"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sharepoint"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VMwareVM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemState"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Client"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GenericDataSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLDataBase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureFileShare"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAPHanaDatabase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAPAseDatabase"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Register"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reregister"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VMAppContainer"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenericContainer",
+    "properties": {
+      "fabricName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the container's fabric"
+      },
+      "extendedInformation": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 0,
+        "description": "Extended information (not returned in List container API calls)"
+      },
+      "containerType": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 1,
+        "description": "Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.\r\nClassic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is\r\nWindows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload\r\nBackup is VMAppContainer"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenericContainerExtendedInfo",
+    "properties": {
+      "rawCertData": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Public key of container cert"
+      },
+      "containerIdentityInfo": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 0,
+        "description": "Container identity information"
+      },
+      "serviceEndpoints": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "Azure Backup Service Endpoints for the container"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerIdentityInfo",
+    "properties": {
+      "uniqueName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Unique name of the container"
+      },
+      "aadTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Protection container identity - AAD Tenant"
+      },
+      "servicePrincipalClientId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Protection container identity - AAD Service Principal"
+      },
+      "audience": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Protection container identity - Audience"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenericContainerExtendedInfoServiceEndpoints",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GenericContainer"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureIaaSClassicComputeVMContainer",
+    "properties": {
+      "virtualMachineId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container."
+      },
+      "virtualMachineVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies whether the container represents a Classic or an Azure Resource Manager VM."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource group name of Recovery Services Vault."
+      },
+      "containerType": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 1,
+        "description": "Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.\r\nClassic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is\r\nWindows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload\r\nBackup is VMAppContainer"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ClassicCompute/virtualMachines"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureIaaSComputeVMContainer",
+    "properties": {
+      "virtualMachineId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container."
+      },
+      "virtualMachineVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies whether the container represents a Classic or an Azure Resource Manager VM."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource group name of Recovery Services Vault."
+      },
+      "containerType": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 1,
+        "description": "Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.\r\nClassic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is\r\nWindows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload\r\nBackup is VMAppContainer"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Compute/virtualMachines"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureStorageContainer",
+    "properties": {
+      "sourceResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified ARM url."
+      },
+      "storageAccountVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Storage account version."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource group name of Recovery Services Vault."
+      },
+      "protectedItemCount": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Number of items backed up in this container."
+      },
+      "containerType": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 1,
+        "description": "Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.\r\nClassic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is\r\nWindows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload\r\nBackup is VMAppContainer"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StorageContainer"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MabContainer",
+    "properties": {
+      "canReRegister": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Can the container be registered one more time."
+      },
+      "containerId": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "ContainerID represents the container."
+      },
+      "protectedItemCount": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Number of items backed up in this container."
+      },
+      "agentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Agent version of this container."
+      },
+      "extendedInfo": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 0,
+        "description": "Additional information for this container"
+      },
+      "mabContainerHealthDetails": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 0,
+        "description": "Health details on this mab container."
+      },
+      "containerHealthState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Health state of mab container."
+      },
+      "containerType": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 1,
+        "description": "Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.\r\nClassic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is\r\nWindows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload\r\nBackup is VMAppContainer"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MabContainerExtendedInfo",
+    "properties": {
+      "lastRefreshedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Time stamp when this container was refreshed."
+      },
+      "backupItemType": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 0,
+        "description": "Type of backup items associated with this container."
+      },
+      "backupItems": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "List of backup items associated with this container."
+      },
+      "policyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Backup policy associated with this container."
+      },
+      "lastBackupStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Latest backup status of this container."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileFolder"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSqlDb"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLDB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Exchange"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sharepoint"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VMwareVM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemState"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Client"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GenericDataSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLDataBase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureFileShare"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAPHanaDatabase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAPAseDatabase"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MABContainerHealthDetails",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Health Code"
+      },
+      "title": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Health Title"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Health Message"
+      },
+      "recommendations": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "Health Recommended Actions"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers@2016-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "vaultstorageconfig"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.RecoveryServices/vaults/backupstorageconfig"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.RecoveryServices/vaults/backupstorageconfig",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 0,
+        "description": "BackupResourceConfigResource properties"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupResourceConfig",
+    "properties": {
+      "storageModelType": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0,
+        "description": "Storage type"
+      },
+      "storageType": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "Storage type."
+      },
+      "storageTypeState": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 0,
+        "description": "Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeoRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LocallyRedundant"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeoRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LocallyRedundant"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/122"
+      },
+      {
+        "$ref": "#/123"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Locked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unlocked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/127"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.RecoveryServices/vaults/backupstorageconfig@2016-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/115"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.RecoveryServices/vaults/backupEngines"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.RecoveryServices/vaults/backupEngines",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 2,
+        "description": "BackupEngineBaseResource properties"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "BackupEngineBase",
+    "discriminator": "backupEngineType",
+    "baseProperties": {
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Friendly name of the backup engine."
+      },
+      "backupManagementType": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 0,
+        "description": "Type of backup management for the backup engine."
+      },
+      "registrationStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registration status of the backup engine with the Recovery Services Vault."
+      },
+      "backupEngineState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Status of the backup engine with the Recovery Services Vault. = {Active/Deleting/DeleteFailed}"
+      },
+      "healthStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Backup status of the backup engine."
+      },
+      "canReRegister": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Flag indicating if the backup engine be registered, once already registered."
+      },
+      "backupEngineId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID of the backup engine."
+      },
+      "dpmVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Backup engine version"
+      },
+      "azureBackupAgentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Backup agent version"
+      },
+      "isAzureBackupAgentUpgradeAvailable": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "To check if backup agent upgrade available"
+      },
+      "isDpmUpgradeAvailable": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "To check if backup engine upgrade available"
+      },
+      "extendedInfo": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 0,
+        "description": "Extended info of the backupengine"
+      }
+    },
+    "elements": {
+      "AzureBackupServerEngine": {
+        "$ref": "#/146"
+      },
+      "DpmBackupEngine": {
+        "$ref": "#/148"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureIaasVM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MAB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DPM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackupServer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSql"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureStorage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureWorkload"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DefaultBackup"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/135"
+      },
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/138"
+      },
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/142"
+      },
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupEngineExtendedInfo",
+    "properties": {
+      "databaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Database name of backup engine."
+      },
+      "protectedItemsCount": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Number of protected items in the backup engine."
+      },
+      "protectedServersCount": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Number of protected servers in the backup engine."
+      },
+      "diskCount": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Number of disks in the backup engine."
+      },
+      "usedDiskSpace": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Disk space used in the backup engine."
+      },
+      "availableDiskSpace": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Disk space currently available in the backup engine."
+      },
+      "refreshedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Last refresh time in the backup engine."
+      },
+      "azureProtectedInstances": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Protected instances in the backup engine."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupServerEngine",
+    "properties": {
+      "backupEngineType": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 1,
+        "description": "Type of the backup engine."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackupServerEngine"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DpmBackupEngine",
+    "properties": {
+      "backupEngineType": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 1,
+        "description": "Type of the backup engine."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DpmBackupEngine"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.RecoveryServices/vaults/backupEngines@2016-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/133"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/operationResults"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/operationResults",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "ProtectionContainerResource properties"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/operationResults@2016-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/154"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "inquire",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers",
+    "apiVersion": "2016-12-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshContainers",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics",
+    "apiVersion": "2016-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupRequestResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 0,
+        "description": "BackupRequestResource properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id represents the complete path to the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name associated with the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/..."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "BackupRequest",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "AzureFileShareBackupRequest": {
+        "$ref": "#/161"
+      },
+      "AzureWorkloadBackupRequest": {
+        "$ref": "#/163"
+      },
+      "IaasVMBackupRequest": {
+        "$ref": "#/171"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFileShareBackupRequest",
+    "properties": {
+      "recoveryPointExpiryTimeInUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Backup copy will expire after the time specified (UTC)."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureFileShareBackupRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureWorkloadBackupRequest",
+    "properties": {
+      "backupType": {
+        "type": {
+          "$ref": "#/169"
+        },
+        "flags": 0,
+        "description": "Type of backup, viz. Full, Differential, Log or CopyOnlyFull"
+      },
+      "enableCompression": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Bool for Compression setting"
+      },
+      "recoveryPointExpiryTimeInUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Backup copy will expire after the time specified (UTC)."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/170"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Full"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Differential"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Log"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CopyOnlyFull"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/164"
+      },
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      },
+      {
+        "$ref": "#/168"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureWorkloadBackupRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IaasVMBackupRequest",
+    "properties": {
+      "recoveryPointExpiryTimeInUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Backup copy will expire after the time specified (UTC)."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/172"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IaasVMBackupRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backup",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems",
+    "apiVersion": "2016-12-01",
+    "input": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ILRRequestResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/176"
+        },
+        "flags": 0,
+        "description": "ILRRequestResource properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id represents the complete path to the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name associated with the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/..."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/181"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ILRRequest",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "AzureFileShareProvisionILRRequest": {
+        "$ref": "#/177"
+      },
+      "IaasVMILRRegistrationRequest": {
+        "$ref": "#/179"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFileShareProvisionILRRequest",
+    "properties": {
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Recovery point ID."
+      },
+      "sourceResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Source Storage account ARM Id"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/178"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureFileShareProvisionILRRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IaasVmilrRegistrationRequest",
+    "properties": {
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID of the IaaS VM backup copy from where the files/folders have to be restored."
+      },
+      "virtualMachineId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified ARM ID of the virtual machine whose the files / folders have to be restored."
+      },
+      "initiatorName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "iSCSI initiator name."
+      },
+      "renewExistingRegistration": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Whether to renew existing registration with the iSCSI server."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IaasVMILRRegistrationRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "provisionInstantItemRecovery",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints",
+    "apiVersion": "2016-12-01",
+    "input": {
+      "$ref": "#/175"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revokeInstantItemRecovery",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints",
+    "apiVersion": "2016-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TokenInformation",
+    "properties": {
+      "token": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Token value."
+      },
+      "expiryTimeInUtcTicks": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Expiry time of token."
+      },
+      "securityPIN": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Security PIN"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backupSecurityPIN",
+    "resourceType": "Microsoft.RecoveryServices/vaults",
+    "apiVersion": "2016-12-01",
+    "output": {
+      "$ref": "#/184"
+    }
+  }
+]

@@ -1,0 +1,791 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 90,
+    "pattern": "^[-\\w\\._]+$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StoragePool/diskPools"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-03-15-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StoragePool/diskPools",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Properties for Disk pool create request."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "Resource metadata required by ARM RPC"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiskPoolCreatePropertiesOrDiskPoolProperties",
+    "properties": {
+      "availabilityZones": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "Logical zone for Disk pool resource; example: [\"1\"]."
+      },
+      "disks": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most."
+      },
+      "subnetId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Azure Resource ID of a Subnet for the Disk pool."
+      },
+      "additionalCapabilities": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "List of additional capabilities for a Disk pool."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "Determines the SKU of VM deployed for Disk pool"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "State of the operation on the resource."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Operational status of the Disk pool."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Disk",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Unique Azure Resource ID of the Managed Disk."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/7"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped (deallocated)"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiskPoolCreateTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemMetadata",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A string identifier for the identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource: user, application, managedIdentity."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A string identifier for the identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource: user, application, managedIdentity."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StoragePool/diskPools@2020-03-15-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StoragePool/diskPools/iscsiTargets"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-03-15-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StoragePool/diskPools/iscsiTargets",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 1,
+        "description": "Properties for iSCSI target create request."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IscsiTargetCreatePropertiesOrIscsiTargetProperties",
+    "properties": {
+      "tpgs": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 1,
+        "description": "List of iSCSI target portal groups. Can have 1 portal group at most."
+      },
+      "targetIqn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "iSCSI target IQN (iSCSI Qualified Name); example: \"iqn.2005-03.org.iscsi:server\"."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 2,
+        "description": "State of the operation on the resource."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 2,
+        "description": "Operational status of the iSCSI target."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TargetPortalGroupCreateOrTargetPortalGroup",
+    "properties": {
+      "luns": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "List of LUNs to be exposed through the iSCSI target portal group."
+      },
+      "acls": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 1,
+        "description": "Access Control List (ACL) for an iSCSI target portal group."
+      },
+      "attributes": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 1,
+        "description": "Attributes of an iSCSI target portal group."
+      },
+      "endpoints": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 2,
+        "description": "List of private IPv4 addresses to connect to the iSCSI target."
+      },
+      "tag": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "The tag associated with the iSCSI target portal group."
+      },
+      "port": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "The port used by iSCSI target portal group."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IscsiLun",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "User defined name for iSCSI LUN; example: \"lun0\""
+      },
+      "managedDiskAzureResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Azure Resource ID of the Managed Disk."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/40"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Acl",
+    "properties": {
+      "initiatorIqn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "iSCSI initiator IQN (iSCSI Qualified Name); example: \"iqn.2005-03.org.iscsi:client\"."
+      },
+      "mappedLuns": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "List of LUN names mapped to the ACL."
+      },
+      "credentials": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 4,
+        "description": "Challenge Handshake Authentication Protocol (CHAP) credentials to set for the ACL. Credentials can not be updated for an ACL."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IscsiTargetCredentials",
+    "properties": {
+      "username": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 1,
+        "description": "Username for Challenge Handshake Authentication Protocol (CHAP) authentication."
+      },
+      "password": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 1,
+        "description": "Password for Challenge Handshake Authentication Protocol (CHAP) authentication."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 7,
+    "maxLength": 511
+  },
+  {
+    "$type": "StringType",
+    "minLength": 12,
+    "maxLength": 255,
+    "pattern": "^[-\\w_0-9A-Za-z]*$"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Attributes",
+    "properties": {
+      "authentication": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 1,
+        "description": "Indicates whether or not authentication is enabled on the ACL."
+      },
+      "prodModeWriteProtect": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 1,
+        "description": "Indicates whether or not write protect is enabled on the LUNs."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/39"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped (deallocated)"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StoragePool/diskPools/iscsiTargets@2020-03-15-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/37"
+    },
+    "flags": 0
+  }
+]

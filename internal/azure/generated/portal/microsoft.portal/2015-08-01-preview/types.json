@@ -1,0 +1,252 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 64
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Portal/dashboards"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-08-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Portal/dashboards",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The shared dashboard properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DashboardProperties",
+    "properties": {
+      "lenses": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "The dashboard lenses."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The dashboard metadata."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DashboardLens",
+    "properties": {
+      "order": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "The lens order."
+      },
+      "parts": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The dashboard parts."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The dashboard len's metadata."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DashboardParts",
+    "properties": {
+      "position": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 1,
+        "description": "The dashboard's part position."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "A dashboard part metadata."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DashboardPartsPosition",
+    "properties": {
+      "x": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "The dashboard's part x coordinate."
+      },
+      "y": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "The dashboard's part y coordinate."
+      },
+      "rowSpan": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "The dashboard's part row span."
+      },
+      "colSpan": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "The dashboard's part column span."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "The dashboard part's metadata."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DashboardPartsPositionMetadata",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/10"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DashboardPartMetadata",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/10"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DashboardLensParts",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DashboardLensMetadata",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/10"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DashboardPropertiesLenses",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/6"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DashboardPropertiesMetadata",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/10"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DashboardTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Portal/dashboards@2015-08-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  }
+]

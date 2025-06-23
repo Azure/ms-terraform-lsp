@@ -1,0 +1,121 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Security/applications"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-07-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Security/applications",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Properties of a security application"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "display name of the application"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "description of the application"
+      },
+      "sourceResourceType": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "The application source, what it affects, e.g. Assessments"
+      },
+      "conditionSets": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 1,
+        "description": "The application conditionSets - see examples"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Assessments"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/7"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Security/applications@2022-07-01-preview",
+    "scopeType": 20,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

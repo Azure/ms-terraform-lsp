@@ -1,0 +1,1534 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Subscriptions.Admin/subscriptions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Subscriptions.Admin/subscriptions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "delegatedProviderSubscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Parent DelegatedProvider subscription identifier."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Subscription name."
+      },
+      "externalReferenceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "External reference identifier."
+      },
+      "offerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Identifier of the offer under the scope of a delegated provider."
+      },
+      "owner": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Subscription owner."
+      },
+      "routingResourceManagerType": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Routing resource manager type."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Subscription state."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Subscription identifier."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Directory tenant identifier."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Admin"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/4"
+      },
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotDefined"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PartiallyDeleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Subscriptions.Admin/subscriptions@2015-11-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Subscriptions.Admin/subscriptions/acquiredPlans"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Subscriptions.Admin/subscriptions/acquiredPlans",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "acquisitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Acquisition identifier."
+      },
+      "planId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Plan identifier in the tenant subscription context."
+      },
+      "externalReferenceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "External reference identifier."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "State of the provisioning."
+      },
+      "acquisitionTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Acquisition time."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Subscriptions.Admin/subscriptions/acquiredPlans@2015-11-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/19"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Subscriptions.Admin/directoryTenants"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Subscriptions.Admin/directoryTenants",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Directory tenant."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location of the resource"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DirectoryTenantProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Tenant unique identifier."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Subscriptions.Admin/directoryTenants@2015-11-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/28"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Subscriptions.Admin/locations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Subscriptions.Admin/locations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Display name of the location."
+      },
+      "latitude": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Latitude of the location."
+      },
+      "longitude": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Longitude of the location."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Subscriptions.Admin/locations@2015-11-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/34"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Subscriptions.Admin/offers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Subscriptions.Admin/offers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "Represents an offering of services against which a subscription can be created."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location of the resource"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OfferProperties",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the Offer."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Display name of offer."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of offer."
+      },
+      "externalReferenceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "External reference identifier."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "Offer accessibility state."
+      },
+      "subscriptionCount": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Current subscription count."
+      },
+      "maxSubscriptionsPerAccount": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Maximum subscriptions per account."
+      },
+      "basePlanIds": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Identifiers of the base plans that become available to the tenant immediately when a tenant subscribes to the offer."
+      },
+      "addonPlans": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "References to add-on plans that a tenant can optionally acquire as a part of the offer."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Private"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Public"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Decommissioned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AddonPlanDefinition",
+    "properties": {
+      "planId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Plan identifier."
+      },
+      "maxAcquisitionCount": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Maximum number of instances that can be acquired by a single subscription. If not specified, the assumed value is 1."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/46"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Subscriptions.Admin/offers@2015-11-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/38"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Subscriptions.Admin/offers/offerDelegations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Subscriptions.Admin/offers/offerDelegations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Properties for an offer."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location of the resource"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OfferDelegationProperties",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Identifier of the subscription receiving the delegated offer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Subscriptions.Admin/offers/offerDelegations@2015-11-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/52"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Subscriptions.Admin/plans"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Subscriptions.Admin/plans",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "Properties of a plan."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location of the resource"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlanProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the plan."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Display name."
+      },
+      "externalReferenceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "External reference identifier."
+      },
+      "quotaIds": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "Quota identifiers under the plan."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the plan."
+      },
+      "subscriptionCount": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Subscription count."
+      },
+      "skuIds": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "SKU identifiers."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Subscriptions.Admin/plans@2015-11-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/58"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Subscriptions.Admin/delegatedProviders"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Subscriptions.Admin/delegatedProviders",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "delegatedProviderSubscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Parent DelegatedProvider subscription identifier."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Subscription name."
+      },
+      "externalReferenceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "External reference identifier."
+      },
+      "offerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Identifier of the offer under the scope of a delegated provider."
+      },
+      "owner": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Subscription owner."
+      },
+      "routingResourceManagerType": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 2,
+        "description": "Routing resource manager type."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 2,
+        "description": "Subscription state."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Subscription identifier."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Directory tenant identifier."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Admin"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotDefined"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PartiallyDeleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Subscriptions.Admin/delegatedProviders@2015-11-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/66"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Subscriptions.Admin/delegatedProviders/offers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Subscriptions.Admin/delegatedProviders/offers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 2,
+        "description": "Properties for an delegated provider."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the resource"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DelegatedProviderOfferProperties",
+    "properties": {
+      "delegatedOfferId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The delegated offer identifier."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Display name of offer."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of offer."
+      },
+      "externalReferenceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "External reference identifier."
+      },
+      "accessibilityState": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Offer accessibility state."
+      },
+      "subscriptionCount": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Current subscription count."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Private"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Public"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Decommissioned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Subscriptions.Admin/delegatedProviders/offers@2015-11-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/82"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Subscriptions.Admin/locations/quotas"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-11-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Subscriptions.Admin/locations/quotas",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 2,
+        "description": "Quotas for DelegatedProviders."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the resource"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaProperties",
+    "properties": {
+      "allowCustomPortalBranding": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "Value indicating whether custom portal branding is allowed."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Subscriptions.Admin/locations/quotas@2015-11-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/92"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlanLinkDefinition",
+    "properties": {
+      "planName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the plan."
+      },
+      "planLinkType": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0,
+        "description": "Type of the plan link."
+      },
+      "maxAcquisitionCount": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "The maximum acquisition count by subscribers"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Base"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Addon"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Offer",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "Represents an offering of services against which a subscription can be created."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "URI of the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Type of resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location of the resource"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "link",
+    "resourceType": "Microsoft.Subscriptions.Admin/offers",
+    "apiVersion": "2015-11-01",
+    "output": {
+      "$ref": "#/102"
+    },
+    "input": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unlink",
+    "resourceType": "Microsoft.Subscriptions.Admin/offers",
+    "apiVersion": "2015-11-01",
+    "output": {
+      "$ref": "#/102"
+    },
+    "input": {
+      "$ref": "#/97"
+    }
+  }
+]

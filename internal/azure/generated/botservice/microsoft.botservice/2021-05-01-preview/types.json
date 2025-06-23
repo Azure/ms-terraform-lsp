@@ -1,0 +1,3742 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 2,
+    "maxLength": 64,
+    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.BotService/botServices"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-05-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.BotService/botServices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to bot resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Contains resource tags defined as key/value pairs."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Gets or sets the SKU of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Required. Gets or sets the Kind of the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Entity Tag."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "Entity zones"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BotProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Name of the bot"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The description of the bot"
+      },
+      "iconUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Icon Url of the bot"
+      },
+      "endpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The bot's endpoint"
+      },
+      "endpointVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The bot's endpoint version"
+      },
+      "allSettings": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Contains resource all settings defined as key/value pairs."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Contains resource parameters defined as key/value pairs."
+      },
+      "manifestUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The bot's manifest url"
+      },
+      "msaAppType": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Microsoft App Type for the bot"
+      },
+      "msaAppId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Microsoft App Id for the bot"
+      },
+      "msaAppTenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Microsoft App Tenant Id for the bot"
+      },
+      "msaAppMSIResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Microsoft App Managed Identity Resource Id for the bot"
+      },
+      "configuredChannels": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "Collection of channels for which the bot is configured"
+      },
+      "enabledChannels": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "Collection of channels for which the bot is enabled"
+      },
+      "developerAppInsightKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Application Insights key"
+      },
+      "developerAppInsightsApiKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Application Insights Api Key"
+      },
+      "developerAppInsightsApplicationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Application Insights App Id"
+      },
+      "luisAppIds": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Collection of LUIS App Ids"
+      },
+      "luisKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The LUIS Key"
+      },
+      "isCmekEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether Cmek is enabled"
+      },
+      "cmekKeyVaultUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The CMK Url"
+      },
+      "cmekEncryptionStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The CMK encryption status"
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Tenant Id for the bot"
+      },
+      "publicNetworkAccess": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Whether the bot is in an isolated network"
+      },
+      "isStreamingSupported": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether the bot is streaming supported"
+      },
+      "isDeveloperAppInsightsApiKeySet": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Whether the bot is developerAppInsightsApiKey set"
+      },
+      "migrationToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Token used to migrate non Azure bot to azure subscription"
+      },
+      "disableLocalAuth": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication."
+      },
+      "schemaTransformationVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The channel schema transformation version for the bot"
+      },
+      "storageResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The storage resourceId for the bot"
+      },
+      "privateEndpointConnections": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "List of Private Endpoint Connections configured for the bot"
+      },
+      "openWithHint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The hint to browser (e.g. protocol handler) on how to open the bot for authoring"
+      },
+      "appPasswordHint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The hint (e.g. keyVault secret resourceId) on how to fetch the app secret"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource"
+      },
+      "publishingCredentials": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Publishing credentials of the resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BotPropertiesAllSettings",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BotPropertiesParameters",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssignedMSI"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SingleTenant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MultiTenant"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnection",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnectionProperties",
+    "properties": {
+      "privateEndpoint": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The resource of private end point."
+      },
+      "privateLinkServiceConnectionState": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 1,
+        "description": "A collection of information about the state of the connection between service consumer and provider."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the private endpoint connection resource."
+      },
+      "groupIds": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Group ids"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpoint",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ARM identifier for Private Endpoint"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkServiceConnectionState",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The reason for approval/rejection of the connection."
+      },
+      "actionsRequired": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A message indicating if changes on the service provider require any updates on the consumer."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Sku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 1,
+        "description": "The sku name"
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "Gets the sku tier. This is based on the SKU name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "F0"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S1"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Free"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "sdk"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "designer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "bot"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "function"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "azurebot"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.BotService/botServices@2021-05-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlexaChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FacebookChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EmailChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KikChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TelegramChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SlackChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MsTeamsChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SkypeChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WebChatChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DirectLineChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SmsChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LineChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DirectLineSpeechChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OutlookChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Omnichannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TelephonyChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AcsChatChannel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SearchAssistant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "M365Extensions"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.BotService/botServices/channels"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-05-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.BotService/botServices/channels",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to bot channel resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 0,
+        "description": "Contains resource tags defined as key/value pairs."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Gets or sets the SKU of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/148"
+        },
+        "flags": 0,
+        "description": "Required. Gets or sets the Kind of the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Entity Tag."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 2,
+        "description": "Entity zones"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Channel",
+    "discriminator": "channelName",
+    "baseProperties": {
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Entity Tag of the resource"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the location of the resource."
+      }
+    },
+    "elements": {
+      "AcsChatChannel": {
+        "$ref": "#/74"
+      },
+      "AlexaChannel": {
+        "$ref": "#/76"
+      },
+      "DirectLineChannel": {
+        "$ref": "#/79"
+      },
+      "DirectLineSpeechChannel": {
+        "$ref": "#/85"
+      },
+      "EmailChannel": {
+        "$ref": "#/89"
+      },
+      "FacebookChannel": {
+        "$ref": "#/93"
+      },
+      "KikChannel": {
+        "$ref": "#/98"
+      },
+      "LineChannel": {
+        "$ref": "#/101"
+      },
+      "M365Extensions": {
+        "$ref": "#/106"
+      },
+      "MsTeamsChannel": {
+        "$ref": "#/108"
+      },
+      "Omnichannel": {
+        "$ref": "#/111"
+      },
+      "OutlookChannel": {
+        "$ref": "#/113"
+      },
+      "SearchAssistant": {
+        "$ref": "#/115"
+      },
+      "SkypeChannel": {
+        "$ref": "#/117"
+      },
+      "SlackChannel": {
+        "$ref": "#/120"
+      },
+      "SmsChannel": {
+        "$ref": "#/123"
+      },
+      "TelegramChannel": {
+        "$ref": "#/126"
+      },
+      "TelephonyChannel": {
+        "$ref": "#/129"
+      },
+      "WebChatChannel": {
+        "$ref": "#/136"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcsChatChannel",
+    "properties": {
+      "channelName": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AcsChatChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlexaChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to Alexa channel resource"
+      },
+      "channelName": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlexaChannelProperties",
+    "properties": {
+      "alexaSkillId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Alexa skill Id"
+      },
+      "urlFragment": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Url fragment used in part of the Uri configured in Alexa"
+      },
+      "serviceEndpointUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Full Uri used to configured the skill in Alexa"
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "Whether this channel is enabled for the bot"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlexaChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DirectLineChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to Direct Line channel resource"
+      },
+      "channelName": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DirectLineChannelProperties",
+    "properties": {
+      "sites": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "The list of Direct Line sites"
+      },
+      "extensionKey1": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The extensionKey1"
+      },
+      "extensionKey2": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The extensionKey2"
+      },
+      "DirectLineEmbedCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Direct Line embed code of the resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DirectLineSite",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Tenant Id"
+      },
+      "siteId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Site Id"
+      },
+      "siteName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Site name"
+      },
+      "key": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Primary key. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "key2": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Secondary key. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "Whether this site is enabled for DirectLine channel"
+      },
+      "isTokenEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Whether this site is token enabled for channel"
+      },
+      "isEndpointParametersEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is EndpointParameters enabled for channel"
+      },
+      "isDetailedLoggingEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is disabled detailed logging for"
+      },
+      "isBlockUserUploadEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for block user upload."
+      },
+      "isNoStorageEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this no-storage site is disabled detailed logging for"
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Entity Tag"
+      },
+      "appId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "DirectLine application id"
+      },
+      "isV1Enabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for Bot Framework V1 protocol."
+      },
+      "isV3Enabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for Bot Framework V3 protocol."
+      },
+      "isSecureSiteEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for authentication with Bot Framework."
+      },
+      "trustedOrigins": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True."
+      },
+      "isWebChatSpeechEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for Webchat Speech"
+      },
+      "isWebchatPreviewEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for preview versions of Webchat"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/81"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DirectLineChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DirectLineSpeechChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to DirectLine Speech channel resource"
+      },
+      "channelName": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DirectLineSpeechChannelProperties",
+    "properties": {
+      "cognitiveServiceResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The cognitive service id with this channel registration."
+      },
+      "cognitiveServiceRegion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The cognitive service region with this channel registration."
+      },
+      "cognitiveServiceSubscriptionKey": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "The cognitive service subscription key to use with this channel registration."
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this channel is enabled or not."
+      },
+      "customVoiceDeploymentId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Custom speech model id (optional)."
+      },
+      "customSpeechModelId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Custom voice deployment id (optional)."
+      },
+      "isDefaultBotForCogSvcAccount": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Make this a default bot for chosen cognitive service account."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DirectLineSpeechChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EmailChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to email channel resource"
+      },
+      "channelName": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EmailChannelProperties",
+    "properties": {
+      "emailAddress": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The email address"
+      },
+      "authMethod": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 0,
+        "description": "Email channel auth method. 0 Password (Default); 1 Graph."
+      },
+      "password": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "magicCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The magic code for setting up the modern authentication."
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "Whether this channel is enabled for the bot"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EmailChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FacebookChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to bot facebook channel"
+      },
+      "channelName": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FacebookChannelProperties",
+    "properties": {
+      "verifyToken": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 2,
+        "description": "Verify token. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "pages": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "The list of Facebook pages"
+      },
+      "appId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Facebook application id"
+      },
+      "appSecret": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "callbackUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Callback Url"
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "Whether this channel is enabled for the bot"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FacebookPage",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Page id"
+      },
+      "accessToken": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/95"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FacebookChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KikChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to Kik channel resource"
+      },
+      "channelName": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KikChannelProperties",
+    "properties": {
+      "userName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Kik user name"
+      },
+      "apiKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Kik API key. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "isValidated": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this channel is validated for the bot"
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "Whether this channel is enabled for the bot"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KikChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LineChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to line channel resource"
+      },
+      "channelName": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LineChannelProperties",
+    "properties": {
+      "lineRegistrations": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 1,
+        "description": "The list of line channel registrations"
+      },
+      "callbackUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Callback Url to enter in line registration."
+      },
+      "isValidated": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Whether this channel is validated for the bot"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LineRegistration",
+    "properties": {
+      "generatedId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Id generated for the line channel registration"
+      },
+      "channelSecret": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Secret for the line channel registration"
+      },
+      "channelAccessToken": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Access token for the line channel registration"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LineChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "M365Extensions",
+    "properties": {
+      "channelName": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "M365Extensions"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MsTeamsChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to Microsoft Teams channel resource"
+      },
+      "channelName": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MsTeamsChannelProperties",
+    "properties": {
+      "enableCalling": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Enable calling for Microsoft Teams channel"
+      },
+      "callingWebhook": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Webhook for Microsoft Teams channel calls"
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "Whether this channel is enabled for the bot"
+      },
+      "incomingCallRoute": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Webhook for Microsoft Teams channel calls"
+      },
+      "deploymentEnvironment": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Deployment environment for Microsoft Teams channel calls"
+      },
+      "acceptedTerms": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this channel accepted terms"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MsTeamsChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Omnichannel",
+    "properties": {
+      "channelName": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Omnichannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OutlookChannel",
+    "properties": {
+      "channelName": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OutlookChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchAssistant",
+    "properties": {
+      "channelName": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SearchAssistant"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkypeChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to Skype channel resource"
+      },
+      "channelName": {
+        "type": {
+          "$ref": "#/119"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkypeChannelProperties",
+    "properties": {
+      "enableMessaging": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Enable messaging for Skype channel"
+      },
+      "enableMediaCards": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Enable media cards for Skype channel"
+      },
+      "enableVideo": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Enable video for Skype channel"
+      },
+      "enableCalling": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Enable calling for Skype channel"
+      },
+      "enableScreenSharing": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Enable screen sharing for Skype channel"
+      },
+      "enableGroups": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Enable groups for Skype channel"
+      },
+      "groupsMode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Group mode for Skype channel"
+      },
+      "callingWebHook": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Calling web hook for Skype channel"
+      },
+      "incomingCallRoute": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Incoming call route for Skype channel"
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "Whether this channel is enabled for the bot"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SkypeChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SlackChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to Slack channel resource"
+      },
+      "channelName": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SlackChannelProperties",
+    "properties": {
+      "clientId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Slack client id"
+      },
+      "clientSecret": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "verificationToken": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "scopes": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Slack permission scopes."
+      },
+      "landingPageUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Slack landing page Url"
+      },
+      "redirectAction": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Slack redirect action"
+      },
+      "lastSubmissionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Sms auth token"
+      },
+      "registerBeforeOAuthFlow": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Whether to register the settings before OAuth validation is performed. Recommended to True."
+      },
+      "IsValidated": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Whether this channel is validated for the bot"
+      },
+      "signingSecret": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "The Slack signing secret."
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "Whether this channel is enabled for the bot"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SlackChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SmsChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to Sms channel resource"
+      },
+      "channelName": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SmsChannelProperties",
+    "properties": {
+      "phone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Sms phone"
+      },
+      "accountSID": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "authToken": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "isValidated": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this channel is validated for the bot"
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "Whether this channel is enabled for the bot"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SmsChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TelegramChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to Telegram channel resource"
+      },
+      "channelName": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TelegramChannelProperties",
+    "properties": {
+      "accessToken": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "isValidated": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this channel is validated for the bot"
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "Whether this channel is enabled for the bot"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TelegramChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TelephonyChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to Telephony channel resource"
+      },
+      "channelName": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TelephonyChannelProperties",
+    "properties": {
+      "phoneNumbers": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 0,
+        "description": "The list of Telephony phone numbers"
+      },
+      "apiConfigurations": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 0,
+        "description": "The list of Telephony api configuration"
+      },
+      "cognitiveServiceSubscriptionKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The extensionKey1"
+      },
+      "cognitiveServiceRegion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The extensionKey2"
+      },
+      "defaultLocale": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The default locale of the channel"
+      },
+      "premiumSKU": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The premium SKU applied to the channel"
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether the channel is enabled"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TelephonyPhoneNumbers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The element id."
+      },
+      "phoneNumber": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The phone number."
+      },
+      "acsEndpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The endpoint of ACS."
+      },
+      "acsSecret": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The secret of ACS."
+      },
+      "acsResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource id of ACS."
+      },
+      "cognitiveServiceSubscriptionKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The subscription key of cognitive service."
+      },
+      "cognitiveServiceRegion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The service region of cognitive service."
+      },
+      "cognitiveServiceResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource id of cognitive service."
+      },
+      "defaultLocale": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The default locale of the phone number."
+      },
+      "offerType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional Property that will determine the offering type of the phone."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/131"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TelephonyChannelResourceApiConfiguration",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The id of config."
+      },
+      "providerName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The provider name."
+      },
+      "cognitiveServiceSubscriptionKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The cognitive service subscription key."
+      },
+      "cognitiveServiceRegion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The cognitive service region."
+      },
+      "cognitiveServiceResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The cognitive service resourceId."
+      },
+      "defaultLocale": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The default locale."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/133"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TelephonyChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebChatChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to Web Chat channel resource"
+      },
+      "channelName": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 1,
+        "description": "The channel name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebChatChannelProperties",
+    "properties": {
+      "webChatEmbedCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Web chat control embed code"
+      },
+      "sites": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 0,
+        "description": "The list of Web Chat sites"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebChatSite",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Tenant Id"
+      },
+      "siteId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Site Id"
+      },
+      "siteName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Site name"
+      },
+      "key": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Primary key. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "key2": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Secondary key. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "Whether this site is enabled for DirectLine channel"
+      },
+      "isTokenEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Whether this site is token enabled for channel"
+      },
+      "isEndpointParametersEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is EndpointParameters enabled for channel"
+      },
+      "isDetailedLoggingEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is disabled detailed logging for"
+      },
+      "isBlockUserUploadEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for block user upload."
+      },
+      "isNoStorageEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this no-storage site is disabled detailed logging for"
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Entity Tag"
+      },
+      "appId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "DirectLine application id"
+      },
+      "isV1Enabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for Bot Framework V1 protocol."
+      },
+      "isV3Enabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for Bot Framework V3 protocol."
+      },
+      "isSecureSiteEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for authentication with Bot Framework."
+      },
+      "trustedOrigins": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 0,
+        "description": "List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True."
+      },
+      "isWebChatSpeechEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for Webchat Speech"
+      },
+      "isWebchatPreviewEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for preview versions of Webchat"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/138"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WebChatChannel"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "sdk"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "designer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "bot"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "function"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "azurebot"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.BotService/botServices/channels@2021-05-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/72"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 2,
+    "maxLength": 64,
+    "pattern": "^[a-zA-Z0-9][\\sa-zA-Z0-9_.-]*$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.BotService/botServices/connections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-05-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.BotService/botServices/connections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to bot channel resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 0,
+        "description": "Contains resource tags defined as key/value pairs."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Gets or sets the SKU of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 0,
+        "description": "Required. Gets or sets the Kind of the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Entity Tag."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/165"
+        },
+        "flags": 2,
+        "description": "Entity zones"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectionSettingProperties",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the Connection Setting."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the Connection Setting."
+      },
+      "clientId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Client Id associated with the Connection Setting."
+      },
+      "settingId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Setting Id set by the service for the Connection Setting."
+      },
+      "clientSecret": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Client Secret associated with the Connection Setting"
+      },
+      "scopes": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Scopes associated with the Connection Setting"
+      },
+      "serviceProviderId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Service Provider Id associated with the Connection Setting"
+      },
+      "serviceProviderDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Service Provider Display Name associated with the Connection Setting"
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 0,
+        "description": "Service Provider Parameters associated with the Connection Setting"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Provisioning state of the resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectionSettingParameter",
+    "properties": {
+      "key": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Key for the Connection Setting Parameter."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Value associated with the Connection Setting Parameter."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/156"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "sdk"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "designer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "bot"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "function"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "azurebot"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/161"
+      },
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.BotService/botServices/connections@2021-05-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/154"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.BotService/botServices/privateEndpointConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-05-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.BotService/botServices/privateEndpointConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.BotService/botServices/privateEndpointConnections@2021-05-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/169"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ListChannelWithKeysResponse",
+    "properties": {
+      "resource": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to bot channel resource"
+      },
+      "setting": {
+        "type": {
+          "$ref": "#/172"
+        },
+        "flags": 0,
+        "description": "Channel settings"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Provisioning state of the resource"
+      },
+      "entityTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Entity tag of the resource"
+      },
+      "changedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Changed time of the resource"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to bot channel resource"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the name of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the location of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the type of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/176"
+        },
+        "flags": 0,
+        "description": "Contains resource tags defined as key/value pairs."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Gets or sets the SKU of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 0,
+        "description": "Required. Gets or sets the Kind of the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Entity Tag."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/183"
+        },
+        "flags": 2,
+        "description": "Entity zones"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChannelSettings",
+    "properties": {
+      "extensionKey1": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The extensionKey1"
+      },
+      "extensionKey2": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The extensionKey2"
+      },
+      "sites": {
+        "type": {
+          "$ref": "#/175"
+        },
+        "flags": 0,
+        "description": "The list of sites"
+      },
+      "channelId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The channel id"
+      },
+      "channelDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The channel display name"
+      },
+      "botId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The bot id"
+      },
+      "botIconUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The bot icon url"
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this channel is enabled for the bot"
+      },
+      "disableLocalAuth": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication."
+      },
+      "requireTermsAgreement": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether customer needs to agree to new terms."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Site",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Tenant Id"
+      },
+      "siteId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Site Id"
+      },
+      "siteName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Site name"
+      },
+      "key": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Primary key. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "key2": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Secondary key. Value only returned through POST to the action Channel List API, otherwise empty."
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "Whether this site is enabled for DirectLine channel"
+      },
+      "isTokenEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Whether this site is token enabled for channel"
+      },
+      "isEndpointParametersEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is EndpointParameters enabled for channel"
+      },
+      "isDetailedLoggingEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is disabled detailed logging for"
+      },
+      "isBlockUserUploadEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for block user upload."
+      },
+      "isNoStorageEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this no-storage site is disabled detailed logging for"
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Entity Tag"
+      },
+      "appId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "DirectLine application id"
+      },
+      "isV1Enabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for Bot Framework V1 protocol."
+      },
+      "isV3Enabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for Bot Framework V3 protocol."
+      },
+      "isSecureSiteEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for authentication with Bot Framework."
+      },
+      "trustedOrigins": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 0,
+        "description": "List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True."
+      },
+      "isWebChatSpeechEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for Webchat Speech"
+      },
+      "isWebchatPreviewEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether this site is enabled for preview versions of Webchat"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/173"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "sdk"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "designer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "bot"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "function"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "azurebot"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listChannelWithKeys",
+    "resourceType": "Microsoft.BotService/botServices/channels",
+    "apiVersion": "2021-05-01-preview",
+    "output": {
+      "$ref": "#/171"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SiteInfo",
+    "properties": {
+      "siteName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The site name"
+      },
+      "key": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 1,
+        "description": "Determines which key is to be regenerated"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/186"
+      },
+      {
+        "$ref": "#/187"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BotChannel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to bot channel resource"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the name of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the location of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the type of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 0,
+        "description": "Contains resource tags defined as key/value pairs."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Gets or sets the SKU of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 0,
+        "description": "Required. Gets or sets the Kind of the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Entity Tag."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 2,
+        "description": "Entity zones"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "sdk"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "designer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "bot"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "function"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "azurebot"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/191"
+      },
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/193"
+      },
+      {
+        "$ref": "#/194"
+      },
+      {
+        "$ref": "#/195"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratekeys",
+    "resourceType": "Microsoft.BotService/botServices/channels",
+    "apiVersion": "2021-05-01-preview",
+    "output": {
+      "$ref": "#/189"
+    },
+    "input": {
+      "$ref": "#/185"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectionSetting",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 0,
+        "description": "The set of properties specific to bot channel resource"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the name of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the location of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the type of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 0,
+        "description": "Contains resource tags defined as key/value pairs."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Gets or sets the SKU of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 0,
+        "description": "Required. Gets or sets the Kind of the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Entity Tag."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 2,
+        "description": "Entity zones"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "sdk"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "designer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "bot"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "function"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "azurebot"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/201"
+      },
+      {
+        "$ref": "#/202"
+      },
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/204"
+      },
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listWithSecrets",
+    "resourceType": "Microsoft.BotService/botServices/connections",
+    "apiVersion": "2021-05-01-preview",
+    "output": {
+      "$ref": "#/199"
+    }
+  }
+]

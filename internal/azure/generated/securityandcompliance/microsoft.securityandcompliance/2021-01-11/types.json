@@ -1,0 +1,2031 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 24
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The common properties of a service."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1,
+        "description": "The kind of the service."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "The resource tags."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "An etag associated with the resource, used for optimistic concurrency when editing it."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Setting indicating whether the service has a managed identity associated with it."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServicesProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "The provisioning state."
+      },
+      "accessPolicies": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The access policies of the service instance."
+      },
+      "cosmosDbConfiguration": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The settings for the Cosmos DB database backing the service."
+      },
+      "authenticationConfiguration": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The authentication configuration for the service instance."
+      },
+      "corsConfiguration": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "The settings for the CORS configuration of the service instance."
+      },
+      "exportConfiguration": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "The settings for the export operation of the service instance."
+      },
+      "privateEndpointConnections": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "The list of private endpoint connections that are set up for this resource."
+      },
+      "publicNetworkAccess": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Control permission for data plane traffic coming from public networks while private endpoint is enabled."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Verifying"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprovisioned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceAccessPolicyEntry",
+    "properties": {
+      "objectId": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 1,
+        "description": "An Azure AD object ID (User or Apps) that is allowed access to the FHIR service."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^(([0-9A-Fa-f]{8}[-]?(?:[0-9A-Fa-f]{4}[-]?){3}[0-9A-Fa-f]{12}){1})+$"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/16"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceCosmosDbConfigurationInfo",
+    "properties": {
+      "offerThroughput": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The provisioned throughput for the backing database."
+      },
+      "keyVaultKeyUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The URI of the customer-managed key for the backing database."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 400,
+    "maxValue": 10000
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceAuthenticationConfigurationInfo",
+    "properties": {
+      "authority": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The authority url for the service"
+      },
+      "audience": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The audience url for the service"
+      },
+      "smartProxyEnabled": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "If the SMART on FHIR proxy is enabled"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceCorsConfigurationInfo",
+    "properties": {
+      "origins": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "The origins to be allowed via CORS."
+      },
+      "headers": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The headers to be allowed via CORS."
+      },
+      "methods": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "The methods to be allowed via CORS."
+      },
+      "maxAge": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "The max age to be allowed via CORS."
+      },
+      "allowCredentials": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "If credentials are allowed via CORS."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^(?:(?:(?:[hH][tT][tT][pP](?:[sS]|))\\:\\/\\/(?:[a-zA-Z0-9-]+[.]?)+(?:\\:[0-9]{1,5})?|[*]))$"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/24"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 99999
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceExportConfigurationInfo",
+    "properties": {
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the default export storage account."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnection",
+    "properties": {
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnectionProperties",
+    "properties": {
+      "privateEndpoint": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "The resource of private end point."
+      },
+      "privateLinkServiceConnectionState": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 1,
+        "description": "A collection of information about the state of the connection between service consumer and provider."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the private endpoint connection resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpoint",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ARM identifier for Private Endpoint"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkServiceConnectionState",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The reason for approval/rejection of the connection."
+      },
+      "actionsRequired": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A message indicating if changes on the service provider require any updates on the consumer."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/30"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir-Stu3"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir-R4"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServicesResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServicesResourceIdentity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The principal ID of the resource identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The tenant ID of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "Type of identity being specified, currently SystemAssigned and None are allowed."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/privateEndpointConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/privateEndpointConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/privateEndpointConnections@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/70"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The common properties of a service."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 1,
+        "description": "The kind of the service."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "The resource tags."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "An etag associated with the resource, used for optimistic concurrency when editing it."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Setting indicating whether the service has a managed identity associated with it."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir-Stu3"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir-R4"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServicesResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/74"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateEndpointConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateEndpointConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateEndpointConnections@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/83"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The common properties of a service."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 1,
+        "description": "The kind of the service."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 0,
+        "description": "The resource tags."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "An etag associated with the resource, used for optimistic concurrency when editing it."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Setting indicating whether the service has a managed identity associated with it."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir-Stu3"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir-R4"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/90"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServicesResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/87"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateEndpointConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateEndpointConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateEndpointConnections@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/96"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The common properties of a service."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 1,
+        "description": "The kind of the service."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "The resource tags."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "An etag associated with the resource, used for optimistic concurrency when editing it."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Setting indicating whether the service has a managed identity associated with it."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir-Stu3"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir-R4"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServicesResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/100"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateEndpointConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateEndpointConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateEndpointConnections@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/109"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The common properties of a service."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 1,
+        "description": "The kind of the service."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "The resource tags."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "An etag associated with the resource, used for optimistic concurrency when editing it."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Setting indicating whether the service has a managed identity associated with it."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir-Stu3"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fhir-R4"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServicesResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/113"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateEndpointConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateEndpointConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateEndpointConnections@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/122"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/privateLinkResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/privateLinkResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 2,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkResourceProperties",
+    "properties": {
+      "groupId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The private link resource group id."
+      },
+      "requiredMembers": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 2,
+        "description": "The private link resource required member names."
+      },
+      "requiredZoneNames": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "The private link resource Private link DNS zone name."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/privateLinkResources@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/126"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateLinkResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateLinkResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 2,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateLinkResources@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/133"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateLinkResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateLinkResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 2,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateLinkResources@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/137"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateLinkResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateLinkResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 2,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateLinkResources@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/141"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateLinkResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-01-11"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateLinkResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Required property for system data"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 2,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateLinkResources@2021-01-11",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/145"
+    },
+    "flags": 1
+  }
+]

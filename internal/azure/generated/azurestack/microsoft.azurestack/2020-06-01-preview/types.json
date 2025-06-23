@@ -1,0 +1,1619 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AzureStack/registrations/customerSubscriptions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.AzureStack/registrations/customerSubscriptions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Customer subscription properties."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The entity tag used for optimistic concurrency when modifying the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomerSubscriptionProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Tenant Id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.AzureStack/registrations/customerSubscriptions@2020-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AzureStack/registrations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.AzureStack/registrations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 1,
+        "description": "Properties of the Azure Stack registration resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 1,
+        "description": "Location of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The kind of the resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "Custom tags for the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The entity tag used for optimistic concurrency when modifying the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistrationParameterPropertiesOrRegistrationProperties",
+    "properties": {
+      "registrationToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "The token identifying registered Azure Stack"
+      },
+      "objectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The object identifier associated with the Azure Stack connecting to Azure."
+      },
+      "cloudId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The identifier of the registered Azure Stack."
+      },
+      "billingModel": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the billing mode for the Azure Stack registration."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "global"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.AzureStack/registrations@2020-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/19"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AzureStack/linkedSubscriptions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.AzureStack/linkedSubscriptions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 1,
+        "description": "Properties of the Linked Subscription resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 1,
+        "description": "Location of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The kind of the resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Custom tags for the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The entity tag used for optimistic concurrency when modifying the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkedSubscriptionParameterPropertiesOrLinkedSubscriptionProperties",
+    "properties": {
+      "linkedSubscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The identifier associated with the device subscription."
+      },
+      "registrationResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The identifier associated with the device registration."
+      },
+      "deviceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The identifier of the Azure Stack device for remote management."
+      },
+      "deviceObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The object identifier associated with the Azure Stack device connecting to Azure."
+      },
+      "deviceLinkState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The connection state of the Azure Stack device."
+      },
+      "lastConnectedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The last remote management connection time for the Azure Stack device connected to the linked subscription resource."
+      },
+      "deviceConnectionStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The status of the remote management connection of the Azure Stack device."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "global"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.AzureStack/linkedSubscriptions@2020-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/27"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AzureStack/cloudManifestFiles"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.AzureStack/cloudManifestFiles",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 2,
+        "description": "Cloud specific manifest data."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The entity tag used for optimistic concurrency when modifying the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudManifestFileProperties",
+    "properties": {
+      "deploymentData": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Cloud specific manifest data."
+      },
+      "signature": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Signature of the cloud specific manifest data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudManifestFileDeploymentData",
+    "properties": {
+      "externalDsmsCertificates": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Dsms external certificates."
+      },
+      "customCloudVerificationKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Signing verification public key."
+      },
+      "customEnvironmentEndpoints": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "Environment endpoints."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudManifestFileEnvironmentEndpoints",
+    "properties": {
+      "customCloudArmEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ARM endpoint."
+      },
+      "externalDsmsEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Dsms endpoint."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.AzureStack/cloudManifestFiles@2020-06-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/35"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AzureStack/registrations/products"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.AzureStack/registrations/products",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 2,
+        "description": "Properties of the product resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The entity tag used for optimistic concurrency when modifying the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductNestedProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The display name of the product."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The description of the product."
+      },
+      "publisherDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The user-friendly name of the product publisher."
+      },
+      "publisherIdentifier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Publisher identifier."
+      },
+      "offer": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The offer representing the product."
+      },
+      "offerVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The version of the product offer."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The product SKU."
+      },
+      "billingPartNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The part number used for billing purposes."
+      },
+      "vmExtensionType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of the Virtual Machine Extension."
+      },
+      "galleryItemIdentity": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identifier of the gallery item corresponding to the product."
+      },
+      "iconUris": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Additional links available for this product."
+      },
+      "links": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Additional links available for this product."
+      },
+      "legalTerms": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The legal terms."
+      },
+      "privacyPolicy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The privacy policy."
+      },
+      "payloadLength": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "The length of product content."
+      },
+      "productKind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The kind of the product (virtualMachine or virtualMachineExtension)"
+      },
+      "productProperties": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "Additional properties for the product."
+      },
+      "compatibility": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "Product compatibility with current device."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IconUris",
+    "properties": {
+      "large": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to large icon."
+      },
+      "wide": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to wide icon."
+      },
+      "medium": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to medium icon."
+      },
+      "small": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to small icon."
+      },
+      "hero": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to hero icon."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductLink",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The description of the link."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The URI corresponding to the link."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductProperties",
+    "properties": {
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The version."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Compatibility",
+    "properties": {
+      "isCompatible": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "Tells if product is compatible with current device"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Short error message if any compatibility issues are found"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Full error message if any compatibility issues are found"
+      },
+      "issues": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "List of all issues found"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HigherDeviceVersionRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LowerDeviceVersionRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CapacityBillingModelRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PayAsYouGoBillingModelRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DevelopmentBillingModelRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureADIdentitySystemRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ADFSIdentitySystemRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ConnectionToInternetRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ConnectionToAzureRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DisconnectedEnvironmentRequired"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/61"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.AzureStack/registrations/products@2020-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/42"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtendedProduct",
+    "properties": {
+      "galleryPackageBlobSasUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URI to the .azpkg file that provides information required for showing product in the gallery."
+      },
+      "productKind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the kind of the product (virtualMachine or virtualMachineExtension)."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 2,
+        "description": "Specifies additional properties describing the product."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtendedProductProperties",
+    "properties": {
+      "computeRole": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 2,
+        "description": "Specifies kind of compute role included in the package."
+      },
+      "isSystemExtension": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 2,
+        "description": "Specifies if product is a Virtual Machine Extension."
+      },
+      "sourceBlob": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 2,
+        "description": "Specifies a download location where content can be downloaded from."
+      },
+      "supportMultipleExtensions": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 2,
+        "description": "Indicates if specified product supports multiple extensions."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies product version."
+      },
+      "vmOsType": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "Specifies operating system used by the product."
+      },
+      "vmScaleSetEnabled": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 2,
+        "description": "Indicates if virtual machine Scale Set is enabled in the specified product."
+      },
+      "osDiskImage": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 2,
+        "description": "OS disk image used by product."
+      },
+      "dataDiskImages": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 2,
+        "description": "List of attached data disks."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IaaS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaaS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Uri",
+    "properties": {
+      "uri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URI."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OsDiskImage",
+    "properties": {
+      "operatingSystem": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 2,
+        "description": "OS operating system type."
+      },
+      "sourceBlobSasUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "SAS key for source blob."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataDiskImage",
+    "properties": {
+      "lun": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2,
+        "description": "The LUN."
+      },
+      "sourceBlobSasUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "SAS key for source blob."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/80"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listDetails",
+    "resourceType": "Microsoft.AzureStack/registrations/products",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/64"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeviceConfiguration",
+    "properties": {
+      "deviceVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Version of the device."
+      },
+      "identitySystem": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 2,
+        "description": "Identity system of the device."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureAD"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ADFS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductList",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to the next page."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 0,
+        "description": "List of products."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Product",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "Properties of the product resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "ID of the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Type of Resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The entity tag used for optimistic concurrency when modifying the resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/88"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getProducts",
+    "resourceType": "Microsoft.AzureStack/registrations/products",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/87"
+    },
+    "input": {
+      "$ref": "#/83"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getProduct",
+    "resourceType": "Microsoft.AzureStack/registrations/products",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/88"
+    },
+    "input": {
+      "$ref": "#/83"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MarketplaceProductLogUpdate",
+    "properties": {
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation to log."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status to log."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error related to the operation."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error details related to operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductLog",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Log ID."
+      },
+      "productId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged product ID."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged subscription ID."
+      },
+      "registrationName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged registration name."
+      },
+      "resourceGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged resource group name."
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Logged operation."
+      },
+      "startDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation start datetime."
+      },
+      "endDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation end datetime."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation status."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation error data."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Operation error details."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadProductLog",
+    "resourceType": "Microsoft.AzureStack/registrations/products",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/93"
+    },
+    "input": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActivationKeyResult",
+    "properties": {
+      "activationKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure Stack activation key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getactivationkey",
+    "resourceType": "Microsoft.AzureStack/registrations",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/95"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableRemoteManagement",
+    "resourceType": "Microsoft.AzureStack/registrations",
+    "apiVersion": "2020-06-01-preview"
+  }
+]

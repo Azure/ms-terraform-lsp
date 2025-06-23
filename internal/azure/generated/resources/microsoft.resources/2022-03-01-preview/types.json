@@ -1,0 +1,268 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Resources/changes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Resources/changes",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "The properties of a change"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChangeProperties",
+    "properties": {
+      "targetResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The fully qualified ID of the target resource that was changed"
+      },
+      "targetResourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The namespace and type of the resource"
+      },
+      "changeType": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "The type of change that was captured in the resource"
+      },
+      "changeAttributes": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Details about the change resource"
+      },
+      "changes": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "A dictionary with changed property name as a key and the change details as the value"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Update"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Create"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChangeAttributes",
+    "properties": {
+      "correlationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ARM correlation ID of the change resource"
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the change(s) on the target resource ocurred"
+      },
+      "changesCount": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "The number of changes this resource captures"
+      },
+      "previousResourceSnapshotId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The GUID of the previous snapshot"
+      },
+      "newResourceSnapshotId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The GUID of the new snapshot"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChangeBase",
+    "properties": {
+      "propertyChangeType": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "The type of change that occurred"
+      },
+      "changeCategory": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The entity that made the change"
+      },
+      "previousValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The target resource property value before the change"
+      },
+      "newValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The target resource property value after the change"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Update"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Insert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Remove"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Create"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChangesDictionary",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Resources/changes@2022-03-01-preview",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 1
+  }
+]

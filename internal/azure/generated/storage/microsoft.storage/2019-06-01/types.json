@@ -1,0 +1,5437 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 24
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Required. Gets or sets the SKU name."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 1,
+        "description": "Required. Indicates the type of storage account."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "The identity of the resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "The parameters used to create the storage account."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Sku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 1,
+        "description": "The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The SKU tier. This is based on the SKU name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_LRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_GRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_RAGRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_ZRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium_LRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium_ZRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_GZRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_RAGZRS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Storage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StorageV2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BlobStorage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileStorage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BlockBlobStorage"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccountCreateParametersTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Identity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The principal ID of resource identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The tenant ID of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 1,
+        "description": "The identity type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccountPropertiesCreateParametersOrStorageAccountProperties",
+    "properties": {
+      "customDomain": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. To clear the existing custom domain, use an empty string for the custom domain name property."
+      },
+      "encryption": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Not applicable. Azure Storage encryption is enabled for all storage accounts and cannot be disabled."
+      },
+      "networkAcls": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Network rule set"
+      },
+      "accessTier": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Required for storage accounts where kind = BlobStorage. The access tier used for billing."
+      },
+      "azureFilesIdentityBasedAuthentication": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Provides the identity based authentication settings for Azure Files."
+      },
+      "supportsHttpsTrafficOnly": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Allows https traffic only to storage service if sets to true. The default value is true since API version 2019-04-01."
+      },
+      "isHnsEnabled": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Account HierarchicalNamespace enabled if sets to true."
+      },
+      "largeFileSharesState": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 0,
+        "description": "Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled."
+      },
+      "routingPreference": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "Maintains information about the network routing choice opted by the user for data transfer"
+      },
+      "allowBlobPublicAccess": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property."
+      },
+      "minimumTlsVersion": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property."
+      },
+      "allowSharedKeyAccess": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 2,
+        "description": "Gets the status of the storage account at the time the operation was called."
+      },
+      "primaryEndpoints": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 2,
+        "description": "Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object. Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint."
+      },
+      "primaryLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the location of the primary data center for the storage account."
+      },
+      "statusOfPrimary": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 2,
+        "description": "Gets the status indicating whether the primary location of the storage account is available or unavailable."
+      },
+      "lastGeoFailoverTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is Standard_GRS or Standard_RAGRS."
+      },
+      "secondaryLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS."
+      },
+      "statusOfSecondary": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 2,
+        "description": "Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the SKU name is Standard_GRS or Standard_RAGRS."
+      },
+      "creationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the creation date and time of the storage account in UTC."
+      },
+      "secondaryEndpoints": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 2,
+        "description": "Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object from the secondary location of the storage account. Only available if the SKU name is Standard_RAGRS."
+      },
+      "geoReplicationStats": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 2,
+        "description": "Geo Replication Stats"
+      },
+      "failoverInProgress": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "If the failover is in progress, the value will be true, otherwise, it will be null."
+      },
+      "privateEndpointConnections": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 2,
+        "description": "List of private endpoint connection associated with the specified storage account"
+      },
+      "blobRestoreStatus": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 2,
+        "description": "Blob restore status"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomDomain",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source."
+      },
+      "useSubDomainName": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Encryption",
+    "properties": {
+      "services": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "List of services which support encryption."
+      },
+      "keySource": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 1,
+        "description": "The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault"
+      },
+      "requireInfrastructureEncryption": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest."
+      },
+      "keyvaultproperties": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "Properties provided by key vault."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionServices",
+    "properties": {
+      "blob": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The encryption function of the blob storage service."
+      },
+      "file": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The encryption function of the file storage service."
+      },
+      "table": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The encryption function of the table storage service."
+      },
+      "queue": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The encryption function of the queue storage service."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionService",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "A boolean indicating whether or not the service encrypts the data as it is stored."
+      },
+      "lastEnabledTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate."
+      },
+      "keyType": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Service"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Account"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Keyvault"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyVaultProperties",
+    "properties": {
+      "keyname": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of KeyVault key."
+      },
+      "keyversion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The version of KeyVault key."
+      },
+      "keyvaulturi": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Uri of KeyVault."
+      },
+      "currentVersionedKeyIdentifier": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The object identifier of the current versioned Key Vault Key in use."
+      },
+      "lastKeyRotationTimestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Timestamp of last rotation of the Key Vault Key."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkRuleSet",
+    "properties": {
+      "bypass": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, \"Logging, Metrics\"), or None to bypass none of those traffics."
+      },
+      "virtualNetworkRules": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "Sets the virtual network rules"
+      },
+      "ipRules": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Sets the IP ACL rules"
+      },
+      "defaultAction": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 1,
+        "description": "Specifies the default action of allow or deny when no other rules match."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Logging"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Metrics"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureServices"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkRule",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}."
+      },
+      "action": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "The action of virtual network rule."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Gets the state of virtual network rule."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "deprovisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "networkSourceDeleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/46"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IPRule",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed."
+      },
+      "action": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "The action of IP ACL rule."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/55"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hot"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cool"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFilesIdentityBasedAuthentication",
+    "properties": {
+      "directoryServiceOptions": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 1,
+        "description": "Indicates the directory service used."
+      },
+      "activeDirectoryProperties": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 0,
+        "description": "Required if choose AD."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AADDS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AD"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActiveDirectoryProperties",
+    "properties": {
+      "domainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Specifies the primary domain that the AD DNS server is authoritative for."
+      },
+      "netBiosDomainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Specifies the NetBIOS domain name."
+      },
+      "forestName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Specifies the Active Directory forest to get."
+      },
+      "domainGuid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Specifies the domain GUID."
+      },
+      "domainSid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Specifies the security identifier (SID)."
+      },
+      "azureStorageSid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Specifies the security identifier (SID) for Azure Storage."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoutingPreference",
+    "properties": {
+      "routingChoice": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "Routing Choice defines the kind of network routing opted by the user."
+      },
+      "publishMicrosoftEndpoints": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "A boolean flag which indicates whether microsoft routing storage endpoints are to be published"
+      },
+      "publishInternetEndpoints": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "A boolean flag which indicates whether internet routing storage endpoints are to be published"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MicrosoftRouting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InternetRouting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TLS1_0"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TLS1_1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TLS1_2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResolvingDNS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Endpoints",
+    "properties": {
+      "blob": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the blob endpoint."
+      },
+      "queue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the queue endpoint."
+      },
+      "table": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the table endpoint."
+      },
+      "file": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the file endpoint."
+      },
+      "web": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the web endpoint."
+      },
+      "dfs": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the dfs endpoint."
+      },
+      "microsoftEndpoints": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "Gets the microsoft routing storage endpoints."
+      },
+      "internetEndpoints": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Gets the internet routing storage endpoints"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccountMicrosoftEndpoints",
+    "properties": {
+      "blob": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the blob endpoint."
+      },
+      "queue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the queue endpoint."
+      },
+      "table": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the table endpoint."
+      },
+      "file": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the file endpoint."
+      },
+      "web": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the web endpoint."
+      },
+      "dfs": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the dfs endpoint."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccountInternetEndpoints",
+    "properties": {
+      "blob": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the blob endpoint."
+      },
+      "file": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the file endpoint."
+      },
+      "web": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the web endpoint."
+      },
+      "dfs": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the dfs endpoint."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "available"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "unavailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "available"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "unavailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GeoReplicationStats",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 2,
+        "description": "The status of the secondary location. Possible values are: - Live: Indicates that the secondary location is active and operational. - Bootstrap: Indicates initial synchronization from the primary location to the secondary location is in progress.This typically occurs when replication is first enabled. - Unavailable: Indicates that the secondary location is temporarily unavailable."
+      },
+      "lastSyncTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "All primary writes preceding this UTC date/time value are guaranteed to be available for read operations. Primary writes following this point in time may or may not be available for reads. Element may be default value if value of LastSyncTime is not available, this can happen if secondary is offline or we are in bootstrap."
+      },
+      "canFailover": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "A boolean flag which indicates whether or not account failover is supported for the account."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Live"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bootstrap"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unavailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnection",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnectionProperties",
+    "properties": {
+      "privateEndpoint": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0,
+        "description": "The resource of private end point."
+      },
+      "privateLinkServiceConnectionState": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 1,
+        "description": "A collection of information about the state of the connection between service consumer and provider."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the private endpoint connection resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpoint",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ARM identifier for Private Endpoint"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkServiceConnectionState",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The reason for approval/rejection of the connection."
+      },
+      "actionRequired": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A message indicating if changes on the service provider require any updates on the consumer."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/107"
+      },
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/99"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobRestoreStatus",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 2,
+        "description": "The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed."
+      },
+      "failureReason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Failure reason when blob restore is failed."
+      },
+      "restoreId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Id for tracking blob restore request."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 2,
+        "description": "Blob restore request parameters."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobRestoreParameters",
+    "properties": {
+      "timeToRestore": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Restore blob to the specified time."
+      },
+      "blobRanges": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 1,
+        "description": "Blob ranges to restore."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobRestoreRange",
+    "properties": {
+      "startRange": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Blob start range. This is inclusive. Empty means account start."
+      },
+      "endRange": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Blob end range. This is exclusive. Empty means account end."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/119"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/122"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts/managementPolicies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts/managementPolicies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 0,
+        "description": "Returns the Storage Account Data Policies Rules."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementPolicyProperties",
+    "properties": {
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Returns the date and time the ManagementPolicies was last modified."
+      },
+      "policy": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 1,
+        "description": "The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementPolicySchema",
+    "properties": {
+      "rules": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 1,
+        "description": "The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementPolicyRule",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Rule is enabled if set to true."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 1,
+        "description": "The valid value is Lifecycle"
+      },
+      "definition": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 1,
+        "description": "An object that defines the Lifecycle rule."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Lifecycle"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementPolicyDefinition",
+    "properties": {
+      "actions": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 1,
+        "description": "An object that defines the action set."
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 0,
+        "description": "An object that defines the filter set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementPolicyAction",
+    "properties": {
+      "baseBlob": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 0,
+        "description": "The management policy action for base blob"
+      },
+      "snapshot": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 0,
+        "description": "The management policy action for snapshot"
+      },
+      "version": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 0,
+        "description": "The management policy action for version"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementPolicyBaseBlob",
+    "properties": {
+      "tierToCool": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 0,
+        "description": "The function to tier blobs to cool storage. Support blobs currently at Hot tier"
+      },
+      "tierToArchive": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 0,
+        "description": "The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier"
+      },
+      "delete": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 0,
+        "description": "The function to delete the blob"
+      },
+      "enableAutoTierToHotFromCool": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DateAfterModification",
+    "properties": {
+      "daysAfterModificationGreaterThan": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 0,
+        "description": "Value indicating the age in days after last modification"
+      },
+      "daysAfterLastAccessTimeGreaterThan": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 0,
+        "description": "Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementPolicySnapShot",
+    "properties": {
+      "tierToCool": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 0,
+        "description": "The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier"
+      },
+      "tierToArchive": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 0,
+        "description": "The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier"
+      },
+      "delete": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 0,
+        "description": "The function to delete the blob snapshot"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DateAfterCreation",
+    "properties": {
+      "daysAfterCreationGreaterThan": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 1,
+        "description": "Value indicating the age in days after creation"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementPolicyVersion",
+    "properties": {
+      "tierToCool": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 0,
+        "description": "The function to tier blob version to cool storage. Support blob version currently at Hot tier"
+      },
+      "tierToArchive": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 0,
+        "description": "The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier"
+      },
+      "delete": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 0,
+        "description": "The function to delete the blob version"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementPolicyFilter",
+    "properties": {
+      "prefixMatch": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 0,
+        "description": "An array of strings for prefixes to be match."
+      },
+      "blobTypes": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 1,
+        "description": "An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob."
+      },
+      "blobIndexMatch": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 0,
+        "description": "An array of blob index tag based filters, there can be at most 10 tag filters"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TagFilter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 1,
+        "description": "This is the filter tag name, it can have 1 - 128 characters"
+      },
+      "op": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 1,
+        "description": "This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 128
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 256
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/143"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/129"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts/managementPolicies@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/126"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts/inventoryPolicies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts/inventoryPolicies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 0,
+        "description": "Returns the storage account blob inventory policy rules."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobInventoryPolicyProperties",
+    "properties": {
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Returns the last modified date and time of the blob inventory policy."
+      },
+      "policy": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 1,
+        "description": "The storage account blob inventory policy object. It is composed of policy rules."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobInventoryPolicySchema",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 1,
+        "description": "Policy is enabled if set to true."
+      },
+      "destination": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Container name where blob inventory files are stored. Must be pre-created."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 1,
+        "description": "The valid value is Inventory"
+      },
+      "rules": {
+        "type": {
+          "$ref": "#/163"
+        },
+        "flags": 1,
+        "description": "The storage account blob inventory policy rules. The rule is applied when it is enabled."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inventory"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/156"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobInventoryPolicyRule",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 1,
+        "description": "Rule is enabled when set to true."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy."
+      },
+      "definition": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 1,
+        "description": "An object that defines the blob inventory policy rule."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobInventoryPolicyDefinition",
+    "properties": {
+      "filters": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 1,
+        "description": "An object that defines the filter set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobInventoryPolicyFilter",
+    "properties": {
+      "prefixMatch": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 0,
+        "description": "An array of strings for blob prefixes to be matched."
+      },
+      "blobTypes": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 1,
+        "description": "An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs."
+      },
+      "includeBlobVersions": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Includes blob versions in blob inventory when value set to true."
+      },
+      "includeSnapshots": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Includes blob snapshots in blob inventory when value set to true."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/158"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/169"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      },
+      {
+        "$ref": "#/168"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/173"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts/inventoryPolicies@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/153"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts/privateEndpointConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts/privateEndpointConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/176"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts/privateEndpointConnections@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/178"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts/objectReplicationPolicies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts/objectReplicationPolicies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/181"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 0,
+        "description": "Returns the Storage Account Object Replication Policy."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ObjectReplicationPolicyProperties",
+    "properties": {
+      "policyId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "A unique id for object replication policy."
+      },
+      "enabledTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Indicates when the policy is enabled on the source account."
+      },
+      "sourceAccount": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Required. Source account name."
+      },
+      "destinationAccount": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Required. Destination account name."
+      },
+      "rules": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 0,
+        "description": "The storage account object replication rules."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ObjectReplicationPolicyRule",
+    "properties": {
+      "ruleId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account."
+      },
+      "sourceContainer": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Required. Source container name."
+      },
+      "destinationContainer": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Required. Destination container name."
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/186"
+        },
+        "flags": 0,
+        "description": "Optional. An object that defines the filter set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ObjectReplicationPolicyFilter",
+    "properties": {
+      "prefixMatch": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 0,
+        "description": "Optional. Filters the results to replicate only blobs whose names begin with the specified prefix."
+      },
+      "minCreationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/185"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts/objectReplicationPolicies@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/183"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 63
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts/encryptionScopes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts/encryptionScopes",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/191"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/194"
+        },
+        "flags": 0,
+        "description": "Properties of the encryption scope."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionScopeProperties",
+    "properties": {
+      "source": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 0,
+        "description": "The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 0,
+        "description": "The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled."
+      },
+      "creationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the creation date and time of the encryption scope in UTC."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the last modification date and time of the encryption scope in UTC."
+      },
+      "keyVaultProperties": {
+        "type": {
+          "$ref": "#/201"
+        },
+        "flags": 0,
+        "description": "The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.KeyVault"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/195"
+      },
+      {
+        "$ref": "#/196"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionScopeKeyVaultProperties",
+    "properties": {
+      "keyUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts/encryptionScopes@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/193"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts/blobServices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts/blobServices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/204"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/205"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 0,
+        "description": "The properties of a storage account’s Blob service."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Sku name and tier."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobServicePropertiesProperties",
+    "properties": {
+      "cors": {
+        "type": {
+          "$ref": "#/209"
+        },
+        "flags": 0,
+        "description": "Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service."
+      },
+      "defaultServiceVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions."
+      },
+      "deleteRetentionPolicy": {
+        "type": {
+          "$ref": "#/225"
+        },
+        "flags": 0,
+        "description": "The blob service properties for blob soft delete."
+      },
+      "isVersioningEnabled": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Versioning is enabled if set to true."
+      },
+      "automaticSnapshotPolicyEnabled": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Deprecated in favor of isVersioningEnabled property."
+      },
+      "changeFeed": {
+        "type": {
+          "$ref": "#/227"
+        },
+        "flags": 0,
+        "description": "The blob service properties for change feed events."
+      },
+      "restorePolicy": {
+        "type": {
+          "$ref": "#/229"
+        },
+        "flags": 0,
+        "description": "The blob service properties for blob restore policy."
+      },
+      "containerDeleteRetentionPolicy": {
+        "type": {
+          "$ref": "#/225"
+        },
+        "flags": 0,
+        "description": "The blob service properties for container soft delete."
+      },
+      "lastAccessTimeTrackingPolicy": {
+        "type": {
+          "$ref": "#/230"
+        },
+        "flags": 0,
+        "description": "The blob service property to configure last access time based tracking policy."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CorsRules",
+    "properties": {
+      "corsRules": {
+        "type": {
+          "$ref": "#/224"
+        },
+        "flags": 0,
+        "description": "The List of CORS rules. You can include up to five CorsRule elements in the request."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CorsRule",
+    "properties": {
+      "allowedOrigins": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 1,
+        "description": "Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or \"*\" to allow all domains"
+      },
+      "allowedMethods": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 1,
+        "description": "Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin."
+      },
+      "maxAgeInSeconds": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 1,
+        "description": "Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response."
+      },
+      "exposedHeaders": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 1,
+        "description": "Required if CorsRule element is present. A list of response headers to expose to CORS clients."
+      },
+      "allowedHeaders": {
+        "type": {
+          "$ref": "#/223"
+        },
+        "flags": 1,
+        "description": "Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DELETE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GET"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HEAD"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MERGE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "POST"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OPTIONS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PUT"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/212"
+      },
+      {
+        "$ref": "#/213"
+      },
+      {
+        "$ref": "#/214"
+      },
+      {
+        "$ref": "#/215"
+      },
+      {
+        "$ref": "#/216"
+      },
+      {
+        "$ref": "#/217"
+      },
+      {
+        "$ref": "#/218"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/219"
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/210"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeleteRetentionPolicy",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Indicates whether DeleteRetentionPolicy is enabled."
+      },
+      "days": {
+        "type": {
+          "$ref": "#/226"
+        },
+        "flags": 0,
+        "description": "Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 365
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChangeFeed",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Indicates whether change feed event logging is enabled for the Blob service."
+      },
+      "retentionInDays": {
+        "type": {
+          "$ref": "#/228"
+        },
+        "flags": 0,
+        "description": "Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 146000
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestorePolicyProperties",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 1,
+        "description": "Blob restore is enabled if set to true."
+      },
+      "days": {
+        "type": {
+          "$ref": "#/226"
+        },
+        "flags": 0,
+        "description": "how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days."
+      },
+      "lastEnabledTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Deprecated in favor of minRestoreTime property."
+      },
+      "minRestoreTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Returns the minimum date and time that the restore can be started."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LastAccessTimeTrackingPolicy",
+    "properties": {
+      "enable": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 1,
+        "description": "When set to true last access time based tracking is enabled."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/232"
+        },
+        "flags": 0,
+        "description": "Name of the policy. The valid value is AccessTimeTracking. This field is currently read only"
+      },
+      "trackingGranularityInDays": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 0,
+        "description": "The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1"
+      },
+      "blobType": {
+        "type": {
+          "$ref": "#/233"
+        },
+        "flags": 0,
+        "description": "An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AccessTimeTracking"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/231"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts/blobServices@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/207"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts/blobServices/containers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts/blobServices/containers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/235"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/236"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/238"
+        },
+        "flags": 0,
+        "description": "Properties of the blob container."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Etag."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerProperties",
+    "properties": {
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The version of the deleted blob container."
+      },
+      "deleted": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "Indicates whether the blob container was deleted."
+      },
+      "deletedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Blob container deletion time."
+      },
+      "remainingRetentionDays": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 2,
+        "description": "Remaining retention days for soft deleted blob container."
+      },
+      "defaultEncryptionScope": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Default the container to use specified encryption scope for all writes."
+      },
+      "denyEncryptionScopeOverride": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Block override of encryption scope from the container default."
+      },
+      "publicAccess": {
+        "type": {
+          "$ref": "#/242"
+        },
+        "flags": 0,
+        "description": "Specifies whether data in the container may be accessed publicly and the level of access."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Returns the date and time the container was last modified."
+      },
+      "leaseStatus": {
+        "type": {
+          "$ref": "#/245"
+        },
+        "flags": 2,
+        "description": "The lease status of the container."
+      },
+      "leaseState": {
+        "type": {
+          "$ref": "#/251"
+        },
+        "flags": 2,
+        "description": "Lease state of the container."
+      },
+      "leaseDuration": {
+        "type": {
+          "$ref": "#/254"
+        },
+        "flags": 2,
+        "description": "Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/255"
+        },
+        "flags": 0,
+        "description": "A name-value pair to associate with the container as metadata."
+      },
+      "immutabilityPolicy": {
+        "type": {
+          "$ref": "#/256"
+        },
+        "flags": 2,
+        "description": "The ImmutabilityPolicy property of the container."
+      },
+      "legalHold": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 2,
+        "description": "The LegalHold property of the container."
+      },
+      "hasLegalHold": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account."
+      },
+      "hasImmutabilityPolicy": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "The hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Container"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Blob"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/239"
+      },
+      {
+        "$ref": "#/240"
+      },
+      {
+        "$ref": "#/241"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Locked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unlocked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/243"
+      },
+      {
+        "$ref": "#/244"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Available"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Leased"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Breaking"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Broken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/246"
+      },
+      {
+        "$ref": "#/247"
+      },
+      {
+        "$ref": "#/248"
+      },
+      {
+        "$ref": "#/249"
+      },
+      {
+        "$ref": "#/250"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Infinite"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Fixed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/252"
+      },
+      {
+        "$ref": "#/253"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerPropertiesMetadata",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImmutabilityPolicyProperties",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 0,
+        "description": "The properties of an ImmutabilityPolicy of a blob container."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "ImmutabilityPolicy Etag."
+      },
+      "updateHistory": {
+        "type": {
+          "$ref": "#/266"
+        },
+        "flags": 2,
+        "description": "The ImmutabilityPolicy update history of the blob container."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImmutabilityPolicyProperty",
+    "properties": {
+      "immutabilityPeriodSinceCreationInDays": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 0,
+        "description": "The immutability period for the blobs in the container since the policy creation, in days."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/260"
+        },
+        "flags": 2,
+        "description": "The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked."
+      },
+      "allowProtectedAppendWrites": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Locked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unlocked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/258"
+      },
+      {
+        "$ref": "#/259"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateHistoryProperty",
+    "properties": {
+      "update": {
+        "type": {
+          "$ref": "#/265"
+        },
+        "flags": 2,
+        "description": "The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend."
+      },
+      "immutabilityPeriodSinceCreationInDays": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 2,
+        "description": "The immutability period for the blobs in the container since the policy creation, in days."
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Returns the date and time the ImmutabilityPolicy was updated."
+      },
+      "objectIdentifier": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Returns the Object ID of the user who updated the ImmutabilityPolicy."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy."
+      },
+      "upn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Returns the User Principal Name of the user who updated the ImmutabilityPolicy."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "put"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "lock"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "extend"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/262"
+      },
+      {
+        "$ref": "#/263"
+      },
+      {
+        "$ref": "#/264"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/261"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LegalHoldProperties",
+    "properties": {
+      "hasLegalHold": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/269"
+        },
+        "flags": 0,
+        "description": "The list of LegalHold tags of a blob container."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TagProperty",
+    "properties": {
+      "tag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The tag value."
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Returns the date and time the tag was added."
+      },
+      "objectIdentifier": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Returns the Object ID of the user who added the tag."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Returns the Tenant ID that issued the token for the user who added the tag."
+      },
+      "upn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Returns the User Principal Name of the user who added the tag."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/268"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts/blobServices/containers@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/237"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/271"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/272"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/273"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/274"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 1,
+        "description": "The properties of an ImmutabilityPolicy of a blob container."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Etag."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/275"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/277"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts/fileServices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts/fileServices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/278"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/279"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/280"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/282"
+        },
+        "flags": 0,
+        "description": "The properties of File services in storage account."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Sku name and tier."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileServicePropertiesProperties",
+    "properties": {
+      "cors": {
+        "type": {
+          "$ref": "#/209"
+        },
+        "flags": 0,
+        "description": "Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service."
+      },
+      "shareDeleteRetentionPolicy": {
+        "type": {
+          "$ref": "#/225"
+        },
+        "flags": 0,
+        "description": "The file service properties for share soft delete."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts/fileServices@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/281"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts/fileServices/shares"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts/fileServices/shares",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/284"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/285"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/287"
+        },
+        "flags": 0,
+        "description": "Properties of the file share."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Etag."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileShareProperties",
+    "properties": {
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Returns the date and time the share was last modified."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/288"
+        },
+        "flags": 0,
+        "description": "A name-value pair to associate with the share as metadata."
+      },
+      "shareQuota": {
+        "type": {
+          "$ref": "#/289"
+        },
+        "flags": 0,
+        "description": "The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400."
+      },
+      "enabledProtocols": {
+        "type": {
+          "$ref": "#/292"
+        },
+        "flags": 0,
+        "description": "The authentication protocol that is used for the file share. Can only be specified when creating a share."
+      },
+      "rootSquash": {
+        "type": {
+          "$ref": "#/296"
+        },
+        "flags": 0,
+        "description": "The property is for NFS share only. The default is NoRootSquash."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The version of the share."
+      },
+      "deleted": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "Indicates whether the share was deleted."
+      },
+      "deletedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The deleted time if the share was deleted."
+      },
+      "remainingRetentionDays": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 2,
+        "description": "Remaining retention days for share that was soft deleted."
+      },
+      "accessTier": {
+        "type": {
+          "$ref": "#/301"
+        },
+        "flags": 0,
+        "description": "Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium."
+      },
+      "accessTierChangeTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Indicates the last modification time for share access tier."
+      },
+      "accessTierStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Indicates if there is a pending transition for access tier."
+      },
+      "shareUsageBytes": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 2,
+        "description": "The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileSharePropertiesMetadata",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 102400
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SMB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NFS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/290"
+      },
+      {
+        "$ref": "#/291"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoRootSquash"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RootSquash"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AllSquash"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/293"
+      },
+      {
+        "$ref": "#/294"
+      },
+      {
+        "$ref": "#/295"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TransactionOptimized"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hot"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cool"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/297"
+      },
+      {
+        "$ref": "#/298"
+      },
+      {
+        "$ref": "#/299"
+      },
+      {
+        "$ref": "#/300"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts/fileServices/shares@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/286"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/303"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts/queueServices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts/queueServices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/304"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/305"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/306"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/308"
+        },
+        "flags": 0,
+        "description": "The properties of a storage account’s Queue service."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueueServicePropertiesProperties",
+    "properties": {
+      "cors": {
+        "type": {
+          "$ref": "#/209"
+        },
+        "flags": 0,
+        "description": "Specifies CORS rules for the Queue service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Queue service."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts/queueServices@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/307"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 63,
+    "pattern": "^[a-z0-9]([a-z0-9]|(-(?!-))){1,61}[a-z0-9]$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts/queueServices/queues"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts/queueServices/queues",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/310"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/311"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/312"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/314"
+        },
+        "flags": 0,
+        "description": "Queue resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueueProperties",
+    "properties": {
+      "metadata": {
+        "type": {
+          "$ref": "#/315"
+        },
+        "flags": 0,
+        "description": "A name-value pair that represents queue metadata."
+      },
+      "approximateMessageCount": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 2,
+        "description": "Integer indicating an approximate number of messages in the queue. This number is not lower than the actual number of messages in the queue, but could be higher."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueuePropertiesMetadata",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts/queueServices/queues@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/313"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/317"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts/tableServices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts/tableServices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/318"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/319"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/320"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "The properties of a storage account’s Table service."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TableServicePropertiesProperties",
+    "properties": {
+      "cors": {
+        "type": {
+          "$ref": "#/209"
+        },
+        "flags": 0,
+        "description": "Specifies CORS rules for the Table service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Table service."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts/tableServices@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/321"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 63,
+    "pattern": "^[A-Za-z][A-Za-z0-9]{2,62}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts/tableServices/tables"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts/tableServices/tables",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/324"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/325"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/326"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/328"
+        },
+        "flags": 2,
+        "description": "Table resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TableProperties",
+    "properties": {
+      "tableName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Table name under the specified account"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts/tableServices/tables@2019-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/327"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccountListKeysResult",
+    "properties": {
+      "keys": {
+        "type": {
+          "$ref": "#/335"
+        },
+        "flags": 2,
+        "description": "Gets the list of storage account keys and their properties for the specified storage account."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccountKey",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the key."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Base 64-encoded value of the key."
+      },
+      "permissions": {
+        "type": {
+          "$ref": "#/334"
+        },
+        "flags": 2,
+        "description": "Permissions for the key -- read-only or full permissions."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Read"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Full"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/332"
+      },
+      {
+        "$ref": "#/333"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/331"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listKeys",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2019-06-01",
+    "output": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccountRegenerateKeyParameters",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of storage keys that want to be regenerated, possible values are key1, key2, kerb1, kerb2."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2019-06-01",
+    "output": {
+      "$ref": "#/330"
+    },
+    "input": {
+      "$ref": "#/337"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccountSasParameters",
+    "properties": {
+      "signedServices": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 1,
+        "description": "The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f)."
+      },
+      "signedResourceTypes": {
+        "type": {
+          "$ref": "#/348"
+        },
+        "flags": 1,
+        "description": "The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files."
+      },
+      "signedPermission": {
+        "type": {
+          "$ref": "#/357"
+        },
+        "flags": 1,
+        "description": "The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p)."
+      },
+      "signedIp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "An IP address or a range of IP addresses from which to accept requests."
+      },
+      "signedProtocol": {
+        "type": {
+          "$ref": "#/360"
+        },
+        "flags": 0,
+        "description": "The protocol permitted for a request made with the account SAS."
+      },
+      "signedStart": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The time at which the SAS becomes valid."
+      },
+      "signedExpiry": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The time at which the shared access signature becomes invalid."
+      },
+      "keyToSign": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The key to sign the account SAS token with."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "b"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "q"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "t"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "f"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/340"
+      },
+      {
+        "$ref": "#/341"
+      },
+      {
+        "$ref": "#/342"
+      },
+      {
+        "$ref": "#/343"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "s"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "o"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/345"
+      },
+      {
+        "$ref": "#/346"
+      },
+      {
+        "$ref": "#/347"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "r"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "d"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "w"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "l"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "a"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "u"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "p"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/349"
+      },
+      {
+        "$ref": "#/350"
+      },
+      {
+        "$ref": "#/351"
+      },
+      {
+        "$ref": "#/352"
+      },
+      {
+        "$ref": "#/353"
+      },
+      {
+        "$ref": "#/354"
+      },
+      {
+        "$ref": "#/355"
+      },
+      {
+        "$ref": "#/356"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "https,http"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "https"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/358"
+      },
+      {
+        "$ref": "#/359"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ListAccountSasResponse",
+    "properties": {
+      "accountSasToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "List SAS credentials of storage account."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listAccountSas",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2019-06-01",
+    "output": {
+      "$ref": "#/361"
+    },
+    "input": {
+      "$ref": "#/339"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceSasParameters",
+    "properties": {
+      "canonicalizedResource": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The canonical path to the signed resource."
+      },
+      "signedResource": {
+        "type": {
+          "$ref": "#/368"
+        },
+        "flags": 0,
+        "description": "The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s)."
+      },
+      "signedPermission": {
+        "type": {
+          "$ref": "#/377"
+        },
+        "flags": 0,
+        "description": "The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p)."
+      },
+      "signedIp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "An IP address or a range of IP addresses from which to accept requests."
+      },
+      "signedProtocol": {
+        "type": {
+          "$ref": "#/380"
+        },
+        "flags": 0,
+        "description": "The protocol permitted for a request made with the account SAS."
+      },
+      "signedStart": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The time at which the SAS becomes valid."
+      },
+      "signedExpiry": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The time at which the shared access signature becomes invalid."
+      },
+      "signedIdentifier": {
+        "type": {
+          "$ref": "#/381"
+        },
+        "flags": 0,
+        "description": "A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table."
+      },
+      "startPk": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start of partition key."
+      },
+      "endPk": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end of partition key."
+      },
+      "startRk": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start of row key."
+      },
+      "endRk": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end of row key."
+      },
+      "keyToSign": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The key to sign the account SAS token with."
+      },
+      "rscc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The response header override for cache control."
+      },
+      "rscd": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The response header override for content disposition."
+      },
+      "rsce": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The response header override for content encoding."
+      },
+      "rscl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The response header override for content language."
+      },
+      "rsct": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The response header override for content type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "b"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "f"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "s"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/364"
+      },
+      {
+        "$ref": "#/365"
+      },
+      {
+        "$ref": "#/366"
+      },
+      {
+        "$ref": "#/367"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "r"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "d"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "w"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "l"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "a"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "c"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "u"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "p"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/369"
+      },
+      {
+        "$ref": "#/370"
+      },
+      {
+        "$ref": "#/371"
+      },
+      {
+        "$ref": "#/372"
+      },
+      {
+        "$ref": "#/373"
+      },
+      {
+        "$ref": "#/374"
+      },
+      {
+        "$ref": "#/375"
+      },
+      {
+        "$ref": "#/376"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "https,http"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "https"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/378"
+      },
+      {
+        "$ref": "#/379"
+      }
+    ]
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 64
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ListServiceSasResponse",
+    "properties": {
+      "serviceSasToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "List service SAS credentials of specific resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listServiceSas",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2019-06-01",
+    "output": {
+      "$ref": "#/382"
+    },
+    "input": {
+      "$ref": "#/363"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2019-06-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restoreBlobRanges",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2019-06-01",
+    "output": {
+      "$ref": "#/113"
+    },
+    "input": {
+      "$ref": "#/118"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revokeUserDelegationKeys",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2019-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LegalHold",
+    "properties": {
+      "hasLegalHold": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/389"
+        },
+        "flags": 1,
+        "description": "Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 23
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/388"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setLegalHold",
+    "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
+    "apiVersion": "2019-06-01",
+    "output": {
+      "$ref": "#/387"
+    },
+    "input": {
+      "$ref": "#/387"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clearLegalHold",
+    "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
+    "apiVersion": "2019-06-01",
+    "output": {
+      "$ref": "#/387"
+    },
+    "input": {
+      "$ref": "#/387"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LeaseContainerRequest",
+    "properties": {
+      "action": {
+        "type": {
+          "$ref": "#/398"
+        },
+        "flags": 1,
+        "description": "Specifies the lease action. Can be one of the available actions."
+      },
+      "leaseId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Identifies the lease. Can be specified in any valid GUID string format."
+      },
+      "breakPeriod": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 0,
+        "description": "Optional. For a break action, proposed duration the lease should continue before it is broken, in seconds, between 0 and 60."
+      },
+      "leaseDuration": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 0,
+        "description": "Required for acquire. Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires."
+      },
+      "proposedLeaseId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional for acquire, required for change. Proposed lease ID, in a GUID string format."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Acquire"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Renew"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Change"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Release"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Break"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/393"
+      },
+      {
+        "$ref": "#/394"
+      },
+      {
+        "$ref": "#/395"
+      },
+      {
+        "$ref": "#/396"
+      },
+      {
+        "$ref": "#/397"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LeaseContainerResponse",
+    "properties": {
+      "leaseId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Returned unique lease ID that must be included with any request to delete the container, or to renew, change, or release the lease."
+      },
+      "leaseTimeSeconds": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Approximate time remaining in the lease period, in seconds."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "lease",
+    "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
+    "apiVersion": "2019-06-01",
+    "output": {
+      "$ref": "#/399"
+    },
+    "input": {
+      "$ref": "#/392"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImmutabilityPolicy",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 1,
+        "description": "The properties of an ImmutabilityPolicy of a blob container."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Etag."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "lock",
+    "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
+    "apiVersion": "2019-06-01",
+    "output": {
+      "$ref": "#/401"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "extend",
+    "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
+    "apiVersion": "2019-06-01",
+    "output": {
+      "$ref": "#/401"
+    },
+    "input": {
+      "$ref": "#/401"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeletedShare",
+    "properties": {
+      "deletedShareName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Required. Identify the name of the deleted share that will be restored."
+      },
+      "deletedShareVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Required. Identify the version of the deleted share that will be restored."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.Storage/storageAccounts/fileServices/shares",
+    "apiVersion": "2019-06-01",
+    "input": {
+      "$ref": "#/404"
+    }
+  }
+]

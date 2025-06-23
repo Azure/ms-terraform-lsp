@@ -1,0 +1,1247 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMariaDB/servers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMariaDB/servers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The SKU (pricing tier) of the server."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 1,
+        "description": "Properties of the server."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The location the resource resides in."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "Application-specific metadata in the form of key-value pairs."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 2,
+        "description": "The Azure Active Directory identity of the server."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Sku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The tier of the particular SKU, e.g. Basic."
+      },
+      "capacity": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The scale up/out capacity, representing server's compute units."
+      },
+      "size": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The size code, to be interpreted by resource as appropriate."
+      },
+      "family": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The family of hardware."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeneralPurpose"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MemoryOptimized"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ServerPropertiesForCreateOrServerProperties",
+    "discriminator": "createMode",
+    "baseProperties": {
+      "version": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Server version."
+      },
+      "sslEnforcement": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Enable ssl enforcement or not when connect to server."
+      },
+      "minimalTlsVersion": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Enforce a minimal Tls version for the server."
+      },
+      "storageProfile": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Storage profile of a server."
+      },
+      "administratorLogin": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation)."
+      },
+      "userVisibleState": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "A state of a server that is visible to user."
+      },
+      "fullyQualifiedDomainName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The fully qualified domain name of a server."
+      },
+      "earliestRestoreDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Earliest restore point creation time (ISO8601 format)"
+      },
+      "replicationRole": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The replication role of the server."
+      },
+      "masterServerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The master server id of a replica server."
+      },
+      "replicaCapacity": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "The maximum number of replicas that a master server can have."
+      }
+    },
+    "elements": {
+      "Default": {
+        "$ref": "#/34"
+      },
+      "GeoRestore": {
+        "$ref": "#/37"
+      },
+      "PointInTimeRestore": {
+        "$ref": "#/39"
+      },
+      "Replica": {
+        "$ref": "#/41"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "10.2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "10.3"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TLS1_0"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TLS1_1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TLS1_2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TLSEnforcementDisabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageProfile",
+    "properties": {
+      "backupRetentionDays": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Backup retention days for the server."
+      },
+      "geoRedundantBackup": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Enable Geo-redundant or not for server backup."
+      },
+      "storageMB": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Max storage allowed for a server."
+      },
+      "storageAutogrow": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Enable Storage Auto Grow."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dropping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerPropertiesForDefaultCreate",
+    "properties": {
+      "administratorLogin": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation)."
+      },
+      "administratorLoginPassword": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 5,
+        "description": "The password of the administrator login."
+      },
+      "createMode": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 1,
+        "description": "The mode to create a new server."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerPropertiesForGeoRestore",
+    "properties": {
+      "sourceServerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "The source server id to restore from."
+      },
+      "createMode": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 1,
+        "description": "The mode to create a new server."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeoRestore"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerPropertiesForRestore",
+    "properties": {
+      "sourceServerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "The source server id to restore from."
+      },
+      "restorePointInTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "Restore point creation time (ISO8601 format), specifying the time to restore from."
+      },
+      "createMode": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 1,
+        "description": "The mode to create a new server."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PointInTimeRestore"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerPropertiesForReplica",
+    "properties": {
+      "sourceServerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "The master server id to create replica from."
+      },
+      "createMode": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The mode to create a new server."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Replica"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerForCreateTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceIdentity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 2,
+        "description": "The Azure Active Directory principal id."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 2,
+        "description": "The Azure Active Directory tenant id."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMariaDB/servers@2018-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMariaDB/servers/firewallRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMariaDB/servers/firewallRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 1,
+        "description": "The properties of a firewall rule."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallRuleProperties",
+    "properties": {
+      "startIpAddress": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 1,
+        "description": "The start IP address of the server firewall rule. Must be IPv4 format."
+      },
+      "endIpAddress": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 1,
+        "description": "The end IP address of the server firewall rule. Must be IPv4 format."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMariaDB/servers/firewallRules@2018-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/51"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMariaDB/servers/virtualNetworkRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMariaDB/servers/virtualNetworkRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkRuleProperties",
+    "properties": {
+      "virtualNetworkSubnetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The ARM resource id of the virtual network subnet."
+      },
+      "ignoreMissingVnetServiceEndpoint": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "Create firewall rule before the virtual network has vnet service endpoint enabled."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 2,
+        "description": "Virtual Network Rule State"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Initializing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMariaDB/servers/virtualNetworkRules@2018-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/57"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMariaDB/servers/databases"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMariaDB/servers/databases",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "The properties of a database."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseProperties",
+    "properties": {
+      "charset": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The charset of the database."
+      },
+      "collation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The collation of the database."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMariaDB/servers/databases@2018-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/69"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMariaDB/servers/configurations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMariaDB/servers/configurations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "The properties of a configuration."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationProperties",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Value of the configuration."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Description of the configuration."
+      },
+      "defaultValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Default value of the configuration."
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Data type of the configuration."
+      },
+      "allowedValues": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Allowed values of the configuration."
+      },
+      "source": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Source of the configuration."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMariaDB/servers/configurations@2018-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/74"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMariaDB/servers/securityAlertPolicies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMariaDB/servers/securityAlertPolicies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityAlertPolicyProperties",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 1,
+        "description": "Specifies the state of the policy, whether it is enabled or disabled."
+      },
+      "disabledAlerts": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly"
+      },
+      "emailAddresses": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Specifies an array of e-mail addresses to which the alert is sent."
+      },
+      "emailAccountAdmins": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "Specifies that the alert is sent to the account administrators."
+      },
+      "storageEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs."
+      },
+      "storageAccountAccessKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the identifier key of the Threat Detection audit storage account."
+      },
+      "retentionDays": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Specifies the number of days to keep in the Threat Detection audit logs."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/84"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMariaDB/servers/securityAlertPolicies@2018-06-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/81"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforMariaDB/servers",
+    "apiVersion": "2018-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 0,
+        "description": "The list of server configurations."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Configuration",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "The properties of a configuration."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/91"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateConfigurations",
+    "resourceType": "Microsoft.DBforMariaDB/servers",
+    "apiVersion": "2018-06-01-preview",
+    "output": {
+      "$ref": "#/90"
+    },
+    "input": {
+      "$ref": "#/90"
+    }
+  }
+]

@@ -1,0 +1,4180 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/networkManagers/securityUserConfigurations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network/networkManagers/securityUserConfigurations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Indicates the properties for the network manager security user configuration."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The system metadata related to this resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityUserConfigurationPropertiesFormat",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the security user configuration."
+      },
+      "deleteExistingNSGs": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Flag if need to delete existing network security groups."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "False"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "True"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/networkManagers/securityUserConfigurations@2022-02-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Indicates the properties for the network manager user rule collection."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The system metadata related to this resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserRuleCollectionPropertiesFormat",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the user rule collection."
+      },
+      "appliesToGroups": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 1,
+        "description": "Groups for configuration"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkManagerSecurityGroupItem",
+    "properties": {
+      "networkGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Network manager group Id."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections@2022-02-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/27"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections/rules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01-preview"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections/rules",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The system metadata related to this resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      }
+    },
+    "elements": {
+      "Custom": {
+        "$ref": "#/40"
+      },
+      "Default": {
+        "$ref": "#/66"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserRule",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Indicates the properties of the security user rule"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 1,
+        "description": "Whether the rule is custom or default."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserRulePropertiesFormat",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description for this rule."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 1,
+        "description": "Network protocol this rule applies to."
+      },
+      "sources": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "The CIDR or source IP ranges."
+      },
+      "destinations": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "The destination address prefixes. CIDR or destination IP ranges."
+      },
+      "sourcePortRanges": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "The source port ranges."
+      },
+      "destinationPortRanges": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "The destination port ranges."
+      },
+      "direction": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 1,
+        "description": "Indicates if the traffic matched against the rule in inbound or outbound."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the security configuration user rule resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tcp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Udp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Icmp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Esp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Any"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ah"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AddressPrefixItem",
+    "properties": {
+      "addressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Address prefix."
+      },
+      "addressPrefixType": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "Address prefix type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IPPrefix"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServiceTag"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Outbound"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Custom"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultUserRule",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Indicates the properties of the security default user rule"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 1,
+        "description": "Whether the rule is custom or default."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultUserRulePropertiesFormat",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A description for this rule. Restricted to 140 chars."
+      },
+      "flag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Default rule flag."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "Network protocol this rule applies to."
+      },
+      "sources": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 2,
+        "description": "The CIDR or source IP ranges."
+      },
+      "destinations": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 2,
+        "description": "The destination address prefixes. CIDR or destination IP ranges."
+      },
+      "sourcePortRanges": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 2,
+        "description": "The source port ranges."
+      },
+      "destinationPortRanges": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 2,
+        "description": "The destination port ranges."
+      },
+      "direction": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 2,
+        "description": "Indicates if the traffic matched against the rule in inbound or outbound."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the security configuration user rule resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tcp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Udp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Icmp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Esp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Any"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ah"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Outbound"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections/rules@2022-02-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/39"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/networkManagers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network/networkManagers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 0,
+        "description": "The network manager properties"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The system metadata related to this resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkManagerProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the network manager."
+      },
+      "networkManagerScopes": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 1,
+        "description": "Scope of Network Manager."
+      },
+      "networkManagerScopeAccesses": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 1,
+        "description": "Scope Access."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the scope assignment resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkManagerPropertiesNetworkManagerScopes",
+    "properties": {
+      "managementGroups": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "List of management groups."
+      },
+      "subscriptions": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 0,
+        "description": "List of subscriptions."
+      },
+      "crossTenantScopes": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 2,
+        "description": "List of cross tenant scopes."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CrossTenantScopes",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Tenant ID."
+      },
+      "managementGroups": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 2,
+        "description": "List of management groups."
+      },
+      "subscriptions": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 2,
+        "description": "List of subscriptions."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/96"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAdmin"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityUser"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connectivity"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/107"
+      },
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/networkManagers@2022-02-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/91"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/networkManagers/connectivityConfigurations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network/networkManagers/connectivityConfigurations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Properties of a network manager connectivity configuration"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The system metadata related to this resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityConfigurationProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the connectivity configuration."
+      },
+      "connectivityTopology": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 1,
+        "description": "Connectivity topology type."
+      },
+      "hubs": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0,
+        "description": "List of hubItems"
+      },
+      "isGlobal": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "Flag if global mesh is supported."
+      },
+      "appliesToGroups": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 1,
+        "description": "Groups for configuration"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the connectivity configuration resource."
+      },
+      "deleteExistingPeering": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 0,
+        "description": "Flag if need to remove current existing peerings."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HubAndSpoke"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Mesh"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Hub",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/119"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "False"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "True"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/122"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectivityGroupItem",
+    "properties": {
+      "networkGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Network group Id."
+      },
+      "useHubGateway": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 0,
+        "description": "Flag if need to use hub gateway."
+      },
+      "isGlobal": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 0,
+        "description": "Flag if global is supported."
+      },
+      "groupConnectivity": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 1,
+        "description": "Group connectivity type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "False"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "True"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "False"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "True"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DirectlyConnected"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/124"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/135"
+      },
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/138"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "False"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "True"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/networkManagers/connectivityConfigurations@2022-02-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/114"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/networkManagers/networkGroups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network/networkManagers/networkGroups",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 0,
+        "description": "The Network Group properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The system metadata related to this resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkGroupProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the network group."
+      },
+      "memberType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Group member type."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the scope assignment resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/networkManagers/networkGroups@2022-02-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/146"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/networkManagers/networkGroups/staticMembers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network/networkManagers/networkGroups/staticMembers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 0,
+        "description": "The Static Member properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The system metadata related to this resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StaticMemberProperties",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/networkManagers/networkGroups/staticMembers@2022-02-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/156"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/networkManagers/securityAdminConfigurations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network/networkManagers/securityAdminConfigurations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 0,
+        "description": "Indicates the properties for the network manager security admin configuration."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The system metadata related to this resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityAdminConfigurationPropertiesFormat",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the security configuration."
+      },
+      "applyOnNetworkIntentPolicyBasedServices": {
+        "type": {
+          "$ref": "#/166"
+        },
+        "flags": 0,
+        "description": "Enum list of network intent policy based services."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/165"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/167"
+      },
+      {
+        "$ref": "#/168"
+      },
+      {
+        "$ref": "#/169"
+      },
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/networkManagers/securityAdminConfigurations@2022-02-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/161"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/networkManagers/securityAdminConfigurations/ruleCollections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network/networkManagers/securityAdminConfigurations/ruleCollections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/176"
+        },
+        "flags": 0,
+        "description": "Indicates the properties for the network manager admin rule collection."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The system metadata related to this resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdminRuleCollectionPropertiesFormat",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the admin rule collection."
+      },
+      "appliesToGroups": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 1,
+        "description": "Groups for configuration"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/networkManagers/securityAdminConfigurations/ruleCollections@2022-02-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/175"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/networkManagers/securityAdminConfigurations/ruleCollections/rules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01-preview"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Microsoft.Network/networkManagers/securityAdminConfigurations/ruleCollections/rules",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/185"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The system metadata related to this resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      }
+    },
+    "elements": {
+      "Custom": {
+        "$ref": "#/187"
+      },
+      "Default": {
+        "$ref": "#/214"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdminRule",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 0,
+        "description": "Indicates the properties of the security admin rule"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/213"
+        },
+        "flags": 1,
+        "description": "Whether the rule is custom or default."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdminPropertiesFormat",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description for this rule. Restricted to 140 chars."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/195"
+        },
+        "flags": 1,
+        "description": "Network protocol this rule applies to."
+      },
+      "sources": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 0,
+        "description": "The CIDR or source IP ranges."
+      },
+      "destinations": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 0,
+        "description": "The destination address prefixes. CIDR or destination IP ranges."
+      },
+      "sourcePortRanges": {
+        "type": {
+          "$ref": "#/198"
+        },
+        "flags": 0,
+        "description": "The source port ranges."
+      },
+      "destinationPortRanges": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 0,
+        "description": "The destination port ranges."
+      },
+      "access": {
+        "type": {
+          "$ref": "#/203"
+        },
+        "flags": 1,
+        "description": "Indicates the access allowed for this particular rule"
+      },
+      "priority": {
+        "type": {
+          "$ref": "#/204"
+        },
+        "flags": 1,
+        "description": "The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule."
+      },
+      "direction": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 1,
+        "description": "Indicates if the traffic matched against the rule in inbound or outbound."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/212"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tcp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Udp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Icmp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Esp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Any"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ah"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/189"
+      },
+      {
+        "$ref": "#/190"
+      },
+      {
+        "$ref": "#/191"
+      },
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/193"
+      },
+      {
+        "$ref": "#/194"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlwaysAllow"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/200"
+      },
+      {
+        "$ref": "#/201"
+      },
+      {
+        "$ref": "#/202"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 4096
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Outbound"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/206"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/208"
+      },
+      {
+        "$ref": "#/209"
+      },
+      {
+        "$ref": "#/210"
+      },
+      {
+        "$ref": "#/211"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Custom"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultAdminRule",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/215"
+        },
+        "flags": 0,
+        "description": "Indicates the properties of the security admin rule"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/240"
+        },
+        "flags": 1,
+        "description": "Whether the rule is custom or default."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultAdminPropertiesFormat",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A description for this rule. Restricted to 140 chars."
+      },
+      "flag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Default rule flag."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 2,
+        "description": "Network protocol this rule applies to."
+      },
+      "sources": {
+        "type": {
+          "$ref": "#/223"
+        },
+        "flags": 2,
+        "description": "The CIDR or source IP ranges."
+      },
+      "destinations": {
+        "type": {
+          "$ref": "#/224"
+        },
+        "flags": 2,
+        "description": "The destination address prefixes. CIDR or destination IP ranges."
+      },
+      "sourcePortRanges": {
+        "type": {
+          "$ref": "#/225"
+        },
+        "flags": 2,
+        "description": "The source port ranges."
+      },
+      "destinationPortRanges": {
+        "type": {
+          "$ref": "#/226"
+        },
+        "flags": 2,
+        "description": "The destination port ranges."
+      },
+      "access": {
+        "type": {
+          "$ref": "#/230"
+        },
+        "flags": 2,
+        "description": "Indicates the access allowed for this particular rule"
+      },
+      "priority": {
+        "type": {
+          "$ref": "#/231"
+        },
+        "flags": 2,
+        "description": "The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule."
+      },
+      "direction": {
+        "type": {
+          "$ref": "#/234"
+        },
+        "flags": 2,
+        "description": "Indicates if the traffic matched against the rule in inbound or outbound."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/239"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tcp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Udp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Icmp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Esp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Any"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ah"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/216"
+      },
+      {
+        "$ref": "#/217"
+      },
+      {
+        "$ref": "#/218"
+      },
+      {
+        "$ref": "#/219"
+      },
+      {
+        "$ref": "#/220"
+      },
+      {
+        "$ref": "#/221"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlwaysAllow"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/227"
+      },
+      {
+        "$ref": "#/228"
+      },
+      {
+        "$ref": "#/229"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Outbound"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/232"
+      },
+      {
+        "$ref": "#/233"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/235"
+      },
+      {
+        "$ref": "#/236"
+      },
+      {
+        "$ref": "#/237"
+      },
+      {
+        "$ref": "#/238"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/networkManagers/securityAdminConfigurations/ruleCollections/rules@2022-02-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/186"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/networkManagerConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network/networkManagerConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/242"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/245"
+        },
+        "flags": 0,
+        "description": "The scope connection properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The system metadata related to this resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkManagerConnectionProperties",
+    "properties": {
+      "networkManagerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Network Manager Id."
+      },
+      "connectionState": {
+        "type": {
+          "$ref": "#/251"
+        },
+        "flags": 2,
+        "description": "Connection state."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the scope connection."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Conflict"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Revoked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/246"
+      },
+      {
+        "$ref": "#/247"
+      },
+      {
+        "$ref": "#/248"
+      },
+      {
+        "$ref": "#/249"
+      },
+      {
+        "$ref": "#/250"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/networkManagerConnections@2022-02-01-preview",
+    "scopeType": 6,
+    "body": {
+      "$ref": "#/244"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/networkManagers/scopeConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network/networkManagers/scopeConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/253"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/254"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/256"
+        },
+        "flags": 0,
+        "description": "The scope connection properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The system metadata related to this resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique read-only string that changes whenever the resource is updated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScopeConnectionProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Tenant ID."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID."
+      },
+      "connectionState": {
+        "type": {
+          "$ref": "#/262"
+        },
+        "flags": 2,
+        "description": "Connection State"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the scope connection."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Conflict"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Revoked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/257"
+      },
+      {
+        "$ref": "#/258"
+      },
+      {
+        "$ref": "#/259"
+      },
+      {
+        "$ref": "#/260"
+      },
+      {
+        "$ref": "#/261"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/networkManagers/scopeConnections@2022-02-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/255"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkManagerCommit",
+    "properties": {
+      "commitId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Commit Id."
+      },
+      "targetLocations": {
+        "type": {
+          "$ref": "#/265"
+        },
+        "flags": 1,
+        "description": "List of target locations."
+      },
+      "configurationIds": {
+        "type": {
+          "$ref": "#/266"
+        },
+        "flags": 0,
+        "description": "List of configuration ids."
+      },
+      "commitType": {
+        "type": {
+          "$ref": "#/270"
+        },
+        "flags": 0,
+        "description": "Commit Type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAdmin"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityUser"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connectivity"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/267"
+      },
+      {
+        "$ref": "#/268"
+      },
+      {
+        "$ref": "#/269"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "commit",
+    "resourceType": "Microsoft.Network/networkManagers",
+    "apiVersion": "2022-02-01-preview",
+    "input": {
+      "$ref": "#/264"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkManagerDeploymentStatusParameter",
+    "properties": {
+      "regions": {
+        "type": {
+          "$ref": "#/273"
+        },
+        "flags": 0,
+        "description": "List of locations."
+      },
+      "deploymentTypes": {
+        "type": {
+          "$ref": "#/278"
+        },
+        "flags": 0,
+        "description": "List of deployment types."
+      },
+      "skipToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Continuation token for pagination, capturing the next page size and offset, as well as the context of the query."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAdmin"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityUser"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connectivity"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/274"
+      },
+      {
+        "$ref": "#/275"
+      },
+      {
+        "$ref": "#/276"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/277"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkManagerDeploymentStatusListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/291"
+        },
+        "flags": 0,
+        "description": "Gets a page of Network Manager Deployment Status"
+      },
+      "skipToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkManagerDeploymentStatus",
+    "properties": {
+      "commitTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Commit Time."
+      },
+      "region": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Region Name."
+      },
+      "deploymentStatus": {
+        "type": {
+          "$ref": "#/285"
+        },
+        "flags": 0,
+        "description": "Deployment Status."
+      },
+      "configurationIds": {
+        "type": {
+          "$ref": "#/286"
+        },
+        "flags": 0,
+        "description": "List of configuration ids."
+      },
+      "deploymentType": {
+        "type": {
+          "$ref": "#/290"
+        },
+        "flags": 0,
+        "description": "Configuration Deployment Type."
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Error Message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotStarted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deploying"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deployed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/281"
+      },
+      {
+        "$ref": "#/282"
+      },
+      {
+        "$ref": "#/283"
+      },
+      {
+        "$ref": "#/284"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityAdmin"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityUser"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connectivity"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/287"
+      },
+      {
+        "$ref": "#/288"
+      },
+      {
+        "$ref": "#/289"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/280"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listDeploymentStatus",
+    "resourceType": "Microsoft.Network/networkManagers",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/279"
+    },
+    "input": {
+      "$ref": "#/272"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveVirtualNetworksParameter",
+    "properties": {
+      "conditionalMembers": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Conditional Members."
+      },
+      "skipToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Continuation token for pagination, capturing the next page size and offset, as well as the context of the query."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveVirtualNetworksListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/299"
+        },
+        "flags": 0,
+        "description": "Gets a page of EffectiveVirtualNetwork"
+      },
+      "skipToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveVirtualNetwork",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Effective vnet Id."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location of vnet."
+      },
+      "membershipType": {
+        "type": {
+          "$ref": "#/298"
+        },
+        "flags": 0,
+        "description": "Membership Type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Static"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dynamic"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/296"
+      },
+      {
+        "$ref": "#/297"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/295"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listEffectiveVirtualNetworks",
+    "resourceType": "Microsoft.Network/networkManagers",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/294"
+    },
+    "input": {
+      "$ref": "#/293"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActiveConfigurationParameter",
+    "properties": {
+      "regions": {
+        "type": {
+          "$ref": "#/302"
+        },
+        "flags": 0,
+        "description": "List of regions."
+      },
+      "skipToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActiveConnectivityConfigurationsListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/307"
+        },
+        "flags": 0,
+        "description": "Gets a page of active connectivity configurations."
+      },
+      "skipToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActiveConnectivityConfiguration",
+    "properties": {
+      "commitTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Deployment time string."
+      },
+      "region": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Deployment region."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Properties of a network manager connectivity configuration"
+      },
+      "configurationGroups": {
+        "type": {
+          "$ref": "#/306"
+        },
+        "flags": 0,
+        "description": "Effective configuration groups."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationGroup",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 0,
+        "description": "The network configuration group properties"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/305"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/304"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listActiveConnectivityConfigurations",
+    "resourceType": "Microsoft.Network/networkManagers",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/303"
+    },
+    "input": {
+      "$ref": "#/301"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActiveSecurityAdminRulesListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/317"
+        },
+        "flags": 0,
+        "description": "Gets a page of active security admin rules."
+      },
+      "skipToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ActiveBaseSecurityAdminRule",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID."
+      },
+      "commitTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Deployment time string."
+      },
+      "region": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Deployment region."
+      },
+      "configurationDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the security admin configuration."
+      },
+      "ruleCollectionDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the rule collection."
+      },
+      "ruleCollectionAppliesToGroups": {
+        "type": {
+          "$ref": "#/311"
+        },
+        "flags": 0,
+        "description": "Groups for rule collection"
+      },
+      "ruleGroups": {
+        "type": {
+          "$ref": "#/312"
+        },
+        "flags": 0,
+        "description": "Effective configuration groups."
+      }
+    },
+    "elements": {
+      "Custom": {
+        "$ref": "#/313"
+      },
+      "Default": {
+        "$ref": "#/315"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/305"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActiveSecurityAdminRule",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 0,
+        "description": "Indicates the properties of the security admin rule"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/314"
+        },
+        "flags": 1,
+        "description": "Whether the rule is custom or default."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Custom"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActiveDefaultSecurityAdminRule",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/215"
+        },
+        "flags": 0,
+        "description": "Indicates the properties of the default security admin rule"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/316"
+        },
+        "flags": 1,
+        "description": "Whether the rule is custom or default."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/310"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listActiveSecurityAdminRules",
+    "resourceType": "Microsoft.Network/networkManagers",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/309"
+    },
+    "input": {
+      "$ref": "#/301"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActiveSecurityUserRulesListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/327"
+        },
+        "flags": 0,
+        "description": "Gets a page of active security user rules."
+      },
+      "skipToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ActiveBaseSecurityUserRule",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID."
+      },
+      "commitTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Deployment time string."
+      },
+      "region": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Deployment region."
+      },
+      "configurationDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the security user configuration."
+      },
+      "ruleCollectionDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the rule collection."
+      },
+      "ruleCollectionAppliesToGroups": {
+        "type": {
+          "$ref": "#/321"
+        },
+        "flags": 0,
+        "description": "Groups for rule collection"
+      },
+      "ruleGroups": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0,
+        "description": "Effective configuration groups."
+      }
+    },
+    "elements": {
+      "Custom": {
+        "$ref": "#/323"
+      },
+      "Default": {
+        "$ref": "#/325"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/305"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActiveSecurityUserRule",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Indicates the properties of the security user rule"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/324"
+        },
+        "flags": 1,
+        "description": "Whether the rule is custom or default."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Custom"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActiveDefaultSecurityUserRule",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Indicates the properties of the security default user rule"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/326"
+        },
+        "flags": 1,
+        "description": "Whether the rule is custom or default."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/320"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listActiveSecurityUserRules",
+    "resourceType": "Microsoft.Network/networkManagers",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/319"
+    },
+    "input": {
+      "$ref": "#/301"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryRequestOptions",
+    "properties": {
+      "skipToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkManagerEffectiveConnectivityConfigurationListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/333"
+        },
+        "flags": 0,
+        "description": "Gets a page of NetworkManagerEffectiveConnectivityConfiguration"
+      },
+      "skipToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveConnectivityConfiguration",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Properties of a network manager connectivity configuration"
+      },
+      "configurationGroups": {
+        "type": {
+          "$ref": "#/332"
+        },
+        "flags": 0,
+        "description": "Effective configuration groups."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/305"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/331"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listNetworkManagerEffectiveConnectivityConfigurations",
+    "resourceType": "Microsoft.Network/virtualNetworks",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/330"
+    },
+    "input": {
+      "$ref": "#/329"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkManagerEffectiveSecurityAdminRulesListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/343"
+        },
+        "flags": 0,
+        "description": "Gets a page of NetworkManagerEffectiveSecurityAdminRules"
+      },
+      "skipToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "EffectiveBaseSecurityAdminRule",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID."
+      },
+      "configurationDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the security admin configuration."
+      },
+      "ruleCollectionDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the rule collection."
+      },
+      "ruleCollectionAppliesToGroups": {
+        "type": {
+          "$ref": "#/337"
+        },
+        "flags": 0,
+        "description": "Groups for rule collection"
+      },
+      "ruleGroups": {
+        "type": {
+          "$ref": "#/338"
+        },
+        "flags": 0,
+        "description": "Effective configuration groups."
+      }
+    },
+    "elements": {
+      "Custom": {
+        "$ref": "#/339"
+      },
+      "Default": {
+        "$ref": "#/341"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/305"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveSecurityAdminRule",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 0,
+        "description": "Indicates the properties of the security admin rule"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/340"
+        },
+        "flags": 1,
+        "description": "Whether the rule is custom or default."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Custom"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EffectiveDefaultSecurityAdminRule",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/215"
+        },
+        "flags": 0,
+        "description": "Indicates the properties of the default security admin rule"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/342"
+        },
+        "flags": 1,
+        "description": "Whether the rule is custom or default."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/336"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listNetworkManagerEffectiveSecurityAdminRules",
+    "resourceType": "Microsoft.Network/virtualNetworks",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/335"
+    },
+    "input": {
+      "$ref": "#/329"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listEffectiveVirtualNetworks",
+    "resourceType": "Microsoft.Network/networkManagers/networkGroups",
+    "apiVersion": "2022-02-01-preview",
+    "output": {
+      "$ref": "#/294"
+    },
+    "input": {
+      "$ref": "#/329"
+    }
+  }
+]

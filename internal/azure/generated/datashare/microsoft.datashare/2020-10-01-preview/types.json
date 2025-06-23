@@ -1,0 +1,5881 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataShare/accounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataShare/accounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1,
+        "description": "Identity Info on the Account"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Properties on the account"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location of the azure resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Tags on the azure resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "System Data of the Azure resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Identity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "service principal Id"
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Tenant Id"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Identity Type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccountProperties",
+    "properties": {
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Time at which the account was created."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the Account"
+      },
+      "userEmail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email of the user who created the resource"
+      },
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the user who created the resource"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultDtoTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataShare/accounts@2020-10-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataShare/accounts/shares/dataSets"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-10-01-preview"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Microsoft.DataShare/accounts/shares/dataSets",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "System Data of the Azure resource."
+      }
+    },
+    "elements": {
+      "AdlsGen1File": {
+        "$ref": "#/30"
+      },
+      "AdlsGen1Folder": {
+        "$ref": "#/33"
+      },
+      "AdlsGen2File": {
+        "$ref": "#/36"
+      },
+      "AdlsGen2FileSystem": {
+        "$ref": "#/39"
+      },
+      "AdlsGen2Folder": {
+        "$ref": "#/42"
+      },
+      "AdlsGen2StorageAccount": {
+        "$ref": "#/45"
+      },
+      "Blob": {
+        "$ref": "#/50"
+      },
+      "BlobFolder": {
+        "$ref": "#/53"
+      },
+      "BlobStorageAccount": {
+        "$ref": "#/56"
+      },
+      "Container": {
+        "$ref": "#/61"
+      },
+      "KustoCluster": {
+        "$ref": "#/64"
+      },
+      "KustoDatabase": {
+        "$ref": "#/73"
+      },
+      "SqlDBTable": {
+        "$ref": "#/82"
+      },
+      "SqlDWTable": {
+        "$ref": "#/85"
+      },
+      "SynapseWorkspaceSqlPoolTable": {
+        "$ref": "#/88"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen1FileDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 1,
+        "description": "ADLS Gen 1 file data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen1FileProperties",
+    "properties": {
+      "accountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The ADLS account name."
+      },
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "fileName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The file name in the ADLS account."
+      },
+      "folderPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The folder path within the ADLS account."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group of ADLS account."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription id of ADLS account."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen1File"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen1FolderDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "ADLS Gen 1 folder data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen1FolderProperties",
+    "properties": {
+      "accountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The ADLS account name."
+      },
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "folderPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The folder path within the ADLS account."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group of ADLS account."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription id of ADLS account."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen1Folder"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2FileDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 1,
+        "description": "ADLS Gen 2 file data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2FileProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "filePath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "File path within the file system."
+      },
+      "fileSystem": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "File system to which the file belongs."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group of storage account"
+      },
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Storage account name of the source data set"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription id of storage account"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen2File"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2FileSystemDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 1,
+        "description": "ADLS Gen 2 file system data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2FileSystemProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "fileSystem": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The file system name."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group of storage account"
+      },
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Storage account name of the source data set"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription id of storage account"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen2FileSystem"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2FolderDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "ADLS Gen 2 folder data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2FolderProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "fileSystem": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "File system to which the folder belongs."
+      },
+      "folderPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Folder path within the file system."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group of storage account"
+      },
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Storage account name of the source data set"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription id of storage account"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen2Folder"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2StorageAccountDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 1,
+        "description": "ADLSGen2 storage account data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2StorageAccountDataSetProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the ADLSGen2 storage account."
+      },
+      "paths": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 1,
+        "description": "A list of ADLSGen2 storage account paths."
+      },
+      "storageAccountResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of the ADLSGen2 storage account."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2StorageAccountPath",
+    "properties": {
+      "consumerPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the path on the consumer side where the dataset is to be mapped."
+      },
+      "containerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets or sets the container name to share."
+      },
+      "providerPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the path to file/folder within the container."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/47"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen2StorageAccount"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 1,
+        "description": "Blob data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobProperties",
+    "properties": {
+      "containerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Container that has the file path."
+      },
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "filePath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "File path within the source data set"
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group of storage account"
+      },
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Storage account name of the source data set"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription id of storage account"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Blob"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobFolderDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 1,
+        "description": "Blob folder data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobFolderProperties",
+    "properties": {
+      "containerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Container that has the file path."
+      },
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "prefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Prefix for blob folder"
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group of storage account"
+      },
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Storage account name of the source data set"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription id of storage account"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BlobFolder"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobStorageAccountDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 1,
+        "description": "Storage account data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobStorageAccountDataSetProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the storage account."
+      },
+      "paths": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 1,
+        "description": "A list of storage account paths."
+      },
+      "storageAccountResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of the storage account."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobStorageAccountPath",
+    "properties": {
+      "consumerPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the path on the consumer side where the dataset is to be mapped."
+      },
+      "containerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets or sets the container name to share."
+      },
+      "providerPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the path to file/folder within the container."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/58"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BlobStorageAccount"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobContainerDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 1,
+        "description": "Blob container data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobContainerProperties",
+    "properties": {
+      "containerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "BLOB Container name."
+      },
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group of storage account"
+      },
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Storage account name of the source data set"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription id of storage account"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Container"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KustoClusterDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 1,
+        "description": "Kusto cluster data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KustoClusterDataSetProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "kustoClusterResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of the kusto cluster."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the kusto cluster."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the kusto cluster data set."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KustoCluster"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KustoDatabaseDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 1,
+        "description": "Kusto database data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KustoDatabaseDataSetProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "kustoDatabaseResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of the kusto database."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the kusto cluster."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the kusto database data set."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KustoDatabase"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlDBTableDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "SQL DB table data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlDBTableProperties",
+    "properties": {
+      "databaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Database name of the source data set"
+      },
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "schemaName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Schema of the table. Default value is dbo."
+      },
+      "sqlServerResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of SQL server"
+      },
+      "tableName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "SQL DB table name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SqlDBTable"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlDWTableDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "SQL DW table data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlDWTableProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "dataWarehouseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "DataWarehouse name of the source data set"
+      },
+      "schemaName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Schema of the table. Default value is dbo."
+      },
+      "sqlServerResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of SQL server"
+      },
+      "tableName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "SQL DW table name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SqlDWTable"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SynapseWorkspaceSqlPoolTableDataSet",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 1,
+        "description": "Synapse Workspace Sql Pool Table data set properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 1,
+        "description": "Kind of data set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SynapseWorkspaceSqlPoolTableDataSetProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique id for identifying a data set resource"
+      },
+      "synapseWorkspaceSqlPoolTableResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of the Synapse Workspace SQL Pool Table"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SynapseWorkspaceSqlPoolTable"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataShare/accounts/shares/dataSets@2020-10-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/29"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-10-01-preview"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "System Data of the Azure resource."
+      }
+    },
+    "elements": {
+      "AdlsGen2File": {
+        "$ref": "#/95"
+      },
+      "AdlsGen2FileSystem": {
+        "$ref": "#/110"
+      },
+      "AdlsGen2Folder": {
+        "$ref": "#/122"
+      },
+      "AdlsGen2StorageAccount": {
+        "$ref": "#/134"
+      },
+      "Blob": {
+        "$ref": "#/146"
+      },
+      "BlobFolder": {
+        "$ref": "#/161"
+      },
+      "BlobStorageAccount": {
+        "$ref": "#/173"
+      },
+      "Container": {
+        "$ref": "#/185"
+      },
+      "KustoCluster": {
+        "$ref": "#/197"
+      },
+      "KustoDatabase": {
+        "$ref": "#/209"
+      },
+      "SqlDBTable": {
+        "$ref": "#/221"
+      },
+      "SqlDWTable": {
+        "$ref": "#/233"
+      },
+      "SynapseWorkspaceSqlPoolTable": {
+        "$ref": "#/245"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2FileDataSetMapping",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 1,
+        "description": "ADLS Gen2 file data set mapping properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 1,
+        "description": "Kind of data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2FileDataSetMappingProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The id of the source data set."
+      },
+      "dataSetMappingStatus": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 2,
+        "description": "Gets the status of the data set mapping."
+      },
+      "filePath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "File path within the file system."
+      },
+      "fileSystem": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "File system to which the file belongs."
+      },
+      "outputType": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 0,
+        "description": "Type of output file"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the data set mapping."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group of storage account."
+      },
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Storage account name of the source data set."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription id of storage account."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Broken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Csv"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Parquet"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/107"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen2File"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2FileSystemDataSetMapping",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 1,
+        "description": "ADLS Gen2 file system data set mapping properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 1,
+        "description": "Kind of data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2FileSystemDataSetMappingProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The id of the source data set."
+      },
+      "dataSetMappingStatus": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 2,
+        "description": "Gets the status of the data set mapping."
+      },
+      "fileSystem": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The file system name."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the data set mapping."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group of storage account."
+      },
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Storage account name of the source data set."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription id of storage account."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Broken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen2FileSystem"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2FolderDataSetMapping",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 1,
+        "description": "ADLS Gen2 folder data set mapping properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 1,
+        "description": "Kind of data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2FolderDataSetMappingProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The id of the source data set."
+      },
+      "dataSetMappingStatus": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 2,
+        "description": "Gets the status of the data set mapping."
+      },
+      "fileSystem": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "File system to which the folder belongs."
+      },
+      "folderPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Folder path within the file system."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the data set mapping."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group of storage account."
+      },
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Storage account name of the source data set."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription id of storage account."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Broken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/127"
+      },
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen2Folder"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2StorageAccountDataSetMapping",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 1,
+        "description": "ADLSGen2 Storage account data set mapping properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 1,
+        "description": "Kind of data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdlsGen2StorageAccountDataSetMappingProperties",
+    "properties": {
+      "containerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets or sets the container name."
+      },
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The id of the source data set."
+      },
+      "dataSetMappingStatus": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 2,
+        "description": "Gets the status of the data set mapping."
+      },
+      "folder": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets or sets the path to folder within the container."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the sink storage account."
+      },
+      "mountPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the mount path"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the data set mapping."
+      },
+      "storageAccountResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of the sink storage account"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Broken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/142"
+      },
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen2StorageAccount"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobDataSetMapping",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 1,
+        "description": "Blob data set mapping properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 1,
+        "description": "Kind of data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobMappingProperties",
+    "properties": {
+      "containerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Container that has the file path."
+      },
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The id of the source data set."
+      },
+      "dataSetMappingStatus": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 2,
+        "description": "Gets the status of the data set mapping."
+      },
+      "filePath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "File path within the source data set"
+      },
+      "outputType": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 0,
+        "description": "File output type"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the data set mapping."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group of storage account."
+      },
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Storage account name of the source data set."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription id of storage account."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Broken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Csv"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Parquet"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/154"
+      },
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
+      },
+      {
+        "$ref": "#/157"
+      },
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Blob"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobFolderDataSetMapping",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 1,
+        "description": "Blob folder data set mapping properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/172"
+        },
+        "flags": 1,
+        "description": "Kind of data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobFolderMappingProperties",
+    "properties": {
+      "containerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Container that has the file path."
+      },
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The id of the source data set."
+      },
+      "dataSetMappingStatus": {
+        "type": {
+          "$ref": "#/165"
+        },
+        "flags": 2,
+        "description": "Gets the status of the data set mapping."
+      },
+      "prefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Prefix for blob folder"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the data set mapping."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group of storage account."
+      },
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Storage account name of the source data set."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription id of storage account."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Broken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      },
+      {
+        "$ref": "#/168"
+      },
+      {
+        "$ref": "#/169"
+      },
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BlobFolder"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobStorageAccountDataSetMapping",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 1,
+        "description": "Blob Storage account data set mapping properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 1,
+        "description": "Kind of data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobStorageAccountDataSetMappingProperties",
+    "properties": {
+      "containerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets or sets the container name."
+      },
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The id of the source data set."
+      },
+      "dataSetMappingStatus": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 2,
+        "description": "Gets the status of the data set mapping."
+      },
+      "folder": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Gets or sets the path to folder within the container."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the sink storage account."
+      },
+      "mountPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the mount path on the consumer side where the dataset is to be mapped."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/183"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the data set mapping."
+      },
+      "storageAccountResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of the sink storage account"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Broken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BlobStorageAccount"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobContainerDataSetMapping",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/186"
+        },
+        "flags": 1,
+        "description": "Blob container data set mapping properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 1,
+        "description": "Kind of data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobContainerMappingProperties",
+    "properties": {
+      "containerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "BLOB Container name."
+      },
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The id of the source data set."
+      },
+      "dataSetMappingStatus": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 2,
+        "description": "Gets the status of the data set mapping."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/195"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the data set mapping."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource group of storage account."
+      },
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Storage account name of the source data set."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription id of storage account."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Broken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/187"
+      },
+      {
+        "$ref": "#/188"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/190"
+      },
+      {
+        "$ref": "#/191"
+      },
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/193"
+      },
+      {
+        "$ref": "#/194"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Container"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KustoClusterDataSetMapping",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/198"
+        },
+        "flags": 1,
+        "description": "Kusto cluster data set mapping properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 1,
+        "description": "Kind of data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KustoClusterDataSetMappingProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The id of the source data set."
+      },
+      "dataSetMappingStatus": {
+        "type": {
+          "$ref": "#/201"
+        },
+        "flags": 2,
+        "description": "Gets the status of the data set mapping."
+      },
+      "kustoClusterResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of the sink kusto cluster."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the sink kusto cluster."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Broken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/200"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/202"
+      },
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/204"
+      },
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/206"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KustoCluster"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KustoDatabaseDataSetMapping",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/210"
+        },
+        "flags": 1,
+        "description": "Kusto database data set mapping properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 1,
+        "description": "Kind of data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KustoDatabaseDataSetMappingProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The id of the source data set."
+      },
+      "dataSetMappingStatus": {
+        "type": {
+          "$ref": "#/213"
+        },
+        "flags": 2,
+        "description": "Gets the status of the data set mapping."
+      },
+      "kustoClusterResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of the sink kusto cluster."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the sink kusto cluster."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/219"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Broken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/211"
+      },
+      {
+        "$ref": "#/212"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/214"
+      },
+      {
+        "$ref": "#/215"
+      },
+      {
+        "$ref": "#/216"
+      },
+      {
+        "$ref": "#/217"
+      },
+      {
+        "$ref": "#/218"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KustoDatabase"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlDBTableDataSetMapping",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 1,
+        "description": "Sql DB data set mapping properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/232"
+        },
+        "flags": 1,
+        "description": "Kind of data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlDBTableDataSetMappingProperties",
+    "properties": {
+      "databaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "DatabaseName name of the sink data set"
+      },
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The id of the source data set."
+      },
+      "dataSetMappingStatus": {
+        "type": {
+          "$ref": "#/225"
+        },
+        "flags": 2,
+        "description": "Gets the status of the data set mapping."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/231"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the data set mapping."
+      },
+      "schemaName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Schema of the table. Default value is dbo."
+      },
+      "sqlServerResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of SQL server"
+      },
+      "tableName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "SQL DB table name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Broken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/223"
+      },
+      {
+        "$ref": "#/224"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/226"
+      },
+      {
+        "$ref": "#/227"
+      },
+      {
+        "$ref": "#/228"
+      },
+      {
+        "$ref": "#/229"
+      },
+      {
+        "$ref": "#/230"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SqlDBTable"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlDWTableDataSetMapping",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/234"
+        },
+        "flags": 1,
+        "description": "Sql DW data set mapping properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/244"
+        },
+        "flags": 1,
+        "description": "Kind of data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlDWTableDataSetMappingProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The id of the source data set."
+      },
+      "dataSetMappingStatus": {
+        "type": {
+          "$ref": "#/237"
+        },
+        "flags": 2,
+        "description": "Gets the status of the data set mapping."
+      },
+      "dataWarehouseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "DataWarehouse name of the source data set"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the data set mapping."
+      },
+      "schemaName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Schema of the table. Default value is dbo."
+      },
+      "sqlServerResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of SQL server"
+      },
+      "tableName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "SQL DW table name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Broken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/235"
+      },
+      {
+        "$ref": "#/236"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/238"
+      },
+      {
+        "$ref": "#/239"
+      },
+      {
+        "$ref": "#/240"
+      },
+      {
+        "$ref": "#/241"
+      },
+      {
+        "$ref": "#/242"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SqlDWTable"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SynapseWorkspaceSqlPoolTableDataSetMapping",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/246"
+        },
+        "flags": 1,
+        "description": "A Synapse Workspace Sql Pool Table data set mapping properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/256"
+        },
+        "flags": 1,
+        "description": "Kind of data set mapping."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SynapseWorkspaceSqlPoolTableDataSetMappingProperties",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The id of the source data set."
+      },
+      "dataSetMappingStatus": {
+        "type": {
+          "$ref": "#/249"
+        },
+        "flags": 2,
+        "description": "Gets the status of the data set mapping."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/255"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the data set mapping."
+      },
+      "synapseWorkspaceSqlPoolTableResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource id of the Synapse Workspace SQL Pool Table"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Broken"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/247"
+      },
+      {
+        "$ref": "#/248"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/250"
+      },
+      {
+        "$ref": "#/251"
+      },
+      {
+        "$ref": "#/252"
+      },
+      {
+        "$ref": "#/253"
+      },
+      {
+        "$ref": "#/254"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SynapseWorkspaceSqlPoolTable"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings@2020-10-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/94"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataShare/accounts/shares/invitations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataShare/accounts/shares/invitations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/258"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/259"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/261"
+        },
+        "flags": 0,
+        "description": "Properties on the Invitation"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "System Data of the Azure resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InvitationProperties",
+    "properties": {
+      "expirationDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The expiration date for the invitation and share subscription."
+      },
+      "invitationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "unique invitation id"
+      },
+      "invitationStatus": {
+        "type": {
+          "$ref": "#/266"
+        },
+        "flags": 2,
+        "description": "The status of the invitation."
+      },
+      "respondedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the recipient responded to the invitation."
+      },
+      "sentAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the time at which the invitation was sent."
+      },
+      "targetActiveDirectoryId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target Azure AD Id. Can't be combined with email."
+      },
+      "targetEmail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The email the invitation is directed to."
+      },
+      "targetObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target user or application Id that invitation is being sent to.\r\nMust be specified along TargetActiveDirectoryId. This enables sending\r\ninvitations to specific users or applications in an AD tenant."
+      },
+      "userEmail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email of the user who created the resource"
+      },
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the user who created the resource"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Withdrawn"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/262"
+      },
+      {
+        "$ref": "#/263"
+      },
+      {
+        "$ref": "#/264"
+      },
+      {
+        "$ref": "#/265"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataShare/accounts/shares/invitations@2020-10-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/260"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataShare/accounts/shares"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataShare/accounts/shares",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/268"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/269"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/271"
+        },
+        "flags": 0,
+        "description": "Properties on the share"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "System Data of the Azure resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ShareProperties",
+    "properties": {
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Time at which the share was created."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Share description."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/277"
+        },
+        "flags": 2,
+        "description": "Gets or sets the provisioning state"
+      },
+      "shareKind": {
+        "type": {
+          "$ref": "#/280"
+        },
+        "flags": 0,
+        "description": "Share kind."
+      },
+      "terms": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Share terms."
+      },
+      "userEmail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email of the user who created the resource"
+      },
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the user who created the resource"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/272"
+      },
+      {
+        "$ref": "#/273"
+      },
+      {
+        "$ref": "#/274"
+      },
+      {
+        "$ref": "#/275"
+      },
+      {
+        "$ref": "#/276"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CopyBased"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InPlace"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/278"
+      },
+      {
+        "$ref": "#/279"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataShare/accounts/shares@2020-10-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/270"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataShare/accounts/shareSubscriptions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataShare/accounts/shareSubscriptions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/282"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/283"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/285"
+        },
+        "flags": 1,
+        "description": "Properties on the share subscription"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "System Data of the Azure resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ShareSubscriptionProperties",
+    "properties": {
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Time at which the share subscription was created."
+      },
+      "expirationDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The expiration date of the share subscription."
+      },
+      "invitationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The invitation id."
+      },
+      "providerEmail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email of the provider who created the resource"
+      },
+      "providerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the provider who created the resource"
+      },
+      "providerTenantName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Tenant name of the provider who created the resource"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/291"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the share subscription"
+      },
+      "shareDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Description of share"
+      },
+      "shareKind": {
+        "type": {
+          "$ref": "#/294"
+        },
+        "flags": 2,
+        "description": "Kind of share"
+      },
+      "shareName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the share"
+      },
+      "shareSubscriptionStatus": {
+        "type": {
+          "$ref": "#/299"
+        },
+        "flags": 2,
+        "description": "Gets the current status of share subscription."
+      },
+      "shareTerms": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Terms of a share"
+      },
+      "sourceShareLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Source share location."
+      },
+      "userEmail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email of the user who created the resource"
+      },
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the user who created the resource"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/286"
+      },
+      {
+        "$ref": "#/287"
+      },
+      {
+        "$ref": "#/288"
+      },
+      {
+        "$ref": "#/289"
+      },
+      {
+        "$ref": "#/290"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CopyBased"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InPlace"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/292"
+      },
+      {
+        "$ref": "#/293"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Revoked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SourceDeleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Revoking"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/295"
+      },
+      {
+        "$ref": "#/296"
+      },
+      {
+        "$ref": "#/297"
+      },
+      {
+        "$ref": "#/298"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataShare/accounts/shareSubscriptions@2020-10-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/284"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataShare/accounts/shares/synchronizationSettings"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-10-01-preview"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Microsoft.DataShare/accounts/shares/synchronizationSettings",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/301"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/302"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "System Data of the Azure resource."
+      }
+    },
+    "elements": {
+      "ScheduleBased": {
+        "$ref": "#/304"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduledSynchronizationSetting",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/305"
+        },
+        "flags": 1,
+        "description": "Properties of scheduled synchronization"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/315"
+        },
+        "flags": 1,
+        "description": "Kind of synchronization setting."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduledSynchronizationSettingProperties",
+    "properties": {
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Time at which the synchronization setting was created."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/311"
+        },
+        "flags": 2,
+        "description": "Gets or sets the provisioning state"
+      },
+      "recurrenceInterval": {
+        "type": {
+          "$ref": "#/314"
+        },
+        "flags": 1,
+        "description": "Recurrence Interval"
+      },
+      "synchronizationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Synchronization time"
+      },
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the user who created the synchronization setting."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/306"
+      },
+      {
+        "$ref": "#/307"
+      },
+      {
+        "$ref": "#/308"
+      },
+      {
+        "$ref": "#/309"
+      },
+      {
+        "$ref": "#/310"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hour"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Day"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/312"
+      },
+      {
+        "$ref": "#/313"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ScheduleBased"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataShare/accounts/shares/synchronizationSettings@2020-10-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/303"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataShare/accounts/shareSubscriptions/triggers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-10-01-preview"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Microsoft.DataShare/accounts/shareSubscriptions/triggers",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/317"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/318"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "System Data of the Azure resource."
+      }
+    },
+    "elements": {
+      "ScheduleBased": {
+        "$ref": "#/320"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduledTrigger",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/321"
+        },
+        "flags": 1,
+        "description": "Properties of scheduled synchronization"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/338"
+        },
+        "flags": 1,
+        "description": "Kind of synchronization on trigger."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduledTriggerProperties",
+    "properties": {
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Time at which the trigger was created."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/327"
+        },
+        "flags": 2,
+        "description": "Gets the provisioning state"
+      },
+      "recurrenceInterval": {
+        "type": {
+          "$ref": "#/330"
+        },
+        "flags": 1,
+        "description": "Recurrence Interval"
+      },
+      "synchronizationMode": {
+        "type": {
+          "$ref": "#/333"
+        },
+        "flags": 0,
+        "description": "Synchronization mode"
+      },
+      "synchronizationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Synchronization time"
+      },
+      "triggerStatus": {
+        "type": {
+          "$ref": "#/337"
+        },
+        "flags": 2,
+        "description": "Gets the trigger state"
+      },
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the user who created the trigger."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/322"
+      },
+      {
+        "$ref": "#/323"
+      },
+      {
+        "$ref": "#/324"
+      },
+      {
+        "$ref": "#/325"
+      },
+      {
+        "$ref": "#/326"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hour"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Day"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/328"
+      },
+      {
+        "$ref": "#/329"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incremental"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FullSync"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/331"
+      },
+      {
+        "$ref": "#/332"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SourceSynchronizationSettingDeleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/334"
+      },
+      {
+        "$ref": "#/335"
+      },
+      {
+        "$ref": "#/336"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ScheduleBased"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataShare/accounts/shareSubscriptions/triggers@2020-10-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/319"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataShare/locations/consumerInvitations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataShare/locations/consumerInvitations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/340"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/341"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/343"
+        },
+        "flags": 2,
+        "description": "Properties on the account"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "System Data of the Azure resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConsumerInvitationProperties",
+    "properties": {
+      "dataSetCount": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 2,
+        "description": "Number of data sets in a share"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Description shared when the invitation was created"
+      },
+      "expirationDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The expiration date for the share subscription created by accepting the invitation."
+      },
+      "invitationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Unique id of the invitation."
+      },
+      "invitationStatus": {
+        "type": {
+          "$ref": "#/349"
+        },
+        "flags": 2,
+        "description": "The status of the invitation."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "invitation location"
+      },
+      "providerEmail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email of the provider who created the resource"
+      },
+      "providerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the provider who created the resource"
+      },
+      "providerTenantName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Tenant name of the provider who created the resource"
+      },
+      "respondedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the recipient responded to the invitation."
+      },
+      "sentAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the time at which the invitation was sent."
+      },
+      "shareName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the source share Name."
+      },
+      "termsOfUse": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Terms of use shared when the invitation was created"
+      },
+      "userEmail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email of the user who created the resource"
+      },
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the user who created the resource"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Withdrawn"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/345"
+      },
+      {
+        "$ref": "#/346"
+      },
+      {
+        "$ref": "#/347"
+      },
+      {
+        "$ref": "#/348"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataShare/locations/consumerInvitations@2020-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/342"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataShare/accounts/shares/providerShareSubscriptions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataShare/accounts/shares/providerShareSubscriptions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/351"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/352"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/354"
+        },
+        "flags": 2,
+        "description": "properties of providerShareSubscription"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "System Data of the Azure resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProviderShareSubscriptionProperties",
+    "properties": {
+      "consumerEmail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email of the consumer who created the share subscription"
+      },
+      "consumerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the consumer who created the share subscription"
+      },
+      "consumerTenantName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Tenant name of the consumer who created the share subscription"
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "created at"
+      },
+      "expirationDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Expiration date of the share subscription in UTC format"
+      },
+      "providerEmail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email of the provider who created the share"
+      },
+      "providerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the provider who created the share"
+      },
+      "sharedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Shared at"
+      },
+      "shareSubscriptionObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "share Subscription Object Id"
+      },
+      "shareSubscriptionStatus": {
+        "type": {
+          "$ref": "#/359"
+        },
+        "flags": 2,
+        "description": "Gets the status of share subscription"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Revoked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SourceDeleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Revoking"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/355"
+      },
+      {
+        "$ref": "#/356"
+      },
+      {
+        "$ref": "#/357"
+      },
+      {
+        "$ref": "#/358"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataShare/accounts/shares/providerShareSubscriptions@2020-10-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/353"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConsumerInvitation",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/343"
+        },
+        "flags": 1,
+        "description": "Properties on the account"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource id of the azure resource"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the azure resource"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "System Data of the Azure resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Type of the azure resource"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rejectInvitation",
+    "resourceType": "Microsoft.DataShare/locations",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/361"
+    },
+    "input": {
+      "$ref": "#/361"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ShareSynchronization",
+    "properties": {
+      "consumerEmail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Email of the user who created the synchronization"
+      },
+      "consumerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the user who created the synchronization"
+      },
+      "consumerTenantName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Tenant name of the consumer who created the synchronization"
+      },
+      "durationMs": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 0,
+        "description": "synchronization duration"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "End time of synchronization"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "message of synchronization"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "start time of synchronization"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Raw Status"
+      },
+      "synchronizationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Synchronization id"
+      },
+      "synchronizationMode": {
+        "type": {
+          "$ref": "#/366"
+        },
+        "flags": 2,
+        "description": "Synchronization mode"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incremental"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FullSync"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/364"
+      },
+      {
+        "$ref": "#/365"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SynchronizationDetailsList",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Url of next result page."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/385"
+        },
+        "flags": 1,
+        "description": "Collection of items of type DataTransferObjects."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SynchronizationDetails",
+    "properties": {
+      "dataSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Id of data set"
+      },
+      "dataSetType": {
+        "type": {
+          "$ref": "#/384"
+        },
+        "flags": 2,
+        "description": "Type of the data set"
+      },
+      "durationMs": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 2,
+        "description": "Duration of data set level copy"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "End time of data set level copy"
+      },
+      "filesRead": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 2,
+        "description": "The number of files read from the source data set"
+      },
+      "filesWritten": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 2,
+        "description": "The number of files written into the sink data set"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error message if any"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the data set"
+      },
+      "rowsCopied": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 2,
+        "description": "The number of files copied into the sink data set"
+      },
+      "rowsRead": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 2,
+        "description": "The number of rows read from the source data set."
+      },
+      "sizeRead": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 2,
+        "description": "The size of the data read from the source data set in bytes"
+      },
+      "sizeWritten": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 2,
+        "description": "The size of the data written into the sink data set in bytes"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Start time of data set level copy"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Raw Status"
+      },
+      "vCore": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 2,
+        "description": "The vCore units consumed for the data set synchronization"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Blob"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Container"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BlobFolder"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen2FileSystem"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen2Folder"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen2File"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen1Folder"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen1File"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdlsGen2StorageAccount"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KustoCluster"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KustoDatabase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SqlDBTable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SqlDWTable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SynapseWorkspaceSqlPoolTable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BlobStorageAccount"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/369"
+      },
+      {
+        "$ref": "#/370"
+      },
+      {
+        "$ref": "#/371"
+      },
+      {
+        "$ref": "#/372"
+      },
+      {
+        "$ref": "#/373"
+      },
+      {
+        "$ref": "#/374"
+      },
+      {
+        "$ref": "#/375"
+      },
+      {
+        "$ref": "#/376"
+      },
+      {
+        "$ref": "#/377"
+      },
+      {
+        "$ref": "#/378"
+      },
+      {
+        "$ref": "#/379"
+      },
+      {
+        "$ref": "#/380"
+      },
+      {
+        "$ref": "#/381"
+      },
+      {
+        "$ref": "#/382"
+      },
+      {
+        "$ref": "#/383"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/368"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listSynchronizationDetails",
+    "resourceType": "Microsoft.DataShare/accounts/shares",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/367"
+    },
+    "input": {
+      "$ref": "#/363"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ShareSynchronizationList",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Url of next result page."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/388"
+        },
+        "flags": 1,
+        "description": "Collection of items of type DataTransferObjects."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/363"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listSynchronizations",
+    "resourceType": "Microsoft.DataShare/accounts/shares",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/387"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProviderShareSubscription",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/354"
+        },
+        "flags": 0,
+        "description": "properties of providerShareSubscription"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource id of the azure resource"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the azure resource"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "System Data of the Azure resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Type of the azure resource"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "adjust",
+    "resourceType": "Microsoft.DataShare/accounts/shares/providerShareSubscriptions",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/390"
+    },
+    "input": {
+      "$ref": "#/390"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reinstate",
+    "resourceType": "Microsoft.DataShare/accounts/shares/providerShareSubscriptions",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/390"
+    },
+    "input": {
+      "$ref": "#/390"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revoke",
+    "resourceType": "Microsoft.DataShare/accounts/shares/providerShareSubscriptions",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/390"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ShareSubscriptionSynchronization",
+    "properties": {
+      "durationMs": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 2,
+        "description": "Synchronization duration"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "End time of synchronization"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "message of Synchronization"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "start time of synchronization"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Raw Status"
+      },
+      "synchronizationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Synchronization id"
+      },
+      "synchronizationMode": {
+        "type": {
+          "$ref": "#/397"
+        },
+        "flags": 2,
+        "description": "Synchronization Mode"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incremental"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FullSync"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/395"
+      },
+      {
+        "$ref": "#/396"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancelSynchronization",
+    "resourceType": "Microsoft.DataShare/accounts/shareSubscriptions",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/394"
+    },
+    "input": {
+      "$ref": "#/394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SourceShareSynchronizationSettingList",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Url of next result page."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/407"
+        },
+        "flags": 1,
+        "description": "Collection of items of type DataTransferObjects."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "SourceShareSynchronizationSetting",
+    "discriminator": "kind",
+    "baseProperties": {},
+    "elements": {
+      "ScheduleBased": {
+        "$ref": "#/401"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduledSourceSynchronizationSetting",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/402"
+        },
+        "flags": 0,
+        "description": "Properties of scheduled synchronization"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/406"
+        },
+        "flags": 1,
+        "description": "Kind of synchronization setting on share."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduledSourceShareSynchronizationSettingProperties",
+    "properties": {
+      "recurrenceInterval": {
+        "type": {
+          "$ref": "#/405"
+        },
+        "flags": 0,
+        "description": "Recurrence Interval"
+      },
+      "synchronizationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Synchronization time"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hour"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Day"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/403"
+      },
+      {
+        "$ref": "#/404"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ScheduleBased"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/400"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listSourceShareSynchronizationSettings",
+    "resourceType": "Microsoft.DataShare/accounts/shareSubscriptions",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/399"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listSynchronizationDetails",
+    "resourceType": "Microsoft.DataShare/accounts/shareSubscriptions",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/367"
+    },
+    "input": {
+      "$ref": "#/394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ShareSubscriptionSynchronizationList",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Url of next result page."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/411"
+        },
+        "flags": 1,
+        "description": "Collection of items of type DataTransferObjects."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listSynchronizations",
+    "resourceType": "Microsoft.DataShare/accounts/shareSubscriptions",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/410"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Synchronize",
+    "properties": {
+      "synchronizationMode": {
+        "type": {
+          "$ref": "#/416"
+        },
+        "flags": 0,
+        "description": "Mode of synchronization used in triggers and snapshot sync. Incremental by default"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incremental"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FullSync"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/414"
+      },
+      {
+        "$ref": "#/415"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "synchronize",
+    "resourceType": "Microsoft.DataShare/accounts/shareSubscriptions",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/394"
+    },
+    "input": {
+      "$ref": "#/413"
+    }
+  }
+]
