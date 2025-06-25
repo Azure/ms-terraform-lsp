@@ -44,7 +44,9 @@ func initializeResponse(t *testing.T, commandPrefix string) string {
 			"executeCommandProvider": {
 				"commands": [
 					"ms-terraform.telemetry",
-					"ms-terraform.aztfauthorize"
+					"ms-terraform.aztfauthorize",
+					"ms-terraform.convertJsonToAzapi",
+					"ms-terraform.aztfmigrate"
 				],
 				"workDoneProgress": true
 			}

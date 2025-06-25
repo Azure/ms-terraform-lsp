@@ -119,7 +119,16 @@ func HoverAtPos(ctx context.Context, data []byte, filename string, pos hcl.Pos, 
 
 		// hover on the block itself
 		var doc, docId string
-		if strings.Contains(resourceName, "msgraph_resource") {
+		switch {
+		case strings.Contains(resourceName, "azapi_"):
+			typeValue := ""
+			if v := parser.BlockAttributeLiteralValue(resourceBlock, "type"); v != nil {
+				typeValue = *v
+			}
+			doc = (*resource).ResourceDocumentation(typeValue)
+			docId = fmt.Sprintf("azapi_resource.%s", typeValue)
+
+		case strings.Contains(resourceName, "msgraph_resource"):
 			url := parser.ExtractMSGraphUrl(resourceBlock, data)
 			apiVersion := "v1.0"
 			if v := parser.BlockAttributeLiteralValue(resourceBlock, "api_version"); v != nil {
@@ -128,7 +137,8 @@ func HoverAtPos(ctx context.Context, data []byte, filename string, pos hcl.Pos, 
 			resourceType := fmt.Sprintf("%s@%s", url, apiVersion)
 			doc = (*resource).ResourceDocumentation(resourceType)
 			docId = fmt.Sprintf("msgraph_resource.%s", resourceType)
-		} else {
+
+		case strings.Contains(resourceName, "azurerm_"):
 			doc = (*resource).ResourceDocumentation(resourceName)
 			docId = resourceName
 		}

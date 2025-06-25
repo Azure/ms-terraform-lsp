@@ -11,18 +11,22 @@ import (
 var handlerMap = map[string]command.CommandHandler{}
 
 const (
-	CommandTelemetry     = "ms-terraform.telemetry"
-	CommandAztfAuthorize = "ms-terraform.aztfauthorize"
+	CommandTelemetry          = "ms-terraform.telemetry"
+	CommandAztfAuthorize      = "ms-terraform.aztfauthorize"
+	CommandConvertJsonToAzapi = "ms-terraform.convertJsonToAzapi"
+	CommandAztfMigrate        = "ms-terraform.aztfmigrate"
 )
 
 func availableCommands() []string {
-	return []string{CommandTelemetry, CommandAztfAuthorize}
+	return []string{CommandTelemetry, CommandAztfAuthorize, CommandConvertJsonToAzapi, CommandAztfMigrate}
 }
 
 func init() {
 	handlerMap = make(map[string]command.CommandHandler)
 	handlerMap[CommandTelemetry] = command.TelemetryCommand{}
 	handlerMap[CommandAztfAuthorize] = command.AztfAuthorizeCommand{}
+	handlerMap[CommandConvertJsonToAzapi] = command.ConvertJsonCommand{}
+	handlerMap[CommandAztfMigrate] = command.AztfMigrateCommand{}
 }
 
 func (svc *service) WorkspaceExecuteCommand(ctx context.Context, params lsp.ExecuteCommandParams) (interface{}, error) {

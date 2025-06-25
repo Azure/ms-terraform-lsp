@@ -100,8 +100,154 @@ func TestCodeAction_permission(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("expected %v, got %v", expected, result)
+
+	for _, expectedAction := range expected {
+		found := false
+		for _, action := range result {
+			if reflect.DeepEqual(action, expectedAction) {
+				found = true
+				break
+			}
+		}
+		if !found {
+			t.Errorf("expected action %v not found in result", expectedAction)
+		}
+	}
+}
+
+func TestCodeAction_migrateToAzureRM(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+	reqParams := buildReqParamsCodeAction(6, 1, 19, 2, tmpDir.URI())
+
+	expected := []protocol.CodeAction{
+		{
+			Title: "Migrate to AzureRM Provider",
+			Kind:  "refactor.rewrite",
+			Edit:  protocol.WorkspaceEdit{},
+			Command: &protocol.Command{
+				Title:     "Migrate to AzureRM Provider",
+				Command:   "ms-terraform.aztfmigrate",
+				Arguments: []json.RawMessage{[]byte(reqParams)},
+			},
+		},
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	rawResponse := ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/codeAction",
+		ReqParams: reqParams,
+	})
+
+	var result []protocol.CodeAction
+	err = json.Unmarshal(rawResponse.Result, &result)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, expectedAction := range expected {
+		found := false
+		for _, action := range result {
+			if reflect.DeepEqual(action, expectedAction) {
+				found = true
+				break
+			}
+		}
+		if !found {
+			t.Errorf("expected action %v not found in result", expectedAction)
+		}
+	}
+}
+
+func TestCodeAction_migrateToAzapi(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+	reqParams := buildReqParamsCodeAction(1, 1, 4, 2, tmpDir.URI())
+
+	expected := []protocol.CodeAction{
+		{
+			Title: "Migrate to AzAPI Provider",
+			Kind:  "refactor.rewrite",
+			Edit:  protocol.WorkspaceEdit{},
+			Command: &protocol.Command{
+				Title:     "Migrate to AzAPI Provider",
+				Command:   "ms-terraform.aztfmigrate",
+				Arguments: []json.RawMessage{[]byte(reqParams)},
+			},
+		},
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	rawResponse := ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/codeAction",
+		ReqParams: reqParams,
+	})
+
+	var result []protocol.CodeAction
+	err = json.Unmarshal(rawResponse.Result, &result)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, expectedAction := range expected {
+		found := false
+		for _, action := range result {
+			if reflect.DeepEqual(action, expectedAction) {
+				found = true
+				break
+			}
+		}
+		if !found {
+			t.Errorf("expected action %v not found in result", expectedAction)
+		}
 	}
 }
 

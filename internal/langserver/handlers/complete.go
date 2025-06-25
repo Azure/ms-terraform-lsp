@@ -9,6 +9,8 @@ import (
 
 	lsctx "github.com/Azure/ms-terraform-lsp/internal/context"
 	"github.com/Azure/ms-terraform-lsp/internal/langserver/handlers/snippets"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/handlers/snippets/azapi"
+	"github.com/Azure/ms-terraform-lsp/internal/langserver/handlers/snippets/msgraph"
 	"github.com/Azure/ms-terraform-lsp/internal/langserver/handlers/tfschema"
 	ilsp "github.com/Azure/ms-terraform-lsp/internal/lsp"
 	"github.com/Azure/ms-terraform-lsp/internal/parser"
@@ -88,6 +90,9 @@ func CandidatesAtPos(data []byte, filename string, pos hcl.Pos, logger *log.Logg
 		// msgraph templates
 		candidateList = append(candidateList, snippets.MSGraphTemplateCandidates(editRange)...)
 
+		// azapi templates
+		candidateList = append(candidateList, snippets.AzAPITemplateCandidates(editRange)...)
+
 		// azurerm templates
 		if shouldGiveTopLevelCompletions(string(data), pos.Line-1) {
 			candidateList = append(candidateList, snippets.AzureRMTemplateCandidates(editRange)...)
@@ -135,7 +140,8 @@ func CandidatesAtPos(data []byte, filename string, pos hcl.Pos, logger *log.Logg
 		}
 
 		if blockPath == "" {
-			candidateList = append(candidateList, snippets.MSGraphCodeSampleCandidates(resourceBlock, *editRange, data)...)
+			candidateList = append(candidateList, msgraph.MSGraphCodeSampleCandidates(resourceBlock, *editRange, data)...)
+			candidateList = append(candidateList, azapi.CodeSampleCandidates(resourceBlock, *editRange)...)
 		}
 
 		blockPath = fmt.Sprintf("%s.%s", resourceName, blockPath)

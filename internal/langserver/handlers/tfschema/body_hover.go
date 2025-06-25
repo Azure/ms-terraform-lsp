@@ -35,10 +35,10 @@ func msgraphBodyHover(block *hclsyntax.Block, attribute *hclsyntax.Attribute, po
 	lastHclNode := hclNodes[len(hclNodes)-1]
 
 	if parser.ContainsPos(lastHclNode.KeyRange, pos) {
-		defs := schema.GetDef(bodyDef.AsTypeBase(), hclNodes[0:len(hclNodes)-1], 0)
+		defs := schema.GetMSGraphDef(bodyDef.AsTypeBase(), hclNodes[0:len(hclNodes)-1], 0)
 		props := make([]schema.Property, 0)
 		for _, def := range defs {
-			props = append(props, schema.GetAllowedProperties(def)...)
+			props = append(props, schema.GetMSGraphAllowedProperties(def)...)
 		}
 		if len(props) != 0 {
 			index := -1
