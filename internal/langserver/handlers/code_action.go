@@ -99,8 +99,8 @@ func (h *logHandler) textDocumentCodeAction(ctx context.Context, params lsp.Code
 	return list, nil
 }
 
-func listCodeActionForGeneratingPermission(params lsp.CodeActionParams, hasAzapiResources bool, hasAzurermResources bool) []lsp.CodeAction {
-	if !hasAzurermResources {
+func listCodeActionForGeneratingPermission(params lsp.CodeActionParams, hasAzapi bool, hasAzurerm bool) []lsp.CodeAction {
+	if !hasAzapi && !hasAzurerm {
 		return nil
 	}
 	argument, _ := json.Marshal(params)
