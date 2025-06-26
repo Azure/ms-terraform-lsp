@@ -1,0 +1,1617 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Deployment.Admin/locations/fileContainers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Deployment.Admin/locations/fileContainers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Specifies the file container body"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileContainerBodyOrFileContainerAdminProperties",
+    "properties": {
+      "postCopyAction": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Specifies the file post copy action."
+      },
+      "sourceUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies The remote file location."
+      },
+      "fileContainerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "File container resource identifier containing product manifest."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The file or container Uri. This is read-only property; a user cannot set it."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "The error response message."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unzip"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorInfo",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error message."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The detailed error messages."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Deployment.Admin/locations/fileContainers@2019-01-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Deployment.Admin/locations/productPackages"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Deployment.Admin/locations/productPackages",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Specifies the product package"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductPackageBodyOrProductPackageProperties",
+    "properties": {
+      "fileContainerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the file container."
+      },
+      "isDeployable": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Value indicating whether the package is applicable for deployment."
+      },
+      "isUpdatable": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Value indicating whether the package is applicable for update."
+      },
+      "productDeploymentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The identifier of product deployment; null if this version is not installed."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Deployment.Admin/locations/productPackages@2019-01-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/13"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Deployment.Admin/locations/actionPlans"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Deployment.Admin/locations/actionPlans",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Action Plan Properties"
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Entity tag of the resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActionPlanAdminProperties",
+    "properties": {
+      "actionPlanUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Action plan uri"
+      },
+      "resourceGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target resource group name"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target subscription identifier"
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The deployment parameters in JToken format"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The deployment start time"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The deployment end time"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Error Information"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning state"
+      },
+      "actionPlanInstanceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Action plan instance identifier"
+      },
+      "blobContainerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Blob container name storing the deployment data"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JTokenString",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Parameters as JToken string"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtendedErrorInfo",
+    "properties": {
+      "error": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "The error details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDefinition",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Service specific error code which serves as the substatus for the HTTP error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Description of the error."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 2,
+        "description": "Internal error details."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/23"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Deployment.Admin/locations/actionPlans@2019-01-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/19"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Deployment.Admin/locations/actionPlans/operations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Deployment.Admin/locations/actionPlans/operations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "Action Plan Properties"
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Entity tag of the resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActionPlanOperationAdminProperties",
+    "properties": {
+      "title": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The operation title"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The operation description"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The action plan operation type"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target subscription identifier"
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The deployment parameters in JToken format"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The deployment start time"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The deployment end time"
+      },
+      "outputs": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The action plan operation outputs in JToken format"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Error Information"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning state"
+      },
+      "actionPlanInstanceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Action plan instance identifier"
+      },
+      "actionPlanOperationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Action plan operation identifier"
+      },
+      "blobContainerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Blob container name storing the deployment data"
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Deployment.Admin/locations/actionPlans/operations@2019-01-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/28"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "global"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Deployment.Admin/locations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Deployment.Admin/locations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 2,
+        "description": "Location Properties"
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Entity tag of the resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocationAdminProperties",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "the location name"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Deployment.Admin/locations@2019-01-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/35"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Deployment.Admin/locations/productDeployments"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Deployment.Admin/locations/productDeployments",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "Product deployment resource properties"
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "entity tag"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductDeploymentsProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "Status of the product deployment."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The product subscription identifier"
+      },
+      "deployment": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "The current deployment information"
+      },
+      "lastSuccessfulDeployment": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "The last successful deployment information"
+      },
+      "secretRotation": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "Resource provider secret rotation information"
+      },
+      "internalState": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "Product deployment resource internal state"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Error Information"
+      },
+      "externalAccess": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "Resource provider secret rotation information"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning state"
+      },
+      "productId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The product identifier"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bootstrapping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BootstrapSucceeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BootstrapFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deploying"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeploymentSucceeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeploymentFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpdateSucceeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpdateFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Removing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RemoveFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecretRotationInProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecretRotationSucceeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecretRotationFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Migrated"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentInfo",
+    "properties": {
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The product version"
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The latest deployment parameters as JToken"
+      },
+      "actionPlanInstanceResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identifier of the latest action plan instance resource."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "entity tag"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecretRotationInfo",
+    "properties": {
+      "secretRotationPlanInstanceResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identifier of the latest secret rotation plan instance resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductDeploymentsInternalState",
+    "properties": {
+      "jobId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The latest deployment job identifier"
+      },
+      "intermediateVaultId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The intermediate vault resource identifier"
+      },
+      "intermediateVaultUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The intermediate vault Uri."
+      },
+      "externalAccessRoleAssignmentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The current external access role assignment identifier"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExternalAccessInfo",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The object identifier of the user, group or service principal that have access to resource provider subscription."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The deployment start time"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Deployment.Admin/locations/productDeployments@2019-01-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/40"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Deployment.Admin/locations/productPackages/secrets"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Deployment.Admin/locations/productPackages/secrets",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 2,
+        "description": "Properties of a product secret."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductSecretProperties",
+    "properties": {
+      "secretState": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 0,
+        "description": "The secret state."
+      },
+      "secretDescriptor": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 0,
+        "description": "The secret type-specific descriptor."
+      },
+      "expiresAfter": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The expiration period of the secret (in ISO8601 format)."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The secret description."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Provisioning state of the resource."
+      },
+      "secretKind": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 0,
+        "description": "Specifies the secret kind."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecretState",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 0,
+        "description": "The secret status."
+      },
+      "rotationStatus": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "the secret rotation status."
+      },
+      "expirationDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The secret expiration date."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotUploaded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Uploaded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deployed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecretDescriptor",
+    "properties": {
+      "keyLength": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 0,
+        "description": "The key length."
+      },
+      "alternativeDnsNames": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "Alternative DNS Names."
+      },
+      "secondaryKeyIsActive": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "A value indicating whether the secondary or primary storage account key is active as a secret."
+      },
+      "rotationStatus": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "The storage account key secret rotation status."
+      },
+      "passwordLength": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 0,
+        "description": "The minimum password length is 8 characters, and the maximum password length is 128 characters."
+      },
+      "allowedCharacters": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The allowed characters in the password"
+      },
+      "passwordValidationRegex": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Password validation regular expression."
+      },
+      "subject": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Certificate's subject"
+      },
+      "alternativeIpAddresses": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0,
+        "description": "The list of alternative IP addresses."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PlantNewSak"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RotateInactiveSak"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdHoc"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Certificate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Password"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StorageAccount"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SymmetricKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/87"
+      },
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Deployment.Admin/locations/productPackages/secrets@2019-01-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/66"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BootStrapActionParameters",
+    "properties": {
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Generic Version object"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "bootstrap",
+    "resourceType": "Microsoft.Deployment.Admin/locations/productDeployments",
+    "apiVersion": "2019-01-01",
+    "input": {
+      "$ref": "#/93"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeployActionParameters",
+    "properties": {
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Generic Version object"
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Deployment parameters, value in JToken"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deploy",
+    "resourceType": "Microsoft.Deployment.Admin/locations/productDeployments",
+    "apiVersion": "2019-01-01",
+    "input": {
+      "$ref": "#/95"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "remove",
+    "resourceType": "Microsoft.Deployment.Admin/locations/productDeployments",
+    "apiVersion": "2019-01-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateSecrets",
+    "resourceType": "Microsoft.Deployment.Admin/locations/productDeployments",
+    "apiVersion": "2019-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteRunnerActionParameters",
+    "properties": {
+      "parameters": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Execute Runner parameters, value in JToken"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "executeRunner",
+    "resourceType": "Microsoft.Deployment.Admin/locations/productDeployments",
+    "apiVersion": "2019-01-01",
+    "input": {
+      "$ref": "#/99"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecretParameters",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The secret value in a secure string format."
+      },
+      "data": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The pfx certificate converted Base64 data."
+      },
+      "password": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The pfx certificate file password."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The symmetric key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "import",
+    "resourceType": "Microsoft.Deployment.Admin/locations/productPackages/secrets",
+    "apiVersion": "2019-01-01",
+    "input": {
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.Deployment.Admin/locations/productPackages/secrets",
+    "apiVersion": "2019-01-01",
+    "input": {
+      "$ref": "#/101"
+    }
+  }
+]

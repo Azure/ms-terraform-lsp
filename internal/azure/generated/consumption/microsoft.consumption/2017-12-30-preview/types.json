@@ -1,0 +1,300 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Consumption/budgets"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-12-30-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Consumption/budgets",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The properties of the budget."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BudgetProperties",
+    "properties": {
+      "category": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "The category of the budget, whether the budget tracks cost or something else."
+      },
+      "amount": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "The total amount of cost to track with the budget"
+      },
+      "timeGrain": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 1,
+        "description": "The time covered by a budget. Tracking of the amount will be reset based on the time grain."
+      },
+      "timePeriod": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 1,
+        "description": "Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than three months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date."
+      },
+      "currentSpend": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The current amount of cost which is being tracked for a budget."
+      },
+      "notifications": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Dictionary of notifications associated with the budget. Budget can have up to five notifications."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cost"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Monthly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Quarterly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Annually"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BudgetTimePeriod",
+    "properties": {
+      "startDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The start date for the budget."
+      },
+      "endDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The end date for the budget. If not provided, we default this to 10 years from the start date."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CurrentSpend",
+    "properties": {
+      "amount": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "The total amount of cost which is being tracked by the budget."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The unit of measure for the budget amount."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Notification",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "The notification is enabled or not."
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 1,
+        "description": "The comparison operator."
+      },
+      "threshold": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000."
+      },
+      "contactEmails": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 1,
+        "description": "Email addresses to send the budget notification to when the threshold is exceeded."
+      },
+      "contactRoles": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Contact roles to send the budget notification to when the threshold is exceeded."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EqualTo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GreaterThan"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GreaterThanOrEqualTo"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    },
+    "minLength": 1,
+    "maxLength": 50
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BudgetPropertiesNotifications",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/14"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Consumption/budgets@2017-12-30-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

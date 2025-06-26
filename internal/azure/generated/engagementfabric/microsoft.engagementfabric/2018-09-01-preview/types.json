@@ -1,0 +1,396 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.EngagementFabric/Accounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.EngagementFabric/Accounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The location of the resource"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The tags of the resource"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "The SKU of the resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SKU",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the SKU"
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The price tier of the SKU"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.EngagementFabric/Accounts@2018-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.EngagementFabric/Accounts/Channels"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.EngagementFabric/Accounts/Channels",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The properties of the channel"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChannelProperties",
+    "properties": {
+      "channelType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The channel type"
+      },
+      "channelFunctions": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "The functions to be enabled for the channel"
+      },
+      "credentials": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The channel credentials"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChannelPropertiesCredentials",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.EngagementFabric/Accounts/Channels@2018-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/9"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyDescriptionList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Account keys"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyDescription",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the key"
+      },
+      "rank": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "The rank of the key"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The value of the key"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecondaryKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/15"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listKeys",
+    "resourceType": "Microsoft.EngagementFabric/Accounts",
+    "apiVersion": "2018-09-01-preview",
+    "output": {
+      "$ref": "#/14"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateKeyParameter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of key to be regenerated"
+      },
+      "rank": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 1,
+        "description": "The rank of the key to be regenerated"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecondaryKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.EngagementFabric/Accounts",
+    "apiVersion": "2018-09-01-preview",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/21"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChannelTypeDescriptionList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Channel descriptions"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ChannelTypeDescription",
+    "properties": {
+      "channelType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Channel type"
+      },
+      "channelDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Text description for the channel"
+      },
+      "channelFunctions": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "All the available functions for the channel"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listChannelTypes",
+    "resourceType": "Microsoft.EngagementFabric/Accounts",
+    "apiVersion": "2018-09-01-preview",
+    "output": {
+      "$ref": "#/26"
+    }
+  }
+]

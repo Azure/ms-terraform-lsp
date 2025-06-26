@@ -4,12 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Azure/ms-terraform-lsp/internal/msgraph"
-	"github.com/Azure/ms-terraform-lsp/internal/parser"
 	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
-	"github.com/hashicorp/hcl/v2"
-	"github.com/hashicorp/hcl/v2/hclsyntax"
-	"github.com/ms-henglu/go-msgraph-types/types"
 )
 
 func PropertiesCandidates(props []Property, r *lsp.Range) []lsp.CompletionItem {
@@ -70,50 +65,6 @@ func valueCandidates(values []string, r lsp.Range, isOrdered bool) []lsp.Complet
 			TextEdit: &lsp.TextEdit{
 				Range:   r,
 				NewText: value,
-			},
-		})
-	}
-	return candidates
-}
-
-func urlCandidates(_ []byte, _ string, block *hclsyntax.Block, attribute *hclsyntax.Attribute, pos hcl.Pos, _ *Property) []lsp.CompletionItem {
-	apiVersion := "v1.0"
-	if v := parser.BlockAttributeLiteralValue(block, "api_version"); v != nil {
-		apiVersion = *v
-	}
-
-	resources := make([]types.ResourceType, 0)
-	switch block.Type {
-	case "resource":
-		resources = msgraph.SchemaLoader.ListResources(apiVersion)
-	case "data":
-		resources = msgraph.SchemaLoader.ListReadableResources(apiVersion)
-	}
-	candidates := make([]lsp.CompletionItem, 0)
-	r := editRangeFromExprRange(attribute.Expr, pos)
-	for _, resource := range resources {
-		doc := fmt.Sprintf("Resource: `%s`  \nSummary: %s  \n", resource.Url, resource.Name)
-		if resource.Description != "" {
-			doc += fmt.Sprintf("Description: %s  \n", resource.Description)
-		}
-		if resource.ExternalDocs != nil {
-			doc += fmt.Sprintf("External Docs: [%s](%s)  \n", resource.ExternalDocs.Description, resource.ExternalDocs.Url)
-		}
-		newText := fmt.Sprintf(`"%s"`, strings.TrimPrefix(resource.Url, "/"))
-		newText = strings.ReplaceAll(newText, "$", "\\$")
-		candidates = append(candidates, lsp.CompletionItem{
-			Label: fmt.Sprintf(`"%s"`, strings.TrimPrefix(resource.Url, "/")),
-			Kind:  lsp.ValueCompletion,
-			Documentation: lsp.MarkupContent{
-				Kind:  "markdown",
-				Value: doc,
-			},
-			SortText:         resource.Url,
-			InsertTextFormat: lsp.SnippetTextFormat,
-			InsertTextMode:   lsp.AdjustIndentation,
-			TextEdit: &lsp.TextEdit{
-				Range:   r,
-				NewText: newText,
 			},
 		})
 	}

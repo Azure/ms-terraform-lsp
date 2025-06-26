@@ -1,0 +1,2654 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 100,
+    "pattern": "^[-\\w\\\\._\\\\(\\\\)]+$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.LabServices/labPlans/images"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-07"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.LabServices/labPlans/images",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the image."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 1,
+        "description": "Image resource properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "Current provisioning state of the image."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The image display name."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "A description of the image."
+      },
+      "iconUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "URL of the image icon."
+      },
+      "author": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The image author."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "The OS Type of the image."
+      },
+      "plan": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ID of marketplace plan associated with the image (optional)."
+      },
+      "termsStatus": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "The status of image terms of use (enabled = accepted, disabled = not accepted)."
+      },
+      "offer": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ID of an offer associated with the image."
+      },
+      "publisher": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ID of the publisher of the image."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The image SKU."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The image version."
+      },
+      "sharedGalleryId": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "The ID for the image in the shared gallery."
+      },
+      "availableRegions": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The available regions of the image in the shared gallery."
+      },
+      "osState": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "The OS State of the image."
+      },
+      "enabledState": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Is the image enabled"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Locked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      }
+    ]
+  },
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 2000
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Generalized"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Specialized"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.LabServices/labPlans/images@2023-06-07",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 100
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.LabServices/labPlans"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-07"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.LabServices/labPlans",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the lab plan."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "Lab plan resource properties"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0,
+        "description": "Managed Identity Information"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabPlanProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 2,
+        "description": "Current provisioning state of the lab plan."
+      },
+      "resourceOperationError": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Error details of last operation done on lab plan."
+      },
+      "defaultConnectionProfile": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The default lab connection profile. This can be changed on a lab resource and only provides a default profile."
+      },
+      "defaultAutoShutdownProfile": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 0,
+        "description": "The default lab shutdown profile. This can be changed on a lab resource and only provides a default profile."
+      },
+      "defaultNetworkProfile": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "The lab plan network profile. To enforce lab network policies they must be defined here and cannot be changed when there are existing labs associated with this lab plan."
+      },
+      "allowedRegions": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "The allowed regions for the lab creator to use when creating labs using this lab plan."
+      },
+      "sharedGalleryId": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Resource ID of the Shared Image Gallery attached to this lab plan. When saving a lab template virtual machine image it will be persisted in this gallery. Shared images from the gallery can be made available to use when creating new labs."
+      },
+      "supportInfo": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "Support contact information and instructions for users of the lab plan. This information is displayed to lab owners and virtual machine users for all labs in the lab plan."
+      },
+      "linkedLmsInstance": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Base Url of the lms instance this lab plan can link lab rosters against."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Locked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceOperationError",
+    "properties": {
+      "timestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The datetime of when the error occured"
+      },
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The code that corresponds to the type of operation failure"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The operation failure message"
+      },
+      "action": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The operation action that failed"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectionProfile",
+    "properties": {
+      "webSshAccess": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "The enabled access level for Web Access over SSH."
+      },
+      "webRdpAccess": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "The enabled access level for Web Access over RDP."
+      },
+      "clientSshAccess": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "The enabled access level for Client Access over SSH."
+      },
+      "clientRdpAccess": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 0,
+        "description": "The enabled access level for Client Access over RDP."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Public"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Private"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Public"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Private"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Public"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Private"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Public"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Private"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AutoShutdownProfile",
+    "properties": {
+      "shutdownOnDisconnect": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 0,
+        "description": "Whether shutdown on disconnect is enabled"
+      },
+      "shutdownWhenNotConnected": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "Whether a VM will get shutdown when it hasn't been connected to after a period of time."
+      },
+      "shutdownOnIdle": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "Whether a VM will get shutdown when it has idled for a period of time."
+      },
+      "disconnectDelay": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The amount of time a VM will stay running after a user disconnects if this behavior is enabled."
+      },
+      "noConnectDelay": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The amount of time a VM will stay running before it is shutdown if no connection is made and this behavior is enabled."
+      },
+      "idleDelay": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The amount of time a VM will idle before it is shutdown if this behavior is enabled."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAbsence"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LowUsage"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabPlanNetworkProfile",
+    "properties": {
+      "subnetId": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The external subnet resource id"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SupportInfo",
+    "properties": {
+      "url": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Support web address."
+      },
+      "email": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "Support contact email address."
+      },
+      "phone": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "Support contact phone number."
+      },
+      "instructions": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Support instructions."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 6,
+    "maxLength": 254
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 31
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Identity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The principal ID of resource identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The tenant ID of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "The identity type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.LabServices/labPlans@2023-06-07",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/42"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.LabServices/labs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-07"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.LabServices/labs",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the lab."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 1,
+        "description": "Lab resource properties"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 2,
+        "description": "Current provisioning state of the lab."
+      },
+      "networkProfile": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 0,
+        "description": "The network profile for the lab, typically applied via a lab plan. This profile cannot be modified once a lab has been created."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 2,
+        "description": "The lab state."
+      },
+      "resourceOperationError": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Error details of last operation done on lab."
+      },
+      "autoShutdownProfile": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 0,
+        "description": "The resource auto shutdown configuration for the lab. This controls whether actions are taken on resources that are sitting idle."
+      },
+      "connectionProfile": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The connection profile for the lab. This controls settings such as web access to lab resources or whether RDP or SSH ports are open."
+      },
+      "virtualMachineProfile": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "The profile used for creating lab virtual machines."
+      },
+      "securityProfile": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 0,
+        "description": "The lab security profile."
+      },
+      "rosterProfile": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 0,
+        "description": "The lab user list management profile."
+      },
+      "labPlanId": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The ID of the lab plan. Used during resource creation to provide defaults and acts as a permission container when creating a lab via labs.azure.com. Setting a labPlanId on an existing lab provides organization.."
+      },
+      "title": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 0,
+        "description": "The title of the lab."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The description of the lab."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Locked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabNetworkProfile",
+    "properties": {
+      "subnetId": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The external subnet resource id"
+      },
+      "loadBalancerId": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The external load balancer resource id"
+      },
+      "publicIpId": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The external public IP resource id"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Draft"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Publishing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scaling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Syncing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Published"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineProfile",
+    "properties": {
+      "createOption": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 1,
+        "description": "Indicates what lab virtual machines are created from."
+      },
+      "imageReference": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 1,
+        "description": "The image configuration for lab virtual machines."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 2,
+        "description": "The OS type of the image"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 1,
+        "description": "The SKU for the lab. Defines the type of virtual machines used in the lab."
+      },
+      "additionalCapabilities": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "Additional VM capabilities."
+      },
+      "usageQuota": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The initial quota alloted to each lab user. Must be a time span between 0 and 9999 hours."
+      },
+      "useSharedPassword": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 0,
+        "description": "Enabling this option will use the same password for all user VMs."
+      },
+      "adminUser": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 1,
+        "description": "Credentials for the admin user on the VM."
+      },
+      "nonAdminUser": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Credentials for the non-admin user on the VM, if one exists."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Image"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TemplateVM"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageReference",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Image resource ID"
+      },
+      "offer": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The image offer if applicable."
+      },
+      "publisher": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The image publisher"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The image SKU"
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The image version specified on creation."
+      },
+      "exactVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The actual version of the image after use."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Sku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the SKU. Ex - P3. It is typically a letter+number code"
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0,
+        "description": "This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT."
+      },
+      "size": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code."
+      },
+      "family": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "If the service has different generations of hardware, for the same SKU, then that can be captured here."
+      },
+      "capacity": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0,
+        "description": "If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Free"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineAdditionalCapabilities",
+    "properties": {
+      "installGpuDrivers": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 0,
+        "description": "Flag to pre-install dedicated GPU drivers."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/123"
+      },
+      {
+        "$ref": "#/124"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/127"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Credentials",
+    "properties": {
+      "username": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The username to use when signing in to lab VMs."
+      },
+      "password": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 4,
+        "description": "The password for the user. This is required for the TemplateVM createOption."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityProfile",
+    "properties": {
+      "registrationCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The registration code for the lab."
+      },
+      "openAccess": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 0,
+        "description": "Whether any user or only specified users can register to a lab."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/133"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RosterProfile",
+    "properties": {
+      "activeDirectoryGroupId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The AAD group ID which this lab roster is populated from. Having this set enables AAD sync mode."
+      },
+      "ltiContextId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The unique context identifier for the lab in the lms."
+      },
+      "lmsInstance": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The base URI identifying the lms instance."
+      },
+      "ltiClientId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The unique id of the azure lab services tool in the lms."
+      },
+      "ltiRosterEndpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The uri of the names and roles service endpoint on the lms for the class attached to this lab."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 120
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.LabServices/labs@2023-06-07",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/91"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.LabServices/labs/schedules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-07"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.LabServices/labs/schedules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the schedule."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 1,
+        "description": "Schedule resource properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduleProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 2,
+        "description": "Current provisioning state of the schedule."
+      },
+      "resourceOperationError": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Error details of last operation done on schedule."
+      },
+      "startAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead."
+      },
+      "stopAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead."
+      },
+      "recurrencePattern": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 0,
+        "description": "The recurrence pattern of the scheduled actions."
+      },
+      "timeZoneId": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 0,
+        "description": "The IANA timezone id for the schedule."
+      },
+      "notes": {
+        "type": {
+          "$ref": "#/165"
+        },
+        "flags": 0,
+        "description": "Notes for this schedule."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Locked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecurrencePattern",
+    "properties": {
+      "frequency": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 1,
+        "description": "The frequency of the recurrence."
+      },
+      "weekDays": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 0,
+        "description": "The week days the schedule runs. Used for when the Frequency is set to Weekly."
+      },
+      "interval": {
+        "type": {
+          "$ref": "#/163"
+        },
+        "flags": 0,
+        "description": "The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used."
+      },
+      "expirationDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "When the recurrence will expire. This date is inclusive."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Daily"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Weekly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sunday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Monday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tuesday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Wednesday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Thursday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Friday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Saturday"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/154"
+      },
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
+      },
+      {
+        "$ref": "#/157"
+      },
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/160"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/161"
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 365
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 50
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 1000
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.LabServices/labs/schedules@2023-06-07",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/141"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.LabServices/labs/users"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-07"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.LabServices/labs/users",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the user resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/170"
+        },
+        "flags": 1,
+        "description": "User resource properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 2,
+        "description": "Current provisioning state of the user resource."
+      },
+      "resourceOperationError": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Error details of last operation done on lab plan."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display name of the user, for example user's full name."
+      },
+      "email": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 1,
+        "description": "Email address of the user."
+      },
+      "registrationState": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 2,
+        "description": "State of the user's registration within the lab."
+      },
+      "invitationState": {
+        "type": {
+          "$ref": "#/185"
+        },
+        "flags": 2,
+        "description": "State of the invitation message for the user."
+      },
+      "invitationSent": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Date and time when the invitation message was sent to the user."
+      },
+      "totalUsage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "How long the user has used their virtual machines in this lab."
+      },
+      "additionalUsageQuota": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The amount of usage quota time the user gets in addition to the lab usage quota."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Locked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/173"
+      },
+      {
+        "$ref": "#/174"
+      },
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Registered"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotRegistered"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSent"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sent"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/184"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.LabServices/labs/users@2023-06-07",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/169"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.LabServices/labs/virtualMachines"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-07"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.LabServices/labs/virtualMachines",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "System data of the Lab virtual machine."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 2,
+        "description": "Virtual machine resource properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 2,
+        "description": "Current provisioning state of the virtual machine."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/205"
+        },
+        "flags": 2,
+        "description": "The current state of the virtual machine"
+      },
+      "resourceOperationError": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Error details of last operation done on lab plan."
+      },
+      "connectionProfile": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 2,
+        "description": "Profile for information about connecting to the virtual machine."
+      },
+      "claimedByUserId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The lab user ID (not the PUID!) of who claimed the virtual machine."
+      },
+      "vmType": {
+        "type": {
+          "$ref": "#/209"
+        },
+        "flags": 2,
+        "description": "The type of this VM resource"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Locked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/191"
+      },
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/193"
+      },
+      {
+        "$ref": "#/194"
+      },
+      {
+        "$ref": "#/195"
+      },
+      {
+        "$ref": "#/196"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Starting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResettingPassword"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reimaging"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Redeploying"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/200"
+      },
+      {
+        "$ref": "#/201"
+      },
+      {
+        "$ref": "#/202"
+      },
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/204"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineConnectionProfile",
+    "properties": {
+      "privateIpAddress": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The private IP address of the virtual machine."
+      },
+      "sshAuthority": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Port and host name separated by semicolon for connecting via SSH protocol to the virtual machine."
+      },
+      "sshInBrowserUrl": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "URL for connecting via SSH protocol to the virtual machine in browser."
+      },
+      "rdpAuthority": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Port and host name separated by semicolon for connecting via RDP protocol to the virtual machine."
+      },
+      "rdpInBrowserUrl": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "URL for connecting via RDP protocol to the virtual machine in browser."
+      },
+      "adminUsername": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The username used to log on to the virtual machine as admin."
+      },
+      "nonAdminUsername": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The username used to log on to the virtual machine as non-admin, if one exists."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Template"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/207"
+      },
+      {
+        "$ref": "#/208"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.LabServices/labs/virtualMachines@2023-06-07",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/189"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SaveImageBody",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name for the image we create."
+      },
+      "labVirtualMachineId": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The ID of the lab virtual machine you want to save an image from."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "saveImage",
+    "resourceType": "Microsoft.LabServices/labPlans",
+    "apiVersion": "2023-06-07",
+    "input": {
+      "$ref": "#/211"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "publish",
+    "resourceType": "Microsoft.LabServices/labs",
+    "apiVersion": "2023-06-07"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "syncGroup",
+    "resourceType": "Microsoft.LabServices/labs",
+    "apiVersion": "2023-06-07"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InviteBody",
+    "properties": {
+      "text": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Custom text for the invite email."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "invite",
+    "resourceType": "Microsoft.LabServices/labs/users",
+    "apiVersion": "2023-06-07",
+    "input": {
+      "$ref": "#/215"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.LabServices/labs/virtualMachines",
+    "apiVersion": "2023-06-07"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.LabServices/labs/virtualMachines",
+    "apiVersion": "2023-06-07"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.LabServices/labs/virtualMachines",
+    "apiVersion": "2023-06-07"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.LabServices/labs/virtualMachines",
+    "apiVersion": "2023-06-07"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResetPasswordBody",
+    "properties": {
+      "username": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The user whose password is being reset"
+      },
+      "password": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 5,
+        "description": "The password"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetPassword",
+    "resourceType": "Microsoft.LabServices/labs/virtualMachines",
+    "apiVersion": "2023-06-07",
+    "input": {
+      "$ref": "#/221"
+    }
+  }
+]

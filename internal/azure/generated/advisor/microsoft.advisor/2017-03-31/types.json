@@ -1,0 +1,361 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Advisor/recommendations/suppressions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-03-31"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Advisor/recommendations/suppressions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The properties of the suppression."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SuppressionProperties",
+    "properties": {
+      "suppressionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The GUID of the suppression."
+      },
+      "ttl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The duration for which the suppression is valid."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Advisor/recommendations/suppressions@2017-03-31",
+    "scopeType": 0,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Advisor/recommendations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-03-31"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Advisor/recommendations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "The properties of the recommendation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecommendationProperties",
+    "properties": {
+      "category": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "The category of the recommendation."
+      },
+      "impact": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The business impact of the recommendation."
+      },
+      "impactedField": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type identified by Advisor."
+      },
+      "impactedValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource identified by Advisor."
+      },
+      "lastUpdated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The most recent time that Advisor checked the validity of the recommendation."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The recommendation metadata."
+      },
+      "recommendationTypeId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The recommendation-type GUID."
+      },
+      "risk": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "The potential risk of not implementing the recommendation."
+      },
+      "shortDescription": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "A summary of the recommendation."
+      },
+      "suppressionIds": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "The list of snoozed and dismissed rules for the recommendation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HighAvailability"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Security"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Performance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cost"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationalExcellence"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Medium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Low"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecommendationPropertiesMetadata",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/20"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ShortDescription",
+    "properties": {
+      "problem": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The issue or opportunity identified by the recommendation."
+      },
+      "solution": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The remediation action suggested by the recommendation."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Advisor/recommendations@2017-03-31",
+    "scopeType": 0,
+    "body": {
+      "$ref": "#/8"
+    },
+    "flags": 1
+  }
+]

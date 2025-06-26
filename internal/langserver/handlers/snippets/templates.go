@@ -9,8 +9,11 @@ import (
 	provider_schema "github.com/Azure/ms-terraform-lsp/provider-schema"
 )
 
-//go:embed templates.json
-var templateJSON embed.FS
+//go:embed msgraph_templates.json
+var msgraphTemplateJSON embed.FS
+
+//go:embed azapi_templates.json
+var azapiTemplateJSON embed.FS
 
 type CompletionModel struct {
 	Label         string             `json:"label"`
@@ -31,6 +34,7 @@ type DocumentationModel struct {
 var (
 	msgraphTemplateCandidates []lsp.CompletionItem
 	azurermTemplateCandidates []lsp.CompletionItem
+	azapiTemplateCandidates   []lsp.CompletionItem
 )
 
 func MSGraphTemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
@@ -41,7 +45,7 @@ func MSGraphTemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
 		return msgraphTemplateCandidates
 	}
 	templates := make([]CompletionModel, 0)
-	data, err := templateJSON.ReadFile("templates.json")
+	data, err := msgraphTemplateJSON.ReadFile("msgraph_templates.json")
 	if err != nil {
 		return nil
 	}
@@ -145,4 +149,57 @@ func AzureRMTemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
 		})
 	}
 	return azurermTemplateCandidates
+}
+
+func AzAPITemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
+	if len(azapiTemplateCandidates) != 0 {
+		for i := range azapiTemplateCandidates {
+			azapiTemplateCandidates[i].TextEdit.Range = editRange
+		}
+		return azapiTemplateCandidates
+	}
+	templates := make([]CompletionModel, 0)
+	data, err := azapiTemplateJSON.ReadFile("azapi_templates.json")
+	if err != nil {
+		return nil
+	}
+	err = json.Unmarshal(data, &templates)
+	if err != nil {
+		return nil
+	}
+
+	for _, template := range templates {
+		event := lsp.TelemetryEvent{
+			Version: lsp.TelemetryFormatVersion,
+			Name:    "textDocument/completion",
+			Properties: map[string]interface{}{
+				"kind":  "template",
+				"label": template.Label,
+			},
+		}
+		data, _ := json.Marshal(event)
+
+		azapiTemplateCandidates = append(azapiTemplateCandidates, lsp.CompletionItem{
+			Label:  template.Label,
+			Kind:   lsp.SnippetCompletion,
+			Detail: "Code Sample",
+			Documentation: lsp.MarkupContent{
+				Kind:  "markdown",
+				Value: template.Documentation.Value,
+			},
+			SortText:         template.SortText,
+			InsertTextFormat: lsp.SnippetTextFormat,
+			InsertTextMode:   lsp.AdjustIndentation,
+			TextEdit: &lsp.TextEdit{
+				Range:   editRange,
+				NewText: template.TextEdit.NewText,
+			},
+			Command: &lsp.Command{
+				Title:     "",
+				Command:   "azapi.telemetry",
+				Arguments: []json.RawMessage{data},
+			},
+		})
+	}
+	return azapiTemplateCandidates
 }

@@ -1,0 +1,188 @@
+[
+  {
+    "$type": "StringLiteralType",
+    "value": "aggregatedcost"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingPeriods/Microsoft.Consumption"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-30"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingPeriods/Microsoft.Consumption",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The properties of the Management Group Aggregated Cost."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementGroupAggregatedCostProperties",
+    "properties": {
+      "billingPeriodId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The id of the billing period resource that the aggregated cost belongs to."
+      },
+      "azureCharges": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Azure Charges."
+      },
+      "marketplaceCharges": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Marketplace Charges."
+      },
+      "chargesBilledSeparately": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Charges Billed Separately."
+      },
+      "currency": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ISO currency in which the meter is charged, for example, USD."
+      },
+      "children": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Children of a management group"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementGroupAggregatedCostResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The properties of the Management Group Aggregated Cost."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/7"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingPeriods/Microsoft.Consumption@2018-06-30",
+    "scopeType": 2,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 1
+  }
+]

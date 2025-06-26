@@ -1,0 +1,1373 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforPostgreSQL/flexibleServers/databases"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-01-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforPostgreSQL/flexibleServers/databases",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The properties of a database."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The system metadata relating to this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseProperties",
+    "properties": {
+      "charset": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The charset of the database."
+      },
+      "collation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The collation of the database."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforPostgreSQL/flexibleServers/databases@2022-01-20-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforPostgreSQL/flexibleServers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-01-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The SKU (pricing tier) of the server."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Properties of the server."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The system metadata relating to this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Sku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the sku, typically, tier + family + cores, e.g. Standard_D4s_v3."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 1,
+        "description": "The tier of the particular SKU, e.g. Burstable."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Burstable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeneralPurpose"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MemoryOptimized"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerProperties",
+    "properties": {
+      "administratorLogin": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation)."
+      },
+      "administratorLoginPassword": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 4,
+        "description": "The administrator login password (required for server creation)."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "PostgreSQL Server version."
+      },
+      "minorVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The minor version of the server."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 2,
+        "description": "A state of a server that is visible to user."
+      },
+      "fullyQualifiedDomainName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The fully qualified domain name of a server."
+      },
+      "storage": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Storage properties of a server."
+      },
+      "backup": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "Backup properties of a server."
+      },
+      "network": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Network properties of a server."
+      },
+      "highAvailability": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "High availability properties of a server."
+      },
+      "maintenanceWindow": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "Maintenance window properties of a server."
+      },
+      "sourceServerResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore'."
+      },
+      "pointInTimeUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Restore point creation time (ISO8601 format), specifying the time to restore from. It's required when 'createMode' is 'PointInTimeRestore'."
+      },
+      "availabilityZone": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "availability zone information of the server."
+      },
+      "createMode": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 4,
+        "description": "The mode to create a new PostgreSQL server."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "14"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "13"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "12"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "11"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dropping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Starting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Storage",
+    "properties": {
+      "storageSizeGB": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Max storage allowed for a server."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Backup",
+    "properties": {
+      "backupRetentionDays": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Backup retention days for the server."
+      },
+      "geoRedundantBackup": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "A value indicating whether Geo-Redundant backup is enabled on the server."
+      },
+      "earliestRestoreDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The earliest restore point time (ISO8601 format) for server."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Network",
+    "properties": {
+      "publicNetworkAccess": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "public network access is enabled or not"
+      },
+      "delegatedSubnetResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "delegated subnet arm resource id."
+      },
+      "privateDnsZoneArmResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "private dns zone arm resource id."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HighAvailability",
+    "properties": {
+      "mode": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "The HA mode for the server."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 2,
+        "description": "A state of a HA server that is visible to user."
+      },
+      "standbyAvailabilityZone": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "availability zone information of the standby."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ZoneRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SameZone"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotEnabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CreatingStandby"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReplicatingData"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FailingOver"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RemovingStandby"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MaintenanceWindow",
+    "properties": {
+      "customWindow": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "indicates whether custom window is enabled or disabled"
+      },
+      "startHour": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "start hour for maintenance window"
+      },
+      "startMinute": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "start minute for maintenance window"
+      },
+      "dayOfWeek": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "day of week for maintenance window"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Create"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Update"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PointInTimeRestore"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforPostgreSQL/flexibleServers@2022-01-20-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/19"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforPostgreSQL/flexibleServers/firewallRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-01-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforPostgreSQL/flexibleServers/firewallRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 1,
+        "description": "The properties of a firewall rule."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The system metadata relating to this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallRuleProperties",
+    "properties": {
+      "startIpAddress": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 1,
+        "description": "The start IP address of the server firewall rule. Must be IPv4 format."
+      },
+      "endIpAddress": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 1,
+        "description": "The end IP address of the server firewall rule. Must be IPv4 format."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2022-01-20-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/72"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforPostgreSQL/flexibleServers/configurations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-01-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforPostgreSQL/flexibleServers/configurations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "The properties of a configuration."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The system metadata relating to this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationProperties",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Value of the configuration."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Description of the configuration."
+      },
+      "defaultValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Default value of the configuration."
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 2,
+        "description": "Data type of the configuration."
+      },
+      "allowedValues": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Allowed values of the configuration."
+      },
+      "source": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Source of the configuration."
+      },
+      "isDynamicConfig": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 2,
+        "description": "Configuration dynamic or static."
+      },
+      "isReadOnly": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 2,
+        "description": "Configuration read-only or not."
+      },
+      "isConfigPendingRestart": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 2,
+        "description": "Configuration is pending restart or not."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Configuration unit."
+      },
+      "documentationLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Configuration documentation link."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Boolean"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Numeric"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Integer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enumeration"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforPostgreSQL/flexibleServers/configurations@2022-01-20-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/78"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforPostgreSQL/flexibleServers/backups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-01-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforPostgreSQL/flexibleServers/backups",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 2,
+        "description": "The properties of a server backup."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The system metadata relating to this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerBackupProperties",
+    "properties": {
+      "backupType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Backup type."
+      },
+      "completedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Backup completed time (ISO8601 format)."
+      },
+      "source": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Backup source"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforPostgreSQL/flexibleServers/backups@2022-01-20-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/89"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestartParameter",
+    "properties": {
+      "restartWithFailover": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0,
+        "description": "Indicates whether to restart the server with failover."
+      },
+      "failoverMode": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Failover mode."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PlannedFailover"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForcedFailover"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PlannedSwitchover"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForcedSwitchover"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2022-01-20-preview",
+    "input": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2022-01-20-preview"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2022-01-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkSubnetUsageParameter",
+    "properties": {
+      "virtualNetworkArmResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Virtual network resource id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkSubnetUsageResult",
+    "properties": {
+      "delegatedSubnetsUsage": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 2
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "location of the delegated subnet usage"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "subscriptionId of the delegated subnet usage"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DelegatedSubnetUsage",
+    "properties": {
+      "subnetName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "name of the subnet"
+      },
+      "usage": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "Number of used delegated subnets"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkVirtualNetworkSubnetUsage",
+    "resourceType": "Microsoft.DBforPostgreSQL/locations",
+    "apiVersion": "2022-01-20-preview",
+    "output": {
+      "$ref": "#/102"
+    },
+    "input": {
+      "$ref": "#/101"
+    }
+  }
+]

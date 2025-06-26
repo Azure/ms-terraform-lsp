@@ -1,0 +1,367 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridConnectivity/endpoints"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-05-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridConnectivity/endpoints",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "System data of endpoint resource"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "The endpoint properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EndpointProperties",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 1,
+        "description": "The type of endpoint."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource Id of the connectivity endpoint (optional)."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource provisioning state."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "custom"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridConnectivity/endpoints@2022-05-01-preview",
+    "scopeType": 0,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EndpointAccessResource",
+    "properties": {
+      "relay": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Azure relay hybrid connection access properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelayNamespaceAccessProperties",
+    "properties": {
+      "namespaceName": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 1,
+        "description": "The namespace name."
+      },
+      "namespaceNameSuffix": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 1,
+        "description": "The suffix domain name of relay namespace."
+      },
+      "hybridConnectionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Azure Relay hybrid connection name for the resource."
+      },
+      "accessKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Access key for hybrid connection."
+      },
+      "expiresOn": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The expiration of access key in unix time."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 200
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 100
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listCredentials",
+    "resourceType": "Microsoft.HybridConnectivity/endpoints",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/20"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedProxyRequest",
+    "properties": {
+      "service": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the service."
+      },
+      "hostname": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target host name."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedProxyResource",
+    "properties": {
+      "proxy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The short lived proxy name."
+      },
+      "expiresOn": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 1,
+        "description": "The expiration time of short lived proxy name in unix epoch."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listManagedProxyDetails",
+    "resourceType": "Microsoft.HybridConnectivity/endpoints",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/27"
+    },
+    "input": {
+      "$ref": "#/26"
+    }
+  }
+]

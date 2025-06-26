@@ -1,0 +1,161 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Subscription/subscriptionDefinitions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-11-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Subscription/subscriptionDefinitions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "the subscription definition properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionDefinitionProperties",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the subscription."
+      },
+      "subscriptionDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The display name of the subscription."
+      },
+      "offerType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The offer type of the subscription. For example, MS-AZR-0017P (EnterpriseAgreement) and MS-AZR-0148P (EnterpriseAgreement devTest) are available."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The etag the subscription definition."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Subscription/subscriptionDefinitions@2017-11-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Subscription/subscriptionOperations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-11-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Subscription/subscriptionOperations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "the subscription definition properties"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Subscription/subscriptionOperations@2017-11-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/9"
+    },
+    "flags": 1
+  }
+]

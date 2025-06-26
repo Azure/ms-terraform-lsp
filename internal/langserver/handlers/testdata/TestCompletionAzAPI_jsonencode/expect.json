@@ -1,0 +1,38 @@
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "result": {
+    "isIncomplete": false,
+    "items": [
+      {
+        "label": "{}",
+        "labelDetails": {},
+        "kind": 12,
+        "documentation": {
+          "kind": "markdown",
+          "value": "dynamic attribute allows any valid HCL object."
+        },
+        "sortText": "{}",
+        "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 8
+            },
+            "end": {
+              "line": 4,
+              "character": 12
+            }
+          },
+          "newText": "{\n\t$0\n}"
+        },
+        "command": {
+          "title": "Suggest",
+          "command": "editor.action.triggerSuggest"
+        }
+      }
+    ]
+  }
+}

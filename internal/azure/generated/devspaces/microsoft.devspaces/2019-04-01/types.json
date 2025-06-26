@@ -1,0 +1,376 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 63,
+    "pattern": "^[a-zA-Z0-9]([_-]*[a-zA-Z0-9])*$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DevSpaces/controllers"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-04-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DevSpaces/controllers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 1,
+        "description": "Model representing SKU for Azure Dev Spaces Controller."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Tags for the Azure resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Region where the Azure resource is located."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ControllerProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the Azure Dev Spaces Controller."
+      },
+      "hostSuffix": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "DNS suffix for public endpoints running in the Azure Dev Spaces Controller."
+      },
+      "dataPlaneFqdn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "DNS name for accessing DataPlane services"
+      },
+      "targetContainerHostApiServerFqdn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "DNS of the target container host's API server"
+      },
+      "targetContainerHostResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource ID of the target container host"
+      },
+      "targetContainerHostCredentialsBase64": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 5,
+        "description": "Credentials of the target container host (base64)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Sku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 1,
+        "description": "The name of the SKU for Azure Dev Spaces Controller."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The tier of the SKU for Azure Dev Spaces Controller."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S1"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DevSpaces/controllers@2019-04-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerHostMapping",
+    "properties": {
+      "containerHostResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ARM ID of the Container Host resource"
+      },
+      "mappedControllerResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "ARM ID of the mapped Controller resource"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkContainerHostMapping",
+    "resourceType": "Microsoft.DevSpaces/locations",
+    "apiVersion": "2019-04-01",
+    "output": {
+      "$ref": "#/21"
+    },
+    "input": {
+      "$ref": "#/21"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ListConnectionDetailsParameters",
+    "properties": {
+      "targetContainerHostResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource ID of the target container host mapped to the Azure Dev Spaces Controller."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ControllerConnectionDetailsList",
+    "properties": {
+      "connectionDetailsList": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "List of Azure Dev Spaces Controller connection details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ControllerConnectionDetails",
+    "properties": {
+      "orchestratorSpecificConnectionDetails": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Base class for types that supply values used to connect to container orchestrators"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "OrchestratorSpecificConnectionDetails",
+    "discriminator": "instanceType",
+    "baseProperties": {},
+    "elements": {
+      "Kubernetes": {
+        "$ref": "#/27"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesConnectionDetails",
+    "properties": {
+      "kubeConfig": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets the kubeconfig for the cluster."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 1,
+        "description": "Gets the Instance type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Kubernetes"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listConnectionDetails",
+    "resourceType": "Microsoft.DevSpaces/controllers",
+    "apiVersion": "2019-04-01",
+    "output": {
+      "$ref": "#/24"
+    },
+    "input": {
+      "$ref": "#/23"
+    }
+  }
+]

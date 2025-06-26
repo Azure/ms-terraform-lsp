@@ -1,0 +1,421 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Insights/webtests"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-06-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Insights/webtests",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "The kind of WebTest that this web test watches. Choices are ping, multistep and standard."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "Metadata describing a web test for an Azure resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "multistep"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "standard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/4"
+      },
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebTestProperties",
+    "properties": {
+      "SyntheticMonitorId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Unique ID of this WebTest. This is typically the same value as the Name field."
+      },
+      "Name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "User defined name if this WebTest."
+      },
+      "Description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "User defined description for this WebTest."
+      },
+      "Enabled": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Is the test actively being monitored."
+      },
+      "Frequency": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Interval in seconds between test runs for this WebTest. Default value is 300."
+      },
+      "Timeout": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Seconds until this WebTest will timeout and fail. Default value is 30."
+      },
+      "Kind": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 1,
+        "description": "The kind of web test this is, valid choices are ping, multistep and standard."
+      },
+      "RetryEnabled": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Allow for retries should this WebTest fail."
+      },
+      "Locations": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 1,
+        "description": "A list of where to physically run the tests from to give global coverage for accessibility of your application."
+      },
+      "Configuration": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "An XML configuration specification for a WebTest."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed."
+      },
+      "Request": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The collection of request properties"
+      },
+      "ValidationRules": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The collection of validation rule properties"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "multistep"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "standard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebTestGeolocation",
+    "properties": {
+      "Id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location ID for the WebTest to run from."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/15"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebTestPropertiesConfiguration",
+    "properties": {
+      "WebTest": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The XML specification of a WebTest to run against an application."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebTestPropertiesRequest",
+    "properties": {
+      "RequestUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Url location to test."
+      },
+      "Headers": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "List of headers and their values to add to the WebTest call."
+      },
+      "HttpVerb": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Http verb to use for this web test."
+      },
+      "RequestBody": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Base64 encoded string body to send with this web test."
+      },
+      "ParseDependentRequests": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Parse Dependent request for this WebTest."
+      },
+      "FollowRedirects": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Follow redirects for this web test."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HeaderField",
+    "properties": {
+      "key": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the header."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The value of the header."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebTestPropertiesValidationRules",
+    "properties": {
+      "ContentValidation": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "The collection of content validation properties"
+      },
+      "SSLCheck": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Checks to see if the SSL cert is still valid."
+      },
+      "SSLCertRemainingLifetimeCheck": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "A number of days to check still remain before the the existing SSL cert expires.  Value must be positive and the SSLCheck must be set to true."
+      },
+      "ExpectedHttpStatusCode": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Validate that the WebTest returns the http status code provided."
+      },
+      "IgnoreHttpStatusCode": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "When set, validation will ignore the status code."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebTestPropertiesValidationRulesContentValidation",
+    "properties": {
+      "ContentMatch": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Content to look for in the return of the WebTest.  Must not be null or empty."
+      },
+      "IgnoreCase": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "When set, this value makes the ContentMatch validation case insensitive."
+      },
+      "PassIfTextFound": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "When true, validation will pass if there is a match for the ContentMatch string.  If false, validation will fail if there is a match"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebtestsResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Insights/webtests@2022-06-15",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

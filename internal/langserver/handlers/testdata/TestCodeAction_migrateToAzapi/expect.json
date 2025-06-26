@@ -1,0 +1,99 @@
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "result": [
+    {
+      "title": "Generate Custom Role",
+      "kind": "refactor.rewrite",
+      "edit": {},
+      "command": {
+        "title": "Generate Custom Role",
+        "command": "ms-terraform.aztfauthorize",
+        "arguments": [
+          {
+            "textDocument": {
+              "uri": "file:///tmp/azurerm-lsp/TestCodeAction_migrateToAzapi/main.tf"
+            },
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 0
+              },
+              "end": {
+                "line": 3,
+                "character": 1
+              }
+            },
+            "context": {
+              "diagnostics": null
+            }
+          },
+          {
+            "generateForMissingPermission": false
+          }
+        ]
+      }
+    },
+    {
+      "title": "Generate Custom Role for Missing Permissions",
+      "kind": "refactor.rewrite",
+      "edit": {},
+      "command": {
+        "title": "Generate Custom Role for Missing Permissions",
+        "command": "ms-terraform.aztfauthorize",
+        "arguments": [
+          {
+            "textDocument": {
+              "uri": "file:///tmp/azurerm-lsp/TestCodeAction_migrateToAzapi/main.tf"
+            },
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 0
+              },
+              "end": {
+                "line": 3,
+                "character": 1
+              }
+            },
+            "context": {
+              "diagnostics": null
+            }
+          },
+          {
+            "generateForMissingPermission": true
+          }
+        ]
+      }
+    },
+    {
+      "title": "Migrate to AzAPI Provider",
+      "kind": "refactor.rewrite",
+      "edit": {},
+      "command": {
+        "title": "Migrate to AzAPI Provider",
+        "command": "ms-terraform.aztfmigrate",
+        "arguments": [
+          {
+            "textDocument": {
+              "uri": "file:///tmp/azurerm-lsp/TestCodeAction_migrateToAzapi/main.tf"
+            },
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 0
+              },
+              "end": {
+                "line": 3,
+                "character": 1
+              }
+            },
+            "context": {
+              "diagnostics": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

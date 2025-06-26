@@ -1,0 +1,1496 @@
+[
+  {
+    "$type": "StringType",
+    "pattern": "^[-a-zA-Z0-9_]+$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AppComplianceAutomation/reports"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-11-16-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.AppComplianceAutomation/reports",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Report property."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReportProperties",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Report id in database."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "Report status."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Report's tenant id."
+      },
+      "reportName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Report name."
+      },
+      "offerGuid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Report offer Guid."
+      },
+      "timeZone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Report collection trigger time's time zone, the available list can be obtained by executing \"Get-TimeZone -ListAvailable\" in PowerShell.\r\nAn example of valid timezone id is \"Pacific Standard Time\"."
+      },
+      "triggerTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Report collection trigger time."
+      },
+      "nextTriggerTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Report next collection trigger time."
+      },
+      "lastTriggerTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Report last collection trigger time."
+      },
+      "subscriptions": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "List of subscription Ids."
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "List of resource data."
+      },
+      "complianceStatus": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 2,
+        "description": "Report compliance status."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "Azure lifecycle management"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceMetadata",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource Id - e.g. \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1\"."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource type."
+      },
+      "resourceKind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource kind."
+      },
+      "resourceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource name."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Resource's tag type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceMetadataTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReportComplianceStatus",
+    "properties": {
+      "m365": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "The Microsoft 365 certification name."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OverviewStatus",
+    "properties": {
+      "passedCount": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The count of all passed full automation control."
+      },
+      "failedCount": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The count of all failed full automation control."
+      },
+      "manualCount": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The count of all manual control."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.AppComplianceAutomation/reports@2022-11-16-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AppComplianceAutomation/reports/snapshots"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-11-16-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.AppComplianceAutomation/reports/snapshots",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 2,
+        "description": "Snapshot's property'."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SnapshotProperties",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Snapshot id in the database."
+      },
+      "snapshotName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Snapshot name."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "Azure lifecycle management"
+      },
+      "reportProperties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The report essential info."
+      },
+      "reportSystemData": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "complianceResults": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 2,
+        "description": "List of compliance results."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComplianceResult",
+    "properties": {
+      "complianceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the compliance. e.g. \"M365\""
+      },
+      "categories": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 2,
+        "description": "List of categories."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Category",
+    "properties": {
+      "categoryName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the compliance category. e.g. \"Operational Security\""
+      },
+      "categoryType": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "The category type"
+      },
+      "categoryStatus": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 2,
+        "description": "Category status."
+      },
+      "controlFamilies": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 2,
+        "description": "List of control families."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FullyAutomated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PartiallyAutomated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Manual"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ControlFamily",
+    "properties": {
+      "familyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the control family. e.g. \"Malware Protection - Anti-Virus\""
+      },
+      "familyType": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 2,
+        "description": "The control family type"
+      },
+      "familyStatus": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 2,
+        "description": "Control family status."
+      },
+      "controls": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 2,
+        "description": "List of controls."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FullyAutomated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PartiallyAutomated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Manual"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Control",
+    "properties": {
+      "controlId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Id of the control. e.g. \"Operational Security#10\""
+      },
+      "controlShortName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The short name of the control. e.g. \"Unsupported OS and Software.\""
+      },
+      "controlFullName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The full name of the control. e.g. \"Validate that unsupported operating systems and software components are not in use.\""
+      },
+      "controlType": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 2,
+        "description": "The control type"
+      },
+      "controlDescription": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The control's description"
+      },
+      "controlDescriptionHyperLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hyper link to the control's description'."
+      },
+      "controlStatus": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 2,
+        "description": "Control status."
+      },
+      "assessments": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 2,
+        "description": "List of assessments."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FullyAutomated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PartiallyAutomated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Manual"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Passed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotApplicable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Assessment",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the assessment."
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 2,
+        "description": "The severity level of this assessment."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The description of the assessment."
+      },
+      "remediation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The remediation of the assessment."
+      },
+      "isPass": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 2,
+        "description": "Indicates whether all the resource(s) are compliant."
+      },
+      "policyId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The policy id mapping to this assessment."
+      },
+      "resourceList": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 2,
+        "description": "List of resource assessments."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Medium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Low"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "True"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "False"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AssessmentResource",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Id of the resource."
+      },
+      "resourceStatus": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 2,
+        "description": "Resource status."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The reason for the N/A resource."
+      },
+      "statusChangeDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The status change date for the resource. For unavailable date, set it as N/A."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotApplicable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/81"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/73"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/64"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/47"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.AppComplianceAutomation/reports/snapshots@2022-11-16-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/38"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SnapshotDownloadRequest",
+    "properties": {
+      "reportCreatorTenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Tenant id."
+      },
+      "downloadType": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 1,
+        "description": "Indicates the download type."
+      },
+      "offerGuid": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "The offerGuid which mapping to the reports."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ComplianceReport"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompliancePdfReport"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ComplianceDetailedPdfReport"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceList"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadResponse",
+    "properties": {
+      "resourceList": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 2,
+        "description": "List of the reports"
+      },
+      "complianceReport": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 2,
+        "description": "List of the compliance result"
+      },
+      "compliancePdfReport": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 2,
+        "description": "compliance pdf report"
+      },
+      "complianceDetailedPdfReport": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 2,
+        "description": "compliance detailed pdf report"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceItem",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The subscription Id of this resource."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource group name of this resource."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource type of this resource."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource Id - e.g. \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1\"."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComplianceReportItem",
+    "properties": {
+      "categoryName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The category name."
+      },
+      "controlId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The control Id - e.g. \"1\"."
+      },
+      "controlName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The control name."
+      },
+      "controlType": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 2,
+        "description": "The control type."
+      },
+      "complianceState": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 2,
+        "description": "The compliance result's status."
+      },
+      "policyId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The compliance result mapped policy Id."
+      },
+      "policyDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The policy's display name."
+      },
+      "policyDescription": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The policy's detail description."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The compliance result mapped subscription Id."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The compliance result mapped resource group."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The compliance result mapped resource type."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The compliance result mapped resource Id - e.g. \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1\"."
+      },
+      "statusChangeDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The compliance result last changed date - e.g. \"2022-10-24T02:55:16.3274379Z\". For unavailable date, set it as \"N/A\"."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FullyAutomated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PartiallyAutomated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Manual"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadResponseCompliancePdfReport",
+    "properties": {
+      "sasUri": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 2,
+        "description": "uri of compliance pdf report"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadResponseComplianceDetailedPdfReport",
+    "properties": {
+      "sasUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "uri of compliance detailed pdf report"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "download",
+    "resourceType": "Microsoft.AppComplianceAutomation/reports/snapshots",
+    "apiVersion": "2022-11-16-preview",
+    "output": {
+      "$ref": "#/100"
+    },
+    "input": {
+      "$ref": "#/93"
+    }
+  }
+]

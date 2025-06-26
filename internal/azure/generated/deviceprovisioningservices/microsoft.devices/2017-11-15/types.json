@@ -1,0 +1,805 @@
+[
+  {
+    "$type": "StringType",
+    "maxLength": 256
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Devices/provisioningServices/certificates"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-11-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Devices/provisioningServices/certificates",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "certificate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 4,
+        "description": "Base-64 representation of the X509 leaf certificate .cer file or just .pem file content."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "properties of a certificate"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The entity tag."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateProperties",
+    "properties": {
+      "subject": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The certificate's subject name."
+      },
+      "expiry": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The certificate's expiration date and time."
+      },
+      "thumbprint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The certificate's thumbprint."
+      },
+      "isVerified": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Determines whether certificate has been verified."
+      },
+      "created": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The certificate's creation date and time."
+      },
+      "updated": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The certificate's last update date and time."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Devices/provisioningServices/certificates@2017-11-15",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Devices/provisioningServices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-11-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Devices/provisioningServices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 1,
+        "description": "Service specific properties for a provisioning service"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "SKU info for a provisioning service."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "The resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IotDpsPropertiesDescription",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Current state of the provisioning service."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ARM provisioning state of the provisioning service."
+      },
+      "iotHubs": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "List of IoT hubs associated with this provisioning service."
+      },
+      "allocationPolicy": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Allocation policy to be used by this provisioning service."
+      },
+      "serviceOperationsHostName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Service endpoint for provisioning service."
+      },
+      "deviceProvisioningHostName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Device endpoint for this provisioning service."
+      },
+      "idScope": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Unique identifier of this provisioning service."
+      },
+      "authorizationPolicies": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "List of authorization keys for a provisioning service."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Activating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActivationFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeletionFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Transitioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspended"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resuming"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FailingOver"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FailoverFailed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IotHubDefinitionDescription",
+    "properties": {
+      "applyAllocationPolicy": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Flag for applying allocationPolicy or not for a given IoT hub."
+      },
+      "allocationWeight": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Weight to apply for a given IoT hub."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Host name of the IoT hub."
+      },
+      "connectionString": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Connection string of the IoT hub."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "ARM region of the IoT hub."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hashed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeoLatency"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Static"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedAccessSignatureAuthorizationRuleAccessRightsDescription",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the key."
+      },
+      "primaryKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Primary SAS key value."
+      },
+      "secondaryKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Secondary SAS key value."
+      },
+      "rights": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 1,
+        "description": "Rights that this key has."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServiceConfig"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EnrollmentRead"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EnrollmentWrite"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeviceConnect"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistrationStatusRead"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistrationStatusWrite"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/32"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IotDpsSkuInfo",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "Sku name."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Pricing tier name of the provisioning service."
+      },
+      "capacity": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The number of units to provision"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S1"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Devices/provisioningServices@2017-11-15",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/10"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VerificationCodeResponse",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of certificate."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Request etag."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource identifier."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource type."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VerificationCodeResponseProperties",
+    "properties": {
+      "verificationCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Verification code."
+      },
+      "subject": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Certificate subject."
+      },
+      "expiry": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Code expiry."
+      },
+      "thumbprint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Certificate thumbprint."
+      },
+      "isVerified": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Indicate if the certificate is verified by owner of private key."
+      },
+      "created": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Certificate created time."
+      },
+      "updated": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Certificate updated time."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateVerificationCode",
+    "resourceType": "Microsoft.Devices/provisioningServices/certificates",
+    "apiVersion": "2017-11-15",
+    "output": {
+      "$ref": "#/46"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VerificationCodeRequest",
+    "properties": {
+      "certificate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "base-64 representation of X509 certificate .cer file or just .pem file content."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "properties of a certificate"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource identifier."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the certificate."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The entity tag."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "verify",
+    "resourceType": "Microsoft.Devices/provisioningServices/certificates",
+    "apiVersion": "2017-11-15",
+    "output": {
+      "$ref": "#/50"
+    },
+    "input": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedAccessSignatureAuthorizationRuleListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "The list of shared access policies."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The next link."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/32"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listkeys",
+    "resourceType": "Microsoft.Devices/provisioningServices",
+    "apiVersion": "2017-11-15",
+    "output": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listkeys",
+    "resourceType": "Microsoft.Devices/provisioningServices/keys",
+    "apiVersion": "2017-11-15",
+    "output": {
+      "$ref": "#/32"
+    }
+  }
+]

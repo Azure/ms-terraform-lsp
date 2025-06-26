@@ -1,0 +1,548 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 63,
+    "pattern": "^[a-z][a-z0-9]*$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AnalysisServices/servers"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-07-14"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.AnalysisServices/servers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Properties of the provision operation request."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Location of the Analysis Services resource."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 1,
+        "description": "The SKU of the Analysis Services resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Key-value pairs of additional resource provisioning properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AnalysisServicesServerProperties",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning."
+      },
+      "serverFullName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The full name of the Analysis Services resource."
+      },
+      "asAdministrators": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "A collection of AS server administrators"
+      },
+      "backupBlobContainerUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The SAS container URI to the backup container."
+      },
+      "gatewayDetails": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "The gateway details configured for the AS server."
+      },
+      "managedMode": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "The managed mode of the server (0 = not managed, 1 = managed)."
+      },
+      "serverMonitorMode": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "The server monitor mode for AS server"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Paused"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspended"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pausing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resuming"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Preparing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scaling"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Paused"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspended"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pausing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resuming"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Preparing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scaling"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerAdministrators",
+    "properties": {
+      "members": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "An array of administrator user identities."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GatewayDetails",
+    "properties": {
+      "gatewayResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gateway resource to be associated with the server."
+      },
+      "gatewayObjectId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gateway object id from in the DMTS cluster for the gateway resource."
+      },
+      "dmtsClusterUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Uri of the DMTS cluster."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceSku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the SKU level."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "The name of the Azure pricing tier to which the SKU applies."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Development"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.AnalysisServices/servers@2017-07-14",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.AnalysisServices/servers",
+    "apiVersion": "2017-07-14"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.AnalysisServices/servers",
+    "apiVersion": "2017-07-14"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GatewayListStatusLive",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Live message of list gateway. Status: 0 - Live"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "0"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listGatewayStatus",
+    "resourceType": "Microsoft.AnalysisServices/servers",
+    "apiVersion": "2017-07-14",
+    "output": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "dissociateGateway",
+    "resourceType": "Microsoft.AnalysisServices/servers",
+    "apiVersion": "2017-07-14"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckServerNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name for checking availability."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type of azure analysis services."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckServerNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "Indicator of available of the server name."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The reason of unavailability."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The detailed message of the request unavailability."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.AnalysisServices/locations",
+    "apiVersion": "2017-07-14",
+    "output": {
+      "$ref": "#/50"
+    },
+    "input": {
+      "$ref": "#/49"
+    }
+  }
+]

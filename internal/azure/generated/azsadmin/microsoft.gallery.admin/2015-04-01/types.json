@@ -1,0 +1,787 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "microsoft.gallery.admin/galleryItems"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-04-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "microsoft.gallery.admin/galleryItems",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Properties of a gallery item."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryItemProperties",
+    "properties": {
+      "identity": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Identity of the gallery item."
+      },
+      "publisher": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The publisher of the gallery item."
+      },
+      "publisherDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Display name of the publisher."
+      },
+      "itemName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The display name for the gallery item, for the locale of the request."
+      },
+      "itemDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Displayed name in the portal."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The version identifier of the gallery item, in Major.Minor.Build format."
+      },
+      "summary": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Short summary of the gallery item."
+      },
+      "longSummary": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Long summary of the gallery item."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The description of the gallery item."
+      },
+      "uiDefinitionUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The URL of the view definition object that defines the UI information that is used when an instance of the gallery item resource definition is created."
+      },
+      "createdTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The date and time that the gallery item was created."
+      },
+      "changedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Last update time of gallery item."
+      },
+      "marketingMaterial": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Marketing materials for the gallery item."
+      },
+      "itemType": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "Describes the type of the gallery item, either GalleryItem or ItemGroup."
+      },
+      "categoryIds": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "List of category IDs the gallery item belongs to."
+      },
+      "screenshotUris": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "List of screenshot image URIs provided for the item."
+      },
+      "links": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "Links provided for the item."
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 2,
+        "description": "List of filters for the gallery item."
+      },
+      "iconFileUris": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "URIs to icon files."
+      },
+      "artifacts": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "List of artifacts for the gallery item."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "Custom item metadata."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "List of properties provided for the gallery item."
+      },
+      "images": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "List of images."
+      },
+      "products": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "List of products."
+      },
+      "resourceGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource group name the gallery item belongs too."
+      },
+      "definitionTemplates": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 2,
+        "description": "Definition template for gallery item."
+      },
+      "additionalProperties": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 2,
+        "description": "List of additional properties provided for the item."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MarketingMaterial",
+    "properties": {
+      "path": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Path to the marketing site."
+      },
+      "learnUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to educational material."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GalleryItem"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ItemGroup"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkProperties",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID of the link."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Display name of the link."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI of the link."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Filter",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Filter type."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Filter value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/13"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryItemPropertiesIconFileUris",
+    "properties": {
+      "small": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to the small icon."
+      },
+      "medium": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to the medium icon."
+      },
+      "large": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to the large icon."
+      },
+      "wide": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to the wide icon."
+      },
+      "hero": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to the hero icon."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Artifact",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the artifact."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to the artifact."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Artifact type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "template"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "fragment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "custom"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "metadata"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/16"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OpenProperty",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "Dictionary of dynamic properties."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OpenPropertyProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/24"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryItemProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageGroup",
+    "properties": {
+      "context": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Image group identifier."
+      },
+      "items": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "List of images."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Image",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID of the image."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to the image."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Type of image."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/28"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Product",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Display name of the product."
+      },
+      "publisherDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Publisher display name of the product."
+      },
+      "pricingDetailsUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to the pricing details of the product."
+      },
+      "offerDetails": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Offer details of the product."
+      },
+      "legalTerms": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Legal terms of the product."
+      },
+      "privacyPolicy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Privacy policy of the product."
+      },
+      "legalTermsUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to the legal terms of the product."
+      },
+      "privacyPolicyUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URI to the privacy policy of the product."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OfferDetails",
+    "properties": {
+      "publisherId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Publisher identifier."
+      },
+      "offerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Offer identifier."
+      },
+      "plans": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "List of plans available for the offer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Plan",
+    "properties": {
+      "planId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Plan identifier."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Display name of the plan."
+      },
+      "summary": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Summary of the plan."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the plan."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/33"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/31"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefinitionTemplates",
+    "properties": {
+      "uiDefinitionFileUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "UI definition file URI."
+      },
+      "defaultDeploymentTemplateId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Default deployment template ID."
+      },
+      "deploymentTemplateFileUris": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "List of key-value containing the deployment template file IDs defined in the package manifest."
+      },
+      "deploymentFragmentFileUris": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs containing the deployment fragment file IDs defined in the package manifest."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefinitionTemplatesDeploymentTemplateFileUris",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefinitionTemplatesDeploymentFragmentFileUris",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryItemPropertiesAdditionalProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "microsoft.gallery.admin/galleryItems@2015-04-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 1
+  }
+]

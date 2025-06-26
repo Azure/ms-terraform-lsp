@@ -1,0 +1,1058 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Insights/components"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-05-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Insights/components",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Properties that define an Application Insights component resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationInsightsComponentProperties",
+    "properties": {
+      "ApplicationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The unique ID of your application. This field mirrors the 'Name' field and cannot be changed."
+      },
+      "AppId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Application Insights Unique ID for your Application."
+      },
+      "Application_Type": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "Type of application being monitored."
+      },
+      "Flow_Type": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API."
+      },
+      "Request_Source": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'."
+      },
+      "InstrumentationKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component."
+      },
+      "CreationDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Creation Date for the Application Insights component, in ISO 8601 format."
+      },
+      "TenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure Tenant Id."
+      },
+      "HockeyAppId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp."
+      },
+      "HockeyAppToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Token used to authenticate communications with between Application Insights and HockeyApp."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed."
+      },
+      "SamplingPercentage": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry."
+      },
+      "ConnectionString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Application Insights component connection string."
+      },
+      "RetentionInDays": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Retention period in days."
+      },
+      "DisableIpMasking": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Disable IP masking."
+      },
+      "ImmediatePurgeDataOn30Days": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Purge data immediately after 30 days."
+      },
+      "PrivateLinkScopedResources": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "List of linked private link scope resources."
+      },
+      "publicNetworkAccessForIngestion": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The network access type for accessing Application Insights ingestion."
+      },
+      "publicNetworkAccessForQuery": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The network access type for accessing Application Insights query."
+      },
+      "IngestionMode": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Indicates the flow of the ingestion."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "web"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "other"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bluefield"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "rest"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkScopedResource",
+    "properties": {
+      "ResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The full resource Id of the private link scope resource."
+      },
+      "ScopeId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The private link scope unique Identifier."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/14"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ApplicationInsights"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ApplicationInsightsWithDiagnosticSettings"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LogAnalytics"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComponentsResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Insights/components@2018-05-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Insights/components/ProactiveDetectionConfigs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-05-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Insights/components/ProactiveDetectionConfigs",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Properties that define a ProactiveDetection configuration."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationInsightsComponentProactiveDetectionConfigurationProperties",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The rule name"
+      },
+      "enabled": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "A flag that indicates whether this rule is enabled by the user"
+      },
+      "sendEmailsToSubscriptionOwners": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "A flag that indicated whether notifications on this rule should be sent to subscription owners"
+      },
+      "customEmails": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Custom email addresses for this rule notifications"
+      },
+      "lastUpdatedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The last time this rule was updated"
+      },
+      "ruleDefinitions": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Static definitions of the ProactiveDetection configuration rule (same values for all components)."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationInsightsComponentProactiveDetectionConfigurationPropertiesRuleDefinitions",
+    "properties": {
+      "Name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The rule name"
+      },
+      "DisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The rule name as it is displayed in UI"
+      },
+      "Description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The rule description"
+      },
+      "HelpUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL which displays additional info about the proactive detection rule"
+      },
+      "IsHidden": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "A flag indicating whether the rule is hidden (from the UI)"
+      },
+      "IsEnabledByDefault": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "A flag indicating whether the rule is enabled by default"
+      },
+      "IsInPreview": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "A flag indicating whether the rule is in preview"
+      },
+      "SupportsEmailNotifications": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "A flag indicating whether email notifications are supported for detections for this rule"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Insights/components/ProactiveDetectionConfigs@2018-05-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/30"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Insights/webtests"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-05-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Insights/webtests",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "The kind of WebTest that this web test watches. Choices are ping and multistep."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Metadata describing a web test for an Azure resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "multistep"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebTestProperties",
+    "properties": {
+      "SyntheticMonitorId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Unique ID of this WebTest. This is typically the same value as the Name field."
+      },
+      "Name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "User defined name if this WebTest."
+      },
+      "Description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "User defined description for this WebTest."
+      },
+      "Enabled": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Is the test actively being monitored."
+      },
+      "Frequency": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Interval in seconds between test runs for this WebTest. Default value is 300."
+      },
+      "Timeout": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Seconds until this WebTest will timeout and fail. Default value is 30."
+      },
+      "Kind": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 1,
+        "description": "The kind of web test this is, valid choices are ping, multistep, basic, and standard."
+      },
+      "RetryEnabled": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Allow for retries should this WebTest fail."
+      },
+      "Locations": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 1,
+        "description": "A list of where to physically run the tests from to give global coverage for accessibility of your application."
+      },
+      "Configuration": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "An XML configuration specification for a WebTest."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed."
+      },
+      "Request": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "The collection of request properties"
+      },
+      "ValidationRules": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "The collection of validation rule properties"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "multistep"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "standard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebTestGeolocation",
+    "properties": {
+      "Id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location ID for the WebTest to run from."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/47"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebTestPropertiesConfiguration",
+    "properties": {
+      "WebTest": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The XML specification of a WebTest to run against an application."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebTestPropertiesRequest",
+    "properties": {
+      "RequestUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Url location to test."
+      },
+      "Headers": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "List of headers and their values to add to the WebTest call."
+      },
+      "HttpVerb": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Http verb to use for this web test."
+      },
+      "RequestBody": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Base64 encoded string body to send with this web test."
+      },
+      "ParseDependentRequests": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Parse Dependent request for this WebTest."
+      },
+      "FollowRedirects": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Follow redirects for this web test."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HeaderField",
+    "properties": {
+      "key": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the header."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The value of the header."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/51"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebTestPropertiesValidationRules",
+    "properties": {
+      "ContentValidation": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "The collection of content validation properties"
+      },
+      "SSLCheck": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Checks to see if the SSL cert is still valid."
+      },
+      "SSLCertRemainingLifetimeCheck": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "A number of days to check still remain before the the existing SSL cert expires.  Value must be positive and the SSLCheck must be set to true."
+      },
+      "ExpectedHttpStatusCode": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Validate that the WebTest returns the http status code provided."
+      },
+      "IgnoreHttpsStatusCode": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "When set, validation will ignore the status code."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebTestPropertiesValidationRulesContentValidation",
+    "properties": {
+      "ContentMatch": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Content to look for in the return of the WebTest.  Must not be null or empty."
+      },
+      "IgnoreCase": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "When set, this value makes the ContentMatch validation case insensitive."
+      },
+      "PassIfTextFound": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "When true, validation will pass if there is a match for the ContentMatch string.  If false, validation will fail if there is a match"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebtestsResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Insights/webtests@2018-05-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/37"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComponentPurgeBody",
+    "properties": {
+      "table": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Table from which to purge data."
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 1,
+        "description": "The set of columns and filters (queries) to run over them to purge the resulting data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComponentPurgeBodyFilters",
+    "properties": {
+      "column": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The column of the table over which the given query should run"
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A query operator to evaluate over the provided column and value(s). Supported operators are ==, =~, in, in~, >, >=, <, <=, between, and have the same behavior as they would in a KQL query."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "the value for the operator to function over. This can be a number (e.g., > 100), a string (timestamp >= '2017-09-01') or array of values."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "When filtering over custom dimensions, this key will be used as the name of the custom dimension."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/58"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.Insights/components",
+    "apiVersion": "2018-05-01-preview",
+    "input": {
+      "$ref": "#/57"
+    }
+  }
+]

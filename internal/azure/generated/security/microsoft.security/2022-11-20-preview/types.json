@@ -1,0 +1,96 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 256
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Security/apiCollections"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-11-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Security/apiCollections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Describes the properties of an API collection."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiCollectionProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The display name of the Azure API Management API."
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Additional data regarding the API collection."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiCollectionPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Security/apiCollections@2022-11-20-preview",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  }
+]

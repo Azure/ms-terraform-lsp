@@ -1,0 +1,1014 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ServiceFabric/clusters"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ServiceFabric/clusters",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The cluster resource properties"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterProperties",
+    "properties": {
+      "availableClusterVersions": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "The available cluster code version which the cluster can upgrade to, note that you must choose upgradeMode to manual to upgrade to"
+      },
+      "clusterId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The unique identifier for the cluster resource"
+      },
+      "clusterState": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "The state for the cluster"
+      },
+      "clusterEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The endpoint for the cluster connecting to servicefabric resource provider"
+      },
+      "clusterCodeVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ServiceFabric code version running in your cluster"
+      },
+      "certificate": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "This primary certificate will be used as cluster node to node security, SSL certificate for cluster management endpoint and default admin client"
+      },
+      "reliabilityLevel": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Cluster reliability level indicates replica set size of system service"
+      },
+      "upgradeMode": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "Cluster upgrade mode indicates if fabric upgrade is initiated automatically by the system or not"
+      },
+      "clientCertificateThumbprints": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "The client thumbprint details ,it is used for client access for cluster operation"
+      },
+      "clientCertificateCommonNames": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "List of client certificates to trust based on common names"
+      },
+      "fabricSettings": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "List of custom fabric settings to configure the cluster."
+      },
+      "reverseProxyCertificate": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The server certificate used by reverse proxy"
+      },
+      "managementEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The http management endpoint of the cluster"
+      },
+      "nodeTypes": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 1,
+        "description": "The list of node types that make up the cluster"
+      },
+      "azureActiveDirectory": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "The settings to enable AAD authentication on the cluster"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the cluster resource"
+      },
+      "vmImage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of VM image VMSS has been configured with. Generic names such as Windows or Linux can be used."
+      },
+      "diagnosticsStorageAccountConfig": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "The storage diagnostics account configuration details"
+      },
+      "upgradeDescription": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "The policy to use when upgrading the cluster."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterVersionDetails",
+    "properties": {
+      "codeVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ServiceFabric runtime version of the cluster"
+      },
+      "supportExpiryUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The date of expiry of support of the version"
+      },
+      "environment": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "Cluster operating system"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WaitingForNodes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deploying"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BaselineUpgrade"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpdatingUserConfiguration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpdatingUserCertificate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpdatingInfrastructure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EnforcingClusterVersion"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpgradeServiceUnreachable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AutoScale"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateDescription",
+    "properties": {
+      "thumbprint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Thumbprint of the primary certificate"
+      },
+      "thumbprintSecondary": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Thumbprint of the secondary certificate"
+      },
+      "x509StoreName": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The local certificate store location"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AddressBook"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AuthRoot"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CertificateAuthority"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disallowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "My"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Root"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrustedPeople"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TrustedPublisher"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bronze"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Silver"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Gold"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Platinum"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Automatic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Manual"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClientCertificateThumbprint",
+    "properties": {
+      "isAdmin": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 1,
+        "description": "Is this certificate used for admin access from the client, if false, it is used or query only access"
+      },
+      "certificateThumbprint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Certificate thumbprint"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/39"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClientCertificateCommonName",
+    "properties": {
+      "isAdmin": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 1,
+        "description": "Is this certificate used for admin access from the client, if false , it is used or query only access"
+      },
+      "certificateCommonName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Certificate common name to be granted access; be careful using wild card common names"
+      },
+      "certificateIssuerThumbprint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Certificate issuer thumbprint"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SettingsSectionDescription",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of settings section"
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 1,
+        "description": "Collection of settings in the section, each setting is a tuple consisting of setting name and value"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SettingsParameterDescription",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of settings property"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The value of the property"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/44"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NodeTypeDescription",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the node type"
+      },
+      "placementProperties": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run"
+      },
+      "capacities": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much of a resource a node has"
+      },
+      "clientConnectionEndpointPort": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 1,
+        "description": "The TCP cluster management endpoint port"
+      },
+      "httpGatewayEndpointPort": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 1,
+        "description": "The HTTP cluster management endpoint port"
+      },
+      "durabilityLevel": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "Node type durability Level"
+      },
+      "applicationPorts": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "Ports used by applications"
+      },
+      "ephemeralPorts": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "System assigned application ports"
+      },
+      "isPrimary": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 1,
+        "description": "Mark this as the primary node type"
+      },
+      "vmInstanceCount": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 1,
+        "description": "The number of node instances in the node type"
+      },
+      "reverseProxyEndpointPort": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "Endpoint used by reverse proxy"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NodeTypeDescriptionPlacementProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NodeTypeDescriptionCapacities",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bronze"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Silver"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Gold"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EndpointRangeDescription",
+    "properties": {
+      "startPort": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 1,
+        "description": "Starting port of a range of ports"
+      },
+      "endPort": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 1,
+        "description": "End port of a range of ports"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 2147483647
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureActiveDirectory",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure active directory tenant id"
+      },
+      "clusterApplication": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure active directory cluster application id"
+      },
+      "clientApplication": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure active directory client application id"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiagnosticsStorageAccountConfig",
+    "properties": {
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Diagnostics storage account name"
+      },
+      "protectedAccountKeyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Protected Diagnostics storage key name"
+      },
+      "blobEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Diagnostics storage account blob endpoint"
+      },
+      "queueEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Diagnostics storage account queue endpoint"
+      },
+      "tableEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Diagnostics storage account table endpoint"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterUpgradePolicy",
+    "properties": {
+      "overrideUserUpgradePolicy": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Use the user defined upgrade policy or not"
+      },
+      "forceRestart": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Force node to restart or not"
+      },
+      "upgradeReplicaSetCheckTimeout": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Timeout for replica set upgrade to complete,it represents .Net TimeSpan"
+      },
+      "healthCheckWaitDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The length of time to wait after completing an upgrade domain before performing health checks, it represents .Net TimeSpan"
+      },
+      "healthCheckStableDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The length of time that health checks must pass continuously,it represents .Net TimeSpan"
+      },
+      "healthCheckRetryTimeout": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The length of time that health checks can fail continuously,it represents .Net TimeSpan"
+      },
+      "upgradeTimeout": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The upgrade timeout,it represents .Net TimeSpan"
+      },
+      "upgradeDomainTimeout": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The timeout for any upgrade domain,it represents .Net TimeSpan"
+      },
+      "healthPolicy": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 1,
+        "description": "Cluster health Policy"
+      },
+      "deltaHealthPolicy": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 0,
+        "description": "Delta health policy"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterHealthPolicy",
+    "properties": {
+      "maxPercentUnhealthyNodes": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 0,
+        "description": "The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10."
+      },
+      "maxPercentUnhealthyApplications": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 0,
+        "description": "The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 100
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterUpgradeDeltaHealthPolicy",
+    "properties": {
+      "maxPercentDeltaUnhealthyNodes": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 1,
+        "description": "Additional unhealthy nodes percentage"
+      },
+      "maxPercentUpgradeDomainDeltaUnhealthyNodes": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 1,
+        "description": "Additional unhealthy nodes percentage per upgrade domain"
+      },
+      "maxPercentDeltaUnhealthyApplications": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 1,
+        "description": "Additional unhealthy applications percentage"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ServiceFabric/clusters@2016-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

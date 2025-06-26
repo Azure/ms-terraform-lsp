@@ -1,0 +1,1349 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Blueprint/blueprints"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-11-11-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Blueprint/blueprints",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1,
+        "description": "Detailed properties for blueprint"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlueprintProperties",
+    "properties": {
+      "versions": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Published versions of this blueprint."
+      },
+      "layout": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Layout view of the blueprint, for UI reference."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Status of the Blueprint. This field is readonly."
+      },
+      "targetScope": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The scope where this Blueprint can be applied."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Parameters required by this Blueprint definition."
+      },
+      "resourceGroups": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Resource group placeholders defined by this Blueprint definition."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "One-liner string explain this resource."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Multi-line explain this resource."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlueprintStatus",
+    "properties": {
+      "timeCreated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Creation time of this blueprint."
+      },
+      "lastModified": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last modified time of this blueprint."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "subscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "managementGroup"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ParameterDefinition",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 1,
+        "description": "Allowed data types for Azure Resource Manager template parameters."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "User-friendly properties for this parameter."
+      },
+      "defaultValue": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Default Value for this parameter."
+      },
+      "allowedValues": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Array of allowed values for this parameter."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "string"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "array"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "bool"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "int"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "object"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secureObject"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secureString"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ParameterDefinitionMetadata",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "DisplayName of this parameter/resourceGroup."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Description of this parameter/resourceGroup."
+      },
+      "strongType": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "StrongType for UI to render rich experience during assignment time."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 256
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 500
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 64
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ParameterDefinitionCollection",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/10"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceGroupDefinition",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Name of this resourceGroup, leave empty if the resource group name will be specified during the Blueprint assignment."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Location of this resourceGroup, leave empty if the resource group location will be specified during the Blueprint assignment."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "User-friendly properties for this resource group."
+      },
+      "dependsOn": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Artifacts which need to be deployed before this resource group."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 90
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 90
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceGroupDefinitionCollection",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Blueprint/blueprints@2017-11-11-preview",
+    "scopeType": 2,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Blueprint/blueprints/artifacts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-11-11-preview"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Microsoft.Blueprint/blueprints/artifacts",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      }
+    },
+    "elements": {
+      "policyAssignment": {
+        "$ref": "#/34"
+      },
+      "roleAssignment": {
+        "$ref": "#/40"
+      },
+      "template": {
+        "$ref": "#/44"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyAssignmentArtifact",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 1,
+        "description": "properties for policyAssignment Artifact"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 1,
+        "description": "Specifies the kind of Blueprint artifact."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyAssignmentArtifactProperties",
+    "properties": {
+      "policyDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Azure resource ID of the policy definition."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 1,
+        "description": "Parameter values for the policy definition."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the resource group placeholder to which the policy will be assigned."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "One-liner string explain this resource."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Multi-line explain this resource."
+      },
+      "dependsOn": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "Artifacts which need to be deployed before the specified artifact."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ParameterValueBase",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional property, just to establish ParameterValueBase as a BaseClass."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ParameterValueCollection",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/36"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "policyAssignment"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleAssignmentArtifact",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Properties for roleAssignment artifact."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "Specifies the kind of Blueprint artifact."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleAssignmentArtifactProperties",
+    "properties": {
+      "roleDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Azure resource ID of the RoleDefinition."
+      },
+      "principalIds": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Array of user or group identities in Azure Active Directory. The roleDefinition will apply to these identity."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "RoleAssignment will be scope to this resourceGroup, if left empty, it would scope to the subscription."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "One-liner string explain this resource."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Multi-line explain this resource."
+      },
+      "dependsOn": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "Artifacts which need to be deployed before the specified artifact."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "roleAssignment"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TemplateArtifact",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 1,
+        "description": "Properties for template artifact"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 1,
+        "description": "Specifies the kind of Blueprint artifact."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TemplateArtifactProperties",
+    "properties": {
+      "template": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "The Azure Resource Manager template body."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "If applicable, the name of the resource group placeholder to which the template will be deployed."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 1,
+        "description": "Template parameter values."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "One-liner string explain this resource."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Multi-line explain this resource."
+      },
+      "dependsOn": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Artifacts which need to be deployed before the specified artifact."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ParameterValueCollection",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/36"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "template"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Blueprint/blueprints/artifacts@2017-11-11-preview",
+    "scopeType": 2,
+    "body": {
+      "$ref": "#/33"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Blueprint/blueprints/versions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-11-11-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Blueprint/blueprints/versions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Detailed properties for published Blueprint"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PublishedBlueprintProperties",
+    "properties": {
+      "blueprintName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the Blueprint definition."
+      },
+      "changeNotes": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Version-specific change notes"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Status of the Blueprint. This field is readonly."
+      },
+      "targetScope": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "The scope where this Blueprint can be applied."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Parameters required by this Blueprint definition."
+      },
+      "resourceGroups": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "Resource group placeholders defined by this Blueprint definition."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "One-liner string explain this resource."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Multi-line explain this resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "subscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "managementGroup"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ParameterDefinitionCollection",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/10"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceGroupDefinitionCollection",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Blueprint/blueprints/versions@2017-11-11-preview",
+    "scopeType": 2,
+    "body": {
+      "$ref": "#/52"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Blueprint/blueprintAssignments"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-11-11-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Blueprint/blueprintAssignments",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 1,
+        "description": "Managed Service Identity for this Blueprint assignment"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 1,
+        "description": "Properties for Assignment object."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The location of this Blueprint assignment."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedServiceIdentity",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 1,
+        "description": "Type of the Managed Service Identity."
+      },
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure Active Directory principal ID associated with this Identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID of the Azure Active Directory."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AssignmentProperties",
+    "properties": {
+      "blueprintId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID of the Blueprint definition resource."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 1,
+        "description": "Blueprint parameter values."
+      },
+      "resourceGroups": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 1,
+        "description": "Names and locations of resource group placeholders."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 2,
+        "description": "Status of Blueprint assignment. This field is readonly."
+      },
+      "locks": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "Defines how Blueprint-managed resources will be locked."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 2,
+        "description": "State of the assignment."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "One-liner string explain this resource."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Multi-line explain this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ParameterValueCollection",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/36"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceGroupValue",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Name of the resource group"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location of the resource group"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceGroupValueCollection",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/70"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AssignmentStatus",
+    "properties": {
+      "timeCreated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Creation time of this blueprint."
+      },
+      "lastModified": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last modified time of this blueprint."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AssignmentLockSettings",
+    "properties": {
+      "mode": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "Lock mode."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AllResources"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "validating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "waiting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "deploying"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "cancelling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "locking"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Blueprint/blueprintAssignments@2017-11-11-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/62"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Blueprint/blueprints/versions/artifacts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-11-11-preview"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Microsoft.Blueprint/blueprints/versions/artifacts",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      }
+    },
+    "elements": {
+      "policyAssignment": {
+        "$ref": "#/92"
+      },
+      "roleAssignment": {
+        "$ref": "#/94"
+      },
+      "template": {
+        "$ref": "#/96"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyAssignmentArtifact",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "properties for policyAssignment Artifact"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 1,
+        "description": "Specifies the kind of Blueprint artifact."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "policyAssignment"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleAssignmentArtifact",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "Properties for roleAssignment artifact."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 1,
+        "description": "Specifies the kind of Blueprint artifact."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "roleAssignment"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TemplateArtifact",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 2,
+        "description": "Properties for template artifact"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 1,
+        "description": "Specifies the kind of Blueprint artifact."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "template"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Blueprint/blueprints/versions/artifacts@2017-11-11-preview",
+    "scopeType": 2,
+    "body": {
+      "$ref": "#/91"
+    },
+    "flags": 1
+  }
+]

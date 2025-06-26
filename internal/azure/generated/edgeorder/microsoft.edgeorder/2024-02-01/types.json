@@ -1,0 +1,2387 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 24,
+    "pattern": "^[-\\w\\.]+$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.EdgeOrder/addresses"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-02-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.EdgeOrder/addresses",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Properties of an address."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AddressProperties",
+    "properties": {
+      "addressClassification": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "Type of address based on its usage context."
+      },
+      "shippingAddress": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Shipping details for the address."
+      },
+      "contactDetails": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Contact details for the address."
+      },
+      "addressValidationStatus": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Status of address validation."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 2,
+        "description": "Provisioning state"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shipping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Site"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ShippingAddress",
+    "properties": {
+      "streetAddress1": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Street Address line 1."
+      },
+      "streetAddress2": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Street Address line 2."
+      },
+      "streetAddress3": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Street Address line 3."
+      },
+      "city": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the City."
+      },
+      "stateOrProvince": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the State or Province."
+      },
+      "country": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of the Country."
+      },
+      "postalCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Postal code."
+      },
+      "zipExtendedCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Extended Zip Code."
+      },
+      "companyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the company."
+      },
+      "addressType": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Type of address."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Residential"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commercial"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContactDetails",
+    "properties": {
+      "contactName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Contact name of the person."
+      },
+      "phone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Phone number of the contact person."
+      },
+      "phoneExtension": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Phone extension number of the contact person."
+      },
+      "mobile": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Mobile number of the contact person."
+      },
+      "emailList": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "List of Email-ids to be notified about job progress."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Valid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ambiguous"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.EdgeOrder/addresses@2024-02-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 63,
+    "pattern": "^[A-Za-z0-9][-A-Za-z0-9]*[A-Za-z0-9]$|^[A-Za-z0-9]$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.EdgeOrder/orderItems"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-02-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.EdgeOrder/orderItems",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "Order item properties."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 0,
+        "description": "Msi identity of the resource"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OrderItemProperties",
+    "properties": {
+      "orderItemDetails": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "Represents order item details."
+      },
+      "addressDetails": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 0,
+        "description": "Represents shipping and return address for order item."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Start time of order item."
+      },
+      "orderId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Id of the order to which order item belongs to."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 2,
+        "description": "Provisioning state"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OrderItemDetails",
+    "properties": {
+      "productDetails": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 1,
+        "description": "Represents product details."
+      },
+      "orderItemType": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 1,
+        "description": "Order item type."
+      },
+      "orderItemMode": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Defines the mode of the Order item."
+      },
+      "siteDetails": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 0,
+        "description": "Site Related Details."
+      },
+      "currentStage": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 2,
+        "description": "Current Order item Status."
+      },
+      "orderItemStageHistory": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 2,
+        "description": "Order item status history."
+      },
+      "preferences": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0,
+        "description": "Customer notification Preferences."
+      },
+      "forwardShippingDetails": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 2,
+        "description": "Forward Package Shipping details."
+      },
+      "reverseShippingDetails": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 2,
+        "description": "Reverse Package Shipping details."
+      },
+      "notificationEmailList": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 0,
+        "description": "Additional notification email list."
+      },
+      "cancellationReason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Cancellation reason."
+      },
+      "cancellationStatus": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 2,
+        "description": "Describes whether the order item is cancellable or not."
+      },
+      "deletionStatus": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 2,
+        "description": "Describes whether the order item is deletable or not."
+      },
+      "returnReason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Return reason."
+      },
+      "returnStatus": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 2,
+        "description": "Describes whether the order item is returnable or not."
+      },
+      "managementRpDetailsList": {
+        "type": {
+          "$ref": "#/148"
+        },
+        "flags": 2,
+        "description": "List of parent RP details supported for configuration."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 2,
+        "description": "Top level error for the job."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductDetails",
+    "properties": {
+      "displayInfo": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Display details of the product."
+      },
+      "hierarchyInformation": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 1,
+        "description": "Hierarchy of the product which uniquely identifies the product."
+      },
+      "productDoubleEncryptionStatus": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "Double encryption status of the configuration. Read-only field."
+      },
+      "identificationType": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "Identification type of the configuration."
+      },
+      "parentDeviceDetails": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Device details of the parent configuration."
+      },
+      "parentProvisioningDetails": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Device Provisioning Details for Parent."
+      },
+      "optInAdditionalConfigurations": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 0,
+        "description": "List of additional configurations customer wants in the order item apart from the ones included in the base configuration."
+      },
+      "childConfigurationDeviceDetails": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 2,
+        "description": "Details of all child configurations that are part of the order item."
+      },
+      "termCommitmentInformation": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 2,
+        "description": "Term Commitment Information of the Device."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DisplayInfo",
+    "properties": {
+      "productFamilyDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Product family display name."
+      },
+      "configurationDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Configuration display name."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HierarchyInformation",
+    "properties": {
+      "productFamilyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Represents product family name that uniquely identifies product family."
+      },
+      "productLineName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Represents product line name that uniquely identifies product line."
+      },
+      "productName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Represents product name that uniquely identifies product."
+      },
+      "configurationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Represents configuration name that uniquely identifies configuration."
+      },
+      "configurationIdDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Represents Model Display Name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SerialNumber"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeviceDetails",
+    "properties": {
+      "serialNumber": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Device serial number."
+      },
+      "displaySerialNumber": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Device serial number to be displayed."
+      },
+      "managementResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Management Resource Id."
+      },
+      "managementResourceTenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Management Resource Tenant ID."
+      },
+      "provisioningSupport": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 2,
+        "description": "Determining nature of provisioning that the configuration supports."
+      },
+      "provisioningDetails": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 2,
+        "description": "Provisioning Details for the device."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudBased"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Manual"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProvisioningDetails",
+    "properties": {
+      "quantity": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "Quantity of the devices."
+      },
+      "provisioningArmId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Provisioning Resource Arm ID."
+      },
+      "provisioningEndPoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Provisioning End Point."
+      },
+      "serialNumber": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Serial Number for the Device."
+      },
+      "vendorName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Vendor Name for the Device , (for 1P devices - Microsoft)."
+      },
+      "readyToConnectArmId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Arc Enabled Resource Arm id."
+      },
+      "managementResourceArmId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Management Resource ArmId."
+      },
+      "uniqueDeviceIdentifier": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Unique Identity for a Device."
+      },
+      "autoProvisioningStatus": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "Auto Provisioning Details."
+      },
+      "devicePresenceVerification": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "Proof of possession details."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DevicePresenceVerificationDetails",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 2,
+        "description": "Proof of possession status."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Insights on current status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotInitiated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdditionalConfiguration",
+    "properties": {
+      "hierarchyInformation": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 1,
+        "description": "Hierarchy of the product which uniquely identifies the configuration."
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 1,
+        "description": "Quantity of the product."
+      },
+      "provisioningDetails": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 0,
+        "description": "List Provisioning Details for Devices in Additional Config."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/57"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationDeviceDetails",
+    "properties": {
+      "displayInfo": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Display details of the product."
+      },
+      "hierarchyInformation": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "Hierarchy of the product which uniquely identifies the configuration."
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 2,
+        "description": "Quantity of the product."
+      },
+      "identificationType": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 2,
+        "description": "Identification type of the configuration."
+      },
+      "deviceDetails": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "List of device details."
+      },
+      "termCommitmentInformation": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 2,
+        "description": "Term Commitment Information of the Device."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SerialNumber"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/53"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TermCommitmentInformation",
+    "properties": {
+      "termCommitmentType": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 1,
+        "description": "Term Commitment Type"
+      },
+      "termCommitmentTypeDuration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Term Commitment Duration. Currently Supporting P365D, P1095D"
+      },
+      "pendingDaysForTerm": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 2,
+        "description": "Number of Days Pending for Term Commitment"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Trial"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Timed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/70"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Purchase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rental"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "External"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DoNotFulfill"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SiteDetails",
+    "properties": {
+      "siteId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Unique Id, Identifying A Site."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StageDetails",
+    "properties": {
+      "stageStatus": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "Stage status."
+      },
+      "stageName": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 2,
+        "description": "Stage name."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display name of the resource stage."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Stage start time."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelling"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Placed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InReview"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Confirmed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadyToShip"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shipped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delivered"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadyToSetup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReturnInitiated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReturnPickedUp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReturnedToMicrosoft"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReturnCompleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/107"
+      },
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/89"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Preferences",
+    "properties": {
+      "notificationPreferences": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "Notification preferences."
+      },
+      "transportPreferences": {
+        "type": {
+          "$ref": "#/119"
+        },
+        "flags": 0,
+        "description": "Preferences related to the shipment logistics of the order."
+      },
+      "encryptionPreferences": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "Preferences related to the Encryption."
+      },
+      "managementResourcePreferences": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 0,
+        "description": "Preferences related to the Management resource."
+      },
+      "termCommitmentPreferences": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 0,
+        "description": "Preferences related to the Term commitment."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NotificationPreference",
+    "properties": {
+      "stageName": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 1,
+        "description": "Name of the stage."
+      },
+      "sendNotification": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 1,
+        "description": "Notification is required or not."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shipped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delivered"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransportPreferences",
+    "properties": {
+      "preferredShipmentType": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 1,
+        "description": "Indicates Shipment Logistics type that the customer preferred."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomerManaged"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MicrosoftManaged"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionPreferences",
+    "properties": {
+      "doubleEncryptionStatus": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 0,
+        "description": "Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementResourcePreferences",
+    "properties": {
+      "preferredManagementResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Customer preferred Management resource ARM ID."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TermCommitmentPreferences",
+    "properties": {
+      "preferredTermCommitmentType": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 1,
+        "description": "Term Commitment Type"
+      },
+      "preferredTermCommitmentDuration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Customer preferred Term Duration."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Trial"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Timed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ForwardShippingDetails",
+    "properties": {
+      "carrierName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the carrier."
+      },
+      "carrierDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Carrier Name for display purpose. Not to be used for any processing."
+      },
+      "trackingId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "TrackingId of the package."
+      },
+      "trackingUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "TrackingUrl of the package."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReverseShippingDetails",
+    "properties": {
+      "sasKeyForLabel": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "SAS key to download the reverse shipment label of the package."
+      },
+      "carrierName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the carrier."
+      },
+      "carrierDisplayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Carrier Name for display purpose. Not to be used for any processing."
+      },
+      "trackingId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "TrackingId of the package."
+      },
+      "trackingUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "TrackingUrl of the package."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancellable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CancellableWithFee"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotCancellable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/138"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotAllowed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Returnable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReturnableWithFee"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotReturnable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProviderDetails",
+    "properties": {
+      "resourceProviderNamespace": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource provider namespace."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/147"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error target."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 2,
+        "description": "The error additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/149"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The additional info type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 2,
+        "description": "The additional info."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/151"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AddressDetails",
+    "properties": {
+      "forwardAddress": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Customer address and contact details."
+      },
+      "returnAddress": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Return shipping address."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
+      },
+      {
+        "$ref": "#/157"
+      },
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceIdentity",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Identity type"
+      },
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Service Principal Id backing the Msi"
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Home Tenant Id"
+      },
+      "userAssignedIdentities": {
+        "type": {
+          "$ref": "#/163"
+        },
+        "flags": 0,
+        "description": "User Assigned Identities"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserAssignedIdentity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "The principal ID of the assigned identity."
+      },
+      "clientId": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "The client ID of the assigned identity."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserAssignedIdentities",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/161"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.EdgeOrder/orderItems@2024-02-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/41"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.EdgeOrder/locations/orders"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-02-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.EdgeOrder/locations/orders",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/166"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/169"
+        },
+        "flags": 2,
+        "description": "Order properties."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OrderProperties",
+    "properties": {
+      "orderItemIds": {
+        "type": {
+          "$ref": "#/170"
+        },
+        "flags": 2,
+        "description": "List of order item ARM Ids which are part of an order."
+      },
+      "currentStage": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 2,
+        "description": "Order current status."
+      },
+      "orderStageHistory": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 2,
+        "description": "Order status history."
+      },
+      "orderMode": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 2,
+        "description": "Order mode."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/89"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DoNotFulfill"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/173"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.EdgeOrder/locations/orders@2024-02-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/168"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CancellationReason",
+    "properties": {
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Reason for cancellation."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.EdgeOrder/orderItems",
+    "apiVersion": "2024-02-01",
+    "input": {
+      "$ref": "#/176"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReturnOrderItemDetails",
+    "properties": {
+      "returnAddress": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Customer return address."
+      },
+      "returnReason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Return Reason."
+      },
+      "serviceTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Service tag (located on the bottom-right corner of the device)."
+      },
+      "shippingBoxRequired": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 0,
+        "description": "Shipping Box required."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "return",
+    "resourceType": "Microsoft.EdgeOrder/orderItems",
+    "apiVersion": "2024-02-01",
+    "input": {
+      "$ref": "#/178"
+    }
+  }
+]

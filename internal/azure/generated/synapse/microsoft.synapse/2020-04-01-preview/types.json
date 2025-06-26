@@ -1,0 +1,756 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Synapse/workspaces/sqlPools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-04-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Synapse/workspaces/sqlPools",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The sql pool SKU. The list of SKUs may vary by region and support offer."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Kind of SqlPool."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "SystemData of SqlPool."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuV3",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the SKU, typically, a letter + Number code, e.g. P3."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The tier or edition of the particular SKU, e.g. Basic, Premium."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A string identifier for the identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "The type of identity that created the resource: <User|Application|ManagedIdentity|Key>"
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A string identifier for the identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "The type of identity that last modified the resource: <User|Application|ManagedIdentity|Key>"
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The timestamp of last modification (UTC)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlPoolProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "The status of the sql pool."
+      },
+      "sqlPoolGuid": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "The Guid of the sql pool."
+      },
+      "currentServiceObjectiveName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The current service level objective name of the sql pool."
+      },
+      "requestedServiceObjectiveName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The requested service level objective name of the sql pool."
+      },
+      "maxServiceObjectiveName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The max service level objective name of the sql pool."
+      },
+      "autoPauseTimer": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The period of inactivity in minutes before automatically pausing the sql pool."
+      },
+      "autoResume": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Indicates whether the sql pool can automatically resume when connection attempts are made."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invisible"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Online"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Offline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inaccessible"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pausing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Paused"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resuming"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scaling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dropping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Synapse/workspaces/sqlPools@2020-04-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Synapse/workspaces/sqlDatabases"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-04-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Synapse/workspaces/sqlDatabases",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "SystemData of SqlDatabase."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlDatabaseProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 2,
+        "description": "The status of the database."
+      },
+      "collation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The collation of the database."
+      },
+      "databaseGuid": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "The Guid of the database."
+      },
+      "storageRedundancy": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "The storage redundancy of the database."
+      },
+      "dataRetention": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "Sql database data retention."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Online"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Restoring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RecoveryPending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Recovering"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspect"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Offline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standby"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shutdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EmergencyMode"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AutoClosed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Copying"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inaccessible"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OfflineSecondary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pausing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Paused"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resuming"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scaling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OfflineChangingDwPerformanceTiers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OnlineChangingDwPerformanceTiers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Local"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Geo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Zone"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeoZone"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlDatabaseDataRetention",
+    "properties": {
+      "retentionPeriod": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the data retention period (ISO8601 format)."
+      },
+      "dropRetentionPeriod": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the dropped database retention period (ISO8601 format)."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Synapse/workspaces/sqlDatabases@2020-04-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/37"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "pause",
+    "resourceType": "Microsoft.Synapse/workspaces/sqlPools",
+    "apiVersion": "2020-04-01-preview"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.Synapse/workspaces/sqlPools",
+    "apiVersion": "2020-04-01-preview"
+  }
+]

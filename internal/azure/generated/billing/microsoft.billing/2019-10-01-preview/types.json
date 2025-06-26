@@ -1,0 +1,5949 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingProfiles/instructions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/instructions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "A billing instruction used during invoice generation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InstructionProperties",
+    "properties": {
+      "amount": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "The amount budgeted for this billing instruction."
+      },
+      "startDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The date this billing instruction goes into effect."
+      },
+      "endDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The date this billing instruction is no longer in effect."
+      },
+      "creationDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The date this billing instruction was created."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/instructions@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingProfiles"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "The name of the billing profile."
+      },
+      "poNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "The purchase order name that will appear on the invoices generated for the billing profile."
+      },
+      "address": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 4,
+        "description": "Billing address."
+      },
+      "invoiceEmailOptIn": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 4,
+        "description": "Flag controlling whether the invoices for the billing profile are sent through email."
+      },
+      "enabledAzurePlans": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 4,
+        "description": "Enabled azure plans for the billing profile."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 2,
+        "description": "The properties of the billing profile."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AddressDetails",
+    "properties": {
+      "firstName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "First name."
+      },
+      "lastName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Last name."
+      },
+      "companyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Company name."
+      },
+      "addressLine1": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Address line 1."
+      },
+      "addressLine2": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Address line 2."
+      },
+      "addressLine3": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Address line 3."
+      },
+      "city": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Address city."
+      },
+      "region": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Address region."
+      },
+      "country": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Country code uses ISO2, 2-digit format."
+      },
+      "postalCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Postal code."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzurePlan",
+    "properties": {
+      "skuId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The sku id."
+      },
+      "skuDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The sku description."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/12"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingProfileProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the billing profile."
+      },
+      "poNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The purchase order name that will appear on the invoices generated for the billing profile."
+      },
+      "address": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Billing address."
+      },
+      "billingRelationshipType": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Identifies which services and purchases are paid by a billing profile."
+      },
+      "invoiceEmailOptIn": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Flag controlling whether the invoices for the billing profile are sent through email."
+      },
+      "invoiceDay": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The day of the month when the invoice for the billing profile is generated."
+      },
+      "currency": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The currency in which the charges for the billing profile are billed."
+      },
+      "enabledAzurePlans": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Information about the enabled azure plans."
+      },
+      "indirectRelationshipInfo": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "Identifies the billing profile that is linked to another billing profile in indirect purchase motion."
+      },
+      "invoiceSections": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The invoice sections associated to the billing profile."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "The status of the billing profile."
+      },
+      "statusReasonCode": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 2,
+        "description": "Reason for the specified billing profile status."
+      },
+      "spendingLimit": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 2,
+        "description": "The billing profile spending limit."
+      },
+      "targetClouds": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2,
+        "description": "Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Direct"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IndirectCustomer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IndirectPartner"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CSPPartner"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/12"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IndirectRelationshipInfo",
+    "properties": {
+      "billingAccountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The billing account name of the partner or the customer for an indirect motion."
+      },
+      "billingProfileName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The billing profile name of the partner or the customer for an indirect motion."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The display name of the partner or customer for an indirect motion."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InvoiceSection",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "The properties of an invoice section."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InvoiceSectionProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the invoice section."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "Identifies the state of an invoice section."
+      },
+      "targetCloud": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "Identifies the cloud environments that are associated with an invoice section. This is a system managed optional field and gets updated as the invoice section gets associated with accounts in various clouds."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Restricted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "USGov"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "USNat"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "USSec"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SpendingLimitReached"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SpendingLimitExpired"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Off"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "On"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "USGov"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "USNat"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "USSec"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/46"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/9"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "The name of the invoice section."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "The properties of an invoice section."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/51"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingProfiles/policies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/policies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "The properties of a policy."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyProperties",
+    "properties": {
+      "marketplacePurchases": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "The policy that controls whether Azure marketplace purchases are allowed for a billing profile."
+      },
+      "reservationPurchases": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "The policy that controls whether Azure reservation purchases are allowed for a billing profile."
+      },
+      "viewCharges": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "The policy that controls whether users with Azure RBAC access to a subscription can view its charges."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AllAllowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OnlyFreeAllowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotAllowed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotAllowed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotAllowed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/policies@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/56"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/customers/policies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/customers/policies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "The properties of a customer's policy."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomerPolicyProperties",
+    "properties": {
+      "viewCharges": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "The policy that controls whether the users in customer's organization can view charges at pay-as-you-go prices."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotAllowed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/customers/policies@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/72"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingRoleAssignments"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingRoleAssignments",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "The properties of the role assignment."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingRoleAssignmentProperties",
+    "properties": {
+      "createdOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The date the role assignment was created."
+      },
+      "createdByPrincipalTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The tenant Id of the user who created the role assignment."
+      },
+      "createdByPrincipalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The principal Id of the user who created the role assignment."
+      },
+      "createdByUserEmailAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the role assignment."
+      },
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The principal id of the user to whom the role was assigned."
+      },
+      "principalTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The principal tenant id of the user to whom the role was assigned."
+      },
+      "roleDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the role definition."
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The scope at which the role was assigned."
+      },
+      "userEmailAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement."
+      },
+      "userAuthenticationType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingRoleAssignments@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/80"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/departments/billingRoleAssignments"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/departments/billingRoleAssignments",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "The properties of the role assignment."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/departments/billingRoleAssignments@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/85"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleAssignments"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleAssignments",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "The properties of the role assignment."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleAssignments@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/89"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 2,
+        "description": "The properties of the billing account."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingAccountProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The billing account name."
+      },
+      "address": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The address associated with the billing account."
+      },
+      "agreementType": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 2,
+        "description": "The type of agreement."
+      },
+      "customerType": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 2,
+        "description": "The type of customer."
+      },
+      "accountType": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 2,
+        "description": "The type of customer."
+      },
+      "billingProfiles": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 0,
+        "description": "The billing profiles associated with the billing account. By default this is not populated, unless it's specified in $expand."
+      },
+      "enrollmentDetails": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 2,
+        "description": "The details about the associated legacy enrollment. By default this is not populated, unless it's specified in $expand."
+      },
+      "departments": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 0,
+        "description": "The departments associated to the enrollment."
+      },
+      "enrollmentAccounts": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "The accounts associated to the enrollment."
+      },
+      "organizationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Organization id."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MicrosoftCustomerAgreement"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EnterpriseAgreement"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MicrosoftOnlineServicesProgram"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MicrosoftPartnerAgreement"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enterprise"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Individual"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Partner"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enterprise"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Individual"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Partner"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingProfile",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The properties of the billing profile."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/108"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Enrollment",
+    "properties": {
+      "startDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start date of the enrollment."
+      },
+      "endDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The end date of the enrollment."
+      },
+      "currency": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The billing currency for the enrollment."
+      },
+      "channel": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The channel type of the enrollment."
+      },
+      "policies": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 2,
+        "description": "The policies for Enterprise Agreement enrollments."
+      },
+      "language": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The language for the enrollment."
+      },
+      "countryCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The country code of the enrollment."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The current status of the enrollment."
+      },
+      "billingCycle": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The billing cycle for the enrollment."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnrollmentPolicies",
+    "properties": {
+      "accountOwnerViewCharges": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "The policy that controls whether Account Owners can view charges."
+      },
+      "departmentAdminViewCharges": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "The policy that controls whether Department Administrators can view charges."
+      },
+      "marketplacesEnabled": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "The policy that controls whether Azure marketplace purchases are allowed in the enrollment."
+      },
+      "reservedInstancesEnabled": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "The policy that controls whether Azure reservation purchases are allowed in the enrollment."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Department",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 0,
+        "description": "A department."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DepartmentProperties",
+    "properties": {
+      "departmentName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the department."
+      },
+      "costCenter": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The cost center associated with the department."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The status of the department."
+      },
+      "enrollmentAccounts": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 0,
+        "description": "Associated enrollment accounts. By default this is not populated, unless it's specified in $expand."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnrollmentAccount",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "The properties of an enrollment account."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnrollmentAccountProperties",
+    "properties": {
+      "accountName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the enrollment account."
+      },
+      "costCenter": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The cost center associated with the enrollment account."
+      },
+      "accountOwner": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The owner of the enrollment account."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The status of the enrollment account."
+      },
+      "startDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The start date of the enrollment account."
+      },
+      "endDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The end date of the enrollment account."
+      },
+      "department": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0,
+        "description": "Associated department. By default this is not populated, unless it's specified in $expand."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/114"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/112"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/114"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/93"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingProfiles/availableBalance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/availableBalance",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 2,
+        "description": "The properties of available balance."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailableBalanceProperties",
+    "properties": {
+      "amount": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "Balance amount."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Amount",
+    "properties": {
+      "currency": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The currency for the amount value."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Amount value."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/availableBalance@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/123"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/customers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/customers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 2,
+        "description": "The customer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomerProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the customer."
+      },
+      "enabledAzurePlans": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 0,
+        "description": "Azure plans enabled for the customer."
+      },
+      "resellers": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 0,
+        "description": "The list of resellers for which an Azure plan is enabled for the customer."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/12"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Reseller",
+    "properties": {
+      "resellerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The MPN ID of the reseller."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the reseller."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/132"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/customers@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/129"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/customers/billingSubscriptions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/customers/billingSubscriptions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 2,
+        "description": "The billing properties of a subscription."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingSubscriptionProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the subscription."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 2,
+        "description": "The ID of the subscription."
+      },
+      "subscriptionBillingStatus": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 0,
+        "description": "The current billing status of the subscription."
+      },
+      "lastMonthCharges": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "The last month charges."
+      },
+      "monthToDateCharges": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "The current month to date charges."
+      },
+      "billingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the billing profile to which the subscription is billed."
+      },
+      "billingProfileDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the billing profile to which the subscription is billed."
+      },
+      "customerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing account."
+      },
+      "customerDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing account."
+      },
+      "invoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the invoice section to which the subscription is billed."
+      },
+      "invoiceSectionDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the invoice section to which the subscription is billed."
+      },
+      "reseller": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 2,
+        "description": "Reseller for this subscription."
+      },
+      "skuId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The sku ID of the Azure plan for the subscription."
+      },
+      "skuDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The sku description of the Azure plan for the subscription."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Abandoned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/142"
+      },
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/customers/billingSubscriptions@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/137"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingSubscriptions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingSubscriptions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/148"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 2,
+        "description": "The billing properties of a subscription."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingSubscriptions@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/149"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/customers/products"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/customers/products",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 2,
+        "description": "The properties of a product."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The display name of the product."
+      },
+      "purchaseDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The date when the product was purchased."
+      },
+      "productTypeId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the type of product."
+      },
+      "productType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The description of the type of product."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/163"
+        },
+        "flags": 0,
+        "description": "The current status of the product."
+      },
+      "endDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The date when the product will be renewed or canceled."
+      },
+      "billingFrequency": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 0,
+        "description": "The frequency at which the product will be billed."
+      },
+      "lastCharge": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "The last month charges."
+      },
+      "lastChargeDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The date of the last charge."
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The quantity purchased for the product."
+      },
+      "skuId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The sku ID of the product."
+      },
+      "skuDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The sku description of the product."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The id of the tenant in which the product is used."
+      },
+      "availabilityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The availability of the product."
+      },
+      "parentProductId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Parent product Id."
+      },
+      "invoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the invoice section to which the product is billed."
+      },
+      "invoiceSectionDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the invoice section to which the product is billed."
+      },
+      "billingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the billing profile to which the product is billed."
+      },
+      "billingProfileDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the billing profile to which the product is billed."
+      },
+      "customerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the customer for whom the product was purchased. The field is applicable only for Microsoft Partner Agreement billing account."
+      },
+      "customerDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the customer for whom the product was purchased. The field is applicable only for Microsoft Partner Agreement billing account."
+      },
+      "reseller": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 2,
+        "description": "Reseller for this product."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expiring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AutoRenew"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
+      },
+      {
+        "$ref": "#/157"
+      },
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/161"
+      },
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OneTime"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Monthly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UsageBased"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/164"
+      },
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/customers/products@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/153"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/169"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/170"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 2,
+        "description": "The properties of a product."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/171"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/departments"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/departments",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 2,
+        "description": "A department."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/departments@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/175"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/enrollmentAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/enrollmentAccounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/178"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 2,
+        "description": "The properties of an enrollment account."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/enrollmentAccounts@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/179"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/invoices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/invoices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/181"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 2,
+        "description": "An invoice."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InvoiceProperties",
+    "properties": {
+      "dueDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The due date for the invoice."
+      },
+      "invoiceDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The date when the invoice was generated."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 2,
+        "description": "The current status of the invoice."
+      },
+      "amountDue": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "The amount due as of now."
+      },
+      "azurePrepaymentApplied": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "The amount of Azure prepayment applied to the charges. This field is applicable to billing accounts with agreement type Microsoft Customer Agreement."
+      },
+      "billedAmount": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "The total charges for the invoice billing period."
+      },
+      "creditAmount": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "The total refund for returns and cancellations during the invoice billing period. This field is applicable to billing accounts with agreement type Microsoft Customer Agreement."
+      },
+      "freeAzureCreditApplied": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "The amount of free Azure credits applied to the charges. This field is applicable to billing accounts with agreement type Microsoft Customer Agreement."
+      },
+      "subTotal": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "The pre-tax amount due. This field is applicable to billing accounts with agreement type Microsoft Customer Agreement."
+      },
+      "taxAmount": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "The amount of tax charged for the billing period. This field is applicable to billing accounts with agreement type Microsoft Customer Agreement."
+      },
+      "totalAmount": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "The amount due when the invoice was generated. This field is applicable to billing accounts with agreement type Microsoft Customer Agreement."
+      },
+      "invoicePeriodStartDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The start date of the billing period for which the invoice is generated."
+      },
+      "invoicePeriodEndDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The end date of the billing period for which the invoice is generated."
+      },
+      "invoiceType": {
+        "type": {
+          "$ref": "#/193"
+        },
+        "flags": 2,
+        "description": "Invoice type."
+      },
+      "isMonthlyInvoice": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "Specifies if the invoice is generated as part of monthly invoicing cycle or not. This field is applicable to billing accounts with agreement type Microsoft Customer Agreement."
+      },
+      "billingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the billing profile for which the invoice is generated."
+      },
+      "billingProfileDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the billing profile for which the invoice is generated."
+      },
+      "purchaseOrderNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "An optional purchase order number for the invoice."
+      },
+      "documents": {
+        "type": {
+          "$ref": "#/201"
+        },
+        "flags": 2,
+        "description": "List of documents available to download such as invoice and tax receipt."
+      },
+      "payments": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 2,
+        "description": "List of payments."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the subscription for which the invoice is generated."
+      },
+      "rebillDetails": {
+        "type": {
+          "$ref": "#/209"
+        },
+        "flags": 0,
+        "description": "Rebill details of an Enterprise Agreement invoice."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Due"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OverDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Paid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Void"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/185"
+      },
+      {
+        "$ref": "#/186"
+      },
+      {
+        "$ref": "#/187"
+      },
+      {
+        "$ref": "#/188"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureService"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureMarketplace"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSupport"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/190"
+      },
+      {
+        "$ref": "#/191"
+      },
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Document",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 2,
+        "description": "The type of the document."
+      },
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Document URL."
+      },
+      "documentNumbers": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 2,
+        "description": "Document numbers for an Enterprise Agreement invoice."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invoice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VoidNote"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TaxReceipt"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CreditNote"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/195"
+      },
+      {
+        "$ref": "#/196"
+      },
+      {
+        "$ref": "#/197"
+      },
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/194"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaymentProperties",
+    "properties": {
+      "paymentType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of payment."
+      },
+      "amount": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "The paid amount."
+      },
+      "date": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The date when the payment was made."
+      },
+      "paymentMethodFamily": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 0,
+        "description": "The family of payment method."
+      },
+      "paymentMethodType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of payment method."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Credits"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CheckWire"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CreditCard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/204"
+      },
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/206"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/202"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InvoiceRebillDetails",
+    "properties": {
+      "rebillDocumentType": {
+        "type": {
+          "$ref": "#/213"
+        },
+        "flags": 0,
+        "description": "The type of the document generated when an Enterprise Agreement invoice is rebilled."
+      },
+      "rebilledInvoiceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the invoice generated when an Enterprise Agreement invoice is rebilled."
+      },
+      "latestInvoiceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the latest invoice generated when an Enterprise Agreement invoice is rebilled."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Credit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rebill"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Original"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/210"
+      },
+      {
+        "$ref": "#/211"
+      },
+      {
+        "$ref": "#/212"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/invoices@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/183"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingProfiles/invoices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/invoices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/215"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/216"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 2,
+        "description": "An invoice."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/invoices@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/217"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingSubscriptions/invoices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingSubscriptions/invoices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/219"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 2,
+        "description": "An invoice."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingSubscriptions/invoices@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/221"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingProperty"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingProperty",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/223"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/224"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/225"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/227"
+        },
+        "flags": 2,
+        "description": "A billing property."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingPropertyProperties",
+    "properties": {
+      "billingTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Azure AD tenant ID of the billing account for the subscription."
+      },
+      "billingAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the billing account to which the subscription is billed."
+      },
+      "billingAccountDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the billing account to which the subscription is billed."
+      },
+      "billingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the billing profile to which the subscription is billed."
+      },
+      "billingProfileDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the billing profile to which the subscription is billed."
+      },
+      "billingProfileStatus": {
+        "type": {
+          "$ref": "#/231"
+        },
+        "flags": 2,
+        "description": "The status of the billing profile."
+      },
+      "billingProfileStatusReasonCode": {
+        "type": {
+          "$ref": "#/235"
+        },
+        "flags": 2,
+        "description": "Reason for the specified billing profile status."
+      },
+      "billingProfileSpendingLimit": {
+        "type": {
+          "$ref": "#/238"
+        },
+        "flags": 2,
+        "description": "The billing profile spending limit."
+      },
+      "costCenter": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The cost center applied to the subscription."
+      },
+      "invoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the invoice section to which the subscription is billed."
+      },
+      "invoiceSectionDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the invoice section to which the subscription is billed."
+      },
+      "productId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The product ID of the Azure plan."
+      },
+      "productName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The product name of the Azure plan."
+      },
+      "skuId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The sku ID of the Azure plan for the subscription."
+      },
+      "skuDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The sku description of the Azure plan for the subscription."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/228"
+      },
+      {
+        "$ref": "#/229"
+      },
+      {
+        "$ref": "#/230"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SpendingLimitReached"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SpendingLimitExpired"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/232"
+      },
+      {
+        "$ref": "#/233"
+      },
+      {
+        "$ref": "#/234"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Off"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "On"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/236"
+      },
+      {
+        "$ref": "#/237"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingProperty@2019-10-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/226"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingRoleDefinitions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingRoleDefinitions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/240"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/241"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 2,
+        "description": "The properties of the a role definition."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingRoleDefinitionProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The role description"
+      },
+      "permissions": {
+        "type": {
+          "$ref": "#/247"
+        },
+        "flags": 0,
+        "description": "The billingPermissions the role has"
+      },
+      "roleName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the role"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingPermissionsProperties",
+    "properties": {
+      "actions": {
+        "type": {
+          "$ref": "#/245"
+        },
+        "flags": 2,
+        "description": "The set of actions that the caller is allowed to perform."
+      },
+      "notActions": {
+        "type": {
+          "$ref": "#/246"
+        },
+        "flags": 2,
+        "description": "The set of actions that the caller is not allowed to perform."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/244"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingRoleDefinitions@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/242"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleDefinitions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleDefinitions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/249"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/250"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 2,
+        "description": "The properties of the a role definition."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleDefinitions@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/251"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingProfiles/billingRoleDefinitions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/billingRoleDefinitions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/253"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/254"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 2,
+        "description": "The properties of the a role definition."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/billingRoleDefinitions@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/255"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/departments/billingRoleDefinitions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/departments/billingRoleDefinitions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/258"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 2,
+        "description": "The properties of the a role definition."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/departments/billingRoleDefinitions@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/259"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleDefinitions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleDefinitions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/261"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/262"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 2,
+        "description": "The properties of the a role definition."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleDefinitions@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/263"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleAssignments"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleAssignments",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/265"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/266"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 2,
+        "description": "The properties of the role assignment."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleAssignments@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/267"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingProfiles/billingRoleAssignments"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/billingRoleAssignments",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/269"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/270"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 2,
+        "description": "The properties of the role assignment."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/billingRoleAssignments@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/271"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/agreements"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/agreements",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/273"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/274"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/276"
+        },
+        "flags": 2,
+        "description": "The properties of an agreement."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgreementProperties",
+    "properties": {
+      "agreementLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URL to download the agreement."
+      },
+      "category": {
+        "type": {
+          "$ref": "#/280"
+        },
+        "flags": 2,
+        "description": "The category of the agreement signed by a customer."
+      },
+      "acceptanceMode": {
+        "type": {
+          "$ref": "#/284"
+        },
+        "flags": 2,
+        "description": "The mode of acceptance for an agreement."
+      },
+      "effectiveDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The date from which the agreement is effective."
+      },
+      "expirationDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The date when the agreement expires."
+      },
+      "participants": {
+        "type": {
+          "$ref": "#/286"
+        },
+        "flags": 0,
+        "description": "The list of participants that participates in acceptance of an agreement."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The current status of the agreement."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MicrosoftCustomerAgreement"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AffiliatePurchaseTerms"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Other"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/277"
+      },
+      {
+        "$ref": "#/278"
+      },
+      {
+        "$ref": "#/279"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ClickToAccept"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ESignEmbedded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ESignOffline"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/281"
+      },
+      {
+        "$ref": "#/282"
+      },
+      {
+        "$ref": "#/283"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Participants",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The acceptance status of the participant."
+      },
+      "statusDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The date when the status got changed."
+      },
+      "email": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The email address of the participant."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/285"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/agreements@2019-10-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/275"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InvoiceSectionListWithCreateSubPermissionResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/302"
+        },
+        "flags": 0,
+        "description": "The list of invoice section properties with create subscription permission."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The link (url) to the next page of results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InvoiceSectionWithCreateSubPermission",
+    "properties": {
+      "invoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the invoice section."
+      },
+      "invoiceSectionDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the invoice section."
+      },
+      "billingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the billing profile for the invoice section."
+      },
+      "billingProfileDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the billing profile for the invoice section."
+      },
+      "billingProfileStatus": {
+        "type": {
+          "$ref": "#/293"
+        },
+        "flags": 2,
+        "description": "The status of the billing profile."
+      },
+      "billingProfileStatusReasonCode": {
+        "type": {
+          "$ref": "#/297"
+        },
+        "flags": 2,
+        "description": "Reason for the specified billing profile status."
+      },
+      "billingProfileSpendingLimit": {
+        "type": {
+          "$ref": "#/300"
+        },
+        "flags": 2,
+        "description": "The billing profile spending limit."
+      },
+      "enabledAzurePlans": {
+        "type": {
+          "$ref": "#/301"
+        },
+        "flags": 0,
+        "description": "Enabled azure plans for the associated billing profile."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/290"
+      },
+      {
+        "$ref": "#/291"
+      },
+      {
+        "$ref": "#/292"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SpendingLimitReached"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SpendingLimitExpired"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/294"
+      },
+      {
+        "$ref": "#/295"
+      },
+      {
+        "$ref": "#/296"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Off"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "On"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/298"
+      },
+      {
+        "$ref": "#/299"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/12"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/289"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listInvoiceSectionsWithCreateSubscriptionPermission",
+    "resourceType": "Microsoft.Billing/billingAccounts",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/288"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadUrl",
+    "properties": {
+      "expiryTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time in UTC when the download URL will expire."
+      },
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URL to the PDF file."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadDocuments",
+    "resourceType": "Microsoft.Billing/billingAccounts",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/305"
+    },
+    "input": {
+      "$ref": "#/304"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingRoleAssignmentPayload",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The user's principal id that the role gets assigned to"
+      },
+      "billingRoleDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The role definition id"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createBillingRoleAssignment",
+    "resourceType": "Microsoft.Billing/billingAccounts",
+    "apiVersion": "2019-10-01-preview",
+    "input": {
+      "$ref": "#/307"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "elevate",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
+    "apiVersion": "2019-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InitiateTransferRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/311"
+        },
+        "flags": 0,
+        "description": "Request parameters to initiate transfer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InitiateTransferProperties",
+    "properties": {
+      "recipientEmailId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The email ID of the recipient to whom the transfer request is sent."
+      },
+      "resellerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional MPN ID of the reseller for transfer requests that are sent from a Microsoft Partner Agreement billing account."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransferDetails",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/313"
+        },
+        "flags": 0,
+        "description": "Details of the transfer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransferProperties",
+    "properties": {
+      "creationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time at which the transfer request was created."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time at which the transfer request expires."
+      },
+      "invoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the invoice section to which the product is billed after the transfer request is completed."
+      },
+      "billingAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the billing account to which the product is billed after the transfer request is completed."
+      },
+      "resellerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Optional MPN ID of the reseller for transfer requests that are sent from a Microsoft Partner Agreement billing account."
+      },
+      "resellerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Optional name of the reseller for transfer requests that are sent from Microsoft Partner Agreement billing account."
+      },
+      "initiatorCustomerType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of customer who sent the transfer request."
+      },
+      "billingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the billing profile to which the product will be billed after the transfer."
+      },
+      "transferStatus": {
+        "type": {
+          "$ref": "#/321"
+        },
+        "flags": 2,
+        "description": "Overall transfer status."
+      },
+      "recipientEmailId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The email ID of the user to whom the transfer request was sent."
+      },
+      "initiatorEmailId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The email ID of the user who sent the transfer request."
+      },
+      "canceledBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The email ID of the user who canceled the transfer request."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time at which the transfer request was last modified."
+      },
+      "detailedTransferStatus": {
+        "type": {
+          "$ref": "#/332"
+        },
+        "flags": 2,
+        "description": "Detailed transfer status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompletedWithErrors"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Declined"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/314"
+      },
+      {
+        "$ref": "#/315"
+      },
+      {
+        "$ref": "#/316"
+      },
+      {
+        "$ref": "#/317"
+      },
+      {
+        "$ref": "#/318"
+      },
+      {
+        "$ref": "#/319"
+      },
+      {
+        "$ref": "#/320"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DetailedTransferStatus",
+    "properties": {
+      "productType": {
+        "type": {
+          "$ref": "#/325"
+        },
+        "flags": 2,
+        "description": "Type of product that is transferred."
+      },
+      "productId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the product that is transferred."
+      },
+      "transferStatus": {
+        "type": {
+          "$ref": "#/330"
+        },
+        "flags": 2,
+        "description": "Transfer status."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/331"
+        },
+        "flags": 0,
+        "description": "Error details for transfer execution."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSubscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureReservation"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/323"
+      },
+      {
+        "$ref": "#/324"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotStarted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/326"
+      },
+      {
+        "$ref": "#/327"
+      },
+      {
+        "$ref": "#/328"
+      },
+      {
+        "$ref": "#/329"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Error",
+    "properties": {
+      "errorCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error code."
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error message."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/322"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateTransfer",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/312"
+    },
+    "input": {
+      "$ref": "#/310"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createBillingRoleAssignment",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
+    "apiVersion": "2019-10-01-preview",
+    "input": {
+      "$ref": "#/307"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransferBillingSubscriptionRequestProperties",
+    "properties": {
+      "destinationInvoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination invoice section id."
+      },
+      "destinationBillingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination billing profile id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransferBillingSubscriptionResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/337"
+        },
+        "flags": 0,
+        "description": "Properties of the transfer billing subscription operation result."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransferBillingSubscriptionResultProperties",
+    "properties": {
+      "billingSubscriptionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination billing subscription id."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "transfer",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingSubscriptions",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/336"
+    },
+    "input": {
+      "$ref": "#/335"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateSubscriptionTransferEligibilityResult",
+    "properties": {
+      "isTransferEligible": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "Specifies whether the subscription is eligible to be transferred."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/340"
+        },
+        "flags": 0,
+        "description": "Validation error details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateSubscriptionTransferEligibilityError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/361"
+        },
+        "flags": 0,
+        "description": "Error code for the product transfer validation."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error message."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Detailed error message explaining the error."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BillingAccountInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CrossBillingAccountNotAllowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationBillingProfileInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationBillingProfileNotFound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationBillingProfilePastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationInvoiceSectionInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationInvoiceSectionNotFound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientPermissionOnDestination"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientPermissionOnSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidDestination"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MarketplaceNotEnabledOnDestination"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotAvailableForDestinationMarket"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductNotFound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductTypeNotSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SourceBillingProfilePastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SourceInvoiceSectionInactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionNotActive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionTypeNotSupported"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/341"
+      },
+      {
+        "$ref": "#/342"
+      },
+      {
+        "$ref": "#/343"
+      },
+      {
+        "$ref": "#/344"
+      },
+      {
+        "$ref": "#/345"
+      },
+      {
+        "$ref": "#/346"
+      },
+      {
+        "$ref": "#/347"
+      },
+      {
+        "$ref": "#/348"
+      },
+      {
+        "$ref": "#/349"
+      },
+      {
+        "$ref": "#/350"
+      },
+      {
+        "$ref": "#/351"
+      },
+      {
+        "$ref": "#/352"
+      },
+      {
+        "$ref": "#/353"
+      },
+      {
+        "$ref": "#/354"
+      },
+      {
+        "$ref": "#/355"
+      },
+      {
+        "$ref": "#/356"
+      },
+      {
+        "$ref": "#/357"
+      },
+      {
+        "$ref": "#/358"
+      },
+      {
+        "$ref": "#/359"
+      },
+      {
+        "$ref": "#/360"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateTransferEligibility",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingSubscriptions",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/339"
+    },
+    "input": {
+      "$ref": "#/335"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TransferProductRequestProperties",
+    "properties": {
+      "destinationInvoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination invoice section id."
+      },
+      "destinationBillingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The destination billing profile id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Product",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 0,
+        "description": "The properties of a product."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "transfer",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/364"
+    },
+    "input": {
+      "$ref": "#/363"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateProductTransferEligibilityResult",
+    "properties": {
+      "isTransferEligible": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "Specifies whether the transfer is eligible or not."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/367"
+        },
+        "flags": 0,
+        "description": "Validation error details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateProductTransferEligibilityError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/377"
+        },
+        "flags": 0,
+        "description": "Error code for the product transfer validation."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The error message."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Detailed error message explaining the error."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductNotActive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientPermissionOnSource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InsufficientPermissionOnDestination"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DestinationBillingProfilePastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProductTypeNotSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CrossBillingAccountNotAllowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotAvailableForDestinationMarket"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OneTimePurchaseProductTransferNotAllowed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/368"
+      },
+      {
+        "$ref": "#/369"
+      },
+      {
+        "$ref": "#/370"
+      },
+      {
+        "$ref": "#/371"
+      },
+      {
+        "$ref": "#/372"
+      },
+      {
+        "$ref": "#/373"
+      },
+      {
+        "$ref": "#/374"
+      },
+      {
+        "$ref": "#/375"
+      },
+      {
+        "$ref": "#/376"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateTransferEligibility",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/366"
+    },
+    "input": {
+      "$ref": "#/363"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAutoRenewRequest",
+    "properties": {
+      "autoRenew": {
+        "type": {
+          "$ref": "#/382"
+        },
+        "flags": 0,
+        "description": "The flag that determines the auto-renew settings for a product."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "true"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "false"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/380"
+      },
+      {
+        "$ref": "#/381"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAutoRenewOperation",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/384"
+        },
+        "flags": 0,
+        "description": "Summary of update auto renew operation properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAutoRenewOperationProperties",
+    "properties": {
+      "endDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The date at which the product will be canceled."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAutoRenew",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/383"
+    },
+    "input": {
+      "$ref": "#/379"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadDocuments",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/305"
+    },
+    "input": {
+      "$ref": "#/386"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadDocuments",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/305"
+    },
+    "input": {
+      "$ref": "#/388"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createBillingRoleAssignment",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles",
+    "apiVersion": "2019-10-01-preview",
+    "input": {
+      "$ref": "#/307"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "download",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoices/pricesheet",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/305"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "download",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/pricesheet",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/305"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateTransfer",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/customers",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/312"
+    },
+    "input": {
+      "$ref": "#/310"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcceptTransferRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/395"
+        },
+        "flags": 0,
+        "description": "Request parameters to accept transfer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcceptTransferProperties",
+    "properties": {
+      "productDetails": {
+        "type": {
+          "$ref": "#/400"
+        },
+        "flags": 0,
+        "description": "Request parameters to accept transfer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductDetails",
+    "properties": {
+      "productType": {
+        "type": {
+          "$ref": "#/399"
+        },
+        "flags": 0,
+        "description": "Type of the product that is transferred."
+      },
+      "productId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the product that is transferred."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSubscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureReservation"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/397"
+      },
+      {
+        "$ref": "#/398"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/396"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecipientTransferDetails",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/402"
+        },
+        "flags": 0,
+        "description": "Details of the transfer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecipientTransferProperties",
+    "properties": {
+      "creationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time at which the transfer request was created."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time at which the transfer request expires."
+      },
+      "allowedProductType": {
+        "type": {
+          "$ref": "#/407"
+        },
+        "flags": 2,
+        "description": "Type of subscriptions that can be transferred."
+      },
+      "transferStatus": {
+        "type": {
+          "$ref": "#/415"
+        },
+        "flags": 2,
+        "description": "Overall transfer status."
+      },
+      "recipientEmailId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The email ID of the user to whom the transfer request was sent."
+      },
+      "initiatorEmailId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The email ID of the user who sent the transfer request."
+      },
+      "resellerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Optional MPN ID of the reseller for transfer requests that are sent from a Microsoft Partner Agreement billing account."
+      },
+      "resellerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Optional name of the reseller for transfer requests that are sent from Microsoft Partner Agreement billing account."
+      },
+      "initiatorCustomerType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of customer who sent the transfer request."
+      },
+      "canceledBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The email ID of the user who canceled the transfer request."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time at which the transfer request was last modified."
+      },
+      "detailedTransferStatus": {
+        "type": {
+          "$ref": "#/416"
+        },
+        "flags": 2,
+        "description": "Detailed transfer status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DevTestAzureSubscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StandardAzureSubscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureReservation"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/403"
+      },
+      {
+        "$ref": "#/404"
+      },
+      {
+        "$ref": "#/405"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/406"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompletedWithErrors"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Declined"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/408"
+      },
+      {
+        "$ref": "#/409"
+      },
+      {
+        "$ref": "#/410"
+      },
+      {
+        "$ref": "#/411"
+      },
+      {
+        "$ref": "#/412"
+      },
+      {
+        "$ref": "#/413"
+      },
+      {
+        "$ref": "#/414"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/322"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acceptTransfer",
+    "resourceType": "Microsoft.Billing/transfers",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/401"
+    },
+    "input": {
+      "$ref": "#/394"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateTransferListResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/423"
+        },
+        "flags": 2,
+        "description": "The list of transfer validation results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateTransferResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/420"
+        },
+        "flags": 0,
+        "description": "The properties of transfer validation response."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateTransferResponseProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The status of validation"
+      },
+      "productId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The product id for which this result applies."
+      },
+      "results": {
+        "type": {
+          "$ref": "#/422"
+        },
+        "flags": 0,
+        "description": "The array of validation results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidationResultProperties",
+    "properties": {
+      "level": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Result Level."
+      },
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Result Code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The validation message."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/421"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/419"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateTransfer",
+    "resourceType": "Microsoft.Billing/transfers",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/418"
+    },
+    "input": {
+      "$ref": "#/394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "declineTransfer",
+    "resourceType": "Microsoft.Billing/transfers",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/401"
+    }
+  }
+]

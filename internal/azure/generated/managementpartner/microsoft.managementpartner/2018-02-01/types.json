@@ -1,0 +1,157 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ManagementPartner/partners"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-02-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ManagementPartner/partners",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Type of the partner"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Properties of the partner"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PartnerProperties",
+    "properties": {
+      "partnerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This is the partner id"
+      },
+      "partnerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This is the partner name"
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This is the tenant id."
+      },
+      "objectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This is the object id."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "This is the version."
+      },
+      "updatedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This is the DateTime when the partner was updated."
+      },
+      "createdTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This is the DateTime when the partner was created."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "This is the partner state"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ManagementPartner/partners@2018-02-01",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

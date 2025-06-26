@@ -1,0 +1,193 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network.Admin/locations/quotas"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network.Admin/locations/quotas",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Network quota properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Region location of resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "List of key value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaProperties",
+    "properties": {
+      "maxPublicIpsPerSubscription": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum number of public IP addresses a tenant subscription can provision."
+      },
+      "maxVnetsPerSubscription": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum number of virtual networks a tenant subscription can provision."
+      },
+      "maxVirtualNetworkGatewaysPerSubscription": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum number of virtual network gateways a tenant subscription can provision."
+      },
+      "maxVirtualNetworkGatewayConnectionsPerSubscription": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum number of virtual network gateway Connections a tenant subscription can provision."
+      },
+      "maxLoadBalancersPerSubscription": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum number of load balancers a tenant subscription can provision."
+      },
+      "maxNicsPerSubscription": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum number of NICs a tenant subscription can provision."
+      },
+      "maxSecurityGroupsPerSubscription": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum number of security groups a tenant subscription can provision."
+      },
+      "migrationPhase": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "State of migration such as None, Prepare, Commit, and Abort."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The provisioning state."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Prepare"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Abort"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network.Admin/locations/quotas@2022-02-01",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

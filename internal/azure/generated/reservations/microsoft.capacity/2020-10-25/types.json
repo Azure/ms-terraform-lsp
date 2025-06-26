@@ -1,0 +1,426 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Capacity/resourceProviders/locations/serviceLimits"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-10-25"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Capacity/resourceProviders/locations/serviceLimits",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Quota properties for the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaProperties",
+    "properties": {
+      "limit": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Quota properties."
+      },
+      "currentValue": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Current usage value for the resource."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The limit units, such as **count** and **bytes**. Use the unit field provided in the response of the GET quota operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Name of the resource provide by the resource provider. Use this property for quotaRequests resource operations."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The name of the resource type."
+      },
+      "quotaPeriod": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time period over which the quota usage values are summarized. For example, P1D (per one day), PT1M (per one minute), and PT1S (per one second). This parameter is optional because, for some resources such as compute, the time period is irrelevant."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Additional properties for the specified resource provider."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceName",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource name."
+      },
+      "localizedValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource display localized name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "dedicated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "lowPriority"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "shared"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "serviceSpecific"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Capacity/resourceProviders/locations/serviceLimits@2020-10-25",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Capacity/resourceProviders/locations/serviceLimitsRequests"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-10-25"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Capacity/resourceProviders/locations/serviceLimitsRequests",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Quota request details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaRequestProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The quota request status."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "User friendly status message."
+      },
+      "requestSubmitTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time when the quota request was submitted using format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The quotaRequests."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubRequest",
+    "properties": {
+      "limit": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Quota (resource limit)."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The resource name."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type for which the quota check was made."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The limit units, such as **count** and **bytes**. Use the unit field provided in the response of the GET quota operation."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The quota request status."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "User-friendly status message."
+      },
+      "subRequestId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Sub request ID for individual request."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Capacity/resourceProviders/locations/serviceLimitsRequests@2020-10-25",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/17"
+    },
+    "flags": 1
+  }
+]

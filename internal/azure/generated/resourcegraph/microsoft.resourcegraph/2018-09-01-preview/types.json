@@ -1,0 +1,141 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ResourceGraph/queries"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ResourceGraph/queries",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Metadata describing a graph query for an Azure resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GraphQueryProperties",
+    "properties": {
+      "timeModified": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Date and time in UTC of the last modification that was made to this graph query definition."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The description of a graph query."
+      },
+      "query": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "KQL query that will be graph."
+      },
+      "resultKind": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Enum indicating a type of graph query."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "basic"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ResourceGraph/queries@2018-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

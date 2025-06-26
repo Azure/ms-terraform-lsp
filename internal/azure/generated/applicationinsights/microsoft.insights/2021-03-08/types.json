@@ -1,0 +1,834 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Insights/myWorkbooks"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-03-08"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Insights/myWorkbooks",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The kind of workbook. Choices are user and shared."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Metadata describing a workbook for an Azure resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Identity used for BYOS"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Resource etag"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "user"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "shared"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/4"
+      },
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MyWorkbookProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The user-defined name of the private workbook."
+      },
+      "serializedData": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Configuration of this particular private workbook. Configuration data is a string containing valid JSON"
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This instance's version of the data model. This can change as new features are added that can be marked private workbook."
+      },
+      "timeModified": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Date and time in UTC of the last modification that was made to this private workbook definition."
+      },
+      "category": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Workbook category, as defined by the user at creation time."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "A list of 0 or more tags that are associated with this private workbook definition"
+      },
+      "userId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique user id of the specific user that owns this private workbook."
+      },
+      "sourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional resourceId for a source resource."
+      },
+      "storageUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "BYOS Storage Account URI"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MyWorkbookManagedIdentity",
+    "properties": {
+      "userAssignedIdentities": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Customer Managed Identity"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The identity type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MyWorkbookUserAssignedIdentities",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The principal ID of resource identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The tenant ID of resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MyWorkbookResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MyWorkbookResourceEtag",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Insights/myWorkbooks@2021-03-08",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Insights/workbooks"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-03-08"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Insights/workbooks",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "The kind of workbook. Choices are user and shared."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Metadata describing a workbook for an Azure resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Identity used for BYOS"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "Resource etag"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "user"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "shared"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkbookProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The user-defined name (display name) of the workbook."
+      },
+      "serializedData": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Configuration of this particular workbook. Configuration data is a string containing valid JSON"
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Workbook version"
+      },
+      "timeModified": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Date and time in UTC of the last modification that was made to this workbook definition."
+      },
+      "category": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Workbook category, as defined by the user at creation time."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "A list of 0 or more tags that are associated with this workbook definition"
+      },
+      "userId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Unique user id of the specific user that owns this workbook."
+      },
+      "sourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ResourceId for a source resource."
+      },
+      "storageUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "BYOS Storage Account URI"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The description of the workbook."
+      },
+      "revision": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The unique revision id for this workbook definition"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkbookManagedIdentity",
+    "properties": {
+      "userAssignedIdentities": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Customer Managed Identity"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "The identity type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkbookUserAssignedIdentities",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The principal ID of resource identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The tenant ID of resource."
+      },
+      "clientId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The client ID of resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceEtag",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Insights/workbooks@2021-03-08",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/30"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Insights/workbooks/revisions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-03-08"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Insights/workbooks/revisions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "The kind of workbook. Choices are user and shared."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Metadata describing a workbook for an Azure resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 2,
+        "description": "Identity used for BYOS"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 2,
+        "description": "Resource tags"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Resource etag"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "user"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "shared"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceEtag",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Insights/workbooks/revisions@2021-03-08",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/46"
+    },
+    "flags": 1
+  }
+]

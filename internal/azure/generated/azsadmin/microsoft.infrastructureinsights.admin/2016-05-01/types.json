@@ -1,0 +1,876 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.InfrastructureInsights.Admin/regionHealths/alerts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.InfrastructureInsights.Admin/regionHealths/alerts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Contains information related to alerts."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Azure Region where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertModel",
+    "properties": {
+      "closedTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Timestamp when the alert was closed."
+      },
+      "createdTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Timestamp when the alert was created."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Description of the alert."
+      },
+      "faultId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the fault ID of the alert."
+      },
+      "alertId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the ID of the alert."
+      },
+      "faultTypeId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the fault type ID of the alert."
+      },
+      "lastUpdatedTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Timestamp when the alert was last updated."
+      },
+      "alertProperties": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Properties of the alert."
+      },
+      "remediation": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Gets or sets the admin friendly remediation instructions for the alert."
+      },
+      "resourceRegistrationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the registration ID of the resource associated with the alert. If the alert is not associated with a resource, the resource registration ID is null."
+      },
+      "resourceProviderRegistrationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the registration ID of the service the alert belongs to."
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Severity of the alert."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "State of the alert."
+      },
+      "title": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Resource ID for the impacted item."
+      },
+      "impactedResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Resource ID for the impacted item."
+      },
+      "impactedResourceDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Display name for the impacted item."
+      },
+      "closedByUserAlias": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "User alias who closed the alert."
+      },
+      "hasValidRemediationAction": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Indicates if the alert can be remediated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Dictionary",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertModelAlertProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Dictionary",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.InfrastructureInsights.Admin/regionHealths/alerts@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.InfrastructureInsights.Admin/regionHealths"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.InfrastructureInsights.Admin/regionHealths",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "Contains information related to the health of a region."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Azure Region where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegionHealthModel",
+    "properties": {
+      "alertSummary": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Summary of alerts."
+      },
+      "usageMetrics": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "List of usage metrics for the region."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertSummary",
+    "properties": {
+      "criticalAlertCount": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The number of critical alerts for the service."
+      },
+      "warningAlertCount": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The number of warning alerts for the service."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UsageMetrics",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the usage metric."
+      },
+      "metricsValue": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "List of usage metrics."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Metrics",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the usage metric."
+      },
+      "maCounterName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the counter."
+      },
+      "observedTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Time counter was observed."
+      },
+      "sourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Type of the source."
+      },
+      "sourceName": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Name of the source."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Unit for the metric."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Name of the usage metric."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PhysicalNode"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VirtualMachine"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceProvider"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "One"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Percentage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "B"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TB"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/20"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.InfrastructureInsights.Admin/regionHealths@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/15"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.InfrastructureInsights.Admin/regionHealths/serviceHealths/resourceHealths"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.InfrastructureInsights.Admin/regionHealths/serviceHealths/resourceHealths",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "Health information related to a resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Azure Region where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceHealthModel",
+    "properties": {
+      "resourceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "resourceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource name."
+      },
+      "resourceDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource display name."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource type."
+      },
+      "resourceURI": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource URI."
+      },
+      "rpRegistrationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource provider registration ID."
+      },
+      "usageMetrics": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Usage metrics."
+      },
+      "alertSummary": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Alert summary."
+      },
+      "healthState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Health state."
+      },
+      "namespace": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Namespace of the health resource."
+      },
+      "registrationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registration ID."
+      },
+      "routePrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Route prefix."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.InfrastructureInsights.Admin/regionHealths/serviceHealths/resourceHealths@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/39"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.InfrastructureInsights.Admin/regionHealths/serviceHealths"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.InfrastructureInsights.Admin/regionHealths/serviceHealths",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2,
+        "description": "Holds information about the health of a service."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Azure Region where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceHealthModel",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the service."
+      },
+      "serviceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location of the service."
+      },
+      "infraURI": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The route prefix to the service."
+      },
+      "alertSummary": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Alert summary."
+      },
+      "healthState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Health state."
+      },
+      "namespace": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Namespace of the health resource."
+      },
+      "registrationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registration ID."
+      },
+      "routePrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Route prefix."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.InfrastructureInsights.Admin/regionHealths/serviceHealths@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/46"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "repair",
+    "resourceType": "Microsoft.InfrastructureInsights.Admin/regionHealths/alerts",
+    "apiVersion": "2016-05-01"
+  }
+]

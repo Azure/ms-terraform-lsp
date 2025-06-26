@@ -31,7 +31,7 @@ func TestCompletion_withoutInitialization(t *testing.T) {
 	}, session.SessionNotInitialized.Err())
 }
 
-func TestCompletion_templates(t *testing.T) {
+func TestCompletionAzureRM_templates(t *testing.T) {
 	tmpDir := TempDir(t)
 	InitPluginCache(t, tmpDir.Dir())
 
@@ -89,7 +89,7 @@ func TestCompletion_templates(t *testing.T) {
 	}
 }
 
-func TestCompletion_properties(t *testing.T) {
+func TestCompletionAzureRM_properties(t *testing.T) {
 	tmpDir := TempDir(t)
 	InitPluginCache(t, tmpDir.Dir())
 
@@ -133,7 +133,7 @@ func TestCompletion_properties(t *testing.T) {
 	}, string(expectRaw))
 }
 
-func TestCompletion_propertiesInBlock(t *testing.T) {
+func TestCompletionAzureRM_propertiesInBlock(t *testing.T) {
 	tmpDir := TempDir(t)
 	InitPluginCache(t, tmpDir.Dir())
 
@@ -177,7 +177,7 @@ func TestCompletion_propertiesInBlock(t *testing.T) {
 	}, string(expectRaw))
 }
 
-func TestCompletion_propertyValues(t *testing.T) {
+func TestCompletionAzureRM_propertyValues(t *testing.T) {
 	tmpDir := TempDir(t)
 	InitPluginCache(t, tmpDir.Dir())
 
@@ -221,7 +221,7 @@ func TestCompletion_propertyValues(t *testing.T) {
 	}, string(expectRaw))
 }
 
-func TestCompletion_propertyValuesInNestedBlock(t *testing.T) {
+func TestCompletionAzureRM_propertyValuesInNestedBlock(t *testing.T) {
 	tmpDir := TempDir(t)
 	InitPluginCache(t, tmpDir.Dir())
 
@@ -392,7 +392,7 @@ func TestCompletionMSGraph_bodyPlaceholder(t *testing.T) {
 	}, string(expectRaw))
 }
 
-func TestCompletionMSGraph_value(t *testing.T) {
+func TestCompletionMSGraph_values(t *testing.T) {
 	tmpDir := TempDir(t)
 	InitPluginCache(t, tmpDir.Dir())
 
@@ -433,7 +433,7 @@ func TestCompletionMSGraph_value(t *testing.T) {
 	}, string(expectRaw))
 }
 
-func TestCompletionMSGraph_prop(t *testing.T) {
+func TestCompletionMSGraph_properties(t *testing.T) {
 	tmpDir := TempDir(t)
 	InitPluginCache(t, tmpDir.Dir())
 
@@ -515,6 +515,676 @@ func TestCompletionMSGraph_codeSample(t *testing.T) {
 		Method:    "textDocument/completion",
 		ReqParams: buildReqParamsCompletion(3, 3, tmpDir.URI()),
 	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_apiVersion(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(4, 43, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_jsonencode(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(5, 13, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_values(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(7, 15, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_payload_values(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(7, 15, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_propertiesWrappedByQuote(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(9, 11, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_payload_propertiesWrappedByQuote(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(9, 11, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_action(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(3, 12, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_actionBody(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(5, 5, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_payload_actionBody(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(5, 5, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_discriminated(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(11, 7, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_payload_discriminated(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(11, 7, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_properties(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(12, 11, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_payload_properties(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(12, 11, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_codeSample(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+	expectRaw = []byte(strings.ReplaceAll(string(expectRaw), "<", "\\u003c"))
+	expectRaw = []byte(strings.ReplaceAll(string(expectRaw), ">", "\\u003e"))
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(3, 3, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAzAPI_templates(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	rawResponse := ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(1, 14, tmpDir.URI()),
+	})
+
+	var result map[string]interface{}
+	err = json.Unmarshal(rawResponse.Result, &result)
+	if err != nil {
+		t.Fatalf("failed to unmarshal response: %v", err)
+	}
+
+	items := result["items"].([]interface{})
+	if len(items) < 100 {
+		t.Fatalf("expected at least 100 items, got %d", len(items))
+	}
+}
+
+func TestCompletionAzAPI_templateInsideOtherResource(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	rawResponse := ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(2, 3, tmpDir.URI()),
+	})
+
+	var result map[string]interface{}
+	err = json.Unmarshal(rawResponse.Result, &result)
+	if err != nil {
+		t.Fatalf("failed to unmarshal response: %v", err)
+	}
+
+	items := result["items"].([]interface{})
+	if len(items) != 0 {
+		t.Fatalf("expected 0 items, got %d", len(items))
+	}
 }
 
 func buildReqParamsCompletion(line int, character int, uri string) string {

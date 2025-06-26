@@ -1,0 +1,110 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/invoices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-02-27-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/invoices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "The properties of the invoice."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InvoiceProperties",
+    "properties": {
+      "invoicePeriodStartDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The start of the date range covered by the invoice."
+      },
+      "invoicePeriodEndDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The end of the date range covered by the invoice."
+      },
+      "downloadUrl": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "A secure link to download the PDF version of an invoice. The link will cease to work after its expiry time is reached."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadUrl",
+    "properties": {
+      "expiryTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time in UTC at which this download URL will expire."
+      },
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URL to the PDF file."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/invoices@2017-02-27-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 1
+  }
+]

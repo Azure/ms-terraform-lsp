@@ -1,0 +1,391 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.GuestConfiguration/guestConfigurationAssignments"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-30-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.GuestConfiguration/guestConfigurationAssignments",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Properties of the Guest configuration assignment."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Region where the VM is located."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GuestConfigurationAssignmentProperties",
+    "properties": {
+      "guestConfiguration": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The guest configuration to assign."
+      },
+      "complianceStatus": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "A value indicating compliance status of the virtual machine for the assigned guest configuration."
+      },
+      "lastComplianceStatusChecked": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Date and time when last compliance status was checked."
+      },
+      "latestReportId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Id of the latest report for the guest configuration assignment."
+      },
+      "context": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The source which initiated the guest configuration assignment. Ex: Azure Policy"
+      },
+      "assignmentHash": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Combined hash of the configuration package and parameters."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 2,
+        "description": "The provisioning state, which only appears in the response."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GuestConfigurationNavigation",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Kind of the guest configuration. For example:DSC"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the guest configuration."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Version of the guest configuration."
+      },
+      "contentUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Uri of the storage where guest configuration package is uploaded."
+      },
+      "contentHash": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Combined hash of the guest configuration package and configuration parameters."
+      },
+      "configurationParameter": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The configuration parameters for the guest configuration."
+      },
+      "configurationSetting": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The configuration setting for the guest configuration."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DSC"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationParameter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the configuration parameter."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Value of the configuration parameter."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationSetting",
+    "properties": {
+      "configurationMode": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect."
+      },
+      "allowModuleOverwrite": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false"
+      },
+      "actionAfterReboot": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration"
+      },
+      "refreshFrequencyMins": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30."
+      },
+      "rebootIfNeeded": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module."
+      },
+      "configurationModeFrequencyMins": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ApplyOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ApplyAndMonitor"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ApplyAndAutoCorrect"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ContinueConfiguration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StopConfiguration"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Compliant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NonCompliant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.GuestConfiguration/guestConfigurationAssignments@2018-06-30-preview",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

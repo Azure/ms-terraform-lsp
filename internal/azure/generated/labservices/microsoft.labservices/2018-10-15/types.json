@@ -1,0 +1,2347 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.LabServices/labaccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-10-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.LabServices/labaccounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The properties of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabAccountProperties",
+    "properties": {
+      "sizeConfiguration": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Represents the size configuration under the lab account"
+      },
+      "enabledRegionSelection": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Represents if region selection is enabled"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      },
+      "uniqueIdentifier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The unique immutable identifier of a resource (Guid)."
+      },
+      "latestOperationResult": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "The details of the latest operation. ex: status, error"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SizeConfigurationProperties",
+    "properties": {
+      "environmentSizes": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Represents a list of size categories supported by this Lab Account (Small, Medium, Large)"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnvironmentSize",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The size category"
+      },
+      "vmSizes": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Represents a set of compute sizes that can serve this given size type"
+      },
+      "maxPrice": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "The pay-as-you-go dollar price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost. This is the maximum price of all prices within this tier."
+      },
+      "minNumberOfCores": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "The number of cores a VM of this size has. This is the minimum number of cores within this tier."
+      },
+      "minMemory": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "The amount of memory available (in GB). This is the minimum amount of memory within this tier."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Performance"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SizeInfo",
+    "properties": {
+      "computeSize": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Represents the actual compute size, e.g. Standard_A2_v2."
+      },
+      "price": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The pay-as-you-go price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost."
+      },
+      "numberOfCores": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The number of cores a VM of this size has."
+      },
+      "memory": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The amount of memory available (in GB)."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/6"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LatestOperationResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The current status of the operation."
+      },
+      "errorCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error code on failure."
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "requestUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Request URI of the operation."
+      },
+      "httpMethod": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The HttpMethod - PUT/POST/DELETE for the operation."
+      },
+      "operationUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URL to use to check long-running operation status"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.LabServices/labaccounts@2018-10-15",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.LabServices/labaccounts/galleryimages"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-10-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.LabServices/labaccounts/galleryimages",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "The gallery image properties"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryImageProperties",
+    "properties": {
+      "author": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The author of the gallery image."
+      },
+      "createdDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The creation date of the gallery image."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The description of the gallery image."
+      },
+      "imageReference": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "The image reference of the gallery image."
+      },
+      "icon": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The icon of the gallery image."
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Indicates whether this gallery image is enabled."
+      },
+      "isOverride": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Indicates whether this gallery has been overridden for this lab account"
+      },
+      "planId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The third party plan that applies to this image"
+      },
+      "isPlanAuthorized": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Indicates if the plan has been authorized for programmatic deployment."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      },
+      "uniqueIdentifier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The unique immutable identifier of a resource (Guid)."
+      },
+      "latestOperationResult": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "The details of the latest operation. ex: status, error"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryImageReference",
+    "properties": {
+      "offer": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The offer of the gallery image."
+      },
+      "publisher": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The publisher of the gallery image."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The SKU of the gallery image."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The OS type of the gallery image."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The version of the gallery image."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.LabServices/labaccounts/galleryimages@2018-10-15",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/21"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.LabServices/labaccounts/labs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-10-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.LabServices/labaccounts/labs",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "The properties of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabProperties",
+    "properties": {
+      "maxUsersInLab": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Maximum number of users allowed in the lab."
+      },
+      "userQuota": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "Maximum value MaxUsersInLab can be set to, as specified by the service"
+      },
+      "invitationCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Invitation code that users can use to join a lab."
+      },
+      "createdByObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Object id of the user that created the lab."
+      },
+      "usageQuota": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Maximum duration a user can use an environment for in the lab."
+      },
+      "userAccessMode": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Lab user access mode (open to all vs. restricted to those listed on the lab)."
+      },
+      "createdByUserPrincipalName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Lab creator name"
+      },
+      "createdDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Creation date for the lab"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      },
+      "uniqueIdentifier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The unique immutable identifier of a resource (Guid)."
+      },
+      "latestOperationResult": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "The details of the latest operation. ex: status, error"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Restricted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Open"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.LabServices/labaccounts/labs@2018-10-15",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/28"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.LabServices/labaccounts/labs/environmentsettings"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-10-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.LabServices/labaccounts/labs/environmentsettings",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "The properties of the Environment Setting resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnvironmentSettingProperties",
+    "properties": {
+      "publishingState": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 2,
+        "description": "Describes the readiness of this environment setting"
+      },
+      "configurationState": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Describes the user's progress in configuring their environment setting"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Describes the environment and its resource settings"
+      },
+      "title": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Brief title describing the environment and its resource settings"
+      },
+      "resourceSettings": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 1,
+        "description": "The resource specific settings"
+      },
+      "lastChanged": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Time when the template VM was last changed."
+      },
+      "lastPublished": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Time when the template VM was last sent for publishing."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      },
+      "uniqueIdentifier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The unique immutable identifier of a resource (Guid)."
+      },
+      "latestOperationResult": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "The details of the latest operation. ex: status, error"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Draft"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Publishing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Published"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PublishFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scaling"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotApplicable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceSettings",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The unique id of the resource setting"
+      },
+      "galleryImageResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource id of the gallery image used for creating the virtual machine"
+      },
+      "imageName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the image used to created the environment setting"
+      },
+      "size": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The size of the virtual machine"
+      },
+      "cores": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "The translated compute cores of the virtual machine"
+      },
+      "referenceVm": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 1,
+        "description": "Details specific to Reference Vm"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Performance"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReferenceVm",
+    "properties": {
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The username of the virtual machine"
+      },
+      "password": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The password of the virtual machine. This will be set to null in GET resource API"
+      },
+      "vmStateDetails": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 2,
+        "description": "The state details for the reference virtual machine."
+      },
+      "vmResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "VM resource Id for the environment"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VmStateDetails",
+    "properties": {
+      "rdpAuthority": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol)."
+      },
+      "sshAuthority": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH."
+      },
+      "powerState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The power state of the reference virtual machine."
+      },
+      "lastKnownPowerState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last known compute power state captured in DTL"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.LabServices/labaccounts/labs/environmentsettings@2018-10-15",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/37"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.LabServices/labaccounts/labs/environmentsettings/environments"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-10-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.LabServices/labaccounts/labs/environmentsettings/environments",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "The properties of the Environment resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnvironmentProperties",
+    "properties": {
+      "resourceSets": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "The set of a VM and the setting id it was created for"
+      },
+      "claimedByUserObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The AAD object Id of the user who has claimed the environment"
+      },
+      "claimedByUserPrincipalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The user principal Id of the user who has claimed the environment"
+      },
+      "claimedByUserName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name or email address of the user who has claimed the environment"
+      },
+      "isClaimed": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Is the environment claimed or not"
+      },
+      "lastKnownPowerState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last known power state of the environment"
+      },
+      "networkInterface": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "Network details of the environment"
+      },
+      "totalUsage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "How long the environment has been used by a lab user"
+      },
+      "passwordLastReset": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "When the password was last reset on the environment."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      },
+      "uniqueIdentifier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The unique immutable identifier of a resource (Guid)."
+      },
+      "latestOperationResult": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "The details of the latest operation. ex: status, error"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceSet",
+    "properties": {
+      "vmResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "VM resource Id for the environment"
+      },
+      "resourceSettingId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "resourceSettingId for the environment"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkInterface",
+    "properties": {
+      "privateIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "PrivateIp address of the Compute VM"
+      },
+      "sshAuthority": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Connection information for Linux"
+      },
+      "rdpAuthority": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Connection information for Windows"
+      },
+      "username": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Username of the VM"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.LabServices/labaccounts/labs/environmentsettings/environments@2018-10-15",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/59"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.LabServices/labaccounts/labs/users"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-10-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.LabServices/labaccounts/labs/users",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 0,
+        "description": "These are the properties for the user registered under a lab."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserProperties",
+    "properties": {
+      "email": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The user email address, as it was specified during registration."
+      },
+      "familyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The user family name, as it was specified during registration."
+      },
+      "givenName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The user given name, as it was specified during registration."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The user tenant ID, as it was specified during registration."
+      },
+      "totalUsage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "How long the user has used his VMs in this lab"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      },
+      "uniqueIdentifier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The unique immutable identifier of a resource (Guid)."
+      },
+      "latestOperationResult": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "The details of the latest operation. ex: status, error"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.LabServices/labaccounts/labs/users@2018-10-15",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/67"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnvironmentOperationsPayload",
+    "properties": {
+      "environmentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resourceId of the environment"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetEnvironmentResponse",
+    "properties": {
+      "environment": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 2,
+        "description": "Details of the environment"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnvironmentDetails",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the Environment"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Description of the Environment"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id of the environment"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the environment. This also includes LabIsFull and NotYetProvisioned status."
+      },
+      "virtualMachineDetails": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "Details of backing DTL virtual machine with compute and network details."
+      },
+      "latestOperationResult": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "The details of the latest operation. ex: status, error"
+      },
+      "environmentState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Publishing state of the environment setting Possible values are Creating, Created, Failed"
+      },
+      "totalUsage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "How long the environment has been used by a lab user"
+      },
+      "passwordLastReset": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "When the password was last reset on the environment."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineDetails",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the Dtl VM"
+      },
+      "rdpAuthority": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Connection information for Windows"
+      },
+      "sshAuthority": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Connection information for Linux"
+      },
+      "privateIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "PrivateIp address of the compute VM"
+      },
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Compute VM login user name"
+      },
+      "lastKnownPowerState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last known compute power state captured in DTL"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getEnvironment",
+    "resourceType": "Microsoft.LabServices/users",
+    "apiVersion": "2018-10-15",
+    "output": {
+      "$ref": "#/72"
+    },
+    "input": {
+      "$ref": "#/71"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationBatchStatusPayload",
+    "properties": {
+      "urls": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 1,
+        "description": "The operation url of long running operation"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationBatchStatusResponse",
+    "properties": {
+      "items": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 2,
+        "description": "Gets a collection of items that contain the operation url and status."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationBatchStatusResponseItem",
+    "properties": {
+      "operationUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "status of the long running operation for an environment"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "status of the long running operation for an environment"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/79"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getOperationBatchStatus",
+    "resourceType": "Microsoft.LabServices/users",
+    "apiVersion": "2018-10-15",
+    "output": {
+      "$ref": "#/78"
+    },
+    "input": {
+      "$ref": "#/76"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatusPayload",
+    "properties": {
+      "operationUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The operation url of long running operation"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatusResponse",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "status of the long running operation for an environment"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getOperationStatus",
+    "resourceType": "Microsoft.LabServices/users",
+    "apiVersion": "2018-10-15",
+    "output": {
+      "$ref": "#/83"
+    },
+    "input": {
+      "$ref": "#/82"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PersonalPreferencesOperationsPayload",
+    "properties": {
+      "labAccountResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id of the lab account"
+      },
+      "addRemove": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 0,
+        "description": "Enum indicating if user is adding or removing a favorite lab"
+      },
+      "labResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id of the lab to add/remove from the favorites list"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Add"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Remove"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/87"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetPersonalPreferencesResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Id to be used by the cache orchestrator"
+      },
+      "favoriteLabResourceIds": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "Array of favorite lab resource ids"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getPersonalPreferences",
+    "resourceType": "Microsoft.LabServices/users",
+    "apiVersion": "2018-10-15",
+    "output": {
+      "$ref": "#/89"
+    },
+    "input": {
+      "$ref": "#/85"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ListEnvironmentsPayload",
+    "properties": {
+      "labId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource Id of the lab"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ListEnvironmentsResponse",
+    "properties": {
+      "environments": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "List of all the environments"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/73"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listEnvironments",
+    "resourceType": "Microsoft.LabServices/users",
+    "apiVersion": "2018-10-15",
+    "output": {
+      "$ref": "#/93"
+    },
+    "input": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ListLabsResponse",
+    "properties": {
+      "labs": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "List of all the labs"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabDetails",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the lab"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning state of the lab."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Id of the lab."
+      },
+      "usageQuota": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The maximum duration a user can use a VM in this lab."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listLabs",
+    "resourceType": "Microsoft.LabServices/users",
+    "apiVersion": "2018-10-15",
+    "output": {
+      "$ref": "#/96"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegisterPayload",
+    "properties": {
+      "registrationCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The registration code of the lab."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "register",
+    "resourceType": "Microsoft.LabServices/users",
+    "apiVersion": "2018-10-15",
+    "input": {
+      "$ref": "#/100"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResetPasswordPayload",
+    "properties": {
+      "environmentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resourceId of the environment"
+      },
+      "username": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The username for which the password will be reset."
+      },
+      "password": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The password to assign to the user specified in"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetPassword",
+    "resourceType": "Microsoft.LabServices/users",
+    "apiVersion": "2018-10-15",
+    "input": {
+      "$ref": "#/102"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startEnvironment",
+    "resourceType": "Microsoft.LabServices/users",
+    "apiVersion": "2018-10-15",
+    "input": {
+      "$ref": "#/71"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopEnvironment",
+    "resourceType": "Microsoft.LabServices/users",
+    "apiVersion": "2018-10-15",
+    "input": {
+      "$ref": "#/71"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateLabProperties",
+    "properties": {
+      "environmentSettingCreationParameters": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "Settings related to creating an environment setting"
+      },
+      "labCreationParameters": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 1,
+        "description": "Settings related to creating a lab"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the resource"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnvironmentSettingCreationParameters",
+    "properties": {
+      "resourceSettingCreationParameters": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 1,
+        "description": "The resource specific settings"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceSettingCreationParameters",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location where the virtual machine will live"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the resource setting"
+      },
+      "galleryImageResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource id of the gallery image used for creating the virtual machine"
+      },
+      "size": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0,
+        "description": "The size of the virtual machine"
+      },
+      "referenceVmCreationParameters": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 1,
+        "description": "Creation parameters for Reference Vm"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Performance"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReferenceVmCreationParameters",
+    "properties": {
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The username of the virtual machine"
+      },
+      "password": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The password of the virtual machine."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabCreationParameters",
+    "properties": {
+      "maxUsersInLab": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Maximum number of users allowed in the lab."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateLabPropertiesTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createLab",
+    "resourceType": "Microsoft.LabServices/labaccounts",
+    "apiVersion": "2018-10-15",
+    "input": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetRegionalAvailabilityResponse",
+    "properties": {
+      "regionalAvailability": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 0,
+        "description": "Availability information for different size categories per region"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegionalAvailability",
+    "properties": {
+      "region": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Corresponding region"
+      },
+      "sizeAvailabilities": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "List of all the size information for the region"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SizeAvailability",
+    "properties": {
+      "sizeCategory": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "The category of the size (Basic, Standard, Performance)."
+      },
+      "isAvailable": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether or not this size category is available"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Performance"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/122"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/119"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/118"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getRegionalAvailability",
+    "resourceType": "Microsoft.LabServices/labaccounts",
+    "apiVersion": "2018-10-15",
+    "output": {
+      "$ref": "#/117"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AddUsersPayload",
+    "properties": {
+      "emailAddresses": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 1,
+        "description": "List of user emails addresses to add to the lab."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addUsers",
+    "resourceType": "Microsoft.LabServices/labaccounts/labs",
+    "apiVersion": "2018-10-15",
+    "input": {
+      "$ref": "#/127"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "register",
+    "resourceType": "Microsoft.LabServices/labaccounts/labs",
+    "apiVersion": "2018-10-15"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "claimAny",
+    "resourceType": "Microsoft.LabServices/labaccounts/labs/environmentsettings",
+    "apiVersion": "2018-10-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PublishPayload",
+    "properties": {
+      "useExistingImage": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Whether to use existing VM custom image when publishing."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "publish",
+    "resourceType": "Microsoft.LabServices/labaccounts/labs/environmentsettings",
+    "apiVersion": "2018-10-15",
+    "input": {
+      "$ref": "#/132"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.LabServices/labaccounts/labs/environmentsettings",
+    "apiVersion": "2018-10-15"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.LabServices/labaccounts/labs/environmentsettings",
+    "apiVersion": "2018-10-15"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "claim",
+    "resourceType": "Microsoft.LabServices/labaccounts/labs/environmentsettings/environments",
+    "apiVersion": "2018-10-15"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetPassword",
+    "resourceType": "Microsoft.LabServices/labaccounts/labs/environmentsettings/environments",
+    "apiVersion": "2018-10-15",
+    "input": {
+      "$ref": "#/102"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.LabServices/labaccounts/labs/environmentsettings/environments",
+    "apiVersion": "2018-10-15"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.LabServices/labaccounts/labs/environmentsettings/environments",
+    "apiVersion": "2018-10-15"
+  }
+]

@@ -1,0 +1,874 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 6,
+    "maxLength": 50
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.EventHub/namespaces"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2014-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.EventHub/namespaces",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Namespace location."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "SKU parameters supplied to the create Namespace operation"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Namespace tags."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Properties of the Namespace supplied for create or update Namespace operation"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Sku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "Name of this SKU."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 1,
+        "description": "The billing tier of this particular SKU."
+      },
+      "capacity": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "The Event Hubs throughput units."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NamespaceCreateOrUpdateParametersTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NamespaceProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "State of the Namespace."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Provisioning state of the Namespace."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The time the Namespace was created."
+      },
+      "updatedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The time the Namespace was updated."
+      },
+      "serviceBusEndpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Endpoint you can use to perform Service Bus operations."
+      },
+      "metricId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Identifier for Azure Insights metrics"
+      },
+      "enabled": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Specifies whether this instance is enabled."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Activating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SoftDeleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SoftDeleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Removing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Removed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.EventHub/namespaces@2014-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 50
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.EventHub/namespaces/AuthorizationRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2014-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.EventHub/namespaces/AuthorizationRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Data center location."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Properties supplied to create or update SharedAccessAuthorizationRule"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedAccessAuthorizationRuleProperties",
+    "properties": {
+      "rights": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "The rights associated with the rule."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Manage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Send"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Listen"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/40"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.EventHub/namespaces/AuthorizationRules@2014-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/35"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.EventHub/namespaces/eventhubs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2014-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.EventHub/namespaces/eventhubs",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Location of the resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Properties supplied to the Create Or Update Event Hub operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EventHubProperties",
+    "properties": {
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Exact time the Event Hub was created."
+      },
+      "messageRetentionInDays": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Number of days to retain the events for this Event Hub."
+      },
+      "partitionCount": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Number of partitions created for the Event Hub."
+      },
+      "partitionIds": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2,
+        "description": "Current number of shards on the Event Hub."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Enumerates the possible values for the status of the Event Hub."
+      },
+      "updatedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The exact time the message was updated."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Restoring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SendDisabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReceiveDisabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Renaming"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.EventHub/namespaces/eventhubs@2014-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/45"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2014-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Data center location."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Properties supplied to create or update SharedAccessAuthorizationRule"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2014-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/61"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.EventHub/namespaces/eventhubs/consumergroups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2014-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.EventHub/namespaces/eventhubs/consumergroups",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Location of the resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "Properties supplied to the Create Or Update Consumer Group operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConsumerGroupProperties",
+    "properties": {
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Exact time the message was created."
+      },
+      "eventHubPath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The path of the Event Hub."
+      },
+      "updatedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The exact time the message was updated."
+      },
+      "userMetadata": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The user metadata."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.EventHub/namespaces/eventhubs/consumergroups@2014-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/65"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedAccessAuthorizationRuleListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Result of the List Authorization Rules operation."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Link to the next set of results. Not empty if Value contains an incomplete list of Authorization Rules"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedAccessAuthorizationRuleResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Properties supplied to create or update SharedAccessAuthorizationRule"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource name"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource location"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/69"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "AuthorizationRules",
+    "resourceType": "Microsoft.EventHub/namespaces",
+    "apiVersion": "2014-09-01",
+    "output": {
+      "$ref": "#/68"
+    }
+  }
+]

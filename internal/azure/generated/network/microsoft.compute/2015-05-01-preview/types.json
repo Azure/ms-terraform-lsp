@@ -1,0 +1,352 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "microsoft.compute/virtualMachineScaleSets/virtualMachines/networkInterfaces"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-05-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "microsoft.compute/virtualMachineScaleSets/virtualMachines/networkInterfaces",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "NetworkInterface properties."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets a unique read-only string that changes whenever the resource is updated"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkInterfacePropertiesFormat",
+    "properties": {
+      "virtualMachine": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Gets or sets the reference of a VirtualMachine"
+      },
+      "networkSecurityGroup": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Gets or sets the reference of the NetworkSecurityGroup resource"
+      },
+      "ipConfigurations": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Gets or sets list of IPConfigurations of the NetworkInterface"
+      },
+      "dnsSettings": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Gets or sets DNS Settings in  NetworkInterface"
+      },
+      "macAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the MAC Address of the network interface"
+      },
+      "primary": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Gets whether this is a primary NIC on a virtual machine"
+      },
+      "enableIPForwarding": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Gets or sets whether IPForwarding is enabled on the NIC"
+      },
+      "resourceGuid": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets resource guid property of the network interface resource"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkInterfaceIpConfiguration",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Properties of IPConfiguration"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A unique read-only string that changes whenever the resource is updated"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkInterfaceIpConfigurationPropertiesFormat",
+    "properties": {
+      "privateIPAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the privateIPAddress of the Network Interface IP Configuration"
+      },
+      "privateIPAllocationMethod": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Gets or sets PrivateIP allocation method (Static/Dynamic)"
+      },
+      "subnet": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Gets or sets the reference of the subnet resource"
+      },
+      "publicIPAddress": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Gets or sets the reference of the PublicIP resource"
+      },
+      "loadBalancerBackendAddressPools": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Gets or sets the reference of LoadBalancerBackendAddressPool resource"
+      },
+      "loadBalancerInboundNatRules": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Gets or sets list of references of LoadBalancerInboundNatRules"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Static"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dynamic"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/6"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkInterfaceDnsSettings",
+    "properties": {
+      "dnsServers": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Gets or sets list of DNS servers IP addresses"
+      },
+      "appliedDnsServers": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Gets or sets list of Applied DNS servers IP addresses"
+      },
+      "internalDnsNameLabel": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Internal DNS name"
+      },
+      "internalFqdn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets full IDNS name in the form, DnsName.VnetId.ZoneId.TopLevelSuffix. This is set when the NIC is associated to a VM"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "microsoft.compute/virtualMachineScaleSets/virtualMachines/networkInterfaces@2015-05-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 1
+  }
+]

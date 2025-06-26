@@ -1,0 +1,768 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Update.Admin/updateLocations/updates"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Update.Admin/updateLocations/updates",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Properties of an update."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Region location of resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateModel",
+    "properties": {
+      "installedDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Date update was installed."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the update."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Current state of the update."
+      },
+      "kbLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Link to the KB article about the update."
+      },
+      "minVersionRequired": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The minimum version required to install."
+      },
+      "minOemVersionRequired": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The minimum OEM version required to install."
+      },
+      "packagePath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Path to the update package."
+      },
+      "packageSizeInMb": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Size of update package."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the update."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Version of the update."
+      },
+      "oemVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "OEM version of the update."
+      },
+      "publisher": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Publisher of the update."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HasPrerequisite"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Obsolete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotApplicableBecauseAnotherUpdateIsInProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Preparing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Installing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Installed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PreparationFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InstallationFailed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Update.Admin/updateLocations/updates@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Update.Admin/updateLocations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Update.Admin/updateLocations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "Model which holds information related to update location."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Region location of resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateLocationModel",
+    "properties": {
+      "currentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Current version of your AzureStack deployment."
+      },
+      "currentOemVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Current OEM version of your AzureStack deployment."
+      },
+      "lastUpdated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Date of last update."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "State with respect to the update."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AppliedSuccessfully"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AppliedUpdateAvailableSuccessfully"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpdateInProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpdateFailed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Update.Admin/updateLocations@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/20"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Update.Admin/updateLocations/updates/updateRuns"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Update.Admin/updateLocations/updates/updateRuns",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "Properties of a update run."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Region location of resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateRunModel",
+    "properties": {
+      "progress": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Current progress of the update run."
+      },
+      "timeStarted": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Update start time."
+      },
+      "duration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Duration of the update."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "State of the update run."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Step",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the step."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the step."
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Error message, if any."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "State of the step."
+      },
+      "startTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Time at which this step started executing"
+      },
+      "endTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Time at which this step stopped executing"
+      },
+      "steps": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "Inner steps"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/34"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Update.Admin/updateLocations/updates/updateRuns@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/32"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Update.Admin/updateLocations/updateRuns"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-05-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Update.Admin/updateLocations/updateRuns",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "Properties of a update run."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Region location of resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Update.Admin/updateLocations/updateRuns@2016-05-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/45"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateRun",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Properties of a update run."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "URI of the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Type of resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Region location of resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "List of key-value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Apply",
+    "resourceType": "Microsoft.Update.Admin/updateLocations/updates",
+    "apiVersion": "2016-05-01",
+    "output": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rerun",
+    "resourceType": "Microsoft.Update.Admin/updateLocations/updates/updateRuns",
+    "apiVersion": "2016-05-01"
+  }
+]

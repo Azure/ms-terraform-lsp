@@ -1,0 +1,688 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/machines"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-07-30-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/machines",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Hybrid Compute Machine properties"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineProperties",
+    "properties": {
+      "locationData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Metadata pertaining to the geographic location of the resource."
+      },
+      "osProfile": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Specifies the operating system settings for the hybrid machine."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The provisioning state, which only appears in the response."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "The status of the hybrid machine agent."
+      },
+      "lastStatusChange": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time of the last status change."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 2,
+        "description": "Details about the error state."
+      },
+      "agentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The hybrid machine agent full version."
+      },
+      "vmId": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Specifies the hybrid machine unique ID."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the hybrid machine display name."
+      },
+      "machineFqdn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the hybrid machine FQDN."
+      },
+      "clientPublicKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Public Key that the client provides to be used during initial resource onboarding"
+      },
+      "osName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Operating System running on the hybrid machine."
+      },
+      "osVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The version of Operating System running on the hybrid machine."
+      },
+      "vmUuid": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Specifies the Arc Machine's unique SMBIOS ID"
+      },
+      "extensions": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Machine Extensions information"
+      },
+      "osSku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the Operating System product SKU."
+      },
+      "domainName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the Windows domain name."
+      },
+      "adFqdn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the AD fully qualified display name."
+      },
+      "dnsFqdn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the DNS fully qualified display name."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocationData",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "A canonical name for the geographic or physical location."
+      },
+      "city": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The city or locality where the resource is located."
+      },
+      "district": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The district, state, or province where the resource is located."
+      },
+      "countryOrRegion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The country or region where the resource is located"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 256
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachinePropertiesOsProfile",
+    "properties": {
+      "computerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the host OS name of the hybrid machine."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disconnected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The error's code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "A human readable error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Indicates which property in the request is responsible for the error."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Additional error details."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/12"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/12"
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionInstanceView",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The machine extension name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the type of the extension; an example is \"CustomScriptExtension\"."
+      },
+      "typeHandlerVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the version of the script handler."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Instance view status."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionInstanceViewStatus",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The status code."
+      },
+      "level": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The level code."
+      },
+      "displayStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The short localizable label for the status."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The detailed status message, including for alerts and error messages."
+      },
+      "time": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time of the status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Info"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/16"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineIdentity",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity type."
+      },
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The identity's principal id."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The identity's tenant id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/machines@2020-07-30-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/machines/extensions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-07-30-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/machines/extensions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Describes Machine Extension Properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionProperties",
+    "properties": {
+      "forceUpdateTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "How the extension handler should be forced to update even if the extension configuration has not changed."
+      },
+      "publisher": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the extension handler publisher."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the type of the extension; an example is \"CustomScriptExtension\"."
+      },
+      "typeHandlerVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the version of the script handler."
+      },
+      "autoUpgradeMinorVersion": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true."
+      },
+      "settings": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Json formatted public settings for the extension."
+      },
+      "protectedSettings": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The provisioning state, which only appears in the response."
+      },
+      "instanceView": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The machine extension instance view."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionPropertiesInstanceView",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The machine extension name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the type of the extension; an example is \"CustomScriptExtension\"."
+      },
+      "typeHandlerVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the version of the script handler."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Instance view status."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/machines/extensions@2020-07-30-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/28"
+    },
+    "flags": 0
+  }
+]

@@ -1,0 +1,214 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/trafficmanagerprofiles/heatMaps"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network/trafficmanagerprofiles/heatMaps",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The properties of the Traffic Manager HeatMap."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HeatMapProperties",
+    "properties": {
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The beginning of the time window for this HeatMap, inclusive."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ending of the time window for this HeatMap, exclusive."
+      },
+      "endpoints": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The endpoints used in this HeatMap calculation."
+      },
+      "trafficFlows": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "The traffic flows produced in this HeatMap calculation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HeatMapEndpoint",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ARM Resource ID of this Traffic Manager endpoint."
+      },
+      "endpointId": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "A number uniquely identifying this endpoint in query experiences."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/7"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrafficFlow",
+    "properties": {
+      "sourceIp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The IP address that this query experience originated from."
+      },
+      "latitude": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The approximate latitude that these queries originated from."
+      },
+      "longitude": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The approximate longitude that these queries originated from."
+      },
+      "queryExperiences": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The query experiences produced in this HeatMap calculation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryExperience",
+    "properties": {
+      "endpointId": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 1,
+        "description": "The id of the endpoint from the 'endpoints' array which these queries were routed to."
+      },
+      "queryCount": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 1,
+        "description": "The number of queries originating from this location."
+      },
+      "latency": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The latency experienced by queries originating from this location."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/10"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network/trafficmanagerprofiles/heatMaps@2017-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/5"
+    },
+    "flags": 1
+  }
+]

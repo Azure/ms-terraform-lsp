@@ -1,0 +1,159 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMySQL/servers/keys"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMySQL/servers/keys",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Kind of encryption protector used to protect the key."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Properties of the ServerKey Resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerKeyProperties",
+    "properties": {
+      "serverKeyType": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "The key type like 'AzureKeyVault'."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The URI of the key."
+      },
+      "creationDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The key creation date."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureKeyVault"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMySQL/servers/keys@2020-01-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforMySQL/servers",
+    "apiVersion": "2020-01-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforMySQL/servers",
+    "apiVersion": "2020-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerUpgradeParameters",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "The properties that can be updated for a server."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerUpgradeParametersProperties",
+    "properties": {
+      "targetServerVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Represents an server storage profile."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.DBforMySQL/servers",
+    "apiVersion": "2020-01-01",
+    "input": {
+      "$ref": "#/10"
+    }
+  }
+]

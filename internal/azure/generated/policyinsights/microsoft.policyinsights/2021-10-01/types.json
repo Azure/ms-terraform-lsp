@@ -1,0 +1,587 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.PolicyInsights/remediations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.PolicyInsights/remediations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Properties for the remediation."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemediationProperties",
+    "properties": {
+      "policyAssignmentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource ID of the policy assignment that should be remediated."
+      },
+      "policyDefinitionReferenceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition."
+      },
+      "resourceDiscoveryMode": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The status of the remediation. This refers to the entire remediation task, not individual deployments. Allowed values are Evaluating, Canceled, Cancelling, Failed, Complete, or Succeeded."
+      },
+      "createdOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time at which the remediation was created."
+      },
+      "lastUpdatedOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time at which the remediation was last updated."
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The filters that will be applied to determine which resources to remediate."
+      },
+      "deploymentStatus": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "The deployment status summary for all deployments created by the remediation."
+      },
+      "statusMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The remediation status message. Provides additional details regarding the state of the remediation."
+      },
+      "correlationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The remediation correlation Id. Can be used to find events related to the remediation in the activity log."
+      },
+      "resourceCount": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Determines the max number of resources that can be remediated by the remediation job. If not provided, the default resource count is used."
+      },
+      "parallelDeployments": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Determines how many resources to remediate at any given time. Can be used to increase or reduce the pace of the remediation. If not provided, the default parallel deployments value is used."
+      },
+      "failureThreshold": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The remediation failure threshold settings"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ExistingNonCompliant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReEvaluateCompliance"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemediationFilters",
+    "properties": {
+      "locations": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The resource locations that will be remediated."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemediationDeploymentSummary",
+    "properties": {
+      "totalDeployments": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "The number of deployments required by the remediation."
+      },
+      "successfulDeployments": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "The number of deployments required by the remediation that have succeeded."
+      },
+      "failedDeployments": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "The number of deployments required by the remediation that have failed."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemediationPropertiesFailureThreshold",
+    "properties": {
+      "percentage": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "A number between 0.0 to 1.0 representing the percentage failure threshold. The remediation will fail if the percentage of failed remediation operations (i.e. failed deployments) exceeds this threshold."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.PolicyInsights/remediations@2021-10-01",
+    "scopeType": 0,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemediationDeploymentsListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Array of deployments for the remediation."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URL to get the next set of results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemediationDeployment",
+    "properties": {
+      "remediatedResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID of the resource that is being remediated by the deployment."
+      },
+      "deploymentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID of the template deployment that will remediate the resource."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Status of the remediation deployment."
+      },
+      "resourceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Location of the resource that is being remediated."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 2,
+        "description": "Error encountered while remediated the resource."
+      },
+      "createdOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time at which the remediation was created."
+      },
+      "lastUpdatedOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time at which the remediation deployment was last updated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDefinition",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Service specific error code which serves as the substatus for the HTTP error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Description of the error."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The target of the error."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 2,
+        "description": "Internal error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Additional scenario specific error details."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TypedErrorInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of included error details."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "The scenario specific error details."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/26"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listDeployments",
+    "resourceType": "Microsoft.PolicyInsights/remediations",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Remediation",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Properties for the remediation."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the remediation."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the remediation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the remediation."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.PolicyInsights/remediations",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/34"
+    }
+  }
+]

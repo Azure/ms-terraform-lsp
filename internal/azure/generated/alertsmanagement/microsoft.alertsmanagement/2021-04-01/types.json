@@ -1,0 +1,451 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "microsoft.alertsManagement/smartDetectorAlertRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-04-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "microsoft.alertsManagement/smartDetectorAlertRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The properties of the alert rule."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "The resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertRuleProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The alert rule description."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "The alert rule state."
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The alert rule severity."
+      },
+      "frequency": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 1 minute, depending on the detector."
+      },
+      "detector": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 1,
+        "description": "The alert rule's detector."
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 1,
+        "description": "The alert rule resources scope."
+      },
+      "actionGroups": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 1,
+        "description": "The alert rule actions."
+      },
+      "throttling": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "The alert rule throttling information."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sev0"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sev1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sev2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sev3"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sev4"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Detector",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The detector id."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The detector's parameters.'"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Smart Detector name."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Smart Detector description."
+      },
+      "supportedResourceTypes": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The Smart Detector supported resource types."
+      },
+      "imagePaths": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector"
+      },
+      "parameterDefinitions": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 2,
+        "description": "The Smart Detector parameters definitions.'"
+      },
+      "supportedCadences": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "The Smart Detector supported cadences."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DetectorParameters",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/15"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DetectorParameterDefinition",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The detector parameter name."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The detector parameter display name."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The detector parameter description."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "The detector parameter type."
+      },
+      "isMandatory": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "A value indicating whether this detector parameter is mandatory."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "String"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Integer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Double"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Boolean"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DateTime"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/28"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActionGroupsInformation",
+    "properties": {
+      "customEmailSubject": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "An optional custom email subject to use in email notifications."
+      },
+      "customWebhookPayload": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "An optional custom web-hook payload to use in web-hook notifications."
+      },
+      "groupIds": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 1,
+        "description": "The Action Group resource IDs."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThrottlingInformation",
+    "properties": {
+      "duration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "microsoft.alertsManagement/smartDetectorAlertRules@2021-04-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

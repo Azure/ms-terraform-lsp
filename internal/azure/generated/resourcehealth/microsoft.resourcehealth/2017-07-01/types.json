@@ -1,0 +1,336 @@
+[
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ResourceHealth/emergingIssues"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-07-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ResourceHealth/emergingIssues",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The emerging issue entity properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EmergingIssue",
+    "properties": {
+      "refreshTimestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Timestamp for when last time refreshed for ongoing emerging issue."
+      },
+      "statusBanners": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "The list of emerging issues of banner type."
+      },
+      "statusActiveEvents": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "The list of emerging issues of active event type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StatusBanner",
+    "properties": {
+      "title": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The banner title."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The details of banner."
+      },
+      "cloud": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The cloud type of this banner."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The last time modified on this banner."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/6"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StatusActiveEvent",
+    "properties": {
+      "title": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The active event title."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The details of active event."
+      },
+      "trackingId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The tracking id of this active event."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The impact start time on this active event."
+      },
+      "cloud": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The cloud type of this active event."
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The severity level of this active event."
+      },
+      "stage": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The stage of this active event."
+      },
+      "published": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "The boolean value of this active event if published or not."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The last time modified on this banner."
+      },
+      "impacts": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The list of emerging issues impacts."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Information"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resolve"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Archived"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EmergingIssueImpact",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The impacted service id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The impacted service name."
+      },
+      "regions": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The list of impacted regions for corresponding emerging issues."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImpactedRegion",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The impacted region id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The impacted region name."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/18"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ResourceHealth/emergingIssues@2017-07-01",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 1
+  }
+]

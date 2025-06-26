@@ -1,0 +1,14 @@
+[
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforMariaDB/servers",
+    "apiVersion": "2020-01-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforMariaDB/servers",
+    "apiVersion": "2020-01-01"
+  }
+]

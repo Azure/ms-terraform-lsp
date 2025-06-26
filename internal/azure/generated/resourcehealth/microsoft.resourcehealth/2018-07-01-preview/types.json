@@ -1,0 +1,492 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ResourceHealth/metadata"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-07-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ResourceHealth/metadata",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "The metadata entity properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetadataEntityProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The display name."
+      },
+      "dependsOn": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The list of keys on which this entity depends on."
+      },
+      "applicableScenarios": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The list of scenarios applicable to this metadata entity."
+      },
+      "supportedValues": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The list of supported values."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Alerts"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/7"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetadataSupportedValueDetail",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The id."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The display name."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/9"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ResourceHealth/metadata@2018-07-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ResourceHealth/emergingIssues"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-07-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ResourceHealth/emergingIssues",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The emerging issue entity properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EmergingIssue",
+    "properties": {
+      "refreshTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Timestamp for when last time refreshed for ongoing emerging issue."
+      },
+      "statusBanners": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The list of emerging issues of banner type."
+      },
+      "statusActiveEvents": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "The list of emerging issues of active event type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StatusBanner",
+    "properties": {
+      "title": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The banner title."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The details of banner."
+      },
+      "cloud": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The cloud type of this banner."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last time modified on this banner."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/18"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StatusActiveEvent",
+    "properties": {
+      "title": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The active event title."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The details of active event."
+      },
+      "trackingId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The tracking id of this active event."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The impact start time on this active event."
+      },
+      "cloud": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The cloud type of this active event."
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The severity level of this active event."
+      },
+      "stage": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "The stage of this active event."
+      },
+      "published": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "The boolean value of this active event if published or not."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last time modified on this banner."
+      },
+      "impacts": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "The list of emerging issues impacts."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Information"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resolve"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Archived"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EmergingIssueImpact",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The impacted service id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The impacted service name."
+      },
+      "regions": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The list of impacted regions for corresponding emerging issues."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImpactedRegion",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The impacted region id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The impacted region name."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/31"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/30"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/20"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ResourceHealth/emergingIssues@2018-07-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/16"
+    },
+    "flags": 1
+  }
+]

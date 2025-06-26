@@ -1,0 +1,356 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HanaOnAzure/sapMonitors"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-02-07-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HanaOnAzure/sapMonitors",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "SAP monitor properties"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SapMonitorProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "State of provisioning of the HanaInstance"
+      },
+      "managedResourceGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource group the SAP Monitor resources get deployed into."
+      },
+      "logAnalyticsWorkspaceArmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ARM ID of the Log Analytics Workspace that is used for monitoring"
+      },
+      "enableCustomerAnalytics": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "The value indicating whether to send analytics to Microsoft"
+      },
+      "logAnalyticsWorkspaceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The workspace ID of the log analytics workspace to be used for monitoring"
+      },
+      "logAnalyticsWorkspaceSharedKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The shared key of the log analytics workspace that is used for monitoring"
+      },
+      "sapMonitorCollectorVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The version of the payload running in the Collector VM"
+      },
+      "monitorSubnet": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The subnet which the SAP monitor will be deployed in"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Migrating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HanaOnAzure/sapMonitors@2020-02-07-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HanaOnAzure/sapMonitors/providerInstances"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-02-07-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HanaOnAzure/sapMonitors/providerInstances",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Provider Instance properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProviderInstanceProperties",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of provider instance."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A JSON string containing the properties of the provider instance."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A JSON string containing metadata of the provider instance."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 2,
+        "description": "State of provisioning of the provider instance"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Migrating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HanaOnAzure/sapMonitors/providerInstances@2020-02-07-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/18"
+    },
+    "flags": 0
+  }
+]

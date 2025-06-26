@@ -1,0 +1,480 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataLakeStore/accounts/firewallRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataLakeStore/accounts/firewallRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "the firewall rule's regional location."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "the properties of the firewall rule."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallRuleProperties",
+    "properties": {
+      "startIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "the start IP address for the firewall rule."
+      },
+      "endIpAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "the end IP address for the firewall rule."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataLakeStore/accounts/firewallRules@2015-10-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataLakeStore/accounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataLakeStore/accounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "the account regional location."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The Key vault encryption identity, if any."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "the value of custom properties."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "the Data Lake Store account properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionIdentity",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The type of encryption being used. Currently the only supported type is 'SystemAssigned'."
+      },
+      "principalId": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "The principal identifier associated with the encryption."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "The tenant identifier associated with the encryption."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataLakeStoreAccountTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataLakeStoreAccountProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "the status of the Data Lake Store account while being provisioned."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "the status of the Data Lake Store account after provisioning has completed."
+      },
+      "creationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "the account creation time."
+      },
+      "encryptionState": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "The current state of encryption for this Data Lake store account."
+      },
+      "encryptionProvisioningState": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "The current state of encryption provisioning for this Data Lake store account."
+      },
+      "encryptionConfig": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "The Key vault encryption configuration."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "the account last modified time."
+      },
+      "endpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "the gateway host."
+      },
+      "defaultGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "the default owner group for all new folders and files created in the Data Lake Store account."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Patching"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resuming"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "suspended"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionConfig",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'."
+      },
+      "keyVaultMetaInfo": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "The Key vault information for connecting to user managed encryption keys."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserManaged"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServiceManaged"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyVaultMetaInfo",
+    "properties": {
+      "keyVaultResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource identifier for the user managed Key Vault being used to encrypt."
+      },
+      "encryptionKeyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the user managed encryption key."
+      },
+      "encryptionKeyVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The version of the user managed encryption key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataLakeStore/accounts@2015-10-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/8"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableKeyVault",
+    "resourceType": "Microsoft.DataLakeStore/accounts",
+    "apiVersion": "2015-10-01-preview"
+  }
+]

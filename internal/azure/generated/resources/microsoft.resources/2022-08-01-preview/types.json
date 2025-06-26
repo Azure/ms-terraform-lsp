@@ -1,0 +1,972 @@
+[
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 90,
+    "pattern": "^[-\\w\\._\\(\\)]+$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Resources/deploymentStacks"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-08-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Resources/deploymentStacks",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The location of the deployment stack. It cannot be changed after creation. It must be one of the supported Azure locations."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Deployment stack resource tags."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Deployment stack properties."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStackTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStackProperties",
+    "properties": {
+      "template": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 4,
+        "description": "The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both."
+      },
+      "templateLink": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 4,
+        "description": "The URI of the template. Use either the templateLink property or the template property, but not both."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Name and value pairs that define the deployment parameters for the template. Use this element when providing the parameter values directly in the request, rather than linking to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string."
+      },
+      "parametersLink": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The URI of parameters file. Use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both."
+      },
+      "actionOnUnmanage": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 1,
+        "description": "Defines the behavior of resources that are not managed immediately after the stack is updated."
+      },
+      "debugSetting": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The debug setting of the deployment."
+      },
+      "deploymentScope": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The scope at which the initial deployment should be created. If a scope is not specified, it will default to the scope of the deployment stack. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroupId}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}')."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Deployment stack description."
+      },
+      "denySettings": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 1,
+        "description": "Defines how resources deployed by the stack are locked."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "State of the deployment stack."
+      },
+      "detachedResources": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 2,
+        "description": "An array of resources that were detached during the most recent update."
+      },
+      "deletedResources": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 2,
+        "description": "An array of resources that were deleted during the most recent update."
+      },
+      "failedResources": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "An array of resources that failed to reach goal state during the most recent update."
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 2,
+        "description": "An array of resources currently managed by the deployment stack."
+      },
+      "deploymentId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resourceId of the deployment resource created by the deployment stack."
+      },
+      "outputs": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "The outputs of the underlying deployment."
+      },
+      "duration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The duration of the deployment stack update."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.)."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStacksTemplateLink",
+    "properties": {
+      "uri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The URI of the template to deploy. Use either the uri or id property, but not both."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource id of a Template Spec. Use either the id or uri property, but not both."
+      },
+      "relativePath": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs"
+      },
+      "queryString": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The query string (for example, a SAS token) to be used with the templateLink URI."
+      },
+      "contentVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "If included, must match the ContentVersion in the template."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStacksParametersLink",
+    "properties": {
+      "uri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The URI of the parameters file."
+      },
+      "contentVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "If included, must match the ContentVersion in the template."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStackPropertiesActionOnUnmanage",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "Specifies the action that should be taken on the resource when the deployment stack is deleted. Delete will attempt to delete the resource from Azure. Detach will leave the resource in it's current state."
+      },
+      "resourceGroups": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Specifies the action that should be taken on the resource when the deployment stack is deleted. Delete will attempt to delete the resource from Azure. Detach will leave the resource in it's current state."
+      },
+      "managementGroups": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Specifies the action that should be taken on the resource when the deployment stack is deleted. Delete will attempt to delete the resource from Azure. Detach will leave the resource in it's current state."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "delete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "detach"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "delete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "detach"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "delete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "detach"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStacksDebugSetting",
+    "properties": {
+      "detailLevel": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information that is being passed in during deployment. By logging information about the request or response, sensitive data that is retrieved through the deployment operations could potentially be exposed."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 4096
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DenySettings",
+    "properties": {
+      "mode": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 1,
+        "description": "denySettings Mode."
+      },
+      "excludedPrincipals": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "List of AAD principal IDs excluded from the lock. Up to 5 principals are permitted."
+      },
+      "excludedActions": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "List of role-based management operations that are excluded from the denySettings. Up to 200 actions are permitted. If the denySetting mode is set to 'denyWriteAndDelete', then the following actions are automatically appended to 'excludedActions': '*\\/read' and 'Microsoft.Authorization/locks/delete'. If the denySetting mode is set to 'denyDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will be removed."
+      },
+      "applyToChildScopes": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "DenySettings will be applied to child scopes."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "denyDelete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "denyWriteAndDelete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "none"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Validating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Waiting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deploying"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Locking"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeletingResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceReference",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resourceId of a resource managed by the deployment stack."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceReferenceExtended",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resourceId of a resource managed by the deployment stack."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.)."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorResponse",
+    "properties": {
+      "error": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "The error object."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error target."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 2,
+        "description": "The error additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/47"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The additional info type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "The additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedResourceReference",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Current management state of the resource in the deployment stack."
+      },
+      "denyStatus": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "denyAssignment settings applied to the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The resourceId of a resource managed by the deployment stack."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Managed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "removeDenyFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "deleteFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "denyDelete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "notSupported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "inapplicable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "denyWriteAndDelete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "removedBySystem"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Resources/deploymentStacks@2022-08-01-preview",
+    "scopeType": 14,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStackTemplateDefinition",
+    "properties": {
+      "template": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "The template content. Use this element to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both."
+      },
+      "templateLink": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The URI of the template. Use either the templateLink property or the template property, but not both."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportTemplate",
+    "resourceType": "Microsoft.Resources/deploymentStacks",
+    "apiVersion": "2022-08-01-preview",
+    "output": {
+      "$ref": "#/78"
+    }
+  }
+]

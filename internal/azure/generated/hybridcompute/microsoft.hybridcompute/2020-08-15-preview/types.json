@@ -1,0 +1,2034 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/machines"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-08-15-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/machines",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Hybrid Compute Machine properties"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineProperties",
+    "properties": {
+      "locationData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Metadata pertaining to the geographic location of the resource."
+      },
+      "osProfile": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Specifies the operating system settings for the hybrid machine."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The provisioning state, which only appears in the response."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "The status of the hybrid machine agent."
+      },
+      "lastStatusChange": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time of the last status change."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 2,
+        "description": "Details about the error state."
+      },
+      "agentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The hybrid machine agent full version."
+      },
+      "vmId": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Specifies the hybrid machine unique ID."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the hybrid machine display name."
+      },
+      "machineFqdn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the hybrid machine FQDN."
+      },
+      "clientPublicKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Public Key that the client provides to be used during initial resource onboarding"
+      },
+      "osName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Operating System running on the hybrid machine."
+      },
+      "osVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The version of Operating System running on the hybrid machine."
+      },
+      "vmUuid": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Specifies the Arc Machine's unique SMBIOS ID"
+      },
+      "extensions": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Machine Extensions information"
+      },
+      "osSku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the Operating System product SKU."
+      },
+      "domainName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the Windows domain name."
+      },
+      "adFqdn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the AD fully qualified display name."
+      },
+      "dnsFqdn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the DNS fully qualified display name."
+      },
+      "privateLinkScopedResources": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "List of private link scoped resources associated with this machine."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocationData",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "A canonical name for the geographic or physical location."
+      },
+      "city": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The city or locality where the resource is located."
+      },
+      "district": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The district, state, or province where the resource is located."
+      },
+      "countryOrRegion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The country or region where the resource is located"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 256
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachinePropertiesOsProfile",
+    "properties": {
+      "computerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the host OS name of the hybrid machine."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disconnected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The error's code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "A human readable error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Indicates which property in the request is responsible for the error."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Additional error details."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/12"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/12"
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionInstanceView",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The machine extension name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the type of the extension; an example is \"CustomScriptExtension\"."
+      },
+      "typeHandlerVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the version of the script handler."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Instance view status."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionInstanceViewStatus",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The status code."
+      },
+      "level": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The level code."
+      },
+      "displayStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The short localizable label for the status."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The detailed status message, including for alerts and error messages."
+      },
+      "time": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time of the status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Info"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/16"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineIdentity",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity type."
+      },
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The identity's principal id."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The identity's tenant id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/machines@2020-08-15-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/machines/extensions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-08-15-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/machines/extensions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Describes Machine Extension Properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionProperties",
+    "properties": {
+      "forceUpdateTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "How the extension handler should be forced to update even if the extension configuration has not changed."
+      },
+      "publisher": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the extension handler publisher."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the type of the extension; an example is \"CustomScriptExtension\"."
+      },
+      "typeHandlerVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the version of the script handler."
+      },
+      "autoUpgradeMinorVersion": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true."
+      },
+      "settings": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Json formatted public settings for the extension."
+      },
+      "protectedSettings": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The provisioning state, which only appears in the response."
+      },
+      "instanceView": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "The machine extension instance view."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionPropertiesInstanceView",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The machine extension name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the type of the extension; an example is \"CustomScriptExtension\"."
+      },
+      "typeHandlerVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Specifies the version of the script handler."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Instance view status."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/machines/extensions@2020-08-15-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/29"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/privateLinkScopes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-08-15-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/privateLinkScopes",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "Properties that define a Azure Arc PrivateLinkScope resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HybridComputePrivateLinkScopeProperties",
+    "properties": {
+      "publicNetworkAccess": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed."
+      },
+      "privateEndpointConnections": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2,
+        "description": "List of private endpoint connections."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnection",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnectionProperties",
+    "properties": {
+      "privateEndpoint": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Private endpoint which the connection belongs to."
+      },
+      "privateLinkServiceConnectionState": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Connection state of the private endpoint connection."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "State of the private endpoint connection."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointProperty",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource id of the private endpoint."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkServiceConnectionStateProperty",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The private link service connection status."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The private link service connection description."
+      },
+      "actionsRequired": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The actions required for private link service connection."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/43"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkScopesResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/privateLinkScopes@2020-08-15-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/38"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-08-15-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections@2020-08-15-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/52"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/privateLinkScopes/scopedResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-08-15-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/privateLinkScopes/scopedResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScopedResourceProperties",
+    "properties": {
+      "linkedResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource id of the scoped Azure monitor resource."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "State of the private endpoint connection."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/privateLinkScopes/scopedResources@2020-08-15-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/56"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/privateLinkScopes/privateLinkResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-08-15-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/privateLinkScopes/privateLinkResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkResourceProperties",
+    "properties": {
+      "groupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The private link resource group id."
+      },
+      "requiredMembers": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 2,
+        "description": "The private link resource required member names."
+      },
+      "requiredZoneNames": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 2,
+        "description": "Required DNS zone names of the the private link resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/privateLinkScopes/privateLinkResources@2020-08-15-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/61"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineAssessPatchesResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 2,
+        "description": "The overall success or failure status of the operation. It remains \"InProgress\" until the operation completes. At that point it will become \"Unknown\", \"Failed\", \"Succeeded\", or \"CompletedWithWarnings.\""
+      },
+      "assessmentActivityId": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "The activity ID of the operation that produced this result."
+      },
+      "rebootPending": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "The overall reboot status of the VM. It will be true when partially installed patches require a reboot to complete installation but the reboot has not yet occurred."
+      },
+      "availablePatchCountByClassification": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "Summarization of patches available for installation on the machine by classification."
+      },
+      "startDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The UTC timestamp when the operation began."
+      },
+      "lastModifiedDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The UTC timestamp when the operation finished."
+      },
+      "startedBy": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 2,
+        "description": "Indicates if operation was triggered by user or by platform."
+      },
+      "patchServiceUsed": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 2,
+        "description": "Specifies the patch service used for the operation."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 2,
+        "description": "The operating system type of the machine."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "The errors that were encountered during execution of the operation. The details array contains the list of them."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompletedWithWarnings"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailablePatchCountByClassification",
+    "properties": {
+      "security": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "Number of security patches available for installation."
+      },
+      "critical": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "Number of critical patches available for installation."
+      },
+      "definition": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "Number of definition patches available for installation."
+      },
+      "updateRollup": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "Number of update Rollup patches available for installation."
+      },
+      "featurePack": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "Number of feature pack patches available for installation."
+      },
+      "servicePack": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "Number of service pack patches available for installation."
+      },
+      "tools": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "Number of tools patches available for installation."
+      },
+      "updates": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "Number of updates category patches available for installation."
+      },
+      "other": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "Number of other patches available for installation."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Platform"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WU"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WU_WSUS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "YUM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "APT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Zypper"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "assessPatches",
+    "resourceType": "Microsoft.HybridCompute/machines",
+    "apiVersion": "2020-08-15-preview",
+    "output": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineInstallPatchesParameters",
+    "properties": {
+      "maximumDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Specifies the maximum amount of time that the operation will run. It must be an ISO 8601-compliant duration string such as PT4H (4 hours)"
+      },
+      "rebootSetting": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 1,
+        "description": "Defines when it is acceptable to reboot a VM during a software update operation."
+      },
+      "windowsParameters": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "Input for InstallPatches on a Windows VM, as directly received by the API"
+      },
+      "linuxParameters": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "Input for InstallPatches on a Linux VM, as directly received by the API"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IfRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Never"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Always"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WindowsParameters",
+    "properties": {
+      "classificationsToInclude": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 0,
+        "description": "The update classifications to select when installing patches for Windows."
+      },
+      "kbNumbersToInclude": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "Kbs to include in the patch operation"
+      },
+      "kbNumbersToExclude": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "Kbs to exclude in the patch operation"
+      },
+      "excludeKbsRequiringReboot": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Filters out Kbs that don't have an InstallationRebootBehavior of 'NeverReboots' when this is set to true."
+      },
+      "maxPatchPublishDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This is used to install patches that were published on or before this given max published date."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Critical"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Security"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpdateRollUp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FeaturePack"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServicePack"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Definition"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updates"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinuxParameters",
+    "properties": {
+      "classificationsToInclude": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0,
+        "description": "The update classifications to select when installing patches for Linux."
+      },
+      "packageNameMasksToInclude": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 0,
+        "description": "packages to include in the patch operation. Format: packageName_packageVersion"
+      },
+      "packageNameMasksToExclude": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 0,
+        "description": "packages to exclude in the patch operation. Format: packageName_packageVersion"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Critical"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Security"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Other"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/111"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineInstallPatchesResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 2,
+        "description": "The overall success or failure status of the operation. It remains \"InProgress\" until the operation completes. At that point it will become \"Failed\", \"Succeeded\", \"Unknown\" or \"CompletedWithWarnings.\""
+      },
+      "installationActivityId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The activity ID of the operation that produced this result."
+      },
+      "rebootStatus": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 2,
+        "description": "The reboot state of the VM following completion of the operation."
+      },
+      "maintenanceWindowExceeded": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Whether the operation ran out of time before it completed all its intended actions."
+      },
+      "excludedPatchCount": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "The number of patches that were not installed due to the user blocking their installation."
+      },
+      "notSelectedPatchCount": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "The number of patches that were detected as available for install, but did not meet the operation's criteria."
+      },
+      "pendingPatchCount": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "The number of patches that were identified as meeting the installation criteria, but were not able to be installed. Typically this happens when maintenanceWindowExceeded == true."
+      },
+      "installedPatchCount": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "The number of patches successfully installed."
+      },
+      "failedPatchCount": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "The number of patches that could not be installed due to some issue. See errors for details."
+      },
+      "startDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The UTC timestamp when the operation began."
+      },
+      "lastModifiedDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The UTC timestamp when the operation finished."
+      },
+      "startedBy": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 2,
+        "description": "Indicates if operation was triggered by user or by platform."
+      },
+      "patchServiceUsed": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 2,
+        "description": "Specifies the patch service used for the operation."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 2,
+        "description": "The operating system type of the machine."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "The errors that were encountered during execution of the operation. The details array contains the list of them."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompletedWithWarnings"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotNeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Required"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Started"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/122"
+      },
+      {
+        "$ref": "#/123"
+      },
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/127"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Platform"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WU"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WU_WSUS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "YUM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "APT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Zypper"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/133"
+      },
+      {
+        "$ref": "#/134"
+      },
+      {
+        "$ref": "#/135"
+      },
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "installPatches",
+    "resourceType": "Microsoft.HybridCompute/machines",
+    "apiVersion": "2020-08-15-preview",
+    "output": {
+      "$ref": "#/115"
+    },
+    "input": {
+      "$ref": "#/89"
+    }
+  }
+]

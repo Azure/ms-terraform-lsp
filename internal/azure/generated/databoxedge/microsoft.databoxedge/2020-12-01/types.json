@@ -1,0 +1,6338 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The list of tags that describe the device. These tags can be used to view and group this device (across resource groups)."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The SKU type."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The etag for the devices."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Msi identity of the resource"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 2,
+        "description": "The etag for the devices."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "DataBoxEdge Resource"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "The properties of the Data Box Edge/Gateway device."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataBoxEdgeDeviceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Sku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "SKU name."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "The SKU tier. This is based on the SKU name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Gateway"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Edge"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TEA_1Node"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TEA_1Node_UPS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TEA_1Node_Heater"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TEA_1Node_UPS_Heater"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TEA_4Node_Heater"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TEA_4Node_UPS_Heater"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TMA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TDC"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TCA_Small"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GPU"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TCA_Large"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EdgeP_Base"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EdgeP_High"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EdgePR_Base"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EdgePR_Base_UPS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EdgeMR_Mini"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RCA_Small"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RCA_Large"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RDC"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceIdentity",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Identity type"
+      },
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Service Principal Id backing the Msi"
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Home Tenant Id"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureDataBoxGateway"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureStackEdge"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureStackHub"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureModularDataCentre"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataBoxEdgeDeviceProperties",
+    "properties": {
+      "dataBoxEdgeDeviceStatus": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "The status of the Data Box Edge/Gateway device."
+      },
+      "serialNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Serial Number of Data Box Edge/Gateway device."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Description of the Data Box Edge/Gateway device."
+      },
+      "modelDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The description of the Data Box Edge/Gateway device model."
+      },
+      "deviceType": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 2,
+        "description": "The type of the Data Box Edge/Gateway device."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Data Box Edge/Gateway device name."
+      },
+      "culture": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Data Box Edge/Gateway device culture."
+      },
+      "deviceModel": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Data Box Edge/Gateway device model."
+      },
+      "deviceSoftwareVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Data Box Edge/Gateway device software version."
+      },
+      "deviceLocalCapacity": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "The Data Box Edge/Gateway device local capacity in MB."
+      },
+      "timeZone": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Data Box Edge/Gateway device timezone."
+      },
+      "deviceHcsVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The device software version number of the device (eg: 1.2.18105.6)."
+      },
+      "configuredRoleTypes": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 2,
+        "description": "Type of compute roles configured."
+      },
+      "nodeCount": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "The number of nodes in the cluster."
+      },
+      "resourceMoveDetails": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 2,
+        "description": "The details of the move operation on this resource."
+      },
+      "edgeProfile": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 2,
+        "description": "The details of Edge Profile for this resource"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadyToSetup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Online"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Offline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NeedsAttention"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disconnected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PartiallyDisconnected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Maintenance"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataBoxEdgeDevice"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IOT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ASA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Functions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cognitive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MEC"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudEdgeManagement"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Kubernetes"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/70"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceMoveDetails",
+    "properties": {
+      "operationInProgress": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "Denotes whether move operation is in progress"
+      },
+      "operationInProgressLockTimeoutInUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Denotes the timeout of the operation to finish"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceMoveInProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceMoveFailed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EdgeProfile",
+    "properties": {
+      "subscription": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 0,
+        "description": "Edge Profile Subscription"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EdgeProfileSubscription",
+    "properties": {
+      "registrationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Edge Subscription Registration ID"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ARM ID of the subscription"
+      },
+      "state": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0
+      },
+      "registrationDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Registered"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspended"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unregistered"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "locationPlacementId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "quotaId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "serializedDetails": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "registeredFeatures": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionRegisteredFeatures",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "state": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "Bandwidth object related to ASE resource"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 1,
+        "description": "The properties of the bandwidth schedule."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BandwidthScheduleProperties",
+    "properties": {
+      "start": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The start time of the schedule in UTC."
+      },
+      "stop": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The stop time of the schedule in UTC."
+      },
+      "rateInMbps": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 1,
+        "description": "The bandwidth rate in Mbps."
+      },
+      "days": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 1,
+        "description": "The days of the week when this schedule is applicable."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sunday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Monday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tuesday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Wednesday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Thursday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Friday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Saturday"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/100"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/91"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "The order properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OrderProperties",
+    "properties": {
+      "contactInformation": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 1,
+        "description": "The contact details."
+      },
+      "shippingAddress": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 0,
+        "description": "The shipping address."
+      },
+      "currentStatus": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 2,
+        "description": "Current status of the order."
+      },
+      "orderHistory": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 2,
+        "description": "List of status changes in the order."
+      },
+      "serialNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Serial number of the device."
+      },
+      "deliveryTrackingInfo": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 2,
+        "description": "Tracking information for the package delivered to the customer whether it has an original or a replacement device."
+      },
+      "returnTrackingInfo": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 2,
+        "description": "Tracking information for the package returned from the customer whether it has an original or a replacement device."
+      },
+      "shipmentType": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 0,
+        "description": "ShipmentType of the order"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContactDetails",
+    "properties": {
+      "contactPerson": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The contact person name."
+      },
+      "companyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the company."
+      },
+      "phone": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The phone number."
+      },
+      "emailList": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 1,
+        "description": "The email list."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Address",
+    "properties": {
+      "addressLine1": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The address line1."
+      },
+      "addressLine2": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The address line2."
+      },
+      "addressLine3": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The address line3."
+      },
+      "postalCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The postal code."
+      },
+      "city": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The city name."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The state name."
+      },
+      "country": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The country name."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OrderStatus",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 1,
+        "description": "Status of the order as per the allowed status types."
+      },
+      "updateDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Time of status update."
+      },
+      "comments": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Comments related to this status change."
+      },
+      "trackingInformation": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 2,
+        "description": "Tracking information related to the state in the ordering flow"
+      },
+      "additionalOrderDetails": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 2,
+        "description": "Dictionary to hold generic information which is not stored\r\nby the already existing properties"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Untracked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AwaitingFulfilment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AwaitingPreparation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AwaitingShipment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shipped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Arriving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delivered"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReplacementRequested"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LostDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Declined"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReturnInitiated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AwaitingReturnShipment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ShippedBack"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CollectedAtMicrosoft"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AwaitingPickup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PickupCompleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AwaitingDrop"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/122"
+      },
+      {
+        "$ref": "#/123"
+      },
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/127"
+      },
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackingInfo",
+    "properties": {
+      "serialNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Serial number of the device being tracked."
+      },
+      "carrierName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the carrier used in the delivery."
+      },
+      "trackingId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Tracking ID of the shipment."
+      },
+      "trackingUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Tracking URL of the shipment."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OrderStatusAdditionalOrderDetails",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/111"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/130"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/130"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotApplicable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ShippedToCustomer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SelfPickup"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/135"
+      },
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/106"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "Role configured on ASE resource"
+      }
+    },
+    "elements": {
+      "CloudEdgeManagement": {
+        "$ref": "#/143"
+      },
+      "IOT": {
+        "$ref": "#/152"
+      },
+      "Kubernetes": {
+        "$ref": "#/189"
+      },
+      "MEC": {
+        "$ref": "#/232"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudEdgeManagementRole",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 0,
+        "description": "Properties specific to CloudEdgeManagementRole role."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 1,
+        "description": "Role type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudEdgeManagementRoleProperties",
+    "properties": {
+      "localManagementStatus": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 2,
+        "description": "Local Edge Management Status"
+      },
+      "edgeProfile": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 2,
+        "description": "Edge Profile of the resource"
+      },
+      "roleStatus": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 1,
+        "description": "Role status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudEdgeManagement"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IoTRole",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 0,
+        "description": "Properties specific to IoT role."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 1,
+        "description": "Role type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IoTRoleProperties",
+    "properties": {
+      "hostPlatform": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 1,
+        "description": "Host OS supported by the IoT role."
+      },
+      "ioTDeviceDetails": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 1,
+        "description": "IoT device metadata to which data box edge device needs to be connected."
+      },
+      "ioTEdgeDeviceDetails": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 1,
+        "description": "IoT edge device to which the IoT role needs to be configured."
+      },
+      "shareMappings": {
+        "type": {
+          "$ref": "#/178"
+        },
+        "flags": 0,
+        "description": "Mount points of shares in role(s)."
+      },
+      "ioTEdgeAgentInfo": {
+        "type": {
+          "$ref": "#/179"
+        },
+        "flags": 0,
+        "description": "Iot edge agent details to download the agent and bootstrap iot runtime."
+      },
+      "hostPlatformType": {
+        "type": {
+          "$ref": "#/183"
+        },
+        "flags": 2,
+        "description": "Platform where the Iot runtime is hosted."
+      },
+      "computeResource": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 0,
+        "description": "Resource allocation"
+      },
+      "roleStatus": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 1,
+        "description": "Role status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/154"
+      },
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IoTDeviceInfo",
+    "properties": {
+      "deviceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "ID of the IoT device/edge device."
+      },
+      "ioTHostHub": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Host name for the IoT hub associated to the device."
+      },
+      "ioTHostHubId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Id for the IoT hub associated to the device."
+      },
+      "authentication": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 0,
+        "description": "Encrypted IoT device/IoT edge device connection string."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Authentication",
+    "properties": {
+      "symmetricKey": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 0,
+        "description": "Symmetric key for authentication."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SymmetricKey",
+    "properties": {
+      "connectionString": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 0,
+        "description": "Connection string based on the symmetric key."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AsymmetricEncryptedSecret",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 1,
+        "description": "The value of the secret."
+      },
+      "encryptionCertThumbprint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Thumbprint certificate used to encrypt \\\"Value\\\". If the value is unencrypted, it will be null."
+      },
+      "encryptionAlgorithm": {
+        "type": {
+          "$ref": "#/165"
+        },
+        "flags": 1,
+        "description": "The algorithm used to encrypt \"Value\"."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AES256"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RSAES_PKCS1_v_1_5"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MountPointMap",
+    "properties": {
+      "shareId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "ID of the share mounted to the role VM."
+      },
+      "roleId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "ID of the role to which share is mounted."
+      },
+      "mountPoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Mount point for the share."
+      },
+      "mountType": {
+        "type": {
+          "$ref": "#/169"
+        },
+        "flags": 2,
+        "description": "Mounting type."
+      },
+      "roleType": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 2,
+        "description": "Role type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Volume"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HostPath"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/167"
+      },
+      {
+        "$ref": "#/168"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IOT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ASA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Functions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cognitive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MEC"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CloudEdgeManagement"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Kubernetes"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/173"
+      },
+      {
+        "$ref": "#/174"
+      },
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/166"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IoTEdgeAgentInfo",
+    "properties": {
+      "imageName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the IoT edge agent image."
+      },
+      "tag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Image Tag."
+      },
+      "imageRepository": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 0,
+        "description": "Image repository details."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageRepositoryCredential",
+    "properties": {
+      "imageRepositoryUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Image repository url (e.g.: mcr.microsoft.com)."
+      },
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Repository user name."
+      },
+      "password": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 0,
+        "description": "Repository user password."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KubernetesCluster"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LinuxVM"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComputeResource",
+    "properties": {
+      "processorCount": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 1,
+        "description": "Processor count"
+      },
+      "memoryInGB": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 1,
+        "description": "Memory in GB"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/185"
+      },
+      {
+        "$ref": "#/186"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IOT"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesRole",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 0,
+        "description": "Properties specific to Kubernetes role."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/231"
+        },
+        "flags": 1,
+        "description": "Role type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesRoleProperties",
+    "properties": {
+      "hostPlatform": {
+        "type": {
+          "$ref": "#/193"
+        },
+        "flags": 1,
+        "description": "Host OS supported by the Kubernetes role."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/201"
+        },
+        "flags": 2,
+        "description": "State of Kubernetes deployment"
+      },
+      "hostPlatformType": {
+        "type": {
+          "$ref": "#/204"
+        },
+        "flags": 2,
+        "description": "Platform where the runtime is hosted."
+      },
+      "kubernetesClusterInfo": {
+        "type": {
+          "$ref": "#/205"
+        },
+        "flags": 1,
+        "description": "Kubernetes cluster configuration"
+      },
+      "kubernetesRoleResources": {
+        "type": {
+          "$ref": "#/215"
+        },
+        "flags": 1,
+        "description": "Kubernetes role resources"
+      },
+      "roleStatus": {
+        "type": {
+          "$ref": "#/230"
+        },
+        "flags": 1,
+        "description": "Role status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/191"
+      },
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reconfiguring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/194"
+      },
+      {
+        "$ref": "#/195"
+      },
+      {
+        "$ref": "#/196"
+      },
+      {
+        "$ref": "#/197"
+      },
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/200"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KubernetesCluster"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LinuxVM"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/202"
+      },
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesClusterInfo",
+    "properties": {
+      "etcdInfo": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 2,
+        "description": "Etcd configuration"
+      },
+      "nodes": {
+        "type": {
+          "$ref": "#/214"
+        },
+        "flags": 2,
+        "description": "Kubernetes cluster nodes"
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Kubernetes cluster version"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EtcdInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Etcd type"
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Etcd version"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NodeInfo",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Node name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 2,
+        "description": "Node type - Master/Worker"
+      },
+      "ipConfiguration": {
+        "type": {
+          "$ref": "#/213"
+        },
+        "flags": 0,
+        "description": "IP Configuration of the Kubernetes node."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Master"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Worker"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/208"
+      },
+      {
+        "$ref": "#/209"
+      },
+      {
+        "$ref": "#/210"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesIPConfiguration",
+    "properties": {
+      "port": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Port of the Kubernetes node."
+      },
+      "ipAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "IP address of the Kubernetes node."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/212"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/207"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesRoleResources",
+    "properties": {
+      "storage": {
+        "type": {
+          "$ref": "#/216"
+        },
+        "flags": 0,
+        "description": "Kubernetes role storage resource"
+      },
+      "compute": {
+        "type": {
+          "$ref": "#/224"
+        },
+        "flags": 1,
+        "description": "Kubernetes role compute resource"
+      },
+      "network": {
+        "type": {
+          "$ref": "#/225"
+        },
+        "flags": 2,
+        "description": "Kubernetes role network resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesRoleStorage",
+    "properties": {
+      "storageClasses": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 2,
+        "description": "Kubernetes storage class info."
+      },
+      "endpoints": {
+        "type": {
+          "$ref": "#/223"
+        },
+        "flags": 0,
+        "description": "Mount points of shares in role(s)."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesRoleStorageClassInfo",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Storage class name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Storage class type."
+      },
+      "posixCompliant": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 2,
+        "description": "If provisioned storage is posix compliant."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/218"
+      },
+      {
+        "$ref": "#/219"
+      },
+      {
+        "$ref": "#/220"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/217"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/166"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesRoleCompute",
+    "properties": {
+      "vmProfile": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "VM profile"
+      },
+      "memoryInBytes": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "Memory in bytes"
+      },
+      "processorCount": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "Processor count"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KubernetesRoleNetwork",
+    "properties": {
+      "cniConfig": {
+        "type": {
+          "$ref": "#/226"
+        },
+        "flags": 2,
+        "description": "Cni configuration"
+      },
+      "loadBalancerConfig": {
+        "type": {
+          "$ref": "#/227"
+        },
+        "flags": 2,
+        "description": "Load balancer configuration"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CniConfig",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Cni type"
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Cni version"
+      },
+      "podSubnet": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Pod Subnet"
+      },
+      "serviceSubnet": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Service subnet"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LoadBalancerConfig",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Load balancer type"
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Load balancer version"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/228"
+      },
+      {
+        "$ref": "#/229"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Kubernetes"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MECRole",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/233"
+        },
+        "flags": 0,
+        "description": "Properties specific to MEC role."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/237"
+        },
+        "flags": 1,
+        "description": "Role type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MECRoleProperties",
+    "properties": {
+      "connectionString": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 0,
+        "description": "Activation key of the MEC."
+      },
+      "roleStatus": {
+        "type": {
+          "$ref": "#/236"
+        },
+        "flags": 1,
+        "description": "Role status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/234"
+      },
+      {
+        "$ref": "#/235"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MEC"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/142"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/addons"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/addons",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/239"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/240"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "Addon type"
+      }
+    },
+    "elements": {
+      "ArcForKubernetes": {
+        "$ref": "#/242"
+      },
+      "IotEdge": {
+        "$ref": "#/259"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArcAddon",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 1,
+        "description": "Properties specific to Arc addon."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/258"
+        },
+        "flags": 1,
+        "description": "Addon type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArcAddonProperties",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Arc resource subscription Id"
+      },
+      "resourceGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Arc resource group name"
+      },
+      "resourceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Arc resource Name"
+      },
+      "resourceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Arc resource location"
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Arc resource version"
+      },
+      "hostPlatform": {
+        "type": {
+          "$ref": "#/246"
+        },
+        "flags": 2,
+        "description": "Host OS supported by the Arc addon."
+      },
+      "hostPlatformType": {
+        "type": {
+          "$ref": "#/249"
+        },
+        "flags": 2,
+        "description": "Platform where the runtime is hosted."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 2,
+        "description": "Addon Provisioning State"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/244"
+      },
+      {
+        "$ref": "#/245"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KubernetesCluster"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LinuxVM"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/247"
+      },
+      {
+        "$ref": "#/248"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reconfiguring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/250"
+      },
+      {
+        "$ref": "#/251"
+      },
+      {
+        "$ref": "#/252"
+      },
+      {
+        "$ref": "#/253"
+      },
+      {
+        "$ref": "#/254"
+      },
+      {
+        "$ref": "#/255"
+      },
+      {
+        "$ref": "#/256"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArcForKubernetes"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IoTAddon",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/260"
+        },
+        "flags": 1,
+        "description": "Properties specific to IOT addon."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/275"
+        },
+        "flags": 1,
+        "description": "Addon type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IoTAddonProperties",
+    "properties": {
+      "ioTDeviceDetails": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 1,
+        "description": "IoT device metadata to which appliance needs to be connected."
+      },
+      "ioTEdgeDeviceDetails": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 1,
+        "description": "IoT edge device to which the IoT Addon needs to be configured."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Version of IoT running on the appliance."
+      },
+      "hostPlatform": {
+        "type": {
+          "$ref": "#/263"
+        },
+        "flags": 2,
+        "description": "Host OS supported by the IoT addon."
+      },
+      "hostPlatformType": {
+        "type": {
+          "$ref": "#/266"
+        },
+        "flags": 2,
+        "description": "Platform where the runtime is hosted."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/274"
+        },
+        "flags": 2,
+        "description": "Addon Provisioning State"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/261"
+      },
+      {
+        "$ref": "#/262"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KubernetesCluster"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LinuxVM"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/264"
+      },
+      {
+        "$ref": "#/265"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reconfiguring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/267"
+      },
+      {
+        "$ref": "#/268"
+      },
+      {
+        "$ref": "#/269"
+      },
+      {
+        "$ref": "#/270"
+      },
+      {
+        "$ref": "#/271"
+      },
+      {
+        "$ref": "#/272"
+      },
+      {
+        "$ref": "#/273"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IotEdge"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/addons@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/241"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/monitoringConfig"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/monitoringConfig",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/277"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/278"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/279"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 1,
+        "description": "The metric setting properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MonitoringMetricConfigurationProperties",
+    "properties": {
+      "metricConfigurations": {
+        "type": {
+          "$ref": "#/290"
+        },
+        "flags": 1,
+        "description": "The metrics configuration details"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetricConfiguration",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Resource ID on which the metrics should be pushed."
+      },
+      "mdmAccount": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The MDM account to which the counters should be pushed."
+      },
+      "metricNameSpace": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified"
+      },
+      "counterSets": {
+        "type": {
+          "$ref": "#/289"
+        },
+        "flags": 1,
+        "description": "Host name for the IoT hub associated to the device."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetricCounterSet",
+    "properties": {
+      "counters": {
+        "type": {
+          "$ref": "#/288"
+        },
+        "flags": 1,
+        "description": "The counters that should be collected in this set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetricCounter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The counter name."
+      },
+      "instance": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The instance from which counter should be collected."
+      },
+      "dimensionFilter": {
+        "type": {
+          "$ref": "#/286"
+        },
+        "flags": 0,
+        "description": "The dimension filter."
+      },
+      "additionalDimensions": {
+        "type": {
+          "$ref": "#/287"
+        },
+        "flags": 0,
+        "description": "The additional dimensions to be added to metric."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MetricDimension",
+    "properties": {
+      "sourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The dimension type."
+      },
+      "sourceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The dimension value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/285"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/285"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/284"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/283"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/282"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/monitoringConfig@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/280"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/292"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/293"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "Share on ASE device"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/295"
+        },
+        "flags": 1,
+        "description": "The share properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ShareProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description for the share."
+      },
+      "shareStatus": {
+        "type": {
+          "$ref": "#/301"
+        },
+        "flags": 1,
+        "description": "Current status of the share."
+      },
+      "monitoringStatus": {
+        "type": {
+          "$ref": "#/304"
+        },
+        "flags": 1,
+        "description": "Current monitoring status of the share."
+      },
+      "azureContainerInfo": {
+        "type": {
+          "$ref": "#/305"
+        },
+        "flags": 0,
+        "description": "Azure container mapping for the share."
+      },
+      "accessProtocol": {
+        "type": {
+          "$ref": "#/312"
+        },
+        "flags": 1,
+        "description": "Access protocol to be used by the share."
+      },
+      "userAccessRights": {
+        "type": {
+          "$ref": "#/318"
+        },
+        "flags": 0,
+        "description": "Mapping of users and corresponding access rights on the share (required for SMB protocol)."
+      },
+      "clientAccessRights": {
+        "type": {
+          "$ref": "#/324"
+        },
+        "flags": 0,
+        "description": "List of IP addresses and corresponding access rights on the share(required for NFS protocol)."
+      },
+      "refreshDetails": {
+        "type": {
+          "$ref": "#/325"
+        },
+        "flags": 0,
+        "description": "Details of the refresh job on this share."
+      },
+      "shareMappings": {
+        "type": {
+          "$ref": "#/326"
+        },
+        "flags": 2,
+        "description": "Share mount point to the role."
+      },
+      "dataPolicy": {
+        "type": {
+          "$ref": "#/329"
+        },
+        "flags": 0,
+        "description": "Data policy of the share."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Offline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OK"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NeedsAttention"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/296"
+      },
+      {
+        "$ref": "#/297"
+      },
+      {
+        "$ref": "#/298"
+      },
+      {
+        "$ref": "#/299"
+      },
+      {
+        "$ref": "#/300"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/302"
+      },
+      {
+        "$ref": "#/303"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureContainerInfo",
+    "properties": {
+      "storageAccountCredentialId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "ID of the storage account credential used to access storage."
+      },
+      "containerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob)."
+      },
+      "dataFormat": {
+        "type": {
+          "$ref": "#/309"
+        },
+        "flags": 1,
+        "description": "Storage format used for the file represented by the share."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BlockBlob"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PageBlob"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureFile"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/306"
+      },
+      {
+        "$ref": "#/307"
+      },
+      {
+        "$ref": "#/308"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SMB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NFS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/310"
+      },
+      {
+        "$ref": "#/311"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserAccessRight",
+    "properties": {
+      "userId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "User ID (already existing in the device)."
+      },
+      "accessType": {
+        "type": {
+          "$ref": "#/317"
+        },
+        "flags": 1,
+        "description": "Type of access to be allowed for the user."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Change"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Read"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Custom"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/314"
+      },
+      {
+        "$ref": "#/315"
+      },
+      {
+        "$ref": "#/316"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/313"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClientAccessRight",
+    "properties": {
+      "client": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "IP of the client."
+      },
+      "accessPermission": {
+        "type": {
+          "$ref": "#/323"
+        },
+        "flags": 1,
+        "description": "Type of access to be allowed for the client."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoAccess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadWrite"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/320"
+      },
+      {
+        "$ref": "#/321"
+      },
+      {
+        "$ref": "#/322"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/319"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefreshDetails",
+    "properties": {
+      "inProgressRefreshJobId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress."
+      },
+      "lastCompletedRefreshJobTimeInUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job."
+      },
+      "errorManifestFile": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job."
+      },
+      "lastJob": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/166"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cloud"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Local"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/327"
+      },
+      {
+        "$ref": "#/328"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/294"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/331"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/332"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "StorageAccountCredential object"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/334"
+        },
+        "flags": 1,
+        "description": "The storage account credential properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccountCredentialProperties",
+    "properties": {
+      "alias": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Alias for the storage account."
+      },
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Username for the storage account."
+      },
+      "accountKey": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 0,
+        "description": "Encrypted storage key."
+      },
+      "connectionString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Connection string for the storage account. Use this string if username and account key are not specified."
+      },
+      "sslStatus": {
+        "type": {
+          "$ref": "#/337"
+        },
+        "flags": 1,
+        "description": "Signifies whether SSL needs to be enabled or not."
+      },
+      "blobDomainName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Blob end point for private clouds."
+      },
+      "accountType": {
+        "type": {
+          "$ref": "#/340"
+        },
+        "flags": 1,
+        "description": "Type of storage accessed on the storage account."
+      },
+      "storageAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Id of the storage account."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/335"
+      },
+      {
+        "$ref": "#/336"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeneralPurposeStorage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BlobStorage"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/338"
+      },
+      {
+        "$ref": "#/339"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/333"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/342"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/343"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "StorageAccount object on ASE device"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/345"
+        },
+        "flags": 1,
+        "description": "The Storage Account properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccountProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description for the storage Account."
+      },
+      "storageAccountStatus": {
+        "type": {
+          "$ref": "#/351"
+        },
+        "flags": 0,
+        "description": "Current status of the storage account"
+      },
+      "dataPolicy": {
+        "type": {
+          "$ref": "#/354"
+        },
+        "flags": 1,
+        "description": "Data policy of the storage Account."
+      },
+      "storageAccountCredentialId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Storage Account Credential Id"
+      },
+      "blobEndpoint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "BlobEndpoint of Storage Account"
+      },
+      "containerCount": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "The Container Count. Present only for Storage Accounts with DataPolicy set to Cloud."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OK"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Offline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NeedsAttention"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/346"
+      },
+      {
+        "$ref": "#/347"
+      },
+      {
+        "$ref": "#/348"
+      },
+      {
+        "$ref": "#/349"
+      },
+      {
+        "$ref": "#/350"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cloud"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Local"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/352"
+      },
+      {
+        "$ref": "#/353"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/344"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/356"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/357"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "Container in DataBoxEdge Resource"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/359"
+        },
+        "flags": 1,
+        "description": "The container properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContainerProperties",
+    "properties": {
+      "containerStatus": {
+        "type": {
+          "$ref": "#/365"
+        },
+        "flags": 2,
+        "description": "Current status of the container."
+      },
+      "dataFormat": {
+        "type": {
+          "$ref": "#/369"
+        },
+        "flags": 1,
+        "description": "DataFormat for Container"
+      },
+      "refreshDetails": {
+        "type": {
+          "$ref": "#/325"
+        },
+        "flags": 2,
+        "description": "Details of the refresh job on this container."
+      },
+      "createdDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The UTC time when container got created."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OK"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Offline"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NeedsAttention"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/360"
+      },
+      {
+        "$ref": "#/361"
+      },
+      {
+        "$ref": "#/362"
+      },
+      {
+        "$ref": "#/363"
+      },
+      {
+        "$ref": "#/364"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BlockBlob"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PageBlob"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureFile"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/366"
+      },
+      {
+        "$ref": "#/367"
+      },
+      {
+        "$ref": "#/368"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/358"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/371"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/372"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "Trigger in DataBoxEdge Resource"
+      }
+    },
+    "elements": {
+      "FileEvent": {
+        "$ref": "#/374"
+      },
+      "PeriodicTimerEvent": {
+        "$ref": "#/380"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileEventTrigger",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/375"
+        },
+        "flags": 1,
+        "description": "File trigger properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/379"
+        },
+        "flags": 1,
+        "description": "Trigger Kind."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileTriggerProperties",
+    "properties": {
+      "sourceInfo": {
+        "type": {
+          "$ref": "#/376"
+        },
+        "flags": 1,
+        "description": "File event source details."
+      },
+      "sinkInfo": {
+        "type": {
+          "$ref": "#/377"
+        },
+        "flags": 1,
+        "description": "Role sink info."
+      },
+      "customContextTag": {
+        "type": {
+          "$ref": "#/378"
+        },
+        "flags": 0,
+        "description": "A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileSourceInfo",
+    "properties": {
+      "shareId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "File share ID."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleSinkInfo",
+    "properties": {
+      "roleId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Compute role ID."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 192
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FileEvent"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PeriodicTimerEventTrigger",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/381"
+        },
+        "flags": 1,
+        "description": "Periodic timer trigger properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/383"
+        },
+        "flags": 1,
+        "description": "Trigger Kind."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PeriodicTimerProperties",
+    "properties": {
+      "sourceInfo": {
+        "type": {
+          "$ref": "#/382"
+        },
+        "flags": 1,
+        "description": "Periodic timer details."
+      },
+      "sinkInfo": {
+        "type": {
+          "$ref": "#/377"
+        },
+        "flags": 1,
+        "description": "Role Sink information."
+      },
+      "customContextTag": {
+        "type": {
+          "$ref": "#/378"
+        },
+        "flags": 0,
+        "description": "A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PeriodicTimerSourceInfo",
+    "properties": {
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time."
+      },
+      "schedule": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds."
+      },
+      "topic": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Topic where periodic events are published to IoT device."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PeriodicTimerEvent"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/373"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/users"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/users",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/385"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/386"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "User in DataBoxEdge Resource"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/388"
+        },
+        "flags": 1,
+        "description": "The storage account credential properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserProperties",
+    "properties": {
+      "encryptedPassword": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 0,
+        "description": "The password details."
+      },
+      "shareAccessRights": {
+        "type": {
+          "$ref": "#/394"
+        },
+        "flags": 2,
+        "description": "List of shares that the user has rights on. This field should not be specified during user creation."
+      },
+      "userType": {
+        "type": {
+          "$ref": "#/398"
+        },
+        "flags": 1,
+        "description": "Type of the user."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ShareAccessRight",
+    "properties": {
+      "shareId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The share ID."
+      },
+      "accessType": {
+        "type": {
+          "$ref": "#/393"
+        },
+        "flags": 1,
+        "description": "Type of access to be allowed on the share for this user."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Change"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Read"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Custom"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/390"
+      },
+      {
+        "$ref": "#/391"
+      },
+      {
+        "$ref": "#/392"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/389"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Share"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LocalManagement"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ARM"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/395"
+      },
+      {
+        "$ref": "#/396"
+      },
+      {
+        "$ref": "#/397"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/users@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/387"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/networkSettings"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/networkSettings",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/400"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/401"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/402"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/404"
+        },
+        "flags": 2,
+        "description": "The properties of network settings of a device."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkSettingsProperties",
+    "properties": {
+      "networkAdapters": {
+        "type": {
+          "$ref": "#/423"
+        },
+        "flags": 2,
+        "description": "The network adapter list on the device."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkAdapter",
+    "properties": {
+      "adapterId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Instance ID of network adapter."
+      },
+      "adapterPosition": {
+        "type": {
+          "$ref": "#/406"
+        },
+        "flags": 2,
+        "description": "Hardware position of network adapter."
+      },
+      "index": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "Logical index of the adapter."
+      },
+      "nodeId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Node ID of the network adapter."
+      },
+      "networkAdapterName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Network adapter name."
+      },
+      "label": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Hardware label for the adapter."
+      },
+      "macAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "MAC address."
+      },
+      "linkSpeed": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "Link speed."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/413"
+        },
+        "flags": 2,
+        "description": "Value indicating whether this adapter is valid."
+      },
+      "rdmaStatus": {
+        "type": {
+          "$ref": "#/416"
+        },
+        "flags": 0,
+        "description": "Value indicating whether this adapter is RDMA capable."
+      },
+      "dhcpStatus": {
+        "type": {
+          "$ref": "#/419"
+        },
+        "flags": 0,
+        "description": "Value indicating whether this adapter has DHCP enabled."
+      },
+      "ipv4Configuration": {
+        "type": {
+          "$ref": "#/420"
+        },
+        "flags": 2,
+        "description": "The IPv4 configuration of the network adapter."
+      },
+      "ipv6Configuration": {
+        "type": {
+          "$ref": "#/421"
+        },
+        "flags": 2,
+        "description": "The IPv6 configuration of the network adapter."
+      },
+      "ipv6LinkLocalAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The IPv6 local address."
+      },
+      "dnsServers": {
+        "type": {
+          "$ref": "#/422"
+        },
+        "flags": 2,
+        "description": "The list of DNS Servers of the device."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkAdapterPosition",
+    "properties": {
+      "networkGroup": {
+        "type": {
+          "$ref": "#/410"
+        },
+        "flags": 2,
+        "description": "The network group."
+      },
+      "port": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "The port."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NonRDMA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RDMA"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/407"
+      },
+      {
+        "$ref": "#/408"
+      },
+      {
+        "$ref": "#/409"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/411"
+      },
+      {
+        "$ref": "#/412"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incapable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Capable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/414"
+      },
+      {
+        "$ref": "#/415"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/417"
+      },
+      {
+        "$ref": "#/418"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Ipv4Config",
+    "properties": {
+      "ipAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The IPv4 address of the network adapter."
+      },
+      "subnet": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The IPv4 subnet of the network adapter."
+      },
+      "gateway": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The IPv4 gateway of the network adapter."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Ipv6Config",
+    "properties": {
+      "ipAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The IPv6 address of the network adapter."
+      },
+      "prefixLength": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "The IPv6 prefix of the network adapter."
+      },
+      "gateway": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The IPv6 gateway of the network adapter."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/405"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/networkSettings@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/403"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/updateSummary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/updateSummary",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/425"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/426"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/427"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/429"
+        },
+        "flags": 2,
+        "description": "The device update information summary."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateSummaryProperties",
+    "properties": {
+      "deviceVersionNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The current version of the device in format: 1.2.17312.13.\","
+      },
+      "friendlyDeviceVersionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The current version of the device in text format."
+      },
+      "deviceLastScannedDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last time when a scan was done on the device."
+      },
+      "lastCompletedScanJobDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time when the last scan job was completed (success/cancelled/failed) on the appliance."
+      },
+      "lastCompletedDownloadJobDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time when the last Download job was completed (success/cancelled/failed) on the appliance."
+      },
+      "lastCompletedInstallJobDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time when the last Install job was completed (success/cancelled/failed) on the appliance."
+      },
+      "totalNumberOfUpdatesAvailable": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "The number of updates available for the current device version as per the last device scan."
+      },
+      "totalNumberOfUpdatesPendingDownload": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "The total number of items pending download."
+      },
+      "totalNumberOfUpdatesPendingInstall": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "The total number of items pending install."
+      },
+      "rebootBehavior": {
+        "type": {
+          "$ref": "#/433"
+        },
+        "flags": 2,
+        "description": "Indicates if updates are available and at least one of the updates needs a reboot."
+      },
+      "ongoingUpdateOperation": {
+        "type": {
+          "$ref": "#/438"
+        },
+        "flags": 2,
+        "description": "The current update operation."
+      },
+      "inProgressDownloadJobId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The job ID of the download job in progress."
+      },
+      "inProgressInstallJobId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The job ID of the install job in progress."
+      },
+      "inProgressDownloadJobStartedDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time when the currently running download (if any) started."
+      },
+      "inProgressInstallJobStartedDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time when the currently running install (if any) started."
+      },
+      "updateTitles": {
+        "type": {
+          "$ref": "#/439"
+        },
+        "flags": 2,
+        "description": "The list of updates available for install."
+      },
+      "totalUpdateSizeInBytes": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "The total size of updates available for download in bytes."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NeverReboots"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RequiresReboot"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RequestReboot"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/430"
+      },
+      {
+        "$ref": "#/431"
+      },
+      {
+        "$ref": "#/432"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scan"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Download"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Install"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/434"
+      },
+      {
+        "$ref": "#/435"
+      },
+      {
+        "$ref": "#/436"
+      },
+      {
+        "$ref": "#/437"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/updateSummary@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/428"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/alerts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/alerts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/441"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/442"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "Alert generated in the resource"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/444"
+        },
+        "flags": 2,
+        "description": "Properties of alert."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertProperties",
+    "properties": {
+      "title": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Alert title."
+      },
+      "alertType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Alert type."
+      },
+      "appearedAtDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "UTC time when the alert appeared."
+      },
+      "recommendation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Alert recommendation."
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/448"
+        },
+        "flags": 2,
+        "description": "Severity of the alert."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/449"
+        },
+        "flags": 2,
+        "description": "Error details of the alert."
+      },
+      "detailedInformation": {
+        "type": {
+          "$ref": "#/450"
+        },
+        "flags": 2,
+        "description": "Alert details."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Informational"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Critical"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/445"
+      },
+      {
+        "$ref": "#/446"
+      },
+      {
+        "$ref": "#/447"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertErrorDetails",
+    "properties": {
+      "errorCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error code."
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error Message."
+      },
+      "occurrences": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "Number of occurrences."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertPropertiesDetailedInformation",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/alerts@2020-12-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/443"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadUpdates",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateCertResponse",
+    "properties": {
+      "publicKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets base64 encoded certificate raw data,\r\nthis is the public part needed to be uploaded to cert vault"
+      },
+      "privateKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets base64 encoded private part of the certificate,\r\nneeded to form the activation key"
+      },
+      "expiryTimeInUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets expiry time in UTC"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateCertificate",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/453"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataBoxEdgeDeviceExtendedInfo",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/456"
+        },
+        "flags": 0,
+        "description": "The extended info properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The path ID that uniquely identifies the object."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The object name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The hierarchical type of the object."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataBoxEdgeDeviceExtendedInfoProperties",
+    "properties": {
+      "encryptionKeyThumbprint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The digital signature of encrypted certificate."
+      },
+      "encryptionKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The public part of the encryption certificate. Client uses this to encrypt any secret."
+      },
+      "resourceKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Resource ID of the Resource."
+      },
+      "clientSecretStoreId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Key Vault ARM Id for client secrets"
+      },
+      "clientSecretStoreUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The url to access the Client Key Vault"
+      },
+      "channelIntegrityKeyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of Channel Integrity Key stored in the Client Key Vault"
+      },
+      "channelIntegrityKeyVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The version of Channel Integrity Key stored in the Client Key Vault"
+      },
+      "keyVaultSyncStatus": {
+        "type": {
+          "$ref": "#/462"
+        },
+        "flags": 0,
+        "description": "Key vault sync status"
+      },
+      "deviceSecrets": {
+        "type": {
+          "$ref": "#/463"
+        },
+        "flags": 2,
+        "description": "Device secrets, will be returned only with ODataFilter $expand=deviceSecrets"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSynced"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSyncFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultNotConfigured"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSyncPending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSyncing"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/457"
+      },
+      {
+        "$ref": "#/458"
+      },
+      {
+        "$ref": "#/459"
+      },
+      {
+        "$ref": "#/460"
+      },
+      {
+        "$ref": "#/461"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeviceSecrets",
+    "properties": {
+      "hcsDataVolumeBitLockerExternalKey": {
+        "type": {
+          "$ref": "#/464"
+        },
+        "flags": 0,
+        "description": "Keyvault Id of HcsDataVolumeBitLockerExternalKey"
+      },
+      "hcsInternalVolumeBitLockerExternalKey": {
+        "type": {
+          "$ref": "#/464"
+        },
+        "flags": 0,
+        "description": "Keyvault Id of HcsInternalVolumeBitLockerExternalKey"
+      },
+      "systemVolumeBitLockerRecoveryKey": {
+        "type": {
+          "$ref": "#/464"
+        },
+        "flags": 0,
+        "description": "Keyvault Id of SystemVolumeBitLockerRecoveryKey"
+      },
+      "sedEncryptionExternalKeyId": {
+        "type": {
+          "$ref": "#/464"
+        },
+        "flags": 0,
+        "description": "Keyvault Id of SEDEncryptionExternalKeyId"
+      },
+      "sedEncryptionExternalKey": {
+        "type": {
+          "$ref": "#/464"
+        },
+        "flags": 0,
+        "description": "Keyvault Id of SEDEncryptionExternalKey"
+      },
+      "bmcDefaultUserPassword": {
+        "type": {
+          "$ref": "#/464"
+        },
+        "flags": 0,
+        "description": "Keyvault Id of BMCDefaultUserPassword"
+      },
+      "rotateKeyForDataVolumeBitlocker": {
+        "type": {
+          "$ref": "#/464"
+        },
+        "flags": 0,
+        "description": "Keyvault Id of RotateKeyForDataVolumeBitlocker"
+      },
+      "rotateKeysForSedDrivesSerialized": {
+        "type": {
+          "$ref": "#/464"
+        },
+        "flags": 0,
+        "description": "Keyvault Id of RotateKeysForSedDrivesSerialized"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Secret",
+    "properties": {
+      "encryptedSecret": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 0,
+        "description": "Encrypted (using device public key) secret value."
+      },
+      "keyVaultId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740)."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getExtendedInformation",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/455"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "installUpdates",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2020-12-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "scanForUpdates",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataBoxEdgeDeviceExtendedInfoPatch",
+    "properties": {
+      "clientSecretStoreId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Key Vault ARM Id for client secrets"
+      },
+      "clientSecretStoreUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The url to access the Client Key Vault"
+      },
+      "channelIntegrityKeyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name for Channel Integrity Key stored in the Client Key Vault"
+      },
+      "channelIntegrityKeyVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The version of Channel Integrity Key stored in the Client Key Vault"
+      },
+      "syncStatus": {
+        "type": {
+          "$ref": "#/474"
+        },
+        "flags": 0,
+        "description": "For changing or to initiate the resync to key-vault set the status to KeyVaultSyncPending, rest of the status will not be applicable."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSynced"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSyncFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultNotConfigured"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSyncPending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSyncing"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/469"
+      },
+      {
+        "$ref": "#/470"
+      },
+      {
+        "$ref": "#/471"
+      },
+      {
+        "$ref": "#/472"
+      },
+      {
+        "$ref": "#/473"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateExtendedInformation",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/455"
+    },
+    "input": {
+      "$ref": "#/468"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UploadCertificateRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/477"
+        },
+        "flags": 1,
+        "description": "The Base 64 encoded certificate raw data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RawCertificateData",
+    "properties": {
+      "authenticationType": {
+        "type": {
+          "$ref": "#/480"
+        },
+        "flags": 0,
+        "description": "The authentication type."
+      },
+      "certificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The base64 encoded certificate raw data."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureActiveDirectory"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/478"
+      },
+      {
+        "$ref": "#/479"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UploadCertificateResponse",
+    "properties": {
+      "authType": {
+        "type": {
+          "$ref": "#/484"
+        },
+        "flags": 0,
+        "description": "Specifies authentication type."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource ID of the Data Box Edge/Gateway device."
+      },
+      "aadAuthority": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure Active Directory tenant authority."
+      },
+      "aadTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure Active Directory tenant ID."
+      },
+      "servicePrincipalClientId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure Active Directory service principal client ID."
+      },
+      "servicePrincipalObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure Active Directory service principal object ID."
+      },
+      "azureManagementEndpointAudience": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The azure management endpoint audience."
+      },
+      "aadAudience": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Identifier of the target resource that is the recipient of the requested token."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureActiveDirectory"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/482"
+      },
+      {
+        "$ref": "#/483"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadCertificate",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/481"
+    },
+    "input": {
+      "$ref": "#/476"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecuritySettings",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/487"
+        },
+        "flags": 1,
+        "description": "Properties of the security settings."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The path ID that uniquely identifies the object."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The object name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The hierarchical type of the object."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecuritySettingsProperties",
+    "properties": {
+      "deviceAdminPassword": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 1,
+        "description": "Device administrator password as an encrypted string (encrypted using RSA PKCS #1) is used to sign into the  local web UI of the device. The Actual password should have at least 8 characters that are a combination of  uppercase, lowercase, numeric, and special characters."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "update",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/securitySettings",
+    "apiVersion": "2020-12-01",
+    "input": {
+      "$ref": "#/486"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DCAccessCode",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/490"
+        },
+        "flags": 0,
+        "description": "DCAccessCode properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DCAccessCodeProperties",
+    "properties": {
+      "authCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "DCAccess Code for the Self Managed shipment."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listDCAccessCode",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/489"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares",
+    "apiVersion": "2020-12-01"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers",
+    "apiVersion": "2020-12-01"
+  }
+]

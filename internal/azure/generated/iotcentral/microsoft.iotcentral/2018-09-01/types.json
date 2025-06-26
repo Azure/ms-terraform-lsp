@@ -1,0 +1,232 @@
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.IoTCentral/iotApps"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.IoTCentral/iotApps",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The common properties of an IoT Central application."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 1,
+        "description": "A valid instance SKU."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "The resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AppProperties",
+    "properties": {
+      "applicationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the application."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The display name of the application."
+      },
+      "subdomain": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The subdomain of the application."
+      },
+      "template": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "The current state of the application."
+      },
+      "geography": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The geography the application is in."
+      },
+      "thumbnailUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URI for the thumbnail image used in the application."
+      },
+      "tenant": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The tenant ID the application belongs to."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "suspended"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AppSkuInfo",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 1,
+        "description": "The name of the SKU."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "F1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ST0"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ST1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ST2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.IoTCentral/iotApps@2018-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "result": [
+    {
+      "title": "Migrate to AzureRM Provider",
+      "kind": "refactor.rewrite",
+      "edit": {},
+      "command": {
+        "title": "Migrate to AzureRM Provider",
+        "command": "ms-terraform.aztfmigrate",
+        "arguments": [
+          {
+            "textDocument": {
+              "uri": "file:///tmp/azurerm-lsp/TestCodeAction_migrateToAzureRM/main.tf"
+            },
+            "range": {
+              "start": {
+                "line": 5,
+                "character": 0
+              },
+              "end": {
+                "line": 18,
+                "character": 1
+              }
+            },
+            "context": {
+              "diagnostics": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
