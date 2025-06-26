@@ -74,7 +74,7 @@ func (h *logHandler) textDocumentCodeAction(ctx context.Context, params lsp.Code
 				hasAzurerm = true
 			}
 			if strings.HasPrefix(address, "azapi_resource") || strings.HasPrefix(address, "azapi_update_resource") {
-				hasAzurerm = true
+				hasAzapi = true
 			}
 		}
 	}
