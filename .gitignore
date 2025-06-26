@@ -9,3 +9,4 @@ internal/schemas/schemas_gen.go
 internal/schemas/data/
 azurerm-lsp
 .vscode/
+.DS_Store

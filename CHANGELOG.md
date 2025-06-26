@@ -1,3 +1,10 @@
+## v0.5.0
+Features
+- Support language features for `azapi` provider resources and data sources.
+- Support `refactor/rewrite` code action which can trigger the command to convert resources between `azapi` and `azurerm` providers.
+- Support `aztfmigrate` command which can convert resources between `azapi` and `azurerm` providers.
+- Support `workspace/executeCommand` protocol which can convert ARMTemplate and resource JSON content to azapi configuration.
+
 ## v0.4.0
 Enhancements:
 - Improve the error messages for authentication issues.
