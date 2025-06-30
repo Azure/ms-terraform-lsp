@@ -1,7 +1,7 @@
 # dario.cat/mergo v1.0.2
 ## explicit; go 1.13
 dario.cat/mergo
-# github.com/Azure/aztfmigrate v1.15.1-0.20250514043521-abb7c9103ec0
+# github.com/Azure/aztfmigrate v1.15.1-0.20250627031207-205df1f30023
 ## explicit; go 1.23.0
 github.com/Azure/aztfmigrate/azurerm
 github.com/Azure/aztfmigrate/azurerm/coverage
@@ -180,7 +180,7 @@ github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/workloads/armworkloads
 # github.com/Masterminds/goutils v1.1.1
 ## explicit
 github.com/Masterminds/goutils
-# github.com/Masterminds/semver/v3 v3.3.1
+# github.com/Masterminds/semver/v3 v3.4.0
 ## explicit; go 1.21
 github.com/Masterminds/semver/v3
 # github.com/Masterminds/sprig/v3 v3.3.0
@@ -349,7 +349,7 @@ github.com/josharian/intern
 # github.com/magodo/armid v0.0.0-20240524082432-7ce06ae46c33
 ## explicit; go 1.18
 github.com/magodo/armid
-# github.com/magodo/aztft v0.3.1-0.20250512012628-bf61e7a7a744
+# github.com/magodo/aztft v0.3.1-0.20250606003245-7222b835cdcc
 ## explicit; go 1.23.0
 github.com/magodo/aztft/aztft
 github.com/magodo/aztft/internal/client

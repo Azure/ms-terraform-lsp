@@ -5,7 +5,7 @@ go 1.23.0
 toolchain go1.23.7
 
 require (
-	github.com/Azure/aztfmigrate v1.15.1-0.20250514043521-abb7c9103ec0
+	github.com/Azure/aztfmigrate v1.15.1-0.20250627031207-205df1f30023
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.18.0
 	github.com/apparentlymart/go-textseg v1.0.0
 	github.com/creachadair/jrpc2 v0.32.0
@@ -76,7 +76,7 @@ require (
 	github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/webpubsub/armwebpubsub v1.3.0 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/workloads/armworkloads v1.1.0 // indirect
 	github.com/Masterminds/goutils v1.1.1 // indirect
-	github.com/Masterminds/semver/v3 v3.3.1 // indirect
+	github.com/Masterminds/semver/v3 v3.4.0 // indirect
 	github.com/Masterminds/sprig/v3 v3.3.0 // indirect
 	github.com/agext/levenshtein v1.2.3 // indirect
 	github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
@@ -98,7 +98,7 @@ require (
 	github.com/huandu/xstrings v1.5.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/magodo/armid v0.0.0-20240524082432-7ce06ae46c33 // indirect
-	github.com/magodo/aztft v0.3.1-0.20250512012628-bf61e7a7a744 // indirect
+	github.com/magodo/aztft v0.3.1-0.20250606003245-7222b835cdcc // indirect
 	github.com/magodo/tfadd v0.10.1-0.20240902124619-bd18a56f410d // indirect
 	github.com/magodo/tfpluginschema v0.0.0-20240902090353-0525d7d8c1c2 // indirect
 	github.com/magodo/tfstate v0.0.0-20241016043929-2c95177bf0e6 // indirect

@@ -1,11 +1,11 @@
 dario.cat/mergo v1.0.2 h1:85+piFYR1tMbRrLcDwR18y4UKJ3aH1Tbzi24VRW1TK8=
 dario.cat/mergo v1.0.2/go.mod h1:E/hbnu0NxMFBjpMIE34DRGLWqDy0g5FuKDhCb31ngxA=
-github.com/Azure/aztfmigrate v1.15.1-0.20250514043521-abb7c9103ec0 h1:lI4WydUX1FsX/SEOTTzYuwe3XJiAJbbtwkFxfggYW3Q=
-github.com/Azure/aztfmigrate v1.15.1-0.20250514043521-abb7c9103ec0/go.mod h1:mxT8ijVgxu2bECXjlu2trF7vKM06FfpYvZbQYcivzoA=
+github.com/Azure/aztfmigrate v1.15.1-0.20250627031207-205df1f30023 h1:jzc9ESQHJqRSYvC4x6wr+rr9o0phg1m9HkB2Dik51/U=
+github.com/Azure/aztfmigrate v1.15.1-0.20250627031207-205df1f30023/go.mod h1:I+uyjtwqcnyFPM+av5iR2ftp6XXLEYvaB+yr8CqZfL8=
 github.com/Azure/azure-sdk-for-go/sdk/azcore v1.18.0 h1:Gt0j3wceWMwPmiazCa8MzMA0MfhmPIz0Qp0FJ6qcM0U=
 github.com/Azure/azure-sdk-for-go/sdk/azcore v1.18.0/go.mod h1:Ot/6aikWnKWi4l9QB7qVSwa8iMphQNqkWALMoNT3rzM=
-github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.9.0 h1:OVoM452qUFBrX+URdH3VpR299ma4kfom0yB0URYky9g=
-github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.9.0/go.mod h1:kUjrAo8bgEwLeZ/CmHqNl3Z/kPm7y6FKfxxK0izYUg4=
+github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.10.1 h1:B+blDbyVIG3WaikNxPnhPiJ1MThR03b3vKGtER95TP4=
+github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.10.1/go.mod h1:JdM5psgjfBf5fo2uWOZhflPWyDBZ/O/CNAH9CtsuZE4=
 github.com/Azure/azure-sdk-for-go/sdk/internal v1.11.1 h1:FPKJS1T+clwv+OLGt13a8UjqeRuh0O4SJ3lUriThc+4=
 github.com/Azure/azure-sdk-for-go/sdk/internal v1.11.1/go.mod h1:j2chePtV91HrC22tGoRX3sGY42uF13WzmmV80/OdVAA=
 github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/alertsmanagement/armalertsmanagement v0.10.0 h1:zSc/9W0WKtH/qpFlN1K2pQjMJLMTMJpWyexdjtexHtA=
@@ -113,8 +113,8 @@ github.com/AzureAD/microsoft-authentication-library-for-go v1.4.2/go.mod h1:wP83
 github.com/Masterminds/goutils v1.1.1 h1:5nUrii3FMTL5diU80unEVvNevw1nH4+ZV4DSLVJLSYI=
 github.com/Masterminds/goutils v1.1.1/go.mod h1:8cTjp+g8YejhMuvIA5y2vz3BpJxksy863GQaJW2MFNU=
 github.com/Masterminds/semver/v3 v3.1.1/go.mod h1:VPu/7SZ7ePZ3QOrcuXROw5FAcLl4a0cBrbBpGY/8hQs=
-github.com/Masterminds/semver/v3 v3.3.1 h1:QtNSWtVZ3nBfk8mAOu/B6v7FMJ+NHTIgUPi7rj+4nv4=
-github.com/Masterminds/semver/v3 v3.3.1/go.mod h1:4V+yj/TJE1HU9XfppCwVMZq3I84lprf4nC11bSS5beM=
+github.com/Masterminds/semver/v3 v3.4.0 h1:Zog+i5UMtVoCU8oKka5P7i9q9HgrJeGzI9SA1Xbatp0=
+github.com/Masterminds/semver/v3 v3.4.0/go.mod h1:4V+yj/TJE1HU9XfppCwVMZq3I84lprf4nC11bSS5beM=
 github.com/Masterminds/sprig/v3 v3.2.1/go.mod h1:UoaO7Yp8KlPnJIYWTFkMaqPUYKTfGFPhxNuwnnxkKlk=
 github.com/Masterminds/sprig/v3 v3.3.0 h1:mQh0Yrg1XPo6vjYXgtf5OtijNAKJRNcTdOOGZe3tPhs=
 github.com/Masterminds/sprig/v3 v3.3.0/go.mod h1:Zy1iXRYNqNLUolqCpL4uhk6SHUMAOSCzdgBfDb35Lz0=
@@ -259,8 +259,8 @@ github.com/kylelemons/godebug v1.1.0 h1:RPNrshWIDI6G2gRW9EHilWtl7Z6Sb1BR0xunSBf0
 github.com/kylelemons/godebug v1.1.0/go.mod h1:9/0rRGxNHcop5bhtWyNeEfOS8JIWk580+fNqagV/RAw=
 github.com/magodo/armid v0.0.0-20240524082432-7ce06ae46c33 h1:KmQ16pNsI7DaELU+CbqZKXVdvkE/YXqMH6LLkp6rw/Y=
 github.com/magodo/armid v0.0.0-20240524082432-7ce06ae46c33/go.mod h1:rR8E7zfGMbmfnSQvrkFiWYdhrfTqsVSltelnZB09BwA=
-github.com/magodo/aztft v0.3.1-0.20250512012628-bf61e7a7a744 h1:LsQKSxpO3a5iVfihiP5cfGG6KtcayamiyajLJXcTI1U=
-github.com/magodo/aztft v0.3.1-0.20250512012628-bf61e7a7a744/go.mod h1:t83k9NbdobHHhjtz6MFetOSRqiKfaNfbBpowxZyzYtw=
+github.com/magodo/aztft v0.3.1-0.20250606003245-7222b835cdcc h1:bLGK1TzoWNdEgal5aV+68LD0PKUyrRXlkTz9quVIn+E=
+github.com/magodo/aztft v0.3.1-0.20250606003245-7222b835cdcc/go.mod h1:t83k9NbdobHHhjtz6MFetOSRqiKfaNfbBpowxZyzYtw=
 github.com/magodo/tfadd v0.10.1-0.20240902124619-bd18a56f410d h1:dmS4jSfNIfshWkh43yK4n1Qx0BsaKrfxMiqRg0fKKYw=
 github.com/magodo/tfadd v0.10.1-0.20240902124619-bd18a56f410d/go.mod h1:G2Hc13YaLGHa+CPEP/HZzj9sIGyKDM5ZXInzQ8Dp86s=
 github.com/magodo/tfpluginschema v0.0.0-20240902090353-0525d7d8c1c2 h1:Unxx8WLxzSxINnq7hItp4cXD7drihgfPltTd91efoBo=
