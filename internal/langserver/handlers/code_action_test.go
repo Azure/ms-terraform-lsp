@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"strings"
 	"testing"
 
 	"github.com/Azure/ms-terraform-lsp/internal/langserver"
@@ -47,6 +48,10 @@ func TestCodeAction_permission(t *testing.T) {
 		t.Fatal(err)
 	}
 
+	expectRaw = []byte(strings.ReplaceAll(string(expectRaw),
+		fmt.Sprintf("file:///tmp/azurerm-lsp/%s/main.tf", t.Name()),
+		fmt.Sprintf("%s/main.tf", tmpDir.URI())))
+
 	reqParams := buildReqParamsCodeAction(1, 1, 13, 1, tmpDir.URI())
 
 	ls.Call(t, &langserver.CallRequest{
@@ -89,6 +94,9 @@ func TestCodeAction_migrateToAzureRM(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
+	expectRaw = []byte(strings.ReplaceAll(string(expectRaw),
+		fmt.Sprintf("file:///tmp/azurerm-lsp/%s/main.tf", t.Name()),
+		fmt.Sprintf("%s/main.tf", tmpDir.URI())))
 
 	reqParams := buildReqParamsCodeAction(6, 1, 19, 2, tmpDir.URI())
 
@@ -132,6 +140,9 @@ func TestCodeAction_migrateToAzapi(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
+	expectRaw = []byte(strings.ReplaceAll(string(expectRaw),
+		fmt.Sprintf("file:///tmp/azurerm-lsp/%s/main.tf", t.Name()),
+		fmt.Sprintf("%s/main.tf", tmpDir.URI())))
 
 	reqParams := buildReqParamsCodeAction(1, 1, 4, 2, tmpDir.URI())
 
