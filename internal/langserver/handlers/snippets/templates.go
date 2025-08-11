@@ -36,6 +36,7 @@ var (
 	msgraphTemplateCandidates []lsp.CompletionItem
 	azurermTemplateCandidates []lsp.CompletionItem
 	azapiTemplateCandidates   []lsp.CompletionItem
+	avmTemplateCandidates     []lsp.CompletionItem
 )
 
 func MSGraphTemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
@@ -204,4 +205,60 @@ func AzAPITemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
 		})
 	}
 	return azapiTemplateCandidates
+}
+
+func AVMTemplateCandidates(editRange lsp.Range) []lsp.CompletionItem {
+	if len(avmTemplateCandidates) != 0 {
+		for i := range avmTemplateCandidates {
+			avmTemplateCandidates[i].TextEdit.Range = editRange
+		}
+		return avmTemplateCandidates
+	}
+
+	modules := provider_schema.ListAllModules()
+	avmTemplateCandidates = make([]lsp.CompletionItem, 0)
+	for _, name := range modules {
+		snippet, err := provider_schema.GetSnippet(name, false)
+		if err != nil {
+			continue
+		}
+
+		content, err := provider_schema.GetModuleContent(name)
+		if err != nil {
+			continue
+		}
+
+		event := lsp.TelemetryEvent{
+			Version: lsp.TelemetryFormatVersion,
+			Name:    "textDocument/completion",
+			Properties: map[string]interface{}{
+				"kind": "code-sample",
+				"type": name,
+			},
+		}
+
+		data, _ := json.Marshal(event)
+
+		avmTemplateCandidates = append(avmTemplateCandidates, lsp.CompletionItem{
+			Label:            name,
+			InsertText:       snippet,
+			InsertTextFormat: lsp.SnippetTextFormat,
+			Kind:             lsp.SnippetCompletion,
+			Detail:           "AVM Module",
+			TextEdit: &lsp.TextEdit{
+				Range:   editRange,
+				NewText: snippet,
+			},
+			Documentation: lsp.MarkupContent{
+				Kind:  lsp.Markdown,
+				Value: content,
+			},
+			Command: &lsp.Command{
+				Title:     "",
+				Command:   "ms-terraform.telemetry",
+				Arguments: []json.RawMessage{data},
+			},
+		})
+	}
+	return avmTemplateCandidates
 }

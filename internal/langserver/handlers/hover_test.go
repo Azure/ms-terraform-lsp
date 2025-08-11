@@ -203,6 +203,170 @@ func TestHoverAzureRM_dataSourceTitle(t *testing.T) {
 	}, string(expectRaw))
 }
 
+func TestHoverAVM_property(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, TempDir(t).URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/hover",
+		ReqParams: buildReqParamsHover(4, 3, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestHoverAVM_propertyValue(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, TempDir(t).URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/hover",
+		ReqParams: buildReqParamsHover(5, 27, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestHoverAVM_moduleName(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, TempDir(t).URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/hover",
+		ReqParams: buildReqParamsHover(1, 5, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestHoverAVM_block(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, TempDir(t).URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/hover",
+		ReqParams: buildReqParamsHover(5, 9, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
 func TestHoverMSGraph_urlUsingExpression(t *testing.T) {
 	tmpDir := TempDir(t)
 	InitPluginCache(t, tmpDir.Dir())

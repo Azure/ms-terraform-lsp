@@ -1,0 +1,32 @@
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "result": {
+    "isIncomplete": false,
+    "items": [
+    {
+        "label": "\"10.31.0.0/16\"",
+        "labelDetails": {},
+        "kind": 12,
+        "detail": "Possible value for node_cidr",
+        "documentation": {
+            "kind": "markdown",
+            "value": "## node_cidr\n**[optional] string**\n\n[📖 Documentation](\u003chttps://github.com/Azure/terraform-azurerm-avm-ptn-aks-economy/blob/main/README.md#-node_cidr\u003e) | [🔍 See Related Issues](\u003chttps://github.com/Azure/terraform-azurerm-avm-ptn-aks-economy/issues?q=is:issue node_cidr\u003e) | [🐛 Raise Issue](\u003chttps://github.com/Azure/terraform-azurerm-avm-ptn-aks-economy/issues/new?template=avm_module_issue.yml\u003e)\n\n---\n\n- **Default:** `10.31.0.0/16`\n- **Possible Values:** `10.31.0.0/16`\n\n(Optional) The CIDR to use for node IPs in the Kubernetes cluster. Changing this forces a new resource to be created.\n\n"
+        },
+        "textEdit": {
+            "range": {
+                "start": {
+                    "line": 3,
+                    "character": 14
+                },
+                "end": {
+                    "line": 3,
+                    "character": 16
+                }
+            },
+            "newText": "\"10.31.0.0/16\""
+        }
+    }
+]
+  }
+}

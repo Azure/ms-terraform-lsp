@@ -27,12 +27,31 @@ func (b *TerraformObject) IsDataSource() bool {
 	return strings.HasPrefix(b.Name, schema.InputDataSourcePrefix)
 }
 
+func (b *TerraformObject) IsModule() bool {
+	return strings.HasPrefix(b.Name, schema.AVMPrefix)
+}
+
 func (b *TerraformObject) GetResourceOrDataSourceDocLink() string {
 	objectDocName, _ := strings.CutPrefix(b.GetName(), schema.AzureRMPrefix)
 	if b.IsDataSource() {
 		return fmt.Sprintf(schema.TerraformDocsURL, schema.DefaultDocVersion, schema.DataSources, objectDocName)
 	}
 	return fmt.Sprintf(schema.TerraformDocsURL, schema.DefaultDocVersion, schema.Resources, objectDocName)
+}
+
+func (b *TerraformObject) GetModuleDocLink() string {
+	moduleName := strings.Split(b.Name, "/")[1]
+	return fmt.Sprintf(schema.AVMDocsURL, moduleName, schema.DefaultDocVersion)
+}
+
+func (b *TerraformObject) GetModuleGitHubIssueLink() string {
+	moduleName := strings.Split(b.Name, "/")[1]
+	return fmt.Sprintf(schema.AVMGitHubIssuesURL, moduleName)
+}
+
+func (b *TerraformObject) GetRaiseAVMGitHubIssueLink() string {
+	moduleName := strings.Split(b.Name, "/")[1]
+	return fmt.Sprintf(schema.AVMNewGitHubIssuesURL, moduleName)
 }
 
 func (b *TerraformObject) GetGitHubIssueLink() string {

@@ -13,6 +13,9 @@ const outputFileName = "combined_output.json"
 //go:embed combined_output.json
 var combinedOutputJSON []byte
 
+//go:embed module_output.json
+var moduleOutputJSON []byte
+
 // ProcessOutput combines schema and markdown outputs and saves the result to a file
 func ProcessOutput(providerPath, gitBranch, outputDir string) (TerraformObjects, error) {
 	// Step 1: Generate schema
@@ -54,13 +57,27 @@ func ProcessOutput(providerPath, gitBranch, outputDir string) (TerraformObjects,
 }
 
 func LoadProcessedOutput() (TerraformObjects, error) {
-	var terraformObjects TerraformObjects
-
+	var combinedObjects TerraformObjects
 	// Unmarshal the combined output JSON into the terraformObjects variable
-	err := json.Unmarshal(combinedOutputJSON, &terraformObjects)
+	err := json.Unmarshal(combinedOutputJSON, &combinedObjects)
 	if err != nil {
 		return nil, fmt.Errorf("error unmarshaling combined output JSON: %v", err)
 	}
 
-	return terraformObjects, nil
+	var moduleList []TerraformObject
+	err = json.Unmarshal(moduleOutputJSON, &moduleList)
+	if err != nil {
+		return nil, fmt.Errorf("error unmarshaling module output JSON: %v", err)
+	}
+
+	moduleObjects := make(TerraformObjects)
+	for i := range moduleList {
+		moduleObjects[moduleList[i].Name] = &moduleList[i]
+	}
+
+	for k, v := range moduleObjects {
+		combinedObjects[k] = v
+	}
+
+	return combinedObjects, nil
 }

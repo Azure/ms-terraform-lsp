@@ -56,6 +56,7 @@ func init() {
 	}
 
 	Resources = append(Resources,
+		&AVMModule{},
 		&AzureRMResource{},
 		&MSGraphResource{
 			Name: "resource.msgraph_resource",

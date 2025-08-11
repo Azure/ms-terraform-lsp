@@ -1,6 +1,7 @@
 package schema
 
 import (
+	"encoding/json"
 	"fmt"
 	"strings"
 
@@ -71,6 +72,44 @@ type SchemaAttribute struct {
 	sortOrder   string
 }
 
+func (a *SchemaAttribute) UnmarshalJSON(b []byte) error {
+	type Alias SchemaAttribute
+	alias := &struct {
+		AttributeType json.RawMessage `json:"type,omitempty"`
+		*Alias
+	}{
+		Alias: (*Alias)(a),
+	}
+	if err := json.Unmarshal(b, &alias); err != nil {
+		return err
+	}
+
+	if alias.AttributeType != nil {
+		var typeString string
+		if err := json.Unmarshal(alias.AttributeType, &typeString); err == nil {
+			if strings.HasPrefix(typeString, "map of") || strings.HasPrefix(typeString, "list of") || strings.HasPrefix(typeString, "set of") || typeString == "object" {
+				a.AttributeType = cty.DynamicPseudoType
+			} else {
+				// Try to unmarshal as a cty.Type
+				var ctyType cty.Type
+				if err := json.Unmarshal(alias.AttributeType, &ctyType); err != nil {
+					return fmt.Errorf("invalid primitive type name %q", typeString)
+				}
+				a.AttributeType = ctyType
+			}
+		} else {
+			// Try to unmarshal as a cty.Type
+			var ctyType cty.Type
+			if err := json.Unmarshal(alias.AttributeType, &ctyType); err != nil {
+				return err
+			}
+			a.AttributeType = ctyType
+		}
+	}
+
+	return nil
+}
+
 func (b *SchemaAttribute) GetAutoCompletePossibleValues() []string {
 	switch b.AttributeType {
 	case cty.Bool:
@@ -118,6 +157,14 @@ func (b *SchemaAttribute) GetDescription() string {
 	return description
 }
 
+func (b *SchemaAttribute) GetModuleDescription() string {
+	if b.Content == "" {
+		return "UnDocumented"
+	}
+
+	return b.Content
+}
+
 func (b *SchemaAttribute) GetAttributeDocLink(parentLink string) string {
 	fieldParts := strings.Split(b.AttributePath, ".")
 	if len(fieldParts) == 0 {
@@ -128,12 +175,24 @@ func (b *SchemaAttribute) GetAttributeDocLink(parentLink string) string {
 	return fmt.Sprintf("%s#%s", parentLink, outerField)
 }
 
+func (b *SchemaAttribute) GetModuleAttributeDocLink() string {
+	return fmt.Sprintf(AVMAttributeDocURL, strings.Split(b.ResourceOrDataSourceName, "/")[1], strings.Split(b.AttributePath, ".")[0])
+}
+
 func (b *SchemaAttribute) GetGitHubIssueLink() string {
 	return fmt.Sprintf(GitHubIssuesURL, b.ResourceOrDataSourceName+" "+strings.ReplaceAll(b.AttributePath, ".", " "))
 }
 
+func (b *SchemaAttribute) GetModuleGitHubIssueLink() string {
+	return fmt.Sprintf(AVMGitHubAttributeIssuesURL, strings.Split(b.ResourceOrDataSourceName, "/")[1], strings.Split(b.AttributePath, ".")[len(strings.Split(b.AttributePath, "."))-1])
+}
+
 func (b *SchemaAttribute) GetRaiseGitHubIssueLink() string {
 	return fmt.Sprintf(NewGitHubIssuesURL, fmt.Sprintf("`%s` - %s", b.ResourceOrDataSourceName, strings.ReplaceAll(b.AttributePath, ".", " ")))
+}
+
+func (b *SchemaAttribute) GetModuleRaiseGitHubIssueLink() string {
+	return fmt.Sprintf(AVMNewGitHubIssuesURL, strings.Split(b.ResourceOrDataSourceName, "/")[1])
 }
 
 func (b *SchemaAttribute) GetDetails() []string {

@@ -265,6 +265,184 @@ func TestCompletionAzureRM_propertyValuesInNestedBlock(t *testing.T) {
 	}, string(expectRaw))
 }
 
+func TestCompletionAVM_templates(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	rawResponse := ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(1, 5, tmpDir.URI()),
+	})
+
+	var result lsp.CompletionList
+	err = json.Unmarshal(rawResponse.Result, &result)
+	if err != nil {
+		t.Fatalf("failed to unmarshal response: %v", err)
+	}
+	if len(result.Items) < 100 {
+		t.Fatalf("expected at least 100 items, got %d", len(result.Items))
+	}
+}
+
+func TestCompletionAVM_properties(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+	expectRaw = []byte(strings.ReplaceAll(string(expectRaw), "<", "\\u003c"))
+	expectRaw = []byte(strings.ReplaceAll(string(expectRaw), ">", "\\u003e"))
+	expectRaw = []byte(strings.ReplaceAll(string(expectRaw), "&", "\\u0026"))
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(3, 3, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAVM_propertyValues(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+	expectRaw = []byte(strings.ReplaceAll(string(expectRaw), "<", "\\u003c"))
+	expectRaw = []byte(strings.ReplaceAll(string(expectRaw), ">", "\\u003e"))
+	expectRaw = []byte(strings.ReplaceAll(string(expectRaw), "&", "\\u0026"))
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(4, 17, tmpDir.URI()),
+	}, string(expectRaw))
+}
+
+func TestCompletionAVM_moduleName(t *testing.T) {
+	tmpDir := TempDir(t)
+	InitPluginCache(t, tmpDir.Dir())
+
+	ls := langserver.NewLangServerMock(t, NewMockSession(&MockSessionInput{}))
+	stop := ls.Start(t)
+	defer stop()
+
+	config, err := os.ReadFile(fmt.Sprintf("./testdata/%s/main.tf", t.Name()))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	ls.Call(t, &langserver.CallRequest{
+		Method: "initialize",
+		ReqParams: fmt.Sprintf(`{
+		"capabilities": {},
+		"rootUri": %q,
+		"processId": 12345
+	}`, tmpDir.URI()),
+	})
+	ls.Notify(t, &langserver.CallRequest{
+		Method:    "initialized",
+		ReqParams: "{}",
+	})
+	ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/didOpen",
+		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
+	})
+
+	rawResponse := ls.Call(t, &langserver.CallRequest{
+		Method:    "textDocument/completion",
+		ReqParams: buildReqParamsCompletion(2, 23, tmpDir.URI()),
+	})
+
+	var result lsp.CompletionList
+	err = json.Unmarshal(rawResponse.Result, &result)
+	if err != nil {
+		t.Fatalf("failed to unmarshal response: %v", err)
+	}
+	if len(result.Items) < 100 {
+		t.Fatalf("expected at least 100 items, got %d", len(result.Items))
+	}
+}
+
 func TestCompletionMSGraph_url(t *testing.T) {
 	tmpDir := TempDir(t)
 	InitPluginCache(t, tmpDir.Dir())
