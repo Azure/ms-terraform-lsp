@@ -1,3 +1,10 @@
+## v0.6.0
+Features:
+- Support auto-completion and hover documentation for azure verified modules.
+
+Enhancements:
+- Update bicep types to https://github.com/ms-henglu/bicep-types-az/commit/a3cf29cb316d792abe0a607f97469a577382ee77
+
 ## v0.5.0
 Features
 - Support language features for `azapi` provider resources and data sources.

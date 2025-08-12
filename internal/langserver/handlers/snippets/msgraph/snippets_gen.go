@@ -52,7 +52,16 @@ func parseSnippet(filepath string) (*Snippet, error) {
 	urlValue := ""
 	fields := make([]Field, 0)
 	index := 1
+
+	attributes := make([]*hclsyntax.Attribute, 0)
 	for _, attr := range lastBlock.Body.Attributes {
+		attributes = append(attributes, attr)
+	}
+	slices.SortFunc(attributes, func(i, j *hclsyntax.Attribute) int {
+		return Field{Name: i.Name}.Order() - Field{Name: j.Name}.Order()
+	})
+
+	for _, attr := range attributes {
 		if attr.Name == "url" {
 			urlValue = strings.Trim(stringValue(data, attr.Expr.Range()), `"`)
 		}
