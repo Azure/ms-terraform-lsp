@@ -1,9 +1,14 @@
 ## v0.6.0
 Features:
-- Support auto-completion and hover documentation for azure verified modules.
+- Support auto-completion and hover documentation for Azure Verified Modules.
+- Add auto-completion and hover documentation for data sources.
 
 Enhancements:
 - Update bicep types to https://github.com/ms-henglu/bicep-types-az/commit/a3cf29cb316d792abe0a607f97469a577382ee77
+
+Bug Fixes:
+- Correct hover documentation snippet formatting.
+- Fix data source markdown generation script.
 
 ## v0.5.0
 Features
