@@ -1,0 +1,102 @@
+name: Update AzureRM Provider Schema
+
+on:
+  workflow_dispatch:
+    inputs:
+      provider-ref:
+        description: 'Git ref (branch or tag) in hashicorp/terraform-provider-azurerm (e.g. main, v4.43.0, tags/v4.43.0)'
+        required: true
+        default: 'main'
+      provider-repo:
+        description: 'Provider repository (fork override)'
+        required: false
+        default: 'hashicorp/terraform-provider-azurerm'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-provider-schema
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Prepare provider checkout
+        id: prep
+        run: |
+          set -euo pipefail
+          REF='${{ github.event.inputs.provider-ref }}'
+          REPO='${{ github.event.inputs.provider-repo }}'
+          # Normalize tag format: allow tags/vX.Y.Z, vX.Y.Z, or X.Y.Z
+          RAW_REF="$REF"
+          if [[ "$REF" == tags/* ]]; then
+            REF_NO_PREFIX=${REF#tags/}
+          else
+            REF_NO_PREFIX=$REF
+          fi
+          # Ensure tag has leading v if numeric and missing
+          if [[ "$REF_NO_PREFIX" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            REF_NO_PREFIX="v$REF_NO_PREFIX"
+          fi
+          echo "normalized-ref=$REF_NO_PREFIX" >> $GITHUB_OUTPUT
+          echo "Cloning $REPO at $REF_NO_PREFIX"
+          git clone --depth 1 https://github.com/$REPO _provider || { echo 'Initial clone failed, attempting full clone'; git clone https://github.com/$REPO _provider; }
+          pushd _provider >/dev/null
+          git fetch --tags --depth 1 || true
+          if git rev-parse --verify "$REF_NO_PREFIX" >/dev/null 2>&1; then
+            git checkout "$REF_NO_PREFIX"
+          else
+            echo "Specified ref $RAW_REF (normalized $REF_NO_PREFIX) not found" >&2
+            exit 1
+          fi
+          echo "Provider commit: $(git rev-parse HEAD)"
+          popd >/dev/null
+
+      - name: Generate provider schema and combined output
+        run: go run . generate "./_provider" "${{ steps.prep.outputs.normalized-ref }}"
+
+      - name: List changes
+        run: |
+          git status --short || true
+          ls -al provider-schema/azurerm/schema || true
+          test -f provider-schema/processors/combined_output.json && head -c 200 provider-schema/processors/combined_output.json || true
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: update azurerm provider schema (${{ github.event.inputs.provider-ref }})"
+          title: "chore: update azurerm provider schema (${{ github.event.inputs.provider-ref }})"
+          body: |
+            Automated AzureRM provider schema update.
+
+            Input ref: `${{ github.event.inputs.provider-ref }}` (normalized `${{ steps.prep.outputs.normalized-ref }}`)
+            Provider repo: `${{ github.event.inputs.provider-repo }}`
+
+            Generated via GenerateProviderSchema + processors.ProcessOutput.
+          branch: chore/update-provider-schema
+          delete-branch: true
+          labels: automated, provider-schema
+          signoff: false
+
+      - name: PR URL
+        if: steps.cpr.outputs.pull-request-url
+        run: |
+          echo "PR: ${{ steps.cpr.outputs.pull-request-url }}"
