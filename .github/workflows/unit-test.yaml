@@ -7,6 +7,7 @@ on:
       - '**.go'
       - 'vendor/**'
       - '.github/workflows/**'
+      - 'provider-schema/processors/module_output.json'
 
 jobs:
   test:

@@ -1,0 +1,75 @@
+name: Update Module Output JSON
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-module-output
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      # GitHub automatically provides this token; sufficient for public repo reads.
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Go mod download
+        run: go mod download
+
+      - name: Generate module output (fetch + process)
+        run: |
+          set -euo pipefail
+          echo "Running module-schema fetch & process..."
+          go run ./module-schema -fetch
+          test -f output.json || { echo "output.json not generated" >&2; exit 1; }
+          mkdir -p provider-schema/processors
+          mv -f output.json provider-schema/processors/module_output.json
+
+      - name: Run targeted tests (module-schema)
+        run: go test ./module-schema/... -count=1 -timeout=20m
+
+      - name: Verify JSON size & basic structure
+        run: |
+          set -euo pipefail
+          jq 'length' provider-schema/processors/module_output.json > /dev/null
+          echo "Entries: $(jq 'length' provider-schema/processors/module_output.json)"
+          head -c 200 provider-schema/processors/module_output.json || true
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'chore: update module_output.json'
+          title: 'chore: update module_output.json'
+          body: |
+            Automated update of `provider-schema/processors/module_output.json`.
+
+            Triggered by: `${{ github.actor }}` on `${{ github.event_name }}`.
+
+            - Generated via `go run ./module-schema -fetch`.
+          branch: chore/update-module-output
+          delete-branch: true
+          labels: automated, schema-update
+          signoff: false
+
+      - name: PR URL
+        if: steps.cpr.outputs.pull-request-url
+        run: |
+          echo "Pull Request: ${{ steps.cpr.outputs.pull-request-url }}"
