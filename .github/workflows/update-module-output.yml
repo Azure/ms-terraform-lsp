@@ -62,6 +62,6 @@ jobs:
           else
             git checkout -b chore/update-module-output
             git commit -m "chore: update module_output.json"
-            git push --set-upstream origin chore/update-module-output
+            git push --set-upstream origin chore/update-module-output -f
             echo "Changes committed and pushed to chore/update-module-output branch"
           fi
