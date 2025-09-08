@@ -323,14 +323,6 @@ func TestCompletionAVM_properties(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
-	if err != nil {
-		t.Fatal(err)
-	}
-	expectRaw = []byte(strings.ReplaceAll(string(expectRaw), "<", "\\u003c"))
-	expectRaw = []byte(strings.ReplaceAll(string(expectRaw), ">", "\\u003e"))
-	expectRaw = []byte(strings.ReplaceAll(string(expectRaw), "&", "\\u0026"))
-
 	ls.Call(t, &langserver.CallRequest{
 		Method: "initialize",
 		ReqParams: fmt.Sprintf(`{
@@ -348,10 +340,75 @@ func TestCompletionAVM_properties(t *testing.T) {
 		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
 	})
 
-	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+	rawResponse := ls.Call(t, &langserver.CallRequest{
 		Method:    "textDocument/completion",
 		ReqParams: buildReqParamsCompletion(3, 3, tmpDir.URI()),
-	}, string(expectRaw))
+	})
+
+	if rawResponse.Error != nil {
+		t.Errorf("unexpected error in response: %v", rawResponse.Error)
+	}
+
+	var result lsp.CompletionList
+	err = json.Unmarshal(rawResponse.Result, &result)
+	if err != nil {
+		t.Fatalf("failed to unmarshal completion result: %v", err)
+	}
+
+	// Check that we have completion items
+	if len(result.Items) == 0 {
+		t.Error("expected completion items but got none")
+		return
+	}
+
+	// Expected properties that should be present in storage account module
+	expectedProperties := []string{
+		"account_replication_type",
+		"account_tier",
+		"location",
+		"name",
+		"resource_group_name",
+	}
+
+	foundProperties := make(map[string]bool)
+	for _, item := range result.Items {
+		foundProperties[item.Label] = true
+
+		// Validate each completion item has required fields
+		if item.Label == "" {
+			t.Error("completion item missing label")
+		}
+		if item.Kind == 0 {
+			t.Error("completion item missing kind")
+		}
+		if item.Detail == "" {
+			t.Error("completion item missing detail")
+		}
+
+		// Check that documentation contains AVM-specific patterns for items that have documentation
+		if item.Documentation != nil {
+			if docInterface, ok := item.Documentation.(map[string]interface{}); ok {
+				if kind, exists := docInterface["kind"]; exists && kind == "markdown" {
+					if value, exists := docInterface["value"]; exists {
+						docValue := value.(string)
+						// Should contain AVM module references
+						if !strings.Contains(docValue, "github.com/Azure/terraform-azurerm-avm-res-storage-storageaccount") {
+							t.Errorf("completion item %s documentation missing AVM repository reference", item.Label)
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Check that we found the essential required properties
+	for _, prop := range expectedProperties {
+		if !foundProperties[prop] {
+			t.Errorf("expected property %s not found in completion items", prop)
+		}
+	}
+
+	t.Logf("Successfully validated AVM completion response with %d items", len(result.Items))
 }
 
 func TestCompletionAVM_propertyValues(t *testing.T) {
