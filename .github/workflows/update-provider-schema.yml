@@ -78,25 +78,16 @@ jobs:
           ls -al provider-schema/azurerm/schema || true
           test -f provider-schema/processors/combined_output.json && head -c 200 provider-schema/processors/combined_output.json || true
 
-      - name: Create Pull Request
-        id: cpr
-        uses: peter-evans/create-pull-request@v6
-        with:
-          commit-message: "chore: update azurerm provider schema (${{ github.event.inputs.provider-ref }})"
-          title: "chore: update azurerm provider schema (${{ github.event.inputs.provider-ref }})"
-          body: |
-            Automated AzureRM provider schema update.
-
-            Input ref: `${{ github.event.inputs.provider-ref }}` (normalized `${{ steps.prep.outputs.normalized-ref }}`)
-            Provider repo: `${{ github.event.inputs.provider-repo }}`
-
-            Generated via GenerateProviderSchema + processors.ProcessOutput.
-          branch: chore/update-provider-schema
-          delete-branch: true
-          labels: automated, provider-schema
-          signoff: false
-
-      - name: PR URL
-        if: steps.cpr.outputs.pull-request-url
+      - name: Commit and push changes
         run: |
-          echo "PR: ${{ steps.cpr.outputs.pull-request-url }}"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git checkout -b chore/update-provider-schema
+            git commit -m "chore: update azurerm provider schema (${{ github.event.inputs.provider-ref }})"
+            git push --set-upstream origin chore/update-provider-schema
+            echo "Changes committed and pushed to chore/update-provider-schema branch"
+          fi
