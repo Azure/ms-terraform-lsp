@@ -52,24 +52,16 @@ jobs:
           echo "Entries: $(jq 'length' provider-schema/processors/module_output.json)"
           head -c 200 provider-schema/processors/module_output.json || true
 
-      - name: Create Pull Request
-        id: cpr
-        uses: peter-evans/create-pull-request@v6
-        with:
-          commit-message: 'chore: update module_output.json'
-          title: 'chore: update module_output.json'
-          body: |
-            Automated update of `provider-schema/processors/module_output.json`.
-
-            Triggered by: `${{ github.actor }}` on `${{ github.event_name }}`.
-
-            - Generated via `go run ./module-schema -fetch`.
-          branch: chore/update-module-output
-          delete-branch: true
-          labels: automated, schema-update
-          signoff: false
-
-      - name: PR URL
-        if: steps.cpr.outputs.pull-request-url
+      - name: Commit and push changes
         run: |
-          echo "Pull Request: ${{ steps.cpr.outputs.pull-request-url }}"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git checkout -b chore/update-module-output
+            git commit -m "chore: update module_output.json"
+            git push --set-upstream origin chore/update-module-output
+            echo "Changes committed and pushed to chore/update-module-output branch"
+          fi
