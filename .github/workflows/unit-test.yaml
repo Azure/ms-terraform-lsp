@@ -8,6 +8,7 @@ on:
       - 'vendor/**'
       - '.github/workflows/**'
       - 'provider-schema/processors/combined_output.json'
+      - 'provider-schema/processors/module_output.json'
 
 jobs:
   test:
