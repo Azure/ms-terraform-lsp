@@ -88,6 +88,6 @@ jobs:
           else
             git checkout -b chore/update-provider-schema
             git commit -m "chore: update azurerm provider schema (${{ github.event.inputs.provider-ref }})"
-            git push --set-upstream origin chore/update-provider-schema
+            git push --set-upstream origin chore/update-provider-schema -f
             echo "Changes committed and pushed to chore/update-provider-schema branch"
           fi
