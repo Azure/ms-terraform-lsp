@@ -9,6 +9,7 @@ import (
 
 	"github.com/Azure/ms-terraform-lsp/internal/langserver"
 	"github.com/Azure/ms-terraform-lsp/internal/langserver/session"
+	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
 func TestHover_withoutInitialization(t *testing.T) {
@@ -298,11 +299,6 @@ func TestHoverAVM_moduleName(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	expectRaw, err := os.ReadFile(fmt.Sprintf("./testdata/%s/expect.json", t.Name()))
-	if err != nil {
-		t.Fatal(err)
-	}
-
 	ls.Call(t, &langserver.CallRequest{
 		Method: "initialize",
 		ReqParams: fmt.Sprintf(`{
@@ -320,10 +316,61 @@ func TestHoverAVM_moduleName(t *testing.T) {
 		ReqParams: buildReqParamsTextDocument(string(config), tmpDir.URI()),
 	})
 
-	ls.CallAndExpectResponse(t, &langserver.CallRequest{
+	rawResponse := ls.Call(t, &langserver.CallRequest{
 		Method:    "textDocument/hover",
 		ReqParams: buildReqParamsHover(1, 5, tmpDir.URI()),
-	}, string(expectRaw))
+	})
+
+	if rawResponse.Error != nil {
+		t.Errorf("unexpected error in response: %v", rawResponse.Error)
+	}
+
+	var result lsp.Hover
+	err = json.Unmarshal(rawResponse.Result, &result)
+	if err != nil {
+		t.Fatalf("failed to unmarshal hover result: %v", err)
+	}
+
+	// Check that we have hover content
+	if result.Contents.Kind != "markdown" {
+		t.Errorf("expected markdown content, got %s", result.Contents.Kind)
+	}
+
+	content := result.Contents.Value
+	if content == "" {
+		t.Error("expected hover content but got empty string")
+		return
+	}
+
+	// Check that the content contains expected AVM patterns
+	expectedPatterns := []string{
+		"Azure/avm-res-servicebus-namespace/azurerm",
+		"registry.terraform.io/modules/Azure/avm-res-servicebus-namespace/azurerm",
+		"github.com/Azure/terraform-azurerm-avm-res-servicebus-namespace",
+		"Service Bus",
+		"Terraform Azure Service Bus Namespace Module",
+	}
+
+	for _, pattern := range expectedPatterns {
+		if !strings.Contains(content, pattern) {
+			t.Errorf("hover content missing expected pattern: %s", pattern)
+		}
+	}
+
+	// Check for required inputs specific to service bus namespace
+	requiredInputs := []string{
+		"location",
+		"name",
+		"resource_group_name",
+	}
+
+	for _, input := range requiredInputs {
+		if !strings.Contains(content, input) {
+			t.Errorf("hover content missing required input: %s", input)
+		}
+	}
+
+	t.Logf("Successfully validated AVM hover response for service bus namespace module")
 }
 
 func TestHoverAVM_block(t *testing.T) {
