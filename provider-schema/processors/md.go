@@ -27,6 +27,11 @@ func ProcessMarkdown(providerDir string) (map[string]*model.ResourceDoc, error) 
 			if !info.IsDir() && filepath.Ext(path) == ".markdown" {
 				// Parse the markdown file
 				mark := md.MustNewMarkFromFile(path)
+				if mark == nil {
+					// Skip files that couldn't be parsed (e.g., non-absolute paths or read errors)
+					fmt.Printf("Warning: Could not parse markdown file: %s\n", path)
+					return nil
+				}
 				doc := mark.BuildResourceDoc()
 
 				if isDataSource {
