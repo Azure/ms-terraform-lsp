@@ -14,9 +14,15 @@ import (
 func ProcessMarkdown(providerDir string) (map[string]*model.ResourceDoc, error) {
 	allDocs := make(map[string]*model.ResourceDoc)
 
+	// Convert to absolute path to ensure MustNewMarkFromFile works correctly
+	absProviderDir, err := filepath.Abs(providerDir)
+	if err != nil {
+		return nil, fmt.Errorf("error converting provider directory to absolute path: %v", err)
+	}
+
 	// do below for resources and data sources
-	resourceMarkdownDir := filepath.Join(providerDir, "website", "docs", "r")
-	dataSourceMarkdownDir := filepath.Join(providerDir, "website", "docs", "d")
+	resourceMarkdownDir := filepath.Join(absProviderDir, "website", "docs", "r")
+	dataSourceMarkdownDir := filepath.Join(absProviderDir, "website", "docs", "d")
 
 	// Walk through the markdown directory
 	processDir := func(dir string, isDataSource bool) error {
@@ -27,6 +33,11 @@ func ProcessMarkdown(providerDir string) (map[string]*model.ResourceDoc, error) 
 			if !info.IsDir() && filepath.Ext(path) == ".markdown" {
 				// Parse the markdown file
 				mark := md.MustNewMarkFromFile(path)
+				if mark == nil {
+					// Skip files that couldn't be parsed (e.g., non-absolute paths or read errors)
+					fmt.Printf("Warning: Could not parse markdown file: %s\n", path)
+					return nil
+				}
 				doc := mark.BuildResourceDoc()
 
 				if isDataSource {
@@ -45,7 +56,7 @@ func ProcessMarkdown(providerDir string) (map[string]*model.ResourceDoc, error) 
 		return nil
 	}
 
-	err := processDir(resourceMarkdownDir, false)
+	err = processDir(resourceMarkdownDir, false)
 	if err != nil {
 		return nil, fmt.Errorf("error processing resource markdown files: %v", err)
 	}
