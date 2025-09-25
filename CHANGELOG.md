@@ -1,3 +1,8 @@
+## v0.7.0
+
+Enhancements:
+- Update bicep types to https://github.com/ms-henglu/bicep-types-az/commit/6b9ca69c973d29e6cf745cb5f25b13ee033de985
+
 ## v0.6.0
 Features:
 - Support auto-completion and hover documentation for Azure Verified Modules.
