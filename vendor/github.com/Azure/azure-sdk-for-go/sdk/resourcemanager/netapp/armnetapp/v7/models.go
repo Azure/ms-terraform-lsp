@@ -989,6 +989,10 @@ type PoolPatchProperties struct {
 	// If enabled (true) the pool can contain cool Access enabled volumes.
 	CoolAccess *bool
 
+	// Maximum throughput in MiB/s that can be achieved by this pool and this will be accepted as input only for manual qosType
+	// pool with Flexible service level
+	CustomThroughputMibps *float32
+
 	// The qos type of the pool
 	QosType *QosType
 
@@ -1006,6 +1010,10 @@ type PoolProperties struct {
 
 	// If enabled (true) the pool can contain cool Access enabled volumes.
 	CoolAccess *bool
+
+	// Maximum throughput in MiB/s that can be achieved by this pool and this will be accepted as input only for manual qosType
+	// pool with Flexible service level
+	CustomThroughputMibps *float32
 
 	// Encryption type of the capacity pool, set encryption type for data at rest for this pool and all volumes in it. This value
 	// can only be set when creating new pool.
@@ -1137,9 +1145,6 @@ type Replication struct {
 
 // ReplicationObject - Replication properties
 type ReplicationObject struct {
-	// Indicates whether the local volume is the source or destination for the Volume Replication
-	EndpointType *EndpointType
-
 	// The full path to a volume that is to be migrated into ANF. Required for Migration volumes
 	RemotePath *RemotePath
 
@@ -1154,6 +1159,9 @@ type ReplicationObject struct {
 
 	// READ-ONLY; A list of destination replications
 	DestinationReplications []*DestinationReplication
+
+	// READ-ONLY; Indicates whether the local volume is the source or destination for the Volume Replication
+	EndpointType *EndpointType
 
 	// READ-ONLY; Id
 	ReplicationID *string
@@ -1368,6 +1376,9 @@ type SubscriptionQuotaItem struct {
 
 // SubscriptionQuotaItemList - List of Subscription Quota Items
 type SubscriptionQuotaItemList struct {
+	// URL to get the next set of results.
+	NextLink *string
+
 	// A list of SubscriptionQuotaItems
 	Value []*SubscriptionQuotaItem
 }
@@ -1869,6 +1880,11 @@ type VolumeProperties struct {
 	// bytes as multiples of 1 GiB.
 	UsageThreshold *int64
 
+	// While auto splitting the short term clone volume, if the parent pool does not have enough space to accommodate the volume
+	// after split, it will be automatically resized, which will lead to increased
+	// billing. To accept capacity pool size auto grow and create a short term clone volume, set the property as accepted.
+	AcceptGrowCapacityPoolForShortTermCloneSplit *AcceptGrowCapacityPoolForShortTermCloneSplit
+
 	// Specifies whether the volume is enabled for Azure VMware Solution (AVS) datastore purpose
 	AvsDataStore *AvsDataStore
 
@@ -2019,6 +2035,9 @@ type VolumeProperties struct {
 
 	// READ-ONLY; Unique FileSystem Identifier.
 	FileSystemID *string
+
+	// READ-ONLY; Space shared by short term clone volume with parent volume in bytes.
+	InheritedSizeInBytes *int64
 
 	// READ-ONLY; Restoring
 	IsRestoring *bool
