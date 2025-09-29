@@ -24,7 +24,7 @@ func keyCandidates(props []schema.Property, r lsp.Range, parentNode *parser.HclN
 		}
 		propSet[prop.Name] = true
 		content := prop.Name
-		newText := ""
+		var newText string
 		sortText := fmt.Sprintf("1%s", content)
 		if prop.Modifier == schema.Required {
 			sortText = fmt.Sprintf("0%s", content)

@@ -78,7 +78,7 @@ func TestLangServer_didOpenLanguageIdStored(t *testing.T) {
 		t.Fatalf("unexpected languageID: %s", diff)
 	}
 	fullPath := doc.FullPath()
-	if diff := cmp.Diff(fullPath, string(path)); diff != "" {
+	if diff := cmp.Diff(fullPath, path); diff != "" {
 		t.Fatalf("unexpected fullPath: %s", diff)
 	}
 	version := doc.Version()

@@ -270,7 +270,7 @@ func (c AztfAuthorizeCommand) Handle(ctx context.Context, arguments []json.RawMe
 	reportAuthorizeCommandProgress(ctx, fmt.Sprintf("permissions: %+v", permissions), 60)
 
 	if generateForMissing {
-		existingPerm, err := getExistingPermission(ctx, params, tempDir)
+		existingPerm, err := getExistingPermission(ctx, tempDir)
 		if err != nil {
 			return nil, fmt.Errorf("reading existing permissions: %+v", err)
 		}
@@ -374,7 +374,7 @@ func reportAuthorizeCommandProgress(ctx context.Context, message string, percent
 	}
 }
 
-func getExistingPermission(ctx context.Context, params lsp.CodeActionParams, tempDir string) (*[]permission, error) {
+func getExistingPermission(ctx context.Context, tempDir string) (*[]permission, error) {
 	dataConfig := `
 terraform {
   required_providers {

@@ -64,7 +64,7 @@ func (fh *fileHandler) DocumentURI() lsp.DocumentURI {
 }
 
 func (fh *fileHandler) URI() string {
-	return string(fh.uri)
+	return fh.uri
 }
 
 type versionedFileHandler struct {

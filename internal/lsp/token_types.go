@@ -126,7 +126,7 @@ func TokenTypesLegend(clientSupported []string) TokenTypes {
 	// Filter only supported token types
 	for _, tokenType := range serverTokenTypes {
 		if sliceContains(clientSupported, string(tokenType)) {
-			legend = append(legend, TokenType(tokenType))
+			legend = append(legend, tokenType)
 		}
 	}
 
@@ -139,7 +139,7 @@ func TokenModifiersLegend(clientSupported []string) TokenModifiers {
 	// Filter only supported token modifiers
 	for _, modifier := range serverTokenModifiers {
 		if sliceContains(clientSupported, string(modifier)) {
-			legend = append(legend, TokenModifier(modifier))
+			legend = append(legend, modifier)
 		}
 	}
 

@@ -226,11 +226,10 @@ func (svc *service) Assigner() (jrpc2.Assigner, error) {
 	return convertMap(m), nil
 }
 
-func (svc *service) configureSessionDependencies() error {
+func (svc *service) configureSessionDependencies() {
 	svc.diagsNotifier = diagnostics.NewNotifier(svc.server, svc.logger)
 	svc.clientCaller = svc.server
 	svc.clientNotifier = svc.server
-	return nil
 }
 
 func (svc *service) setupTelemetry(version int, notifier session.ClientNotifier) error {

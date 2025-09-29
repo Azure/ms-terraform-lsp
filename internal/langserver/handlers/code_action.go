@@ -163,7 +163,7 @@ func listCodeActionForMigratingResources(params lsp.CodeActionParams, hasAzapiRe
 		return nil
 	}
 
-	title := ""
+	var title string
 	if hasAzapiResources {
 		title = "Migrate to AzureRM Provider"
 	} else {

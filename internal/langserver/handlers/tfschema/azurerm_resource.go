@@ -48,7 +48,7 @@ func (a AzureRMResource) ListProperties(blockPath string) []Property {
 		return nil
 	}
 
-	var items []Property
+	items := make([]Property, 0, len(props))
 	for _, p := range props {
 		content, prop, err := provider_schema.GetAttributeContent(objName, p.AttributePath, isDataSource)
 		if err != nil || prop == nil {

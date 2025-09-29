@@ -75,7 +75,7 @@ func (m AVMModule) ListProperties(blockPath string) []Property {
 		return nil
 	}
 
-	var items []Property
+	items := make([]Property, 0, len(props))
 	for _, p := range props {
 		content, prop, err := provider_schema.GetModuleAttributeContent(moduleName, p.AttributePath)
 		if err != nil || prop == nil {
