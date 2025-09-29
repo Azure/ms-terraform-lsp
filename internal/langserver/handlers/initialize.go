@@ -81,7 +81,7 @@ func (svc *service) Initialize(ctx context.Context, params lsp.InitializeParams)
 		}
 	}
 
-	err = ilsp.SetClientCapabilities(ctx, &clientCaps)
+	err := ilsp.SetClientCapabilities(ctx, &clientCaps)
 	if err != nil {
 		return serverCaps, err
 	}
