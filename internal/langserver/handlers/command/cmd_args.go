@@ -79,7 +79,6 @@ func ParseCommandArgs(arguments []json.RawMessage) CommandArgs {
 		} else {
 			args[variable] = value
 		}
-
 	}
 	return args
 }

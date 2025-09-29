@@ -36,7 +36,6 @@ func HCLDiagsToLSP(hclDiags hcl.Diagnostics, source string) []lsp.Diagnostic {
 			Source:   source,
 			Message:  msg,
 		})
-
 	}
 	return diags
 }
