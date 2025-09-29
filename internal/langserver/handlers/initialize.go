@@ -63,10 +63,7 @@ func (svc *service) Initialize(ctx context.Context, params lsp.InitializeParams)
 
 	svc.server = jrpc2.ServerFromContext(ctx)
 
-	err := svc.configureSessionDependencies()
-	if err != nil {
-		return serverCaps, err
-	}
+	svc.configureSessionDependencies()
 
 	if tv, ok := expClientCaps.TelemetryVersion(); ok {
 		svc.logger.Printf("enabling telemetry (version: %d)", tv)
