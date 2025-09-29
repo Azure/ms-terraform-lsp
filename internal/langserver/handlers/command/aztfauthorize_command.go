@@ -434,7 +434,6 @@ output "permissions" {
 		if err := json.Unmarshal(jsonBytes, &permissions); err != nil {
 			return nil, fmt.Errorf("unmarshalling permissions output: %+v", err)
 		}
-
 	}
 
 	return &permissions, nil
@@ -569,7 +568,13 @@ func matchPermissions(targetActions map[string]struct{}) (*permission, error) {
 	dataActions := make(map[string]struct{}, 0)
 
 	for aa := range targetActions {
-		rp := aa[:strings.Index(aa, "/")]
+		// safeguard: strings.Index can return -1 if '/' not present
+		i := strings.Index(aa, "/")
+		if i == -1 {
+			// malformed action, skip
+			continue
+		}
+		rp := aa[:i]
 		values, ok := azProviderOperationCache[normalizeName(rp)]
 		if !ok {
 			continue

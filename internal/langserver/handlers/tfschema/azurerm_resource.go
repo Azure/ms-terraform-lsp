@@ -110,7 +110,8 @@ func (a AzureRMResource) Match(name string) bool {
 func ToProperty(p *schema.SchemaAttribute, content string) Property {
 	insertText := p.Name
 	propType := ""
-	if p.AttributeType.IsPrimitiveType() {
+	switch {
+	case p.AttributeType.IsPrimitiveType():
 		switch p.AttributeType {
 		case cty.String:
 			insertText = fmt.Sprintf(`%s = "$0"`, p.Name)
@@ -125,7 +126,7 @@ func ToProperty(p *schema.SchemaAttribute, content string) Property {
 			insertText = fmt.Sprintf(`%s = $0`, p.Name)
 			propType = "object"
 		}
-	} else if p.AttributeType.IsMapType() || p.AttributeType.IsObjectType() {
+	case p.AttributeType.IsMapType() || p.AttributeType.IsObjectType():
 		// invalid nesting mode
 		if p.NestingMode == 0 {
 			insertText = fmt.Sprintf(`%s = { $0 }`, p.Name)
@@ -133,7 +134,7 @@ func ToProperty(p *schema.SchemaAttribute, content string) Property {
 			insertText = fmt.Sprintf(`%s {$0}`, p.Name)
 		}
 		propType = "object"
-	} else if p.AttributeType.IsListType() || p.AttributeType.IsSetType() {
+	case p.AttributeType.IsListType() || p.AttributeType.IsSetType():
 		insertText = fmt.Sprintf(`%s = [$0]`, p.Name)
 		propType = "list"
 	}
