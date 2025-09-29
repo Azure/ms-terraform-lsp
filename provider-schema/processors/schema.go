@@ -2,6 +2,7 @@ package processors
 
 import (
 	"embed"
+
 	"github.com/Azure/ms-terraform-lsp/provider-schema/azurerm/schema"
 )
 

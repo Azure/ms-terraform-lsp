@@ -46,7 +46,7 @@ func ProcessOutput(providerPath, gitBranch, outputDir string) (TerraformObjects,
 	err = os.WriteFile(
 		filepath.Join(outputDir, outputFileName),
 		jsonOutput,
-		0600, // More restrictive permissions
+		0o600, // More restrictive permissions
 	)
 	if err != nil {
 		return nil, fmt.Errorf("error writing combined output to file: %v", err)

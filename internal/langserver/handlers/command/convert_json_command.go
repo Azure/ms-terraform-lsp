@@ -11,8 +11,7 @@ import (
 
 var pluralizeClient = pluralize.NewClient()
 
-type ConvertJsonCommand struct {
-}
+type ConvertJsonCommand struct{}
 
 var _ CommandHandler = &ConvertJsonCommand{}
 

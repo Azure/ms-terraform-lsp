@@ -54,6 +54,8 @@ func (property *Property) ToHover(r hcl.Range) *lsp.Hover {
 	}
 }
 
-type GenericCandidatesFunc func(data []byte, filename string, block *hclsyntax.Block, attribute *hclsyntax.Attribute, pos hcl.Pos, property *Property) []lsp.CompletionItem
-type ValueCandidatesFunc func(prefix *string, r lsp.Range) []lsp.CompletionItem
-type CustomizedHoverFunc func(block *hclsyntax.Block, attribute *hclsyntax.Attribute, pos hcl.Pos, data []byte) *lsp.Hover
+type (
+	GenericCandidatesFunc func(data []byte, filename string, block *hclsyntax.Block, attribute *hclsyntax.Attribute, pos hcl.Pos, property *Property) []lsp.CompletionItem
+	ValueCandidatesFunc   func(prefix *string, r lsp.Range) []lsp.CompletionItem
+	CustomizedHoverFunc   func(block *hclsyntax.Block, attribute *hclsyntax.Attribute, pos hcl.Pos, data []byte) *lsp.Hover
+)

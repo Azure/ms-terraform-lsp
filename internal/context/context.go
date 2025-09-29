@@ -2,6 +2,7 @@ package context
 
 import (
 	"context"
+
 	"github.com/Azure/ms-terraform-lsp/internal/filesystem"
 	"github.com/Azure/ms-terraform-lsp/internal/langserver/diagnostics"
 	"github.com/Azure/ms-terraform-lsp/internal/langserver/session"

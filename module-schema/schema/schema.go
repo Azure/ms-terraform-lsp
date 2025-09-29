@@ -2,6 +2,7 @@ package schema
 
 import (
 	"encoding/json"
+
 	"github.com/zclconf/go-cty/cty"
 )
 

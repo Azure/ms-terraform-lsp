@@ -26,12 +26,13 @@ import (
 	"github.com/hashicorp/terraform-exec/tfexec"
 )
 
-const tempFolderName = "aztfmigrate_temp"
-const importFileName = "imports.tf"
-const planFileName = "planfile"
+const (
+	tempFolderName = "aztfmigrate_temp"
+	importFileName = "imports.tf"
+	planFileName   = "planfile"
+)
 
-type AztfMigrateCommand struct {
-}
+type AztfMigrateCommand struct{}
 
 var _ CommandHandler = &AztfMigrateCommand{}
 
@@ -78,7 +79,7 @@ func (c AztfMigrateCommand) Handle(ctx context.Context, arguments []json.RawMess
 	// creating temp workspace
 	workingDirectory := getWorkingDirectory(string(params.TextDocument.URI), runtime.GOOS)
 	tempDir := filepath.Join(workingDirectory, tempFolderName)
-	if err := os.MkdirAll(tempDir, 0750); err != nil {
+	if err := os.MkdirAll(tempDir, 0o750); err != nil {
 		return nil, fmt.Errorf("failed to create temp workspace %q, please check the permission: %w", tempDir, err)
 	}
 	defer func() {
@@ -236,7 +237,7 @@ func (c AztfMigrateCommand) Handle(ctx context.Context, arguments []json.RawMess
 		return nil, err
 	}
 
-	if err = os.WriteFile(filepath.Join(tempDir, importFileName), []byte(cmd.ImportConfig(resources, helper.FindHclBlock(workingDirectory, "terraform", nil))), 0600); err != nil {
+	if err = os.WriteFile(filepath.Join(tempDir, importFileName), []byte(cmd.ImportConfig(resources, helper.FindHclBlock(workingDirectory, "terraform", nil))), 0o600); err != nil {
 		return nil, err
 	}
 

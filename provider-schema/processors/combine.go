@@ -22,7 +22,7 @@ func CombineSchemaAndMarkdown(providerSchema *schema.ProviderSchema, markdownDoc
 
 		markdownDoc, exists := markdownDocs[name]
 		if !exists || markdownDoc == nil {
-			//fmt.Println("Resource/DataSource not found in documentation:", name)
+			// fmt.Println("Resource/DataSource not found in documentation:", name)
 			continue
 		}
 

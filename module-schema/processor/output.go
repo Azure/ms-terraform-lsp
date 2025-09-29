@@ -4,7 +4,6 @@ import (
 	_ "embed"
 	"encoding/json"
 	"fmt"
-	"github.com/Azure/ms-terraform-lsp/module-schema/schema"
 	"log"
 	"os"
 	"path/filepath"
@@ -12,6 +11,8 @@ import (
 	"sort"
 	"strings"
 	"time"
+
+	"github.com/Azure/ms-terraform-lsp/module-schema/schema"
 )
 
 const outputFileName = "output.json"
@@ -21,7 +22,7 @@ func CombineVariableFiles() error {
 	variablesDir := filepath.Join(outputDir, "variables")
 	combinedVarDir := filepath.Join(outputDir, "combinedVar")
 
-	if err := os.MkdirAll(combinedVarDir, 0755); err != nil {
+	if err := os.MkdirAll(combinedVarDir, 0o755); err != nil {
 		return fmt.Errorf("error creating combinedVar output directory: %w", err)
 	}
 
@@ -73,7 +74,7 @@ func CombineVariableFiles() error {
 			combinedContent.WriteString("\n")
 		}
 		targetPath := filepath.Join(combinedVarDir, fmt.Sprintf("%s_variables.tf", repoName))
-		err := os.WriteFile(targetPath, []byte(combinedContent.String()), 0644)
+		err := os.WriteFile(targetPath, []byte(combinedContent.String()), 0o644)
 		if err != nil {
 			log.Printf("Error writing combined file '%s': %v", targetPath, err)
 			continue
@@ -120,7 +121,6 @@ func processVariableFiles(dirPath string) ([]schema.TerraformObject, error) {
 		terraformObjects = append(terraformObjects, terraformObj)
 		return nil
 	})
-
 	if err != nil {
 		return nil, err
 	}
@@ -177,7 +177,6 @@ func parseVariableFile(variableFilePath, objName string) (*schema.SchemaBlock, e
 func readExampleContent(examplesDir, objName string) (string, error) {
 	exampleFilePath := filepath.Join(examplesDir, fmt.Sprintf("%s_example.tf", objName))
 	exampleHclContent, err := os.ReadFile(exampleFilePath)
-
 	if err != nil {
 		if os.IsNotExist(err) {
 			return "", nil // Return empty string if file doesn't exist
@@ -197,7 +196,6 @@ func readExampleContent(examplesDir, objName string) (string, error) {
 func readReadmeContent(readmesDir, objName string) (string, error) {
 	readmeFilePath := filepath.Join(readmesDir, fmt.Sprintf("%s_README.md", objName))
 	readmeContent, err := os.ReadFile(readmeFilePath)
-
 	if err != nil {
 		if os.IsNotExist(err) {
 			return "", nil // Return empty string if file doesn't exist
@@ -215,7 +213,7 @@ func writeJSONOutput(terraformObjects []schema.TerraformObject) error {
 		return fmt.Errorf("failed to marshal terraform objects to JSON: %w", err)
 	}
 
-	err = os.WriteFile(outputFileName, jsonOutput, 0644)
+	err = os.WriteFile(outputFileName, jsonOutput, 0o644)
 	if err != nil {
 		return fmt.Errorf("failed to write output to file: %w", err)
 	}

@@ -12,8 +12,7 @@ import (
 
 var _ Resource = &AzureRMResource{}
 
-type AzureRMResource struct {
-}
+type AzureRMResource struct{}
 
 func (a AzureRMResource) ResourceDocumentation(resourceType string) string {
 	parts := strings.Split(resourceType, ".")

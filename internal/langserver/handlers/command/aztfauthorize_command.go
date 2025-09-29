@@ -257,7 +257,7 @@ func (c AztfAuthorizeCommand) Handle(ctx context.Context, arguments []json.RawMe
 
 	// creating temp workspace
 	tempDir := filepath.Join(workingDirectory, fmt.Sprintf("%v_%v", tempAuthorizeFolderNamePrefix, timeNow))
-	if err := os.MkdirAll(tempDir, 0750); err != nil {
+	if err := os.MkdirAll(tempDir, 0o750); err != nil {
 		return nil, fmt.Errorf("failed to create temp workspace %q, please check the permission: %w", tempDir, err)
 	}
 	defer func() {
@@ -406,7 +406,7 @@ output "permissions" {
 }
 `
 
-	if err := os.WriteFile(filepath.Join(tempDir, configFileName), []byte(dataConfig), 0600); err != nil {
+	if err := os.WriteFile(filepath.Join(tempDir, configFileName), []byte(dataConfig), 0o600); err != nil {
 		return nil, fmt.Errorf("writing config file %q: %+v", configFileName, err)
 	}
 

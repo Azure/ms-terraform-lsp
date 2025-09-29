@@ -1,13 +1,14 @@
 package schema
 
 import (
-	"github.com/hashicorp/hcl/v2"
-	"github.com/hashicorp/hcl/v2/hclparse"
-	"github.com/zclconf/go-cty/cty"
 	"os"
 	"path/filepath"
 	"reflect"
 	"testing"
+
+	"github.com/hashicorp/hcl/v2"
+	"github.com/hashicorp/hcl/v2/hclparse"
+	"github.com/zclconf/go-cty/cty"
 )
 
 // hclStringToBody is a test helper to parse an HCL string into an hcl.Body
@@ -86,7 +87,7 @@ variable "enabled" {
 `
 	tmpDir := t.TempDir()
 	filePath := filepath.Join(tmpDir, "test.hcl")
-	err := os.WriteFile(filePath, []byte(hclContent), 0644)
+	err := os.WriteFile(filePath, []byte(hclContent), 0o644)
 	if err != nil {
 		t.Fatalf("Failed to write temp file: %v", err)
 	}

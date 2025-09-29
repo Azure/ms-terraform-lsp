@@ -3,11 +3,12 @@ package processor
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/Azure/ms-terraform-lsp/module-schema/schema"
 	"os"
 	"path/filepath"
 	"strings"
 	"testing"
+
+	"github.com/Azure/ms-terraform-lsp/module-schema/schema"
 )
 
 func TestProcessBatchOutput(t *testing.T) {
@@ -19,15 +20,15 @@ func TestProcessBatchOutput(t *testing.T) {
 	examplesDir := filepath.Join(tempDir, "examples")
 	readmesDir := filepath.Join(tempDir, "readmes")
 
-	err := os.MkdirAll(combinedVarDir, 0755)
+	err := os.MkdirAll(combinedVarDir, 0o755)
 	if err != nil {
 		t.Fatal(err)
 	}
-	err = os.MkdirAll(examplesDir, 0755)
+	err = os.MkdirAll(examplesDir, 0o755)
 	if err != nil {
 		t.Fatal(err)
 	}
-	err = os.MkdirAll(readmesDir, 0755)
+	err = os.MkdirAll(readmesDir, 0o755)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -155,21 +156,21 @@ This module supports:
 	for _, tc := range testCases {
 		// Create variables file
 		variablesFilePath := filepath.Join(combinedVarDir, fmt.Sprintf("%s_variables.tf", tc.objName))
-		err := os.WriteFile(variablesFilePath, []byte(tc.variableHCL), 0644)
+		err := os.WriteFile(variablesFilePath, []byte(tc.variableHCL), 0o644)
 		if err != nil {
 			t.Fatal(err)
 		}
 
 		// Create example file
 		exampleFilePath := filepath.Join(examplesDir, fmt.Sprintf("%s_example.tf", tc.objName))
-		err = os.WriteFile(exampleFilePath, []byte(tc.exampleHCL), 0644)
+		err = os.WriteFile(exampleFilePath, []byte(tc.exampleHCL), 0o644)
 		if err != nil {
 			t.Fatal(err)
 		}
 
 		// Create README file
 		readmeFilePath := filepath.Join(readmesDir, fmt.Sprintf("%s_README.md", tc.objName))
-		err = os.WriteFile(readmeFilePath, []byte(tc.readmeMD), 0644)
+		err = os.WriteFile(readmeFilePath, []byte(tc.readmeMD), 0o644)
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -236,15 +237,15 @@ func TestProcessBatchOutput_MissingFiles(t *testing.T) {
 	examplesDir := filepath.Join(tempDir, "examples")
 	readmesDir := filepath.Join(tempDir, "readmes")
 
-	err := os.MkdirAll(combinedVarDir, 0755)
+	err := os.MkdirAll(combinedVarDir, 0o755)
 	if err != nil {
 		t.Fatal(err)
 	}
-	err = os.MkdirAll(examplesDir, 0755)
+	err = os.MkdirAll(examplesDir, 0o755)
 	if err != nil {
 		t.Fatal(err)
 	}
-	err = os.MkdirAll(readmesDir, 0755)
+	err = os.MkdirAll(readmesDir, 0o755)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -257,7 +258,7 @@ func TestProcessBatchOutput_MissingFiles(t *testing.T) {
 }`
 
 	variablesFilePath := filepath.Join(combinedVarDir, "missing-files-test_variables.tf")
-	err = os.WriteFile(variablesFilePath, []byte(variableHCL), 0644)
+	err = os.WriteFile(variablesFilePath, []byte(variableHCL), 0o644)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -308,7 +309,7 @@ func TestProcessBatchOutput_SourceReplacement(t *testing.T) {
 	readmesDir := filepath.Join(tempDir, "readmes")
 
 	for _, dir := range []string{combinedVarDir, examplesDir, readmesDir} {
-		err := os.MkdirAll(dir, 0755)
+		err := os.MkdirAll(dir, 0o755)
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -352,7 +353,7 @@ func TestProcessBatchOutput_SourceReplacement(t *testing.T) {
 }`
 
 			variablesFilePath := filepath.Join(combinedVarDir, "source-test_variables.tf")
-			err := os.WriteFile(variablesFilePath, []byte(variableHCL), 0644)
+			err := os.WriteFile(variablesFilePath, []byte(variableHCL), 0o644)
 			if err != nil {
 				t.Fatal(err)
 			}
@@ -365,7 +366,7 @@ func TestProcessBatchOutput_SourceReplacement(t *testing.T) {
 }`, tc.sourceText)
 
 			exampleFilePath := filepath.Join(examplesDir, "source-test_example.tf")
-			err = os.WriteFile(exampleFilePath, []byte(exampleHCL), 0644)
+			err = os.WriteFile(exampleFilePath, []byte(exampleHCL), 0o644)
 			if err != nil {
 				t.Fatal(err)
 			}
@@ -405,7 +406,7 @@ func TestProcessBatchOutput_JSONOutput(t *testing.T) {
 	readmesDir := filepath.Join(tempDir, "readmes")
 
 	for _, dir := range []string{combinedVarDir, examplesDir, readmesDir} {
-		err := os.MkdirAll(dir, 0755)
+		err := os.MkdirAll(dir, 0o755)
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -419,7 +420,7 @@ func TestProcessBatchOutput_JSONOutput(t *testing.T) {
 }`
 
 	variablesFilePath := filepath.Join(combinedVarDir, "json-test_variables.tf")
-	err := os.WriteFile(variablesFilePath, []byte(variableHCL), 0644)
+	err := os.WriteFile(variablesFilePath, []byte(variableHCL), 0o644)
 	if err != nil {
 		t.Fatal(err)
 	}

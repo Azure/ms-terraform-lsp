@@ -4,12 +4,12 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+
 	lsctx "github.com/Azure/ms-terraform-lsp/internal/context"
 	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 )
 
-type TelemetryCommand struct {
-}
+type TelemetryCommand struct{}
 
 func (t TelemetryCommand) Handle(ctx context.Context, arguments []json.RawMessage) (interface{}, error) {
 	telemetrySender, err := lsctx.Telemetry(ctx)

@@ -48,7 +48,6 @@ func ProcessMarkdown(providerDir string) (map[string]*model.ResourceDoc, error) 
 			}
 			return nil
 		})
-
 		if err != nil {
 			return fmt.Errorf("error walking through markdown directory: %v", err)
 		}

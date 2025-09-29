@@ -2,11 +2,12 @@ package parser
 
 import (
 	"fmt"
+	"regexp"
+	"strings"
+
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
 	"github.com/zclconf/go-cty/cty"
-	"regexp"
-	"strings"
 )
 
 func ToLiteral(expression hclsyntax.Expression) *string {
