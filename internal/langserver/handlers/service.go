@@ -66,7 +66,7 @@ func (svc *service) Assigner() (jrpc2.Assigner, error) {
 
 	err := session.Prepare()
 	if err != nil {
-		return nil, fmt.Errorf("Unable to prepare session: %w", err)
+		return nil, fmt.Errorf("unable to prepare session: %w", err)
 	}
 
 	svc.telemetry = &telemetry.NoopSender{Logger: svc.logger}

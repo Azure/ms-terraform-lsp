@@ -22,10 +22,7 @@ func (a AzureRMResource) ResourceDocumentation(resourceType string) string {
 	}
 
 	blockType := parts[0]
-	isDataSource := false
-	if blockType == "data" {
-		isDataSource = true
-	}
+	isDataSource := blockType == "data"
 
 	content, err := provider_schema.GetResourceContent(parts[1], isDataSource)
 	if err != nil {
@@ -43,10 +40,7 @@ func (a AzureRMResource) ListProperties(blockPath string) []Property {
 	blockType := parts[0]
 	objName := parts[1]
 
-	isDataSource := false
-	if blockType == "data" {
-		isDataSource = true
-	}
+	isDataSource := blockType == "data"
 
 	path := strings.Join(parts[2:], ".")
 
@@ -73,10 +67,7 @@ func (a AzureRMResource) GetProperty(propertyPath string) *Property {
 	}
 	objName := parts[1]
 
-	isDataSource := false
-	if parts[0] == "data" {
-		isDataSource = true
-	}
+	isDataSource := parts[0] == "data"
 
 	path := strings.Join(parts[2:], ".")
 

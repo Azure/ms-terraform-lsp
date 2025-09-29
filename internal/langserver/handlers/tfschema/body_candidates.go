@@ -2,6 +2,7 @@ package tfschema
 
 import (
 	"fmt"
+
 	"github.com/Azure/ms-terraform-lsp/internal/langserver/schema"
 	ilsp "github.com/Azure/ms-terraform-lsp/internal/lsp"
 	"github.com/Azure/ms-terraform-lsp/internal/parser"
@@ -29,11 +30,14 @@ func keyCandidates(props []schema.Property, r lsp.Range, parentNode *parser.HclN
 			sortText = fmt.Sprintf("0%s", content)
 		}
 
-		keyPart := fmt.Sprintf(`%s =`, content)
-		if parentNode.KeyValueFormat == parser.QuotedKeyEqualValue {
+		var keyPart string
+		switch parentNode.KeyValueFormat {
+		case parser.QuotedKeyEqualValue:
 			keyPart = fmt.Sprintf(`"%s" =`, content)
-		} else if parentNode.KeyValueFormat == parser.QuotedKeyColonValue {
+		case parser.QuotedKeyColonValue:
 			keyPart = fmt.Sprintf(`"%s":`, content)
+		default:
+			keyPart = fmt.Sprintf(`%s =`, content)
 		}
 
 		switch prop.Type {
@@ -87,11 +91,14 @@ func requiredPropertiesCandidates(propertySets []schema.PropertySet, r lsp.Range
 		newText := ""
 		index := 1
 		for _, prop := range props {
-			keyPart := fmt.Sprintf(`%s =`, prop.Name)
-			if parentNode.KeyValueFormat == parser.QuotedKeyEqualValue {
+			var keyPart string
+			switch parentNode.KeyValueFormat {
+			case parser.QuotedKeyEqualValue:
 				keyPart = fmt.Sprintf(`"%s" =`, prop.Name)
-			} else if parentNode.KeyValueFormat == parser.QuotedKeyColonValue {
+			case parser.QuotedKeyColonValue:
 				keyPart = fmt.Sprintf(`"%s":`, prop.Name)
+			default:
+				keyPart = fmt.Sprintf(`%s =`, prop.Name)
 			}
 
 			if len(prop.Value) != 0 {

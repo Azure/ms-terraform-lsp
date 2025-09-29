@@ -16,7 +16,6 @@ import (
 	"github.com/Azure/aztfmigrate/helper"
 	"github.com/Azure/aztfmigrate/tf"
 	"github.com/Azure/aztfmigrate/types"
-	context2 "github.com/Azure/ms-terraform-lsp/internal/context"
 	lsctx "github.com/Azure/ms-terraform-lsp/internal/context"
 	ilsp "github.com/Azure/ms-terraform-lsp/internal/lsp"
 	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
@@ -45,17 +44,17 @@ func (c AztfMigrateCommand) Handle(ctx context.Context, arguments []json.RawMess
 		}
 	}
 
-	telemetrySender, err := context2.Telemetry(ctx)
+	telemetrySender, err := lsctx.Telemetry(ctx)
 	if err != nil {
 		return nil, err
 	}
 
-	clientCaller, err := context2.ClientCaller(ctx)
+	clientCaller, err := lsctx.ClientCaller(ctx)
 	if err != nil {
 		return nil, err
 	}
 
-	clientNotifier, err := context2.ClientNotifier(ctx)
+	clientNotifier, err := lsctx.ClientNotifier(ctx)
 	if err != nil {
 		return nil, err
 	}
@@ -347,13 +346,13 @@ func (c AztfMigrateCommand) Handle(ctx context.Context, arguments []json.RawMess
 }
 
 func reportProgress(ctx context.Context, message string, percentage uint32) {
-	clientCaller, err := context2.ClientCaller(ctx)
+	clientCaller, err := lsctx.ClientCaller(ctx)
 	if err != nil {
 		log.Printf("[ERROR] failed to get client caller: %+v", err)
 		return
 	}
 
-	clientNotifier, err := context2.ClientNotifier(ctx)
+	clientNotifier, err := lsctx.ClientNotifier(ctx)
 	if err != nil {
 		log.Printf("[ERROR] failed to get client notifier: %+v", err)
 		return

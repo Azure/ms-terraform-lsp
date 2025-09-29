@@ -100,7 +100,7 @@ func (s *session) Shutdown(req *jrpc2.Request) error {
 
 func (s *session) Exit() error {
 	if !s.isExitable() {
-		return fmt.Errorf("Cannot exit as session is %s", s.State())
+		return fmt.Errorf("cannot exit as session is %s", s.State())
 	}
 	s.exitFunc()
 
