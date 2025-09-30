@@ -1,0 +1,78 @@
+version: "2"
+run:
+  modules-download-mode: vendor
+linters:
+  default: none
+  enable:
+    - asasalint
+    - asciicheck
+    - bidichk
+    - decorder
+    - dupword
+    - durationcheck
+    - errcheck
+    - gocritic
+    - govet
+    - ineffassign
+    - misspell
+    - nilerr
+    - prealloc
+    - predeclared
+    - reassign
+    - staticcheck
+    - tagalign
+    - unconvert
+    - unparam
+    - unused
+    - wastedassign
+    - whitespace
+  settings:
+    errcheck:
+      exclude-functions:
+        - io.Close
+    misspell:
+      ignore-rules:
+        - hdinsight
+        - exportfs
+    nakedret:
+      max-func-lines: 30
+    predeclared:
+      ignore:
+        - new
+        - min
+        - max
+    tagalign:
+      sort: true
+      order:
+        - json
+        - tfschema
+        - computed
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    paths:
+      - internal/services/.*/.*_gen.go$
+      - /sdk/
+      - third_party$
+      - builtin$
+      - examples$
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
+formatters:
+  enable:
+    - gofmt
+    - gofumpt
+    - goimports
+  exclusions:
+    generated: lax
+    paths:
+      - internal/services/.*/.*_gen.go$
+      - /sdk/
+      - third_party$
+      - builtin$
+      - examples$

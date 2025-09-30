@@ -257,7 +257,7 @@ func (c AztfAuthorizeCommand) Handle(ctx context.Context, arguments []json.RawMe
 
 	// creating temp workspace
 	tempDir := filepath.Join(workingDirectory, fmt.Sprintf("%v_%v", tempAuthorizeFolderNamePrefix, timeNow))
-	if err := os.MkdirAll(tempDir, 0750); err != nil {
+	if err := os.MkdirAll(tempDir, 0o750); err != nil {
 		return nil, fmt.Errorf("failed to create temp workspace %q, please check the permission: %w", tempDir, err)
 	}
 	defer func() {
@@ -270,7 +270,7 @@ func (c AztfAuthorizeCommand) Handle(ctx context.Context, arguments []json.RawMe
 	reportAuthorizeCommandProgress(ctx, fmt.Sprintf("permissions: %+v", permissions), 60)
 
 	if generateForMissing {
-		existingPerm, err := getExistingPermission(ctx, params, tempDir)
+		existingPerm, err := getExistingPermission(ctx, tempDir)
 		if err != nil {
 			return nil, fmt.Errorf("reading existing permissions: %+v", err)
 		}
@@ -374,7 +374,7 @@ func reportAuthorizeCommandProgress(ctx context.Context, message string, percent
 	}
 }
 
-func getExistingPermission(ctx context.Context, params lsp.CodeActionParams, tempDir string) (*[]permission, error) {
+func getExistingPermission(ctx context.Context, tempDir string) (*[]permission, error) {
 	dataConfig := `
 terraform {
   required_providers {
@@ -406,7 +406,7 @@ output "permissions" {
 }
 `
 
-	if err := os.WriteFile(filepath.Join(tempDir, configFileName), []byte(dataConfig), 0600); err != nil {
+	if err := os.WriteFile(filepath.Join(tempDir, configFileName), []byte(dataConfig), 0o600); err != nil {
 		return nil, fmt.Errorf("writing config file %q: %+v", configFileName, err)
 	}
 
@@ -434,7 +434,6 @@ output "permissions" {
 		if err := json.Unmarshal(jsonBytes, &permissions); err != nil {
 			return nil, fmt.Errorf("unmarshalling permissions output: %+v", err)
 		}
-
 	}
 
 	return &permissions, nil
@@ -569,7 +568,13 @@ func matchPermissions(targetActions map[string]struct{}) (*permission, error) {
 	dataActions := make(map[string]struct{}, 0)
 
 	for aa := range targetActions {
-		rp := aa[:strings.Index(aa, "/")]
+		// safeguard: strings.Index can return -1 if '/' not present
+		i := strings.Index(aa, "/")
+		if i == -1 {
+			// malformed action, skip
+			continue
+		}
+		rp := aa[:i]
 		values, ok := azProviderOperationCache[normalizeName(rp)]
 		if !ok {
 			continue

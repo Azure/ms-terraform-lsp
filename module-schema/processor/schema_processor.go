@@ -2,6 +2,7 @@ package processor
 
 import (
 	"fmt"
+
 	"github.com/Azure/ms-terraform-lsp/module-schema/schema"
 	"github.com/zclconf/go-cty/cty"
 )

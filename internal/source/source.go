@@ -40,7 +40,7 @@ func MakeSourceLines(filename string, s []byte) []Line {
 		lastRng = sc.Range()
 	}
 
-	// Account for the last (virtual) user-percieved line
+	// Account for the last (virtual) user-perceived line
 	ret = append(ret, sourceLine{
 		content: []byte{},
 		rng: hcl.Range{

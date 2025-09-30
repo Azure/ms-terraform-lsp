@@ -48,7 +48,7 @@ func (s *session) Initialize(req *jrpc2.Request) error {
 		if s.IsInitializedUnconfirmed() {
 			return SessionAlreadyInitializedErr(s.initializeReq.ID())
 		}
-		return fmt.Errorf("session is not ready to be initalized. State: %s",
+		return fmt.Errorf("session is not ready to be initialized. State: %s",
 			s.state)
 	}
 
@@ -73,7 +73,7 @@ func (s *session) CheckInitializationIsConfirmed() error {
 func (s *session) ConfirmInitialization(req *jrpc2.Request) error {
 	if s.state != stateInitializedUnconfirmed {
 		if s.isInitializationConfirmed() {
-			return fmt.Errorf("session was already confirmed as initalized at %s via request %s",
+			return fmt.Errorf("session was already confirmed as initialized at %s via request %s",
 				s.initializedReqTime, s.initializedReq.ID())
 		}
 		return fmt.Errorf("session is not ready to be confirmed as initialized (%s)",
@@ -100,7 +100,7 @@ func (s *session) Shutdown(req *jrpc2.Request) error {
 
 func (s *session) Exit() error {
 	if !s.isExitable() {
-		return fmt.Errorf("Cannot exit as session is %s", s.State())
+		return fmt.Errorf("cannot exit as session is %s", s.State())
 	}
 	s.exitFunc()
 

@@ -1,14 +1,15 @@
 package processor
 
 import (
-	"github.com/Azure/ms-terraform-lsp/module-schema/schema"
-	"github.com/hashicorp/hcl/v2"
-	"github.com/hashicorp/hcl/v2/hclparse"
-	"github.com/zclconf/go-cty/cty"
 	"os"
 	"path/filepath"
 	"reflect"
 	"testing"
+
+	"github.com/Azure/ms-terraform-lsp/module-schema/schema"
+	"github.com/hashicorp/hcl/v2"
+	"github.com/hashicorp/hcl/v2/hclparse"
+	"github.com/zclconf/go-cty/cty"
 )
 
 // TestConvertAttrDefaultToCtyValue tests the ConvertAttrDefaultToCtyValue function

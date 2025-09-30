@@ -55,7 +55,8 @@ func TestExecuteCommand_basic(t *testing.T) {
 
 	ls.CallAndExpectResponse(t, &langserver.CallRequest{
 		Method:    "workspace/executeCommand",
-		ReqParams: string(reqParamsString)},
+		ReqParams: string(reqParamsString),
+	},
 		fmt.Sprintf(`{
 		"jsonrpc": "2.0",
 		"id": 2,
@@ -106,7 +107,8 @@ func TestExecuteCommand_resourceGroup(t *testing.T) {
 
 	ls.CallAndExpectResponse(t, &langserver.CallRequest{
 		Method:    "workspace/executeCommand",
-		ReqParams: string(reqParamsString)},
+		ReqParams: string(reqParamsString),
+	},
 		fmt.Sprintf(`{
 		"jsonrpc": "2.0",
 		"id": 2,
@@ -157,7 +159,8 @@ func TestExecuteCommand_nestedResource(t *testing.T) {
 
 	ls.CallAndExpectResponse(t, &langserver.CallRequest{
 		Method:    "workspace/executeCommand",
-		ReqParams: string(reqParamsString)},
+		ReqParams: string(reqParamsString),
+	},
 		fmt.Sprintf(`{
 		"jsonrpc": "2.0",
 		"id": 2,
@@ -208,7 +211,8 @@ func TestExecuteCommand_armTemplate(t *testing.T) {
 
 	ls.CallAndExpectResponse(t, &langserver.CallRequest{
 		Method:    "workspace/executeCommand",
-		ReqParams: string(reqParamsString)},
+		ReqParams: string(reqParamsString),
+	},
 		fmt.Sprintf(`{
 		"jsonrpc": "2.0",
 		"id": 2,

@@ -161,7 +161,7 @@ func ParseResourceJson(content string) (*hclwrite.Block, error) {
 	}
 	if def != nil {
 		writeOnlyBody := def.GetWriteOnly(NormalizeObject(bodyMap))
-		ok := false
+		var ok bool
 		bodyMap, ok = writeOnlyBody.(map[string]interface{})
 		if !ok {
 			log.Printf("[ERROR] unable to get write only body, result: %v", writeOnlyBody)

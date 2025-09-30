@@ -57,5 +57,5 @@ func Clean(markdown string) string {
 		markdown = r.re.ReplaceAllString(markdown, r.sub)
 	}
 
-	return string(markdown)
+	return markdown
 }

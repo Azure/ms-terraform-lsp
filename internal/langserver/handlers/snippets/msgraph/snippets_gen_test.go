@@ -75,7 +75,7 @@ var snippetMap = map[string]Snippet{
 	}
 
 	content = fmt.Sprintf(format, content)
-	err = os.WriteFile("gen.go", []byte(content), 0644)
+	err = os.WriteFile("gen.go", []byte(content), 0o644)
 	if err != nil {
 		t.Fatal(err)
 	}

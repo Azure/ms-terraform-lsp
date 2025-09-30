@@ -8,7 +8,8 @@ import (
 )
 
 func WithSignalCancel(ctx context.Context, l *log.Logger, sigs ...os.Signal) (
-	context.Context, context.CancelFunc) {
+	context.Context, context.CancelFunc,
+) {
 	ctx, cancelFunc := context.WithCancel(ctx)
 
 	sigChan := make(chan os.Signal, 1)

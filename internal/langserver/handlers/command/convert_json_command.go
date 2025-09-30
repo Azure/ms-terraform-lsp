@@ -11,8 +11,7 @@ import (
 
 var pluralizeClient = pluralize.NewClient()
 
-type ConvertJsonCommand struct {
-}
+type ConvertJsonCommand struct{}
 
 var _ CommandHandler = &ConvertJsonCommand{}
 
@@ -38,7 +37,7 @@ func (c ConvertJsonCommand) Handle(ctx context.Context, arguments []json.RawMess
 		return nil, fmt.Errorf("unable to unmarshal JSON content: %w", err)
 	}
 
-	result := ""
+	var result string
 	if model["$schema"] != nil {
 		telemetrySender.SendEvent(ctx, "ConvertJsonToAzapi", map[string]interface{}{
 			"status": "started",

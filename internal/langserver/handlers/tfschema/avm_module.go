@@ -2,15 +2,15 @@ package tfschema
 
 import (
 	"fmt"
+	"strings"
+
 	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
 	provider_schema "github.com/Azure/ms-terraform-lsp/provider-schema"
-	"strings"
 )
 
 var _ Resource = &AVMModule{}
 
-type AVMModule struct {
-}
+type AVMModule struct{}
 
 // GetProperty input: module.Azure/avm-ptn-aiml-ai-foundry/azurerm
 func (m AVMModule) GetProperty(propertyName string) *Property {
@@ -75,7 +75,7 @@ func (m AVMModule) ListProperties(blockPath string) []Property {
 		return nil
 	}
 
-	var items []Property
+	items := make([]Property, 0, len(props))
 	for _, p := range props {
 		content, prop, err := provider_schema.GetModuleAttributeContent(moduleName, p.AttributePath)
 		if err != nil || prop == nil {

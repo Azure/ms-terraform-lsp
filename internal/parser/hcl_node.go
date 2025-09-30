@@ -381,7 +381,7 @@ func updateStateValue(st *State, token hclsyntax.Token) {
 	if st.Value == nil {
 		st.Value = utils.String(string(token.Bytes))
 	} else {
-		*st.Value = *st.Value + string(token.Bytes)
+		*st.Value += string(token.Bytes)
 	}
 
 	st.ValueRange = RangeOver(st.ValueRange, token.Range)

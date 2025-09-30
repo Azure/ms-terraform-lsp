@@ -163,8 +163,11 @@ type ARMTemplateModel struct {
 }
 
 func buildResourceId(name, parentId, resourceType string) string {
-	azureResourceType := resourceType[:strings.Index(resourceType, "@")]
-	azureResourceId := ""
+	azureResourceType := resourceType
+	if i := strings.Index(resourceType, "@"); i >= 0 {
+		azureResourceType = resourceType[:i]
+	}
+	var azureResourceId string
 	switch {
 	case strings.Count(azureResourceType, "/") == 1:
 		// build azure resource id

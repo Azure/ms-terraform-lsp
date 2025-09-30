@@ -12,8 +12,7 @@ import (
 
 var _ Resource = &AzureRMResource{}
 
-type AzureRMResource struct {
-}
+type AzureRMResource struct{}
 
 func (a AzureRMResource) ResourceDocumentation(resourceType string) string {
 	parts := strings.Split(resourceType, ".")
@@ -22,10 +21,7 @@ func (a AzureRMResource) ResourceDocumentation(resourceType string) string {
 	}
 
 	blockType := parts[0]
-	isDataSource := false
-	if blockType == "data" {
-		isDataSource = true
-	}
+	isDataSource := blockType == "data"
 
 	content, err := provider_schema.GetResourceContent(parts[1], isDataSource)
 	if err != nil {
@@ -43,10 +39,7 @@ func (a AzureRMResource) ListProperties(blockPath string) []Property {
 	blockType := parts[0]
 	objName := parts[1]
 
-	isDataSource := false
-	if blockType == "data" {
-		isDataSource = true
-	}
+	isDataSource := blockType == "data"
 
 	path := strings.Join(parts[2:], ".")
 
@@ -55,7 +48,7 @@ func (a AzureRMResource) ListProperties(blockPath string) []Property {
 		return nil
 	}
 
-	var items []Property
+	items := make([]Property, 0, len(props))
 	for _, p := range props {
 		content, prop, err := provider_schema.GetAttributeContent(objName, p.AttributePath, isDataSource)
 		if err != nil || prop == nil {
@@ -73,10 +66,7 @@ func (a AzureRMResource) GetProperty(propertyPath string) *Property {
 	}
 	objName := parts[1]
 
-	isDataSource := false
-	if parts[0] == "data" {
-		isDataSource = true
-	}
+	isDataSource := parts[0] == "data"
 
 	path := strings.Join(parts[2:], ".")
 
@@ -120,7 +110,8 @@ func (a AzureRMResource) Match(name string) bool {
 func ToProperty(p *schema.SchemaAttribute, content string) Property {
 	insertText := p.Name
 	propType := ""
-	if p.AttributeType.IsPrimitiveType() {
+	switch {
+	case p.AttributeType.IsPrimitiveType():
 		switch p.AttributeType {
 		case cty.String:
 			insertText = fmt.Sprintf(`%s = "$0"`, p.Name)
@@ -135,7 +126,7 @@ func ToProperty(p *schema.SchemaAttribute, content string) Property {
 			insertText = fmt.Sprintf(`%s = $0`, p.Name)
 			propType = "object"
 		}
-	} else if p.AttributeType.IsMapType() || p.AttributeType.IsObjectType() {
+	case p.AttributeType.IsMapType() || p.AttributeType.IsObjectType():
 		// invalid nesting mode
 		if p.NestingMode == 0 {
 			insertText = fmt.Sprintf(`%s = { $0 }`, p.Name)
@@ -143,7 +134,7 @@ func ToProperty(p *schema.SchemaAttribute, content string) Property {
 			insertText = fmt.Sprintf(`%s {$0}`, p.Name)
 		}
 		propType = "object"
-	} else if p.AttributeType.IsListType() || p.AttributeType.IsSetType() {
+	case p.AttributeType.IsListType() || p.AttributeType.IsSetType():
 		insertText = fmt.Sprintf(`%s = [$0]`, p.Name)
 		propType = "list"
 	}

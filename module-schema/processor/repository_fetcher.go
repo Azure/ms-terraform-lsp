@@ -4,13 +4,14 @@ import (
 	"context"
 	"encoding/base64"
 	"fmt"
-	"github.com/Azure/ms-terraform-lsp/module-schema/registry"
 	"log"
 	"os"
 	"path"
 	"path/filepath"
 	"regexp"
 	"strings"
+
+	"github.com/Azure/ms-terraform-lsp/module-schema/registry"
 
 	"github.com/google/go-github/v63/github"
 	"golang.org/x/oauth2"
@@ -67,7 +68,7 @@ func createOutputDirectories() error {
 	directories := []string{variablesOutputDir, examplesOutputDir, readmesOutputDir}
 
 	for _, dir := range directories {
-		if err := os.MkdirAll(dir, 0755); err != nil {
+		if err := os.MkdirAll(dir, 0o755); err != nil {
 			return fmt.Errorf("error creating output directory %s: %w", dir, err)
 		}
 	}
@@ -245,7 +246,7 @@ func writeFailedExampleReposReport(failedExampleRepos []string) error {
 	if len(failedExampleRepos) > 0 {
 		failedReposFile := filepath.Join(outputDir, "failed_example_repos.txt")
 		failedContent := strings.Join(failedExampleRepos, "\n")
-		err := os.WriteFile(failedReposFile, []byte(failedContent), 0644)
+		err := os.WriteFile(failedReposFile, []byte(failedContent), 0o644)
 		if err != nil {
 			return fmt.Errorf("error writing failed repos file: %w", err)
 		}
@@ -316,7 +317,7 @@ func fetchAndSaveFile(ctx context.Context, client *github.Client, org string, re
 		return fmt.Errorf("error decoding content for '%s': %w", filePath, err)
 	}
 
-	err = os.WriteFile(outputFilePath, decodedContent, 0644)
+	err = os.WriteFile(outputFilePath, decodedContent, 0o644)
 	if err != nil {
 		return fmt.Errorf("error writing file '%s': %w", outputFilePath, err)
 	}

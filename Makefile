@@ -1,4 +1,5 @@
 fmt:
+	find . -name '*.go' | grep -v vendor | xargs gofumpt -w
 	find . -name '*.go' | grep -v vendor | xargs gofmt -s -w
 
 depscheck:

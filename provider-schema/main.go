@@ -2,10 +2,11 @@ package provider_schema
 
 import (
 	"fmt"
-	"github.com/Azure/ms-terraform-lsp/provider-schema/processors"
 	"os"
 	"os/exec"
 	"path/filepath"
+
+	"github.com/Azure/ms-terraform-lsp/provider-schema/processors"
 )
 
 func GenerateProviderSchema(providerPath, gitBranch string) {

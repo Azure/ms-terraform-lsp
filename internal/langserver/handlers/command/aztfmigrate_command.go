@@ -16,7 +16,6 @@ import (
 	"github.com/Azure/aztfmigrate/helper"
 	"github.com/Azure/aztfmigrate/tf"
 	"github.com/Azure/aztfmigrate/types"
-	context2 "github.com/Azure/ms-terraform-lsp/internal/context"
 	lsctx "github.com/Azure/ms-terraform-lsp/internal/context"
 	ilsp "github.com/Azure/ms-terraform-lsp/internal/lsp"
 	lsp "github.com/Azure/ms-terraform-lsp/internal/protocol"
@@ -27,12 +26,13 @@ import (
 	"github.com/hashicorp/terraform-exec/tfexec"
 )
 
-const tempFolderName = "aztfmigrate_temp"
-const importFileName = "imports.tf"
-const planFileName = "planfile"
+const (
+	tempFolderName = "aztfmigrate_temp"
+	importFileName = "imports.tf"
+	planFileName   = "planfile"
+)
 
-type AztfMigrateCommand struct {
-}
+type AztfMigrateCommand struct{}
 
 var _ CommandHandler = &AztfMigrateCommand{}
 
@@ -45,17 +45,17 @@ func (c AztfMigrateCommand) Handle(ctx context.Context, arguments []json.RawMess
 		}
 	}
 
-	telemetrySender, err := context2.Telemetry(ctx)
+	telemetrySender, err := lsctx.Telemetry(ctx)
 	if err != nil {
 		return nil, err
 	}
 
-	clientCaller, err := context2.ClientCaller(ctx)
+	clientCaller, err := lsctx.ClientCaller(ctx)
 	if err != nil {
 		return nil, err
 	}
 
-	clientNotifier, err := context2.ClientNotifier(ctx)
+	clientNotifier, err := lsctx.ClientNotifier(ctx)
 	if err != nil {
 		return nil, err
 	}
@@ -79,7 +79,7 @@ func (c AztfMigrateCommand) Handle(ctx context.Context, arguments []json.RawMess
 	// creating temp workspace
 	workingDirectory := getWorkingDirectory(string(params.TextDocument.URI), runtime.GOOS)
 	tempDir := filepath.Join(workingDirectory, tempFolderName)
-	if err := os.MkdirAll(tempDir, 0750); err != nil {
+	if err := os.MkdirAll(tempDir, 0o750); err != nil {
 		return nil, fmt.Errorf("failed to create temp workspace %q, please check the permission: %w", tempDir, err)
 	}
 	defer func() {
@@ -237,7 +237,7 @@ func (c AztfMigrateCommand) Handle(ctx context.Context, arguments []json.RawMess
 		return nil, err
 	}
 
-	if err = os.WriteFile(filepath.Join(tempDir, importFileName), []byte(cmd.ImportConfig(resources, helper.FindHclBlock(workingDirectory, "terraform", nil))), 0600); err != nil {
+	if err = os.WriteFile(filepath.Join(tempDir, importFileName), []byte(cmd.ImportConfig(resources, helper.FindHclBlock(workingDirectory, "terraform", nil))), 0o600); err != nil {
 		return nil, err
 	}
 
@@ -347,13 +347,13 @@ func (c AztfMigrateCommand) Handle(ctx context.Context, arguments []json.RawMess
 }
 
 func reportProgress(ctx context.Context, message string, percentage uint32) {
-	clientCaller, err := context2.ClientCaller(ctx)
+	clientCaller, err := lsctx.ClientCaller(ctx)
 	if err != nil {
 		log.Printf("[ERROR] failed to get client caller: %+v", err)
 		return
 	}
 
-	clientNotifier, err := context2.ClientNotifier(ctx)
+	clientNotifier, err := lsctx.ClientNotifier(ctx)
 	if err != nil {
 		log.Printf("[ERROR] failed to get client notifier: %+v", err)
 		return
