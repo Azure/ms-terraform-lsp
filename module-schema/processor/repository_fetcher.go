@@ -19,7 +19,7 @@ import (
 
 const (
 	githubOrg       = "Azure"
-	repoNamePattern = "^terraform-azurerm-avm-.*$" // Adjust this regex to match your repository naming convention
+	repoNamePattern = "^terraform-(?:azurerm|azure)-avm-.*$" // Adjust this regex to match your repository naming convention
 	outputDir       = "fetched_hcl_files"          // Directory to save fetched files
 )
 
