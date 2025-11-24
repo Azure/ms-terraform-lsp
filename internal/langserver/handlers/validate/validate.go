@@ -138,7 +138,9 @@ func Validate(hclNode *parser.HclNode, typeBase *types.TypeBase) hcl.Diagnostics
 		for key, value := range hclNode.Children {
 			if def, ok := t.BaseProperties[key]; ok {
 				if def.IsReadOnly() {
-					diags = append(diags, newDiagnostic(ErrorShouldNotDefineReadOnly(key), value.KeyRange))
+					if !def.IsRequired() {
+						diags = append(diags, newDiagnostic(ErrorShouldNotDefineReadOnly(key), value.KeyRange))
+					}
 					continue
 				}
 				if def.Type != nil {
@@ -151,7 +153,7 @@ func Validate(hclNode *parser.HclNode, typeBase *types.TypeBase) hcl.Diagnostics
 
 		// check required base properties
 		for key, value := range t.BaseProperties {
-			if value.IsRequired() && hclNode.Children[key] == nil {
+			if value.IsRequired() && !value.IsReadOnly() && hclNode.Children[key] == nil {
 				diags = append(diags, newDiagnostic(ErrorShouldDefine(key), hclNode.KeyRange))
 			}
 		}
@@ -202,7 +204,9 @@ func Validate(hclNode *parser.HclNode, typeBase *types.TypeBase) hcl.Diagnostics
 		for key, value := range hclNode.Children {
 			if def, ok := t.Properties[key]; ok {
 				if def.IsReadOnly() {
-					diags = append(diags, newDiagnostic(ErrorShouldNotDefineReadOnly(key), value.KeyRange))
+					if !def.IsRequired() {
+						diags = append(diags, newDiagnostic(ErrorShouldNotDefineReadOnly(key), value.KeyRange))
+					}
 					continue
 				}
 				if def.Type != nil {
@@ -223,7 +227,7 @@ func Validate(hclNode *parser.HclNode, typeBase *types.TypeBase) hcl.Diagnostics
 
 		// check properties required in schema, but not in body
 		for key, value := range t.Properties {
-			if value.IsRequired() && hclNode.Children[key] == nil {
+			if value.IsRequired() && !value.IsReadOnly() && hclNode.Children[key] == nil {
 				// skip name in body
 				if hclNode.Key == "dummy" && (key == "name" || key == "location") {
 					continue
