@@ -2,6 +2,7 @@
 
 Enhancements:
 - Improve validation logic: ignore `readonly` + `required` properties if missing or defined.
+- Update bicep types to https://github.com/ms-henglu/bicep-types-az/commit/c41a40c0d2f9fa78b7ea0901b6634a13dc8e8b33
 
 
 ## v0.7.0
