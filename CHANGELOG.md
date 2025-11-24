@@ -1,3 +1,9 @@
+## v0.8.0
+
+Enhancements:
+- Improve validation logic: ignore `readonly` + `required` properties if missing or defined.
+
+
 ## v0.7.0
 
 Enhancements:
