@@ -3,6 +3,7 @@
 Enhancements:
 - Improve validation logic: ignore `readonly` + `required` properties if missing or defined.
 - Update bicep types to https://github.com/ms-henglu/bicep-types-az/commit/c41a40c0d2f9fa78b7ea0901b6634a13dc8e8b33
+- Update aztfmigrate to v2.8.0 to support azurerm v4.54.0 resources.
 
 
 ## v0.7.0
