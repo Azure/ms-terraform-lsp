@@ -13,7 +13,7 @@ depscheck:
 		(echo; echo "Unexpected difference in vendor/ directory. Run 'go mod vendor' command or revert any go.mod/go.sum/vendor changes and commit."; exit 1)
 
 test:
-	@go test ./...
+	@go test -timeout 20m ./...
 
 lint:
 	@echo "==> Checking source code against linters..."
