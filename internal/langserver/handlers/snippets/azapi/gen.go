@@ -883,6 +883,7 @@ EOT
 			},
 			{
 				Name: "body",
+				// #nosec G101 -- placeholder value, not a real credential
 				Value: `body = {
     properties = {
       clientId     = "00000000000000000000000000000000"

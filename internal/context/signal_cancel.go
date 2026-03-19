@@ -10,7 +10,7 @@ import (
 func WithSignalCancel(ctx context.Context, l *log.Logger, sigs ...os.Signal) (
 	context.Context, context.CancelFunc,
 ) {
-	ctx, cancelFunc := context.WithCancel(ctx)
+	ctx, cancelFunc := context.WithCancel(ctx) // #nosec G118 -- cancelFunc is called in the goroutine and the returned function
 
 	sigChan := make(chan os.Signal, 1)
 	signal.Notify(sigChan, sigs...)
