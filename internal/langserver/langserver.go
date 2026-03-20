@@ -96,6 +96,7 @@ func (ls *langServer) StartAndWait(reader io.Reader, writer io.WriteCloser) erro
 	// Wrap waiter with a context so that we can cancel it here
 	// after the service is cancelled (and srv.Wait returns)
 	ctx, cancelFunc := context.WithCancel(ls.srvCtx)
+	defer cancelFunc()
 	go func() {
 		srv.Wait()
 		cancelFunc()

@@ -5,7 +5,7 @@ go 1.24.0
 toolchain go1.24.5
 
 require (
-	github.com/Azure/aztfmigrate v1.15.1-0.20251203065211-84813fc46e57
+	github.com/Azure/aztfmigrate v1.15.1-0.20260319032455-fc71ecf01eef
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.19.1
 	github.com/apparentlymart/go-textseg v1.0.0
 	github.com/creachadair/jrpc2 v0.32.0
@@ -103,7 +103,7 @@ require (
 	github.com/huandu/xstrings v1.5.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/magodo/armid v0.0.0-20250724105512-5cedfa9dd8e2 // indirect
-	github.com/magodo/aztft v0.3.1-0.20251115232612-bd81c936d4f1 // indirect
+	github.com/magodo/aztft v0.3.1-0.20260219230708-1e51977ce1cb // indirect
 	github.com/magodo/tfadd v0.10.1-0.20240902124619-bd18a56f410d // indirect
 	github.com/magodo/tfpluginschema v0.0.0-20240902090353-0525d7d8c1c2 // indirect
 	github.com/magodo/tfstate v0.0.0-20241016043929-2c95177bf0e6 // indirect

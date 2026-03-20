@@ -67,6 +67,7 @@ func NewLangServerMock(t *testing.T, sf session.SessionFactory) *langServerMock 
 func (lsm *langServerMock) Stop() {
 	lsm.logger.Println("Stopping mock server ...")
 	lsm.rpcSrv.Stop()
+	lsm.srvStopFunc()
 	lsm.stopFuncCalled = true
 }
 

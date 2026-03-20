@@ -3,6 +3,7 @@ package azapi
 import (
 	"fmt"
 	"os"
+	"sort"
 	"strings"
 
 	"github.com/hashicorp/hcl/v2"
@@ -52,7 +53,17 @@ func parseSnippet(filepath string) (*Snippet, error) {
 	typeValue := ""
 	fields := make([]Field, 0)
 	index := 1
+
+	// Sort attributes by source position for deterministic placeholder indices
+	sortedAttrs := make([]*hclsyntax.Attribute, 0, len(lastBlock.Body.Attributes))
 	for _, attr := range lastBlock.Body.Attributes {
+		sortedAttrs = append(sortedAttrs, attr)
+	}
+	sort.Slice(sortedAttrs, func(i, j int) bool {
+		return sortedAttrs[i].SrcRange.Start.Byte < sortedAttrs[j].SrcRange.Start.Byte
+	})
+
+	for _, attr := range sortedAttrs {
 		if attr.Name == "type" {
 			typeValue = strings.Trim(stringValue(data, attr.Expr.Range()), `"`)
 		}

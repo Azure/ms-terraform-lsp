@@ -2,6 +2,7 @@
 
 Enhancements:
 - Update bicep types to https://github.com/ms-henglu/bicep-types-az/commit/5c7a4c209d18ad4dec38724717449e07f616bec6
+- Update aztfmigrate to v2.9.0 to support azurerm v4.64.0 resources.
 
 ## v0.8.0
 

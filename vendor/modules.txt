@@ -1,7 +1,7 @@
 # dario.cat/mergo v1.0.2
 ## explicit; go 1.13
 dario.cat/mergo
-# github.com/Azure/aztfmigrate v1.15.1-0.20251203065211-84813fc46e57
+# github.com/Azure/aztfmigrate v1.15.1-0.20260319032455-fc71ecf01eef
 ## explicit; go 1.24.0
 github.com/Azure/aztfmigrate/azurerm
 github.com/Azure/aztfmigrate/azurerm/coverage
@@ -364,7 +364,7 @@ github.com/josharian/intern
 # github.com/magodo/armid v0.0.0-20250724105512-5cedfa9dd8e2
 ## explicit; go 1.18
 github.com/magodo/armid
-# github.com/magodo/aztft v0.3.1-0.20251115232612-bd81c936d4f1
+# github.com/magodo/aztft v0.3.1-0.20260219230708-1e51977ce1cb
 ## explicit; go 1.23.0
 github.com/magodo/aztft/aztft
 github.com/magodo/aztft/internal/client
