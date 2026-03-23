@@ -21,3 +21,13 @@ lint:
 
 generate:
 	@go generate ./internal/langserver/handlers/command/
+
+minify:
+	@echo "==> Minifying embedded JSON files..."
+	@go run ./scripts/minify-json \
+		./internal/azure/generated \
+		./internal/langserver/handlers/command/data/provider_operations.json \
+		./internal/langserver/handlers/command/data/aztfo_report.json \
+		./internal/langserver/handlers/snippets/azapi_templates.json \
+		./internal/langserver/handlers/snippets/msgraph_templates.json
+	@echo "==> Done"
