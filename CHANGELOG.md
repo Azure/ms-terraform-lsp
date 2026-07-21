@@ -1,3 +1,9 @@
+## v0.9.1
+
+Chores:
+- Updated golang.org/x/crypto v0.45.0 => v0.54.0
+- Updated golang.org/x/net v0.47.0 => v0.56.0
+
 ## v0.9.0
 
 Enhancements:
