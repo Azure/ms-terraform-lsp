@@ -18,6 +18,7 @@ const (
 	sensitive   = "sensitive"
 	validation  = "validation"
 	ephemeral   = "ephemeral"
+	deprecated  = "deprecated"
 )
 
 func FromHCLFile(fileName string) (*SchemaBlock, error) {
@@ -65,6 +66,7 @@ func FromHCLBody(body hcl.Body) (map[string]*SchemaAttribute, error) {
 				{Name: hclDefault},
 				{Name: sensitive},
 				{Name: ephemeral},
+				{Name: deprecated},
 			},
 			Blocks: []hcl.BlockHeaderSchema{
 				{Type: validation},
