@@ -28,6 +28,7 @@ variable "name" {
   type        = string
   description = "The name of the resource."
   default     = "default-name"
+  deprecated  = "This variable is deprecated"
 }
 
 variable "tags" {
