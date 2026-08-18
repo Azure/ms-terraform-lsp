@@ -1491,30 +1491,12 @@
     }
   },
   {
-    "$type": "ResourceFunctionType",
-    "name": "getDefaultKey",
-    "resourceType": "Microsoft.Datadog/monitors",
-    "apiVersion": "2023-07-07",
-    "output": {
-      "$ref": "#/120"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "setDefaultKey",
-    "resourceType": "Microsoft.Datadog/monitors",
-    "apiVersion": "2023-07-07",
-    "input": {
-      "$ref": "#/120"
-    }
-  },
-  {
     "$type": "ObjectType",
     "name": "DatadogHostListResponse",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/132"
+          "$ref": "#/130"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1541,21 +1523,21 @@
       },
       "aliases": {
         "type": {
-          "$ref": "#/127"
+          "$ref": "#/125"
         },
         "flags": 0,
         "description": "The aliases for the host installed via the Datadog agent."
       },
       "apps": {
         "type": {
-          "$ref": "#/128"
+          "$ref": "#/126"
         },
         "flags": 0,
         "description": "The Datadog integrations reporting metrics for the host."
       },
       "meta": {
         "type": {
-          "$ref": "#/129"
+          "$ref": "#/127"
         },
         "flags": 0
       }
@@ -1586,13 +1568,13 @@
       },
       "installMethod": {
         "type": {
-          "$ref": "#/130"
+          "$ref": "#/128"
         },
         "flags": 0
       },
       "logsAgent": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/129"
         },
         "flags": 0
       }
@@ -1641,7 +1623,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/126"
+      "$ref": "#/124"
     }
   },
   {
@@ -1650,7 +1632,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2023-07-07",
     "output": {
-      "$ref": "#/125"
+      "$ref": "#/123"
     }
   },
   {
@@ -1659,7 +1641,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/136"
+          "$ref": "#/134"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1689,7 +1671,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/135"
+      "$ref": "#/133"
     }
   },
   {
@@ -1698,7 +1680,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2023-07-07",
     "output": {
-      "$ref": "#/134"
+      "$ref": "#/132"
     }
   },
   {
@@ -1707,7 +1689,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/140"
+          "$ref": "#/138"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1765,7 +1747,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/139"
+      "$ref": "#/137"
     }
   },
   {
@@ -1774,28 +1756,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2023-07-07",
     "output": {
-      "$ref": "#/138"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DatadogSetPasswordLink",
-    "properties": {
-      "setPasswordLink": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "refreshSetPasswordLink",
-    "resourceType": "Microsoft.Datadog/monitors",
-    "apiVersion": "2023-07-07",
-    "output": {
-      "$ref": "#/142"
+      "$ref": "#/136"
     }
   }
 ]

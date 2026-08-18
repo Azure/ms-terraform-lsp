@@ -4632,7 +4632,7 @@
           "$ref": "#/360"
         },
         "flags": 0,
-        "description": "List of inbound NAT rules. InboundNATRules can only be set after the NAT Gateway has been associated with a vnet"
+        "description": "List of inbound NAT rules. InboundNATRules can only be set after the NAT Gateway has been associated with a vnet. Removed in 2026-04-01-preview; use InboundRule Child resource instead."
       },
       "provisioningState": {
         "type": {
@@ -8286,80 +8286,5 @@
     },
     "readableScopes": 31,
     "writableScopes": 0
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "pause",
-    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
-    "apiVersion": "2026-02-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "restart",
-    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
-    "apiVersion": "2026-02-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "save",
-    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
-    "apiVersion": "2026-02-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "start",
-    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
-    "apiVersion": "2026-02-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "stop",
-    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
-    "apiVersion": "2026-02-01-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "VirtualHardDiskUploadRequest",
-    "properties": {
-      "azureManagedDiskUploadUrl": {
-        "type": {
-          "$ref": "#/44"
-        },
-        "flags": 1,
-        "description": "The Azure managed disk SAS URL to upload the virtual hard disk to."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "VirtualHardDiskUploadResponse",
-    "properties": {
-      "virtualHardDiskId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The Azure Resource ID for a Virtual Hard Disk."
-      },
-      "uploadStatus": {
-        "type": {
-          "$ref": "#/509"
-        },
-        "flags": 0,
-        "description": "The upload status of the virtual hard disk"
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "upload",
-    "resourceType": "Microsoft.AzureStackHCI/virtualHardDisks",
-    "apiVersion": "2026-02-01-preview",
-    "output": {
-      "$ref": "#/644"
-    },
-    "input": {
-      "$ref": "#/643"
-    }
   }
 ]

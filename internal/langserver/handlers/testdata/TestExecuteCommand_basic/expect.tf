@@ -1,17 +1,17 @@
 /*
 Note: This is a generated HCL content from the JSON input which is based on the latest API version available.
 To import the resource, please run the following command:
-terraform import azapi_resource.managedCluster /subscriptions/0000000/resourcegroups/acctestRG-aks-240626160102776968/providers/Microsoft.ContainerService/managedClusters/acctestaks240626160102776968?api-version=2025-10-02-preview
+terraform import azapi_resource.managedCluster /subscriptions/0000000/resourcegroups/acctestRG-aks-240626160102776968/providers/Microsoft.ContainerService/managedClusters/acctestaks240626160102776968?api-version=2026-05-02-preview
 
 Or add the below config:
 import {
-  id = "/subscriptions/0000000/resourcegroups/acctestRG-aks-240626160102776968/providers/Microsoft.ContainerService/managedClusters/acctestaks240626160102776968?api-version=2025-10-02-preview"
+  id = "/subscriptions/0000000/resourcegroups/acctestRG-aks-240626160102776968/providers/Microsoft.ContainerService/managedClusters/acctestaks240626160102776968?api-version=2026-05-02-preview"
   to = azapi_resource.managedCluster
 }
 */
 
 resource "azapi_resource" "managedCluster" {
-  type      = "Microsoft.ContainerService/managedClusters@2025-10-02-preview"
+  type      = "Microsoft.ContainerService/managedClusters@2026-05-02-preview"
   parent_id = "/subscriptions/0000000/resourceGroups/acctestRG-aks-240626160102776968"
   name      = "acctestaks240626160102776968"
   location  = "eastus"
@@ -32,6 +32,7 @@ resource "azapi_resource" "managedCluster" {
         maxPods                = 30
         mode                   = "System"
         name                   = "np"
+        nodeImageVersion       = "AKSUbuntu-2204gen2containerd-202406.07.0"
         orchestratorVersion    = "1.28"
         osDiskSizeGB           = 128
         osDiskType             = "Managed"

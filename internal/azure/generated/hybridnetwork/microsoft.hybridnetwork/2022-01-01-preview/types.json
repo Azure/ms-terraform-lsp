@@ -2627,119 +2627,6 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ExecuteRequestParameters",
-    "properties": {
-      "serviceEndpoint": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The endpoint of service to call."
-      },
-      "requestMetadata": {
-        "type": {
-          "$ref": "#/242"
-        },
-        "flags": 1,
-        "description": "The request metadata."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RequestMetadata",
-    "properties": {
-      "relativePath": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The relative path of the request."
-      },
-      "httpMethod": {
-        "type": {
-          "$ref": "#/249"
-        },
-        "flags": 1,
-        "description": "The http method of the request."
-      },
-      "serializedBody": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The serialized body of the request."
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The api version of the request."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Unknown"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Post"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Put"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Get"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Patch"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Delete"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/243"
-      },
-      {
-        "$ref": "#/244"
-      },
-      {
-        "$ref": "#/245"
-      },
-      {
-        "$ref": "#/246"
-      },
-      {
-        "$ref": "#/247"
-      },
-      {
-        "$ref": "#/248"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "executeRequest",
-    "resourceType": "Microsoft.HybridNetwork/networkFunctions",
-    "apiVersion": "2022-01-01-preview",
-    "input": {
-      "$ref": "#/241"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "SkuCredential",
     "properties": {
       "username": {
@@ -2765,7 +2652,7 @@
       },
       "repositories": {
         "type": {
-          "$ref": "#/252"
+          "$ref": "#/242"
         },
         "flags": 0,
         "description": "The repositories that could be accessed using the current credential."
@@ -2791,25 +2678,7 @@
     "resourceType": "Microsoft.HybridNetwork/vendors/vendorSkus",
     "apiVersion": "2022-01-01-preview",
     "output": {
-      "$ref": "#/251"
+      "$ref": "#/241"
     }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "start",
-    "resourceType": "Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances",
-    "apiVersion": "2022-01-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "stop",
-    "resourceType": "Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances",
-    "apiVersion": "2022-01-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "restart",
-    "resourceType": "Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances",
-    "apiVersion": "2022-01-01-preview"
   }
 ]

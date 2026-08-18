@@ -5,6 +5,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"io"
 	"log"
 	"os"
@@ -134,6 +135,7 @@ func (lsm *langServerMock) Call(t *testing.T, cr *CallRequest) *rawResponse {
 
 func (lsm *langServerMock) CallAndExpectResponse(t *testing.T, cr *CallRequest, expectRaw string) {
 	rsp := lsm.Call(t, cr)
+	fmt.Println("debug0", string(rsp.Result))
 
 	// Compacting is necessary because we retain params as json.RawMessage
 	// in rawResponse, which holds formatted bytes that may not match

@@ -846,23 +846,5 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "start",
-    "resourceType": "Microsoft.StoragePool/diskPools",
-    "apiVersion": "2021-08-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "deallocate",
-    "resourceType": "Microsoft.StoragePool/diskPools",
-    "apiVersion": "2021-08-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "upgrade",
-    "resourceType": "Microsoft.StoragePool/diskPools",
-    "apiVersion": "2021-08-01"
   }
 ]

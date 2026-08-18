@@ -1510,23 +1510,5 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "enable",
-    "resourceType": "Microsoft.Scheduler/jobCollections",
-    "apiVersion": "2016-03-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "disable",
-    "resourceType": "Microsoft.Scheduler/jobCollections",
-    "apiVersion": "2016-03-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "run",
-    "resourceType": "Microsoft.Scheduler/jobCollections/jobs",
-    "apiVersion": "2016-03-01"
   }
 ]

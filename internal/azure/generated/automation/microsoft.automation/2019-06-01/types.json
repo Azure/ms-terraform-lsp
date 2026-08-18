@@ -5153,54 +5153,12 @@
     "writableScopes": 0
   },
   {
-    "$type": "ResourceFunctionType",
-    "name": "publish",
-    "resourceType": "Microsoft.Automation/automationAccounts/runbooks",
-    "apiVersion": "2019-06-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "resume",
-    "resourceType": "Microsoft.Automation/automationAccounts/runbooks/draft",
-    "apiVersion": "2019-06-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "stop",
-    "resourceType": "Microsoft.Automation/automationAccounts/runbooks/draft",
-    "apiVersion": "2019-06-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "suspend",
-    "resourceType": "Microsoft.Automation/automationAccounts/runbooks/draft",
-    "apiVersion": "2019-06-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "suspend",
-    "resourceType": "Microsoft.Automation/automationAccounts/jobs",
-    "apiVersion": "2019-06-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "stop",
-    "resourceType": "Microsoft.Automation/automationAccounts/jobs",
-    "apiVersion": "2019-06-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "resume",
-    "resourceType": "Microsoft.Automation/automationAccounts/jobs",
-    "apiVersion": "2019-06-01"
-  },
-  {
     "$type": "ObjectType",
     "name": "KeyListResult",
     "properties": {
       "keys": {
         "type": {
-          "$ref": "#/362"
+          "$ref": "#/355"
         },
         "flags": 0,
         "description": "Lists the automation keys."
@@ -5213,14 +5171,14 @@
     "properties": {
       "KeyName": {
         "type": {
-          "$ref": "#/358"
+          "$ref": "#/351"
         },
         "flags": 2,
         "description": "Automation key name."
       },
       "Permissions": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/354"
         },
         "flags": 2,
         "description": "Automation key permissions."
@@ -5246,10 +5204,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/356"
+        "$ref": "#/349"
       },
       {
-        "$ref": "#/357"
+        "$ref": "#/350"
       },
       {
         "$ref": "#/2"
@@ -5268,10 +5226,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/359"
+        "$ref": "#/352"
       },
       {
-        "$ref": "#/360"
+        "$ref": "#/353"
       },
       {
         "$ref": "#/2"
@@ -5281,7 +5239,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/355"
+      "$ref": "#/348"
     }
   },
   {
@@ -5290,19 +5248,7 @@
     "resourceType": "Microsoft.Automation/automationAccounts",
     "apiVersion": "2019-06-01",
     "output": {
-      "$ref": "#/354"
+      "$ref": "#/347"
     }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "start",
-    "resourceType": "Microsoft.Automation/automationAccounts/watchers",
-    "apiVersion": "2019-06-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "stop",
-    "resourceType": "Microsoft.Automation/automationAccounts/watchers",
-    "apiVersion": "2019-06-01"
   }
 ]

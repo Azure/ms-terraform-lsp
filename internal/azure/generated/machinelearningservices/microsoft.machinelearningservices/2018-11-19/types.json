@@ -1358,25 +1358,19 @@
     }
   },
   {
-    "$type": "ResourceFunctionType",
-    "name": "resyncKeys",
-    "resourceType": "Microsoft.MachineLearningServices/workspaces",
-    "apiVersion": "2018-11-19"
-  },
-  {
     "$type": "ObjectType",
     "name": "AmlComputeNodesInformation",
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/88"
+          "$ref": "#/87"
         },
         "flags": 2,
         "description": "The collection of returned AmlCompute nodes details."
       },
       "computeType": {
         "type": {
-          "$ref": "#/96"
+          "$ref": "#/95"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -1420,7 +1414,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/87"
+      "$ref": "#/86"
     }
   },
   {
@@ -1455,6 +1449,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/88"
+      },
+      {
         "$ref": "#/89"
       },
       {
@@ -1473,9 +1470,6 @@
         "$ref": "#/94"
       },
       {
-        "$ref": "#/95"
-      },
-      {
         "$ref": "#/0"
       }
     ]
@@ -1486,7 +1480,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2018-11-19",
     "output": {
-      "$ref": "#/86"
+      "$ref": "#/85"
     }
   },
   {
@@ -1496,13 +1490,13 @@
     "baseProperties": {},
     "elements": {
       "AKS": {
-        "$ref": "#/99"
+        "$ref": "#/98"
       },
       "Databricks": {
-        "$ref": "#/101"
+        "$ref": "#/100"
       },
       "VirtualMachine": {
-        "$ref": "#/103"
+        "$ref": "#/102"
       }
     }
   },
@@ -1533,7 +1527,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/100"
+          "$ref": "#/99"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -1557,7 +1551,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/102"
+          "$ref": "#/101"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -1581,7 +1575,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/104"
+          "$ref": "#/103"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -1598,7 +1592,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2018-11-19",
     "output": {
-      "$ref": "#/98"
+      "$ref": "#/97"
     }
   }
 ]
