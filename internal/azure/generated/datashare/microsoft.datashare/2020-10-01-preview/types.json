@@ -5063,59 +5063,6 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ConsumerInvitation",
-    "properties": {
-      "properties": {
-        "type": {
-          "$ref": "#/343"
-        },
-        "flags": 1,
-        "description": "Properties on the account"
-      },
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The resource id of the azure resource"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Name of the azure resource"
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/15"
-        },
-        "flags": 2,
-        "description": "System Data of the Azure resource."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Type of the azure resource"
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "rejectInvitation",
-    "resourceType": "Microsoft.DataShare/locations",
-    "apiVersion": "2020-10-01-preview",
-    "output": {
-      "$ref": "#/361"
-    },
-    "input": {
-      "$ref": "#/361"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "ShareSynchronization",
     "properties": {
       "consumerEmail": {
@@ -5183,7 +5130,7 @@
       },
       "synchronizationMode": {
         "type": {
-          "$ref": "#/366"
+          "$ref": "#/364"
         },
         "flags": 2,
         "description": "Synchronization mode"
@@ -5202,10 +5149,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/364"
+        "$ref": "#/362"
       },
       {
-        "$ref": "#/365"
+        "$ref": "#/363"
       },
       {
         "$ref": "#/0"
@@ -5225,7 +5172,7 @@
       },
       "value": {
         "type": {
-          "$ref": "#/385"
+          "$ref": "#/383"
         },
         "flags": 1,
         "description": "Collection of items of type DataTransferObjects."
@@ -5245,7 +5192,7 @@
       },
       "dataSetType": {
         "type": {
-          "$ref": "#/384"
+          "$ref": "#/382"
         },
         "flags": 2,
         "description": "Type of the data set"
@@ -5407,6 +5354,12 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/367"
+      },
+      {
+        "$ref": "#/368"
+      },
+      {
         "$ref": "#/369"
       },
       {
@@ -5446,12 +5399,6 @@
         "$ref": "#/381"
       },
       {
-        "$ref": "#/382"
-      },
-      {
-        "$ref": "#/383"
-      },
-      {
         "$ref": "#/0"
       }
     ]
@@ -5459,7 +5406,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/368"
+      "$ref": "#/366"
     }
   },
   {
@@ -5468,10 +5415,10 @@
     "resourceType": "Microsoft.DataShare/accounts/shares",
     "apiVersion": "2020-10-01-preview",
     "output": {
-      "$ref": "#/367"
+      "$ref": "#/365"
     },
     "input": {
-      "$ref": "#/363"
+      "$ref": "#/361"
     }
   },
   {
@@ -5487,7 +5434,7 @@
       },
       "value": {
         "type": {
-          "$ref": "#/388"
+          "$ref": "#/386"
         },
         "flags": 1,
         "description": "Collection of items of type DataTransferObjects."
@@ -5497,7 +5444,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/363"
+      "$ref": "#/361"
     }
   },
   {
@@ -5506,81 +5453,119 @@
     "resourceType": "Microsoft.DataShare/accounts/shares",
     "apiVersion": "2020-10-01-preview",
     "output": {
-      "$ref": "#/387"
+      "$ref": "#/385"
     }
   },
   {
     "$type": "ObjectType",
-    "name": "ProviderShareSubscription",
+    "name": "SourceShareSynchronizationSettingList",
     "properties": {
-      "properties": {
+      "nextLink": {
         "type": {
-          "$ref": "#/354"
+          "$ref": "#/0"
         },
         "flags": 0,
-        "description": "properties of providerShareSubscription"
+        "description": "The Url of next result page."
       },
-      "id": {
+      "value": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/396"
         },
-        "flags": 2,
-        "description": "The resource id of the azure resource"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Name of the azure resource"
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/15"
-        },
-        "flags": 2,
-        "description": "System Data of the Azure resource."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Type of the azure resource"
+        "flags": 1,
+        "description": "Collection of items of type DataTransferObjects."
       }
     }
   },
   {
-    "$type": "ResourceFunctionType",
-    "name": "adjust",
-    "resourceType": "Microsoft.DataShare/accounts/shares/providerShareSubscriptions",
-    "apiVersion": "2020-10-01-preview",
-    "output": {
-      "$ref": "#/390"
-    },
-    "input": {
-      "$ref": "#/390"
+    "$type": "DiscriminatedObjectType",
+    "name": "SourceShareSynchronizationSetting",
+    "discriminator": "kind",
+    "baseProperties": {},
+    "elements": {
+      "ScheduleBased": {
+        "$ref": "#/390"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduledSourceSynchronizationSetting",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/391"
+        },
+        "flags": 0,
+        "description": "Properties of scheduled synchronization"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/395"
+        },
+        "flags": 1,
+        "description": "Kind of synchronization setting on share."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduledSourceShareSynchronizationSettingProperties",
+    "properties": {
+      "recurrenceInterval": {
+        "type": {
+          "$ref": "#/394"
+        },
+        "flags": 0,
+        "description": "Recurrence Interval"
+      },
+      "synchronizationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Synchronization time"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hour"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Day"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/392"
+      },
+      {
+        "$ref": "#/393"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ScheduleBased"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/389"
     }
   },
   {
     "$type": "ResourceFunctionType",
-    "name": "reinstate",
-    "resourceType": "Microsoft.DataShare/accounts/shares/providerShareSubscriptions",
+    "name": "listSourceShareSynchronizationSettings",
+    "resourceType": "Microsoft.DataShare/accounts/shareSubscriptions",
     "apiVersion": "2020-10-01-preview",
     "output": {
-      "$ref": "#/390"
-    },
-    "input": {
-      "$ref": "#/390"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "revoke",
-    "resourceType": "Microsoft.DataShare/accounts/shares/providerShareSubscriptions",
-    "apiVersion": "2020-10-01-preview",
-    "output": {
-      "$ref": "#/390"
+      "$ref": "#/388"
     }
   },
   {
@@ -5631,7 +5616,7 @@
       },
       "synchronizationMode": {
         "type": {
-          "$ref": "#/397"
+          "$ref": "#/401"
         },
         "flags": 2,
         "description": "Synchronization Mode"
@@ -5650,139 +5635,15 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/395"
+        "$ref": "#/399"
       },
       {
-        "$ref": "#/396"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "cancelSynchronization",
-    "resourceType": "Microsoft.DataShare/accounts/shareSubscriptions",
-    "apiVersion": "2020-10-01-preview",
-    "output": {
-      "$ref": "#/394"
-    },
-    "input": {
-      "$ref": "#/394"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SourceShareSynchronizationSettingList",
-    "properties": {
-      "nextLink": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The Url of next result page."
-      },
-      "value": {
-        "type": {
-          "$ref": "#/407"
-        },
-        "flags": 1,
-        "description": "Collection of items of type DataTransferObjects."
-      }
-    }
-  },
-  {
-    "$type": "DiscriminatedObjectType",
-    "name": "SourceShareSynchronizationSetting",
-    "discriminator": "kind",
-    "baseProperties": {},
-    "elements": {
-      "ScheduleBased": {
-        "$ref": "#/401"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ScheduledSourceSynchronizationSetting",
-    "properties": {
-      "properties": {
-        "type": {
-          "$ref": "#/402"
-        },
-        "flags": 0,
-        "description": "Properties of scheduled synchronization"
-      },
-      "kind": {
-        "type": {
-          "$ref": "#/406"
-        },
-        "flags": 1,
-        "description": "Kind of synchronization setting on share."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ScheduledSourceShareSynchronizationSettingProperties",
-    "properties": {
-      "recurrenceInterval": {
-        "type": {
-          "$ref": "#/405"
-        },
-        "flags": 0,
-        "description": "Recurrence Interval"
-      },
-      "synchronizationTime": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Synchronization time"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Hour"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Day"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/403"
-      },
-      {
-        "$ref": "#/404"
+        "$ref": "#/400"
       },
       {
         "$ref": "#/0"
       }
     ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ScheduleBased"
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/400"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "listSourceShareSynchronizationSettings",
-    "resourceType": "Microsoft.DataShare/accounts/shareSubscriptions",
-    "apiVersion": "2020-10-01-preview",
-    "output": {
-      "$ref": "#/399"
-    }
   },
   {
     "$type": "ResourceFunctionType",
@@ -5790,10 +5651,10 @@
     "resourceType": "Microsoft.DataShare/accounts/shareSubscriptions",
     "apiVersion": "2020-10-01-preview",
     "output": {
-      "$ref": "#/367"
+      "$ref": "#/365"
     },
     "input": {
-      "$ref": "#/394"
+      "$ref": "#/398"
     }
   },
   {
@@ -5809,7 +5670,7 @@
       },
       "value": {
         "type": {
-          "$ref": "#/411"
+          "$ref": "#/404"
         },
         "flags": 1,
         "description": "Collection of items of type DataTransferObjects."
@@ -5819,7 +5680,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/394"
+      "$ref": "#/398"
     }
   },
   {
@@ -5828,54 +5689,7 @@
     "resourceType": "Microsoft.DataShare/accounts/shareSubscriptions",
     "apiVersion": "2020-10-01-preview",
     "output": {
-      "$ref": "#/410"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Synchronize",
-    "properties": {
-      "synchronizationMode": {
-        "type": {
-          "$ref": "#/416"
-        },
-        "flags": 0,
-        "description": "Mode of synchronization used in triggers and snapshot sync. Incremental by default"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Incremental"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "FullSync"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/414"
-      },
-      {
-        "$ref": "#/415"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "synchronize",
-    "resourceType": "Microsoft.DataShare/accounts/shareSubscriptions",
-    "apiVersion": "2020-10-01-preview",
-    "output": {
-      "$ref": "#/394"
-    },
-    "input": {
-      "$ref": "#/413"
+      "$ref": "#/403"
     }
   }
 ]

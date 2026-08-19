@@ -5139,35 +5139,5 @@
     },
     "readableScopes": 31,
     "writableScopes": 0
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "pause",
-    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
-    "apiVersion": "2024-02-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "restart",
-    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
-    "apiVersion": "2024-02-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "save",
-    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
-    "apiVersion": "2024-02-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "start",
-    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
-    "apiVersion": "2024-02-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "stop",
-    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
-    "apiVersion": "2024-02-01-preview"
   }
 ]

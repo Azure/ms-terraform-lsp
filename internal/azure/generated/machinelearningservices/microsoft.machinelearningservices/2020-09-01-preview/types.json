@@ -4996,65 +4996,6 @@
     }
   },
   {
-    "$type": "ResourceFunctionType",
-    "name": "resyncKeys",
-    "resourceType": "Microsoft.MachineLearningServices/workspaces",
-    "apiVersion": "2020-09-01-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "NotebookResourceInfo",
-    "properties": {
-      "fqdn": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0
-      },
-      "resourceId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "the data plane resourceId that used to initialize notebook component"
-      },
-      "notebookPreparationError": {
-        "type": {
-          "$ref": "#/314"
-        },
-        "flags": 0,
-        "description": "The error that occurs when preparing notebook."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "NotebookPreparationError",
-    "properties": {
-      "errorMessage": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0
-      },
-      "statusCode": {
-        "type": {
-          "$ref": "#/15"
-        },
-        "flags": 0
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "prepareNotebook",
-    "resourceType": "Microsoft.MachineLearningServices/workspaces",
-    "apiVersion": "2020-09-01-preview",
-    "output": {
-      "$ref": "#/313"
-    }
-  },
-  {
     "$type": "ObjectType",
     "name": "ListNotebookKeysResult",
     "properties": {
@@ -5078,240 +5019,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2020-09-01-preview",
     "output": {
-      "$ref": "#/316"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "QuotaUpdateParameters",
-    "properties": {
-      "value": {
-        "type": {
-          "$ref": "#/322"
-        },
-        "flags": 0,
-        "description": "The list for update quota."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "QuotaBaseProperties",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Specifies the resource ID."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Specifies the resource type."
-      },
-      "limit": {
-        "type": {
-          "$ref": "#/15"
-        },
-        "flags": 0,
-        "description": "The maximum permitted quota of the resource."
-      },
-      "unit": {
-        "type": {
-          "$ref": "#/321"
-        },
-        "flags": 0,
-        "description": "An enum describing the unit of quota measurement."
-      },
-      "location": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Region of the AML workspace in the id."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Count"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/320"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/319"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UpdateWorkspaceQuotasResult",
-    "properties": {
-      "value": {
-        "type": {
-          "$ref": "#/336"
-        },
-        "flags": 2,
-        "description": "The list of workspace quota update result."
-      },
-      "nextLink": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The URI to fetch the next page of workspace quota update result. Call ListNext() with this to fetch the next page of Workspace Quota update result."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UpdateWorkspaceQuotas",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Specifies the resource ID."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Specifies the resource type."
-      },
-      "limit": {
-        "type": {
-          "$ref": "#/15"
-        },
-        "flags": 0,
-        "description": "The maximum permitted quota of the resource."
-      },
-      "unit": {
-        "type": {
-          "$ref": "#/326"
-        },
-        "flags": 2,
-        "description": "An enum describing the unit of quota measurement."
-      },
-      "status": {
-        "type": {
-          "$ref": "#/335"
-        },
-        "flags": 0,
-        "description": "Status of update workspace quota."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Count"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/325"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Undefined"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Success"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Failure"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "InvalidQuotaBelowClusterMinimum"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "InvalidQuotaExceedsSubscriptionLimit"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "InvalidVMFamilyName"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "OperationNotSupportedForSku"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "OperationNotEnabledForRegion"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/327"
-      },
-      {
-        "$ref": "#/328"
-      },
-      {
-        "$ref": "#/329"
-      },
-      {
-        "$ref": "#/330"
-      },
-      {
-        "$ref": "#/331"
-      },
-      {
-        "$ref": "#/332"
-      },
-      {
-        "$ref": "#/333"
-      },
-      {
-        "$ref": "#/334"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/324"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "updateQuotas",
-    "resourceType": "Microsoft.MachineLearningServices/locations",
-    "apiVersion": "2020-09-01-preview",
-    "output": {
-      "$ref": "#/323"
-    },
-    "input": {
-      "$ref": "#/318"
+      "$ref": "#/312"
     }
   },
   {
@@ -5320,14 +5028,14 @@
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/347"
+          "$ref": "#/323"
         },
         "flags": 2,
         "description": "The collection of returned AmlCompute nodes details."
       },
       "computeType": {
         "type": {
-          "$ref": "#/356"
+          "$ref": "#/332"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -5375,7 +5083,7 @@
       },
       "nodeState": {
         "type": {
-          "$ref": "#/346"
+          "$ref": "#/322"
         },
         "flags": 2,
         "description": "State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted."
@@ -5417,22 +5125,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/340"
+        "$ref": "#/316"
       },
       {
-        "$ref": "#/341"
+        "$ref": "#/317"
       },
       {
-        "$ref": "#/342"
+        "$ref": "#/318"
       },
       {
-        "$ref": "#/343"
+        "$ref": "#/319"
       },
       {
-        "$ref": "#/344"
+        "$ref": "#/320"
       },
       {
-        "$ref": "#/345"
+        "$ref": "#/321"
       },
       {
         "$ref": "#/0"
@@ -5442,7 +5150,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/339"
+      "$ref": "#/315"
     }
   },
   {
@@ -5481,28 +5189,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/348"
+        "$ref": "#/324"
       },
       {
-        "$ref": "#/349"
+        "$ref": "#/325"
       },
       {
-        "$ref": "#/350"
+        "$ref": "#/326"
       },
       {
-        "$ref": "#/351"
+        "$ref": "#/327"
       },
       {
-        "$ref": "#/352"
+        "$ref": "#/328"
       },
       {
-        "$ref": "#/353"
+        "$ref": "#/329"
       },
       {
-        "$ref": "#/354"
+        "$ref": "#/330"
       },
       {
-        "$ref": "#/355"
+        "$ref": "#/331"
       },
       {
         "$ref": "#/0"
@@ -5515,7 +5223,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2020-09-01-preview",
     "output": {
-      "$ref": "#/338"
+      "$ref": "#/314"
     }
   },
   {
@@ -5525,13 +5233,13 @@
     "baseProperties": {},
     "elements": {
       "AKS": {
-        "$ref": "#/359"
+        "$ref": "#/335"
       },
       "Databricks": {
-        "$ref": "#/361"
+        "$ref": "#/337"
       },
       "VirtualMachine": {
-        "$ref": "#/363"
+        "$ref": "#/339"
       }
     }
   },
@@ -5562,7 +5270,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/360"
+          "$ref": "#/336"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -5586,7 +5294,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/362"
+          "$ref": "#/338"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -5610,7 +5318,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/364"
+          "$ref": "#/340"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -5627,25 +5335,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2020-09-01-preview",
     "output": {
-      "$ref": "#/358"
+      "$ref": "#/334"
     }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "start",
-    "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
-    "apiVersion": "2020-09-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "stop",
-    "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
-    "apiVersion": "2020-09-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "restart",
-    "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
-    "apiVersion": "2020-09-01-preview"
   }
 ]

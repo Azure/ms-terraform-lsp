@@ -1762,11 +1762,5 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "refreshPermissions",
-    "resourceType": "Microsoft.Solutions/applications",
-    "apiVersion": "2019-07-01"
   }
 ]

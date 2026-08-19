@@ -17737,43 +17737,6 @@
   },
   {
     "$type": "ObjectType",
-    "name": "MigrationOperationInput",
-    "properties": {
-      "migrationOperationId": {
-        "type": {
-          "$ref": "#/1263"
-        },
-        "flags": 0,
-        "description": "ID tracking migration operation."
-      }
-    }
-  },
-  {
-    "$type": "StringType",
-    "minLength": 36,
-    "maxLength": 36,
-    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "cancel",
-    "resourceType": "Microsoft.DataMigration/databaseMigrations",
-    "apiVersion": "2023-07-15-preview",
-    "input": {
-      "$ref": "#/1262"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "cutover",
-    "resourceType": "Microsoft.DataMigration/databaseMigrations",
-    "apiVersion": "2023-07-15-preview",
-    "input": {
-      "$ref": "#/1262"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "AuthenticationKeys",
     "properties": {
       "authKey1": {
@@ -17798,78 +17761,7 @@
     "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
     "apiVersion": "2023-07-15-preview",
     "output": {
-      "$ref": "#/1266"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RegenAuthKeys",
-    "properties": {
-      "keyName": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The name of authentication key to generate."
-      },
-      "authKey1": {
-        "type": {
-          "$ref": "#/8"
-        },
-        "flags": 0,
-        "description": "The first authentication key."
-      },
-      "authKey2": {
-        "type": {
-          "$ref": "#/8"
-        },
-        "flags": 0,
-        "description": "The second authentication key."
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "regenerateAuthKeys",
-    "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
-    "apiVersion": "2023-07-15-preview",
-    "output": {
-      "$ref": "#/1268"
-    },
-    "input": {
-      "$ref": "#/1268"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DeleteNode",
-    "properties": {
-      "nodeName": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The name of node to delete."
-      },
-      "integrationRuntimeName": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The name of integration runtime."
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "deleteNode",
-    "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
-    "apiVersion": "2023-07-15-preview",
-    "output": {
-      "$ref": "#/1270"
-    },
-    "input": {
-      "$ref": "#/1270"
+      "$ref": "#/1262"
     }
   },
   {
@@ -17885,7 +17777,7 @@
       },
       "nodes": {
         "type": {
-          "$ref": "#/1275"
+          "$ref": "#/1267"
         },
         "flags": 2,
         "description": "Integration Runtime node monitoring data."
@@ -17898,7 +17790,7 @@
     "properties": {
       "additionalProperties": {
         "type": {
-          "$ref": "#/1274"
+          "$ref": "#/1266"
         },
         "flags": 2,
         "description": "Unmatched properties from the message are deserialized in this collection."
@@ -17972,7 +17864,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1273"
+      "$ref": "#/1265"
     }
   },
   {
@@ -17981,292 +17873,7 @@
     "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
     "apiVersion": "2023-07-15-preview",
     "output": {
-      "$ref": "#/1272"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DataMigrationServiceStatusResponse",
-    "properties": {
-      "agentVersion": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The DMS instance agent version"
-      },
-      "agentConfiguration": {
-        "type": {
-          "$ref": "#/612"
-        },
-        "flags": 0,
-        "description": "Agent Configuration"
-      },
-      "status": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The machine-readable status, such as 'Initializing', 'Offline', 'Online', 'Deploying', 'Deleting', 'Stopped', 'Stopping', 'Starting', 'FailedToStart', 'FailedToStop' or 'Failed'"
-      },
-      "vmSize": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The services virtual machine size, such as 'Standard_D2_v2'"
-      },
-      "supportedTaskTypes": {
-        "type": {
-          "$ref": "#/1278"
-        },
-        "flags": 0,
-        "description": "The list of supported task types"
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/2"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "checkStatus",
-    "resourceType": "Microsoft.DataMigration/services",
-    "apiVersion": "2023-07-15-preview",
-    "output": {
-      "$ref": "#/1277"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "start",
-    "resourceType": "Microsoft.DataMigration/services",
-    "apiVersion": "2023-07-15-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "stop",
-    "resourceType": "Microsoft.DataMigration/services",
-    "apiVersion": "2023-07-15-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "NameAvailabilityRequest",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The proposed resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The resource type chain (e.g. virtualMachines/extensions)"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "NameAvailabilityResponse",
-    "properties": {
-      "nameAvailable": {
-        "type": {
-          "$ref": "#/9"
-        },
-        "flags": 0,
-        "description": "If true, the name is valid and available. If false, 'reason' describes why not."
-      },
-      "reason": {
-        "type": {
-          "$ref": "#/1286"
-        },
-        "flags": 0,
-        "description": "The reason why the name is not available, if nameAvailable is false"
-      },
-      "message": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The localized reason why the name is not available, if nameAvailable is false"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "AlreadyExists"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Invalid"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/1284"
-      },
-      {
-        "$ref": "#/1285"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "checkNameAvailability",
-    "resourceType": "Microsoft.DataMigration/services",
-    "apiVersion": "2023-07-15-preview",
-    "output": {
-      "$ref": "#/1283"
-    },
-    "input": {
-      "$ref": "#/1282"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "checkNameAvailability",
-    "resourceType": "Microsoft.DataMigration/locations",
-    "apiVersion": "2023-07-15-preview",
-    "output": {
-      "$ref": "#/1283"
-    },
-    "input": {
-      "$ref": "#/1282"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ProjectTask",
-    "properties": {
-      "etag": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "HTTP strong entity tag value. This is ignored if submitted."
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/93"
-        },
-        "flags": 0,
-        "description": "Custom task properties"
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/60"
-        },
-        "flags": 2,
-        "description": "Metadata pertaining to creation and last modification of the resource."
-      },
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Resource ID."
-      },
-      "name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Resource name."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Resource type."
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "cancel",
-    "resourceType": "Microsoft.DataMigration/services/projects/tasks",
-    "apiVersion": "2023-07-15-preview",
-    "output": {
-      "$ref": "#/1289"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "command",
-    "resourceType": "Microsoft.DataMigration/services/projects/tasks",
-    "apiVersion": "2023-07-15-preview",
-    "output": {
-      "$ref": "#/106"
-    },
-    "input": {
-      "$ref": "#/106"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "cancel",
-    "resourceType": "Microsoft.DataMigration/services/serviceTasks",
-    "apiVersion": "2023-07-15-preview",
-    "output": {
-      "$ref": "#/1289"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "FileStorageInfo",
-    "properties": {
-      "uri": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "A URI that can be used to access the file content."
-      },
-      "headers": {
-        "type": {
-          "$ref": "#/1294"
-        },
-        "flags": 0,
-        "description": "Dictionary of <string>"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "FileStorageInfoHeaders",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/2"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "read",
-    "resourceType": "Microsoft.DataMigration/services/projects/files",
-    "apiVersion": "2023-07-15-preview",
-    "output": {
-      "$ref": "#/1293"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "readwrite",
-    "resourceType": "Microsoft.DataMigration/services/projects/files",
-    "apiVersion": "2023-07-15-preview",
-    "output": {
-      "$ref": "#/1293"
+      "$ref": "#/1264"
     }
   }
 ]

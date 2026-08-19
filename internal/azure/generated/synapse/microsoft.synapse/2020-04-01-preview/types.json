@@ -740,17 +740,5 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "pause",
-    "resourceType": "Microsoft.Synapse/workspaces/sqlPools",
-    "apiVersion": "2020-04-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "resume",
-    "resourceType": "Microsoft.Synapse/workspaces/sqlPools",
-    "apiVersion": "2020-04-01-preview"
   }
 ]

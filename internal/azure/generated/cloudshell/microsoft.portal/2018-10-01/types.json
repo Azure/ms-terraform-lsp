@@ -680,17 +680,5 @@
     },
     "readableScopes": 1,
     "writableScopes": 1
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "keepAlive",
-    "resourceType": "Microsoft.Portal/locations/consoles",
-    "apiVersion": "2018-10-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "keepAlive",
-    "resourceType": "Microsoft.Portal/consoles",
-    "apiVersion": "2018-10-01"
   }
 ]

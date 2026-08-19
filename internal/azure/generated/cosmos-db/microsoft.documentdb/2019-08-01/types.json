@@ -4004,34 +4004,6 @@
   },
   {
     "$type": "ObjectType",
-    "name": "FailoverPolicies",
-    "properties": {
-      "failoverPolicies": {
-        "type": {
-          "$ref": "#/270"
-        },
-        "flags": 1,
-        "description": "List of failover policies."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/32"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "failoverPriorityChange",
-    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
-    "apiVersion": "2019-08-01",
-    "input": {
-      "$ref": "#/269"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "DatabaseAccountListKeysResult",
     "properties": {
       "primaryMasterKey": {
@@ -4070,7 +4042,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2019-08-01",
     "output": {
-      "$ref": "#/272"
+      "$ref": "#/269"
     }
   },
   {
@@ -4079,7 +4051,7 @@
     "properties": {
       "connectionStrings": {
         "type": {
-          "$ref": "#/276"
+          "$ref": "#/273"
         },
         "flags": 0,
         "description": "An array that contains the connection strings for the Cosmos DB account."
@@ -4109,7 +4081,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/275"
+      "$ref": "#/272"
     }
   },
   {
@@ -4118,125 +4090,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2019-08-01",
     "output": {
-      "$ref": "#/274"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RegionForOnlineOffline",
-    "properties": {
-      "region": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "Cosmos DB region, with spaces between words and each word capitalized."
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "offlineRegion",
-    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
-    "apiVersion": "2019-08-01",
-    "input": {
-      "$ref": "#/278"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "onlineRegion",
-    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
-    "apiVersion": "2019-08-01",
-    "input": {
-      "$ref": "#/278"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DatabaseAccountListReadOnlyKeysResult",
-    "properties": {
-      "primaryReadonlyMasterKey": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Base 64 encoded value of the primary read-only key."
-      },
-      "secondaryReadonlyMasterKey": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Base 64 encoded value of the secondary read-only key."
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "readonlykeys",
-    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
-    "apiVersion": "2019-08-01",
-    "output": {
-      "$ref": "#/281"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DatabaseAccountRegenerateKeyParameters",
-    "properties": {
-      "keyKind": {
-        "type": {
-          "$ref": "#/288"
-        },
-        "flags": 1,
-        "description": "The access key to regenerate."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "primary"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "secondary"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "primaryReadonly"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "secondaryReadonly"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/284"
-      },
-      {
-        "$ref": "#/285"
-      },
-      {
-        "$ref": "#/286"
-      },
-      {
-        "$ref": "#/287"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "regenerateKey",
-    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
-    "apiVersion": "2019-08-01",
-    "input": {
-      "$ref": "#/283"
+      "$ref": "#/271"
     }
   },
   {
@@ -4265,19 +4119,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
     "apiVersion": "2019-08-01",
     "output": {
-      "$ref": "#/290"
+      "$ref": "#/275"
     }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "regenerateAuthToken",
-    "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
-    "apiVersion": "2019-08-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "start",
-    "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
-    "apiVersion": "2019-08-01"
   }
 ]

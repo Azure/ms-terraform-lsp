@@ -1530,41 +1530,5 @@
     },
     "readableScopes": 1,
     "writableScopes": 0
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "stop",
-    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions",
-    "apiVersion": "2018-05-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "stop",
-    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
-    "apiVersion": "2018-05-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "resetDecisions",
-    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
-    "apiVersion": "2018-05-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "applyDecisions",
-    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
-    "apiVersion": "2018-05-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "sendReminders",
-    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
-    "apiVersion": "2018-05-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "acceptRecommendations",
-    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
-    "apiVersion": "2018-05-01-preview"
   }
 ]

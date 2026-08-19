@@ -848,27 +848,5 @@
     "output": {
       "$ref": "#/62"
     }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "CollectionAdminUpdate",
-    "properties": {
-      "objectId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Gets or sets the object identifier of the admin."
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "addRootCollectionAdmin",
-    "resourceType": "Microsoft.Purview/accounts",
-    "apiVersion": "2021-07-01",
-    "input": {
-      "$ref": "#/65"
-    }
   }
 ]

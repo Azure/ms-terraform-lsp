@@ -99,14 +99,14 @@
           "$ref": "#/6"
         },
         "flags": 0,
-        "description": "The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive for standard SKUs or between 1 and 3 inclusive for basic SKU."
+        "description": "The number of replicas in the dedicated search service. If specified, it must be a value between 1 and 12 inclusive for standard SKUs or between 1 and 3 inclusive for basic SKU."
       },
       "partitionCount": {
         "type": {
           "$ref": "#/6"
         },
         "flags": 0,
-        "description": "The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the allowed values are between 1 and 3."
+        "description": "The number of partitions in the dedicated search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the allowed values are between 1 and 3."
       },
       "endpoint": {
         "type": {
@@ -197,7 +197,7 @@
           "$ref": "#/56"
         },
         "flags": 0,
-        "description": "Sets options that control the availability of semantic search. This configuration is only possible for certain Azure AI Search SKUs in certain locations."
+        "description": "Specifies the availability and billing plan for semantic search on the Azure AI Search service. This configuration is only available for certain pricing tiers in certain regions."
       },
       "privateEndpointConnections": {
         "type": {
@@ -1154,7 +1154,7 @@
           "$ref": "#/110"
         },
         "flags": 0,
-        "description": "The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to 3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard, but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity'). 'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per partition, up to 12 partitions.'"
+        "description": "The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to 3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard, but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity'). 'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per partition, up to 12 partitions. 'serverless': Serverless tier with auto-scaling capabilities."
       }
     }
   },
@@ -2052,97 +2052,11 @@
   },
   {
     "$type": "ObjectType",
-    "name": "SearchService",
-    "properties": {
-      "properties": {
-        "type": {
-          "$ref": "#/5"
-        },
-        "flags": 0,
-        "description": "Properties of the search service."
-      },
-      "sku": {
-        "type": {
-          "$ref": "#/102"
-        },
-        "flags": 0,
-        "description": "The SKU of the search service, which determines price tier and capacity limits. This property is required when creating a new search service."
-      },
-      "identity": {
-        "type": {
-          "$ref": "#/111"
-        },
-        "flags": 0,
-        "description": "The identity of the resource."
-      },
-      "tags": {
-        "type": {
-          "$ref": "#/180"
-        },
-        "flags": 0,
-        "description": "Resource tags."
-      },
-      "location": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "The geo-location where the resource lives"
-      },
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
-      },
-      "name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The name of the resource"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/73"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "TrackedResourceTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/2"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "upgrade",
-    "resourceType": "Microsoft.Search/searchServices",
-    "apiVersion": "2025-05-01",
-    "output": {
-      "$ref": "#/179"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "ListQueryKeysResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/184"
+          "$ref": "#/181"
         },
         "flags": 2,
         "description": "The query keys for the Azure AI Search service."
@@ -2179,7 +2093,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/183"
+      "$ref": "#/180"
     }
   },
   {
@@ -2188,7 +2102,7 @@
     "resourceType": "Microsoft.Search/searchServices",
     "apiVersion": "2025-05-01",
     "output": {
-      "$ref": "#/182"
+      "$ref": "#/179"
     }
   },
   {
@@ -2217,13 +2131,7 @@
     "resourceType": "Microsoft.Search/searchServices",
     "apiVersion": "2025-05-01",
     "output": {
-      "$ref": "#/186"
+      "$ref": "#/183"
     }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "reconcile",
-    "resourceType": "Microsoft.Search/searchServices/networkSecurityPerimeterConfigurations",
-    "apiVersion": "2025-05-01"
   }
 ]
