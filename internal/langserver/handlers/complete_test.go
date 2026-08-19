@@ -367,7 +367,7 @@ func TestCompletionAVM_properties(t *testing.T) {
 		"account_tier",
 		"location",
 		"name",
-		"resource_group_name",
+		"parent_id",
 	}
 
 	foundProperties := make(map[string]bool)
