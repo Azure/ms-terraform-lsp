@@ -1,6 +1,6 @@
 resource "azapi_resource_action" "test" {
-  type = "Microsoft.AppPlatform/Spring@2022-05-01-preview"
-  action = "regenerateTestKey"
+  type = "Microsoft.Network/networkManagers@2024-01-01-preview"
+  action = "listDeploymentStatus"
   body = {
 
   }
