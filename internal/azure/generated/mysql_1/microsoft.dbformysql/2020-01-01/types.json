@@ -108,52 +108,5 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "start",
-    "resourceType": "Microsoft.DBforMySQL/servers",
-    "apiVersion": "2020-01-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "stop",
-    "resourceType": "Microsoft.DBforMySQL/servers",
-    "apiVersion": "2020-01-01"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ServerUpgradeParameters",
-    "properties": {
-      "properties": {
-        "type": {
-          "$ref": "#/11"
-        },
-        "flags": 0,
-        "description": "The properties that can be updated for a server."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ServerUpgradeParametersProperties",
-    "properties": {
-      "targetServerVersion": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Represents an server storage profile."
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "upgrade",
-    "resourceType": "Microsoft.DBforMySQL/servers",
-    "apiVersion": "2020-01-01",
-    "input": {
-      "$ref": "#/10"
-    }
   }
 ]

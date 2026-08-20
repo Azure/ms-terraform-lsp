@@ -556,44 +556,5 @@
     },
     "readableScopes": 1,
     "writableScopes": 0
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DeleteOptions",
-    "properties": {
-      "unsubscribeOnly": {
-        "type": {
-          "$ref": "#/7"
-        },
-        "flags": 0,
-        "description": "whether it is unsubscribeOnly"
-      },
-      "reasonCode": {
-        "type": {
-          "$ref": "#/37"
-        },
-        "flags": 0,
-        "description": "The reasonCode"
-      },
-      "feedback": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "the feedback"
-      }
-    }
-  },
-  {
-    "$type": "IntegerType"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "unsubscribe",
-    "resourceType": "Microsoft.ProfessionalService/resources",
-    "apiVersion": "2023-07-01-preview",
-    "input": {
-      "$ref": "#/36"
-    }
   }
 ]

@@ -1078,12 +1078,6 @@
     "writableScopes": 0
   },
   {
-    "$type": "ResourceFunctionType",
-    "name": "renew",
-    "resourceType": "Microsoft.DomainRegistration/domains",
-    "apiVersion": "2024-11-01"
-  },
-  {
     "$type": "ObjectType",
     "name": "TopLevelDomainAgreementOption",
     "properties": {
@@ -1109,7 +1103,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/90"
+          "$ref": "#/89"
         },
         "flags": 1,
         "description": "The TldLegalAgreement items on this page"
@@ -1160,7 +1154,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/89"
+      "$ref": "#/88"
     }
   },
   {
@@ -1169,10 +1163,10 @@
     "resourceType": "Microsoft.DomainRegistration/topLevelDomains",
     "apiVersion": "2024-11-01",
     "output": {
-      "$ref": "#/88"
+      "$ref": "#/87"
     },
     "input": {
-      "$ref": "#/87"
+      "$ref": "#/86"
     }
   }
 ]

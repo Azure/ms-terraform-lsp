@@ -245,7 +245,7 @@
           "$ref": "#/16"
         },
         "flags": 0,
-        "description": "(Optional) Discouraged to include in resource definition. Only needed where it is possible to disable platform (AKA infrastructure) encryption. Azure SQL TDE is an example of this. Values are enabled and disabled."
+        "description": "Values are enabled and disabled."
       },
       "customerManagedKeyEncryption": {
         "type": {
@@ -280,7 +280,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "EncryptionCustomerManagedKeyEncryption",
+    "name": "CustomerManagedKeyEncryption",
     "properties": {
       "keyEncryptionKeyIdentity": {
         "type": {
@@ -294,13 +294,13 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "key encryption key Url, versioned or unversioned. Ex: https://contosovault.vault.azure.net/keys/contosokek/562a4bb76b524a1493a6afe8e536ee78 or https://contosovault.vault.azure.net/keys/contosokek."
+        "description": "key encryption key Url, versioned or non-versioned. Ex: https://contosovault.vault.azure.net/keys/contosokek/562a4bb76b524a1493a6afe8e536ee78 or https://contosovault.vault.azure.net/keys/contosokek."
       }
     }
   },
   {
     "$type": "ObjectType",
-    "name": "EncryptionCustomerManagedKeyEncryptionKeyIdentity",
+    "name": "KeyEncryptionKeyIdentity",
     "properties": {
       "identityType": {
         "type": {
@@ -1341,53 +1341,6 @@
     },
     "input": {
       "$ref": "#/92"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "MapsKeySpecification",
-    "properties": {
-      "keyType": {
-        "type": {
-          "$ref": "#/104"
-        },
-        "flags": 1,
-        "description": "Whether the operation refers to the primary or secondary key."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "primary"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "secondary"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/102"
-      },
-      {
-        "$ref": "#/103"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "regenerateKey",
-    "resourceType": "Microsoft.Maps/accounts",
-    "apiVersion": "2025-10-01-preview",
-    "output": {
-      "$ref": "#/90"
-    },
-    "input": {
-      "$ref": "#/101"
     }
   }
 ]

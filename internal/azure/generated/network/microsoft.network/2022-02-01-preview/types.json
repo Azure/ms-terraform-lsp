@@ -3064,102 +3064,18 @@
   },
   {
     "$type": "ObjectType",
-    "name": "NetworkManagerCommit",
-    "properties": {
-      "commitId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Commit Id."
-      },
-      "targetLocations": {
-        "type": {
-          "$ref": "#/265"
-        },
-        "flags": 1,
-        "description": "List of target locations."
-      },
-      "configurationIds": {
-        "type": {
-          "$ref": "#/266"
-        },
-        "flags": 0,
-        "description": "List of configuration ids."
-      },
-      "commitType": {
-        "type": {
-          "$ref": "#/270"
-        },
-        "flags": 0,
-        "description": "Commit Type."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "SecurityAdmin"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "SecurityUser"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Connectivity"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/267"
-      },
-      {
-        "$ref": "#/268"
-      },
-      {
-        "$ref": "#/269"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "commit",
-    "resourceType": "Microsoft.Network/networkManagers",
-    "apiVersion": "2022-02-01-preview",
-    "input": {
-      "$ref": "#/264"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "NetworkManagerDeploymentStatusParameter",
     "properties": {
       "regions": {
         "type": {
-          "$ref": "#/273"
+          "$ref": "#/265"
         },
         "flags": 0,
         "description": "List of locations."
       },
       "deploymentTypes": {
         "type": {
-          "$ref": "#/278"
+          "$ref": "#/270"
         },
         "flags": 0,
         "description": "List of deployment types."
@@ -3195,13 +3111,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/274"
+        "$ref": "#/266"
       },
       {
-        "$ref": "#/275"
+        "$ref": "#/267"
       },
       {
-        "$ref": "#/276"
+        "$ref": "#/268"
       },
       {
         "$ref": "#/0"
@@ -3211,7 +3127,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/277"
+      "$ref": "#/269"
     }
   },
   {
@@ -3220,7 +3136,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/291"
+          "$ref": "#/283"
         },
         "flags": 0,
         "description": "Gets a page of Network Manager Deployment Status"
@@ -3254,21 +3170,21 @@
       },
       "deploymentStatus": {
         "type": {
-          "$ref": "#/285"
+          "$ref": "#/277"
         },
         "flags": 0,
         "description": "Deployment Status."
       },
       "configurationIds": {
         "type": {
-          "$ref": "#/286"
+          "$ref": "#/278"
         },
         "flags": 0,
         "description": "List of configuration ids."
       },
       "deploymentType": {
         "type": {
-          "$ref": "#/290"
+          "$ref": "#/282"
         },
         "flags": 0,
         "description": "Configuration Deployment Type."
@@ -3302,16 +3218,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/281"
+        "$ref": "#/273"
       },
       {
-        "$ref": "#/282"
+        "$ref": "#/274"
       },
       {
-        "$ref": "#/283"
+        "$ref": "#/275"
       },
       {
-        "$ref": "#/284"
+        "$ref": "#/276"
       },
       {
         "$ref": "#/0"
@@ -3340,13 +3256,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/287"
+        "$ref": "#/279"
       },
       {
-        "$ref": "#/288"
+        "$ref": "#/280"
       },
       {
-        "$ref": "#/289"
+        "$ref": "#/281"
       },
       {
         "$ref": "#/0"
@@ -3356,7 +3272,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/280"
+      "$ref": "#/272"
     }
   },
   {
@@ -3365,10 +3281,10 @@
     "resourceType": "Microsoft.Network/networkManagers",
     "apiVersion": "2022-02-01-preview",
     "output": {
-      "$ref": "#/279"
+      "$ref": "#/271"
     },
     "input": {
-      "$ref": "#/272"
+      "$ref": "#/264"
     }
   },
   {
@@ -3397,7 +3313,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/299"
+          "$ref": "#/291"
         },
         "flags": 0,
         "description": "Gets a page of EffectiveVirtualNetwork"
@@ -3431,7 +3347,7 @@
       },
       "membershipType": {
         "type": {
-          "$ref": "#/298"
+          "$ref": "#/290"
         },
         "flags": 0,
         "description": "Membership Type."
@@ -3450,10 +3366,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/296"
+        "$ref": "#/288"
       },
       {
-        "$ref": "#/297"
+        "$ref": "#/289"
       },
       {
         "$ref": "#/0"
@@ -3463,7 +3379,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/295"
+      "$ref": "#/287"
     }
   },
   {
@@ -3472,10 +3388,10 @@
     "resourceType": "Microsoft.Network/networkManagers",
     "apiVersion": "2022-02-01-preview",
     "output": {
-      "$ref": "#/294"
+      "$ref": "#/286"
     },
     "input": {
-      "$ref": "#/293"
+      "$ref": "#/285"
     }
   },
   {
@@ -3484,7 +3400,7 @@
     "properties": {
       "regions": {
         "type": {
-          "$ref": "#/302"
+          "$ref": "#/294"
         },
         "flags": 0,
         "description": "List of regions."
@@ -3510,7 +3426,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/307"
+          "$ref": "#/299"
         },
         "flags": 0,
         "description": "Gets a page of active connectivity configurations."
@@ -3558,7 +3474,7 @@
       },
       "configurationGroups": {
         "type": {
-          "$ref": "#/306"
+          "$ref": "#/298"
         },
         "flags": 0,
         "description": "Effective configuration groups."
@@ -3588,13 +3504,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/305"
+      "$ref": "#/297"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/304"
+      "$ref": "#/296"
     }
   },
   {
@@ -3603,10 +3519,10 @@
     "resourceType": "Microsoft.Network/networkManagers",
     "apiVersion": "2022-02-01-preview",
     "output": {
-      "$ref": "#/303"
+      "$ref": "#/295"
     },
     "input": {
-      "$ref": "#/301"
+      "$ref": "#/293"
     }
   },
   {
@@ -3615,7 +3531,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/317"
+          "$ref": "#/309"
         },
         "flags": 0,
         "description": "Gets a page of active security admin rules."
@@ -3671,14 +3587,14 @@
       },
       "ruleCollectionAppliesToGroups": {
         "type": {
-          "$ref": "#/311"
+          "$ref": "#/303"
         },
         "flags": 0,
         "description": "Groups for rule collection"
       },
       "ruleGroups": {
         "type": {
-          "$ref": "#/312"
+          "$ref": "#/304"
         },
         "flags": 0,
         "description": "Effective configuration groups."
@@ -3686,10 +3602,10 @@
     },
     "elements": {
       "Custom": {
-        "$ref": "#/313"
+        "$ref": "#/305"
       },
       "Default": {
-        "$ref": "#/315"
+        "$ref": "#/307"
       }
     }
   },
@@ -3702,7 +3618,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/305"
+      "$ref": "#/297"
     }
   },
   {
@@ -3718,7 +3634,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/314"
+          "$ref": "#/306"
         },
         "flags": 1,
         "description": "Whether the rule is custom or default."
@@ -3742,7 +3658,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/316"
+          "$ref": "#/308"
         },
         "flags": 1,
         "description": "Whether the rule is custom or default."
@@ -3756,7 +3672,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/310"
+      "$ref": "#/302"
     }
   },
   {
@@ -3765,10 +3681,10 @@
     "resourceType": "Microsoft.Network/networkManagers",
     "apiVersion": "2022-02-01-preview",
     "output": {
-      "$ref": "#/309"
+      "$ref": "#/301"
     },
     "input": {
-      "$ref": "#/301"
+      "$ref": "#/293"
     }
   },
   {
@@ -3777,7 +3693,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/327"
+          "$ref": "#/319"
         },
         "flags": 0,
         "description": "Gets a page of active security user rules."
@@ -3833,14 +3749,14 @@
       },
       "ruleCollectionAppliesToGroups": {
         "type": {
-          "$ref": "#/321"
+          "$ref": "#/313"
         },
         "flags": 0,
         "description": "Groups for rule collection"
       },
       "ruleGroups": {
         "type": {
-          "$ref": "#/322"
+          "$ref": "#/314"
         },
         "flags": 0,
         "description": "Effective configuration groups."
@@ -3848,10 +3764,10 @@
     },
     "elements": {
       "Custom": {
-        "$ref": "#/323"
+        "$ref": "#/315"
       },
       "Default": {
-        "$ref": "#/325"
+        "$ref": "#/317"
       }
     }
   },
@@ -3864,7 +3780,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/305"
+      "$ref": "#/297"
     }
   },
   {
@@ -3880,7 +3796,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/324"
+          "$ref": "#/316"
         },
         "flags": 1,
         "description": "Whether the rule is custom or default."
@@ -3904,7 +3820,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/326"
+          "$ref": "#/318"
         },
         "flags": 1,
         "description": "Whether the rule is custom or default."
@@ -3918,7 +3834,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/320"
+      "$ref": "#/312"
     }
   },
   {
@@ -3927,10 +3843,10 @@
     "resourceType": "Microsoft.Network/networkManagers",
     "apiVersion": "2022-02-01-preview",
     "output": {
-      "$ref": "#/319"
+      "$ref": "#/311"
     },
     "input": {
-      "$ref": "#/301"
+      "$ref": "#/293"
     }
   },
   {
@@ -3952,7 +3868,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/333"
+          "$ref": "#/325"
         },
         "flags": 0,
         "description": "Gets a page of NetworkManagerEffectiveConnectivityConfiguration"
@@ -3986,7 +3902,7 @@
       },
       "configurationGroups": {
         "type": {
-          "$ref": "#/332"
+          "$ref": "#/324"
         },
         "flags": 0,
         "description": "Effective configuration groups."
@@ -3996,13 +3912,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/305"
+      "$ref": "#/297"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/331"
+      "$ref": "#/323"
     }
   },
   {
@@ -4011,10 +3927,10 @@
     "resourceType": "Microsoft.Network/virtualNetworks",
     "apiVersion": "2022-02-01-preview",
     "output": {
-      "$ref": "#/330"
+      "$ref": "#/322"
     },
     "input": {
-      "$ref": "#/329"
+      "$ref": "#/321"
     }
   },
   {
@@ -4023,7 +3939,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/343"
+          "$ref": "#/335"
         },
         "flags": 0,
         "description": "Gets a page of NetworkManagerEffectiveSecurityAdminRules"
@@ -4065,14 +3981,14 @@
       },
       "ruleCollectionAppliesToGroups": {
         "type": {
-          "$ref": "#/337"
+          "$ref": "#/329"
         },
         "flags": 0,
         "description": "Groups for rule collection"
       },
       "ruleGroups": {
         "type": {
-          "$ref": "#/338"
+          "$ref": "#/330"
         },
         "flags": 0,
         "description": "Effective configuration groups."
@@ -4080,10 +3996,10 @@
     },
     "elements": {
       "Custom": {
-        "$ref": "#/339"
+        "$ref": "#/331"
       },
       "Default": {
-        "$ref": "#/341"
+        "$ref": "#/333"
       }
     }
   },
@@ -4096,7 +4012,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/305"
+      "$ref": "#/297"
     }
   },
   {
@@ -4112,7 +4028,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/340"
+          "$ref": "#/332"
         },
         "flags": 1,
         "description": "Whether the rule is custom or default."
@@ -4136,7 +4052,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/342"
+          "$ref": "#/334"
         },
         "flags": 1,
         "description": "Whether the rule is custom or default."
@@ -4150,7 +4066,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/336"
+      "$ref": "#/328"
     }
   },
   {
@@ -4159,10 +4075,10 @@
     "resourceType": "Microsoft.Network/virtualNetworks",
     "apiVersion": "2022-02-01-preview",
     "output": {
-      "$ref": "#/335"
+      "$ref": "#/327"
     },
     "input": {
-      "$ref": "#/329"
+      "$ref": "#/321"
     }
   },
   {
@@ -4171,10 +4087,10 @@
     "resourceType": "Microsoft.Network/networkManagers/networkGroups",
     "apiVersion": "2022-02-01-preview",
     "output": {
-      "$ref": "#/294"
+      "$ref": "#/286"
     },
     "input": {
-      "$ref": "#/329"
+      "$ref": "#/321"
     }
   }
 ]

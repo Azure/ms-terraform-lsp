@@ -792,11 +792,5 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "run",
-    "resourceType": "Microsoft.VirtualMachineImages/imageTemplates",
-    "apiVersion": "2019-02-01-preview"
   }
 ]

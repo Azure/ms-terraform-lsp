@@ -440,24 +440,12 @@
     "writableScopes": 8
   },
   {
-    "$type": "ResourceFunctionType",
-    "name": "suspend",
-    "resourceType": "Microsoft.AnalysisServices/servers",
-    "apiVersion": "2017-07-14"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "resume",
-    "resourceType": "Microsoft.AnalysisServices/servers",
-    "apiVersion": "2017-07-14"
-  },
-  {
     "$type": "ObjectType",
     "name": "GatewayListStatusLive",
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/44"
         },
         "flags": 0,
         "description": "Live message of list gateway. Status: 0 - Live"
@@ -474,75 +462,7 @@
     "resourceType": "Microsoft.AnalysisServices/servers",
     "apiVersion": "2017-07-14",
     "output": {
-      "$ref": "#/45"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "dissociateGateway",
-    "resourceType": "Microsoft.AnalysisServices/servers",
-    "apiVersion": "2017-07-14"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "CheckServerNameAvailabilityParameters",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Name for checking availability."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The resource type of azure analysis services."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "CheckServerNameAvailabilityResult",
-    "properties": {
-      "nameAvailable": {
-        "type": {
-          "$ref": "#/51"
-        },
-        "flags": 0,
-        "description": "Indicator of available of the server name."
-      },
-      "reason": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The reason of unavailability."
-      },
-      "message": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The detailed message of the request unavailability."
-      }
-    }
-  },
-  {
-    "$type": "BooleanType"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "checkNameAvailability",
-    "resourceType": "Microsoft.AnalysisServices/locations",
-    "apiVersion": "2017-07-14",
-    "output": {
-      "$ref": "#/50"
-    },
-    "input": {
-      "$ref": "#/49"
+      "$ref": "#/43"
     }
   }
 ]

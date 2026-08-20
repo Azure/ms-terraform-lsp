@@ -1081,17 +1081,5 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "cancel",
-    "resourceType": "Microsoft.Chaos/experiments",
-    "apiVersion": "2022-07-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "start",
-    "resourceType": "Microsoft.Chaos/experiments",
-    "apiVersion": "2022-07-01-preview"
   }
 ]

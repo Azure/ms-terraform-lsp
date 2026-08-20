@@ -1912,18 +1912,12 @@
     "writableScopes": 8
   },
   {
-    "$type": "ResourceFunctionType",
-    "name": "refreshPermissions",
-    "resourceType": "Microsoft.Solutions/applications",
-    "apiVersion": "2021-02-01-preview"
-  },
-  {
     "$type": "ObjectType",
     "name": "AllowedUpgradePlansResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/154"
+          "$ref": "#/153"
         },
         "flags": 0,
         "description": "The array of plans."
@@ -1942,163 +1936,7 @@
     "resourceType": "Microsoft.Solutions/applications",
     "apiVersion": "2021-02-01-preview",
     "output": {
-      "$ref": "#/153"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UpdateAccessDefinition",
-    "properties": {
-      "approver": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The approver name."
-      },
-      "metadata": {
-        "type": {
-          "$ref": "#/157"
-        },
-        "flags": 1,
-        "description": "The JIT request metadata."
-      },
-      "status": {
-        "type": {
-          "$ref": "#/161"
-        },
-        "flags": 1,
-        "description": "The JIT status."
-      },
-      "subStatus": {
-        "type": {
-          "$ref": "#/168"
-        },
-        "flags": 1,
-        "description": "The JIT status."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "JitRequestMetadata",
-    "properties": {
-      "originRequestId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The origin request id."
-      },
-      "requestorId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The requestor id."
-      },
-      "tenantDisplayName": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The publisher's tenant name."
-      },
-      "subjectDisplayName": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The subject display name."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "NotSpecified"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Elevate"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Remove"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/158"
-      },
-      {
-        "$ref": "#/159"
-      },
-      {
-        "$ref": "#/160"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "NotSpecified"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Approved"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Denied"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Failed"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Expired"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Timeout"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/162"
-      },
-      {
-        "$ref": "#/163"
-      },
-      {
-        "$ref": "#/164"
-      },
-      {
-        "$ref": "#/165"
-      },
-      {
-        "$ref": "#/166"
-      },
-      {
-        "$ref": "#/167"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "updateAccess",
-    "resourceType": "Microsoft.Solutions/applications",
-    "apiVersion": "2021-02-01-preview",
-    "input": {
-      "$ref": "#/156"
+      "$ref": "#/152"
     }
   },
   {
@@ -2114,7 +1952,7 @@
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/171"
+          "$ref": "#/156"
         },
         "flags": 0,
         "description": "The user assigned identities."
@@ -2133,7 +1971,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/174"
+          "$ref": "#/159"
         },
         "flags": 0,
         "description": "The array of managed identity tokens."
@@ -2198,7 +2036,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/173"
+      "$ref": "#/158"
     }
   },
   {
@@ -2207,10 +2045,10 @@
     "resourceType": "Microsoft.Solutions/applications",
     "apiVersion": "2021-02-01-preview",
     "output": {
-      "$ref": "#/172"
+      "$ref": "#/157"
     },
     "input": {
-      "$ref": "#/170"
+      "$ref": "#/155"
     }
   }
 ]

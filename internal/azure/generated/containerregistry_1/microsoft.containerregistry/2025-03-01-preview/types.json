@@ -2876,24 +2876,6 @@
     }
   },
   {
-    "$type": "ResourceFunctionType",
-    "name": "scheduleRun",
-    "resourceType": "Microsoft.ContainerRegistry/registries",
-    "apiVersion": "2025-03-01-preview",
-    "output": {
-      "$ref": "#/88"
-    },
-    "input": {
-      "$ref": "#/42"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "cancel",
-    "resourceType": "Microsoft.ContainerRegistry/registries/runs",
-    "apiVersion": "2025-03-01-preview"
-  },
-  {
     "$type": "ObjectType",
     "name": "RunGetLogResult",
     "properties": {
@@ -2919,7 +2901,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/runs",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/203"
+      "$ref": "#/201"
     }
   },
   {
@@ -2983,7 +2965,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/taskRuns",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/205"
+      "$ref": "#/203"
     }
   },
   {
@@ -3006,7 +2988,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/208"
+          "$ref": "#/206"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -3062,7 +3044,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/tasks",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/207"
+      "$ref": "#/205"
     }
   }
 ]

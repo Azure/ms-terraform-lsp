@@ -2494,145 +2494,11 @@
   },
   {
     "$type": "ObjectType",
-    "name": "PoolUsage",
-    "properties": {
-      "addressPrefixes": {
-        "type": {
-          "$ref": "#/220"
-        },
-        "flags": 2,
-        "description": "List of IP address prefixes of the resource."
-      },
-      "childPools": {
-        "type": {
-          "$ref": "#/223"
-        },
-        "flags": 2,
-        "description": "List of IpamPool that are children of this IpamPool."
-      },
-      "allocatedAddressPrefixes": {
-        "type": {
-          "$ref": "#/224"
-        },
-        "flags": 2,
-        "description": "List of assigned IP address prefixes."
-      },
-      "reservedAddressPrefixes": {
-        "type": {
-          "$ref": "#/225"
-        },
-        "flags": 2,
-        "description": "List of reserved IP address prefixes. These IP addresses could be reclaimed if not assigned in the given time."
-      },
-      "availableAddressPrefixes": {
-        "type": {
-          "$ref": "#/226"
-        },
-        "flags": 2,
-        "description": "List of available IP address prefixes."
-      },
-      "totalNumberOfIPAddresses": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Total number of IP addresses managed in the IpamPool."
-      },
-      "numberOfAllocatedIPAddresses": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Total number of assigned IP addresses in the IpamPool."
-      },
-      "numberOfReservedIPAddresses": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Total number of reserved IP addresses in the IpamPool."
-      },
-      "numberOfAvailableIPAddresses": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Total number of available IP addresses in the IpamPool."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ResourceBasics",
-    "properties": {
-      "resourceId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "ResourceId of the Azure resource."
-      },
-      "addressPrefixes": {
-        "type": {
-          "$ref": "#/222"
-        },
-        "flags": 0,
-        "description": "List of IP address prefixes of the resource."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/221"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "getPoolUsage",
-    "resourceType": "Microsoft.Network/networkManagers/ipamPools",
-    "apiVersion": "2024-01-01-preview",
-    "output": {
-      "$ref": "#/219"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "PoolAssociationList",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/232"
+          "$ref": "#/223"
         },
         "flags": 0
       },
@@ -2671,14 +2537,14 @@
       },
       "addressPrefixes": {
         "type": {
-          "$ref": "#/230"
+          "$ref": "#/221"
         },
         "flags": 2,
         "description": "List of assigned IP address prefixes in the IpamPool of the associated resource."
       },
       "reservedPrefixes": {
         "type": {
-          "$ref": "#/231"
+          "$ref": "#/222"
         },
         "flags": 2,
         "description": "List of reserved IP address prefixes in the IpamPool of the associated resource."
@@ -2728,7 +2594,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/229"
+      "$ref": "#/220"
     }
   },
   {
@@ -2737,87 +2603,7 @@
     "resourceType": "Microsoft.Network/networkManagers/ipamPools",
     "apiVersion": "2024-01-01-preview",
     "output": {
-      "$ref": "#/228"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "NetworkManagerCommit",
-    "properties": {
-      "commitId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Commit Id."
-      },
-      "targetLocations": {
-        "type": {
-          "$ref": "#/235"
-        },
-        "flags": 1,
-        "description": "List of target locations."
-      },
-      "configurationIds": {
-        "type": {
-          "$ref": "#/236"
-        },
-        "flags": 0,
-        "description": "List of configuration ids."
-      },
-      "commitType": {
-        "type": {
-          "$ref": "#/239"
-        },
-        "flags": 1,
-        "description": "Commit Type."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "SecurityAdmin"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Connectivity"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/237"
-      },
-      {
-        "$ref": "#/238"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "commit",
-    "resourceType": "Microsoft.Network/networkManagers",
-    "apiVersion": "2024-01-01-preview",
-    "output": {
-      "$ref": "#/234"
-    },
-    "input": {
-      "$ref": "#/234"
+      "$ref": "#/219"
     }
   },
   {
@@ -2826,14 +2612,14 @@
     "properties": {
       "regions": {
         "type": {
-          "$ref": "#/242"
+          "$ref": "#/226"
         },
         "flags": 0,
         "description": "List of locations."
       },
       "deploymentTypes": {
         "type": {
-          "$ref": "#/246"
+          "$ref": "#/230"
         },
         "flags": 0,
         "description": "List of deployment types."
@@ -2865,10 +2651,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/243"
+        "$ref": "#/227"
       },
       {
-        "$ref": "#/244"
+        "$ref": "#/228"
       },
       {
         "$ref": "#/0"
@@ -2878,7 +2664,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/245"
+      "$ref": "#/229"
     }
   },
   {
@@ -2887,7 +2673,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/258"
+          "$ref": "#/242"
         },
         "flags": 0,
         "description": "Gets a page of Network Manager Deployment Status"
@@ -2921,21 +2707,21 @@
       },
       "deploymentStatus": {
         "type": {
-          "$ref": "#/253"
+          "$ref": "#/237"
         },
         "flags": 0,
         "description": "Deployment Status."
       },
       "configurationIds": {
         "type": {
-          "$ref": "#/254"
+          "$ref": "#/238"
         },
         "flags": 0,
         "description": "List of configuration ids."
       },
       "deploymentType": {
         "type": {
-          "$ref": "#/257"
+          "$ref": "#/241"
         },
         "flags": 0,
         "description": "Configuration Deployment Type."
@@ -2969,16 +2755,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/249"
+        "$ref": "#/233"
       },
       {
-        "$ref": "#/250"
+        "$ref": "#/234"
       },
       {
-        "$ref": "#/251"
+        "$ref": "#/235"
       },
       {
-        "$ref": "#/252"
+        "$ref": "#/236"
       },
       {
         "$ref": "#/0"
@@ -3003,10 +2789,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/255"
+        "$ref": "#/239"
       },
       {
-        "$ref": "#/256"
+        "$ref": "#/240"
       },
       {
         "$ref": "#/0"
@@ -3016,7 +2802,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/248"
+      "$ref": "#/232"
     }
   },
   {
@@ -3025,10 +2811,10 @@
     "resourceType": "Microsoft.Network/networkManagers",
     "apiVersion": "2024-01-01-preview",
     "output": {
-      "$ref": "#/247"
+      "$ref": "#/231"
     },
     "input": {
-      "$ref": "#/241"
+      "$ref": "#/225"
     }
   }
 ]

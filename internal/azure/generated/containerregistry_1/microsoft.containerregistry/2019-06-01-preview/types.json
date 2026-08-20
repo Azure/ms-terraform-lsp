@@ -2840,18 +2840,6 @@
     }
   },
   {
-    "$type": "ResourceFunctionType",
-    "name": "scheduleRun",
-    "resourceType": "Microsoft.ContainerRegistry/registries",
-    "apiVersion": "2019-06-01-preview",
-    "output": {
-      "$ref": "#/96"
-    },
-    "input": {
-      "$ref": "#/50"
-    }
-  },
-  {
     "$type": "ObjectType",
     "name": "SourceUploadDefinition",
     "properties": {
@@ -2877,7 +2865,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/200"
+      "$ref": "#/199"
     }
   },
   {
@@ -2906,14 +2894,8 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/runs",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/202"
+      "$ref": "#/201"
     }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "cancel",
-    "resourceType": "Microsoft.ContainerRegistry/registries/runs",
-    "apiVersion": "2019-06-01-preview"
   },
   {
     "$type": "ObjectType",
@@ -2976,7 +2958,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/taskRuns",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/205"
+      "$ref": "#/203"
     }
   },
   {
@@ -3027,7 +3009,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/208"
+          "$ref": "#/206"
         },
         "flags": 0,
         "description": "The tags of the resource."
@@ -3055,7 +3037,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/tasks",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/207"
+      "$ref": "#/205"
     }
   }
 ]

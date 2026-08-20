@@ -266,12 +266,6 @@
     "writableScopes": 8
   },
   {
-    "$type": "ResourceFunctionType",
-    "name": "resyncStorageKeys",
-    "resourceType": "Microsoft.MachineLearning/workspaces",
-    "apiVersion": "2019-10-01"
-  },
-  {
     "$type": "ObjectType",
     "name": "WorkspaceKeysResponse",
     "properties": {
@@ -297,7 +291,7 @@
     "resourceType": "Microsoft.MachineLearning/workspaces",
     "apiVersion": "2019-10-01",
     "output": {
-      "$ref": "#/23"
+      "$ref": "#/22"
     }
   }
 ]

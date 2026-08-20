@@ -1530,30 +1530,12 @@
     }
   },
   {
-    "$type": "ResourceFunctionType",
-    "name": "getDefaultKey",
-    "resourceType": "Microsoft.Datadog/monitors",
-    "apiVersion": "2024-03-01",
-    "output": {
-      "$ref": "#/123"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "setDefaultKey",
-    "resourceType": "Microsoft.Datadog/monitors",
-    "apiVersion": "2024-03-01",
-    "input": {
-      "$ref": "#/123"
-    }
-  },
-  {
     "$type": "ObjectType",
     "name": "DatadogHostListResponse",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/135"
+          "$ref": "#/133"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1580,21 +1562,21 @@
       },
       "aliases": {
         "type": {
-          "$ref": "#/130"
+          "$ref": "#/128"
         },
         "flags": 0,
         "description": "The aliases for the host installed via the Datadog agent."
       },
       "apps": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/129"
         },
         "flags": 0,
         "description": "The Datadog integrations reporting metrics for the host."
       },
       "meta": {
         "type": {
-          "$ref": "#/132"
+          "$ref": "#/130"
         },
         "flags": 0
       }
@@ -1625,13 +1607,13 @@
       },
       "installMethod": {
         "type": {
-          "$ref": "#/133"
+          "$ref": "#/131"
         },
         "flags": 0
       },
       "logsAgent": {
         "type": {
-          "$ref": "#/134"
+          "$ref": "#/132"
         },
         "flags": 0
       }
@@ -1680,7 +1662,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/129"
+      "$ref": "#/127"
     }
   },
   {
@@ -1689,7 +1671,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2024-03-01",
     "output": {
-      "$ref": "#/128"
+      "$ref": "#/126"
     }
   },
   {
@@ -1698,7 +1680,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/139"
+          "$ref": "#/137"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1735,7 +1717,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/138"
+      "$ref": "#/136"
     }
   },
   {
@@ -1744,7 +1726,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2024-03-01",
     "output": {
-      "$ref": "#/137"
+      "$ref": "#/135"
     }
   },
   {
@@ -1753,7 +1735,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/141"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1811,7 +1793,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/142"
+      "$ref": "#/140"
     }
   },
   {
@@ -1820,125 +1802,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2024-03-01",
     "output": {
-      "$ref": "#/141"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DatadogSetPasswordLink",
-    "properties": {
-      "setPasswordLink": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "refreshSetPasswordLink",
-    "resourceType": "Microsoft.Datadog/monitors",
-    "apiVersion": "2024-03-01",
-    "output": {
-      "$ref": "#/145"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "BillingInfoResponse",
-    "properties": {
-      "marketplaceSaasInfo": {
-        "type": {
-          "$ref": "#/148"
-        },
-        "flags": 0,
-        "description": "Marketplace Subscription details"
-      },
-      "partnerBillingEntity": {
-        "type": {
-          "$ref": "#/149"
-        },
-        "flags": 0,
-        "description": "Partner Billing Entity details: Organization Info"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "MarketplaceSaaSInfo",
-    "properties": {
-      "marketplaceSubscriptionId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Marketplace Subscription Id. This is a GUID-formatted string."
-      },
-      "marketplaceName": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Marketplace Subscription Details: SAAS Name"
-      },
-      "marketplaceStatus": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Marketplace Subscription Details: SaaS Subscription Status"
-      },
-      "billedAzureSubscriptionId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The Azure Subscription ID to which the Marketplace Subscription belongs and gets billed into."
-      },
-      "subscribed": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 0,
-        "description": "Flag specifying if the Marketplace status is subscribed or not."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "PartnerBillingEntity",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The Datadog Organization Id."
-      },
-      "name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The Datadog Organization Name."
-      },
-      "partnerEntityUri": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Link to the datadog organization page"
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "getBillingInfo",
-    "resourceType": "Microsoft.Datadog/monitors",
-    "apiVersion": "2024-03-01",
-    "output": {
-      "$ref": "#/147"
+      "$ref": "#/139"
     }
   }
 ]

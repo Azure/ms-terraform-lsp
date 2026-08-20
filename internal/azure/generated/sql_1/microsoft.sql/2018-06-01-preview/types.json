@@ -3117,51 +3117,5 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "disable",
-    "resourceType": "Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels",
-    "apiVersion": "2018-06-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "enable",
-    "resourceType": "Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels",
-    "apiVersion": "2018-06-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "failover",
-    "resourceType": "Microsoft.Sql/servers/elasticPools",
-    "apiVersion": "2018-06-01-preview"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "failover",
-    "resourceType": "Microsoft.Sql/servers/databases",
-    "apiVersion": "2018-06-01-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "CompleteDatabaseRestoreDefinition",
-    "properties": {
-      "lastBackupName": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The last backup name to apply"
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "completeRestore",
-    "resourceType": "Microsoft.Sql/managedInstances/databases",
-    "apiVersion": "2018-06-01-preview",
-    "input": {
-      "$ref": "#/232"
-    }
   }
 ]

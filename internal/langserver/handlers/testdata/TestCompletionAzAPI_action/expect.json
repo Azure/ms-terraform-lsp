@@ -5,14 +5,14 @@
     "isIncomplete": false,
     "items": [
       {
-        "label": "\"disableTestEndpoint\"",
+        "label": "\"listGloballyEnabledApms\"",
         "labelDetails": {},
         "kind": 12,
         "documentation": {
           "kind": "markdown",
-          "value": "Value: `disableTestEndpoint`  \n"
+          "value": "Value: `listGloballyEnabledApms`  \n"
         },
-        "sortText": "0disableTestEndpoint",
+        "sortText": "0listGloballyEnabledApms",
         "insertTextFormat": 1,
         "insertTextMode": 2,
         "textEdit": {
@@ -26,32 +26,7 @@
               "character": 11
             }
           },
-          "newText": "\"disableTestEndpoint\""
-        }
-      },
-      {
-        "label": "\"enableTestEndpoint\"",
-        "labelDetails": {},
-        "kind": 12,
-        "documentation": {
-          "kind": "markdown",
-          "value": "Value: `enableTestEndpoint`  \n"
-        },
-        "sortText": "0enableTestEndpoint",
-        "insertTextFormat": 1,
-        "insertTextMode": 2,
-        "textEdit": {
-          "range": {
-            "start": {
-              "line": 2,
-              "character": 10
-            },
-            "end": {
-              "line": 2,
-              "character": 11
-            }
-          },
-          "newText": "\"enableTestEndpoint\""
+          "newText": "\"listGloballyEnabledApms\""
         }
       },
       {
@@ -77,81 +52,6 @@
             }
           },
           "newText": "\"listTestKeys\""
-        }
-      },
-      {
-        "label": "\"regenerateTestKey\"",
-        "labelDetails": {},
-        "kind": 12,
-        "documentation": {
-          "kind": "markdown",
-          "value": "Value: `regenerateTestKey`  \n"
-        },
-        "sortText": "0regenerateTestKey",
-        "insertTextFormat": 1,
-        "insertTextMode": 2,
-        "textEdit": {
-          "range": {
-            "start": {
-              "line": 2,
-              "character": 10
-            },
-            "end": {
-              "line": 2,
-              "character": 11
-            }
-          },
-          "newText": "\"regenerateTestKey\""
-        }
-      },
-      {
-        "label": "\"start\"",
-        "labelDetails": {},
-        "kind": 12,
-        "documentation": {
-          "kind": "markdown",
-          "value": "Value: `start`  \n"
-        },
-        "sortText": "0start",
-        "insertTextFormat": 1,
-        "insertTextMode": 2,
-        "textEdit": {
-          "range": {
-            "start": {
-              "line": 2,
-              "character": 10
-            },
-            "end": {
-              "line": 2,
-              "character": 11
-            }
-          },
-          "newText": "\"start\""
-        }
-      },
-      {
-        "label": "\"stop\"",
-        "labelDetails": {},
-        "kind": 12,
-        "documentation": {
-          "kind": "markdown",
-          "value": "Value: `stop`  \n"
-        },
-        "sortText": "0stop",
-        "insertTextFormat": 1,
-        "insertTextMode": 2,
-        "textEdit": {
-          "range": {
-            "start": {
-              "line": 2,
-              "character": 10
-            },
-            "end": {
-              "line": 2,
-              "character": 11
-            }
-          },
-          "newText": "\"stop\""
         }
       }
     ]

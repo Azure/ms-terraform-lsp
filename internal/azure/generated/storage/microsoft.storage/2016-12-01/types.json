@@ -601,49 +601,25 @@
   },
   {
     "$type": "ObjectType",
-    "name": "StorageAccountRegenerateKeyParameters",
-    "properties": {
-      "keyName": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "regenerateKey",
-    "resourceType": "Microsoft.Storage/storageAccounts",
-    "apiVersion": "2016-12-01",
-    "output": {
-      "$ref": "#/42"
-    },
-    "input": {
-      "$ref": "#/49"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "AccountSasParameters",
     "properties": {
       "signedServices": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/54"
         },
         "flags": 1,
         "description": "The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f)."
       },
       "signedResourceTypes": {
         "type": {
-          "$ref": "#/60"
+          "$ref": "#/58"
         },
         "flags": 1,
         "description": "The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files."
       },
       "signedPermission": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/67"
         },
         "flags": 1,
         "description": "The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p)."
@@ -657,7 +633,7 @@
       },
       "signedProtocol": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "The protocol permitted for a request made with the account SAS."
@@ -705,16 +681,16 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
         "$ref": "#/52"
       },
       {
         "$ref": "#/53"
-      },
-      {
-        "$ref": "#/54"
-      },
-      {
-        "$ref": "#/55"
       },
       {
         "$ref": "#/2"
@@ -737,13 +713,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
         "$ref": "#/57"
-      },
-      {
-        "$ref": "#/58"
-      },
-      {
-        "$ref": "#/59"
       },
       {
         "$ref": "#/2"
@@ -786,6 +762,12 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
         "$ref": "#/61"
       },
       {
@@ -804,12 +786,6 @@
         "$ref": "#/66"
       },
       {
-        "$ref": "#/67"
-      },
-      {
-        "$ref": "#/68"
-      },
-      {
         "$ref": "#/2"
       }
     ]
@@ -826,10 +802,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/70"
+        "$ref": "#/68"
       },
       {
-        "$ref": "#/71"
+        "$ref": "#/69"
       }
     ]
   },
@@ -852,10 +828,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2016-12-01",
     "output": {
-      "$ref": "#/73"
+      "$ref": "#/71"
     },
     "input": {
-      "$ref": "#/51"
+      "$ref": "#/49"
     }
   },
   {
@@ -871,14 +847,14 @@
       },
       "signedResource": {
         "type": {
-          "$ref": "#/80"
+          "$ref": "#/78"
         },
         "flags": 1,
         "description": "The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s)."
       },
       "signedPermission": {
         "type": {
-          "$ref": "#/89"
+          "$ref": "#/87"
         },
         "flags": 0,
         "description": "The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p)."
@@ -892,7 +868,7 @@
       },
       "signedProtocol": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/90"
         },
         "flags": 0,
         "description": "The protocol permitted for a request made with the account SAS."
@@ -913,7 +889,7 @@
       },
       "signedIdentifier": {
         "type": {
-          "$ref": "#/93"
+          "$ref": "#/91"
         },
         "flags": 0,
         "description": "A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table."
@@ -1010,16 +986,16 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
         "$ref": "#/76"
       },
       {
         "$ref": "#/77"
-      },
-      {
-        "$ref": "#/78"
-      },
-      {
-        "$ref": "#/79"
       },
       {
         "$ref": "#/2"
@@ -1062,6 +1038,12 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
         "$ref": "#/81"
       },
       {
@@ -1080,12 +1062,6 @@
         "$ref": "#/86"
       },
       {
-        "$ref": "#/87"
-      },
-      {
-        "$ref": "#/88"
-      },
-      {
         "$ref": "#/2"
       }
     ]
@@ -1102,10 +1078,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/90"
+        "$ref": "#/88"
       },
       {
-        "$ref": "#/91"
+        "$ref": "#/89"
       }
     ]
   },
@@ -1132,10 +1108,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2016-12-01",
     "output": {
-      "$ref": "#/94"
+      "$ref": "#/92"
     },
     "input": {
-      "$ref": "#/75"
+      "$ref": "#/73"
     }
   }
 ]

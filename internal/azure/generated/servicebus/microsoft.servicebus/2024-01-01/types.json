@@ -3036,98 +3036,6 @@
     }
   },
   {
-    "$type": "ObjectType",
-    "name": "RegenerateAccessKeyParameters",
-    "properties": {
-      "keyType": {
-        "type": {
-          "$ref": "#/198"
-        },
-        "flags": 1,
-        "description": "The access key to regenerate."
-      },
-      "key": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Optional, if the key value provided, is reset for KeyType value or autogenerate Key value set for keyType"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "PrimaryKey"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "SecondaryKey"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/196"
-      },
-      {
-        "$ref": "#/197"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "regenerateKeys",
-    "resourceType": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
-    "apiVersion": "2024-01-01",
-    "output": {
-      "$ref": "#/193"
-    },
-    "input": {
-      "$ref": "#/195"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "breakPairing",
-    "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
-    "apiVersion": "2024-01-01"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "FailoverProperties",
-    "properties": {
-      "properties": {
-        "type": {
-          "$ref": "#/202"
-        },
-        "flags": 0,
-        "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "FailoverPropertiesProperties",
-    "properties": {
-      "IsSafeFailover": {
-        "type": {
-          "$ref": "#/38"
-        },
-        "flags": 0,
-        "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "failover",
-    "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
-    "apiVersion": "2024-01-01",
-    "input": {
-      "$ref": "#/201"
-    }
-  },
-  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules",
@@ -3138,18 +3046,6 @@
   },
   {
     "$type": "ResourceFunctionType",
-    "name": "upgrade",
-    "resourceType": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
-    "apiVersion": "2024-01-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "revert",
-    "resourceType": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
-    "apiVersion": "2024-01-01"
-  },
-  {
-    "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
     "apiVersion": "2024-01-01",
@@ -3159,35 +3055,11 @@
   },
   {
     "$type": "ResourceFunctionType",
-    "name": "regenerateKeys",
-    "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
-    "apiVersion": "2024-01-01",
-    "output": {
-      "$ref": "#/193"
-    },
-    "input": {
-      "$ref": "#/195"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
     "apiVersion": "2024-01-01",
     "output": {
       "$ref": "#/193"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "regenerateKeys",
-    "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
-    "apiVersion": "2024-01-01",
-    "output": {
-      "$ref": "#/193"
-    },
-    "input": {
-      "$ref": "#/195"
     }
   }
 ]

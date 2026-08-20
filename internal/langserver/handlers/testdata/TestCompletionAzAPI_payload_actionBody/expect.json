@@ -4,16 +4,16 @@
   "result": {
     "isIncomplete": false,
     "items": [
-      {
-        "label": "required-properties",
+	  {
+        "label": "deploymentTypes",
         "labelDetails": {},
-        "kind": 15,
-        "detail": "Required properties",
+        "kind": 10,
+        "detail": "deploymentTypes (Optional)",
         "documentation": {
           "kind": "markdown",
-          "value": "Type: ``  \n```\nkeyType = \"$1\"\n\n```\n"
+          "value": "Type: `array`  \nList of deployment types.\n"
         },
-        "sortText": "0",
+        "sortText": "1deploymentTypes",
         "insertTextFormat": 2,
         "insertTextMode": 2,
         "textEdit": {
@@ -27,7 +27,7 @@
               "character": 4
             }
           },
-          "newText": "keyType = \"$1\"\n"
+          "newText": "deploymentTypes = [$0]"
         },
         "command": {
           "title": "Suggest",
@@ -35,15 +35,15 @@
         }
       },
       {
-        "label": "keyType",
+        "label": "regions",
         "labelDetails": {},
         "kind": 10,
-        "detail": "keyType (Required)",
+        "detail": "regions (Optional)",
         "documentation": {
           "kind": "markdown",
-          "value": "Type: `string`  \nType of the test key\n"
+          "value": "Type: `array`  \nList of locations.\n"
         },
-        "sortText": "0keyType",
+        "sortText": "1regions",
         "insertTextFormat": 2,
         "insertTextMode": 2,
         "textEdit": {
@@ -57,7 +57,37 @@
               "character": 4
             }
           },
-          "newText": "keyType = \"$0\""
+          "newText": "regions = [$0]"
+        },
+        "command": {
+          "title": "Suggest",
+          "command": "editor.action.triggerSuggest"
+        }
+      },
+      {
+        "label": "skipToken",
+        "labelDetails": {},
+        "kind": 10,
+        "detail": "skipToken (Optional)",
+        "documentation": {
+          "kind": "markdown",
+          "value": "Type: `string`  \nContinuation token for pagination, capturing the next page size and offset, as well as the context of the query.\n"
+        },
+        "sortText": "1skipToken",
+        "insertTextFormat": 2,
+        "insertTextMode": 2,
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 4
+            }
+          },
+          "newText": "skipToken = \"$0\""
         },
         "command": {
           "title": "Suggest",
