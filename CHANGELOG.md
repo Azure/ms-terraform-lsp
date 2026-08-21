@@ -1,3 +1,12 @@
+## v0.10.0
+
+Chores:
+- Updated github.com/Azure/aztfmigrate v2.9.1 => v2.9.2
+- Updated github.com/getkin/kin-openapi v0.131.0 => v0.144.0
+
+Enhancements:
+- Updated bicep types to https://github.com/Azure/bicep-types-az/tree/9d775cbe0faa7febca8f2bb13142723b9996db7f
+
 ## v0.9.1
 
 Chores:
