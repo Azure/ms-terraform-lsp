@@ -20,7 +20,7 @@ Download a released binary for your platform from [Releases](https://github.com/
 go install github.com/Azure/ms-terraform-lsp@latest
 ```
 
-To build from a local clone, run `go install` in the project folder.
+To build from source, clone this repository and run `go install` in the project folder.
 
 ## Usage
 
@@ -39,15 +39,17 @@ ms-terraform-lsp serve
 
 It registers for the `terraform` language and takes no LSP `settings`.
 
-Example configuration for Neovim 0.11+:
+Example configuration for Neovim 0.11+, using the config that ships with
+[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/lsp/ms_terraform_lsp.lua):
 
 ```lua
-vim.lsp.config('ms_terraform_lsp', {
-  cmd = { 'ms-terraform-lsp', 'serve' },
-  filetypes = { 'terraform' },
-  root_markers = { '.terraform', '.git' },
-})
 vim.lsp.enable('ms_terraform_lsp')
+```
+
+Neovim users can install the binary with [mason.nvim](https://github.com/mason-org/mason.nvim):
+
+```
+:MasonInstall ms-terraform-lsp
 ```
 
 ## Credits
